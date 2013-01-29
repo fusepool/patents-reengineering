@@ -238,7 +238,14 @@ XXX: Skips priority-claims without @ucid
 -->
         <xsl:for-each select="priority-claims/priority-claim[@ucid]">
             <rdf:Description rdf:about="{$patent}{$ucid}">
-                <property:priority-claim rdf:resource="{$patent}{@ucid}/publication{$uriThingSeparator}{$id}"/>
+                <property:priority-claim>
+                    <rdf:Description rdf:about="{$patent}{@ucid}/publication{$uriThingSeparator}{$id}">
+<!--
+XXX: Normally we don't really want to define other patents from here. In case this patent is not declared anywhere else, there is at least this type.
+-->
+                        <rdf:type rdf:resource="{$pmo}PatentPublication"/>
+                    </rdf:Description>
+                </property:priority-claim>
             </rdf:Description>
         </xsl:for-each>
     </xsl:template>
