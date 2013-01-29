@@ -1,0 +1,37 @@
+#
+#    Author: Sarven Capadisli <info@csarven.ca>
+#    Author URI: http://csarven.ca/#i
+#
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<> rdf:value
+    [ rdfs:label "xslDocument" ; rdf:value "https://example.org/marec.xsl" ] ,
+
+    [ rdfs:label "rdf" ; rdf:value "http://www.w3.org/1999/02/22-rdf-syntax-ns#" ] ,
+    [ rdfs:label "rdfs" ; rdf:value "http://www.w3.org/2000/01/rdf-schema#" ] ,
+    [ rdfs:label "owl" ; rdf:value "http://www.w3.org/2002/07/owl#" ] ,
+    [ rdfs:label "xsd" ; rdf:value "http://www.w3.org/2001/XMLSchema#" ] ,
+    [ rdfs:label "qb" ; rdf:value "http://purl.org/linked-data/cube#" ] ,
+    [ rdfs:label "skos" ; rdf:value "http://www.w3.org/2004/02/skos/core#" ] ,
+    [ rdfs:label "xkos" ; rdf:value "http://purl.org/linked-data/xkos#" ] ,
+    [ rdfs:label "sdmx" ; rdf:value "http://purl.org/linked-data/sdmx#" ] ,
+    [ rdfs:label "prov" ; rdf:value "http://www.w3.org/ns/prov#" ] ,
+
+    [ rdfs:label "pso" ; rdf:value "http://www.patexpert.org/ontologies/pso.owl#" ] ,
+    [ rdfs:label "pulo" ; rdf:value "http://www.patexpert.org/ontologies/pulo.owl#" ] ,
+    [ rdfs:label "sumo" ; rdf:value "http://www.owl-ontologies.com/sumo.owl#" ] ,
+    [ rdfs:label "pmo" ; rdf:value "http://www.patexpert.org/ontologies/pmo.owl#" ] ,
+
+    [ rdfs:label "lang" ; rdf:value "en" ] ,
+
+    [ rdfs:label "uriThingSeparator" ; rdf:value "/" ] ,
+    [ rdfs:label "uriDimensionSeparator" ; rdf:value "/" ] ,
+
+    [ rdfs:label "creator" ; rdf:value "http://example.org/#i" ] ,
+
+    [ rdfs:label "baseURI" ; rdf:value "http://example.org/" ] ,
+
+    [ rdfs:label "xmlDocumentBaseURI" ; rdf:value "http://exampe.org/data/" ]
+
+    .

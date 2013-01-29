@@ -1,0 +1,1349 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE patent-document PUBLIC "-//MXW//DTD patent-document XML//EN" "http://www.ir-facility.org/dtds/patents/v1.4/patent-document.dtd">
+<patent-document ucid="EP-1000006-B1" country="EP" doc-number="1000006" kind="B1" lang="EN" family-id="25415952" status="new" date-produced="20100220" date="20030122">
+  <bibliographic-data>
+    <publication-reference ucid="EP-1000006-B1" status="new" fvid="22846476">
+      <document-id status="new" format="original">
+        <country status="new">EP</country>
+        <doc-number>1000006</doc-number>
+        <kind>B1</kind>
+        <date>20030122</date>
+        <lang>EN</lang>
+      </document-id>
+    </publication-reference>
+    <application-reference load-source="docdb" ucid="EP-98937268-A" status="new" mxw-id="PAPP18318424" is-representative="NO">
+      <document-id status="new" format="epo">
+        <country status="new">EP</country>
+        <doc-number>98937268</doc-number>
+        <kind>A</kind>
+        <date>19980729</date>
+        <lang>EN</lang>
+      </document-id>
+    </application-reference>
+    <priority-claims status="new">
+      <priority-claim ucid="US-9815763-W" status="new" mxw-id="PPC22673501">
+        <document-id status="new" format="epo">
+          <country status="new">US</country>
+          <doc-number>9815763</doc-number>
+          <kind>W</kind>
+          <date>19980729</date>
+        </document-id>
+      </priority-claim>
+      <priority-claim ucid="US-90250897-A" status="new" mxw-id="PPC22679955">
+        <document-id status="new" format="epo">
+          <country status="new">US</country>
+          <doc-number>90250897</doc-number>
+          <kind>A</kind>
+          <date>19970729</date>
+        </document-id>
+      </priority-claim>
+      <priority-claim status="new" mxw-id="PPC92187371">
+        <document-id status="new" format="original">
+          <country status="new">US</country>
+          <doc-number>902508</doc-number>
+          <date>19970729</date>
+        </document-id>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability status="new">
+      <intention-to-grant-date>
+        <date>20020522</date>
+      </intention-to-grant-date>
+    </dates-of-public-availability>
+    <technical-data status="new">
+      <classification-ipc status="new">
+        <edition>7</edition>
+        <main-classification status="new">C07C  45/50</main-classification>
+        <further-classification status="new">C07F   9/145</further-classification>
+        <further-classification status="new">C07C 255/17</further-classification>
+        <further-classification status="new">C07C  69/716</further-classification>
+        <further-classification status="new">C07C  47/02</further-classification>
+        <further-classification status="new">C07C  59/147</further-classification>
+        <further-classification status="new">C07C  51/373</further-classification>
+        <further-classification status="new">C07C  67/347</further-classification>
+        <further-classification status="new">C07C  45/80</further-classification>
+        <further-classification status="new">C07C 253/30</further-classification>
+      </classification-ipc>
+      <classifications-ipcr>
+        <classification-ipcr load-source="docdb" status="new" mxw-id="PCL161241884">C07C  69/00        20060101CLI20051220RMJP        </classification-ipcr>
+        <classification-ipcr load-source="docdb" status="new" mxw-id="PCL161243647">C07C  59/00        20060101CLI20051220RMJP        </classification-ipcr>
+        <classification-ipcr load-source="docdb" status="new" mxw-id="PCL161243679">C07C 253/00        20060101CLI20051220RMJP        </classification-ipcr>
+        <classification-ipcr load-source="docdb" status="new" mxw-id="PCL161246927">B01J  31/18        20060101A I20051008RMEP        </classification-ipcr>
+        <classification-ipcr load-source="docdb" status="new" mxw-id="PCL161257368">B01J  31/22        20060101AFI20051220RMJP        </classification-ipcr>
+        <classification-ipcr load-source="docdb" status="new" mxw-id="PCL161282209">C07C  45/80        20060101A I20051008RMEP        </classification-ipcr>
+        <classification-ipcr load-source="docdb" status="new" mxw-id="PCL161289348">C07C  47/02        20060101ALI20051220RMJP        </classification-ipcr>
+        <classification-ipcr load-source="docdb" status="new" mxw-id="PCL161296842">C07C  69/716       20060101ALI20051220RMJP        </classification-ipcr>
+        <classification-ipcr load-source="docdb" status="new" mxw-id="PCL161309614">C07C  51/347       20060101C I20051008RMEP        </classification-ipcr>
+        <classification-ipcr load-source="docdb" status="new" mxw-id="PCL161316496">C07F   9/145       20060101A I20051008RMEP        </classification-ipcr>
+        <classification-ipcr load-source="docdb" status="new" mxw-id="PCL161337045">C07C  45/50        20060101A I20051008RMEP        </classification-ipcr>
+        <classification-ipcr load-source="docdb" status="new" mxw-id="PCL161341514">C07C 253/30        20060101ALI20051220RMJP        </classification-ipcr>
+        <classification-ipcr load-source="docdb" status="new" mxw-id="PCL161342126">C07C  67/347       20060101A I20051008RMEP        </classification-ipcr>
+        <classification-ipcr load-source="docdb" status="new" mxw-id="PCL161351430">C07C  67/00        20060101C I20051008RMEP        </classification-ipcr>
+        <classification-ipcr load-source="docdb" status="new" mxw-id="PCL161352169">C07C  59/147       20060101ALI20051220RMJP        </classification-ipcr>
+        <classification-ipcr load-source="docdb" status="new" mxw-id="PCL161364214">C07F   9/00        20060101C I20051008RMEP        </classification-ipcr>
+        <classification-ipcr load-source="docdb" status="new" mxw-id="PCL161368284">C07C 255/00        20060101CLI20051220RMJP        </classification-ipcr>
+        <classification-ipcr load-source="docdb" status="new" mxw-id="PCL161396328">C07C  47/02        20060101CLI20051220RMJP        </classification-ipcr>
+        <classification-ipcr load-source="docdb" status="new" mxw-id="PCL161413191">C07C 255/17        20060101ALI20051220RMJP        </classification-ipcr>
+        <classification-ipcr load-source="docdb" status="new" mxw-id="PCL161416172">C07C  67/313       20060101A I20051008RMEP        </classification-ipcr>
+        <classification-ipcr load-source="docdb" status="new" mxw-id="PCL161417632">C07C  51/373       20060101A I20051008RMEP        </classification-ipcr>
+        <classification-ipcr load-source="docdb" status="new" mxw-id="PCL161419971">C07B  61/00        20060101CLI20051220RMJP        </classification-ipcr>
+        <classification-ipcr load-source="docdb" status="new" mxw-id="PCL161421131">C07B  61/00        20060101ALI20051220RMJP        </classification-ipcr>
+        <classification-ipcr load-source="docdb" status="new" mxw-id="PCL161435018">C07C  45/00        20060101C I20051008RMEP        </classification-ipcr>
+        <classification-ipcr load-source="docdb" status="new" mxw-id="PCL161444399">B01J  31/16        20060101C I20051008RMEP        </classification-ipcr>
+      </classifications-ipcr>
+      <classification-ecla status="new">
+        <classification-symbol scheme="EC" mxw-id="PCL161265768">C07C  51/373+59/147</classification-symbol>
+        <classification-symbol scheme="EC" mxw-id="PCL161291786">C07C  67/313+69/716</classification-symbol>
+        <classification-symbol scheme="EC" mxw-id="PCL161294159">C07C  45/80</classification-symbol>
+        <classification-symbol scheme="EC" mxw-id="PCL161327332">C07C  67/347+69/716</classification-symbol>
+        <classification-symbol scheme="EC" mxw-id="PCL161397772">C07F   9/145+J</classification-symbol>
+        <classification-symbol scheme="EC" mxw-id="PCL161430837">C07C  45/50</classification-symbol>
+        <classification-symbol scheme="ICO" mxw-id="PCL622624278">L01J531:82D</classification-symbol>
+        <classification-symbol scheme="EC" mxw-id="PCL622624279">B01J  31/18C2</classification-symbol>
+        <classification-symbol scheme="ICO" mxw-id="PCL622624280">L01J531:80</classification-symbol>
+        <classification-symbol scheme="ICO" mxw-id="PCL622624281">L01J231:32B</classification-symbol>
+        <classification-symbol scheme="ICO" mxw-id="PCL622624282">L01J531:02H4</classification-symbol>
+      </classification-ecla>
+      <invention-title load-source="patent-office" status="new" mxw-id="PT21747848" lang="DE">VERFAHREN ZUR HERSTELLUNG VON RECHTKETTIGEN ALDEHYDEN</invention-title>
+      <invention-title load-source="patent-office" status="new" mxw-id="PT21747849" lang="EN">IMPROVED PROCESS OF PREPARATION OF LINEAR ALDEHYDES</invention-title>
+      <invention-title load-source="patent-office" status="new" mxw-id="PT21747850" lang="FR">PROCEDE AMELIORE DE PREPARATION D'ALDEHYDES LINEAIRES</invention-title>
+    </technical-data>
+    <parties>
+      <applicants>
+        <applicant status="new" sequence="1" mxw-id="PPAR90268677" format="epo">
+          <addressbook>
+            <name>DSM NV</name>
+            <address>
+              <country status="new">NL</country>
+            </address>
+          </addressbook>
+        </applicant>
+        <applicant status="new" sequence="2" mxw-id="PPAR90232064" format="epo">
+          <addressbook>
+            <name>DU PONT</name>
+            <address>
+              <country status="new">US</country>
+            </address>
+          </addressbook>
+        </applicant>
+        <applicant status="new" sequence="1" mxw-id="PPAR90246277" format="intermediate">
+          <addressbook>
+            <name>DSM N.V.</name>
+          </addressbook>
+        </applicant>
+        <applicant status="new" sequence="2" mxw-id="PPAR90203382" format="intermediate">
+          <addressbook>
+            <name>E.I. DU PONT DE NEMOURS AND COMPANY</name>
+          </addressbook>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor status="new" sequence="1" mxw-id="PPAR90241529" format="epo">
+          <addressbook>
+            <name>BUNEL EMILIO ENRIQUE</name>
+            <address>
+              <country status="new">US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor status="new" sequence="1" mxw-id="PPAR90254934" format="intermediate">
+          <addressbook>
+            <name>BUNEL, EMILIO, ENRIQUE</name>
+          </addressbook>
+        </inventor>
+        <inventor status="new" sequence="1" mxw-id="PPAR276888168" format="original">
+          <addressbook>
+            <last-name>BUNEL, EMILIO, ENRIQUE</last-name>
+            <address>
+              <street>521 Andover Road</street>
+              <city>Wilmington, DE 19803</city>
+              <country status="new">US</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+      <assignees>
+        <assignee status="new" sequence="1" mxw-id="PPAR276892844" format="original">
+          <addressbook>
+            <last-name>DSM N.V.</last-name>
+            <address>
+              <street>Het Overloon 1</street>
+              <city>6411 TE Heerlen</city>
+              <country status="new">NL</country>
+            </address>
+          </addressbook>
+        </assignee>
+        <assignee status="new" sequence="2" mxw-id="PPAR276893171" format="original">
+          <addressbook>
+            <last-name>E.I. DU PONT DE NEMOURS AND COMPANY</last-name>
+            <address>
+              <street>1007 Market Street</street>
+              <city>Wilmington Delaware 19898</city>
+              <country status="new">US</country>
+            </address>
+          </addressbook>
+        </assignee>
+      </assignees>
+      <agents>
+        <agent status="new" sequence="1" mxw-id="PPAR276884527" format="original">
+          <addressbook>
+            <last-name>Jones, Alan John</last-name>
+            <address>
+              <street>CARPMAELS &amp;amp; RANSFORD 43 Bloomsbury Square</street>
+              <city>London, WC1A 2RA</city>
+              <country status="new">GB</country>
+            </address>
+          </addressbook>
+        </agent>
+      </agents>
+    </parties>
+    <international-convention-data>
+      <pct-or-regional-filing-data ucid="US-9815763-W" status="new">
+        <document-id status="new" format="original">
+          <country status="new">US</country>
+          <doc-number>9815763</doc-number>
+          <kind>W</kind>
+          <lang>EN</lang>
+        </document-id>
+      </pct-or-regional-filing-data>
+      <pct-or-regional-publishing-data ucid="WO-1999006345-A1" status="new">
+        <document-id status="new" format="original">
+          <country status="new">WO</country>
+          <doc-number>1999006345</doc-number>
+          <kind>A1</kind>
+          <date>19990211</date>
+          <lang>EN</lang>
+        </document-id>
+      </pct-or-regional-publishing-data>
+      <designated-states>
+        <ep-contracting-states>
+          <country status="new" mxw-id="DS16840158">BE</country>
+          <country status="new" mxw-id="DS16840159">DE</country>
+          <country status="new" mxw-id="DS16840160">FR</country>
+          <country status="new" mxw-id="DS16840161">GB</country>
+          <country status="new" mxw-id="DS16840162">IT</country>
+          <country status="new" mxw-id="DS16840163">NL</country>
+        </ep-contracting-states>
+      </designated-states>
+    </international-convention-data>
+    <office-specific-data>
+      <eptags>
+        <ep-no-a-document-published>*</ep-no-a-document-published>
+      </eptags>
+    </office-specific-data>
+  </bibliographic-data>
+  <description load-source="patent-office" status="new" mxw-id="PDES17731121" lang="EN">
+    <p num="0001">This invention relates to a process for the
+preparation of linear aldehydes by hydroformylation of
+ethylenically unsaturated organic compounds in the
+presence of a catalyst system comprising a Group VIII
+metal and an organic phosphite ligand containing phosphorous
+having the structure (PR<sub>2</sub>)<sub>n</sub>R' where n is
+2, R and R' are organic residues which may be
+the same or different and where the R or R' contain at
+least one C9 to C40 aliphatic group positioned as a
+tail extending away from the primary ligand structure
+rendering the ligand lipophilic.</p>
+    <heading>
+      <b>
+        <u style="single">BACKGROUND OF THE INVENTION</u>
+      </b>
+    </heading>
+    <p num="0002">The synthesis of an aldehyde by
+hydroformylation is known in the art. A catalyst for
+such a process is generally a soluble complex of a
+Group VIII transition metal having a phosphorus
+containing organic ligand. It is also known that the
+selection of the catalyst for the hydroformylation
+reaction has an influence on the rate and selectivity
+to the product aldehyde(s). Bidentate ligands are
+particularly preferred for their combination of
+reactivity and selectivity.</p>
+    <p num="0003">A number of patents teach structures of
+bidentate ligands for hydroformylation reactions that
+may be used for the production of aldehydes. U.S. Pat.
+No. 5,235,113 teaches a hydroformylation process in
+which an organic bidentate phosphite ligand containing
+two phosphorus atoms linked with an organic dihydroxyl
+bridging group is used with rhodium as a homogeneous
+hydroformylation catalyst. </p>
+    <p num="0004">Hydroformylation processes involving organic
+bidentate ligands containing two trivalent phosphorus
+atoms, in which the two phosphorus atoms are linked
+with a 2,2'-dihydroxyl-1,1'-binaphthalene bridging
+group, have been described in U.S. Pat. Nos. 4,769,498,
+4,668,651, 5,113,022, 5,059,710, 5,264,616, and
+4,885,401. Additional examples appear in WO-A-9303839
+and WO-A-9518089.</p>
+    <p num="0005">With respect to the hydroformylation process,
+U.S. Pat. No. 4,148,830 teaches the use of high boiling
+condensation products of the process as the solvent in
+recycling the catalyst system; and U.S. Pat. No.
+4,247,486 teaches the use of a gas recycle to control
+the liquid level in the reaction and to control the
+build-up of high boiling components in the process
+stream.</p>
+    <p num="0006">These prior patents teach catalyst structures
+and improvements in continuous processes for
+hydroformylation, but none address the problem of
+isolating product, byproduct and catalyst, one from the
+other. Yet, in all hydroformylation processes, the
+catalyst must be separated from the reaction products.
+In the case of hydroformylations such as the present
+invention, where the desired reaction product is an
+aldehyde, it has proved difficult to separate reaction
+products, particularly the higher boiling products and
+byproducts, from the catalyst system. The present
+invention provides a process by which the reaction
+products, including the high boiling products and
+byproducts, may be easily separated from the reaction
+catalyst system. In the present process the catalyst
+system may be readily separated from reaction products
+and recycled for use in the process, thus providing
+longer active catalyst system productivity.</p>
+    <heading>
+      <b>
+        <u style="single">SUMMARY OF THE INVENTION</u>
+      </b>
+    </heading>
+    <p num="0007">The present invention provides a process for
+preparation of a linear aldehyde comprising reacting an
+ethylenically unsaturated compound by hydroformylation 
+in the presence of a catalyst system composed of a
+Group VIII metal and an organic phosphite ligand in a two phase
+reaction solvent. The organic phosphite ligand is one containing
+phosphorous having the structure (PR<sub>2</sub>)<sub>n</sub>R' where n is
+2, R and R' are organic residues
+which may be the same or different and where the R or
+R' contain at least one C9 to C40 aliphatic group
+positioned as a tail extending away from the primary
+ligand structure rendering the ligand lipophilic.</p>
+    <p num="0008">The hydroformylation reaction
+solvent is a two phase mixture of an organic compound
+having from 5 to 20 carbon atoms and polar solvent.</p>
+    <p num="0009">The present process may be represented as a
+series of process steps comprising:
+<sl><li>(a) reacting in a reaction solvent to form a
+reaction mixture the ethylenically unsaturated compound
+in the presence of a catalyst system composed of a
+Group VIII metal and organic phosphite ligand containing
+phosphorous having the structure (PR<sub>2</sub>)<sub>n</sub>R' where n is
+2, R and R' are organic residues
+which may be the same or different and where the R or
+R' contain at least one C9 to C40 aliphatic group
+positioned as a tail extending away from the primary
+ligand structure rendering the ligand lipophilic;</li><li>(b) adding a non-polar solvent to the reaction
+mixture to form two phases, one a polar phase
+predominately formed from the reaction products and one
+formed predominately from the non-polar solvent and the
+catalyst system such that the reaction products
+including the high boiling reaction products of the
+hydroformylation remain in the polar phase and the
+catalyst system is partitioned substantially into the
+non-polar phase; and </li><li>(c) separating the two phases and isolating
+the reaction products from the polar phase and the
+catalyst from the non-polar phase.</li></sl></p>
+    <p num="0010">The preferred ligand a bidentate ligand having
+the structure (PR<sub>2</sub>)<sub>2</sub>R' where R and R' are organic
+residues and where the R or R' contain at least one C9
+to C40 aliphatic group positioned as a tail extending
+away from the bridging group(R') or the side arms (R).</p>
+    <p num="0011">Volatiles may be removed in the present
+process from the reaction mixture of step (a) before
+the addition of the non-polar solvent of step (b).
+Also in the present process steps (a) and (b) may be
+combined and such that the hydroformylation is carried
+out in a two phase reaction solvent.</p>
+    <p num="0012">The present process may be run as a batch or a
+continuous process. In a continuous process the
+recovered catalyst is returned to step (a) and the
+steps are repeated.</p>
+    <p num="0013">The present process also provides an improved
+hydroformylation process for preparation of a linear
+aldehyde from a reaction mixture containing an
+ethylenically unsaturated compound and a catalyst
+system composed of a Group VIII metal and a bidentate
+organic ligand having two trivalent phosphorous atoms
+wherein the ethylenically unsaturated compound also
+functions as reaction solvent, the improvement
+comprising: forming the catalyst system from a ligand
+containing at least one C9 to C40 aliphatic group
+positioned on the backbone or side arm ring structures
+of the ligand and following hydroformylation of the
+ethylenically unsaturated compound adding to the
+reaction mixture a two phase solvent mixture consisting
+of a polar and a non-polar components so that the
+reaction products of the hydroformylation are extracted
+into the polar phase of the solvent mixture and the
+catalyst system remains substantially in the non-polar
+phase of the solvent mixture. </p>
+    <p num="0014">Preferred structures for the ligands of the
+present invention are Ligands I-IX. As noted below the
+basic structure for Ligands I, II and III is the
+structure on the left (structure A); the basic
+structure for Ligands IV to IX is the structure on the
+right (structure B)
+<img id="img-00050001" orientation="unknown" wi="145" img-format="tif" img-content="cf" file="00050001.tif" inline="no" he="63"/>
+   wherein structures A for Ligands I to III and
+structures B for Ligands IV to IX, Ligand I, R<sub>1</sub> is
+(CH<sub>2</sub>)<sub>9</sub>CH<sub>3</sub> and R<sub>2</sub> is H; Ligand II, R<sub>1</sub> is (CH<sub>2</sub>)<sub>9</sub>CH<sub>3</sub> and R<sub>2</sub>
+is CO(CH<sub>2</sub>)<sub>8</sub>CH<sub>3</sub>; Ligand III is R<sub>1</sub> and R<sub>2</sub> are (CH<sub>2</sub>)<sub>9</sub>CH<sub>3</sub>;
+Ligand IV, R<sub>1</sub> is (CH<sub>2</sub>)<sub>9</sub>CH<sub>3</sub>, R<sub>2</sub> is O(CH<sub>2</sub>)<sub>9</sub>CH<sub>3</sub> and R<sub>3</sub> is
+H; in Ligand V, R<sub>1</sub> is (CH<sub>2</sub>)<sub>17</sub>CH<sub>3</sub> and R<sub>2</sub> and R<sub>3</sub> are H; in
+Ligand VI, R<sub>1</sub> is CH(CH<sub>3</sub>) (CH<sub>2</sub>)<sub>13</sub>CH<sub>3</sub> and R<sub>2</sub> and R<sub>3</sub> are H; in
+Ligand VII, R<sub>1</sub> is (CH<sub>2</sub>)<sub>9</sub>CH<sub>3</sub>, R<sub>2</sub> is H and R<sub>3</sub> is
+OSi(CH<sub>3</sub>)<sub>2</sub>C(CH<sub>3</sub>)<sub>3</sub>; in Ligand VIII, R<sub>1</sub> is
+CH<sub>2</sub>CH((CH<sub>2</sub>)<sub>5</sub>CH<sub>3</sub>)((CH<sub>2</sub>)<sub>7</sub>CH<sub>3</sub>) and R<sub>2</sub> and R<sub>3</sub> are H; and in
+Ligand IX is CH<sub>2</sub>CH(R<sub>4</sub>)(R<sub>5</sub>) and R<sub>4</sub> and R<sub>5</sub> are the same or
+different hydrocarbons having from 6 to 30 carbon
+atoms.</p>
+    <heading>
+      <b>
+        <u style="single">DETAILED DESCRIPTION OF THE INVENTION</u>
+      </b>
+    </heading>
+    <p num="0015">The present invention is an improved process
+for preparation of a linear aldehyde compound by
+hydroformylation in the presence of a catalyst system
+comprising a Group VIII metal and organic phosphite ligand
+containing phosphorous having the structure (PR<sub>2</sub>)<sub>n</sub>R'
+where n is 2, R and R' are organic 
+residues which may be the same or different and where
+the R or R' contain at least one C9 to C40 aliphatic
+group positioned as a tail extending away from the
+primary ligand structure rendering the ligand
+lipophilic.</p>
+    <p num="0016">The preferred ligand of the present invention
+is a bidentate ligand having the structure (PR<sub>2</sub>)<sub>2</sub>R'
+where R and R' are organic residues and where the R or
+R' contain at least one C9 to C40 aliphatic group
+positioned as a tail extending away from the bridging
+group(R') or the side arms (R) rendering the ligand
+lipophilic. The term lipophilic when used to modify
+the term ligand means that the ligand, in a two phase
+solvent system formed by mixing a polar with a non-polar
+solvent, will be substantially distributed in the
+non-polar phase.</p>
+    <p num="0017">The present process combines a ligand
+structure and a two phase process solvent that allows
+the easy isolation of reaction products and byproducts
+from the catalyst system. The term process solvent as
+used herein means a solvent added initially to the
+reaction as the reaction solvent or a solvent or a
+mixture of solvents added following the reaction that
+is used to extract and separate components of the
+reaction system. The term extraction means the
+preferential partitioning or distribution of a compound
+in one of two immiscible liquid phases.</p>
+    <p num="0018">A suitable starting material for the present
+process is an ethylenically unsaturated compound having
+at least one carbon-carbon double bond in the molecule
+and preferably from 2 to 20 carbon atoms. Examples of
+such ethylenically unsaturated organic compounds are
+linear terminal olefinic hydrocarbons, for example,
+ethylene, propylene, 1-butene, 1-pentene, 1-hexene, 1-octene,
+1-nonene, 1-decene, 1-tetradecene, 1-hexadecene,
+1-octadecene, 1-eicosene, and 1-dodecene;
+branched terminal olefinic hydrocarbons, for example,
+isobutene and 2-methyl-1-butene; linear internal 
+olefinic hydrocarbons, for example, cis- and trans-2-butene,
+cis- and trans-2-hexene, cis- and trans-2-octene,
+cis and trans-3-octene; branched internal
+olefinic hydrocarbons, for example, 2,3-dimethyl-2-butene,
+2-methyl-2-butene, and 2-methyl-2-pentene;
+terminal olefinic hydrocarbon-internal olefinic
+hydrocarbon-internal olefinic hydrocarbon mixtures, for
+example, octenes prepared by dimerization of butenes;
+olefin oligomer isomer mixture from butadiene, dimer to
+tetramer of lower butadiene olefins including
+propylene, n-butene, isobutene or the like; and
+cycloaliphatic olefinic hydrocarbons, for example,
+cyclopentene, cyclohexene, 1-methylcyclohexene,
+cyclooctene, and limonene.</p>
+    <p num="0019">The present invention is especially directed
+to hydroformylation process in which a linear aldehyde
+compound is prepared starting from internally
+unsaturated organic compounds with from 6 to 20 carbon
+atoms such as alkyl pentenoates, pentenoic acids or
+pentenenitriles.</p>
+    <p num="0020">The ethylenically unsaturated organic compound
+used in the present process may be substituted with one
+or more functional groups containing a heteroatom such
+as oxygen, sulfur, nitrogen, or phosphorous. Examples
+of these heteroatom-substituted unsaturated organic
+compounds include vinyl methyl ether, methyl oleate,
+oleyl alcohol, methyl 2-pentenoate, methyl
+3-pentenoate, methyl 4-pentenoate, 3-pentenoic acid,
+4-pentenoic acid, 3-pentenenitrile, 4-pentenenitrile,
+1,7-octadiene, 7-octen-1-al, acrylonitrile, acrylic
+acid esters, methyl acrylate, methylacrylic acid
+esters, methyl methacrylate, acrolein, and other
+substituted ethylenically unsaturated compounds.</p>
+    <p num="0021">A special class of internally unsaturated
+organic compounds useful in the present process is
+3-pentenenitrile, 3-pentenoic acid, and C1-C6 alkyl
+3-pentenoate ester compounds. The linear aldehydes
+prepared by the present process starting from this 
+class of compounds may advantageously be used in the
+preparation of e-caprolactam or adipic acid, which are
+precursors for Nylon-6 and Nylon-6,6 respectively.
+Examples of C1-C6 alkyl 3-pentenoates are methyl,
+ethyl, isopropyl, tert-butyl-, pentenyl- and cyclohexyl
+3-pentenoate. Methyl and ethyl 3-pentenoate esters are
+preferred because they are more readily available.</p>
+    <p num="0022">The 3-pentenenitrile, 3-pentenoic acid and
+C1-C6 alkyl 3-pentenoate ester compounds may be present
+in mixtures containing respectively: 2- and
+4-pentenenitrile; 2- and 4-pentenoic acid; and C1-C6
+alkyl 2- and 4-pentenoate ester compounds. Because
+these compounds react in a similar fashion as their
+corresponding 3-isomers to the desired linear aldehyde,
+the mixture of isomers can be directly used in the
+process according to the present invention.</p>
+    <p num="0023">The reaction conditions of the
+hydroformylation process according to this invention
+are in general the same as used in a conventional
+process, described for example in U.S. Pat. No.
+4,769,498, and will be dependent on the particular
+starting ethylenically unsaturated organic compound.
+For example, the temperature can be from ambient
+temperature to 200°C, preferably from about 50°C to
+150°C, and more preferably from 90° to 110°C. The
+pressure may vary from atmospheric pressure to 20 mPa,
+preferably from 0.15 to 10 mPa, and more preferably
+from 0.2 to 5 mPa. The pressure is, as a rule, equal
+to the combined hydrogen and carbon monoxide partial
+pressure. However, extra inert gasses may also be
+present. The molar ratio of hydrogen: carbon monoxide
+is generally between 10:1 and 1:10 and preferably
+between 6:1 and 1:2.</p>
+    <p num="0024">The formation of aldehydes by
+hydroformylation, particularly in a continuous process,
+often times produces high boiling products that are
+formed from the condensation of the aldehyde reaction
+products. These high boiling materials are 
+particularly difficult to remove from the catalyst
+reaction system (the combination of the phosphorous
+bidentate ligand and the Group VIII metal ion). In
+some cases the desired aldehyde product may, itself, be
+high boiling and difficult to separate from the
+catalyst system. The present invention provides,
+through the proper selection of the ligand structure
+for the catalyst system and the selective use of
+solvents, a process in which the high boiling reaction
+products and byproducts may be easily separated from
+the catalyst system.</p>
+    <p num="0025">In forming the catalyst system of the present
+invention, the amount of Group VIII metal (compound) is
+not specially limited, but is optionally selected so
+that favorable results can be obtained with respect to
+catalyst activity and process economy. In general, the
+concentration of Group VIII metal in the reaction
+medium is between 10 and 10,000 ppm and more preferably
+between 50 and 500 ppm, calculated as free metal.
+Although any Group VIII metal may be used in the
+present process, rhodium is preferred.</p>
+    <p num="0026">Although the molecular structure of the
+ligand, as described below, is essential to the present
+invention, the molar ratio of the phosphite ligand to
+Group VIII metal is not specially limited, but is
+optionally selected so that favorable results can be
+obtained with respect to catalyst activity and desired
+aldehyde selectivity. This ratio generally is from
+about 0.5 to 100 and preferably from 1 to 10 (moles
+ligand/mole metal).</p>
+    <p num="0027">Although the ligand of the present invention
+may be monodentate or bidentate, the preferred ligands
+of the present invention are bidentate organic phosphite ligand
+having two trivalent phosphorous atoms wherein the
+ligand contains at least one C9 to C40 aliphatic group
+positioned on the backbone or side arm ring structures
+of the ligand. </p>
+    <p num="0028">The structure of any ligand used in a
+hydroformylation catalyst system is generally selected
+such that backbone and side arms of the ligand
+structure provide the desired selectivity and activity.
+The term backbone refers to the bridging group between
+the two phosphorus atoms, and the term side arms refer
+the non-bridging groups attached to the phosphorus
+atoms.</p>
+    <p num="0029">Many backbone and side arm structures of
+bidentate ligands known for the production of aldehydes
+by hydroformylation may be modified for use in the
+present invention by adding to the ligand at least one
+C9 to C40 aliphatic group substituted for a hydrogen or
+for some R group of the aromatic ring backbone or side
+arm structure. Also ligands known for hydroformylation
+that already have at least one C9 to C40 aliphatic
+group on the backbone or side arm structures of the
+ligand may be used in the present invention. By the
+term modifying is meant the substitution of the
+aliphatic group of the invention on a ligand already
+synthesized or the changing the synthesis of the ligand
+so that the final structure contains at least one C9 to
+C40 aliphatic group.</p>
+    <p num="0030">The ligand structures of the present invention
+provide long chain aliphatic group or tails that extend
+from the ligand structure causing the ligand to become
+preferentially soluble in a non-polar solvent. The
+substitution of the aliphatic group on a backbone or
+side arm position will contribute little if any to a
+change in the activity or selectivity of the ligand as
+used in the catalyst system for hydroformylation. Thus
+by adapting the ligand to be preferentially soluble in
+a non-polar solvent, the present invention provides a
+ligand property that can work together with the two
+phase process solvent to make the separation of ligand
+and product simple and easy, while maintaining the 
+activity and selectivity of the basic ligand structure
+(that is the activity and selectivity of the ligand not
+having the substitution of a smaller group by a C9 to
+C40 aliphatic group). Ligands of the following
+structures are preferred in the present invention
+because of their activity and selectivity towards
+linear aldehydes. As noted below the basic structure
+for Ligands I, II and III is structure A on the left;
+the basic structure for Ligands IV to IX is structure
+B on the right:
+<img id="img-00110001" orientation="unknown" wi="151" img-format="tif" img-content="cf" file="00110001.tif" inline="no" he="82"/>
+   where in Ligand I, R<sub>1</sub> is (CH<sub>2</sub>)<sub>9</sub>CH<sub>3</sub> and R<sub>2</sub> is H;
+in Ligand II, R<sub>1</sub> is (CH<sub>2</sub>)<sub>9</sub>CH<sub>3</sub> and R<sub>2</sub> is CO(CH<sub>2</sub>)<sub>8</sub>CH<sub>3</sub> ; in
+Ligand III, R<sub>1</sub> and R<sub>2</sub> are (CH<sub>2</sub>)<sub>9</sub>CH<sub>3</sub> ; in Ligand IV, R<sub>1</sub> is
+(CH<sub>2</sub>)<sub>9</sub>CH<sub>3</sub> , R<sub>2</sub> is O(CH<sub>2</sub>)<sub>9</sub>CH<sub>3</sub> and R<sub>3</sub> is H; in Ligand V, R<sub>1</sub>
+is (CH<sub>2</sub>)<sub>17</sub>CH<sub>3</sub> and R<sub>2</sub> and R<sub>3</sub> are H; in Ligand VI, R<sub>1</sub> is
+CH(CH<sub>3</sub>) (CH<sub>2</sub>)<sub>13</sub>CH<sub>3</sub> and R<sub>2</sub> and R<sub>3</sub> are H; in Ligand VII, R<sub>1</sub>
+is (CH<sub>2</sub>)<sub>9</sub>CH<sub>3</sub>, R<sub>2</sub> is H and R<sub>3</sub> is OSi (CH<sub>3</sub>)<sub>2</sub>C(CH<sub>3</sub>)<sub>3</sub>; in
+Ligand VIII, R<sub>1</sub> is CH<sub>2</sub>CH((CH<sub>2</sub>)<sub>5</sub>CH<sub>3</sub>) ((CH<sub>2</sub>)<sub>7</sub>CH<sub>3</sub>) and R<sub>2</sub> and
+R<sub>3</sub> are H; and in Ligand IX is CH<sub>2</sub>CH(R<sub>4</sub>) (R<sub>5</sub>) and R<sub>4</sub> and R<sub>5</sub>
+are the same or different hydrocarbons having from 6 to
+30 carbon atoms.</p>
+    <p num="0031">The second aspect of the present invention is
+the use of a two phase process solvent. As described
+below, the two phase solvent mixture or process solvent 
+may be used in three ways in the practice of the
+present invention. It may be used as the reaction
+solvent; or one of the components of the two phase
+solvent mixture may be used as the reaction solvent and
+the other component added following the
+hydroformylation to serve to extract and separate
+reaction products from the catalyst system; or the
+hydroformylation reaction may be carried out with the
+ethylenically unsaturated compound also functioning as
+the reaction solvent; then following the
+hydroformylation, the two phase process solvent or
+mixture is added to the reaction mixture to extract and
+separate products from the catalyst system.</p>
+    <p num="0032">Generally when one solvent does not dissolve
+in another solvent, or when a first solvent has a low
+or limited solubility in a second solvent, the two
+solvents are said to be immiscible. When immiscible
+solvents are mixed together, they separate into two
+phases - the less dense phase floating on top of the
+more dense phase. Also generally when a mixture of two
+or more solvents form separate phases, one phase is
+said to polar relative to the other. Polar and non-polar
+are relative terms, but polar solvents are
+generally those that contain electronegative atoms such
+as oxygen or nitrogen, are of lower molecular weights
+and mix with water. Non-polar solvents are those that
+contain primarily hydrogen and carbon, that do not mix
+with water and that mix readily with oil. As used
+herein, the term polar means to hydrophilic or
+lipophobic; while the term non-polar means hydrophobic
+or lipophilic. Thus, a lipophilic ligand is one that is
+preferentially soluble in a non-polar solvent or in the
+more non-polar of a two solvent mixture.</p>
+    <p num="0033">To form the two phase process solvent of the
+present invention, one mixes a polar and a non-polar
+solvent or mixtures of polar and non-polar solvents to
+form two phases. One solvent or solvent mixture must be
+more lipophilic than the other. As described above,
+this two phase solvent mixture may be present as the 
+initial reaction solvent for the hydroformylation. It
+may be added as a two phase mixed solvent following the
+hydroforymlation to function as an extraction medium.
+Or in another way to practice the present invention, a
+single solvent may be added to the reaction mixture
+causing the formation of a two phase mixture from which
+the desired component of the hydroformylation reaction
+system may be isolated.</p>
+    <p num="0034">In selecting solvent components for the two
+phase solvent mixture, it is only essential that the
+two components form two separate phases when mixed
+together. The ligand structures of the present
+invention, having extended aliphatic tails that may be
+as long as C40, cause the ligand to be preferentially
+soluble in the non-polar component of the two phase
+solvent mixture. The present invention also allows for
+the adjustment of the polarity of the ligand by the
+choice of longer tails and a greater number of tails
+being used to provide a more non-polar ligand.</p>
+    <p num="0035">Examples of polar compounds suitable for
+forming the two phase solvent mixture include water,
+dimethylacetamide (DMAc), dimethyl sulfoxide (DMSO),
+methanol, ethanol, dimethylforamide (DMF), adiponitrile
+(ADN), acetonitrile and N-methyl pyrrolidone(NMP).</p>
+    <p num="0036">Compounds such as C5 to C20 hydrocarbons
+including linear, branched, cyclic or aromatic
+compounds are examples of compounds that may be used as
+the non-polar component of the two phase solvent
+mixture. Higher molecular weight alcohols, aldehydes,
+esters or ketones may also be used as the non-polar
+component. Examples of non-polar compounds suitable in
+the process of the present invention include hexane,
+cyclohexane, hexene, petroleum ethers and naphta. For
+an aromatic solvent used in the practice of the present
+invention, it is preferred that the aromatic solvent
+molecule have aliphatic side chains to ensure that it
+is non-polar enough to form a second phase when mixed
+with the reaction products of the hydroformylation. </p>
+    <p num="0037">If the reaction conditions are at sufficient
+pressure, even C4 hydrocarbons could be used as the
+non-polar component of the solvent mixture.</p>
+    <p num="0038">In the practice of the present invention, a
+non-polar solvent may be added to the reaction mixture
+after the hydroformylation reaction is completed, but
+before any products are isolated from the mixture.
+Such a process would occur as follows: (a) reacting an
+ethylenically unsaturated compound by hydroformylation
+in the presence a solvent and the catalyst system of
+the present invention, (b) adding a non-polar solvent
+to the reaction product of step (a) so that two phases
+are formed and allowing the catalyst system to be
+extracted into the non-polar solvent, (c) isolation of
+the non-polar solvent layer, (d) evaporation of the
+non-polar solvent to isolate the catalyst system, (e)
+returning the isolated catalyst system to step (a).</p>
+    <p num="0039">Another way to practice the present invention
+is by removing any volatiles, including reaction
+products prior to addition of a non-polar solvent.
+Such a process would occurs as follows: (a) reacting
+an ethylenically unsaturated compound by
+hydroformylation in the present of a polar solvent or
+an excess of the ethylenically unsaturated compound and
+the catalyst system of the present invention, (b)
+removal of volatiles from the reaction media of step
+(a), (c) dissolving the catalyst system in a non-polar
+solvent such as a C5 to C20 hydrocarbon solvent so that
+two layers are formed or adding a two phases solvent
+mixture to the reaction mixture dissolving the catalyst
+system in the non-polar phase, (d) isolation of the
+non-polar solvent containing the catalyst system, (e)
+evaporation of the hydrocarbon solvent to isolate the
+catalyst system, (f) returning the isolated catalyst
+system to step (a) and recovery of either solvent or
+products distributed in the polar phase. In the case of
+this method of practicing the present invention, the
+reaction solvent may be an the olefinic reactant. </p>
+    <p num="0040">In another way of practicing the present
+invention, the reaction would be run in a two phase
+reaction solvent. Following reaction, the phase can be
+separated by conventional means and the product
+recovered and the catalyst may be recycled for further
+reaction.</p>
+    <p num="0041">The extraction step in the present invention
+may be carried out at room temperature and atmospheric
+pressure or at other conditions that are suitable in
+the overall processing of batch or continuous
+hydroformylation operations. For example, pressures
+for extraction may be from 0.1 to 1 Pa, with a range of
+0.1 to 0.2 Pa being preferred, and temperatures for the
+extraction may be from 0 to 120°C, with a preferred
+range from 15 to 50°C.</p>
+    <p num="0042">The preferred way to practice the present
+invention is to allow the hydroformylation reaction to
+take place in an excess of the ethylenically
+unsaturated compound. Then following the
+hydroformylation reaction to add a two phase solvent
+mixture to partition and extract the reaction products
+in the polar phase of the solvent mixture and the
+catalyst system in the non-polar phase.</p>
+    <p num="0043">The process of this invention may be run in
+either a continuous or batch mode. In general for
+large scale industrial processes, a continuous mode is
+preferred, while batch mode is more practical for
+smaller scale reactions.</p>
+    <p num="0044">The invention is illustrated by but not
+intended to be limited to the following examples. </p>
+    <heading>
+      <b>
+        <u style="single">EXAMPLES</u>
+      </b>
+    </heading>
+    <heading>
+      <b>
+        <u style="single">Synthesis of a lipophilic ligand:</u>
+      </b>
+    </heading>
+    <p num="0045">
+      <img id="img-00160001" orientation="unknown" wi="164" img-format="tif" img-content="cf" file="00160001.tif" inline="no" he="36"/>
+      <img id="img-00160002" orientation="unknown" wi="159" img-format="tif" img-content="cf" file="00160002.tif" inline="no" he="55"/>
+    </p>
+    <p num="0046">The synthesis of ligand-I was carried out in
+the following series of steps forming compounds A to
+E.</p>
+    <heading>I. <u style="single">Synthesis of tert-Butyldimethylsilyl 3</u></heading>
+    <heading>
+      <u style="single">(tert-butyldimethylsilyloxy)-2-naphthoate.</u>
+    </heading>
+    <p num="0047"><u style="single">Compound A:</u> To a solution of 30 g (0.16 mol) of
+3-hydroxy-2-naphthoic acid and 51 g (0.34 mol) of tertbutyldimethylsilyl
+chloride in 600 mL of
+tetrahydrofuran was added dropwise 64 g (0.64 mol) of
+triethylamine under nitrogen. The mixture was stirred
+for four hours at room temperature, triethylamine
+hydrochloride was filtered, and the solvent was
+evaporated. The residue was poured into water (500 mL)
+and extracted with petroleum ether (500 mL). The
+organic layer was washed with saturated aqueous sodium
+bicarbonate, dried over magnesium sulfate and filtered.
+The solvent was evaporated under vacuum to yield 58 g
+(87%) of (A) as a yellow liquid.</p>
+    <heading>II. <u style="single">Synthesis of decyl 3-(tert-Butyldimethylsilyloxy)-2-naphthoate
+(Compound B):</u></heading>
+    <p num="0048">Under 
+nitrogen, 17.5 mL (0.20 mol) of oxalyl chloride were
+added dropwise to a solution of 58 g (0.14 mol) of
+Compound A in 300 mL of dichloromethane containing 60
+drops of dimethylformamide. The mixture was stirred
+overnight at room temperature, and then the solvent was
+evaporated under vacuum. To the residue was slowly
+added a solution of 24 g (0.15 mole) of 1-decanol and
+33 g (0.42 mol) of pyridine in 200 ml of diethyl ether
+under nitrogen. The mixture was stirred overnight at
+room temperature. Then the pyridinium hydrochloride
+was filtered and the solvent was evaporated under
+vacuum. Hexane was added, the mixture was stirred for
+5 minutes and then filtered through silica gel. Hexane
+was evaporated under vacuum to yield 62 g of Compound B
+as a yellow liquid.</p>
+    <heading>III. <u style="single">Synthesis of decyl-3-hydroxy-2-naphtoate
+(Compound C):</u></heading>
+    <p num="0049">To a solution of 49 g (0.11
+mol) of Compound B in 300 mL of tetrahydrofuran was
+added a solution of 80 g (0.25 mol) of
+tetrabutylammonium fluoride in 200 mL of
+tetrahydrofuran. The mixture was stirred for one hour
+at room temperature, and then the solvent was
+evaporated under vacuum. The residue was dissolved in
+dichloromethane and washed with aqueous ammonium
+chloride and saturated aqueous sodium bicarbonate. The
+organic layer was dried over magnesium sulfate and
+filtered before the solvent was evaporated. The
+product, Compound C, was purified by filtration over
+silica gel using 3% ether/hexane as the eluent. Yield
+92%.</p>
+    <heading>IV. <u style="single">Synthesis of 4,4'-Bi-decyl 3-hydroxy-2-naphthoate
+(Compound D):</u></heading>
+    <p num="0050">To a solution of 23 g (0.071
+mol) of Compound C in 400 mL toluene was added 1.6 g
+(7.1 mmol) of Cu(OH)Cl-TMEDA where TMEDA stands for
+N,N,N',N'-tetramethylethylenediamine. The reaction
+mixture was heated at 100°C under an atmosphere of
+oxygen overnight, and the progress of the reaction was
+monitored by thin layer chromatography. Once Compound 
+C was totally converted, the reaction mixture was
+filtered through silica gel, rinsed with
+dichloromethane before removing the solvent under
+vacuum. Recrystallization from methanol gave 21 g
+(91%) of Compound D as yellow crystals.</p>
+    <heading>V. <u style="single">Synthesis of Bis (2-isopropylphenyl)phosphorochloridite (Compound E) :</u></heading>
+    <p num="0051">To a
+solution of 20 g (0.15 mol) of 2-isopropylphenol and
+16 g (0.16 mol) of triethylamine in 200 ml of hexane
+was slowly added a solution of 14.8 g (0.07 mol) of
+diisopropylphosphoramidous dichloride in 200 mL of
+hexane. The mixture was stirred overnight at room
+temperature, then filtered through alumina and washed
+with dichloromethane. The solvent was removed under
+vacuum, and the residue (9 g, 0.027 mol) was dissolved
+in 200 mL of cyclohexane. Dry HCl was bubbled through
+the solution for one hour. The excess HCl was purged
+by bubbling nitrogen through the reaction mixture. The
+reaction mixture was then transferred into a dry box.
+The diethylamine hydrochloride filtered, and the
+solution evaporated under vacuum to give 6.2 g of
+Compound E as a yellow oil.</p>
+    <p num="0052"><u style="single">Ligand-I:</u> 5 ml of tetrahydrofuran was added
+dropwise along with a solution of 4 g (0.006 mole) of
+Compound D and 2.3 g (0.02 mol) of triethylamine in 50
+mL of tetrahydrofuran under nitrogen to a solution of
+6.2 g (0.018 mol) of Compound E,. The reaction mixture
+was stirred overnight at room temperature, filtered and
+evaporated. The reside was treated with 10 mL
+isopropyl alcohol and 2 g of triethylamine. After
+stirring for one hour, the solvent was evaporated,
+pentane was added and the mixture filtered through
+alumina. Recrystallization from pentane gave 5 g of
+Ligand-I as white crystals.</p>
+    <heading>
+      <b>
+        <u style="single">EXAMPLE 1: Hydroformylation in a Two phase Solvent</u>
+      </b>
+    </heading>
+    <p num="0053">A solution containing 0.28 g of Ligand-I,
+0.032 g of rhodiumdicarbonylacetylacetonate, 1.44 g of 
+O-dichlorobenzene (internal standard) and 30.31 g of
+methyl 3-pentenoate were mixed with 29.92 g of octane
+(non-polar component) and 30.87 g of adiponitrile
+(polar component). This two phase system was loaded
+into a 100 mL autoclave and heated with vigorous
+stirring under 150 psi CO/H2(1:1) at 105°C for 8 hours.
+A GC sample was taken after 8 hours and homogenized by
+adding acetone. The analysis shows (mole%):methyl
+4-pentenoate (M4P) 0.63%, methyl 2-pentenoate (M2P)
+4.91%, methyl valerate (MV) 4.96%, methyl 3-pentenoate
+(M3P) 13.92%, methyl 3-formylvalerate (3FMVA) 2.89%,
+methyl 4-formylvalerate (4FMVA) 3.25%, methyl 5-formylvalerate
+(5FMVA) 68.87%. Once the autoclave
+reached 30°C, the content was transferred into a
+nitrogen purged dry box. The phases were separated and
+analyzed by X-ray Florescence (XFR) for Rh and P. Top
+phase 590 ppm P, 433 ppm Rh; bottom phase 20 ppm P, 10
+ppm Rh. GC analysis: Top phase (octane) M4P 0.0%, M2P
+13.49%, MV 19.08%, M3P 35.29%, 3FMVA 1.95%, 4FMVA
+1.85%, 5FMVA 28.34%; Bottom phase (adiponitrile) M4P
+0.5%, M2P 3.93%, MV 3.58%, M3P 12.1%, 3FMVA 2.99%,
+4FMVA 3.42%, 5FMVA 73.48%; moles top phase/moles bottom
+phase=7.7/92.3.</p>
+    <heading>
+      <b>
+        <u style="single">EXAMPLE 2: Catalyst extraction and recycle</u>
+      </b>
+    </heading>
+    <p num="0054">A solution containing 0.448 g of Ligand-I,
+0.044 g of rhodiumdicarbonylditertbutylacetylacetonate
+and 65.054 g of methyl-3-pentenoate was loaded into a
+100 mL autoclave and heated with vigorous stirring
+under 150 psi CO/H2(1:1) at 105°C for 8 hours. Once
+the autoclave reached 30°C the content was transferred
+into a nitrogen purged dry box. The effluent (reaction
+mixture) from the autoclave was weighed and combined
+with equal weights of hexane and acetonitrile (two
+phase process solvent). The top layer was saved and
+the bottom layer extracted twice with the same amount
+of hexane. All the hexane layers were combined and
+under high vacuum hexane was removed. Methyl 3-pentenoate 
+was added to the residue as shown in Table 1
+and the hydroformylation reaction was run again. A
+100uL sample was taken each cycle to monitor the
+performance of the catalyst upon recycle. Table 2
+indicates the composition (mmol/g) as a function of
+cycle number.
+<tables><table><tgroup cols="5"><tbody><row><entry align="center"/><entry align="left"><b>W<sub>residue</sub> (g)</b></entry><entry align="left"><b>M3P (g)</b></entry><entry align="left"><b>W<sub>out</sub>-W<sub>in</sub> (g)</b></entry><entry align="left"><b>Time (h)</b></entry></row><row><entry align="left">Cycle #1</entry><entry align="right"/><entry align="center">65.06</entry><entry align="center">8.27</entry><entry align="center">6.00</entry></row><row><entry align="left">Cycle #2</entry><entry align="center">9.86</entry><entry align="center">64.70</entry><entry align="center">9.13</entry><entry align="center">6.00</entry></row><row><entry align="left">Cycle #3</entry><entry align="center">16.05</entry><entry align="center">66.53</entry><entry align="center">11.60</entry><entry align="center">8.00</entry></row><row><entry align="left">Cycle #4</entry><entry align="center">18.09</entry><entry align="center">54.67</entry><entry align="center">13.16</entry><entry align="center">8.00</entry></row><row><entry align="left">Cycle #5</entry><entry align="center">8.79</entry><entry align="center">61.58</entry><entry align="center">8.88</entry><entry align="center">6.00</entry></row><row><entry align="left">Cycle #6</entry><entry align="center">8.85</entry><entry align="center">61.72</entry><entry align="center">8.11</entry><entry align="center">6.00</entry></row><row><entry align="left">Cycle #7</entry><entry align="center">7.00</entry><entry align="center">67.28</entry><entry align="center">7.95</entry><entry align="center">6.00</entry></row></tbody></tgroup></table></tables><tables><table><tgroup cols="8"><tbody><row><entry align="center"/><entry align="left">M4P</entry><entry align="left">M2P</entry><entry align="left">MV</entry><entry align="left">M3P</entry><entry align="left">3FMVA</entry><entry align="left">4FMVA</entry><entry align="left">5FMVA</entry></row><row><entry align="left">Cycle #1</entry><entry align="center">0.11</entry><entry align="center">0.40</entry><entry align="center">0.15</entry><entry align="center">1.92</entry><entry align="center">0.22</entry><entry align="center">0.26</entry><entry align="center">4.25</entry></row><row><entry align="left">Cycle #2</entry><entry align="center">0.10</entry><entry align="center">0.41</entry><entry align="center">0.14</entry><entry align="center">2.50</entry><entry align="center">0.20</entry><entry align="center">0.24</entry><entry align="center">3.65</entry></row><row><entry align="left">Cycle #3</entry><entry align="center">0.12</entry><entry align="center">0.41</entry><entry align="center">0.13</entry><entry align="center">3.17</entry><entry align="center">0.19</entry><entry align="center">0.23</entry><entry align="center">3.22</entry></row><row><entry align="left">Cycle #4</entry><entry align="center">0.11</entry><entry align="center">0.46</entry><entry align="center">0.16</entry><entry align="center">2.13</entry><entry align="center">0.23</entry><entry align="center">0.28</entry><entry align="center">4.01</entry></row><row><entry align="left">Cycle #5</entry><entry align="center">0.08</entry><entry align="center">0.39</entry><entry align="center">0.13</entry><entry align="center">2.49</entry><entry align="center">0.21</entry><entry align="center">0.25</entry><entry align="center">3.08</entry></row><row><entry align="left">Cycle #6</entry><entry align="center">0.12</entry><entry align="center">0.38</entry><entry align="center">0.12</entry><entry align="center">2.69</entry><entry align="center">0.20</entry><entry align="center">0.24</entry><entry align="center">3.90</entry></row><row><entry align="left">Cycle #7</entry><entry align="center">0.14</entry><entry align="center">0.37</entry><entry align="center">0.12</entry><entry align="center">3.29</entry><entry align="center">0.23</entry><entry align="center">0.26</entry><entry align="center">3.99</entry></row></tbody></tgroup></table></tables></p>
+    <heading>
+      <b>
+        <u style="single">EXAMPLE 3:</u>
+      </b>
+    </heading>
+    <p num="0055">The following example illustrates a high
+boiler purge in the process of the present invention.
+A 100 mL autoclave was charged with 80 g of a solution
+prepared dissolving 1.31 g of Ligand-V, described
+above, 0.054 of rhodiumdicarbonylacetyl-acetonate and
+100 g of methyl 3-pentenoate (excess ethylenically
+unsaturated compound). The autoclave heated with
+vigorous stirring under 150 psi CO/H2(1:1) at 105°C for 
+5 hours. Once the autoclave reached 30°C the content
+was transferred into a nitrogen purged dry box and the
+product distilled under high vacuum. The residue
+(including high boiling byproducts and the catalyst
+system) was dissolved in methyl 3-pentenonate and the
+hydroformylation experiment repeated 10 times. The
+analysis for the 10 experiments is shown in Table 3.
+The residue (polar solvent) (17.2 g) from cycle 10 was
+combined with 75 ml of hexane (addition of a non-polar
+phase to form the process solvent). The phases were
+separated and the bottom layer was extracted twice with
+75 mL of hexane. The hexane extracts were combined,
+hexane was removed under vacuum and the residue (1.1 g)
+was dissolved in methyl 3-pentenoate. The bottom layer
+weighed 15.6 g indicating 90% efficiency for the
+removal of high boilers. The hydroformylation
+experiment was repeated again. The analysis for this
+experiment, Cycle 11, is also shown in Table 3. Table
+3 indicates the composition (mmol/g) as a function of
+cycle number.
+<tables><table><tgroup cols="10"><tbody><row><entry align="center"/><entry align="left">M4P</entry><entry align="left">Mc2P</entry><entry align="left">MV</entry><entry align="left">M3P</entry><entry align="left">Mt2P</entry><entry align="left">M2FV</entry><entry align="left">M3FV</entry><entry align="left">M4FV</entry><entry align="left">M5FV</entry></row><row><entry align="left">Cycle #1</entry><entry align="center">0.00</entry><entry align="center">0.01</entry><entry align="center">0.25</entry><entry align="center">0.32</entry><entry align="center">0.35</entry><entry align="center">0.06</entry><entry align="center">0.18</entry><entry align="center">0.24</entry><entry align="center">5.03</entry></row><row><entry align="left">Cycle #2</entry><entry align="center">0.01</entry><entry align="center">0.02</entry><entry align="center">0.29</entry><entry align="center">0.42</entry><entry align="center">0.57</entry><entry align="center">0.05</entry><entry align="center">0.15</entry><entry align="center">0.26</entry><entry align="center">4.68</entry></row><row><entry align="left">Cycle #3</entry><entry align="center">0.00</entry><entry align="center">0.02</entry><entry align="center">0.26</entry><entry align="center">0.36</entry><entry align="center">0.45</entry><entry align="center">0.09</entry><entry align="center">0.20</entry><entry align="center">0.29</entry><entry align="center">4.78</entry></row><row><entry align="left">Cycle #4</entry><entry align="center">0.00</entry><entry align="center">0.01</entry><entry align="center">0.24</entry><entry align="center">0.31</entry><entry align="center">0.45</entry><entry align="center">0.05</entry><entry align="center">0.20</entry><entry align="center">0.30</entry><entry align="center">4.23</entry></row><row><entry align="left">Cycle #5</entry><entry align="center">0.01</entry><entry align="center">0.01</entry><entry align="center">0.24</entry><entry align="center">0.38</entry><entry align="center">0.39</entry><entry align="center">0.04</entry><entry align="center">0.20</entry><entry align="center">0.28</entry><entry align="center">4.61</entry></row><row><entry align="left">Cycle #6</entry><entry align="center">0.01</entry><entry align="center">0.01</entry><entry align="center">0.24</entry><entry align="center">0.36</entry><entry align="center">0.30</entry><entry align="center">0.07</entry><entry align="center">0.21</entry><entry align="center">0.26</entry><entry align="center">4.31</entry></row><row><entry align="left">Cycle #7</entry><entry align="center">0.01</entry><entry align="center">0.02</entry><entry align="center">0.26</entry><entry align="center">0.33</entry><entry align="center">0.61</entry><entry align="center">0.04</entry><entry align="center">0.13</entry><entry align="center">0.27</entry><entry align="center">3.55</entry></row><row><entry align="left">Cycle #8</entry><entry align="center">0.01</entry><entry align="center">0.02</entry><entry align="center">0.29</entry><entry align="center">0.33</entry><entry align="center">0.64</entry><entry align="center">0.06</entry><entry align="center">0.12</entry><entry align="center">0.28</entry><entry align="center">4.02</entry></row><row><entry align="left">Cycle #9</entry><entry align="center">0.01</entry><entry align="center">0.01</entry><entry align="center">0.23</entry><entry align="center">0.32</entry><entry align="center">0.31</entry><entry align="center">0.14</entry><entry align="center">0.16</entry><entry align="center">0.22</entry><entry align="center">4.18</entry></row><row><entry align="left">Cycle #10</entry><entry align="center">0.01</entry><entry align="center">0.02</entry><entry align="center">0.27</entry><entry align="center">0.39</entry><entry align="center">0.51</entry><entry align="center">0.02</entry><entry align="center">0.11</entry><entry align="center">0.20</entry><entry align="center">3.96</entry></row><row><entry align="left">Cycle #11</entry><entry align="center">0.01</entry><entry align="center">0.02</entry><entry align="center">0.31</entry><entry align="center">0.57</entry><entry align="center">0.40</entry><entry align="center">0.05</entry><entry align="center">0.17</entry><entry align="center">0.22</entry><entry align="center">4.73</entry></row></tbody></tgroup></table></tables></p>
+  </description>
+  <claims load-source="patent-office" status="new" mxw-id="PCLM11592285" lang="DE">
+    <claim num="1">
+      <claim-text>Verfahren zur Herstellung eines linearen Aldehyd, umfassend das Umsetzen einer
+ethylenisch ungesättigten Verbindung durch Hydroformylierung in Gegenwart eines
+Katalysatorsystems, das zusammengesetzt ist aus einem Metall der Gruppe VIII, einem
+organischen Phosphit-Liganden und einem Reaktionslösemittel, worin der organische
+Phosphit-Ligand ein Ligand ist, der Phosphor mit der Struktur (PR<sub>2</sub>)<sub>n</sub>R' enthält, worin n 2
+ist, R und R' sind organische Reste, die gleich oder verschieden sein können, und worin R
+oder R' mindestens eine C<sub>9</sub>- bis C<sub>40</sub>-aliphatische Gruppe enthalten, die sich an einem von
+der primären Ligandenstruktur weggestreckten Endstück befindet, die den Liganden
+lipophil machen, und worin das Reaktionslösemittel eine zweiphasige Mischung einer
+organischen Verbindung mit 5 bis 20 Kohlenstoffatomen und ein polares Lösemittel ist.</claim-text>
+    </claim>
+    <claim num="2">
+      <claim-text>Verfahren zur Hydroformylierung einer ethylenisch ungesättigten Verbindung, bei
+welchem die Reaktionsprodukte und einschließlich hochsiedende Reaktionsprodukte von
+dem Katalysatorsystem leicht abgetrennt werden, welches Verfahren die Schritte umfasst:
+<claim-text><claim-text>(a) Zur Erzeugung eines Reaktionsgemisches in einem Reaktionslösemittel
+Umsetzen der ethylenisch ungesättigten Verbindung in Gegenwart eines
+Katalysatorsystems, das zusammengesetzt ist aus einem Metall der Gruppe VIII und
+einem organischen Phosphit-Liganden, enthaltend Phosphor mit der Struktur (PR<sub>2</sub>)<sub>n</sub>R',
+worin n gleich 2 ist, R und R' sind organische Reste, die gleich oder verschieden sein
+können, und worin R oder R' mindestens eine C<sub>9</sub>- bis C<sub>40</sub>-aliphatische Gruppe enthalten,
+die sich an einem von der primären Ligandenstruktur weggestreckten Endstück befindet,
+die den Liganden lipophil machen;</claim-text><claim-text>(b) Zusetzen eines nichtpolaren Lösemittels zum Reaktionsgemisch, um zwei
+Phasen zu erzeugen, von denen eine eine polare Phase ist, die überwiegend aus den
+Reaktionsprodukten gebildet wird, und die andere eine solche, die überwiegend aus dem
+nichtpolaren Lösemittel und dem Katalysatorsystem gebildet wird, so dass die
+Reaktionsprodukte und einschließlich die hochsiedenden Reaktionsprodukte der
+Hydroformylierung in der polaren Phase bleiben und das Katalysatorsystem weitgehend
+in die nichtpolare Phase abgetrennt ist; sowie</claim-text><claim-text>(c) Abtrennen der zwei Phasen und Isolieren der Reaktionsprodukte aus der
+polaren Phase und des Katalysators aus der nichtpolaren Phase.</claim-text></claim-text></claim-text>
+    </claim>
+    <claim num="3">
+      <claim-text>Verfahren nach Anspruch 1 oder 2, bei welchem das Reaktionslösemittel die
+ethylenisch ungesättigte Verbindung ist.</claim-text>
+    </claim>
+    <claim num="4">
+      <claim-text>Verfahren nach Anspruch 2, bei welchem vor dem Zusatz des nichtpolaren
+Lösemittels von Schritt (b) die flüchtigen Bestandteile aus dem Reaktionsgemisch von
+Schritt (a) entfernt werden. </claim-text>
+    </claim>
+    <claim num="5">
+      <claim-text>Verfahren nach Anspruch 2, bei welchem die Schritte (a) und (b) vereint werden
+und die Hydroformylierung in einem zweiphasigen Reaktionslösemittel ausgeführt wird.</claim-text>
+    </claim>
+    <claim num="6">
+      <claim-text>Verfahren nach Anspruch 2, bei welchem der zurückgewonnene Katalysator in
+Schritt (a) zurückgeführt wird und die Schritte wiederholt werden.</claim-text>
+    </claim>
+    <claim num="7">
+      <claim-text>Verfahren nach Anspruch 1 oder 2, bei welchem das nichtpolare Lösemittel
+ausgewählt wird aus der Gruppe von C<sub>5</sub>- bis C<sub>20</sub>-Kohlenwasserstoff-Lösemitteln.</claim-text>
+    </claim>
+    <claim num="8">
+      <claim-text>Verfahren nach einem der Ansprüche 1 oder 2, bei welchem die ethylenisch
+ungesättigte Verbindung ausgewählt wird aus der Gruppe, bestehend aus 3-Pentensäure,
+C<sub>1</sub>- bis C<sub>6</sub>-Alkylestern von 3-Pentensäure, 3-Pentennitril und 4-Pentennitril.</claim-text>
+    </claim>
+    <claim num="9">
+      <claim-text>Verfahren nach Anspruch 1 oder 2, bei welchem der organische Ligand
+ausgewählt wird aus den Strukturen A und B
+<img id="img-00280001" orientation="unknown" wi="137" img-format="tif" img-content="cf" file="00280001.tif" inline="no" he="63"/>
+worin die Strukturen A für die Liganden I bis III und die Strukturen B für die Liganden
+IV und IX stehen, Ligand I: R<sub>1</sub> ist (CH<sub>2</sub>)<sub>9</sub>CH<sub>3</sub> und R<sub>2</sub> ist H; Ligand II: R<sub>1</sub> ist (CH<sub>2</sub>)<sub>9</sub>CH<sub>3</sub>
+und R<sub>2</sub> ist CO(CH<sub>2</sub>)<sub>8</sub>CH<sub>3</sub>; Ligand III: R<sub>1</sub> und R<sub>2</sub> sind (CH<sub>2</sub>)<sub>9</sub>CH<sub>3</sub>; Ligand IV: R<sub>1</sub> ist
+(CH<sub>2</sub>)<sub>9</sub>CH<sub>3</sub>, R<sub>2</sub> ist O(CH<sub>2</sub>)<sub>9</sub>CH<sub>3</sub> und R<sub>3</sub> ist H; Ligand V: R<sub>1</sub> ist (CH<sub>2</sub>)<sub>17</sub>CH<sub>3</sub> und R<sub>2</sub> und R<sub>3</sub>
+sind H; Ligand VI: R<sub>1</sub> ist CH(CH<sub>3</sub>)(CH<sub>2</sub>)<sub>13</sub>CH<sub>3</sub> und R<sub>2</sub> und R<sub>3</sub> sind H; Ligand VII: R<sub>1</sub> ist
+(CH<sub>2</sub>)<sub>9</sub>CH<sub>3</sub>, R<sub>2</sub> ist H und R<sub>3</sub> ist OSi(CH<sub>3</sub>)<sub>2</sub>C(CH<sub>3</sub>)<sub>3</sub>; Ligand VIII: R<sub>1</sub> ist
+CH<sub>2</sub>CH((CH<sub>2</sub>)<sub>5</sub>CH<sub>3</sub>)((CH<sub>2</sub>)<sub>7</sub>CH<sub>3</sub>) und R<sub>2</sub> und R<sub>3</sub> sind H; sowie Ligand IX ist
+CH<sub>2</sub>CH(R<sub>4</sub>)(R<sub>5</sub>) und R<sub>4</sub> und R<sub>5</sub> sind gleiche oder verschiedene Kohlenwasserstoffe mit 6
+bis 30 Kohlenstoffatomen.</claim-text>
+    </claim>
+    <claim num="10">
+      <claim-text>Verbessertes Verfahren zur Hydroformylierung zur Herstellung eines linearen
+Aldehyds aus einem Reaktionsgemisch, enthaltend eine ethylenisch ungesättigte
+Verbindung und ein Katalysatorsystem, das zusammengesetzt ist aus einem Metall der
+Gruppe VIII und einem zweizähnigen organischen Phosphit-Liganden mit zwei
+dreiwertigen Phosphoratomen, worin die ethylenisch ungesättigte Verbindung auch als
+Reaktionslösemittel fungiert, wobei die Verbesserung umfasst: Erzeugen des
+Katalysatorsystems aus einem Liganden, der mindestens eine C<sub>9</sub>- bis C<sub>40</sub>-aliphatische
+Gruppe enthält, die sich an dem Grundgerüst- oder Nebenarm-Ringstrukturen des
+Liganden befindet, und nach der Hydroformylierung der ethylenisch ungesättigten 
+Verbindung Zusetzen des Reaktionsgemisches zu einem zweiphasigen
+Lösemittelgemisch, bestehend aus einer polaren und einer nichtpolaren Komponente, so
+dass die Reaktionsprodukte der Hydroformylierung in die polare Phase des
+Lösemittelgemisches extrahiert werden und das Katalysatorsystem weitgehend in der
+nichtpolaren Phase des Lösemittelgemisches zurückbleibt.</claim-text>
+    </claim>
+    <claim num="11">
+      <claim-text>Verfahren nach Anspruch 10, bei welchem das nichtpolare Lösemittel ausgewählt
+wird aus der Gruppe von C<sub>5</sub>- bis C<sub>20</sub>-Kohlenwasserstoff-Lösemitteln.</claim-text>
+    </claim>
+    <claim num="12">
+      <claim-text>Verfahren nach Anspruch 10, bei welchem die ethylenisch ungesättigte
+Verbindung ausgewählt wird aus der Gruppe, bestehend aus 3-Pentensäure, C<sub>1</sub>- bis C<sub>6</sub>-Alkylestern
+von 3-Pentensäure, 3-Pentennitril und 4-Pentennitril.</claim-text>
+    </claim>
+    <claim num="13">
+      <claim-text>Verfahren nach Anspruch 10, bei welchem der organische Ligand ausgewählt
+wird aus den Strukturen A und B
+<img id="img-00290001" orientation="unknown" wi="143" img-format="tif" img-content="cf" file="00290001.tif" inline="no" he="63"/>
+worin die Strukturen A für die Liganden I bis III und die Strukturen B für die Liganden
+IV und IX stehen; Ligand I: R<sub>1</sub> ist (CH<sub>2</sub>)<sub>9</sub>CH<sub>3</sub> und R<sub>2</sub> ist H; Ligand II: R<sub>1</sub> ist (CH<sub>2</sub>)<sub>9</sub>CH<sub>3</sub>
+und R<sub>2</sub> ist CO(CH<sub>2</sub>)<sub>8</sub>CH<sub>3</sub>; Ligand III: R<sub>1</sub> und R<sub>2</sub> sind (CH<sub>2</sub>)<sub>9</sub>CH<sub>3</sub>; Ligand IV: R<sub>1</sub> ist
+(CH<sub>2</sub>)<sub>9</sub>CH<sub>3</sub>, R<sub>2</sub> ist O(CH<sub>2</sub>)<sub>9</sub>CH<sub>3</sub> und R<sub>3</sub> ist H; Ligand V: R<sub>1</sub> ist (CH<sub>2</sub>)<sub>17</sub>CH<sub>3</sub> und R<sub>2</sub> und R<sub>3</sub>
+sind H; Ligand VI: R<sub>1</sub> ist CH(CH<sub>3</sub>)(CH<sub>2</sub>)<sub>13</sub>CH<sub>3</sub> und R<sub>2</sub> und R<sub>3</sub> sind H; Ligand VII: R<sub>1</sub> ist
+(CH<sub>2</sub>)<sub>9</sub>CH<sub>3</sub>, R<sub>2</sub> ist H und R<sub>3</sub> ist OSi(CH<sub>3</sub>)<sub>2</sub>C(CH<sub>3</sub>)<sub>3</sub>; Ligand VIII: R<sub>1</sub> ist
+CH<sub>2</sub>CH((CH<sub>2</sub>)<sub>5</sub>CH<sub>3</sub>)((CH<sub>2</sub>)<sub>7</sub>CH<sub>3</sub>) und R<sub>2</sub> und R<sub>3</sub> sind H; und Ligand IX ist
+CH<sub>2</sub>CH(R<sub>4</sub>)(R<sub>5</sub>) und R<sub>4</sub> und R<sub>5</sub> sind gleiche oder verschiedene Kohlenwasserstoffe mit 6
+bis 30 Kohlenstoffatomen.</claim-text>
+    </claim>
+    <claim num="14">
+      <claim-text>Verfahren nach Anspruch 1, 2 oder 10, bei welchem das Metall der Gruppe VIII
+Rhodium ist.</claim-text>
+    </claim>
+  </claims>
+  <claims load-source="patent-office" status="new" mxw-id="PCLM11592286" lang="EN">
+    <claim num="1">
+      <claim-text>A process for preparation of a linear
+aldehyde comprising reacting an ethylenically
+unsaturated compound by hydroformylation in the
+presence of a catalyst system composed of a Group VIII
+metal, an organic phosphite ligand and a reaction solvent wherein
+the organic phosphite ligand is a ligand containing phosphorous
+having the structure (PR<sub>2</sub>)<sub>n</sub>R' where n is
+2, R and R' are organic residues which may be
+the same or different and where the R or R' contain at
+least one C9 to C40 aliphatic group positioned as a
+tail extending away from the primary ligand structure
+rendering the ligand lipophilic and wherein the
+reaction solvent is a two phase mixture of an organic
+compound having from 5 to 20 carbon atoms and polar
+solvent.</claim-text>
+    </claim>
+    <claim num="2">
+      <claim-text>A process for hydroformylation of an
+ethylenically unsaturated compound wherein reaction
+products including high boiling reaction products are
+easily separated from the catalyst system comprising
+the steps of:
+<claim-text><claim-text>(a) reacting in a reaction solvent to form a
+reaction mixture the ethylenically unsaturated compound
+in the presence of a catalyst system composed of a
+Group VIII metal and organic phosphite ligand containing
+phosphorous having the structure (PR<sub>2</sub>)<sub>n</sub>R' where n is
+2, R and R' are organic residues
+which may be the same or different and where the R or
+R' contain at least one C9 to C40 aliphatic group
+positioned as a tail extending away from the primary
+ligand structure rendering the ligand lipophilic;</claim-text><claim-text>(b) adding a non-polar solvent to the
+reaction mixture to form two phases, one a polar phase
+predominately formed from the reaction products and one
+formed predominately from the non-polar solvent and the
+catalyst system such that the reaction products
+including the high boiling reaction products of the 
+hydroformylation remain in the polar phase and the
+catalyst system is partitioned substantially into the
+non-polar phase; and</claim-text><claim-text>(c) separating the two phases and isolating
+the reaction products from the polar phase and the
+catalyst from the non-polar phase.</claim-text></claim-text></claim-text>
+    </claim>
+    <claim num="3">
+      <claim-text>The process of claim 1 or 2 wherein the
+reaction solvent is the ethylenically unsaturated
+compound.</claim-text>
+    </claim>
+    <claim num="4">
+      <claim-text>The process of claim 2 wherein volatile
+are removed from the reaction mixture of step (a)
+before the addition of the polar solvent of step (b).</claim-text>
+    </claim>
+    <claim num="5">
+      <claim-text>The process of claim 2 wherein steps (a)
+and (b) are combined and the hydroformylation is
+carried out in a two phase reaction solvent.</claim-text>
+    </claim>
+    <claim num="6">
+      <claim-text>The process of claim 2 wherein the
+recovered catalyst is returned to step (a) and the
+steps are repeated.</claim-text>
+    </claim>
+    <claim num="7">
+      <claim-text>The process of claim 1 or 2 wherein the
+non-polar solvent is chosen from the group of C5 to C20
+hydrocarbon solvents.</claim-text>
+    </claim>
+    <claim num="8">
+      <claim-text>The process of any one of claims 1 or 2,
+wherein the ethylenically unsaturated compound is
+chosen from the group consisting of 3-pentenoic acid,
+C1 to C6 alkyl esters of 3-pentenoic acid,
+3-pentenenitrile, and 4-penenenitrile. </claim-text>
+    </claim>
+    <claim num="9">
+      <claim-text>The process of claim 1 or 2 wherein the
+organic ligand is chosen from the structures A and B
+<img id="img-00240001" orientation="unknown" wi="155" img-format="tif" img-content="cf" file="00240001.tif" inline="no" he="65"/>
+wherein structures A for Ligands I to III and
+structures B for Ligands IV to IX, Ligand I, R<sub>1</sub> is
+(CH<sub>2</sub>)<sub>9</sub>CH<sub>3</sub> and R<sub>2</sub> is H; Ligand II, R<sub>1</sub> is (CH<sub>2</sub>)<sub>9</sub>CH<sub>3</sub> and R<sub>2</sub>
+is CO(CH<sub>2</sub>)CH<sub>3</sub> ; Ligand III is R<sub>1</sub> and R<sub>2</sub> are (CH<sub>2</sub>)<sub>9</sub>CH<sub>3</sub>;
+Ligand IV, R<sub>1</sub> is (CH<sub>2</sub>)<sub>9</sub>CH<sub>3</sub>, R<sub>2</sub> is O(OH<sub>2</sub>)<sub>9</sub>CH<sub>3</sub> and R<sub>3</sub> is H;
+in Ligand V, R<sub>1</sub> is (CH<sub>2</sub>)<sub>17</sub>CH<sub>3</sub> and R<sub>2</sub> and R<sub>3</sub> are H; in
+Ligand VI, R<sub>1</sub> is CH(CH<sub>3</sub>)(CH<sub>2</sub>)<sub>13</sub>CH<sub>3</sub> and R<sub>2</sub> and R<sub>3</sub> are H; in
+Ligand VII, R<sub>1</sub> is (CH<sub>2</sub>)<sub>9</sub>CH<sub>3</sub>, R<sub>2</sub> is H and R<sub>3</sub> is
+OSi(CH<sub>3</sub>)<sub>2</sub>C(CH<sub>3</sub>)<sub>3</sub>; in Ligand VIII, R<sub>1</sub> is
+CH<sub>2</sub>CH((CH<sub>2</sub>)<sub>5</sub>CH<sub>3</sub>) ((CH<sub>2</sub>)<sub>7</sub>CH<sub>3</sub>) and R<sub>2</sub> and R<sub>3</sub> are H; and in
+Ligand IX is CH<sub>2</sub>CH(R<sub>4</sub>) (R<sub>5</sub>) and R<sub>4</sub> and R<sub>5</sub> are the same or
+different hydrocarbons having from 6 to 30 carbon
+atoms</claim-text>
+    </claim>
+    <claim num="10">
+      <claim-text>An improved hydroformylation process for
+preparation of a linear aldehyde from a reaction
+mixture containing an ethylenically unsaturated
+compound and a catalyst system composed of a Group VIII
+metal and a bidentate organic phosphite ligand having two
+trivalent phosphorous atoms wherein the ethylenically
+unsaturated compound also functions as reaction
+solvent, the improvement comprising: forming the
+catalyst system from a ligand containing at least one
+C9 to C40 aliphatic group positioned on the backbone or
+side arm ring structures of the ligand and following
+hydroformylation of the ethylenically unsaturated 
+compound adding to the reaction mixture a two phase
+solvent mixture consisting of a polar and a non-polar
+component so that the reaction products of the
+hydroformylation are extracted into the polar phase of
+the solvent mixture and the catalyst system remains
+substantially in the non-polar phase of the solvent
+mixture.</claim-text>
+    </claim>
+    <claim num="11">
+      <claim-text>The process of claim 10 wherein the non-polar
+solvent is chosen from the group of C5 to 20
+hydrocarbon solvents.</claim-text>
+    </claim>
+    <claim num="12">
+      <claim-text>The process of claim 10 wherein the
+ethylenically unsaturated compound is chosen from the
+group consisting of 3-pentenoic acid, C1 to C6 alkyl
+esters of 3-pentenoic acid, 3-pentenenitrile, and 4-penetenenitrile.</claim-text>
+    </claim>
+    <claim num="13">
+      <claim-text>The process of claim 10 wherein the
+organic ligand is chosen from the structures A and B
+<img id="img-00250001" orientation="unknown" wi="153" img-format="tif" img-content="cf" file="00250001.tif" inline="no" he="65"/>
+wherein structures A for Ligands I to III and
+structures B for Ligands IV to IX, Ligand I, R<sub>1</sub> is
+(CH<sub>2</sub>)<sub>9</sub>CH<sub>3</sub> and R<sub>2</sub> is H; Ligand II, R<sub>1</sub> is (CH<sub>2</sub>)<sub>9</sub>CH<sub>3</sub> and R<sub>2</sub>
+is CO(CH<sub>2</sub>)<sub>8</sub>CH<sub>3</sub> ; Ligand III is R<sub>1</sub> and R<sub>2</sub> are (CH<sub>2</sub>)<sub>9</sub>CH<sub>3</sub>;
+Ligand IV, R<sub>1</sub> is (CH<sub>2</sub>)<sub>9</sub>CH<sub>3</sub> , R<sub>2</sub> is O(CH<sub>2</sub>)<sub>9</sub>CH<sub>3</sub> and R<sub>3</sub> is
+H; in Ligand V, R<sub>1</sub> is (CH<sub>2</sub>)<sub>17</sub>CH<sub>3</sub> and R<sub>2</sub> and R<sub>3</sub> are H; in
+Ligand VI, R<sub>1</sub> is CH(CH<sub>3</sub>) (CH<sub>2</sub>)<sub>13</sub>CH<sub>3</sub> and R<sub>2</sub> and R<sub>3</sub> are H; in 
+Ligand VII, R<sub>1</sub> is (CH<sub>2</sub>)<sub>9</sub>CH<sub>3</sub>, R<sub>2</sub> is H and R<sub>3</sub> is
+OSi(CH<sub>3</sub>)<sub>2</sub>C(CH<sub>3</sub>)<sub>3</sub>; in Ligand VIII, R<sub>1</sub> is
+CH<sub>2</sub>CH((CH<sub>2</sub>)<sub>5</sub>CH<sub>3</sub>) ((CH<sub>2</sub>)<sub>7</sub>CH<sub>3</sub>) and R<sub>2</sub> and R<sub>3</sub> are H; and in
+Ligand IX is CH<sub>2</sub>CH(R<sub>4</sub>) (R<sub>5</sub>) and R<sub>4</sub> and R<sub>5</sub> are the same or
+different hydrocarbons having from 6 to 30 carbon
+atoms.</claim-text>
+    </claim>
+    <claim num="14">
+      <claim-text>The process as in claim 1, 2 or 10 wherein
+the Group VIII metal is rhodium.</claim-text>
+    </claim>
+  </claims>
+  <claims load-source="patent-office" status="new" mxw-id="PCLM11592287" lang="FR">
+    <claim num="1">
+      <claim-text>Procédé pour la préparation d'un aldéhyde linéaire comprenant la réaction d'un
+composé éthyléniquement insaturé par hydroformylation en présence d'un système de
+catalyseur composé d'un métal du Groupe VIII, d'un ligand de phosphite organique et
+d'un solvant de réaction, dans lequel le ligand de phosphite organique est un ligand
+contenant un phosphore présentant la structure (PR<sub>2</sub>)<sub>n</sub>R', où n est 2, R et R' sont des
+résidus organiques qui peuvent être identiques ou différents et où R ou R' contient au
+moins un groupe aliphatique C<sub>9</sub> à C<sub>40</sub> positionné en tant qu'extrémité éloignée de la
+structure de ligand principale rendant le ligand lipophile, et dans lequel le solvant de
+réaction est un mélange de deux phases d'un composé organique contenant de 5 à 20
+atomes de carbone et d'un solvant polaire.</claim-text>
+    </claim>
+    <claim num="2">
+      <claim-text>Procédé pour l'hydroformylation d'un composé éthyléniquement insaturé, dans
+lequel les produits réactionnels incluant des produits réactionnels à haut point d'ébullition
+sont facilement séparés du système de catalyseur, comprenant les étapes:
+<claim-text><claim-text>a) de réaction dans un solvant de réaction pour former un mélange
+réactionnel du composé éthyléniquement insaturé en présence d'un système de catalyseur
+composé d'un métal du Groupe VIII et d'un ligand de phosphite organique contenant un
+phosphore présentant la structure (PR<sub>2</sub>)<sub>n</sub>R', où n est 2, R et R' sont des résidus organiques
+qui peuvent être identiques ou différents et où R ou R' contient au moins un groupe
+aliphatique C<sub>9</sub> à C<sub>40</sub> positionné en tant qu'extrémité éloignée de la structure de ligand
+principale rendant le ligand lipophile;</claim-text><claim-text>b) d'ajout d'un solvant non polaire au mélange réactionnel pour former deux
+phases, l'une est une phase polaire formée de manière prédominante des produits
+réactionnels et l'autre formée de manière prédominante du solvant non polaire et du
+système de catalyseur de sorte que les produits réactionnels incluant les produits
+réactionnels à haut point d'ébullition de l'hydroformylation restent dans la phase polaire
+et que le système de catalyseur est séparé substantiellement dans la phase non polaire; et</claim-text><claim-text>c) de séparation des deux phases et d'isolement des produits réactionnels à
+partir de la phase polaire et du catalyseur à partir de la phase non polaire.</claim-text></claim-text></claim-text>
+    </claim>
+    <claim num="3">
+      <claim-text>Procédé suivant la revendication 1 ou 2, dans lequel le solvant de réaction est le
+composé éthyléniquement insaturé.</claim-text>
+    </claim>
+    <claim num="4">
+      <claim-text>Procédé suivant la revendication 2, dans lequel les composés volatils sont retirés
+du mélange réactionnel de l'étape (a) avant l'ajout du solvant non polaire de l'étape (b).</claim-text>
+    </claim>
+    <claim num="5">
+      <claim-text>Procédé suivant la revendication 2, dans lequel les étapes (a) et (b) sont combinées
+et l'hydroformylation est réalisée dans un solvant de réaction à deux phases.</claim-text>
+    </claim>
+    <claim num="6">
+      <claim-text>Procédé suivant la revendication 2, dans lequel le catalyseur récupéré est retourné
+vers l'étape (a) et les étapes sont répétées. </claim-text>
+    </claim>
+    <claim num="7">
+      <claim-text>Procédé suivant la revendication 1 ou 2, dans lequel le solvant non polaire est
+choisi dans le groupe constitué de solvants hydrocarbures C<sub>5</sub> à C<sub>20</sub>.</claim-text>
+    </claim>
+    <claim num="8">
+      <claim-text>Procédé suivant l'une quelconque des revendications 1 et 2, dans lequel le
+composé éthyléniquement insaturé est choisi dans le groupe constitué de l'acide 3-penténoïque,
+d'esters d'alkyle C<sub>1</sub> à C<sub>6</sub> de l'acide 3-penténoïque, du 3-pentènenitrile et du
+4-pentènenitrile.</claim-text>
+    </claim>
+    <claim num="9">
+      <claim-text>Procédé suivant la revendication 1 ou 2, dans lequel le ligand organique est choisi
+parmi les structures A et B:
+<img id="img-00310001" orientation="unknown" wi="130" img-format="tif" img-content="cf" file="00310001.tif" inline="no" he="62"/>
+où les structures A sont pour les ligands I à III et les structures B sont pour les ligands IV
+à IX, ligand I, R<sub>1</sub> est (CH<sub>2</sub>)<sub>9</sub>CH<sub>3</sub> et R<sub>2</sub> est H; ligand II, R<sub>1</sub> est (CH<sub>2</sub>)<sub>9</sub>CH<sub>3</sub> et R<sub>2</sub> est
+CO(CH<sub>2</sub>)<sub>8</sub>CH<sub>3</sub>; ligand III, R<sub>1</sub> et R<sub>2</sub> sont (CH<sub>2</sub>)<sub>9</sub>CH<sub>3</sub>; ligand IV, R<sub>1</sub> est (CH<sub>2</sub>)<sub>9</sub>CH<sub>3</sub>, R<sub>2</sub> est
+O(CH<sub>2</sub>)<sub>9</sub>CH<sub>3</sub> et R<sub>3</sub> est H; ligand V, R<sub>1</sub> est (CH<sub>2</sub>)<sub>17</sub>CH<sub>3</sub> et R<sub>2</sub> et R<sub>3</sub> sont H; ligand VI, R<sub>1</sub> est
+CH(CH<sub>3</sub>)(CH<sub>2</sub>)<sub>13</sub>CH<sub>3</sub> et R<sub>2</sub> et R<sub>3</sub> sont H; ligand VII, R<sub>1</sub> est (CH<sub>2</sub>)<sub>9</sub>CH<sub>3</sub> et R<sub>2</sub> est H et R<sub>3</sub>
+est OSi(CH<sub>3</sub>)<sub>2</sub>C(CH<sub>3</sub>)<sub>3</sub>; ligand VIII, R<sub>1</sub> est CH<sub>2</sub>CH((CH<sub>2</sub>)<sub>5</sub>CH<sub>3</sub>)((CH<sub>2</sub>)<sub>7</sub>CH<sub>3</sub>) et R<sub>2</sub> et R<sub>3</sub>
+sont H; et ligand IX est CH<sub>2</sub>CH(R<sub>4</sub>)(R<sub>5</sub>) et R<sub>4</sub> et R<sub>5</sub> sont des hydrocarbures identiques ou
+différents contenant de 6 à 30 atomes de carbone.</claim-text>
+    </claim>
+    <claim num="10">
+      <claim-text>Procédé d'hydroformylation amélioré pour la préparation d'un aldéhyde linéaire à
+partir d'un mélange réactionnel contenant un composé éthyléniquement insaturé et un
+système de catalyseur composé d'un métal du Groupe VIII et d'un ligand de phosphite
+organique bidenté contenant deux atomes de phosphore trivalents, dans lequel le composé
+éthyléniquement insaturé agit également comme un solvant de réaction, l'amélioration
+comprenant: la formation du système de catalyseur à partir d'un ligand contenant au
+moins un groupe aliphatique C<sub>9</sub> à C<sub>40</sub> positionné sur le squelette ou des structures de
+cycles de bras latéral du ligand et, à la suite de l'hydroformylation du composé
+éthyléniquement insaturé, l'ajout au mélange réactionnel d'un mélange de solvants à deux
+phases constitué d'un composant polaire et d'un composant non polaire de sorte que les
+produits réactionnels de l'hydroformylation sont extraits dans la phase polaire du mélange
+de solvants et que le système de catalyseur reste substantiellement dans la phase non
+polaire du mélange de solvants. </claim-text>
+    </claim>
+    <claim num="11">
+      <claim-text>Procédé suivant la revendication 10, dans lequel le solvant non polaire est choisi
+dans le groupe de solvants hydrocarbures C<sub>5</sub> à C<sub>20</sub>.</claim-text>
+    </claim>
+    <claim num="12">
+      <claim-text>Procédé suivant la revendication 10, dans lequel le composé éthyléniquement
+insaturé est choisi dans le groupe constitué de l'acide 3-penténoïque, d'esters d'alkyle C1
+à C6 de l'acide 3-penténoïque, du 3-pentènenitrile et du 4-pentènenitrile.</claim-text>
+    </claim>
+    <claim num="13">
+      <claim-text>Procédé suivant la revendication 10, dans lequel le ligand organique est choisi
+parmi les structures A et B:
+<img id="img-00320001" orientation="unknown" wi="134" img-format="tif" img-content="cf" file="00320001.tif" inline="no" he="61"/>
+où les structures A sont pour les ligands I à III et les structures B sont pour les ligands IV
+à IX, ligand I, R<sub>1</sub> est (CH<sub>2</sub>)<sub>9</sub>CH<sub>3</sub> et R<sub>2</sub> est H; ligand II, R<sub>1</sub> est (CH<sub>2</sub>)<sub>9</sub>CH<sub>3</sub> et R<sub>2</sub> est
+CO(CH<sub>2</sub>)<sub>8</sub>CH<sub>3</sub>; ligand III, R<sub>1</sub> et R<sub>2</sub> sont (CH<sub>2</sub>)<sub>9</sub>CH<sub>3</sub>; ligand IV, R<sub>1</sub> est (CH<sub>2</sub>)<sub>9</sub>CH<sub>3</sub>, R<sub>2</sub> est
+O(CH<sub>2</sub>)<sub>9</sub>CH<sub>3</sub> et R<sub>3</sub> est H; ligand V, R<sub>1</sub> est (CH<sub>2</sub>)<sub>17</sub>CH<sub>3</sub> et R<sub>2</sub> et R<sub>3</sub> sont H; ligand VI, R<sub>1</sub> est
+CH(CH<sub>3</sub>)(CH<sub>2</sub>)<sub>13</sub>CH<sub>3</sub> et R<sub>2</sub> et R<sub>3</sub> sont H; ligand VII, R<sub>1</sub> est (CH<sub>2</sub>)<sub>9</sub>CH<sub>3</sub> et R<sub>2</sub> est H et R<sub>3</sub>
+est OSi(CH<sub>3</sub>)<sub>2</sub>C(CH<sub>3</sub>)<sub>3</sub>; ligand VIII, R<sub>1</sub> est CH<sub>2</sub>CH((CH<sub>2</sub>)<sub>5</sub>CH<sub>3</sub>)((CH<sub>2</sub>)<sub>7</sub>CH<sub>3</sub>) et R<sub>2</sub> et R<sub>3</sub>
+sont H; et ligand IX est CH<sub>2</sub>CH(R<sub>4</sub>)(R<sub>5</sub>) et R<sub>4</sub> et R<sub>5</sub> sont des hydrocarbures identiques ou
+différents contenant de 6 à 30 atomes de carbone.</claim-text>
+    </claim>
+    <claim num="14">
+      <claim-text>Procédé suivant la revendication 1, 2 ou 10, dans lequel le métal du Groupe VIII
+est le rhodium.</claim-text>
+    </claim>
+  </claims>
+  <copyright>User acknowledges that the Information Retrieval Facility (IRF) and its third party providers retain all right, title and interest in and to this xml under applicable copyright laws. User acquires no ownership rights to this xml including but not limited to its format. User hereby accepts the terms and conditions of the Licence Agreement set forth at http://www.ir-facility.org/legal/marec/data_licence</copyright>
+</patent-document>
