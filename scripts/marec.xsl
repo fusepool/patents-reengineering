@@ -103,35 +103,15 @@ fp vocab
             <xsl:call-template name="publication-reference"/>
             <xsl:call-template name="application-reference"/>
             <xsl:call-template name="priority-claims"/>
-        </xsl:for-each>
-
-<!--        <xsl:apply-templates select="priority-claims"/>-->
 <!--        <xsl:apply-templates select="dates-of-public-availability"/>-->
-<!--        <xsl:apply-templates select="technical-data"/>-->
+        <xsl:apply-templates select="technical-data"/>
 <!--        <xsl:apply-templates select="parties"/>-->
 <!--        <xsl:apply-templates select="international-convention-data"/>-->
+        </xsl:for-each>
+
     </xsl:template>
 
 
-<!--  @ucid: character identifier made up of country + document-number + kind,-->
-<!--         e.g., US-5551212-A; EP-0700000-B1-->
-<!--  @fvid: (internal) integer identifer used for QA/QC procedures-->
-
-<!--<!ELEMENT publication-reference (document-id+)>-->
-<!--<!ATTLIST publication-reference-->
-<!--  %dfltattrs;-->
-<!--  ucid CDATA #REQUIRED-->
-<!--  fvid CDATA #REQUIRED-->
-
-<!--    <publication-reference ucid="EP-1000006-B1" status="new" fvid="22846476">-->
-<!--      <document-id status="new" format="original">-->
-<!--        <country status="new">EP</country>-->
-<!--        <doc-number>1000006</doc-number>-->
-<!--        <kind>B1</kind>-->
-<!--        <date>20030122</date>-->
-<!--        <lang>EN</lang>-->
-<!--      </document-id>-->
-<!--    </publication-reference>-->
     <xsl:template name="publication-reference">
         <xsl:param name="ucid" tunnel="yes"/>
 
@@ -153,30 +133,6 @@ fp vocab
     </xsl:template>
 
 
-<!--  @appl-type: US application type. This is reserverd for US only-->
-<!--              but other values may be used in the future.-->
-<!--  @us-series-code: US-only-->
-<!--  @us-art-unit: US-only-->
-<!--  @is-representative: see DOCDB ST36-->
-
-<!--<!ELEMENT application-reference (document-id+) >-->
-<!--<!ATTLIST application-reference-->
-<!--  %dfltattrs;-->
-<!--  ucid CDATA #IMPLIED-->
-<!--  appl-type CDATA #IMPLIED-->
-<!--  us-series-code CDATA #IMPLIED-->
-<!--  us-art-unit CDATA #IMPLIED-->
-<!--  is-representative (YES|NO) "NO"-->
-
-<!--    <application-reference load-source="docdb" ucid="EP-98937268-A" status="new" mxw-id="PAPP18318424" is-representative="NO">-->
-<!--      <document-id status="new" format="epo">-->
-<!--        <country status="new">EP</country>-->
-<!--        <doc-number>98937268</doc-number>-->
-<!--        <kind>A</kind>-->
-<!--        <date>19980729</date>-->
-<!--        <lang>EN</lang>-->
-<!--      </document-id>-->
-<!--    </application-reference>-->
     <xsl:template name="application-reference">
         <xsl:param name="ucid" tunnel="yes"/>
 
@@ -211,15 +167,6 @@ fp vocab
     </xsl:template>
 
 
-<!--    <priority-claims status="new">-->
-<!--      <priority-claim ucid="US-9815763-W" status="new" mxw-id="PPC22673501">-->
-<!--        <document-id status="new" format="epo">-->
-<!--          <country status="new">US</country>-->
-<!--          <doc-number>9815763</doc-number>-->
-<!--          <kind>W</kind>-->
-<!--          <date>19980729</date>-->
-<!--        </document-id>-->
-<!--      </priority-claim>-->
     <xsl:template name="priority-claims">
         <xsl:param name="ucid" tunnel="yes"/>
 
@@ -251,12 +198,6 @@ XXX: Normally we don't really want to define other patents from here. In case th
     </xsl:template>
 
 
-<!--<!ELEMENT document-id (country, doc-number?, kind?, date?, dtext?, lang?) >-->
-<!--<!ATTLIST document-id-->
-<!--  %dfltattrs;-->
-<!--  format (original|standard|epo|uspto|mxw-std) 'original'-->
-<!--  sequence CDATA #IMPLIED-->
-<!-->-->
     <xsl:template name="document-id">
         <xsl:param name="ucid" tunnel="yes"/>
 
@@ -346,13 +287,55 @@ XXX: Normally we don't really want to define other patents from here. In case th
     </xsl:template>
 
 
-<!--<!ENTITY % dfltattrs "-->
-<!--  id ID #IMPLIED-->
-<!--  mxw-id CDATA #IMPLIED-->
-<!--  status (n|new|c|corrected|d|deleted) 'new'-->
-<!--  load-source CDATA #IMPLIED-->
-<!--  ref-ucid CDATA #IMPLIED-->
-<!--">-->
+<!--    <technical-data status="new">-->
+<!--      <classification-ipc status="new">-->
+<!--        <edition>7</edition>-->
+<!--        <main-classification status="new">C07C  45/50</main-classification>-->
+<!--        <further-classification status="new">C07F   9/145</further-classification>-->
+    <xsl:template name="technical-data">
+        <xsl:for-each select="technical-data">
+            <xsl:apply-templates select="classification-ipc"/>
+        </xsl:for-each>
+    </xsl:template>
+
+    <xsl:template match="classification-ipc">
+        <xsl:param name="ucid" tunnel="yes"/>
+
+        <rdf:Description rdf:about="{$patent}{$ucid}">
+            <xsl:for-each select="*[name() = 'main-classification' or name() = 'further-classification']">
+                <xsl:variable name="id" select="normalize-space(replace(., '\s+', ''))"/>
+<!--
+TODO: Differentiate between main-classification and further-classification -->
+-->
+                <pmo:classifiedAs>
+<!--
+XXX: Maybe switch to a code list
+-->
+                    <rdf:Description rdf:about="{$patent}concept/ipc{$uriThingSeparator}{$id}">
+                        <xsl:call-template name="generalParameterEntities"/>
+
+                        <rdf:type rdf:resource="{$pmo}PatentClassificationCategory"/>
+                        <rdf:type rdf:resource="{$pmo}IPCCategory"/>
+                        <rdf:type rdf:resource="{$skos}Concept"/>
+
+                        <skos:inScheme rdf:resource="{$patent}concept/ipc"/>
+                        <skos:topConceptOf>
+                            <rdf:Description rdf:about="{$patent}concept/ipc">
+                                <skos:hasTopConcept rdf:resource="{$patent}concept/ipc{$uriThingSeparator}{$id}"/>
+                                <pmo:classifiedPatent rdf:resource="{$patent}concept/ipc{$uriThingSeparator}{$id}"/>
+                            </rdf:Description>
+                        </skos:topConceptOf>
+
+                        <pmo:classificationCode><xsl:value-of select="main-classification"/></pmo:classificationCode>
+                        <skos:notation><xsl:value-of select="text()"/></skos:notation>
+                        
+                    </rdf:Description>
+                </pmo:classifiedAs>
+            </xsl:for-each>
+        </rdf:Description>
+    </xsl:template>
+
+
     <xsl:template name="generalParameterEntities">
         <xsl:apply-templates select="@id"/>
 
@@ -390,7 +373,6 @@ Add members
     </xsl:template>
 
     <xsl:template match="description">
-   
     </xsl:template>
 
 <!--    <xsl:template name="claims">-->

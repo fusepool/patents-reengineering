@@ -15,9 +15,9 @@
    <rdf:Description rdf:about="http://example.org/#i">
       <rdf:type rdf:resource="http://www.w3.org/ns/prov#Agent"/>
    </rdf:Description>
-   <rdf:Description rdf:about="activity/20130129142245">
+   <rdf:Description rdf:about="activity/20130129181053">
       <rdf:type rdf:resource="http://www.w3.org/ns/prov#Activity"/>
-      <prov:startedAtTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2013-01-29T14:22:45Z</prov:startedAtTime>
+      <prov:startedAtTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2013-01-29T18:10:53Z</prov:startedAtTime>
       <prov:wasAssociatedWith rdf:resource="http://example.org/#i"/>
       <prov:used rdf:resource="http://exampe.org/data/EP-1000006-B1.xml"/>
       <prov:used rdf:resource="https://example.org/marec.xsl"/>
@@ -44,7 +44,7 @@
             <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#IntellectualPropertyDocument"/>
             <property:status>new</property:status>
             <dcterms:hasPart>
-               <rdf:Description rdf:about="http://example.org/patent/EP-1000006-B1/publication/1">
+               <rdf:Description rdf:about="http://example.org/patent/EP-1000006-B1/publication/20030122">
                   <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentPublication"/>
                   <dcterms:isPartOf rdf:resource="http://example.org/patent/EP-1000006-B1/publication"/>
                   <property:status>new</property:status>
@@ -67,7 +67,7 @@
             <property:status>new</property:status>
             <property:is-representative>NO</property:is-representative>
             <dcterms:hasPart>
-               <rdf:Description rdf:about="http://example.org/patent/EP-98937268-A/application/1">
+               <rdf:Description rdf:about="http://example.org/patent/EP-98937268-A/application/19980729">
                   <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentPublication"/>
                   <dcterms:isPartOf rdf:resource="http://example.org/patent/EP-98937268-A/application"/>
                   <property:status>new</property:status>
@@ -82,6 +82,211 @@
       </dcterms:references>
    </rdf:Description>
    <rdf:Description rdf:about="http://example.org/patent/EP-1000006-B1">
+      <property:priority-claim>
+         <rdf:Description rdf:about="http://example.org/patent/US-9815763-W/publication/1">
+            <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentPublication"/>
+         </rdf:Description>
+      </property:priority-claim>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://example.org/patent/EP-1000006-B1">
+      <property:priority-claim>
+         <rdf:Description rdf:about="http://example.org/patent/US-90250897-A/publication/1">
+            <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentPublication"/>
+         </rdf:Description>
+      </property:priority-claim>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://example.org/patent/EP-1000006-B1">
+
+--&gt;
+                <pmo:classifiedAs>
+         <rdf:Description rdf:about="http://example.org/patent/concept/ipc/C07C45/50">
+            <property:status>new</property:status>
+            <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentClassificationCategory"/>
+            <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#IPCCategory"/>
+            <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+            <skos:inScheme rdf:resource="http://example.org/patent/concept/ipc"/>
+            <skos:topConceptOf>
+               <rdf:Description rdf:about="http://example.org/patent/concept/ipc">
+                  <skos:hasTopConcept rdf:resource="http://example.org/patent/concept/ipc/C07C45/50"/>
+                  <pmo:classifiedPatent rdf:resource="http://example.org/patent/concept/ipc/C07C45/50"/>
+               </rdf:Description>
+            </skos:topConceptOf>
+            <pmo:classificationCode/>
+            <skos:notation>C07C  45/50</skos:notation>
+         </rdf:Description>
+      </pmo:classifiedAs>
+
+--&gt;
+                <pmo:classifiedAs>
+         <rdf:Description rdf:about="http://example.org/patent/concept/ipc/C07F9/145">
+            <property:status>new</property:status>
+            <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentClassificationCategory"/>
+            <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#IPCCategory"/>
+            <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+            <skos:inScheme rdf:resource="http://example.org/patent/concept/ipc"/>
+            <skos:topConceptOf>
+               <rdf:Description rdf:about="http://example.org/patent/concept/ipc">
+                  <skos:hasTopConcept rdf:resource="http://example.org/patent/concept/ipc/C07F9/145"/>
+                  <pmo:classifiedPatent rdf:resource="http://example.org/patent/concept/ipc/C07F9/145"/>
+               </rdf:Description>
+            </skos:topConceptOf>
+            <pmo:classificationCode/>
+            <skos:notation>C07F   9/145</skos:notation>
+         </rdf:Description>
+      </pmo:classifiedAs>
+
+--&gt;
+                <pmo:classifiedAs>
+         <rdf:Description rdf:about="http://example.org/patent/concept/ipc/C07C255/17">
+            <property:status>new</property:status>
+            <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentClassificationCategory"/>
+            <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#IPCCategory"/>
+            <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+            <skos:inScheme rdf:resource="http://example.org/patent/concept/ipc"/>
+            <skos:topConceptOf>
+               <rdf:Description rdf:about="http://example.org/patent/concept/ipc">
+                  <skos:hasTopConcept rdf:resource="http://example.org/patent/concept/ipc/C07C255/17"/>
+                  <pmo:classifiedPatent rdf:resource="http://example.org/patent/concept/ipc/C07C255/17"/>
+               </rdf:Description>
+            </skos:topConceptOf>
+            <pmo:classificationCode/>
+            <skos:notation>C07C 255/17</skos:notation>
+         </rdf:Description>
+      </pmo:classifiedAs>
+
+--&gt;
+                <pmo:classifiedAs>
+         <rdf:Description rdf:about="http://example.org/patent/concept/ipc/C07C69/716">
+            <property:status>new</property:status>
+            <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentClassificationCategory"/>
+            <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#IPCCategory"/>
+            <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+            <skos:inScheme rdf:resource="http://example.org/patent/concept/ipc"/>
+            <skos:topConceptOf>
+               <rdf:Description rdf:about="http://example.org/patent/concept/ipc">
+                  <skos:hasTopConcept rdf:resource="http://example.org/patent/concept/ipc/C07C69/716"/>
+                  <pmo:classifiedPatent rdf:resource="http://example.org/patent/concept/ipc/C07C69/716"/>
+               </rdf:Description>
+            </skos:topConceptOf>
+            <pmo:classificationCode/>
+            <skos:notation>C07C  69/716</skos:notation>
+         </rdf:Description>
+      </pmo:classifiedAs>
+
+--&gt;
+                <pmo:classifiedAs>
+         <rdf:Description rdf:about="http://example.org/patent/concept/ipc/C07C47/02">
+            <property:status>new</property:status>
+            <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentClassificationCategory"/>
+            <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#IPCCategory"/>
+            <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+            <skos:inScheme rdf:resource="http://example.org/patent/concept/ipc"/>
+            <skos:topConceptOf>
+               <rdf:Description rdf:about="http://example.org/patent/concept/ipc">
+                  <skos:hasTopConcept rdf:resource="http://example.org/patent/concept/ipc/C07C47/02"/>
+                  <pmo:classifiedPatent rdf:resource="http://example.org/patent/concept/ipc/C07C47/02"/>
+               </rdf:Description>
+            </skos:topConceptOf>
+            <pmo:classificationCode/>
+            <skos:notation>C07C  47/02</skos:notation>
+         </rdf:Description>
+      </pmo:classifiedAs>
+
+--&gt;
+                <pmo:classifiedAs>
+         <rdf:Description rdf:about="http://example.org/patent/concept/ipc/C07C59/147">
+            <property:status>new</property:status>
+            <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentClassificationCategory"/>
+            <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#IPCCategory"/>
+            <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+            <skos:inScheme rdf:resource="http://example.org/patent/concept/ipc"/>
+            <skos:topConceptOf>
+               <rdf:Description rdf:about="http://example.org/patent/concept/ipc">
+                  <skos:hasTopConcept rdf:resource="http://example.org/patent/concept/ipc/C07C59/147"/>
+                  <pmo:classifiedPatent rdf:resource="http://example.org/patent/concept/ipc/C07C59/147"/>
+               </rdf:Description>
+            </skos:topConceptOf>
+            <pmo:classificationCode/>
+            <skos:notation>C07C  59/147</skos:notation>
+         </rdf:Description>
+      </pmo:classifiedAs>
+
+--&gt;
+                <pmo:classifiedAs>
+         <rdf:Description rdf:about="http://example.org/patent/concept/ipc/C07C51/373">
+            <property:status>new</property:status>
+            <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentClassificationCategory"/>
+            <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#IPCCategory"/>
+            <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+            <skos:inScheme rdf:resource="http://example.org/patent/concept/ipc"/>
+            <skos:topConceptOf>
+               <rdf:Description rdf:about="http://example.org/patent/concept/ipc">
+                  <skos:hasTopConcept rdf:resource="http://example.org/patent/concept/ipc/C07C51/373"/>
+                  <pmo:classifiedPatent rdf:resource="http://example.org/patent/concept/ipc/C07C51/373"/>
+               </rdf:Description>
+            </skos:topConceptOf>
+            <pmo:classificationCode/>
+            <skos:notation>C07C  51/373</skos:notation>
+         </rdf:Description>
+      </pmo:classifiedAs>
+
+--&gt;
+                <pmo:classifiedAs>
+         <rdf:Description rdf:about="http://example.org/patent/concept/ipc/C07C67/347">
+            <property:status>new</property:status>
+            <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentClassificationCategory"/>
+            <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#IPCCategory"/>
+            <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+            <skos:inScheme rdf:resource="http://example.org/patent/concept/ipc"/>
+            <skos:topConceptOf>
+               <rdf:Description rdf:about="http://example.org/patent/concept/ipc">
+                  <skos:hasTopConcept rdf:resource="http://example.org/patent/concept/ipc/C07C67/347"/>
+                  <pmo:classifiedPatent rdf:resource="http://example.org/patent/concept/ipc/C07C67/347"/>
+               </rdf:Description>
+            </skos:topConceptOf>
+            <pmo:classificationCode/>
+            <skos:notation>C07C  67/347</skos:notation>
+         </rdf:Description>
+      </pmo:classifiedAs>
+
+--&gt;
+                <pmo:classifiedAs>
+         <rdf:Description rdf:about="http://example.org/patent/concept/ipc/C07C45/80">
+            <property:status>new</property:status>
+            <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentClassificationCategory"/>
+            <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#IPCCategory"/>
+            <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+            <skos:inScheme rdf:resource="http://example.org/patent/concept/ipc"/>
+            <skos:topConceptOf>
+               <rdf:Description rdf:about="http://example.org/patent/concept/ipc">
+                  <skos:hasTopConcept rdf:resource="http://example.org/patent/concept/ipc/C07C45/80"/>
+                  <pmo:classifiedPatent rdf:resource="http://example.org/patent/concept/ipc/C07C45/80"/>
+               </rdf:Description>
+            </skos:topConceptOf>
+            <pmo:classificationCode/>
+            <skos:notation>C07C  45/80</skos:notation>
+         </rdf:Description>
+      </pmo:classifiedAs>
+
+--&gt;
+                <pmo:classifiedAs>
+         <rdf:Description rdf:about="http://example.org/patent/concept/ipc/C07C253/30">
+            <property:status>new</property:status>
+            <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentClassificationCategory"/>
+            <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#IPCCategory"/>
+            <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+            <skos:inScheme rdf:resource="http://example.org/patent/concept/ipc"/>
+            <skos:topConceptOf>
+               <rdf:Description rdf:about="http://example.org/patent/concept/ipc">
+                  <skos:hasTopConcept rdf:resource="http://example.org/patent/concept/ipc/C07C253/30"/>
+                  <pmo:classifiedPatent rdf:resource="http://example.org/patent/concept/ipc/C07C253/30"/>
+               </rdf:Description>
+            </skos:topConceptOf>
+            <pmo:classificationCode/>
+            <skos:notation>C07C 253/30</skos:notation>
+         </rdf:Description>
+      </pmo:classifiedAs>
+   </rdf:Description>C07C  69/00        20060101CLI20051220RMJP        C07C  59/00        20060101CLI20051220RMJP        C07C 253/00        20060101CLI20051220RMJP        B01J  31/18        20060101A I20051008RMEP        B01J  31/22        20060101AFI20051220RMJP        C07C  45/80        20060101A I20051008RMEP        C07C  47/02        20060101ALI20051220RMJP        C07C  69/716       20060101ALI20051220RMJP        C07C  51/347       20060101C I20051008RMEP        C07F   9/145       20060101A I20051008RMEP        C07C  45/50        20060101A I20051008RMEP        C07C 253/30        20060101ALI20051220RMJP        C07C  67/347       20060101A I20051008RMEP        C07C  67/00        20060101C I20051008RMEP        C07C  59/147       20060101ALI20051220RMJP        C07F   9/00        20060101C I20051008RMEP        C07C 255/00        20060101CLI20051220RMJP        C07C  47/02        20060101CLI20051220RMJP        C07C 255/17        20060101ALI20051220RMJP        C07C  67/313       20060101A I20051008RMEP        C07C  51/373       20060101A I20051008RMEP        C07B  61/00        20060101CLI20051220RMJP        C07B  61/00        20060101ALI20051220RMJP        C07C  45/00        20060101C I20051008RMEP        B01J  31/16        20060101C I20051008RMEP        C07C  51/373+59/147C07C  67/313+69/716C07C  45/80C07C  67/347+69/716C07F   9/145+JC07C  45/50L01J531:82DB01J  31/18C2L01J531:80L01J231:32BL01J531:02H4VERFAHREN ZUR HERSTELLUNG VON RECHTKETTIGEN ALDEHYDENIMPROVED PROCESS OF PREPARATION OF LINEAR ALDEHYDESPROCEDE AMELIORE DE PREPARATION D'ALDEHYDES LINEAIRES<rdf:Description rdf:about="http://example.org/patent/EP-1000006-B1">
       <dcterms:license>User acknowledges that the Information Retrieval Facility (IRF) and its third party providers retain all right, title and interest in and to this xml under applicable copyright laws. User acquires no ownership rights to this xml including but not limited to its format. User hereby accepts the terms and conditions of the Licence Agreement set forth at http://www.ir-facility.org/legal/marec/data_licence</dcterms:license>
    </rdf:Description>
 </rdf:RDF>
