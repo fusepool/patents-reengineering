@@ -102,6 +102,7 @@ fp vocab
         <xsl:for-each select="bibliographic-data">
             <xsl:call-template name="publication-reference"/>
             <xsl:call-template name="application-reference"/>
+            <xsl:call-template name="priority-claims"/>
         </xsl:for-each>
 
 <!--        <xsl:apply-templates select="priority-claims"/>-->
@@ -210,6 +211,38 @@ fp vocab
     </xsl:template>
 
 
+<!--    <priority-claims status="new">-->
+<!--      <priority-claim ucid="US-9815763-W" status="new" mxw-id="PPC22673501">-->
+<!--        <document-id status="new" format="epo">-->
+<!--          <country status="new">US</country>-->
+<!--          <doc-number>9815763</doc-number>-->
+<!--          <kind>W</kind>-->
+<!--          <date>19980729</date>-->
+<!--        </document-id>-->
+<!--      </priority-claim>-->
+    <xsl:template name="priority-claims">
+        <xsl:param name="ucid" tunnel="yes"/>
+
+        <xsl:variable name="id">
+            <xsl:choose>
+                <xsl:when test="date">
+                    <xsl:value-of select="replace(normalize-space(date), '\s+', '')"/>
+                </xsl:when>
+                <xsl:otherwise>
+                    <xsl:value-of select="position()"/>
+                </xsl:otherwise>
+            </xsl:choose>
+        </xsl:variable>
+<!--
+XXX: Skips priority-claims without @ucid
+-->
+        <xsl:for-each select="priority-claims/priority-claim[@ucid]">
+            <rdf:Description rdf:about="{$patent}{$ucid}">
+                <property:priority-claim rdf:resource="{$patent}{@ucid}/publication{$uriThingSeparator}{$id}"/>
+            </rdf:Description>
+        </xsl:for-each>
+    </xsl:template>
+
 
 <!--<!ELEMENT document-id (country, doc-number?, kind?, date?, dtext?, lang?) >-->
 <!--<!ATTLIST document-id-->
@@ -228,17 +261,28 @@ fp vocab
                 <xsl:when test="local-name() = 'application-reference'">
                     <xsl:value-of select="'application'"/>
                 </xsl:when>
+                <xsl:when test="local-name() = 'priority-claim'">
+                    <xsl:value-of select="'priority-claim'"/>
+                </xsl:when>
                 <xsl:otherwise>
-<!--
-TODO: priority-claim
--->
                 </xsl:otherwise>
             </xsl:choose>
         </xsl:variable>
 
         <xsl:for-each select="document-id">
             <dcterms:hasPart>
-                <rdf:Description rdf:about="{$patent}{$ucid}/{$referenceType}{$uriThingSeparator}{position()}">
+                <xsl:variable name="id">
+                    <xsl:choose>
+                        <xsl:when test="date">
+                            <xsl:value-of select="replace(normalize-space(date), '\s+', '')"/>
+                        </xsl:when>
+                        <xsl:otherwise>
+                            <xsl:value-of select="position()"/>
+                        </xsl:otherwise>
+                    </xsl:choose>
+                </xsl:variable>
+
+                <rdf:Description rdf:about="{$patent}{$ucid}/{$referenceType}{$uriThingSeparator}{$id}">
                     <rdf:type rdf:resource="{$pmo}PatentPublication"/>
 
                     <dcterms:isPartOf rdf:resource="{$patent}{$ucid}/{$referenceType}"/>
@@ -260,9 +304,6 @@ TODO: priority-claim
                                 <pmo:applicationNumber><xsl:value-of select="doc-number"/></pmo:applicationNumber>
                             </xsl:when>
                             <xsl:otherwise>
-<!--
-TODO: priority-claim
--->
                             </xsl:otherwise>
                         </xsl:choose>
                     </xsl:if>
