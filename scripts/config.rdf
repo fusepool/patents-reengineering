@@ -2,7 +2,7 @@
 <rdf:RDF
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-  <rdf:Description rdf:about="file:///var/www/marec-rdf/scripts/config.ttl">
+  <rdf:Description rdf:about="file:///var/www/patents-reengineering/scripts/config.ttl">
     <rdf:value>
       <rdf:Description>
         <rdf:value>https://example.org/marec.xsl</rdf:value>

@@ -10,7 +10,7 @@ rapper -g config.ttl -o rdfxml-abbrev > config.rdf
 
 #grep -RE "kind=\"[^\"]*\"" MAREC/*/*/*.xml | perl -pe 's/.*kind=\"([^\"]*)\".*/$1/' | sort -u
 
-#saxonb-xslt -t -tree:linked -s ../MAREC/00/00/EP-1000000-A1.xml -xsl epo.xsl xmlDocument=../MAREC/00/00/EP-1000000-A1.xml > ../MAREC/00/00/EP-1000000-A1.rdf
-#saxonb-xslt -t -tree:linked -s ../MAREC/00/00/EP-1000000-B1.xml -xsl epo.xsl xmlDocument=../MAREC/00/00/EP-1000000-B1.xml > ../MAREC/00/00/EP-1000000-B1.rdf
+saxonb-xslt -t -tree:linked -s ../data/00/00/EP-1000000-A1.xml -xsl marec.xsl xmlDocument=../data/00/00/EP-1000000-A1.xml > ../data/00/00/EP-1000000-A1.rdf
+saxonb-xslt -t -tree:linked -s ../data/00/00/EP-1000000-B1.xml -xsl marec.xsl xmlDocument=../data/00/00/EP-1000000-B1.xml > ../data/00/00/EP-1000000-B1.rdf
 
 saxonb-xslt -t -tree:linked -s ../data/00/06/EP-1000006-B1.xml -xsl marec.xsl xmlDocument=../data/00/06/EP-1000006-B1.xml > ../data/00/06/EP-1000006-B1.rdf
