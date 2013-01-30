@@ -40,6 +40,7 @@
     <xsl:variable name="pulo" select="fn:getConfig('pulo')"/>
     <xsl:variable name="sumo" select="fn:getConfig('sumo')"/>
     <xsl:variable name="pmo" select="fn:getConfig('pmo')"/>
+    <xsl:variable name="schema" select="'http://schema.org/'"/>
     <xsl:variable name="uriThingSeparator" select="fn:getConfig('uriThingSeparator')"/>
     <xsl:variable name="concept" select="concat($baseURI, 'concept', $uriThingSeparator)"/>
     <xsl:variable name="code" select="concat($baseURI, 'code')"/>
@@ -48,6 +49,7 @@
     <xsl:variable name="dataset" select="concat($baseURI, 'dataset/')"/>
     <xsl:variable name="patent" select="concat($baseURI, 'patent', $uriThingSeparator)"/>
     <xsl:variable name="patentFamily" select="concat($baseURI, 'family', $uriThingSeparator)"/>
+    <xsl:variable name="party" select="concat($baseURI, 'party', $uriThingSeparator)"/>
 
     <!--Copied from https://github.com/csarven/sdmx-to-qb/blob/master/scripts/common.xsl -->
     <xsl:function name="fn:getConfig">

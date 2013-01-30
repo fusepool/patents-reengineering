@@ -21,6 +21,7 @@
     xmlns:sumo="http://www.owl-ontologies.com/sumo.owl#"
     xmlns:pmo="http://www.patexpert.org/ontologies/pmo.owl#"
     xmlns:property="http://example.org/property/"
+    xmlns:schema="http://schema.org/"
 
     exclude-result-prefixes="xsl fn"
     >
@@ -105,7 +106,7 @@ fp vocab
             <xsl:call-template name="priority-claims"/>
 <!--        <xsl:apply-templates select="dates-of-public-availability"/>-->
             <xsl:call-template name="technical-data"/>
-<!--        <xsl:apply-templates select="parties"/>-->
+            <xsl:call-template name="parties"/>
 <!--        <xsl:apply-templates select="international-convention-data"/>-->
         </xsl:for-each>
 
@@ -342,6 +343,170 @@ XXX: Maybe switch to a code list
 
     <xsl:template match="invention-title">
         <dcterms:title><xsl:call-template name="langTextNode"/></dcterms:title>
+    </xsl:template>
+
+
+    <xsl:template name="parties">
+        <xsl:for-each select="parties">
+            <xsl:apply-templates select="applicants/applicant"/>
+            <xsl:apply-templates select="inventors/inventor"/>
+            <xsl:apply-templates select="assignees/assignee"/>
+        </xsl:for-each>
+    </xsl:template>
+
+<!--
+TODO: Refactor the following the three templates
+-->
+    <xsl:template match="applicants/applicant">
+        <xsl:param name="ucid" tunnel="yes"/>
+        <rdf:Description rdf:about="{$patent}{$ucid}">
+            <pmo:applicant>
+                <xsl:apply-templates select="addressbook"/>
+            </pmo:applicant>
+        </rdf:Description>
+    </xsl:template>
+
+    <xsl:template match="inventors/inventor">
+        <xsl:param name="ucid" tunnel="yes"/>
+        <rdf:Description rdf:about="{$patent}{$ucid}">
+            <pmo:inventor>
+                <xsl:apply-templates select="addressbook"/>
+            </pmo:inventor>
+        </rdf:Description>
+    </xsl:template>
+
+    <xsl:template match="assignees/assignee">
+        <xsl:param name="ucid" tunnel="yes"/>
+        <rdf:Description rdf:about="{$patent}{$ucid}">
+            <pmo:assignee>
+                <xsl:apply-templates select="addressbook"/>
+            </pmo:assignee>
+        </rdf:Description>
+    </xsl:template>
+
+    <xsl:template match="addressbook">
+<!--
+XXX: Perhaps switch to blank nodes instead
+-->
+        <rdf:Description rdf:about="{$party}{../@mxw-id}">
+            <xsl:choose>
+                <xsl:when test="name">
+                    <foaf:name><xsl:value-of select="name"/></foaf:name>
+                </xsl:when>
+                <xsl:when test="prefix or last-name or orgname">
+                    <xsl:if test="prefix">
+                        <foaf:honorificPrefix><xsl:value-of select="prefix"/></foaf:honorificPrefix>
+                    </xsl:if>
+                    <xsl:if test="last-name">
+                        <foaf:lastName><xsl:value-of select="last-name"/></foaf:lastName>
+                    </xsl:if>
+                    <xsl:if test="orgname">
+                        <foaf:name><xsl:value-of select="orgname"/></foaf:name>
+                    </xsl:if>
+                </xsl:when>
+                <xsl:otherwise>
+                </xsl:otherwise>
+            </xsl:choose>
+
+            <xsl:if test="first-name">
+                <foaf:firstName><xsl:value-of select="first-name"/></foaf:firstName>
+            </xsl:if>
+
+            <xsl:if test="middle-name">
+            </xsl:if>
+
+            <xsl:if test="suffix">
+                <foaf:honorificSuffix><xsl:value-of select="suffix"/></foaf:honorificSuffix>
+            </xsl:if>
+
+            <xsl:if test="iid">
+            </xsl:if>
+
+            <xsl:if test="role">
+                <foaf:title><xsl:value-of select="role"/></foaf:title>
+            </xsl:if>
+
+            <xsl:if test="orgname">
+                <foaf:name><xsl:value-of select="orgname"/></foaf:name>
+            </xsl:if>
+
+            <xsl:if test="department">
+            </xsl:if>
+
+            <xsl:if test="synonym">
+            </xsl:if>
+
+            <xsl:if test="registered-number">
+                <property:registered-number><xsl:value-of select="registered-number"/></property:registered-number>
+            </xsl:if>
+
+            <xsl:apply-templates select="address"/>
+
+            <xsl:apply-templates select="phone"/>
+            <xsl:apply-templates select="fax"/>
+            <xsl:apply-templates select="email"/>
+            <xsl:apply-templates select="url"/>
+            <xsl:apply-templates select="ead"/>
+        </rdf:Description>
+    </xsl:template>
+
+    <xsl:template match="phone">
+        <foaf:phone rdf:resource="tel:{normalize-space(phone)}"/>
+    </xsl:template>
+    <xsl:template match="fax">
+        <schema:faxNumber><xsl:value-of select="fax"/></schema:faxNumber>
+    </xsl:template>
+    <xsl:template match="email">
+        <foaf:mbox rdf:resource="mailto:{normalize-space(email)}"/>
+    </xsl:template>
+    <xsl:template match="url">
+        <foaf:page rdf:resource="{normalize-space(url)}"/>
+    </xsl:template>
+    <xsl:template match="ead">
+        <property:ead><xsl:value-of select="ead"/></property:ead>
+    </xsl:template>
+
+    <xsl:template match="address">
+        <schema:address>
+            <rdf:Description>
+                <rdf:type rdf:resource="{$schema}PostalAddress"/>
+                <xsl:if test="address-1">
+                    <schema:streetAddress><xsl:value-of select="address1"/></schema:streetAddress>
+                </xsl:if>
+                <xsl:if test="address-2">
+                    <schema:streetAddress><xsl:value-of select="address2"/></schema:streetAddress>
+                </xsl:if>
+                <xsl:if test="address-3">
+                    <schema:streetAddress><xsl:value-of select="address3"/></schema:streetAddress>
+                </xsl:if>
+                <xsl:if test="mailcode">
+                </xsl:if>
+                <xsl:if test="pobox">
+                    <schema:postOfficeBoxNumber><xsl:value-of select="pobox"/></schema:postOfficeBoxNumber>
+                </xsl:if>
+                <xsl:if test="room">
+                </xsl:if>
+                <xsl:if test="address-floor">
+                </xsl:if>
+                <xsl:if test="building">
+                </xsl:if>
+                <xsl:if test="street">
+                    <schema:streetAddress><xsl:value-of select="street"/></schema:streetAddress>
+                </xsl:if>
+                <xsl:if test="city">
+                    <schema:addressLocality><xsl:value-of select="city"/></schema:addressLocality>
+                </xsl:if>
+                <xsl:if test="state">
+                    <schema:addressRegion><xsl:value-of select="state"/></schema:addressRegion>
+                </xsl:if>
+                <xsl:if test="postcode">
+                    <schema:postalCode><xsl:value-of select="postcode"/></schema:postalCode>
+                </xsl:if>
+                <xsl:if test="country">
+                    <schema:addressCountry rdf:resource="{$code}country{$uriThingSeparator}{normalize-space(country)}"/>
+                </xsl:if>
+            </rdf:Description>
+        </schema:address>
     </xsl:template>
 
 
