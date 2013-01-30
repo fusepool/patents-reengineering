@@ -57,15 +57,24 @@
     </xsl:function>
 
 
-    <!--Copied from https://github.com/csarven/sdmx-to-qb/blob/master/scripts/common.xsl -->
+    <!--Adapted from https://github.com/csarven/sdmx-to-qb/blob/master/scripts/common.xsl -->
     <xsl:template name="langTextNode">
         <xsl:if test="@xml:lang">
             <xsl:copy-of select="@*[name() = 'xml:lang']"/>
         </xsl:if>
-        <xsl:if test="$lang">
-            <xsl:attribute name="xml:lang" select="$lang"/>
-        </xsl:if>
-        <xsl:value-of select="text()"/>
+
+        <xsl:choose>
+            <xsl:when test="@lang">
+                <xsl:attribute name="xml:lang" select="lower-case(@lang)"/>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:if test="$lang">
+                    <xsl:attribute name="xml:lang" select="$lang"/>
+                </xsl:if>
+            </xsl:otherwise>
+        </xsl:choose>
+
+        <xsl:value-of select="normalize-space(text())"/>
     </xsl:template>
 
 
