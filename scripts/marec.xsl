@@ -104,7 +104,7 @@ fp vocab
             <xsl:call-template name="application-reference"/>
             <xsl:call-template name="priority-claims"/>
 <!--        <xsl:apply-templates select="dates-of-public-availability"/>-->
-        <xsl:apply-templates select="technical-data"/>
+            <xsl:call-template name="technical-data"/>
 <!--        <xsl:apply-templates select="parties"/>-->
 <!--        <xsl:apply-templates select="international-convention-data"/>-->
         </xsl:for-each>
@@ -293,8 +293,14 @@ XXX: Normally we don't really want to define other patents from here. In case th
 <!--        <main-classification status="new">C07C  45/50</main-classification>-->
 <!--        <further-classification status="new">C07F   9/145</further-classification>-->
     <xsl:template name="technical-data">
+        <xsl:param name="ucid" tunnel="yes"/>
+
         <xsl:for-each select="technical-data">
             <xsl:apply-templates select="classification-ipc"/>
+
+            <rdf:Description rdf:about="{$patent}{$ucid}">
+                <xsl:apply-templates select="invention-title"/>
+            </rdf:Description>
         </xsl:for-each>
     </xsl:template>
 
@@ -305,7 +311,7 @@ XXX: Normally we don't really want to define other patents from here. In case th
             <xsl:for-each select="*[name() = 'main-classification' or name() = 'further-classification']">
                 <xsl:variable name="id" select="normalize-space(replace(., '\s+', ''))"/>
 <!--
-TODO: Differentiate between main-classification and further-classification -->
+TODO: Differentiate between main-classification and further-classification
 -->
                 <pmo:classifiedAs>
 <!--
@@ -326,12 +332,16 @@ XXX: Maybe switch to a code list
                             </rdf:Description>
                         </skos:topConceptOf>
 
-                        <pmo:classificationCode><xsl:value-of select="main-classification"/></pmo:classificationCode>
+                        <pmo:classificationCode><xsl:value-of select="text()"/></pmo:classificationCode>
                         <skos:notation><xsl:value-of select="text()"/></skos:notation>
                     </rdf:Description>
                 </pmo:classifiedAs>
             </xsl:for-each>
         </rdf:Description>
+    </xsl:template>
+
+    <xsl:template match="invention-title">
+        <dcterms:title><xsl:call-template name="langTextNode"/></dcterms:title>
     </xsl:template>
 
 
