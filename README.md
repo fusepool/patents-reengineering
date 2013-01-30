@@ -1,6 +1,6 @@
 # MAREC to RDF
 
-XSLT 2.0 templates to transform MAREX XML to RDF/XML.
+XSLT 2.0 templates to transform MAREC XML to RDF/XML.
 
 ## Requirements
 
