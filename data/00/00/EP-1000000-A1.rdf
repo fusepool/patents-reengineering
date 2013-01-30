@@ -15,9 +15,9 @@
    <rdf:Description rdf:about="http://example.org/#i">
       <rdf:type rdf:resource="http://www.w3.org/ns/prov#Agent"/>
    </rdf:Description>
-   <rdf:Description rdf:about="activity/20130130102329">
+   <rdf:Description rdf:about="activity/20130130114822">
       <rdf:type rdf:resource="http://www.w3.org/ns/prov#Activity"/>
-      <prov:startedAtTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2013-01-30T10:23:29Z</prov:startedAtTime>
+      <prov:startedAtTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2013-01-30T11:48:22Z</prov:startedAtTime>
       <prov:wasAssociatedWith rdf:resource="http://example.org/#i"/>
       <prov:used rdf:resource="http://exampe.org/data/EP-1000000-A1.xml"/>
       <prov:used rdf:resource="https://example.org/marec.xsl"/>
@@ -85,7 +85,13 @@
             <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentPublication"/>
          </rdf:Description>
       </property:priority-claim>
-   </rdf:Description>B28B   1/00        20060101C I20051008RMEP        B28B   1/29        20060101A I20051008RMEP        B28B   5/00        20060101C I20051008RMEP        B28B   5/02        20060101A I20051008RMEP        B28B   7/00        20060101A I20051008RMEP        B28B   7/00        20060101C I20051008RMEP        H02P   6/08        20060101A I20051008RMEP        H02P   6/08        20060101C I20051008RMEP        B28B   1/29B28B   5/02B2B28B   7/00FH02P   6/08Vorrichtung zur Herstellung von Steinformlingen für die ZiegelindustrieApparatus for manufacturing green bricks for the brick manufacturing industryDispositif pour la fabrication de briques crues utilisées dans l'industrie manufacturière des briquesDE3546191A1EP0680812A1NL9400663A<rdf:Description rdf:about="http://example.org/patent/EP-1000000-A1">
+   </rdf:Description>
+   <rdf:Description rdf:about="http://example.org/patent/EP-1000000-A1">
+      <dcterms:title xml:lang="de">Vorrichtung zur Herstellung von Steinformlingen für die Ziegelindustrie</dcterms:title>
+      <dcterms:title xml:lang="en">Apparatus for manufacturing green bricks for the brick manufacturing industry</dcterms:title>
+      <dcterms:title xml:lang="fr">Dispositif pour la fabrication de briques crues utilisées dans l'industrie manufacturière des briques</dcterms:title>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://example.org/patent/EP-1000000-A1">
       <dcterms:license>User acknowledges that the Information Retrieval Facility (IRF) and its third party providers retain all right, title and interest in and to this xml under applicable copyright laws. User acquires no ownership rights to this xml including but not limited to its format. User hereby accepts the terms and conditions of the Licence Agreement set forth at http://www.ir-facility.org/legal/marec/data_licence</dcterms:license>
    </rdf:Description>
 </rdf:RDF>

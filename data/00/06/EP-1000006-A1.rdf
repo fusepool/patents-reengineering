@@ -15,9 +15,9 @@
    <rdf:Description rdf:about="http://example.org/#i">
       <rdf:type rdf:resource="http://www.w3.org/ns/prov#Agent"/>
    </rdf:Description>
-   <rdf:Description rdf:about="activity/20130130102336">
+   <rdf:Description rdf:about="activity/20130130114829">
       <rdf:type rdf:resource="http://www.w3.org/ns/prov#Activity"/>
-      <prov:startedAtTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2013-01-30T10:23:36Z</prov:startedAtTime>
+      <prov:startedAtTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2013-01-30T11:48:29Z</prov:startedAtTime>
       <prov:wasAssociatedWith rdf:resource="http://example.org/#i"/>
       <prov:used rdf:resource="http://exampe.org/data/EP-1000006-A1.xml"/>
       <prov:used rdf:resource="https://example.org/marec.xsl"/>
@@ -92,7 +92,13 @@
             <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentPublication"/>
          </rdf:Description>
       </property:priority-claim>
-   </rdf:Description>B01J  31/16        20060101C I20051008RMEP        B01J  31/18        20060101A I20051008RMEP        B01J  31/22        20060101AFI20051220RMJP        C07B  61/00        20060101ALI20051220RMJP        C07B  61/00        20060101CLI20051220RMJP        C07C  45/00        20060101C I20051008RMEP        C07C  45/50        20060101A I20051008RMEP        C07C  45/80        20060101A I20051008RMEP        C07C  47/02        20060101ALI20051220RMJP        C07C  47/02        20060101CLI20051220RMJP        C07C  51/347       20060101C I20051008RMEP        C07C  51/373       20060101A I20051008RMEP        C07C  59/00        20060101CLI20051220RMJP        C07C  59/147       20060101ALI20051220RMJP        C07C  67/00        20060101C I20051008RMEP        C07C  67/313       20060101A I20051008RMEP        C07C  67/347       20060101A I20051008RMEP        C07C  69/00        20060101CLI20051220RMJP        C07C  69/716       20060101ALI20051220RMJP        C07C 253/00        20060101CLI20051220RMJP        C07C 253/30        20060101ALI20051220RMJP        C07C 255/00        20060101CLI20051220RMJP        C07C 255/17        20060101ALI20051220RMJP        C07F   9/00        20060101C I20051008RMEP        C07F   9/145       20060101A I20051008RMEP        B01J  31/18CB01J  31/18C2C07C  45/50C07C  45/80C07C  51/373+59/147C07C  67/313+69/716C07C  67/347+69/716C07F   9/145+JL01J231:32BL01J531:02H4L01J531:80L01J531:82DVERFAHREN ZUR HERSTELLUNG VON RECHTKETTIGEN ALDEHYDENIMPROVED PROCESS OF PREPARATION OF LINEAR ALDEHYDESPROCEDE AMELIORE DE PREPARATION D'ALDEHYDES LINEAIRESSee references of WO     9906345A1<rdf:Description rdf:about="http://example.org/patent/EP-1000006-A1">
+   </rdf:Description>
+   <rdf:Description rdf:about="http://example.org/patent/EP-1000006-A1">
+      <dcterms:title xml:lang="de">VERFAHREN ZUR HERSTELLUNG VON RECHTKETTIGEN ALDEHYDEN</dcterms:title>
+      <dcterms:title xml:lang="en">IMPROVED PROCESS OF PREPARATION OF LINEAR ALDEHYDES</dcterms:title>
+      <dcterms:title xml:lang="fr">PROCEDE AMELIORE DE PREPARATION D'ALDEHYDES LINEAIRES</dcterms:title>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://example.org/patent/EP-1000006-A1">
       <dcterms:license>User acknowledges that the Information Retrieval Facility (IRF) and its third party providers retain all right, title and interest in and to this xml under applicable copyright laws. User acquires no ownership rights to this xml including but not limited to its format. User hereby accepts the terms and conditions of the Licence Agreement set forth at http://www.ir-facility.org/legal/marec/data_licence</dcterms:license>
    </rdf:Description>
 </rdf:RDF>
