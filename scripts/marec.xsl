@@ -240,7 +240,7 @@ XXX: Normally we don't really want to define other patents from here. In case th
                     <xsl:apply-templates select="@format"/>
 
                     <xsl:if test="country">
-                        <property:filing-office rdf:resource="{$code}filing-office{$uriThingSeparator}{country}"/>
+                        <property:filing-office rdf:resource="{$code}/filing-office{$uriThingSeparator}{country}"/>
                     </xsl:if>
 
                     <xsl:if test="doc-number">
@@ -311,24 +311,23 @@ TODO: Differentiate between main-classification and further-classification -->
 <!--
 XXX: Maybe switch to a code list
 -->
-                    <rdf:Description rdf:about="{$patent}concept/ipc{$uriThingSeparator}{$id}">
+                    <rdf:Description rdf:about="{$concept}{$id}">
                         <xsl:call-template name="generalParameterEntities"/>
 
                         <rdf:type rdf:resource="{$pmo}PatentClassificationCategory"/>
                         <rdf:type rdf:resource="{$pmo}IPCCategory"/>
                         <rdf:type rdf:resource="{$skos}Concept"/>
 
-                        <skos:inScheme rdf:resource="{$patent}concept/ipc"/>
+                        <skos:inScheme rdf:resource="{$concept}ipc"/>
                         <skos:topConceptOf>
-                            <rdf:Description rdf:about="{$patent}concept/ipc">
-                                <skos:hasTopConcept rdf:resource="{$patent}concept/ipc{$uriThingSeparator}{$id}"/>
-                                <pmo:classifiedPatent rdf:resource="{$patent}concept/ipc{$uriThingSeparator}{$id}"/>
+                            <rdf:Description rdf:about="{$concept}ipc">
+                                <skos:hasTopConcept rdf:resource="{$concept}{$id}"/>
+                                <pmo:classifiedPatent rdf:resource="{$concept}{$id}"/>
                             </rdf:Description>
                         </skos:topConceptOf>
 
                         <pmo:classificationCode><xsl:value-of select="main-classification"/></pmo:classificationCode>
                         <skos:notation><xsl:value-of select="text()"/></skos:notation>
-                        
                     </rdf:Description>
                 </pmo:classifiedAs>
             </xsl:for-each>

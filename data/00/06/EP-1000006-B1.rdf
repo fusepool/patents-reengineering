@@ -15,9 +15,9 @@
    <rdf:Description rdf:about="http://example.org/#i">
       <rdf:type rdf:resource="http://www.w3.org/ns/prov#Agent"/>
    </rdf:Description>
-   <rdf:Description rdf:about="activity/20130129181053">
+   <rdf:Description rdf:about="activity/20130130102340">
       <rdf:type rdf:resource="http://www.w3.org/ns/prov#Activity"/>
-      <prov:startedAtTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2013-01-29T18:10:53Z</prov:startedAtTime>
+      <prov:startedAtTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2013-01-30T10:23:40Z</prov:startedAtTime>
       <prov:wasAssociatedWith rdf:resource="http://example.org/#i"/>
       <prov:used rdf:resource="http://exampe.org/data/EP-1000006-B1.xml"/>
       <prov:used rdf:resource="https://example.org/marec.xsl"/>
@@ -99,16 +99,16 @@
 
 --&gt;
                 <pmo:classifiedAs>
-         <rdf:Description rdf:about="http://example.org/patent/concept/ipc/C07C45/50">
+         <rdf:Description rdf:about="http://example.org/concept/C07C45/50">
             <property:status>new</property:status>
             <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentClassificationCategory"/>
             <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#IPCCategory"/>
             <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-            <skos:inScheme rdf:resource="http://example.org/patent/concept/ipc"/>
+            <skos:inScheme rdf:resource="http://example.org/concept/ipc"/>
             <skos:topConceptOf>
-               <rdf:Description rdf:about="http://example.org/patent/concept/ipc">
-                  <skos:hasTopConcept rdf:resource="http://example.org/patent/concept/ipc/C07C45/50"/>
-                  <pmo:classifiedPatent rdf:resource="http://example.org/patent/concept/ipc/C07C45/50"/>
+               <rdf:Description rdf:about="http://example.org/concept/ipc">
+                  <skos:hasTopConcept rdf:resource="http://example.org/concept/C07C45/50"/>
+                  <pmo:classifiedPatent rdf:resource="http://example.org/concept/C07C45/50"/>
                </rdf:Description>
             </skos:topConceptOf>
             <pmo:classificationCode/>
@@ -118,16 +118,16 @@
 
 --&gt;
                 <pmo:classifiedAs>
-         <rdf:Description rdf:about="http://example.org/patent/concept/ipc/C07F9/145">
+         <rdf:Description rdf:about="http://example.org/concept/C07F9/145">
             <property:status>new</property:status>
             <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentClassificationCategory"/>
             <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#IPCCategory"/>
             <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-            <skos:inScheme rdf:resource="http://example.org/patent/concept/ipc"/>
+            <skos:inScheme rdf:resource="http://example.org/concept/ipc"/>
             <skos:topConceptOf>
-               <rdf:Description rdf:about="http://example.org/patent/concept/ipc">
-                  <skos:hasTopConcept rdf:resource="http://example.org/patent/concept/ipc/C07F9/145"/>
-                  <pmo:classifiedPatent rdf:resource="http://example.org/patent/concept/ipc/C07F9/145"/>
+               <rdf:Description rdf:about="http://example.org/concept/ipc">
+                  <skos:hasTopConcept rdf:resource="http://example.org/concept/C07F9/145"/>
+                  <pmo:classifiedPatent rdf:resource="http://example.org/concept/C07F9/145"/>
                </rdf:Description>
             </skos:topConceptOf>
             <pmo:classificationCode/>
@@ -137,16 +137,16 @@
 
 --&gt;
                 <pmo:classifiedAs>
-         <rdf:Description rdf:about="http://example.org/patent/concept/ipc/C07C255/17">
+         <rdf:Description rdf:about="http://example.org/concept/C07C255/17">
             <property:status>new</property:status>
             <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentClassificationCategory"/>
             <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#IPCCategory"/>
             <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-            <skos:inScheme rdf:resource="http://example.org/patent/concept/ipc"/>
+            <skos:inScheme rdf:resource="http://example.org/concept/ipc"/>
             <skos:topConceptOf>
-               <rdf:Description rdf:about="http://example.org/patent/concept/ipc">
-                  <skos:hasTopConcept rdf:resource="http://example.org/patent/concept/ipc/C07C255/17"/>
-                  <pmo:classifiedPatent rdf:resource="http://example.org/patent/concept/ipc/C07C255/17"/>
+               <rdf:Description rdf:about="http://example.org/concept/ipc">
+                  <skos:hasTopConcept rdf:resource="http://example.org/concept/C07C255/17"/>
+                  <pmo:classifiedPatent rdf:resource="http://example.org/concept/C07C255/17"/>
                </rdf:Description>
             </skos:topConceptOf>
             <pmo:classificationCode/>
@@ -156,16 +156,16 @@
 
 --&gt;
                 <pmo:classifiedAs>
-         <rdf:Description rdf:about="http://example.org/patent/concept/ipc/C07C69/716">
+         <rdf:Description rdf:about="http://example.org/concept/C07C69/716">
             <property:status>new</property:status>
             <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentClassificationCategory"/>
             <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#IPCCategory"/>
             <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-            <skos:inScheme rdf:resource="http://example.org/patent/concept/ipc"/>
+            <skos:inScheme rdf:resource="http://example.org/concept/ipc"/>
             <skos:topConceptOf>
-               <rdf:Description rdf:about="http://example.org/patent/concept/ipc">
-                  <skos:hasTopConcept rdf:resource="http://example.org/patent/concept/ipc/C07C69/716"/>
-                  <pmo:classifiedPatent rdf:resource="http://example.org/patent/concept/ipc/C07C69/716"/>
+               <rdf:Description rdf:about="http://example.org/concept/ipc">
+                  <skos:hasTopConcept rdf:resource="http://example.org/concept/C07C69/716"/>
+                  <pmo:classifiedPatent rdf:resource="http://example.org/concept/C07C69/716"/>
                </rdf:Description>
             </skos:topConceptOf>
             <pmo:classificationCode/>
@@ -175,16 +175,16 @@
 
 --&gt;
                 <pmo:classifiedAs>
-         <rdf:Description rdf:about="http://example.org/patent/concept/ipc/C07C47/02">
+         <rdf:Description rdf:about="http://example.org/concept/C07C47/02">
             <property:status>new</property:status>
             <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentClassificationCategory"/>
             <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#IPCCategory"/>
             <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-            <skos:inScheme rdf:resource="http://example.org/patent/concept/ipc"/>
+            <skos:inScheme rdf:resource="http://example.org/concept/ipc"/>
             <skos:topConceptOf>
-               <rdf:Description rdf:about="http://example.org/patent/concept/ipc">
-                  <skos:hasTopConcept rdf:resource="http://example.org/patent/concept/ipc/C07C47/02"/>
-                  <pmo:classifiedPatent rdf:resource="http://example.org/patent/concept/ipc/C07C47/02"/>
+               <rdf:Description rdf:about="http://example.org/concept/ipc">
+                  <skos:hasTopConcept rdf:resource="http://example.org/concept/C07C47/02"/>
+                  <pmo:classifiedPatent rdf:resource="http://example.org/concept/C07C47/02"/>
                </rdf:Description>
             </skos:topConceptOf>
             <pmo:classificationCode/>
@@ -194,16 +194,16 @@
 
 --&gt;
                 <pmo:classifiedAs>
-         <rdf:Description rdf:about="http://example.org/patent/concept/ipc/C07C59/147">
+         <rdf:Description rdf:about="http://example.org/concept/C07C59/147">
             <property:status>new</property:status>
             <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentClassificationCategory"/>
             <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#IPCCategory"/>
             <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-            <skos:inScheme rdf:resource="http://example.org/patent/concept/ipc"/>
+            <skos:inScheme rdf:resource="http://example.org/concept/ipc"/>
             <skos:topConceptOf>
-               <rdf:Description rdf:about="http://example.org/patent/concept/ipc">
-                  <skos:hasTopConcept rdf:resource="http://example.org/patent/concept/ipc/C07C59/147"/>
-                  <pmo:classifiedPatent rdf:resource="http://example.org/patent/concept/ipc/C07C59/147"/>
+               <rdf:Description rdf:about="http://example.org/concept/ipc">
+                  <skos:hasTopConcept rdf:resource="http://example.org/concept/C07C59/147"/>
+                  <pmo:classifiedPatent rdf:resource="http://example.org/concept/C07C59/147"/>
                </rdf:Description>
             </skos:topConceptOf>
             <pmo:classificationCode/>
@@ -213,16 +213,16 @@
 
 --&gt;
                 <pmo:classifiedAs>
-         <rdf:Description rdf:about="http://example.org/patent/concept/ipc/C07C51/373">
+         <rdf:Description rdf:about="http://example.org/concept/C07C51/373">
             <property:status>new</property:status>
             <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentClassificationCategory"/>
             <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#IPCCategory"/>
             <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-            <skos:inScheme rdf:resource="http://example.org/patent/concept/ipc"/>
+            <skos:inScheme rdf:resource="http://example.org/concept/ipc"/>
             <skos:topConceptOf>
-               <rdf:Description rdf:about="http://example.org/patent/concept/ipc">
-                  <skos:hasTopConcept rdf:resource="http://example.org/patent/concept/ipc/C07C51/373"/>
-                  <pmo:classifiedPatent rdf:resource="http://example.org/patent/concept/ipc/C07C51/373"/>
+               <rdf:Description rdf:about="http://example.org/concept/ipc">
+                  <skos:hasTopConcept rdf:resource="http://example.org/concept/C07C51/373"/>
+                  <pmo:classifiedPatent rdf:resource="http://example.org/concept/C07C51/373"/>
                </rdf:Description>
             </skos:topConceptOf>
             <pmo:classificationCode/>
@@ -232,16 +232,16 @@
 
 --&gt;
                 <pmo:classifiedAs>
-         <rdf:Description rdf:about="http://example.org/patent/concept/ipc/C07C67/347">
+         <rdf:Description rdf:about="http://example.org/concept/C07C67/347">
             <property:status>new</property:status>
             <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentClassificationCategory"/>
             <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#IPCCategory"/>
             <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-            <skos:inScheme rdf:resource="http://example.org/patent/concept/ipc"/>
+            <skos:inScheme rdf:resource="http://example.org/concept/ipc"/>
             <skos:topConceptOf>
-               <rdf:Description rdf:about="http://example.org/patent/concept/ipc">
-                  <skos:hasTopConcept rdf:resource="http://example.org/patent/concept/ipc/C07C67/347"/>
-                  <pmo:classifiedPatent rdf:resource="http://example.org/patent/concept/ipc/C07C67/347"/>
+               <rdf:Description rdf:about="http://example.org/concept/ipc">
+                  <skos:hasTopConcept rdf:resource="http://example.org/concept/C07C67/347"/>
+                  <pmo:classifiedPatent rdf:resource="http://example.org/concept/C07C67/347"/>
                </rdf:Description>
             </skos:topConceptOf>
             <pmo:classificationCode/>
@@ -251,16 +251,16 @@
 
 --&gt;
                 <pmo:classifiedAs>
-         <rdf:Description rdf:about="http://example.org/patent/concept/ipc/C07C45/80">
+         <rdf:Description rdf:about="http://example.org/concept/C07C45/80">
             <property:status>new</property:status>
             <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentClassificationCategory"/>
             <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#IPCCategory"/>
             <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-            <skos:inScheme rdf:resource="http://example.org/patent/concept/ipc"/>
+            <skos:inScheme rdf:resource="http://example.org/concept/ipc"/>
             <skos:topConceptOf>
-               <rdf:Description rdf:about="http://example.org/patent/concept/ipc">
-                  <skos:hasTopConcept rdf:resource="http://example.org/patent/concept/ipc/C07C45/80"/>
-                  <pmo:classifiedPatent rdf:resource="http://example.org/patent/concept/ipc/C07C45/80"/>
+               <rdf:Description rdf:about="http://example.org/concept/ipc">
+                  <skos:hasTopConcept rdf:resource="http://example.org/concept/C07C45/80"/>
+                  <pmo:classifiedPatent rdf:resource="http://example.org/concept/C07C45/80"/>
                </rdf:Description>
             </skos:topConceptOf>
             <pmo:classificationCode/>
@@ -270,16 +270,16 @@
 
 --&gt;
                 <pmo:classifiedAs>
-         <rdf:Description rdf:about="http://example.org/patent/concept/ipc/C07C253/30">
+         <rdf:Description rdf:about="http://example.org/concept/C07C253/30">
             <property:status>new</property:status>
             <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentClassificationCategory"/>
             <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#IPCCategory"/>
             <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-            <skos:inScheme rdf:resource="http://example.org/patent/concept/ipc"/>
+            <skos:inScheme rdf:resource="http://example.org/concept/ipc"/>
             <skos:topConceptOf>
-               <rdf:Description rdf:about="http://example.org/patent/concept/ipc">
-                  <skos:hasTopConcept rdf:resource="http://example.org/patent/concept/ipc/C07C253/30"/>
-                  <pmo:classifiedPatent rdf:resource="http://example.org/patent/concept/ipc/C07C253/30"/>
+               <rdf:Description rdf:about="http://example.org/concept/ipc">
+                  <skos:hasTopConcept rdf:resource="http://example.org/concept/C07C253/30"/>
+                  <pmo:classifiedPatent rdf:resource="http://example.org/concept/C07C253/30"/>
                </rdf:Description>
             </skos:topConceptOf>
             <pmo:classificationCode/>

@@ -26,7 +26,6 @@
     [ rdfs:label "lang" ; rdf:value "en" ] ,
 
     [ rdfs:label "uriThingSeparator" ; rdf:value "/" ] ,
-    [ rdfs:label "uriDimensionSeparator" ; rdf:value "/" ] ,
 
     [ rdfs:label "creator" ; rdf:value "http://example.org/#i" ] ,
 

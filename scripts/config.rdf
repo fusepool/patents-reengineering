@@ -53,12 +53,6 @@
     </rdf:value>
     <rdf:value>
       <rdf:Description>
-        <rdf:value>/</rdf:value>
-        <rdfs:label>uriDimensionSeparator</rdfs:label>
-      </rdf:Description>
-    </rdf:value>
-    <rdf:value>
-      <rdf:Description>
         <rdf:value>http://example.org/#i</rdf:value>
         <rdfs:label>creator</rdfs:label>
       </rdf:Description>
@@ -71,14 +65,14 @@
     </rdf:value>
     <rdf:value>
       <rdf:Description>
-        <rdf:value>http://www.w3.org/1999/02/22-rdf-syntax-ns#</rdf:value>
-        <rdfs:label>rdf</rdfs:label>
+        <rdf:value>http://exampe.org/data/</rdf:value>
+        <rdfs:label>xmlDocumentBaseURI</rdfs:label>
       </rdf:Description>
     </rdf:value>
     <rdf:value>
       <rdf:Description>
-        <rdf:value>http://exampe.org/data/</rdf:value>
-        <rdfs:label>xmlDocumentBaseURI</rdfs:label>
+        <rdf:value>http://www.w3.org/1999/02/22-rdf-syntax-ns#</rdf:value>
+        <rdfs:label>rdf</rdfs:label>
       </rdf:Description>
     </rdf:value>
     <rdf:value>

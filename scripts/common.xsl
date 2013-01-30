@@ -41,18 +41,13 @@
     <xsl:variable name="sumo" select="fn:getConfig('sumo')"/>
     <xsl:variable name="pmo" select="fn:getConfig('pmo')"/>
     <xsl:variable name="uriThingSeparator" select="fn:getConfig('uriThingSeparator')"/>
-    <xsl:variable name="uriDimensionSeparator" select="fn:getConfig('uriDimensionSeparator')"/>
-    <xsl:variable name="concept" select="concat($baseURI, 'concept')"/>
-    <xsl:variable name="code" select="concat($baseURI, 'code/')"/>
+    <xsl:variable name="concept" select="concat($baseURI, 'concept', $uriThingSeparator)"/>
+    <xsl:variable name="code" select="concat($baseURI, 'code')"/>
     <xsl:variable name="class" select="concat($baseURI, 'class', $uriThingSeparator)"/>
     <xsl:variable name="property" select="concat($baseURI, 'property', $uriThingSeparator)"/>
-    <xsl:variable name="dataset" select="concat($baseURI, 'dataset', $uriThingSeparator)"/>
+    <xsl:variable name="dataset" select="concat($baseURI, 'dataset/')"/>
     <xsl:variable name="patent" select="concat($baseURI, 'patent', $uriThingSeparator)"/>
     <xsl:variable name="patentFamily" select="concat($baseURI, 'family', $uriThingSeparator)"/>
-    <xsl:variable name="patentPublication" select="concat($baseURI, 'publication')"/>
-    <xsl:variable name="patentApplication" select="concat($baseURI, 'application')"/>
-    <xsl:variable name="claim" select="concat($baseURI, 'claim')"/>
-
 
     <!--Copied from https://github.com/csarven/sdmx-to-qb/blob/master/scripts/common.xsl -->
     <xsl:function name="fn:getConfig">
