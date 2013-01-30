@@ -19,7 +19,7 @@ The `scripts/` directory contains XSLT 2.0 templates and a simple Bash script to
 ### Data
 There is some sample data under `data/`.
 
-### How-to
+## How-to
 Either use the provided Bash script for sample data, or take `marec.xsl`, `common.xsl`, and `config.rdf` to place for your application. Run marec.xsl (it imports `common.xsl` and `config.rdf`) and make sure to pass in parameter `xmlDocument=path/to/source/patent-document.xml`.
 
 If you want to change the config, either edit `config.rdf` in place, or use `config.ttl` for a simplicty, but make sure to generate an abbreviated RDF/XML. It is used by XSL to grab some of the values. Don't touch `marec.xsl` or `common.xsl` unless you are developing!
