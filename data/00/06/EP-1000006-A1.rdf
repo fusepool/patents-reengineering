@@ -11,13 +11,14 @@
          xmlns:owl="http://www.w3.org/2002/07/owl#"
          xmlns:pmo="http://www.patexpert.org/ontologies/pmo.owl#"
          xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-         xmlns:property="http://example.org/property/">
+         xmlns:property="http://example.org/property/"
+         xmlns:schema="http://schema.org/">
    <rdf:Description rdf:about="http://example.org/#i">
       <rdf:type rdf:resource="http://www.w3.org/ns/prov#Agent"/>
    </rdf:Description>
-   <rdf:Description rdf:about="activity/20130130114829">
+   <rdf:Description rdf:about="activity/20130130181600">
       <rdf:type rdf:resource="http://www.w3.org/ns/prov#Activity"/>
-      <prov:startedAtTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2013-01-30T11:48:29Z</prov:startedAtTime>
+      <prov:startedAtTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2013-01-30T18:16:00Z</prov:startedAtTime>
       <prov:wasAssociatedWith rdf:resource="http://example.org/#i"/>
       <prov:used rdf:resource="http://exampe.org/data/EP-1000006-A1.xml"/>
       <prov:used rdf:resource="https://example.org/marec.xsl"/>
@@ -97,6 +98,111 @@
       <dcterms:title xml:lang="de">VERFAHREN ZUR HERSTELLUNG VON RECHTKETTIGEN ALDEHYDEN</dcterms:title>
       <dcterms:title xml:lang="en">IMPROVED PROCESS OF PREPARATION OF LINEAR ALDEHYDES</dcterms:title>
       <dcterms:title xml:lang="fr">PROCEDE AMELIORE DE PREPARATION D'ALDEHYDES LINEAIRES</dcterms:title>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://example.org/patent/EP-1000006-A1">
+      <pmo:applicant>
+         <rdf:Description rdf:about="http://example.org/party/">
+            <foaf:name>DSM NV</foaf:name>
+            <schema:address>
+               <rdf:Description>
+                  <rdf:type rdf:resource="http://schema.org/PostalAddress"/>
+                  <schema:addressCountry rdf:resource="http://example.org/codecountry/NL"/>
+               </rdf:Description>
+            </schema:address>
+         </rdf:Description>
+      </pmo:applicant>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://example.org/patent/EP-1000006-A1">
+      <pmo:applicant>
+         <rdf:Description rdf:about="http://example.org/party/">
+            <foaf:name>DU PONT</foaf:name>
+            <schema:address>
+               <rdf:Description>
+                  <rdf:type rdf:resource="http://schema.org/PostalAddress"/>
+                  <schema:addressCountry rdf:resource="http://example.org/codecountry/US"/>
+               </rdf:Description>
+            </schema:address>
+         </rdf:Description>
+      </pmo:applicant>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://example.org/patent/EP-1000006-A1">
+      <pmo:applicant>
+         <rdf:Description rdf:about="http://example.org/party/">
+            <foaf:name>DSM N.V.</foaf:name>
+         </rdf:Description>
+      </pmo:applicant>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://example.org/patent/EP-1000006-A1">
+      <pmo:applicant>
+         <rdf:Description rdf:about="http://example.org/party/">
+            <foaf:name>E.I. DU PONT DE NEMOURS &amp; COMPANY INCORPORATED</foaf:name>
+         </rdf:Description>
+      </pmo:applicant>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://example.org/patent/EP-1000006-A1">
+      <pmo:applicant>
+         <rdf:Description rdf:about="http://example.org/party/">
+            <foaf:lastName>DSM N.V.</foaf:lastName>
+            <schema:address>
+               <rdf:Description>
+                  <rdf:type rdf:resource="http://schema.org/PostalAddress"/>
+                  <schema:streetAddress>Het Overloon 1</schema:streetAddress>
+                  <schema:addressLocality>6411 TE Heerlen</schema:addressLocality>
+                  <schema:addressCountry rdf:resource="http://example.org/codecountry/NL"/>
+               </rdf:Description>
+            </schema:address>
+         </rdf:Description>
+      </pmo:applicant>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://example.org/patent/EP-1000006-A1">
+      <pmo:applicant>
+         <rdf:Description rdf:about="http://example.org/party/">
+            <foaf:lastName>E.I. DU PONT DE NEMOURS &amp;amp; COMPANY INCORPORATED</foaf:lastName>
+            <schema:address>
+               <rdf:Description>
+                  <rdf:type rdf:resource="http://schema.org/PostalAddress"/>
+                  <schema:streetAddress>1007 Market Street</schema:streetAddress>
+                  <schema:addressLocality>Wilmington Delaware 19898</schema:addressLocality>
+                  <schema:addressCountry rdf:resource="http://example.org/codecountry/US"/>
+               </rdf:Description>
+            </schema:address>
+         </rdf:Description>
+      </pmo:applicant>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://example.org/patent/EP-1000006-A1">
+      <pmo:inventor>
+         <rdf:Description rdf:about="http://example.org/party/">
+            <foaf:name>BUNEL EMILIO ENRIQUE</foaf:name>
+            <schema:address>
+               <rdf:Description>
+                  <rdf:type rdf:resource="http://schema.org/PostalAddress"/>
+                  <schema:addressCountry rdf:resource="http://example.org/codecountry/US"/>
+               </rdf:Description>
+            </schema:address>
+         </rdf:Description>
+      </pmo:inventor>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://example.org/patent/EP-1000006-A1">
+      <pmo:inventor>
+         <rdf:Description rdf:about="http://example.org/party/">
+            <foaf:name>BUNEL, EMILIO, ENRIQUE</foaf:name>
+         </rdf:Description>
+      </pmo:inventor>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://example.org/patent/EP-1000006-A1">
+      <pmo:inventor>
+         <rdf:Description rdf:about="http://example.org/party/">
+            <foaf:lastName>BUNEL, EMILIO, ENRIQUE</foaf:lastName>
+            <schema:address>
+               <rdf:Description>
+                  <rdf:type rdf:resource="http://schema.org/PostalAddress"/>
+                  <schema:streetAddress>521 Andover Road</schema:streetAddress>
+                  <schema:addressLocality>Wilmington, DE 19803</schema:addressLocality>
+                  <schema:addressCountry rdf:resource="http://example.org/codecountry/US"/>
+               </rdf:Description>
+            </schema:address>
+         </rdf:Description>
+      </pmo:inventor>
    </rdf:Description>
    <rdf:Description rdf:about="http://example.org/patent/EP-1000006-A1">
       <dcterms:license>User acknowledges that the Information Retrieval Facility (IRF) and its third party providers retain all right, title and interest in and to this xml under applicable copyright laws. User acquires no ownership rights to this xml including but not limited to its format. User hereby accepts the terms and conditions of the Licence Agreement set forth at http://www.ir-facility.org/legal/marec/data_licence</dcterms:license>
