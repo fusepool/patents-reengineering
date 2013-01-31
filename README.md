@@ -4,7 +4,7 @@ XSLT 2.0 templates to transform MAREC XML to RDF/XML.
 
 ## Requirements
 
-An XSLT 2.0 processor to transform, and some configuring using the provided config.rdf file.
+An XSLT 2.0 processor to transform, and some configuring to change defaults.
 
 ## What can it do?
 Currently it handles bibliogrpahic-data: publication and application references, priority-claims, technical-data (classifications), parties (applicants, inventors, assignees).
@@ -20,6 +20,6 @@ The `scripts/` directory contains XSLT 2.0 templates and a simple Bash script to
 There is some sample data under `data/`.
 
 ## How-to
-Either use the provided Bash script for sample data, or take `marec.xsl`, `common.xsl`, and `config.rdf` to place for your application. Run marec.xsl (it imports `common.xsl` and `config.rdf`) and make sure to pass in parameter `xmlDocument=path/to/source/patent-document.xml`.
+Either use the provided Bash script for sample data, or take `marec.xsl`, `common.xsl` to your application. Run marec.xsl (it imports `common.xsl`).
 
-If you want to change the config, either edit `config.rdf` in place, or use `config.ttl` for a simplicty, but make sure to generate an abbreviated RDF/XML. It is used by XSL to grab some of the values. Don't touch `marec.xsl` or `common.xsl` unless you are developing!
+If you want to change the config, edit `common.xsl` directly becauase apparently having a config in the first place was a bit too confusing for some scientist / engineer extraordinaires - pretty standard practice to have config but away it went (see commit 99f479aa249728acb9aa594614a608d394b22d5b).
