@@ -16,9 +16,9 @@
    <rdf:Description rdf:about="http://example.org/#i">
       <rdf:type rdf:resource="http://www.w3.org/ns/prov#Agent"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://example.org/provenance/activity/20130131081622">
+   <rdf:Description rdf:about="http://example.org/provenance/activity/20130131102915">
       <rdf:type rdf:resource="http://www.w3.org/ns/prov#Activity"/>
-      <prov:startedAtTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2013-01-31T08:16:22Z</prov:startedAtTime>
+      <prov:startedAtTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2013-01-31T10:29:15Z</prov:startedAtTime>
       <prov:wasAssociatedWith rdf:resource="http://example.org/#i"/>
       <prov:used rdf:resource="http://example.org/EP-1000000-B1.xml"/>
       <prov:used rdf:resource="https://github.com/fusepool/patents-reengineering/scripts/marec.xsl"/>
@@ -103,8 +103,8 @@
                   <pmo:classifiedPatent rdf:resource="http://example.org/concept/B28B5/02"/>
                </rdf:Description>
             </skos:topConceptOf>
-            <pmo:classificationCode>B28B   5/02</pmo:classificationCode>
-            <skos:notation>B28B   5/02</skos:notation>
+            <pmo:classificationCode>B28B5/02</pmo:classificationCode>
+            <skos:notation>B28B5/02</skos:notation>
          </rdf:Description>
       </pmo:classifiedAs>
       <pmo:classifiedAs>
@@ -120,8 +120,8 @@
                   <pmo:classifiedPatent rdf:resource="http://example.org/concept/B28B7/00"/>
                </rdf:Description>
             </skos:topConceptOf>
-            <pmo:classificationCode>B28B   7/00</pmo:classificationCode>
-            <skos:notation>B28B   7/00</skos:notation>
+            <pmo:classificationCode>B28B7/00</pmo:classificationCode>
+            <skos:notation>B28B7/00</skos:notation>
          </rdf:Description>
       </pmo:classifiedAs>
       <pmo:classifiedAs>
@@ -137,8 +137,8 @@
                   <pmo:classifiedPatent rdf:resource="http://example.org/concept/B28B1/29"/>
                </rdf:Description>
             </skos:topConceptOf>
-            <pmo:classificationCode>B28B   1/29</pmo:classificationCode>
-            <skos:notation>B28B   1/29</skos:notation>
+            <pmo:classificationCode>B28B1/29</pmo:classificationCode>
+            <skos:notation>B28B1/29</skos:notation>
          </rdf:Description>
       </pmo:classifiedAs>
    </rdf:Description>

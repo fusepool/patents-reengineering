@@ -316,8 +316,8 @@ XXX: Maybe switch to a code list
                             </rdf:Description>
                         </skos:topConceptOf>
 
-                        <pmo:classificationCode><xsl:value-of select="text()"/></pmo:classificationCode>
-                        <skos:notation><xsl:value-of select="text()"/></skos:notation>
+                        <pmo:classificationCode><xsl:value-of select="$id"/></pmo:classificationCode>
+                        <skos:notation><xsl:value-of select="$id"/></skos:notation>
                     </rdf:Description>
                 </pmo:classifiedAs>
             </xsl:for-each>
