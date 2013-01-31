@@ -337,33 +337,25 @@ XXX: Maybe switch to a code list
         </xsl:for-each>
     </xsl:template>
 
-<!--
-TODO: Refactor the following the three templates
--->
     <xsl:template match="applicants/applicant">
-        <xsl:param name="ucid" tunnel="yes"/>
-        <rdf:Description rdf:about="{$patent}{$ucid}">
-            <pmo:applicant>
-                <xsl:apply-templates select="addressbook"/>
-            </pmo:applicant>
-        </rdf:Description>
+        <xsl:call-template name="party-members"/>
     </xsl:template>
 
     <xsl:template match="inventors/inventor">
-        <xsl:param name="ucid" tunnel="yes"/>
-        <rdf:Description rdf:about="{$patent}{$ucid}">
-            <pmo:inventor>
-                <xsl:apply-templates select="addressbook"/>
-            </pmo:inventor>
-        </rdf:Description>
+        <xsl:call-template name="party-members"/>
     </xsl:template>
 
     <xsl:template match="assignees/assignee">
+        <xsl:call-template name="party-members"/>
+    </xsl:template>
+
+    <xsl:template name="party-members">
         <xsl:param name="ucid" tunnel="yes"/>
+
         <rdf:Description rdf:about="{$patent}{$ucid}">
-            <pmo:assignee>
+            <xsl:element name="pmo:{local-name()}">
                 <xsl:apply-templates select="addressbook"/>
-            </pmo:assignee>
+            </xsl:element>
         </rdf:Description>
     </xsl:template>
 
