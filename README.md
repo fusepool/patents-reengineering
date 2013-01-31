@@ -22,4 +22,4 @@ There is some sample data under `data/`.
 ## How-to
 Either use the provided Bash script for sample data, or take `marec.xsl`, `common.xsl` to your application. Run marec.xsl (it imports `common.xsl`).
 
-If you want to change the config, edit `common.xsl` directly becauase apparently having a config in the first place was a bit too confusing for some scientist / engineer extraordinaires - pretty standard practice to have config separetely but away it went (see commit 99f479aa249728acb9aa594614a608d394b22d5b).
+If you want to configure, edit `common.xsl` directly becauase apparently having a config in the first place was a bit too confusing - pretty standard practice to have config separetely but away it went (see commit 99f479aa249728acb9aa594614a608d394b22d5b).
