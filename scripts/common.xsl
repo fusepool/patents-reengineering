@@ -17,31 +17,15 @@
     >
 
     <xsl:output encoding="utf-8" indent="yes" method="xml" omit-xml-declaration="no"/>
+<!-- CONFIG START -->
+    <xsl:variable name="xmlDocumentBaseURI" select="'http://example.org/'"/>
+    <xsl:variable name="xslDocument" select="'https://github.com/fusepool/patents-reengineering/scripts/marec.xsl'"/>
+    <xsl:variable name="baseURI" select="'http://example.org/'"/>
+    <xsl:variable name="creator" select="'http://example.org/#i'"/>
+    <xsl:variable name="lang" select="'en'"/>
+    <xsl:variable name="uriThingSeparator" select="'/'"/>
 
-    <xsl:variable name="pathToConfig"><xsl:text>./config.rdf</xsl:text></xsl:variable>
-    <xsl:variable name="Config" select="document($pathToConfig)/rdf:RDF"/>
-    <xsl:variable name="xmlDocumentBaseURI" select="fn:getConfig('xmlDocumentBaseURI')"/>
-    <xsl:variable name="xslDocument" select="fn:getConfig('xslDocument')"/>
-    <xsl:variable name="baseURI" select="fn:getConfig('baseURI')"/>
-    <xsl:variable name="now" select="fn:now()"/>
-    <xsl:variable name="rdf" select="fn:getConfig('rdf')"/>
-    <xsl:variable name="rdfs" select="fn:getConfig('rdfs')"/>
-    <xsl:variable name="owl" select="fn:getConfig('owl')"/>
-    <xsl:variable name="xsd" select="fn:getConfig('xsd')"/>
-    <xsl:variable name="qb" select="fn:getConfig('qb')"/>
-    <xsl:variable name="skos" select="fn:getConfig('skos')"/>
-    <xsl:variable name="xkos" select="fn:getConfig('xkos')"/>
-    <xsl:variable name="sdmx" select="fn:getConfig('sdmx')"/>
-    <xsl:variable name="prov" select="fn:getConfig('prov')"/>
-    <xsl:variable name="provenance" select="fn:getConfig('provenance')"/>
-    <xsl:variable name="lang" select="fn:getConfig('lang')"/>
-    <xsl:variable name="creator" select="fn:getConfig('creator')"/>
-    <xsl:variable name="pso" select="fn:getConfig('pso')"/>
-    <xsl:variable name="pulo" select="fn:getConfig('pulo')"/>
-    <xsl:variable name="sumo" select="fn:getConfig('sumo')"/>
-    <xsl:variable name="pmo" select="fn:getConfig('pmo')"/>
-    <xsl:variable name="schema" select="'http://schema.org/'"/>
-    <xsl:variable name="uriThingSeparator" select="fn:getConfig('uriThingSeparator')"/>
+    <xsl:variable name="provenance" select="concat($baseURI, 'provenance', $uriThingSeparator)"/>
     <xsl:variable name="concept" select="concat($baseURI, 'concept', $uriThingSeparator)"/>
     <xsl:variable name="code" select="concat($baseURI, 'code')"/>
     <xsl:variable name="class" select="concat($baseURI, 'class', $uriThingSeparator)"/>
@@ -50,14 +34,21 @@
     <xsl:variable name="patent" select="concat($baseURI, 'patent', $uriThingSeparator)"/>
     <xsl:variable name="patentFamily" select="concat($baseURI, 'family', $uriThingSeparator)"/>
     <xsl:variable name="party" select="concat($baseURI, 'party', $uriThingSeparator)"/>
+<!-- CONFIG END -->
 
-    <!--Copied from https://github.com/csarven/sdmx-to-qb/blob/master/scripts/common.xsl -->
-    <xsl:function name="fn:getConfig">
-        <xsl:param name="label"/>
+    <xsl:variable name="now" select="fn:now()"/>
 
-        <xsl:value-of select="$Config/rdf:Description/rdf:value/rdf:Description[rdfs:label = $label]/rdf:value"/>
-    </xsl:function>
-
+    <xsl:variable name="rdf" select="'http://www.w3.org/1999/02/22-rdf-syntax-ns#'"/>
+    <xsl:variable name="rdfs" select="'http://www.w3.org/2000/01/rdf-schema#'"/>
+    <xsl:variable name="owl" select="'http://www.w3.org/2002/07/owl#'"/>
+    <xsl:variable name="xsd" select="'http://www.w3.org/2001/XMLSchema#'"/>
+    <xsl:variable name="skos" select="'http://www.w3.org/2004/02/skos/core#'"/>
+    <xsl:variable name="schema" select="'http://schema.org/'"/>
+    <xsl:variable name="prov" select="'http://www.w3.org/ns/prov#'"/>
+    <xsl:variable name="pso" select="'http://www.patexpert.org/ontologies/pso.owl#'"/>
+    <xsl:variable name="pulo" select="'http://www.patexpert.org/ontologies/pulo.owl#'"/>
+    <xsl:variable name="sumo" select="'http://www.owl-ontologies.com/sumo.owl#'"/>
+    <xsl:variable name="pmo" select="'http://www.patexpert.org/ontologies/pmo.owl#'"/>
 
     <!--Adapted from https://github.com/csarven/sdmx-to-qb/blob/master/scripts/common.xsl -->
     <xsl:template name="langTextNode">

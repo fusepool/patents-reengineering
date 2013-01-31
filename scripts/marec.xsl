@@ -31,17 +31,10 @@
 <!--
 TODO: ignore DTD check. saxonb-xslt breaks if offline
 -->
-<!--
-TODO:
-fp vocab
--->
-
 
     <xsl:import href="common.xsl"/>
 
     <xsl:output encoding="utf-8" indent="yes" method="xml" omit-xml-declaration="no"/>
-
-    <xsl:param name="xmlDocument"/>
 
     <xsl:strip-space elements="*"/>
 
@@ -51,17 +44,7 @@ fp vocab
                 <rdf:type rdf:resource="{$prov}Agent"/>
             </rdf:Description>
 
-<!--<patent-document ucid="EP-1000000-A1" country="EP" doc-number="1000000" kind="A1" lang="EN" family-id="19768124" status="new" date-produced="20090516" date="20000517">-->
-
             <xsl:variable name="ucid" select="@ucid"/>
-<!--            <xsl:variable name="country" select="@country"/>-->
-<!--            <xsl:variable name="doc-number" select="@doc-number"/>-->
-<!--            <xsl:variable name="kind" select="@kind"/>-->
-<!--            <xsl:variable name="lang" select="@lang"/>-->
-<!--            <xsl:variable name="family-id" select="@family-id"/>-->
-<!--            <xsl:variable name="status" select="@status"/>-->
-<!--            <xsl:variable name="date-produced" select="@date-produced"/>-->
-<!--            <xsl:variable name="date" select="@date"/>-->
 
             <xsl:variable name="patentURI">
                 <xsl:value-of select="$patent"/>
@@ -69,7 +52,7 @@ fp vocab
             </xsl:variable>
 
             <xsl:call-template name="provActivity">
-                <xsl:with-param name="provUsedA" select="resolve-uri(tokenize($xmlDocument, '/')[last()], $xmlDocumentBaseURI)"/>
+                <xsl:with-param name="provUsedA" select="resolve-uri(tokenize(document-uri(/), '/')[last()], $xmlDocumentBaseURI)"/>
                 <xsl:with-param name="provGenerated" select="$patentURI"/>
             </xsl:call-template>
 

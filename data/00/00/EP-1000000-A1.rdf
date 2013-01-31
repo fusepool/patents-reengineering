@@ -16,15 +16,15 @@
    <rdf:Description rdf:about="http://example.org/#i">
       <rdf:type rdf:resource="http://www.w3.org/ns/prov#Agent"/>
    </rdf:Description>
-   <rdf:Description rdf:about="activity/20130130181553">
+   <rdf:Description rdf:about="http://example.org/provenance/activity/20130131081621">
       <rdf:type rdf:resource="http://www.w3.org/ns/prov#Activity"/>
-      <prov:startedAtTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2013-01-30T18:15:53Z</prov:startedAtTime>
+      <prov:startedAtTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2013-01-31T08:16:21Z</prov:startedAtTime>
       <prov:wasAssociatedWith rdf:resource="http://example.org/#i"/>
-      <prov:used rdf:resource="http://exampe.org/data/EP-1000000-A1.xml"/>
-      <prov:used rdf:resource="https://example.org/marec.xsl"/>
+      <prov:used rdf:resource="http://example.org/EP-1000000-A1.xml"/>
+      <prov:used rdf:resource="https://github.com/fusepool/patents-reengineering/scripts/marec.xsl"/>
       <prov:generated>
          <rdf:Description rdf:about="http://example.org/patent/EP-1000000-A1">
-            <prov:wasDerivedFrom rdf:resource="http://exampe.org/data/EP-1000000-A1.xml"/>
+            <prov:wasDerivedFrom rdf:resource="http://example.org/EP-1000000-A1.xml"/>
          </rdf:Description>
       </prov:generated>
    </rdf:Description>
