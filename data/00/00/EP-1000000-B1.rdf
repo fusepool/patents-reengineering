@@ -16,9 +16,9 @@
    <rdf:Description rdf:about="http://example.org/#i">
       <rdf:type rdf:resource="http://www.w3.org/ns/prov#Agent"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://example.org/provenance/activity/20130131102915">
+   <rdf:Description rdf:about="http://example.org/provenance/activity/20130131121451">
       <rdf:type rdf:resource="http://www.w3.org/ns/prov#Activity"/>
-      <prov:startedAtTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2013-01-31T10:29:15Z</prov:startedAtTime>
+      <prov:startedAtTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2013-01-31T12:14:51Z</prov:startedAtTime>
       <prov:wasAssociatedWith rdf:resource="http://example.org/#i"/>
       <prov:used rdf:resource="http://example.org/EP-1000000-B1.xml"/>
       <prov:used rdf:resource="https://github.com/fusepool/patents-reengineering/scripts/marec.xsl"/>
@@ -150,11 +150,14 @@
    <rdf:Description rdf:about="http://example.org/patent/EP-1000000-B1">
       <pmo:applicant>
          <rdf:Description rdf:about="http://example.org/party/PPAR90283484">
+            <rdf:type rdf:resource="http://www.owl-ontologies.com/sumo.owl#CognitiveAgent"/>
+            <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+            <pmo:applicantOf rdf:resource="http://example.org/patent/EP-1000000-B1"/>
             <foaf:name>BEHEERMIJ DE BOER NIJMEGEN B V</foaf:name>
             <schema:address>
                <rdf:Description>
                   <rdf:type rdf:resource="http://schema.org/PostalAddress"/>
-                  <schema:addressCountry rdf:resource="http://example.org/codecountry/NL"/>
+                  <schema:addressCountry rdf:resource="http://example.org/code/country/NL"/>
                </rdf:Description>
             </schema:address>
          </rdf:Description>
@@ -163,6 +166,9 @@
    <rdf:Description rdf:about="http://example.org/patent/EP-1000000-B1">
       <pmo:applicant>
          <rdf:Description rdf:about="http://example.org/party/PPAR90297347">
+            <rdf:type rdf:resource="http://www.owl-ontologies.com/sumo.owl#CognitiveAgent"/>
+            <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+            <pmo:applicantOf rdf:resource="http://example.org/patent/EP-1000000-B1"/>
             <foaf:name>BEHEERMAATSCHAPPIJ DE BOER NIJMEGEN B.V.</foaf:name>
          </rdf:Description>
       </pmo:applicant>
@@ -170,11 +176,14 @@
    <rdf:Description rdf:about="http://example.org/patent/EP-1000000-B1">
       <pmo:inventor>
          <rdf:Description rdf:about="http://example.org/party/PPAR90195858">
+            <rdf:type rdf:resource="http://www.owl-ontologies.com/sumo.owl#Human"/>
+            <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+            <pmo:inventorOf rdf:resource="http://example.org/patent/EP-1000000-B1"/>
             <foaf:name>KOSMAN WILHELMUS JACOBUS MARIA</foaf:name>
             <schema:address>
                <rdf:Description>
                   <rdf:type rdf:resource="http://schema.org/PostalAddress"/>
-                  <schema:addressCountry rdf:resource="http://example.org/codecountry/NL"/>
+                  <schema:addressCountry rdf:resource="http://example.org/code/country/NL"/>
                </rdf:Description>
             </schema:address>
          </rdf:Description>
@@ -183,6 +192,9 @@
    <rdf:Description rdf:about="http://example.org/patent/EP-1000000-B1">
       <pmo:inventor>
          <rdf:Description rdf:about="http://example.org/party/PPAR90255169">
+            <rdf:type rdf:resource="http://www.owl-ontologies.com/sumo.owl#Human"/>
+            <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+            <pmo:inventorOf rdf:resource="http://example.org/patent/EP-1000000-B1"/>
             <foaf:name>KOSMAN, WILHELMUS JACOBUS MARIA</foaf:name>
          </rdf:Description>
       </pmo:inventor>
@@ -190,13 +202,16 @@
    <rdf:Description rdf:about="http://example.org/patent/EP-1000000-B1">
       <pmo:inventor>
          <rdf:Description rdf:about="http://example.org/party/PPAR276933050">
+            <rdf:type rdf:resource="http://www.owl-ontologies.com/sumo.owl#Human"/>
+            <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+            <pmo:inventorOf rdf:resource="http://example.org/patent/EP-1000000-B1"/>
             <foaf:lastName>KOSMAN, WILHELMUS JACOBUS MARIA</foaf:lastName>
             <schema:address>
                <rdf:Description>
                   <rdf:type rdf:resource="http://schema.org/PostalAddress"/>
                   <schema:streetAddress>Bredeweg 9</schema:streetAddress>
                   <schema:addressLocality>6562 DA Groesbeek</schema:addressLocality>
-                  <schema:addressCountry rdf:resource="http://example.org/codecountry/NL"/>
+                  <schema:addressCountry rdf:resource="http://example.org/code/country/NL"/>
                </rdf:Description>
             </schema:address>
          </rdf:Description>
@@ -205,13 +220,16 @@
    <rdf:Description rdf:about="http://example.org/patent/EP-1000000-B1">
       <pmo:assignee>
          <rdf:Description rdf:about="http://example.org/party/PPAR276933844">
+            <rdf:type rdf:resource="http://www.owl-ontologies.com/sumo.owl#CognitiveAgent"/>
+            <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+            <pmo:assigneeOf rdf:resource="http://example.org/patent/EP-1000000-B1"/>
             <foaf:lastName>Beheermaatschappij De Boer Nijmegen B.V.</foaf:lastName>
             <schema:address>
                <rdf:Description>
                   <rdf:type rdf:resource="http://schema.org/PostalAddress"/>
                   <schema:streetAddress>Koopvaardijweg 2</schema:streetAddress>
                   <schema:addressLocality>6541 BS Nijmegen</schema:addressLocality>
-                  <schema:addressCountry rdf:resource="http://example.org/codecountry/NL"/>
+                  <schema:addressCountry rdf:resource="http://example.org/code/country/NL"/>
                </rdf:Description>
             </schema:address>
          </rdf:Description>

@@ -16,9 +16,9 @@
    <rdf:Description rdf:about="http://example.org/#i">
       <rdf:type rdf:resource="http://www.w3.org/ns/prov#Agent"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://example.org/provenance/activity/20130131102920">
+   <rdf:Description rdf:about="http://example.org/provenance/activity/20130131121456">
       <rdf:type rdf:resource="http://www.w3.org/ns/prov#Activity"/>
-      <prov:startedAtTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2013-01-31T10:29:20Z</prov:startedAtTime>
+      <prov:startedAtTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2013-01-31T12:14:56Z</prov:startedAtTime>
       <prov:wasAssociatedWith rdf:resource="http://example.org/#i"/>
       <prov:used rdf:resource="http://example.org/EP-1000006-B1.xml"/>
       <prov:used rdf:resource="https://github.com/fusepool/patents-reengineering/scripts/marec.xsl"/>
@@ -276,11 +276,14 @@
    <rdf:Description rdf:about="http://example.org/patent/EP-1000006-B1">
       <pmo:applicant>
          <rdf:Description rdf:about="http://example.org/party/PPAR90268677">
+            <rdf:type rdf:resource="http://www.owl-ontologies.com/sumo.owl#CognitiveAgent"/>
+            <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+            <pmo:applicantOf rdf:resource="http://example.org/patent/EP-1000006-B1"/>
             <foaf:name>DSM NV</foaf:name>
             <schema:address>
                <rdf:Description>
                   <rdf:type rdf:resource="http://schema.org/PostalAddress"/>
-                  <schema:addressCountry rdf:resource="http://example.org/codecountry/NL"/>
+                  <schema:addressCountry rdf:resource="http://example.org/code/country/NL"/>
                </rdf:Description>
             </schema:address>
          </rdf:Description>
@@ -289,11 +292,14 @@
    <rdf:Description rdf:about="http://example.org/patent/EP-1000006-B1">
       <pmo:applicant>
          <rdf:Description rdf:about="http://example.org/party/PPAR90232064">
+            <rdf:type rdf:resource="http://www.owl-ontologies.com/sumo.owl#CognitiveAgent"/>
+            <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+            <pmo:applicantOf rdf:resource="http://example.org/patent/EP-1000006-B1"/>
             <foaf:name>DU PONT</foaf:name>
             <schema:address>
                <rdf:Description>
                   <rdf:type rdf:resource="http://schema.org/PostalAddress"/>
-                  <schema:addressCountry rdf:resource="http://example.org/codecountry/US"/>
+                  <schema:addressCountry rdf:resource="http://example.org/code/country/US"/>
                </rdf:Description>
             </schema:address>
          </rdf:Description>
@@ -302,6 +308,9 @@
    <rdf:Description rdf:about="http://example.org/patent/EP-1000006-B1">
       <pmo:applicant>
          <rdf:Description rdf:about="http://example.org/party/PPAR90246277">
+            <rdf:type rdf:resource="http://www.owl-ontologies.com/sumo.owl#CognitiveAgent"/>
+            <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+            <pmo:applicantOf rdf:resource="http://example.org/patent/EP-1000006-B1"/>
             <foaf:name>DSM N.V.</foaf:name>
          </rdf:Description>
       </pmo:applicant>
@@ -309,6 +318,9 @@
    <rdf:Description rdf:about="http://example.org/patent/EP-1000006-B1">
       <pmo:applicant>
          <rdf:Description rdf:about="http://example.org/party/PPAR90203382">
+            <rdf:type rdf:resource="http://www.owl-ontologies.com/sumo.owl#CognitiveAgent"/>
+            <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+            <pmo:applicantOf rdf:resource="http://example.org/patent/EP-1000006-B1"/>
             <foaf:name>E.I. DU PONT DE NEMOURS AND COMPANY</foaf:name>
          </rdf:Description>
       </pmo:applicant>
@@ -316,11 +328,14 @@
    <rdf:Description rdf:about="http://example.org/patent/EP-1000006-B1">
       <pmo:inventor>
          <rdf:Description rdf:about="http://example.org/party/PPAR90241529">
+            <rdf:type rdf:resource="http://www.owl-ontologies.com/sumo.owl#Human"/>
+            <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+            <pmo:inventorOf rdf:resource="http://example.org/patent/EP-1000006-B1"/>
             <foaf:name>BUNEL EMILIO ENRIQUE</foaf:name>
             <schema:address>
                <rdf:Description>
                   <rdf:type rdf:resource="http://schema.org/PostalAddress"/>
-                  <schema:addressCountry rdf:resource="http://example.org/codecountry/US"/>
+                  <schema:addressCountry rdf:resource="http://example.org/code/country/US"/>
                </rdf:Description>
             </schema:address>
          </rdf:Description>
@@ -329,6 +344,9 @@
    <rdf:Description rdf:about="http://example.org/patent/EP-1000006-B1">
       <pmo:inventor>
          <rdf:Description rdf:about="http://example.org/party/PPAR90254934">
+            <rdf:type rdf:resource="http://www.owl-ontologies.com/sumo.owl#Human"/>
+            <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+            <pmo:inventorOf rdf:resource="http://example.org/patent/EP-1000006-B1"/>
             <foaf:name>BUNEL, EMILIO, ENRIQUE</foaf:name>
          </rdf:Description>
       </pmo:inventor>
@@ -336,13 +354,16 @@
    <rdf:Description rdf:about="http://example.org/patent/EP-1000006-B1">
       <pmo:inventor>
          <rdf:Description rdf:about="http://example.org/party/PPAR276888168">
+            <rdf:type rdf:resource="http://www.owl-ontologies.com/sumo.owl#Human"/>
+            <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+            <pmo:inventorOf rdf:resource="http://example.org/patent/EP-1000006-B1"/>
             <foaf:lastName>BUNEL, EMILIO, ENRIQUE</foaf:lastName>
             <schema:address>
                <rdf:Description>
                   <rdf:type rdf:resource="http://schema.org/PostalAddress"/>
                   <schema:streetAddress>521 Andover Road</schema:streetAddress>
                   <schema:addressLocality>Wilmington, DE 19803</schema:addressLocality>
-                  <schema:addressCountry rdf:resource="http://example.org/codecountry/US"/>
+                  <schema:addressCountry rdf:resource="http://example.org/code/country/US"/>
                </rdf:Description>
             </schema:address>
          </rdf:Description>
@@ -351,13 +372,16 @@
    <rdf:Description rdf:about="http://example.org/patent/EP-1000006-B1">
       <pmo:assignee>
          <rdf:Description rdf:about="http://example.org/party/PPAR276892844">
+            <rdf:type rdf:resource="http://www.owl-ontologies.com/sumo.owl#CognitiveAgent"/>
+            <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+            <pmo:assigneeOf rdf:resource="http://example.org/patent/EP-1000006-B1"/>
             <foaf:lastName>DSM N.V.</foaf:lastName>
             <schema:address>
                <rdf:Description>
                   <rdf:type rdf:resource="http://schema.org/PostalAddress"/>
                   <schema:streetAddress>Het Overloon 1</schema:streetAddress>
                   <schema:addressLocality>6411 TE Heerlen</schema:addressLocality>
-                  <schema:addressCountry rdf:resource="http://example.org/codecountry/NL"/>
+                  <schema:addressCountry rdf:resource="http://example.org/code/country/NL"/>
                </rdf:Description>
             </schema:address>
          </rdf:Description>
@@ -366,13 +390,16 @@
    <rdf:Description rdf:about="http://example.org/patent/EP-1000006-B1">
       <pmo:assignee>
          <rdf:Description rdf:about="http://example.org/party/PPAR276893171">
+            <rdf:type rdf:resource="http://www.owl-ontologies.com/sumo.owl#CognitiveAgent"/>
+            <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+            <pmo:assigneeOf rdf:resource="http://example.org/patent/EP-1000006-B1"/>
             <foaf:lastName>E.I. DU PONT DE NEMOURS AND COMPANY</foaf:lastName>
             <schema:address>
                <rdf:Description>
                   <rdf:type rdf:resource="http://schema.org/PostalAddress"/>
                   <schema:streetAddress>1007 Market Street</schema:streetAddress>
                   <schema:addressLocality>Wilmington Delaware 19898</schema:addressLocality>
-                  <schema:addressCountry rdf:resource="http://example.org/codecountry/US"/>
+                  <schema:addressCountry rdf:resource="http://example.org/code/country/US"/>
                </rdf:Description>
             </schema:address>
          </rdf:Description>

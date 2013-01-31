@@ -224,7 +224,7 @@ XXX: Normally we don't really want to define other patents from here. In case th
                     <xsl:apply-templates select="@format"/>
 
                     <xsl:if test="country">
-                        <property:filing-office rdf:resource="{$code}/filing-office{$uriThingSeparator}{country}"/>
+                        <property:filing-office rdf:resource="{$code}filing-office{$uriThingSeparator}{country}"/>
                     </xsl:if>
 
                     <xsl:if test="doc-number">
@@ -352,18 +352,51 @@ XXX: Maybe switch to a code list
     <xsl:template name="party-members">
         <xsl:param name="ucid" tunnel="yes"/>
 
+        <xsl:variable name="party-type" select="local-name()"/>
+        <xsl:variable name="id" select="@mxw-id"/>
+
         <rdf:Description rdf:about="{$patent}{$ucid}">
-            <xsl:element name="pmo:{local-name()}">
-                <xsl:apply-templates select="addressbook"/>
-            </xsl:element>
+            <xsl:for-each select="addressbook">
+                <xsl:element name="pmo:{$party-type}">
+                    <xsl:call-template name="addressbook">
+                        <xsl:with-param name="id" select="$id"/>
+                        <xsl:with-param name="party-type" select="$party-type"/>
+                    </xsl:call-template>
+                </xsl:element>
+            </xsl:for-each>
         </rdf:Description>
     </xsl:template>
 
-    <xsl:template match="addressbook">
+    <xsl:template name="addressbook">
+        <xsl:param name="ucid" tunnel="yes"/>
+        <xsl:param name="id"/>
+        <xsl:param name="party-type"/>
+
 <!--
 XXX: Perhaps switch to blank nodes instead
 -->
-        <rdf:Description rdf:about="{$party}{../@mxw-id}">
+        <rdf:Description rdf:about="{$party}{$id}">
+            <xsl:choose>
+                <xsl:when test="$party-type = 'applicant'">
+                    <rdf:type rdf:resource="{$sumo}CognitiveAgent"/>
+                    <rdf:type rdf:resource="{$foaf}Organization"/>
+                    <pmo:applicantOf rdf:resource="{$patent}{$ucid}"/>
+                </xsl:when>
+                <xsl:when test="$party-type = 'inventor'">
+                    <rdf:type rdf:resource="{$sumo}Human"/>
+                    <rdf:type rdf:resource="{$foaf}Person"/>
+                    <pmo:inventorOf rdf:resource="{$patent}{$ucid}"/>
+                </xsl:when>
+                <xsl:when test="$party-type = 'assignee'">
+                    <rdf:type rdf:resource="{$sumo}CognitiveAgent"/>
+                    <rdf:type rdf:resource="{$foaf}Organization"/>
+                    <pmo:assigneeOf rdf:resource="{$patent}{$ucid}"/>
+                </xsl:when>
+
+                <xsl:otherwise>
+                </xsl:otherwise>
+            </xsl:choose>
+
             <xsl:choose>
                 <xsl:when test="name">
                     <foaf:name><xsl:value-of select="name"/></foaf:name>

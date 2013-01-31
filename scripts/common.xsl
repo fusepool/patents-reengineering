@@ -27,7 +27,7 @@
 
     <xsl:variable name="provenance" select="concat($baseURI, 'provenance', $uriThingSeparator)"/>
     <xsl:variable name="concept" select="concat($baseURI, 'concept', $uriThingSeparator)"/>
-    <xsl:variable name="code" select="concat($baseURI, 'code')"/>
+    <xsl:variable name="code" select="concat($baseURI, 'code/')"/>
     <xsl:variable name="class" select="concat($baseURI, 'class', $uriThingSeparator)"/>
     <xsl:variable name="property" select="concat($baseURI, 'property', $uriThingSeparator)"/>
     <xsl:variable name="dataset" select="concat($baseURI, 'dataset/')"/>
@@ -43,6 +43,7 @@
     <xsl:variable name="owl" select="'http://www.w3.org/2002/07/owl#'"/>
     <xsl:variable name="xsd" select="'http://www.w3.org/2001/XMLSchema#'"/>
     <xsl:variable name="skos" select="'http://www.w3.org/2004/02/skos/core#'"/>
+    <xsl:variable name="foaf" select="'http://xmlns.com/foaf/0.1/'"/>
     <xsl:variable name="schema" select="'http://schema.org/'"/>
     <xsl:variable name="prov" select="'http://www.w3.org/ns/prov#'"/>
     <xsl:variable name="pso" select="'http://www.patexpert.org/ontologies/pso.owl#'"/>
