@@ -16,9 +16,9 @@
    <rdf:Description rdf:about="http://example.org/#i">
       <rdf:type rdf:resource="http://www.w3.org/ns/prov#Agent"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://example.org/provenance/activity/20130131121455">
+   <rdf:Description rdf:about="http://example.org/provenance/activity/20130131123607">
       <rdf:type rdf:resource="http://www.w3.org/ns/prov#Activity"/>
-      <prov:startedAtTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2013-01-31T12:14:55Z</prov:startedAtTime>
+      <prov:startedAtTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2013-01-31T12:36:07Z</prov:startedAtTime>
       <prov:wasAssociatedWith rdf:resource="http://example.org/#i"/>
       <prov:used rdf:resource="http://example.org/EP-1000006-A1.xml"/>
       <prov:used rdf:resource="https://github.com/fusepool/patents-reengineering/scripts/marec.xsl"/>
@@ -230,6 +230,24 @@
             </schema:address>
          </rdf:Description>
       </pmo:inventor>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://example.org/patent/EP-1000006-A1">
+      <property:agent>
+         <rdf:Description rdf:about="http://example.org/party/">
+            <rdf:type rdf:resource="http://www.owl-ontologies.com/sumo.owl#Agent"/>
+            <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+            <property:agentOf rdf:resource="http://example.org/patent/EP-1000006-A1"/>
+            <foaf:lastName>Jones, Alan John</foaf:lastName>
+            <schema:address>
+               <rdf:Description>
+                  <rdf:type rdf:resource="http://schema.org/PostalAddress"/>
+                  <schema:streetAddress>CARPMAELS &amp;amp; RANSFORD 43 Bloomsbury Square</schema:streetAddress>
+                  <schema:addressLocality>London, WC1A 2RA</schema:addressLocality>
+                  <schema:addressCountry rdf:resource="http://example.org/code/country/GB"/>
+               </rdf:Description>
+            </schema:address>
+         </rdf:Description>
+      </property:agent>
    </rdf:Description>
    <rdf:Description rdf:about="http://example.org/patent/EP-1000006-A1">
       <dcterms:license>User acknowledges that the Information Retrieval Facility (IRF) and its third party providers retain all right, title and interest in and to this xml under applicable copyright laws. User acquires no ownership rights to this xml including but not limited to its format. User hereby accepts the terms and conditions of the Licence Agreement set forth at http://www.ir-facility.org/legal/marec/data_licence</dcterms:license>

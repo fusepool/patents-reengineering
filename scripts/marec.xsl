@@ -334,6 +334,7 @@ XXX: Maybe switch to a code list
             <xsl:apply-templates select="applicants/applicant"/>
             <xsl:apply-templates select="inventors/inventor"/>
             <xsl:apply-templates select="assignees/assignee"/>
+            <xsl:apply-templates select="agents/agent"/>
         </xsl:for-each>
     </xsl:template>
 
@@ -349,15 +350,35 @@ XXX: Maybe switch to a code list
         <xsl:call-template name="party-members"/>
     </xsl:template>
 
+    <xsl:template match="agents/agent">
+        <xsl:call-template name="party-members"/>
+    </xsl:template>
+
     <xsl:template name="party-members">
         <xsl:param name="ucid" tunnel="yes"/>
 
         <xsl:variable name="party-type" select="local-name()"/>
         <xsl:variable name="id" select="@mxw-id"/>
 
+        <xsl:variable name="party-type-property">
+            <xsl:choose>
+                <xsl:when test="local-name() = 'applicant' or
+                                local-name() = 'inventor' or
+                                local-name() = 'assignee'
+                                ">
+                    <xsl:value-of select="concat('pmo:', $party-type)"/>
+                </xsl:when>
+                <xsl:when test="local-name() = 'agent'">
+                    <xsl:value-of select="'property:agent'"/>
+                </xsl:when>
+                <xsl:otherwise>
+                </xsl:otherwise>
+            </xsl:choose>
+        </xsl:variable>
+
         <rdf:Description rdf:about="{$patent}{$ucid}">
             <xsl:for-each select="addressbook">
-                <xsl:element name="pmo:{$party-type}">
+                <xsl:element name="{$party-type-property}">
                     <xsl:call-template name="addressbook">
                         <xsl:with-param name="id" select="$id"/>
                         <xsl:with-param name="party-type" select="$party-type"/>
@@ -392,7 +413,11 @@ XXX: Perhaps switch to blank nodes instead
                     <rdf:type rdf:resource="{$foaf}Organization"/>
                     <pmo:assigneeOf rdf:resource="{$patent}{$ucid}"/>
                 </xsl:when>
-
+                <xsl:when test="$party-type = 'agent'">
+                    <rdf:type rdf:resource="{$sumo}Agent"/>
+                    <rdf:type rdf:resource="{$foaf}Agent"/>
+                    <property:agentOf rdf:resource="{$patent}{$ucid}"/>
+                </xsl:when>
                 <xsl:otherwise>
                 </xsl:otherwise>
             </xsl:choose>
