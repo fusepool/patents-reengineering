@@ -22,6 +22,7 @@
     xmlns:pmo="http://www.patexpert.org/ontologies/pmo.owl#"
     xmlns:property="http://example.org/property/"
     xmlns:schema="http://schema.org/"
+    xmlns:uuid="java:java.util.UUID"
 
     exclude-result-prefixes="xsl fn"
     >
@@ -308,6 +309,8 @@ XXX: Maybe switch to a code list
                         <rdf:type rdf:resource="{$pmo}IPCCategory"/>
                         <rdf:type rdf:resource="{$skos}Concept"/>
 
+                        <pmo:classifiedPatent rdf:resource="{$patent}{$ucid}"/>
+
                         <skos:inScheme rdf:resource="{$concept}ipc"/>
                         <skos:topConceptOf>
                             <rdf:Description rdf:about="{$concept}ipc">
@@ -396,7 +399,7 @@ XXX: Maybe switch to a code list
 <!--
 XXX: Perhaps switch to blank nodes instead
 -->
-        <rdf:Description rdf:about="{$party}{$id}">
+        <rdf:Description rdf:about="urn:uuid:{uuid:randomUUID()}">
             <xsl:choose>
                 <xsl:when test="$party-type = 'applicant'">
                     <rdf:type rdf:resource="{$sumo}CognitiveAgent"/>
