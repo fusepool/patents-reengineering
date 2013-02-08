@@ -1,7 +1,7 @@
 /**
  * 
  */
-package eu.fusepool.enencher.marec.xslt;
+package eu.fusepool.enhancer.marec.xslt;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
