@@ -1,4 +1,4 @@
-package eu.fusepool.enahncer.marec;
+package eu.fusepool.enhancer.marec;
 
 
 import java.io.IOException;
@@ -40,7 +40,7 @@ import org.osgi.service.log.LogService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import eu.fusepool.enencher.marec.xslt.XSLTProcessor;
+import eu.fusepool.enhancer.marec.xslt.XSLTProcessor;
 
 
 
