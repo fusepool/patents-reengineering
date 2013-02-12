@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:foaf="http://xmlns.com/foaf/0.1/"
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:uuid="java:java.util.UUID"
+         xmlns:foaf="http://xmlns.com/foaf/0.1/"
          xmlns:prov="http://www.w3.org/ns/prov#"
          xmlns:skos="http://www.w3.org/2004/02/skos/core#"
          xmlns:xkos="http://purl.org/linked-data/xkos#"
@@ -16,9 +17,9 @@
    <rdf:Description rdf:about="http://example.org/#i">
       <rdf:type rdf:resource="http://www.w3.org/ns/prov#Agent"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://example.org/provenance/activity/20130131123553">
+   <rdf:Description rdf:about="http://example.org/provenance/activity/20130205175846">
       <rdf:type rdf:resource="http://www.w3.org/ns/prov#Activity"/>
-      <prov:startedAtTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2013-01-31T12:35:53Z</prov:startedAtTime>
+      <prov:startedAtTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2013-02-05T17:58:46Z</prov:startedAtTime>
       <prov:wasAssociatedWith rdf:resource="http://example.org/#i"/>
       <prov:used rdf:resource="http://example.org/EP-1000006-B1.xml"/>
       <prov:used rdf:resource="https://github.com/fusepool/patents-reengineering/scripts/marec.xsl"/>
@@ -103,6 +104,7 @@
             <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentClassificationCategory"/>
             <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#IPCCategory"/>
             <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+            <pmo:classifiedPatent rdf:resource="http://example.org/patent/EP-1000006-B1"/>
             <skos:inScheme rdf:resource="http://example.org/concept/ipc"/>
             <skos:topConceptOf>
                <rdf:Description rdf:about="http://example.org/concept/ipc">
@@ -120,6 +122,7 @@
             <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentClassificationCategory"/>
             <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#IPCCategory"/>
             <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+            <pmo:classifiedPatent rdf:resource="http://example.org/patent/EP-1000006-B1"/>
             <skos:inScheme rdf:resource="http://example.org/concept/ipc"/>
             <skos:topConceptOf>
                <rdf:Description rdf:about="http://example.org/concept/ipc">
@@ -137,6 +140,7 @@
             <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentClassificationCategory"/>
             <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#IPCCategory"/>
             <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+            <pmo:classifiedPatent rdf:resource="http://example.org/patent/EP-1000006-B1"/>
             <skos:inScheme rdf:resource="http://example.org/concept/ipc"/>
             <skos:topConceptOf>
                <rdf:Description rdf:about="http://example.org/concept/ipc">
@@ -154,6 +158,7 @@
             <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentClassificationCategory"/>
             <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#IPCCategory"/>
             <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+            <pmo:classifiedPatent rdf:resource="http://example.org/patent/EP-1000006-B1"/>
             <skos:inScheme rdf:resource="http://example.org/concept/ipc"/>
             <skos:topConceptOf>
                <rdf:Description rdf:about="http://example.org/concept/ipc">
@@ -171,6 +176,7 @@
             <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentClassificationCategory"/>
             <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#IPCCategory"/>
             <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+            <pmo:classifiedPatent rdf:resource="http://example.org/patent/EP-1000006-B1"/>
             <skos:inScheme rdf:resource="http://example.org/concept/ipc"/>
             <skos:topConceptOf>
                <rdf:Description rdf:about="http://example.org/concept/ipc">
@@ -188,6 +194,7 @@
             <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentClassificationCategory"/>
             <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#IPCCategory"/>
             <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+            <pmo:classifiedPatent rdf:resource="http://example.org/patent/EP-1000006-B1"/>
             <skos:inScheme rdf:resource="http://example.org/concept/ipc"/>
             <skos:topConceptOf>
                <rdf:Description rdf:about="http://example.org/concept/ipc">
@@ -205,6 +212,7 @@
             <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentClassificationCategory"/>
             <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#IPCCategory"/>
             <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+            <pmo:classifiedPatent rdf:resource="http://example.org/patent/EP-1000006-B1"/>
             <skos:inScheme rdf:resource="http://example.org/concept/ipc"/>
             <skos:topConceptOf>
                <rdf:Description rdf:about="http://example.org/concept/ipc">
@@ -222,6 +230,7 @@
             <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentClassificationCategory"/>
             <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#IPCCategory"/>
             <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+            <pmo:classifiedPatent rdf:resource="http://example.org/patent/EP-1000006-B1"/>
             <skos:inScheme rdf:resource="http://example.org/concept/ipc"/>
             <skos:topConceptOf>
                <rdf:Description rdf:about="http://example.org/concept/ipc">
@@ -239,6 +248,7 @@
             <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentClassificationCategory"/>
             <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#IPCCategory"/>
             <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+            <pmo:classifiedPatent rdf:resource="http://example.org/patent/EP-1000006-B1"/>
             <skos:inScheme rdf:resource="http://example.org/concept/ipc"/>
             <skos:topConceptOf>
                <rdf:Description rdf:about="http://example.org/concept/ipc">
@@ -256,6 +266,7 @@
             <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentClassificationCategory"/>
             <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#IPCCategory"/>
             <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+            <pmo:classifiedPatent rdf:resource="http://example.org/patent/EP-1000006-B1"/>
             <skos:inScheme rdf:resource="http://example.org/concept/ipc"/>
             <skos:topConceptOf>
                <rdf:Description rdf:about="http://example.org/concept/ipc">
@@ -275,7 +286,7 @@
    </rdf:Description>
    <rdf:Description rdf:about="http://example.org/patent/EP-1000006-B1">
       <pmo:applicant>
-         <rdf:Description rdf:about="http://example.org/party/PPAR90268677">
+         <rdf:Description rdf:about="urn:uuid:210f7517-0907-4f48-9c54-dd1cb39983e7">
             <rdf:type rdf:resource="http://www.owl-ontologies.com/sumo.owl#CognitiveAgent"/>
             <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
             <pmo:applicantOf rdf:resource="http://example.org/patent/EP-1000006-B1"/>
@@ -291,7 +302,7 @@
    </rdf:Description>
    <rdf:Description rdf:about="http://example.org/patent/EP-1000006-B1">
       <pmo:applicant>
-         <rdf:Description rdf:about="http://example.org/party/PPAR90232064">
+         <rdf:Description rdf:about="urn:uuid:6cc0b0ec-9612-49d8-a98e-1f8bf382f9ba">
             <rdf:type rdf:resource="http://www.owl-ontologies.com/sumo.owl#CognitiveAgent"/>
             <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
             <pmo:applicantOf rdf:resource="http://example.org/patent/EP-1000006-B1"/>
@@ -307,7 +318,7 @@
    </rdf:Description>
    <rdf:Description rdf:about="http://example.org/patent/EP-1000006-B1">
       <pmo:applicant>
-         <rdf:Description rdf:about="http://example.org/party/PPAR90246277">
+         <rdf:Description rdf:about="urn:uuid:7d108c45-70cf-4263-9637-1fa363d24a5d">
             <rdf:type rdf:resource="http://www.owl-ontologies.com/sumo.owl#CognitiveAgent"/>
             <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
             <pmo:applicantOf rdf:resource="http://example.org/patent/EP-1000006-B1"/>
@@ -317,7 +328,7 @@
    </rdf:Description>
    <rdf:Description rdf:about="http://example.org/patent/EP-1000006-B1">
       <pmo:applicant>
-         <rdf:Description rdf:about="http://example.org/party/PPAR90203382">
+         <rdf:Description rdf:about="urn:uuid:0cf0d518-f6c9-46a9-9f48-87e8e39afbd4">
             <rdf:type rdf:resource="http://www.owl-ontologies.com/sumo.owl#CognitiveAgent"/>
             <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
             <pmo:applicantOf rdf:resource="http://example.org/patent/EP-1000006-B1"/>
@@ -327,7 +338,7 @@
    </rdf:Description>
    <rdf:Description rdf:about="http://example.org/patent/EP-1000006-B1">
       <pmo:inventor>
-         <rdf:Description rdf:about="http://example.org/party/PPAR90241529">
+         <rdf:Description rdf:about="urn:uuid:f34f66d7-8a0e-47c1-8494-4faaa04b47c2">
             <rdf:type rdf:resource="http://www.owl-ontologies.com/sumo.owl#Human"/>
             <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
             <pmo:inventorOf rdf:resource="http://example.org/patent/EP-1000006-B1"/>
@@ -343,7 +354,7 @@
    </rdf:Description>
    <rdf:Description rdf:about="http://example.org/patent/EP-1000006-B1">
       <pmo:inventor>
-         <rdf:Description rdf:about="http://example.org/party/PPAR90254934">
+         <rdf:Description rdf:about="urn:uuid:8bd87733-4b8b-4d12-a206-dc56490132be">
             <rdf:type rdf:resource="http://www.owl-ontologies.com/sumo.owl#Human"/>
             <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
             <pmo:inventorOf rdf:resource="http://example.org/patent/EP-1000006-B1"/>
@@ -353,7 +364,7 @@
    </rdf:Description>
    <rdf:Description rdf:about="http://example.org/patent/EP-1000006-B1">
       <pmo:inventor>
-         <rdf:Description rdf:about="http://example.org/party/PPAR276888168">
+         <rdf:Description rdf:about="urn:uuid:b63ed2fb-5041-4787-8ccb-958cc3d69001">
             <rdf:type rdf:resource="http://www.owl-ontologies.com/sumo.owl#Human"/>
             <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
             <pmo:inventorOf rdf:resource="http://example.org/patent/EP-1000006-B1"/>
@@ -371,7 +382,7 @@
    </rdf:Description>
    <rdf:Description rdf:about="http://example.org/patent/EP-1000006-B1">
       <pmo:assignee>
-         <rdf:Description rdf:about="http://example.org/party/PPAR276892844">
+         <rdf:Description rdf:about="urn:uuid:f2627b73-2018-41c1-9c75-fa605bc54ae4">
             <rdf:type rdf:resource="http://www.owl-ontologies.com/sumo.owl#CognitiveAgent"/>
             <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
             <pmo:assigneeOf rdf:resource="http://example.org/patent/EP-1000006-B1"/>
@@ -389,7 +400,7 @@
    </rdf:Description>
    <rdf:Description rdf:about="http://example.org/patent/EP-1000006-B1">
       <pmo:assignee>
-         <rdf:Description rdf:about="http://example.org/party/PPAR276893171">
+         <rdf:Description rdf:about="urn:uuid:b9079d03-9efc-4d3c-b966-0c5c0e52e87e">
             <rdf:type rdf:resource="http://www.owl-ontologies.com/sumo.owl#CognitiveAgent"/>
             <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
             <pmo:assigneeOf rdf:resource="http://example.org/patent/EP-1000006-B1"/>
@@ -407,7 +418,7 @@
    </rdf:Description>
    <rdf:Description rdf:about="http://example.org/patent/EP-1000006-B1">
       <property:agent>
-         <rdf:Description rdf:about="http://example.org/party/PPAR276884527">
+         <rdf:Description rdf:about="urn:uuid:1549b6ad-ffa9-4451-bc0f-cadc2af75889">
             <rdf:type rdf:resource="http://www.owl-ontologies.com/sumo.owl#Agent"/>
             <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
             <property:agentOf rdf:resource="http://example.org/patent/EP-1000006-B1"/>
