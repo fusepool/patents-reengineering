@@ -18,10 +18,9 @@
 
     <xsl:output encoding="utf-8" indent="yes" method="xml" omit-xml-declaration="no"/>
 <!-- CONFIG START -->
-    <xsl:variable name="xmlDocumentBaseURI" select="'http://example.org/'"/>
-    <xsl:variable name="xslDocument" select="'https://github.com/fusepool/patents-reengineering/scripts/marec.xsl'"/>
+    <xsl:variable name="xmlDocumentBaseURI" select="'http://example.org/data/'"/>
     <xsl:variable name="baseURI" select="'http://example.org/'"/>
-    <xsl:variable name="creator" select="'http://example.org/#i'"/>
+    <xsl:variable name="creator" select="'http://csarven.ca/#i'"/>
     <xsl:variable name="lang" select="'en'"/>
     <xsl:variable name="uriThingSeparator" select="'/'"/>
 
@@ -34,6 +33,7 @@
     <xsl:variable name="patent" select="concat($baseURI, 'patent', $uriThingSeparator)"/>
     <xsl:variable name="patentFamily" select="concat($baseURI, 'family', $uriThingSeparator)"/>
     <xsl:variable name="party" select="concat($baseURI, 'party', $uriThingSeparator)"/>
+    <xsl:variable name="provDocument" select="document($pathToProvDocument)/rdf:RDF"/>
 <!-- CONFIG END -->
 
     <xsl:variable name="now" select="fn:now()"/>
@@ -43,6 +43,7 @@
     <xsl:variable name="owl" select="'http://www.w3.org/2002/07/owl#'"/>
     <xsl:variable name="xsd" select="'http://www.w3.org/2001/XMLSchema#'"/>
     <xsl:variable name="skos" select="'http://www.w3.org/2004/02/skos/core#'"/>
+    <xsl:variable name="xkos" select="'http://purl.org/linked-data/xkos#'"/>
     <xsl:variable name="foaf" select="'http://xmlns.com/foaf/0.1/'"/>
     <xsl:variable name="schema" select="'http://schema.org/'"/>
     <xsl:variable name="prov" select="'http://www.w3.org/ns/prov#'"/>
@@ -68,7 +69,7 @@
             </xsl:otherwise>
         </xsl:choose>
 
-        <xsl:value-of select="normalize-space(text())"/>
+        <xsl:value-of select="normalize-space(.)"/>
     </xsl:template>
 
 
@@ -87,10 +88,15 @@
         <xsl:param name="provGenerated"/>
 
         <xsl:variable name="now" select="format-dateTime(current-dateTime(), '[Y0001]-[M01]-[D01]T[H01]:[m01]:[s01]Z')"/>
+        <xsl:variable name="provActivity" select="concat($provenance, 'activity', $uriThingSeparator, replace($now, '\D', ''))"/>
 
-        <rdf:Description rdf:about="{$provenance}activity{$uriThingSeparator}{replace($now, '\D', '')}">
+        <rdf:Description rdf:about="{$provActivity}">
             <rdf:type rdf:resource="{$prov}Activity"/>
 <!--dcterms:title-->
+            <xsl:variable name="informedBy" select="$provDocument/rdf:Description[prov:generated/@rdf:resource = $provUsedA]/@rdf:about"/>
+            <xsl:if test="$informedBy">
+                <prov:wasInformedBy rdf:resource="{$informedBy}"/>
+            </xsl:if>
             <prov:startedAtTime rdf:datatype="{$xsd}dateTime"><xsl:value-of select="$now"/></prov:startedAtTime>
             <prov:wasAssociatedWith rdf:resource="{$creator}"/>
             <prov:used rdf:resource="{$provUsedA}"/>
@@ -101,6 +107,7 @@
             <prov:generated>
                 <rdf:Description rdf:about="{$provGenerated}">
                     <prov:wasDerivedFrom rdf:resource="{$provUsedA}"/>
+                    <prov:wasGeneratedBy rdf:resource="{$provActivity}"/>
                 </rdf:Description>
             </prov:generated>
         </rdf:Description>
