@@ -1,0 +1,1576 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class-scheme xmlns="http://www.epo.org/eclaexport" scheme-type="ecla">
+  <classification-item level="5">
+    <classification-symbol>A01C</classification-symbol>
+    <class-title>
+      <title-part>
+        <text scheme="ipc">PLANTING</text>
+      </title-part>
+      <title-part>
+        <text scheme="ipc"> SOWING</text>
+      </title-part>
+      <title-part>
+        <text scheme="ipc"> FERTILISING </text>
+        <explanation>
+          <text scheme="ipc">combined with general working of soil <class-ref scheme="ecla">A01B49/04</class-ref>; parts, details or accessories of agricultural machines or implements, in general <class-ref scheme="ecla">A01B51/00</class-ref> to <class-ref scheme="ecla">A01B75/00</class-ref>; </text>
+          <comment>
+            <text scheme="ecla">apparatus for spreading sand or salt <class-ref scheme="ecla">E01C</class-ref>; sowing and fertilising with aircraft <class-ref scheme="ecla">B64D1/16</class-ref> to <class-ref scheme="ecla">B64D1/20</class-ref></text>
+          </comment>
+        </explanation>
+      </title-part>
+    </class-title>
+    <classification-item level="6">
+      <classification-symbol>A01C1/00</classification-symbol>
+      <class-title/>
+      <classification-item level="7">
+        <classification-symbol>A01C1/00</classification-symbol>
+        <class-title>
+          <title-part>
+            <text scheme="ipc">Apparatus, or methods of use thereof, for testing or treating seed, roots, or the like, prior to sowing or planting </text>
+            <explanation>
+              <text scheme="ipc">chemicals therefor <class-ref scheme="ecla">A01N25/00</class-ref> to <class-ref scheme="ecla">A01N65/00</class-ref> </text>
+              <comment>
+                <text scheme="ecla"> irradiation in general <class-ref scheme="ecla">B01J19/08</class-ref></text>
+              </comment>
+            </explanation>
+          </title-part>
+        </class-title>
+        <classification-item level="8">
+          <classification-symbol>A01C1/00B</classification-symbol>
+          <class-title>
+            <title-part>
+              <comment>
+                <text scheme="ecla">Potato seed cutters</text>
+              </comment>
+            </title-part>
+          </class-title>
+        </classification-item>
+        <classification-item level="8">
+          <classification-symbol>A01C1/02</classification-symbol>
+          <class-title date-revised="0711">
+            <title-part>
+              <text scheme="ipc">Germinating apparatus</text>
+            </title-part>
+            <title-part>
+              <text scheme="ipc"> Determining germination capacity of seeds or the like </text>
+              <explanation>
+                <text scheme="ipc">germinating in preparation of malt <class-ref scheme="ecla">C12C1/027</class-ref></text>
+              </explanation>
+            </title-part>
+          </class-title>
+          <classification-item level="9">
+            <classification-symbol>A01C1/02B</classification-symbol>
+            <class-title date-revised="0711">
+              <title-part>
+                <comment>
+                  <text scheme="ecla"> Testing seeds for determining their viability or germination capacity</text>
+                </comment>
+              </title-part>
+            </class-title>
+          </classification-item>
+        </classification-item>
+        <classification-item level="8">
+          <classification-symbol>A01C1/04</classification-symbol>
+          <class-title date-revised="9910">
+            <title-part>
+              <text scheme="ipc">Arranging seeds on carriers; </text>
+              <comment>
+                <text scheme="ecla">Carrier compositions</text>
+              </comment>
+            </title-part>
+          </class-title>
+          <classification-item level="9">
+            <classification-symbol>A01C1/04A</classification-symbol>
+            <class-title date-revised="9910">
+              <title-part>
+                <comment>
+                  <text scheme="ecla">Tapes, bands or cords</text>
+                </comment>
+              </title-part>
+            </class-title>
+          </classification-item>
+          <classification-item level="9">
+            <classification-symbol>A01C1/04B</classification-symbol>
+            <class-title date-revised="9910">
+              <title-part>
+                <comment>
+                  <text scheme="ecla">Sheets, multiple sheets or mats</text>
+                </comment>
+              </title-part>
+            </class-title>
+          </classification-item>
+          <classification-item level="9">
+            <classification-symbol>A01C1/04C</classification-symbol>
+            <class-title date-revised="9910">
+              <title-part>
+                <comment>
+                  <text scheme="ecla">Carrier compositions</text>
+                </comment>
+              </title-part>
+            </class-title>
+          </classification-item>
+        </classification-item>
+        <classification-item level="8">
+          <classification-symbol>A01C1/06</classification-symbol>
+          <class-title date-revised="0711">
+            <title-part>
+              <text scheme="ipc">Coating or dressing seed </text>
+              <comment>
+                <explanation>
+                  <text scheme="ecla">encapsulated embryos or artificial seeds <class-ref scheme="ecla">A01H4/00D1</class-ref>; Seed coating compositions C09D</text>
+                </explanation>
+              </comment>
+            </title-part>
+          </class-title>
+        </classification-item>
+        <classification-item level="8">
+          <classification-symbol>A01C1/08</classification-symbol>
+          <class-title>
+            <title-part>
+              <text scheme="ipc">Immunising seed</text>
+            </title-part>
+          </class-title>
+        </classification-item>
+      </classification-item>
+      <classification-item level="7">
+        <classification-symbol>A01C3/00</classification-symbol>
+        <class-title date-revised="0508">
+          <title-part>
+            <text scheme="ipc">Treating manure</text>
+          </title-part>
+          <title-part>
+            <text scheme="ipc"> Manuring </text>
+            <explanation>
+              <comment>
+                <text scheme="ecla">ploughs with additional arrangements for putting manure under the soil <class-ref scheme="ecla">A01B17/00B</class-ref></text>
+              </comment>
+              <text scheme="ipc">; dung forks <class-ref scheme="ecla">A01D9/00</class-ref>; </text>
+              <comment>
+                <text scheme="ecla">treating of waste water, sewage or sludge <class-ref scheme="ecla">C02F</class-ref></text>
+              </comment>
+              <text scheme="ipc">organic fertilisers from waste or refuse <class-ref scheme="ecla">C05F</class-ref></text>
+            </explanation>
+          </title-part>
+        </class-title>
+        <classification-item level="8">
+          <classification-symbol>A01C3/02</classification-symbol>
+          <class-title>
+            <title-part>
+              <text scheme="ipc">Storage places for manure e.g. cisterns for liquid manure</text>
+            </title-part>
+            <title-part>
+              <text scheme="ipc"> Installations for fermenting manure </text>
+              <explanation>
+                <text scheme="ipc">sewerage structures <class-ref scheme="ecla">E03F5/00</class-ref>; silos, bunkers <class-ref scheme="ecla">E04H7/22</class-ref></text>
+              </explanation>
+            </title-part>
+          </class-title>
+          <classification-item level="9">
+            <classification-symbol>A01C3/02B</classification-symbol>
+            <class-title>
+              <title-part>
+                <comment>
+                  <text scheme="ecla">for composted manure</text>
+                </comment>
+              </title-part>
+            </class-title>
+          </classification-item>
+          <classification-item level="9">
+            <classification-symbol>A01C3/02C</classification-symbol>
+            <class-title>
+              <title-part>
+                <comment>
+                  <text scheme="ecla">Digesters</text>
+                </comment>
+              </title-part>
+            </class-title>
+          </classification-item>
+          <classification-item level="9">
+            <classification-symbol>A01C3/02D</classification-symbol>
+            <class-title>
+              <title-part>
+                <comment>
+                  <text scheme="ecla">with heat recuperation means</text>
+                </comment>
+              </title-part>
+            </class-title>
+          </classification-item>
+          <classification-item level="9">
+            <classification-symbol>A01C3/02E</classification-symbol>
+            <class-title>
+              <title-part>
+                <comment>
+                  <text scheme="ecla">with mixing or agitating devices</text>
+                </comment>
+              </title-part>
+            </class-title>
+          </classification-item>
+          <classification-item level="9">
+            <classification-symbol>A01C3/02F</classification-symbol>
+            <class-title date-revised="0508">
+              <title-part>
+                <comment>
+                  <text scheme="ecla">Covers, roofs or other structures for covering manure storage places </text>
+                  <explanation>
+                    <text scheme="ecla">production of methane or biogas <class-ref scheme="ecla">C02F11/04</class-ref>; coverings for swimming or splash baths or pools <class-ref scheme="ecla">E04H4/10</class-ref></text>
+                  </explanation>
+                </comment>
+              </title-part>
+            </class-title>
+          </classification-item>
+        </classification-item>
+        <classification-item level="8">
+          <classification-symbol>A01C3/04</classification-symbol>
+          <class-title>
+            <title-part>
+              <text scheme="ipc">Manure loaders </text>
+              <explanation>
+                <text scheme="ipc">loaders in general <class-ref scheme="ecla">B65G</class-ref></text>
+              </explanation>
+            </title-part>
+          </class-title>
+        </classification-item>
+        <classification-item level="8">
+          <classification-symbol>A01C3/06</classification-symbol>
+          <class-title>
+            <title-part>
+              <text scheme="ipc">Manure distributors e.g. dung distributors</text>
+            </title-part>
+          </class-title>
+          <classification-item level="9">
+            <classification-symbol>A01C3/06B</classification-symbol>
+            <class-title>
+              <title-part>
+                <comment>
+                  <text scheme="ecla">Side-spreaders</text>
+                </comment>
+              </title-part>
+            </class-title>
+          </classification-item>
+          <classification-item level="9">
+            <classification-symbol>A01C3/06C</classification-symbol>
+            <class-title date-revised="0508">
+              <title-part>
+                <comment>
+                  <text scheme="ecla">Spreading by using worm or screw conveyors</text>
+                </comment>
+              </title-part>
+            </class-title>
+          </classification-item>
+          <classification-item level="9">
+            <classification-symbol>A01C3/08</classification-symbol>
+            <class-title>
+              <title-part>
+                <text scheme="ipc">for manure already laying on the soil</text>
+              </title-part>
+            </class-title>
+          </classification-item>
+        </classification-item>
+      </classification-item>
+      <classification-item level="7">
+        <classification-symbol>A01C5/00</classification-symbol>
+        <class-title>
+          <title-part>
+            <text scheme="ipc">Making or covering furrows or holes for sowing, planting or manuring</text>
+          </title-part>
+        </class-title>
+        <classification-item level="8">
+          <classification-symbol>A01C5/02</classification-symbol>
+          <class-title>
+            <title-part>
+              <text scheme="ipc">Hand tools for making holes for sowing, planting or manuring </text>
+              <explanation>
+                <text scheme="ipc">transplanting devices for trees <class-ref scheme="ecla">A01G23/02</class-ref></text>
+              </explanation>
+            </title-part>
+          </class-title>
+        </classification-item>
+        <classification-item level="8">
+          <classification-symbol>A01C5/04</classification-symbol>
+          <class-title>
+            <title-part>
+              <text scheme="ipc">Machines for making or covering holes for sowing or planting</text>
+            </title-part>
+          </class-title>
+          <classification-item level="9">
+            <classification-symbol>A01C5/04B</classification-symbol>
+            <class-title>
+              <title-part>
+                <comment>
+                  <text scheme="ecla">with piercing buckets </text>
+                  <explanation>
+                    <text scheme="ecla">devices for laying-out or removing protective coverings for plants <class-ref scheme="ecla">A01G13/02</class-ref></text>
+                  </explanation>
+                </comment>
+              </title-part>
+            </class-title>
+          </classification-item>
+        </classification-item>
+        <classification-item level="8">
+          <classification-symbol>A01C5/06</classification-symbol>
+          <class-title>
+            <title-part>
+              <text scheme="ipc">Machines for making or covering drills or furrows for sowing or planting </text>
+              <explanation>
+                <comment>
+                  <text scheme="ecla">seeders depositing seeds in rows <class-ref scheme="ecla">A01C7/08</class-ref></text>
+                </comment>
+                <text scheme="ipc">; ploughs for making ridges <class-ref scheme="ecla">A01B13/02</class-ref>; </text>
+                <comment>
+                  <text scheme="ecla">lifting devices for agricultural machines <class-ref scheme="ecla">A01B63/00</class-ref></text>
+                </comment>
+              </explanation>
+            </title-part>
+          </class-title>
+          <classification-item level="9">
+            <classification-symbol>A01C5/06B</classification-symbol>
+            <class-title>
+              <title-part>
+                <comment>
+                  <text scheme="ecla">Devices for making drills or furrows</text>
+                </comment>
+              </title-part>
+            </class-title>
+            <classification-item level="10">
+              <classification-symbol>A01C5/06B1</classification-symbol>
+              <class-title>
+                <title-part>
+                  <comment>
+                    <text scheme="ecla">with rotating tools</text>
+                  </comment>
+                </title-part>
+              </class-title>
+            </classification-item>
+          </classification-item>
+          <classification-item level="9">
+            <classification-symbol>A01C5/06C</classification-symbol>
+            <class-title>
+              <title-part>
+                <comment>
+                  <text scheme="ecla">Devices for covering drills or furrows</text>
+                </comment>
+              </title-part>
+            </class-title>
+            <classification-item level="10">
+              <classification-symbol>A01C5/06C1</classification-symbol>
+              <class-title>
+                <title-part>
+                  <comment>
+                    <text scheme="ecla">Furrow packing devices, e.g. press wheels</text>
+                  </comment>
+                </title-part>
+              </class-title>
+            </classification-item>
+          </classification-item>
+        </classification-item>
+        <classification-item level="8">
+          <classification-symbol>A01C5/08</classification-symbol>
+          <class-title>
+            <title-part>
+              <text scheme="ipc">Machines for both manuring and sowing or both manuring and planting</text>
+            </title-part>
+          </class-title>
+        </classification-item>
+      </classification-item>
+      <classification-item level="7">
+        <classification-symbol>A01C7/00</classification-symbol>
+        <class-title>
+          <title-part>
+            <text scheme="ipc">Sowing </text>
+            <explanation>
+              <comment>
+                <text scheme="ecla">with centrifugal wheels <class-ref scheme="ecla">A01C17/00</class-ref></text>
+              </comment>
+              <text scheme="ipc"> arrangements for driving working parts <class-ref scheme="ecla">A01C19/00</class-ref></text>
+            </explanation>
+          </title-part>
+        </class-title>
+        <classification-item level="8">
+          <classification-symbol>A01C7/00B</classification-symbol>
+          <class-title>
+            <title-part>
+              <comment>
+                <text scheme="ecla">Dibble seeders</text>
+              </comment>
+            </title-part>
+          </class-title>
+        </classification-item>
+        <classification-item level="8">
+          <classification-symbol>A01C7/00C</classification-symbol>
+          <class-title>
+            <title-part>
+              <comment>
+                <text scheme="ecla">using liquid seeding techniques</text>
+              </comment>
+            </title-part>
+          </class-title>
+        </classification-item>
+        <classification-item level="8">
+          <classification-symbol>A01C7/00D</classification-symbol>
+          <class-title>
+            <title-part>
+              <comment>
+                <text scheme="ecla">Minimum till seeding</text>
+              </comment>
+            </title-part>
+          </class-title>
+        </classification-item>
+        <classification-item level="8">
+          <classification-symbol>A01C7/00E</classification-symbol>
+          <class-title>
+            <title-part>
+              <comment>
+                <text scheme="ecla">Sod or grassland seeding </text>
+                <explanation>
+                  <text scheme="ecla"><class-ref scheme="ecla">A01C7/08</class-ref> takes precedence</text>
+                </explanation>
+              </comment>
+            </title-part>
+          </class-title>
+        </classification-item>
+        <classification-item level="8">
+          <classification-symbol>A01C7/02</classification-symbol>
+          <class-title>
+            <title-part>
+              <text scheme="ipc">Hand sowing implements </text>
+              <comment>
+                <explanation>
+                  <text scheme="ecla">fertiliser distributors for hand use <class-ref scheme="ecla">A01C15/02</class-ref>; tools for cultivation <class-ref scheme="ecla">A01G1/12</class-ref></text>
+                </explanation>
+              </comment>
+            </title-part>
+          </class-title>
+        </classification-item>
+        <classification-item level="8">
+          <classification-symbol>A01C7/04</classification-symbol>
+          <class-title>
+            <title-part>
+              <text scheme="ipc">Single-grain seeders with or without suction devices </text>
+              <comment>
+                <explanation>
+                  <text scheme="ecla">regulation <class-ref scheme="ecla">A01C7/10</class-ref>; for quantities of seed <class-ref scheme="ecla">A01C7/18</class-ref></text>
+                </explanation>
+              </comment>
+            </title-part>
+          </class-title>
+          <classification-item level="9">
+            <classification-symbol>A01C7/04B</classification-symbol>
+            <class-title>
+              <title-part>
+                <comment>
+                  <text scheme="ecla">using pneumatic means</text>
+                </comment>
+              </title-part>
+            </class-title>
+            <classification-item level="10">
+              <classification-symbol>A01C7/04B1</classification-symbol>
+              <class-title>
+                <title-part>
+                  <comment>
+                    <text scheme="ecla">Pneumatic seed wheels</text>
+                  </comment>
+                </title-part>
+              </class-title>
+              <classification-item level="11">
+                <classification-symbol>A01C7/04B1B</classification-symbol>
+                <class-title>
+                  <title-part>
+                    <comment>
+                      <text scheme="ecla">with perforated seeding discs</text>
+                    </comment>
+                  </title-part>
+                </class-title>
+              </classification-item>
+            </classification-item>
+          </classification-item>
+          <classification-item level="9">
+            <classification-symbol>A01C7/04C</classification-symbol>
+            <class-title>
+              <title-part>
+                <comment>
+                  <text scheme="ecla">Seed tape planters</text>
+                </comment>
+              </title-part>
+            </class-title>
+          </classification-item>
+        </classification-item>
+        <classification-item level="8">
+          <classification-symbol>A01C7/06</classification-symbol>
+          <class-title>
+            <title-part>
+              <text scheme="ipc">Seeders combined with fertilising apparatus </text>
+              <explanation>
+                <comment>
+                  <text scheme="ecla">conducting and depositing seed <class-ref scheme="ecla">A01C7/20</class-ref>; apparatus for two kinds of fertiliser <class-ref scheme="ecla">A01C15/00</class-ref></text>
+                </comment>
+                <text scheme="ipc">; combinations with soil working tools <class-ref scheme="ecla">A01B49/04</class-ref></text>
+              </explanation>
+            </title-part>
+          </class-title>
+        </classification-item>
+        <classification-item level="8">
+          <classification-symbol>A01C7/08</classification-symbol>
+          <class-title>
+            <title-part>
+              <text scheme="ipc">Broadcast seeders</text>
+            </title-part>
+            <title-part>
+              <text scheme="ipc"> Seeders depositing seeds in rows </text>
+              <comment>
+                <explanation>
+                  <text scheme="ecla">machines for making furrows <class-ref scheme="ecla">A01C5/06</class-ref>; combination of seed machines with other soil-working tools <class-ref scheme="ecla">A01B49/06</class-ref>; foldable apparatus <class-ref scheme="ecla">A01B73/00</class-ref></text>
+                </explanation>
+              </comment>
+            </title-part>
+          </class-title>
+          <classification-item level="9">
+            <classification-symbol>A01C7/08B</classification-symbol>
+            <class-title>
+              <title-part>
+                <comment>
+                  <text scheme="ecla">Seeders depositing seeds in rows using pneumatic means</text>
+                </comment>
+              </title-part>
+            </class-title>
+            <classification-item level="10">
+              <classification-symbol>A01C7/08B1</classification-symbol>
+              <class-title date-revised="0610">
+                <title-part>
+                  <comment>
+                    <text scheme="ecla"> Ducts, distribution pipes or details thereof for pneumatic seeders </text>
+                    <explanation>
+                      <text scheme="ecla">non-pneumatic seed pipes A01C7/20C</text>
+                    </explanation>
+                  </comment>
+                </title-part>
+              </class-title>
+            </classification-item>
+            <classification-item level="10">
+              <classification-symbol>A01C7/08B2</classification-symbol>
+              <class-title date-revised="0610">
+                <title-part>
+                  <comment>
+                    <text scheme="ecla"> Pneumatic distribution heads for seeders</text>
+                  </comment>
+                </title-part>
+              </class-title>
+            </classification-item>
+          </classification-item>
+          <classification-item level="9">
+            <classification-symbol>A01C7/08C</classification-symbol>
+            <class-title>
+              <title-part>
+                <comment>
+                  <text scheme="ecla">Broadcast seeders</text>
+                </comment>
+              </title-part>
+            </class-title>
+          </classification-item>
+          <classification-item level="9">
+            <classification-symbol>A01C7/08D</classification-symbol>
+            <class-title>
+              <title-part>
+                <comment>
+                  <text scheme="ecla">Tramlining</text>
+                </comment>
+              </title-part>
+            </class-title>
+          </classification-item>
+          <classification-item level="9">
+            <classification-symbol>A01C7/08E</classification-symbol>
+            <class-title>
+              <title-part>
+                <comment>
+                  <text scheme="ecla">Sectional seeding</text>
+                </comment>
+              </title-part>
+            </class-title>
+          </classification-item>
+          <classification-item level="9">
+            <classification-symbol>A01C7/10</classification-symbol>
+            <class-title>
+              <title-part>
+                <text scheme="ipc">Devices for adjusting the seed-box </text>
+                <comment>
+                  <text scheme="ecla">Regulation of machines for depositing quantities at intervals</text>
+                </comment>
+              </title-part>
+            </class-title>
+            <classification-item level="10">
+              <classification-symbol>A01C7/10B</classification-symbol>
+              <class-title>
+                <title-part>
+                  <comment>
+                    <text scheme="ecla">Regulating or controlling the seed rate</text>
+                  </comment>
+                </title-part>
+              </class-title>
+              <classification-item level="11">
+                <classification-symbol>A01C7/10B1</classification-symbol>
+                <class-title>
+                  <title-part>
+                    <comment>
+                      <text scheme="ecla">Seed sensors</text>
+                    </comment>
+                  </title-part>
+                </class-title>
+              </classification-item>
+            </classification-item>
+            <classification-item level="10">
+              <classification-symbol>A01C7/10C</classification-symbol>
+              <class-title>
+                <title-part>
+                  <comment>
+                    <text scheme="ecla">Calibration of the seed rate</text>
+                  </comment>
+                </title-part>
+              </class-title>
+            </classification-item>
+          </classification-item>
+          <classification-item level="9">
+            <classification-symbol>A01C7/12</classification-symbol>
+            <class-title>
+              <title-part>
+                <text scheme="ipc">Seeders with feeding wheels</text>
+              </title-part>
+            </class-title>
+            <classification-item level="10">
+              <classification-symbol>A01C7/12A</classification-symbol>
+              <class-title date-revised="9412">
+                <title-part>
+                  <comment>
+                    <text scheme="ecla">for sowing seeds of different sizes</text>
+                  </comment>
+                </title-part>
+              </class-title>
+              <classification-item level="11">
+                <classification-symbol>A01C7/12A1</classification-symbol>
+                <class-title date-revised="9412">
+                  <title-part>
+                    <comment>
+                      <text scheme="ecla">using more than one feeding wheel; using double-run feeding wheels</text>
+                    </comment>
+                  </title-part>
+                </class-title>
+              </classification-item>
+            </classification-item>
+            <classification-item level="10">
+              <classification-symbol>A01C7/12B</classification-symbol>
+              <class-title>
+                <title-part>
+                  <comment>
+                    <text scheme="ecla">Housings for feed rollers or wheels</text>
+                  </comment>
+                </title-part>
+              </class-title>
+              <classification-item level="11">
+                <classification-symbol>A01C7/12B1</classification-symbol>
+                <class-title>
+                  <title-part>
+                    <comment>
+                      <text scheme="ecla">with top delivery of the seeds</text>
+                    </comment>
+                  </title-part>
+                </class-title>
+              </classification-item>
+              <classification-item level="11">
+                <classification-symbol>A01C7/12B2</classification-symbol>
+                <class-title>
+                  <title-part>
+                    <comment>
+                      <text scheme="ecla">with bottom delivery of the seeds</text>
+                    </comment>
+                  </title-part>
+                </class-title>
+              </classification-item>
+            </classification-item>
+            <classification-item level="10">
+              <classification-symbol>A01C7/12C</classification-symbol>
+              <class-title>
+                <title-part>
+                  <comment>
+                    <text scheme="ecla">Stubbed rollers or wheels</text>
+                  </comment>
+                </title-part>
+              </class-title>
+            </classification-item>
+            <classification-item level="10">
+              <classification-symbol>A01C7/12D</classification-symbol>
+              <class-title>
+                <title-part>
+                  <comment>
+                    <text scheme="ecla">Cell rollers, wheels, discs or belts</text>
+                  </comment>
+                </title-part>
+              </class-title>
+              <classification-item level="11">
+                <classification-symbol>A01C7/12D1</classification-symbol>
+                <class-title>
+                  <title-part>
+                    <comment>
+                      <text scheme="ecla">Cell discs</text>
+                    </comment>
+                  </title-part>
+                </class-title>
+              </classification-item>
+            </classification-item>
+            <classification-item level="10">
+              <classification-symbol>A01C7/14</classification-symbol>
+              <class-title>
+                <title-part>
+                  <text scheme="ipc">Seeders with spoon or bucket wheels</text>
+                </title-part>
+              </class-title>
+            </classification-item>
+          </classification-item>
+          <classification-item level="9">
+            <classification-symbol>A01C7/16</classification-symbol>
+            <class-title>
+              <title-part>
+                <text scheme="ipc">Seeders with other distributing devices, e.g. brushes, discs, screws, slides </text>
+                <explanation>
+                  <comment>
+                    <text scheme="ecla">with distributing slots <class-ref scheme="ecla">A01C15/06</class-ref>; with slides <class-ref scheme="ecla">A01C15/12C</class-ref></text>
+                  </comment>
+                  <text scheme="ipc">; with chains <class-ref scheme="ecla">A01C15/18</class-ref></text>
+                </explanation>
+              </title-part>
+            </class-title>
+            <classification-item level="10">
+              <classification-symbol>A01C7/16B</classification-symbol>
+              <class-title>
+                <title-part>
+                  <comment>
+                    <text scheme="ecla">Gravity distributors</text>
+                  </comment>
+                </title-part>
+              </class-title>
+            </classification-item>
+            <classification-item level="10">
+              <classification-symbol>A01C7/16C</classification-symbol>
+              <class-title>
+                <title-part>
+                  <comment>
+                    <text scheme="ecla">Centrifugal distributors </text>
+                    <explanation>
+                      <text scheme="ecla">pneumatic distributors <class-ref scheme="ecla">A01C15/04</class-ref></text>
+                    </explanation>
+                  </comment>
+                </title-part>
+              </class-title>
+            </classification-item>
+          </classification-item>
+        </classification-item>
+        <classification-item level="8">
+          <classification-symbol>A01C7/18</classification-symbol>
+          <class-title>
+            <title-part>
+              <text scheme="ipc">Machines for depositing quantities of seed at intervals </text>
+              <comment>
+                <explanation>
+                  <text scheme="ecla">dibble seeders <class-ref scheme="ecla">A01C7/00B</class-ref>; single-grain seeders <class-ref scheme="ecla">A01C7/04</class-ref>; regulation <class-ref scheme="ecla">A01C7/10B</class-ref>; ridge marking <class-ref scheme="ecla">A01B69/02</class-ref></text>
+                </explanation>
+              </comment>
+            </title-part>
+          </class-title>
+          <classification-item level="9">
+            <classification-symbol>A01C7/18B</classification-symbol>
+            <class-title>
+              <title-part>
+                <comment>
+                  <text scheme="ecla">Foot valves</text>
+                </comment>
+              </title-part>
+            </class-title>
+          </classification-item>
+        </classification-item>
+        <classification-item level="8">
+          <classification-symbol>A01C7/20</classification-symbol>
+          <class-title>
+            <title-part>
+              <text scheme="ipc">Parts of seeders for conducting and depositing seed </text>
+              <comment>
+                <explanation>
+                  <text scheme="ecla">combined with fertilising apparatus <class-ref scheme="ecla">A01C7/06</class-ref></text>
+                </explanation>
+              </comment>
+            </title-part>
+          </class-title>
+          <classification-item level="9">
+            <classification-symbol>A01C7/20B</classification-symbol>
+            <class-title>
+              <title-part>
+                <comment>
+                  <text scheme="ecla">Mounting of the seeding tools</text>
+                </comment>
+              </title-part>
+            </class-title>
+            <classification-item level="10">
+              <classification-symbol>A01C7/20B1</classification-symbol>
+              <class-title>
+                <title-part>
+                  <comment>
+                    <text scheme="ecla">comprising depth regulation means</text>
+                  </comment>
+                </title-part>
+              </class-title>
+            </classification-item>
+            <classification-item level="10">
+              <classification-symbol>A01C7/20B2</classification-symbol>
+              <class-title>
+                <title-part>
+                  <comment>
+                    <text scheme="ecla">comprising pressure regulation means</text>
+                  </comment>
+                </title-part>
+              </class-title>
+            </classification-item>
+          </classification-item>
+          <classification-item level="9">
+            <classification-symbol>A01C7/20C</classification-symbol>
+            <class-title>
+              <title-part>
+                <comment>
+                  <text scheme="ecla">Seed pipes</text>
+                </comment>
+              </title-part>
+            </class-title>
+          </classification-item>
+          <classification-item level="9">
+            <classification-symbol>A01C7/20D</classification-symbol>
+            <class-title>
+              <title-part>
+                <comment>
+                  <text scheme="ecla">Chassis; Coupling means to a tractor or the like; Lifting means; Side markers </text>
+                  <explanation>
+                    <text scheme="ecla">hoppers for seeders or spreaders <class-ref scheme="ecla">A01C15/00F2</class-ref></text>
+                  </explanation>
+                </comment>
+              </title-part>
+            </class-title>
+          </classification-item>
+        </classification-item>
+      </classification-item>
+      <classification-item level="7">
+        <classification-symbol>A01C9/00</classification-symbol>
+        <class-title>
+          <title-part>
+            <text scheme="ipc">Potato planters </text>
+            <explanation>
+              <comment>
+                <text scheme="ecla">planting by hand <class-ref scheme="ecla">A01C7/02</class-ref></text>
+              </comment>
+              <text scheme="ipc">; combinations with soil working tools <class-ref scheme="ecla">A01B49/04</class-ref></text>
+            </explanation>
+          </title-part>
+        </class-title>
+        <classification-item level="8">
+          <classification-symbol>A01C9/02</classification-symbol>
+          <class-title>
+            <title-part>
+              <text scheme="ipc">with conveyer belts</text>
+            </title-part>
+          </class-title>
+        </classification-item>
+        <classification-item level="8">
+          <classification-symbol>A01C9/04</classification-symbol>
+          <class-title>
+            <title-part>
+              <text scheme="ipc">with bucket wheels </text>
+              <comment>
+                <explanation>
+                  <text scheme="ecla">with other distributing devices <class-ref scheme="ecla">A01C9/08</class-ref></text>
+                </explanation>
+              </comment>
+            </title-part>
+          </class-title>
+        </classification-item>
+        <classification-item level="8">
+          <classification-symbol>A01C9/06</classification-symbol>
+          <class-title>
+            <title-part>
+              <text scheme="ipc">with piercing or grasping devices</text>
+            </title-part>
+          </class-title>
+        </classification-item>
+        <classification-item level="8">
+          <classification-symbol>A01C9/08</classification-symbol>
+          <class-title>
+            <title-part>
+              <text scheme="ipc">with other distributing devices e.g. flaps, screws, horizontal turning plates </text>
+              <comment>
+                <explanation>
+                  <text scheme="ecla">with bucket wheels <class-ref scheme="ecla">A01C9/04</class-ref></text>
+                </explanation>
+              </comment>
+            </title-part>
+          </class-title>
+        </classification-item>
+      </classification-item>
+      <classification-item level="7">
+        <classification-symbol>A01C11/00</classification-symbol>
+        <class-title>
+          <title-part>
+            <text scheme="ipc">Transplanting machines </text>
+            <explanation>
+              <comment>
+                <text scheme="ecla">hand sowing <class-ref scheme="ecla">A01C7/02</class-ref></text>
+              </comment>
+              <text scheme="ipc">; carriers for supporting persons <class-ref scheme="ecla">A01B75/00</class-ref>; transplanting devices for trees <class-ref scheme="ecla">A01G23/02</class-ref></text>
+            </explanation>
+          </title-part>
+        </class-title>
+        <classification-item level="8">
+          <classification-symbol>A01C11/00B</classification-symbol>
+          <class-title date-revised="0508">
+            <title-part>
+              <comment>
+                <text scheme="ecla">for aquatic plants; for planting underwater, e.g. rice</text>
+              </comment>
+            </title-part>
+          </class-title>
+        </classification-item>
+        <classification-item level="8">
+          <classification-symbol>A01C11/00C</classification-symbol>
+          <class-title date-revised="0508">
+            <title-part>
+              <comment>
+                <text scheme="ecla">Other parts or details or planting machines</text>
+              </comment>
+            </title-part>
+          </class-title>
+        </classification-item>
+        <classification-item level="8">
+          <classification-symbol>A01C11/02</classification-symbol>
+          <class-title>
+            <title-part>
+              <text scheme="ipc">for seedlings</text>
+            </title-part>
+          </class-title>
+          <classification-item level="9">
+            <classification-symbol>A01C11/02B</classification-symbol>
+            <class-title date-revised="0508">
+              <title-part>
+                <comment>
+                  <text scheme="ecla">Transplanting machines using seedling trays; Devices for removing the seedlings from the trays</text>
+                </comment>
+              </title-part>
+            </class-title>
+          </classification-item>
+        </classification-item>
+        <classification-item level="8">
+          <classification-symbol>A01C11/04</classification-symbol>
+          <class-title>
+            <title-part>
+              <text scheme="ipc">for deeper setting or shifting of plants</text>
+            </title-part>
+          </class-title>
+        </classification-item>
+      </classification-item>
+      <classification-item level="7">
+        <classification-symbol>A01C13/00</classification-symbol>
+        <class-title>
+          <title-part>
+            <text scheme="ipc">Machines or apparatus for consolidating soil around plants</text>
+          </title-part>
+        </class-title>
+      </classification-item>
+      <classification-item level="7">
+        <classification-symbol>A01C14/00</classification-symbol>
+        <class-title date-revised="0611">
+          <title-part>
+            <text scheme="ipc">Methods or apparatus for planting not provided for in other groups of this subclass </text>
+          </title-part>
+        </class-title>
+      </classification-item>
+      <classification-item level="7">
+        <classification-symbol>A01C15/00</classification-symbol>
+        <class-title>
+          <title-part>
+            <text scheme="ipc">Fertiliser distributors </text>
+            <explanation>
+              <text scheme="ipc">7/06 takes precedence; </text>
+              <comment>
+                <text scheme="ecla">combined with seeders <class-ref scheme="ecla">A01C7/06</class-ref></text>
+              </comment>
+              <text scheme="ipc">; arrangements for driving working parts <class-ref scheme="ecla">A01C19/00</class-ref>; </text>
+              <comment>
+                <text scheme="ecla">harrows with special additional arrangements <class-ref scheme="ecla">A01B19/00</class-ref></text>
+              </comment>
+              <text scheme="ipc">; sand, gravel or salt spreaders for roads <class-ref scheme="ecla">E01C19/20</class-ref></text>
+            </explanation>
+          </title-part>
+        </class-title>
+        <classification-item level="8">
+          <classification-symbol>A01C15/00B</classification-symbol>
+          <class-title>
+            <title-part>
+              <comment>
+                <text scheme="ecla">with slowly turning wheels</text>
+              </comment>
+            </title-part>
+          </class-title>
+        </classification-item>
+        <classification-item level="8">
+          <classification-symbol>A01C15/00C</classification-symbol>
+          <class-title>
+            <title-part>
+              <comment>
+                <text scheme="ecla">with oscillating distributing spouts</text>
+              </comment>
+            </title-part>
+          </class-title>
+        </classification-item>
+        <classification-item level="8">
+          <classification-symbol>A01C15/00D</classification-symbol>
+          <class-title>
+            <title-part>
+              <comment>
+                <text scheme="ecla">Bulk fertiliser or grain handling in the field or on the farm</text>
+              </comment>
+            </title-part>
+          </class-title>
+        </classification-item>
+        <classification-item level="8">
+          <classification-symbol>A01C15/00F</classification-symbol>
+          <class-title>
+            <title-part>
+              <comment>
+                <text scheme="ecla">Undercarriages, tanks, hoppers, stirrers specially adapted for seeders or fertiliser distributors</text>
+              </comment>
+            </title-part>
+          </class-title>
+          <classification-item level="9">
+            <classification-symbol>A01C15/00F2</classification-symbol>
+            <class-title>
+              <title-part>
+                <comment>
+                  <text scheme="ecla">Hoppers</text>
+                </comment>
+              </title-part>
+            </class-title>
+            <classification-item level="10">
+              <classification-symbol>A01C15/00F2B</classification-symbol>
+              <class-title>
+                <title-part>
+                  <comment>
+                    <text scheme="ecla">with agitators in the hopper</text>
+                  </comment>
+                </title-part>
+              </class-title>
+            </classification-item>
+          </classification-item>
+          <classification-item level="9">
+            <classification-symbol>A01C15/00F3</classification-symbol>
+            <class-title>
+              <title-part>
+                <comment>
+                  <text scheme="ecla">Aprons; Deflecting plates; Band-spreading attachments</text>
+                </comment>
+              </title-part>
+            </class-title>
+          </classification-item>
+        </classification-item>
+        <classification-item level="8">
+          <classification-symbol>A01C15/02</classification-symbol>
+          <class-title>
+            <title-part>
+              <text scheme="ipc">for hand use </text>
+              <comment>
+                <explanation>
+                  <text scheme="ecla">hand sowing <class-ref scheme="ecla">A01C7/02</class-ref></text>
+                </explanation>
+              </comment>
+            </title-part>
+          </class-title>
+        </classification-item>
+        <classification-item level="8">
+          <classification-symbol>A01C15/04</classification-symbol>
+          <class-title>
+            <title-part>
+              <text scheme="ipc">using blowers</text>
+            </title-part>
+          </class-title>
+        </classification-item>
+        <classification-item level="8">
+          <classification-symbol>A01C15/06</classification-symbol>
+          <class-title>
+            <title-part>
+              <text scheme="ipc">with distributing slots, </text>
+              <comment>
+                <text scheme="ecla">i.e. for dosing, e.g. adjustable openings</text>
+              </comment>
+            </title-part>
+          </class-title>
+          <classification-item level="9">
+            <classification-symbol>A01C15/08</classification-symbol>
+            <class-title>
+              <title-part>
+                <text scheme="ipc">with pushers or stirrers in the slots</text>
+              </title-part>
+            </class-title>
+            <classification-item level="10">
+              <classification-symbol>A01C15/10</classification-symbol>
+              <class-title>
+                <title-part>
+                  <text scheme="ipc">with reciprocating pushers </text>
+                  <comment>
+                    <text scheme="ecla">or stirrers in front of the slots </text>
+                    <explanation>
+                      <text scheme="ecla">with endless chains <class-ref scheme="ecla">A01C15/18</class-ref></text>
+                    </explanation>
+                  </comment>
+                </title-part>
+              </class-title>
+            </classification-item>
+          </classification-item>
+        </classification-item>
+        <classification-item level="8">
+          <classification-symbol>A01C15/12</classification-symbol>
+          <class-title>
+            <title-part>
+              <text scheme="ipc">with movable parts of the receptacle</text>
+            </title-part>
+          </class-title>
+          <classification-item level="9">
+            <classification-symbol>A01C15/12B</classification-symbol>
+            <class-title>
+              <title-part>
+                <comment>
+                  <text scheme="ecla">with moving floor parts </text>
+                  <explanation>
+                    <text scheme="ecla">with endless chains <class-ref scheme="ecla">A01C15/18</class-ref></text>
+                  </explanation>
+                </comment>
+              </title-part>
+            </class-title>
+          </classification-item>
+          <classification-item level="9">
+            <classification-symbol>A01C15/12C</classification-symbol>
+            <class-title>
+              <title-part>
+                <comment>
+                  <text scheme="ecla">with adjustable shutters or slits</text>
+                </comment>
+              </title-part>
+            </class-title>
+            <classification-item level="10">
+              <classification-symbol>A01C15/12C1</classification-symbol>
+              <class-title>
+                <title-part>
+                  <comment>
+                    <text scheme="ecla">with pushers or stirrers in the slits</text>
+                  </comment>
+                </title-part>
+              </class-title>
+            </classification-item>
+            <classification-item level="10">
+              <classification-symbol>A01C15/12C2</classification-symbol>
+              <class-title>
+                <title-part>
+                  <comment>
+                    <text scheme="ecla">with pushers or stirrers in front of the slits </text>
+                    <explanation>
+                      <text scheme="ecla">with endless chains <class-ref scheme="ecla">A01C15/18</class-ref></text>
+                    </explanation>
+                  </comment>
+                </title-part>
+              </class-title>
+            </classification-item>
+          </classification-item>
+        </classification-item>
+        <classification-item level="8">
+          <classification-symbol>A01C15/14</classification-symbol>
+          <class-title>
+            <title-part>
+              <text scheme="ipc">with means for lifting out the fertiliser </text>
+              <comment>
+                <explanation>
+                  <text scheme="ecla">feeding wheels, cell wheels, discs <class-ref scheme="ecla">A01C7/12</class-ref>, bucket wheels <class-ref scheme="ecla">A01C7/14</class-ref></text>
+                </explanation>
+              </comment>
+            </title-part>
+          </class-title>
+        </classification-item>
+        <classification-item level="8">
+          <classification-symbol>A01C15/16</classification-symbol>
+          <class-title>
+            <title-part>
+              <text scheme="ipc">with means for pushing out the fertiliser, e.g. by a roller</text>
+            </title-part>
+          </class-title>
+        </classification-item>
+        <classification-item level="8">
+          <classification-symbol>A01C15/18</classification-symbol>
+          <class-title>
+            <title-part>
+              <text scheme="ipc">with endless chains, </text>
+              <comment>
+                <text scheme="ecla">i.e. side transporting elements, e.g. auger or screw conveyers, swash plates</text>
+              </comment>
+            </title-part>
+          </class-title>
+        </classification-item>
+      </classification-item>
+      <classification-item level="7">
+        <classification-symbol>A01C17/00</classification-symbol>
+        <class-title>
+          <title-part>
+            <text scheme="ipc">Fertilisers or seeders with centrifugal wheels </text>
+            <explanation>
+              <comment>
+                <text scheme="ecla">hand-used implements <class-ref scheme="ecla">A01C7/02</class-ref>, <class-ref scheme="ecla">A01C15/02</class-ref>; fertiliser distributors <class-ref scheme="ecla">A01C15/00</class-ref></text>
+              </comment>
+              <text scheme="ipc">; mechanical throwing machines for articles or solid bulk materials, in general <class-ref scheme="ecla">B65G31/00</class-ref>; sand, gravel or salt spreaders <class-ref scheme="ecla">E01C19/20</class-ref></text>
+            </explanation>
+          </title-part>
+        </class-title>
+        <classification-item level="8">
+          <classification-symbol>A01C17/00B</classification-symbol>
+          <class-title>
+            <title-part>
+              <comment>
+                <text scheme="ecla">Centrifugal throwing devices with a vertical axis</text>
+              </comment>
+            </title-part>
+          </class-title>
+        </classification-item>
+        <classification-item level="8">
+          <classification-symbol>A01C17/00C</classification-symbol>
+          <class-title>
+            <title-part>
+              <comment>
+                <text scheme="ecla">Centrifugal throwing devices with a horizontal axis</text>
+              </comment>
+            </title-part>
+          </class-title>
+        </classification-item>
+        <classification-item level="8">
+          <classification-symbol>A01C17/00D</classification-symbol>
+          <class-title>
+            <title-part>
+              <comment>
+                <text scheme="ecla">Driving mechanisms for the throwing devices</text>
+              </comment>
+            </title-part>
+          </class-title>
+        </classification-item>
+        <classification-item level="8">
+          <classification-symbol>A01C17/00F</classification-symbol>
+          <class-title>
+            <title-part>
+              <comment>
+                <text scheme="ecla">Regulating or dosing devices</text>
+              </comment>
+            </title-part>
+          </class-title>
+          <classification-item level="9">
+            <classification-symbol>A01C17/00F2</classification-symbol>
+            <class-title>
+              <title-part>
+                <comment>
+                  <text scheme="ecla">Devices controlling the quantity or the distribution pattern</text>
+                </comment>
+              </title-part>
+            </class-title>
+          </classification-item>
+        </classification-item>
+      </classification-item>
+      <classification-item level="7">
+        <classification-symbol>A01C19/00</classification-symbol>
+        <class-title>
+          <title-part>
+            <text scheme="ipc">Arrangements for driving working parts of fertilisers or seeders </text>
+            <comment>
+              <explanation>
+                <text scheme="ecla"><class-ref scheme="ecla">A01C17/00D</class-ref> takes precedence</text>
+              </explanation>
+            </comment>
+          </title-part>
+        </class-title>
+        <classification-item level="8">
+          <classification-symbol>A01C19/02</classification-symbol>
+          <class-title>
+            <title-part>
+              <text scheme="ipc">by a motor</text>
+            </title-part>
+          </class-title>
+        </classification-item>
+        <classification-item level="8">
+          <classification-symbol>A01C19/04</classification-symbol>
+          <class-title>
+            <title-part>
+              <text scheme="ipc">by a ground-engaging wheel</text>
+            </title-part>
+          </class-title>
+          <classification-item level="9">
+            <classification-symbol>A01C19/04B</classification-symbol>
+            <class-title>
+              <title-part>
+                <comment>
+                  <text scheme="ecla">the drive coupling being controlled by lifting or lowering of the seeding tools</text>
+                </comment>
+              </title-part>
+            </class-title>
+          </classification-item>
+        </classification-item>
+      </classification-item>
+      <classification-item level="7">
+        <classification-symbol>A01C21/00</classification-symbol>
+        <class-title>
+          <title-part>
+            <text scheme="ipc">Methods of fertilising </text>
+            <explanation>
+              <text scheme="ipc">fertilisers <class-ref scheme="ecla">C05</class-ref>; soil-conditioning or soil-stabilising materials <class-ref scheme="ecla">C09K17/00</class-ref></text>
+            </explanation>
+            <text scheme="ipc">; </text>
+            <comment>
+              <text scheme="ecla">Use of cartridges, e.g. also with explosives</text>
+            </comment>
+          </title-part>
+        </class-title>
+        <classification-item level="8">
+          <classification-symbol>A01C21/00B</classification-symbol>
+          <class-title>
+            <title-part>
+              <comment>
+                <text scheme="ecla">Apparatus for sowing fertiliser; Fertiliser drill</text>
+              </comment>
+            </title-part>
+          </class-title>
+        </classification-item>
+      </classification-item>
+      <classification-item level="7">
+        <classification-symbol>A01C23/00</classification-symbol>
+        <class-title>
+          <title-part>
+            <text scheme="ipc">Distributing devices specially adapted for liquid manure or other fertilising liquid, including ammonia, e.g. transport tanks, sprinkling wagons </text>
+            <explanation>
+              <text scheme="ipc">watering fields in general <class-ref scheme="ecla">A01G25/00</class-ref>; spraying or applying liquids or other fluent materials in general <class-ref scheme="ecla">B05</class-ref></text>
+            </explanation>
+          </title-part>
+        </class-title>
+        <classification-item level="8">
+          <classification-symbol>A01C23/00B</classification-symbol>
+          <class-title>
+            <title-part>
+              <comment>
+                <text scheme="ecla">Sludge spreaders, e.g. liquid manure spreaders</text>
+              </comment>
+            </title-part>
+          </class-title>
+          <classification-item level="9">
+            <classification-symbol>A01C23/00B1</classification-symbol>
+            <class-title>
+              <title-part>
+                <comment>
+                  <text scheme="ecla">provided with auxiliary arrangements, e.g. pumps, agitators, cutters</text>
+                </comment>
+              </title-part>
+            </class-title>
+          </classification-item>
+          <classification-item level="9">
+            <classification-symbol>A01C23/00B2</classification-symbol>
+            <class-title>
+              <title-part>
+                <comment>
+                  <text scheme="ecla">Distributing devices, e.g. for rotating, throwing</text>
+                </comment>
+              </title-part>
+            </class-title>
+            <classification-item level="10">
+              <classification-symbol>A01C23/00B2B</classification-symbol>
+              <class-title>
+                <title-part>
+                  <comment>
+                    <text scheme="ecla">Nozzles, valves, splash plates</text>
+                  </comment>
+                </title-part>
+              </class-title>
+            </classification-item>
+          </classification-item>
+        </classification-item>
+        <classification-item level="8">
+          <classification-symbol>A01C23/00C</classification-symbol>
+          <class-title>
+            <title-part>
+              <comment>
+                <text scheme="ecla">Distribution of liquid fertilisers by gravity flow </text>
+                <explanation>
+                  <text scheme="ecla">distribution of liquid ammonia in or on the soil <class-ref scheme="ecla">A01C23/02C1</class-ref>; under pressure <class-ref scheme="ecla">A01C23/04</class-ref></text>
+                </explanation>
+              </comment>
+            </title-part>
+          </class-title>
+        </classification-item>
+        <classification-item level="8">
+          <classification-symbol>A01C23/00D</classification-symbol>
+          <class-title>
+            <title-part>
+              <comment>
+                <text scheme="ecla">Metering or regulating systems</text>
+              </comment>
+            </title-part>
+          </class-title>
+        </classification-item>
+        <classification-item level="8">
+          <classification-symbol>A01C23/00E</classification-symbol>
+          <class-title>
+            <title-part>
+              <comment>
+                <text scheme="ecla">Tanks, chassis or related parts</text>
+              </comment>
+            </title-part>
+          </class-title>
+        </classification-item>
+        <classification-item level="8">
+          <classification-symbol>A01C23/02</classification-symbol>
+          <class-title>
+            <title-part>
+              <text scheme="ipc">Special arrangements for delivering the liquid directly into the soil</text>
+            </title-part>
+          </class-title>
+          <classification-item level="9">
+            <classification-symbol>A01C23/02B</classification-symbol>
+            <class-title>
+              <title-part>
+                <comment>
+                  <text scheme="ecla">Sludge injectors, i.e. liquid manure injectors</text>
+                </comment>
+              </title-part>
+            </class-title>
+            <classification-item level="10">
+              <classification-symbol>A01C23/02B1</classification-symbol>
+              <class-title>
+                <title-part>
+                  <comment>
+                    <text scheme="ecla">Continuous injection tools </text>
+                    <explanation>
+                      <text scheme="ecla">devices for making drill or furrows <class-ref scheme="ecla">A01C5/06C</class-ref></text>
+                    </explanation>
+                  </comment>
+                </title-part>
+              </class-title>
+            </classification-item>
+          </classification-item>
+          <classification-item level="9">
+            <classification-symbol>A01C23/02C</classification-symbol>
+            <class-title>
+              <title-part>
+                <comment>
+                  <text scheme="ecla">for liquid or gas fertilisers</text>
+                </comment>
+              </title-part>
+            </class-title>
+            <classification-item level="10">
+              <classification-symbol>A01C23/02C1</classification-symbol>
+              <class-title>
+                <title-part>
+                  <comment>
+                    <text scheme="ecla">for ammonia</text>
+                  </comment>
+                </title-part>
+              </class-title>
+            </classification-item>
+            <classification-item level="10">
+              <classification-symbol>A01C23/02C2</classification-symbol>
+              <class-title>
+                <title-part>
+                  <comment>
+                    <text scheme="ecla">Continuous injection tools</text>
+                  </comment>
+                </title-part>
+              </class-title>
+            </classification-item>
+            <classification-item level="10">
+              <classification-symbol>A01C23/02C3</classification-symbol>
+              <class-title>
+                <title-part>
+                  <comment>
+                    <text scheme="ecla">Localised non-continuous injection tools, e.g. pal injectors, spike wheels</text>
+                  </comment>
+                </title-part>
+              </class-title>
+            </classification-item>
+          </classification-item>
+          <classification-item level="9">
+            <classification-symbol>A01C23/02D</classification-symbol>
+            <class-title>
+              <title-part>
+                <comment>
+                  <text scheme="ecla">Other methods for delivering fertiliser into the soil </text>
+                  <explanation>
+                    <text scheme="ecla">sowing granular fertiliser <class-ref scheme="ecla">A01C21/00B</class-ref>; subirrigation <class-ref scheme="ecla">A01G25/06</class-ref></text>
+                  </explanation>
+                </comment>
+              </title-part>
+            </class-title>
+            <classification-item level="10">
+              <classification-symbol>A01C23/02D1</classification-symbol>
+              <class-title>
+                <title-part>
+                  <comment>
+                    <text scheme="ecla">Contactless injection into the soil</text>
+                  </comment>
+                </title-part>
+              </class-title>
+            </classification-item>
+          </classification-item>
+        </classification-item>
+        <classification-item level="8">
+          <classification-symbol>A01C23/04</classification-symbol>
+          <class-title>
+            <title-part>
+              <text scheme="ipc">Distributing under pressure</text>
+            </title-part>
+            <title-part>
+              <text scheme="ipc"> Distributing mud</text>
+            </title-part>
+            <title-part>
+              <text scheme="ipc"> Adaptation of watering systems for fertilising-liquids</text>
+            </title-part>
+          </class-title>
+          <classification-item level="9">
+            <classification-symbol>A01C23/04B</classification-symbol>
+            <class-title>
+              <title-part>
+                <comment>
+                  <text scheme="ecla">Adding fertiliser to watering systems </text>
+                  <explanation>
+                    <text scheme="ecla">adding insecticides or herbicides <class-ref scheme="ecla">A01M7/00</class-ref></text>
+                  </explanation>
+                </comment>
+              </title-part>
+            </class-title>
+          </classification-item>
+          <classification-item level="9">
+            <classification-symbol>A01C23/04C</classification-symbol>
+            <class-title>
+              <title-part>
+                <comment>
+                  <text scheme="ecla">Filling devices for liquid manure or slurry tanks </text>
+                  <explanation>
+                    <text scheme="ecla">arrangements for connecting hoses of the quick-acting type <class-ref scheme="ecla">F16L37/00</class-ref></text>
+                  </explanation>
+                </comment>
+              </title-part>
+            </class-title>
+          </classification-item>
+          <classification-item level="9">
+            <classification-symbol>A01C23/04D</classification-symbol>
+            <class-title>
+              <title-part>
+                <comment>
+                  <text scheme="ecla">Spraying of liquid fertilisers </text>
+                  <explanation>
+                    <text scheme="ecla">gravity flow <class-ref scheme="ecla">A01C23/00C</class-ref>; watering gardens, fields, sports grounds or the like <class-ref scheme="ecla">A01G25/00</class-ref></text>
+                  </explanation>
+                </comment>
+              </title-part>
+            </class-title>
+          </classification-item>
+        </classification-item>
+      </classification-item>
+    </classification-item>
+  </classification-item>
+</class-scheme>
