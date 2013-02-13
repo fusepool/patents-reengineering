@@ -32,7 +32,7 @@ public class ResourceURIResolver implements URIResolver {
 			sSource = new StreamSource(xslIs) ;
 			return  sSource ;
 		} else {
-			xslIs = this.getClass().getResourceAsStream(href) ;
+			xslIs = this.getClass().getResourceAsStream(href) ; 
 			if(xslIs!=null) {
 				sSource = new StreamSource(xslIs) ;
 				return  sSource ;

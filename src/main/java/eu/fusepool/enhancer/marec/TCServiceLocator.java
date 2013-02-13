@@ -12,7 +12,7 @@ import org.osgi.framework.ServiceReference;
 
 /**
  * @author giorgio
- *
+ * 
  */
 public class TCServiceLocator implements ServiceListener {
 

@@ -109,25 +109,11 @@ implements EnhancementEngine, ServiceProperties {
 		super.activate(ce);
 		this.componentContext = ce ;
 		
-		
+		 
 		
 		
 		try {
-			serviceLocator = new TCServiceLocator(ce.getBundleContext(), "graph.uri=om.go5th.yard.clerezza.01") ;
-			//Filter filter = ce.getBundleContext().createFilter("(graph.uri=om.go5th.yard.clerezza.01)") ;
-//			ServiceReference[] se = ce.getBundleContext().
-//												getAllServiceReferences(org.apache.clerezza.rdf.core.TripleCollection.class.getName(), 
-//														"(graph.uri=om.go5th.yard.clerezza.01)") ;
-//			for(ServiceReference s : se) {
-//				System.out.println(s.getBundle().getSymbolicName()+ " - "+s.getBundle().getBundleId()+
-//						" - "+s.getBundle().getLocation());
-//			}
-//			if(se != null && se.length>0) {
-//				System.out.println("Registering triplestore reference...");
-//				tripleCollection = (TripleCollection) ce.getBundleContext().getService(se[0]) ;
-//			}
-			
-			
+			serviceLocator = new TCServiceLocator(ce.getBundleContext(), "graph.uri=om.go5th.yard.clerezza.01") ;		
 		} catch (InvalidSyntaxException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
