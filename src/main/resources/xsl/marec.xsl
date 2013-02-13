@@ -24,7 +24,7 @@
     xmlns:schema="http://schema.org/"
     xmlns:uuid="java:java.util.UUID"
 
-    exclude-result-prefixes="xsl fn"
+    exclude-result-prefixes="xsl fn uuid"
     >
 
 <!--    xpath-default-namespace=""-->
@@ -37,7 +37,11 @@ TODO: ignore DTD check. saxonb-xslt breaks if offline
 
     <xsl:output encoding="utf-8" indent="yes" method="xml" omit-xml-declaration="no"/>
 
+    <xsl:param name="pathToProvDocument"/>
+
     <xsl:strip-space elements="*"/>
+
+    <xsl:variable name="xslDocument" select="'https://github.com/fusepool/patents-reengineering/scripts/marec.xsl'"/>
 
     <xsl:template match="/patent-document">
         <rdf:RDF>

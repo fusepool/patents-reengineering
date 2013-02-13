@@ -1,0 +1,1929 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:foaf="http://xmlns.com/foaf/0.1/"
+         xmlns:prov="http://www.w3.org/ns/prov#"
+         xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+         xmlns:xkos="http://purl.org/linked-data/xkos#"
+         xmlns:pso="http://www.patexpert.org/ontologies/pso.owl#"
+         xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:pulo="http://www.patexpert.org/ontologies/pulo.owl#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:sumo="http://www.owl-ontologies.com/sumo.owl#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xmlns:pmo="http://www.patexpert.org/ontologies/pmo.owl#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:property="http://example.org/property/"
+         xmlns:schema="http://schema.org/">
+   <rdf:Description rdf:about="http://csarven.ca/#i">
+      <rdf:type rdf:resource="http://www.w3.org/ns/prov#Agent"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://example.org/concept/ecla/5/A01C">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
+      <rdf:type rdf:resource="http://purl.org/linked-data/xkos#ClassificationLevel"/>
+      <xkos:depth>5</xkos:depth>
+      <skos:member>
+         <rdf:Description rdf:about="http://example.org/concept/ecla/6/A01C1/00">
+            <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
+            <rdf:type rdf:resource="http://purl.org/linked-data/xkos#ClassificationLevel"/>
+            <xkos:depth>6</xkos:depth>
+            <skos:member>
+               <rdf:Description rdf:about="http://example.org/concept/ecla/A01C1/00">
+                  <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                  <skos:topConceptOf>
+                     <rdf:Description rdf:about="http://example.org/concept/ecla">
+                        <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C1/00"/>
+                     </rdf:Description>
+                  </skos:topConceptOf>
+                  <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                  <skos:broader rdf:resource="http://example.org/concept/A01C"/>
+                  <skos:narrower>
+                     <rdf:Description rdf:about="http://example.org/concept/ecla/A01C1/00B">
+                        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                        <skos:topConceptOf>
+                           <rdf:Description rdf:about="http://example.org/concept/ecla">
+                              <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C1/00B"/>
+                           </rdf:Description>
+                        </skos:topConceptOf>
+                        <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                        <skos:broader rdf:resource="http://example.org/concept/A01C1/00"/>
+                     </rdf:Description>
+                  </skos:narrower>
+                  <skos:narrower>
+                     <rdf:Description rdf:about="http://example.org/concept/ecla/A01C1/02">
+                        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                        <skos:topConceptOf>
+                           <rdf:Description rdf:about="http://example.org/concept/ecla">
+                              <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C1/02"/>
+                           </rdf:Description>
+                        </skos:topConceptOf>
+                        <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                        <skos:broader rdf:resource="http://example.org/concept/A01C1/00"/>
+                        <skos:narrower>
+                           <rdf:Description rdf:about="http://example.org/concept/ecla/A01C1/02B">
+                              <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                              <skos:topConceptOf>
+                                 <rdf:Description rdf:about="http://example.org/concept/ecla">
+                                    <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C1/02B"/>
+                                 </rdf:Description>
+                              </skos:topConceptOf>
+                              <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                              <skos:broader rdf:resource="http://example.org/concept/A01C1/00"/>
+                           </rdf:Description>
+                        </skos:narrower>
+                        <skos:prefLabel xml:lang="en">Germinating apparatus</skos:prefLabel>
+                        <skos:prefLabel xml:lang="en">Determining germination capacity of seeds or the like</skos:prefLabel>
+                        <skos:definition xml:lang="en">germinating in preparation of malt C12C1/027</skos:definition>
+                        <dcterms:references rdf:resource="http://example.org/concept/ecla/C12C1/027"/>
+                     </rdf:Description>
+                  </skos:narrower>
+                  <skos:narrower>
+                     <rdf:Description rdf:about="http://example.org/concept/ecla/A01C1/04">
+                        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                        <skos:topConceptOf>
+                           <rdf:Description rdf:about="http://example.org/concept/ecla">
+                              <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C1/04"/>
+                           </rdf:Description>
+                        </skos:topConceptOf>
+                        <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                        <skos:broader rdf:resource="http://example.org/concept/A01C1/00"/>
+                        <skos:narrower>
+                           <rdf:Description rdf:about="http://example.org/concept/ecla/A01C1/04A">
+                              <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                              <skos:topConceptOf>
+                                 <rdf:Description rdf:about="http://example.org/concept/ecla">
+                                    <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C1/04A"/>
+                                 </rdf:Description>
+                              </skos:topConceptOf>
+                              <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                              <skos:broader rdf:resource="http://example.org/concept/A01C1/00"/>
+                           </rdf:Description>
+                        </skos:narrower>
+                        <skos:narrower>
+                           <rdf:Description rdf:about="http://example.org/concept/ecla/A01C1/04B">
+                              <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                              <skos:topConceptOf>
+                                 <rdf:Description rdf:about="http://example.org/concept/ecla">
+                                    <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C1/04B"/>
+                                 </rdf:Description>
+                              </skos:topConceptOf>
+                              <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                              <skos:broader rdf:resource="http://example.org/concept/A01C1/00"/>
+                           </rdf:Description>
+                        </skos:narrower>
+                        <skos:narrower>
+                           <rdf:Description rdf:about="http://example.org/concept/ecla/A01C1/04C">
+                              <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                              <skos:topConceptOf>
+                                 <rdf:Description rdf:about="http://example.org/concept/ecla">
+                                    <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C1/04C"/>
+                                 </rdf:Description>
+                              </skos:topConceptOf>
+                              <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                              <skos:broader rdf:resource="http://example.org/concept/A01C1/00"/>
+                           </rdf:Description>
+                        </skos:narrower>
+                        <skos:prefLabel xml:lang="en">Arranging seeds on carriers;</skos:prefLabel>
+                     </rdf:Description>
+                  </skos:narrower>
+                  <skos:narrower>
+                     <rdf:Description rdf:about="http://example.org/concept/ecla/A01C1/06">
+                        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                        <skos:topConceptOf>
+                           <rdf:Description rdf:about="http://example.org/concept/ecla">
+                              <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C1/06"/>
+                           </rdf:Description>
+                        </skos:topConceptOf>
+                        <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                        <skos:broader rdf:resource="http://example.org/concept/A01C1/00"/>
+                        <skos:prefLabel xml:lang="en">Coating or dressing seed</skos:prefLabel>
+                        <dcterms:references rdf:resource="http://example.org/concept/ecla/A01H4/00D1"/>
+                     </rdf:Description>
+                  </skos:narrower>
+                  <skos:narrower>
+                     <rdf:Description rdf:about="http://example.org/concept/ecla/A01C1/08">
+                        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                        <skos:topConceptOf>
+                           <rdf:Description rdf:about="http://example.org/concept/ecla">
+                              <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C1/08"/>
+                           </rdf:Description>
+                        </skos:topConceptOf>
+                        <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                        <skos:broader rdf:resource="http://example.org/concept/A01C1/00"/>
+                        <skos:prefLabel xml:lang="en">Immunising seed</skos:prefLabel>
+                     </rdf:Description>
+                  </skos:narrower>
+                  <skos:prefLabel xml:lang="en">Apparatus, or methods of use thereof, for testing or treating seed, roots, or the like, prior to sowing or planting</skos:prefLabel>
+                  <skos:definition xml:lang="en">chemicals therefor A01N25/00 to A01N65/00</skos:definition>
+                  <skos:scopeNote xml:lang="en">irradiation in general B01J19/08</skos:scopeNote>
+                  <dcterms:references rdf:resource="http://example.org/concept/ecla/A01N25/00"/>
+                  <dcterms:references rdf:resource="http://example.org/concept/ecla/A01N65/00"/>
+                  <dcterms:references rdf:resource="http://example.org/concept/ecla/B01J19/08"/>
+               </rdf:Description>
+            </skos:member>
+            <skos:member>
+               <rdf:Description rdf:about="http://example.org/concept/ecla/A01C3/00">
+                  <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                  <skos:topConceptOf>
+                     <rdf:Description rdf:about="http://example.org/concept/ecla">
+                        <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C3/00"/>
+                     </rdf:Description>
+                  </skos:topConceptOf>
+                  <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                  <skos:broader rdf:resource="http://example.org/concept/A01C"/>
+                  <skos:narrower>
+                     <rdf:Description rdf:about="http://example.org/concept/ecla/A01C3/02">
+                        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                        <skos:topConceptOf>
+                           <rdf:Description rdf:about="http://example.org/concept/ecla">
+                              <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C3/02"/>
+                           </rdf:Description>
+                        </skos:topConceptOf>
+                        <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                        <skos:broader rdf:resource="http://example.org/concept/A01C1/00"/>
+                        <skos:narrower>
+                           <rdf:Description rdf:about="http://example.org/concept/ecla/A01C3/02B">
+                              <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                              <skos:topConceptOf>
+                                 <rdf:Description rdf:about="http://example.org/concept/ecla">
+                                    <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C3/02B"/>
+                                 </rdf:Description>
+                              </skos:topConceptOf>
+                              <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                              <skos:broader rdf:resource="http://example.org/concept/A01C3/00"/>
+                           </rdf:Description>
+                        </skos:narrower>
+                        <skos:narrower>
+                           <rdf:Description rdf:about="http://example.org/concept/ecla/A01C3/02C">
+                              <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                              <skos:topConceptOf>
+                                 <rdf:Description rdf:about="http://example.org/concept/ecla">
+                                    <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C3/02C"/>
+                                 </rdf:Description>
+                              </skos:topConceptOf>
+                              <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                              <skos:broader rdf:resource="http://example.org/concept/A01C3/00"/>
+                           </rdf:Description>
+                        </skos:narrower>
+                        <skos:narrower>
+                           <rdf:Description rdf:about="http://example.org/concept/ecla/A01C3/02D">
+                              <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                              <skos:topConceptOf>
+                                 <rdf:Description rdf:about="http://example.org/concept/ecla">
+                                    <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C3/02D"/>
+                                 </rdf:Description>
+                              </skos:topConceptOf>
+                              <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                              <skos:broader rdf:resource="http://example.org/concept/A01C3/00"/>
+                           </rdf:Description>
+                        </skos:narrower>
+                        <skos:narrower>
+                           <rdf:Description rdf:about="http://example.org/concept/ecla/A01C3/02E">
+                              <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                              <skos:topConceptOf>
+                                 <rdf:Description rdf:about="http://example.org/concept/ecla">
+                                    <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C3/02E"/>
+                                 </rdf:Description>
+                              </skos:topConceptOf>
+                              <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                              <skos:broader rdf:resource="http://example.org/concept/A01C3/00"/>
+                           </rdf:Description>
+                        </skos:narrower>
+                        <skos:narrower>
+                           <rdf:Description rdf:about="http://example.org/concept/ecla/A01C3/02F">
+                              <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                              <skos:topConceptOf>
+                                 <rdf:Description rdf:about="http://example.org/concept/ecla">
+                                    <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C3/02F"/>
+                                 </rdf:Description>
+                              </skos:topConceptOf>
+                              <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                              <skos:broader rdf:resource="http://example.org/concept/A01C3/00"/>
+                              <dcterms:references rdf:resource="http://example.org/concept/ecla/C02F11/04"/>
+                              <dcterms:references rdf:resource="http://example.org/concept/ecla/E04H4/10"/>
+                           </rdf:Description>
+                        </skos:narrower>
+                        <skos:prefLabel xml:lang="en">Storage places for manure e.g. cisterns for liquid manure</skos:prefLabel>
+                        <skos:prefLabel xml:lang="en">Installations for fermenting manure</skos:prefLabel>
+                        <skos:definition xml:lang="en">sewerage structures E03F5/00; silos, bunkers E04H7/22</skos:definition>
+                        <dcterms:references rdf:resource="http://example.org/concept/ecla/E03F5/00"/>
+                        <dcterms:references rdf:resource="http://example.org/concept/ecla/E04H7/22"/>
+                     </rdf:Description>
+                  </skos:narrower>
+                  <skos:narrower>
+                     <rdf:Description rdf:about="http://example.org/concept/ecla/A01C3/04">
+                        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                        <skos:topConceptOf>
+                           <rdf:Description rdf:about="http://example.org/concept/ecla">
+                              <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C3/04"/>
+                           </rdf:Description>
+                        </skos:topConceptOf>
+                        <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                        <skos:broader rdf:resource="http://example.org/concept/A01C1/00"/>
+                        <skos:prefLabel xml:lang="en">Manure loaders</skos:prefLabel>
+                        <skos:definition xml:lang="en">loaders in general B65G</skos:definition>
+                        <dcterms:references rdf:resource="http://example.org/concept/ecla/B65G"/>
+                     </rdf:Description>
+                  </skos:narrower>
+                  <skos:narrower>
+                     <rdf:Description rdf:about="http://example.org/concept/ecla/A01C3/06">
+                        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                        <skos:topConceptOf>
+                           <rdf:Description rdf:about="http://example.org/concept/ecla">
+                              <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C3/06"/>
+                           </rdf:Description>
+                        </skos:topConceptOf>
+                        <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                        <skos:broader rdf:resource="http://example.org/concept/A01C1/00"/>
+                        <skos:narrower>
+                           <rdf:Description rdf:about="http://example.org/concept/ecla/A01C3/06B">
+                              <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                              <skos:topConceptOf>
+                                 <rdf:Description rdf:about="http://example.org/concept/ecla">
+                                    <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C3/06B"/>
+                                 </rdf:Description>
+                              </skos:topConceptOf>
+                              <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                              <skos:broader rdf:resource="http://example.org/concept/A01C3/00"/>
+                           </rdf:Description>
+                        </skos:narrower>
+                        <skos:narrower>
+                           <rdf:Description rdf:about="http://example.org/concept/ecla/A01C3/06C">
+                              <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                              <skos:topConceptOf>
+                                 <rdf:Description rdf:about="http://example.org/concept/ecla">
+                                    <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C3/06C"/>
+                                 </rdf:Description>
+                              </skos:topConceptOf>
+                              <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                              <skos:broader rdf:resource="http://example.org/concept/A01C3/00"/>
+                           </rdf:Description>
+                        </skos:narrower>
+                        <skos:narrower>
+                           <rdf:Description rdf:about="http://example.org/concept/ecla/A01C3/08">
+                              <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                              <skos:topConceptOf>
+                                 <rdf:Description rdf:about="http://example.org/concept/ecla">
+                                    <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C3/08"/>
+                                 </rdf:Description>
+                              </skos:topConceptOf>
+                              <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                              <skos:broader rdf:resource="http://example.org/concept/A01C3/00"/>
+                              <skos:prefLabel xml:lang="en">for manure already laying on the soil</skos:prefLabel>
+                           </rdf:Description>
+                        </skos:narrower>
+                        <skos:prefLabel xml:lang="en">Manure distributors e.g. dung distributors</skos:prefLabel>
+                     </rdf:Description>
+                  </skos:narrower>
+                  <skos:prefLabel xml:lang="en">Treating manure</skos:prefLabel>
+                  <skos:prefLabel xml:lang="en">Manuring</skos:prefLabel>
+                  <skos:definition xml:lang="en">; dung forks A01D9/00;</skos:definition>
+                  <skos:definition xml:lang="en">organic fertilisers from waste or refuse C05F</skos:definition>
+                  <skos:scopeNote xml:lang="en">ploughs with additional arrangements for putting manure under the soil A01B17/00B</skos:scopeNote>
+                  <skos:scopeNote xml:lang="en">treating of waste water, sewage or sludge C02F</skos:scopeNote>
+                  <dcterms:references rdf:resource="http://example.org/concept/ecla/A01B17/00B"/>
+                  <dcterms:references rdf:resource="http://example.org/concept/ecla/A01D9/00"/>
+                  <dcterms:references rdf:resource="http://example.org/concept/ecla/C02F"/>
+                  <dcterms:references rdf:resource="http://example.org/concept/ecla/C05F"/>
+               </rdf:Description>
+            </skos:member>
+            <skos:member>
+               <rdf:Description rdf:about="http://example.org/concept/ecla/A01C5/00">
+                  <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                  <skos:topConceptOf>
+                     <rdf:Description rdf:about="http://example.org/concept/ecla">
+                        <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C5/00"/>
+                     </rdf:Description>
+                  </skos:topConceptOf>
+                  <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                  <skos:broader rdf:resource="http://example.org/concept/A01C"/>
+                  <skos:narrower>
+                     <rdf:Description rdf:about="http://example.org/concept/ecla/A01C5/02">
+                        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                        <skos:topConceptOf>
+                           <rdf:Description rdf:about="http://example.org/concept/ecla">
+                              <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C5/02"/>
+                           </rdf:Description>
+                        </skos:topConceptOf>
+                        <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                        <skos:broader rdf:resource="http://example.org/concept/A01C1/00"/>
+                        <skos:prefLabel xml:lang="en">Hand tools for making holes for sowing, planting or manuring</skos:prefLabel>
+                        <skos:definition xml:lang="en">transplanting devices for trees A01G23/02</skos:definition>
+                        <dcterms:references rdf:resource="http://example.org/concept/ecla/A01G23/02"/>
+                     </rdf:Description>
+                  </skos:narrower>
+                  <skos:narrower>
+                     <rdf:Description rdf:about="http://example.org/concept/ecla/A01C5/04">
+                        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                        <skos:topConceptOf>
+                           <rdf:Description rdf:about="http://example.org/concept/ecla">
+                              <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C5/04"/>
+                           </rdf:Description>
+                        </skos:topConceptOf>
+                        <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                        <skos:broader rdf:resource="http://example.org/concept/A01C1/00"/>
+                        <skos:narrower>
+                           <rdf:Description rdf:about="http://example.org/concept/ecla/A01C5/04B">
+                              <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                              <skos:topConceptOf>
+                                 <rdf:Description rdf:about="http://example.org/concept/ecla">
+                                    <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C5/04B"/>
+                                 </rdf:Description>
+                              </skos:topConceptOf>
+                              <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                              <skos:broader rdf:resource="http://example.org/concept/A01C5/00"/>
+                              <dcterms:references rdf:resource="http://example.org/concept/ecla/A01G13/02"/>
+                           </rdf:Description>
+                        </skos:narrower>
+                        <skos:prefLabel xml:lang="en">Machines for making or covering holes for sowing or planting</skos:prefLabel>
+                     </rdf:Description>
+                  </skos:narrower>
+                  <skos:narrower>
+                     <rdf:Description rdf:about="http://example.org/concept/ecla/A01C5/06">
+                        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                        <skos:topConceptOf>
+                           <rdf:Description rdf:about="http://example.org/concept/ecla">
+                              <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C5/06"/>
+                           </rdf:Description>
+                        </skos:topConceptOf>
+                        <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                        <skos:broader rdf:resource="http://example.org/concept/A01C1/00"/>
+                        <skos:narrower>
+                           <rdf:Description rdf:about="http://example.org/concept/ecla/A01C5/06B">
+                              <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                              <skos:topConceptOf>
+                                 <rdf:Description rdf:about="http://example.org/concept/ecla">
+                                    <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C5/06B"/>
+                                 </rdf:Description>
+                              </skos:topConceptOf>
+                              <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                              <skos:broader rdf:resource="http://example.org/concept/A01C5/00"/>
+                              <skos:narrower>
+                                 <rdf:Description rdf:about="http://example.org/concept/ecla/A01C5/06B1">
+                                    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                                    <skos:topConceptOf>
+                                       <rdf:Description rdf:about="http://example.org/concept/ecla">
+                                          <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C5/06B1"/>
+                                       </rdf:Description>
+                                    </skos:topConceptOf>
+                                    <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                                    <skos:broader rdf:resource="http://example.org/concept/A01C5/06"/>
+                                 </rdf:Description>
+                              </skos:narrower>
+                           </rdf:Description>
+                        </skos:narrower>
+                        <skos:narrower>
+                           <rdf:Description rdf:about="http://example.org/concept/ecla/A01C5/06C">
+                              <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                              <skos:topConceptOf>
+                                 <rdf:Description rdf:about="http://example.org/concept/ecla">
+                                    <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C5/06C"/>
+                                 </rdf:Description>
+                              </skos:topConceptOf>
+                              <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                              <skos:broader rdf:resource="http://example.org/concept/A01C5/00"/>
+                              <skos:narrower>
+                                 <rdf:Description rdf:about="http://example.org/concept/ecla/A01C5/06C1">
+                                    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                                    <skos:topConceptOf>
+                                       <rdf:Description rdf:about="http://example.org/concept/ecla">
+                                          <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C5/06C1"/>
+                                       </rdf:Description>
+                                    </skos:topConceptOf>
+                                    <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                                    <skos:broader rdf:resource="http://example.org/concept/A01C5/06"/>
+                                 </rdf:Description>
+                              </skos:narrower>
+                           </rdf:Description>
+                        </skos:narrower>
+                        <skos:prefLabel xml:lang="en">Machines for making or covering drills or furrows for sowing or planting</skos:prefLabel>
+                        <skos:definition xml:lang="en">; ploughs for making ridges A01B13/02;</skos:definition>
+                        <skos:scopeNote xml:lang="en">seeders depositing seeds in rows A01C7/08</skos:scopeNote>
+                        <skos:scopeNote xml:lang="en">lifting devices for agricultural machines A01B63/00</skos:scopeNote>
+                        <dcterms:references rdf:resource="http://example.org/concept/ecla/A01C7/08"/>
+                        <dcterms:references rdf:resource="http://example.org/concept/ecla/A01B13/02"/>
+                        <dcterms:references rdf:resource="http://example.org/concept/ecla/A01B63/00"/>
+                     </rdf:Description>
+                  </skos:narrower>
+                  <skos:narrower>
+                     <rdf:Description rdf:about="http://example.org/concept/ecla/A01C5/08">
+                        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                        <skos:topConceptOf>
+                           <rdf:Description rdf:about="http://example.org/concept/ecla">
+                              <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C5/08"/>
+                           </rdf:Description>
+                        </skos:topConceptOf>
+                        <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                        <skos:broader rdf:resource="http://example.org/concept/A01C1/00"/>
+                        <skos:prefLabel xml:lang="en">Machines for both manuring and sowing or both manuring and planting</skos:prefLabel>
+                     </rdf:Description>
+                  </skos:narrower>
+                  <skos:prefLabel xml:lang="en">Making or covering furrows or holes for sowing, planting or manuring</skos:prefLabel>
+               </rdf:Description>
+            </skos:member>
+            <skos:member>
+               <rdf:Description rdf:about="http://example.org/concept/ecla/A01C7/00">
+                  <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                  <skos:topConceptOf>
+                     <rdf:Description rdf:about="http://example.org/concept/ecla">
+                        <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C7/00"/>
+                     </rdf:Description>
+                  </skos:topConceptOf>
+                  <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                  <skos:broader rdf:resource="http://example.org/concept/A01C"/>
+                  <skos:narrower>
+                     <rdf:Description rdf:about="http://example.org/concept/ecla/A01C7/00B">
+                        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                        <skos:topConceptOf>
+                           <rdf:Description rdf:about="http://example.org/concept/ecla">
+                              <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C7/00B"/>
+                           </rdf:Description>
+                        </skos:topConceptOf>
+                        <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                        <skos:broader rdf:resource="http://example.org/concept/A01C1/00"/>
+                     </rdf:Description>
+                  </skos:narrower>
+                  <skos:narrower>
+                     <rdf:Description rdf:about="http://example.org/concept/ecla/A01C7/00C">
+                        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                        <skos:topConceptOf>
+                           <rdf:Description rdf:about="http://example.org/concept/ecla">
+                              <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C7/00C"/>
+                           </rdf:Description>
+                        </skos:topConceptOf>
+                        <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                        <skos:broader rdf:resource="http://example.org/concept/A01C1/00"/>
+                     </rdf:Description>
+                  </skos:narrower>
+                  <skos:narrower>
+                     <rdf:Description rdf:about="http://example.org/concept/ecla/A01C7/00D">
+                        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                        <skos:topConceptOf>
+                           <rdf:Description rdf:about="http://example.org/concept/ecla">
+                              <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C7/00D"/>
+                           </rdf:Description>
+                        </skos:topConceptOf>
+                        <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                        <skos:broader rdf:resource="http://example.org/concept/A01C1/00"/>
+                     </rdf:Description>
+                  </skos:narrower>
+                  <skos:narrower>
+                     <rdf:Description rdf:about="http://example.org/concept/ecla/A01C7/00E">
+                        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                        <skos:topConceptOf>
+                           <rdf:Description rdf:about="http://example.org/concept/ecla">
+                              <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C7/00E"/>
+                           </rdf:Description>
+                        </skos:topConceptOf>
+                        <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                        <skos:broader rdf:resource="http://example.org/concept/A01C1/00"/>
+                        <dcterms:references rdf:resource="http://example.org/concept/ecla/A01C7/08"/>
+                     </rdf:Description>
+                  </skos:narrower>
+                  <skos:narrower>
+                     <rdf:Description rdf:about="http://example.org/concept/ecla/A01C7/02">
+                        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                        <skos:topConceptOf>
+                           <rdf:Description rdf:about="http://example.org/concept/ecla">
+                              <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C7/02"/>
+                           </rdf:Description>
+                        </skos:topConceptOf>
+                        <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                        <skos:broader rdf:resource="http://example.org/concept/A01C1/00"/>
+                        <skos:prefLabel xml:lang="en">Hand sowing implements</skos:prefLabel>
+                        <dcterms:references rdf:resource="http://example.org/concept/ecla/A01C15/02"/>
+                        <dcterms:references rdf:resource="http://example.org/concept/ecla/A01G1/12"/>
+                     </rdf:Description>
+                  </skos:narrower>
+                  <skos:narrower>
+                     <rdf:Description rdf:about="http://example.org/concept/ecla/A01C7/04">
+                        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                        <skos:topConceptOf>
+                           <rdf:Description rdf:about="http://example.org/concept/ecla">
+                              <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C7/04"/>
+                           </rdf:Description>
+                        </skos:topConceptOf>
+                        <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                        <skos:broader rdf:resource="http://example.org/concept/A01C1/00"/>
+                        <skos:narrower>
+                           <rdf:Description rdf:about="http://example.org/concept/ecla/A01C7/04B">
+                              <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                              <skos:topConceptOf>
+                                 <rdf:Description rdf:about="http://example.org/concept/ecla">
+                                    <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C7/04B"/>
+                                 </rdf:Description>
+                              </skos:topConceptOf>
+                              <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                              <skos:broader rdf:resource="http://example.org/concept/A01C7/00"/>
+                              <skos:narrower>
+                                 <rdf:Description rdf:about="http://example.org/concept/ecla/A01C7/04B1">
+                                    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                                    <skos:topConceptOf>
+                                       <rdf:Description rdf:about="http://example.org/concept/ecla">
+                                          <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C7/04B1"/>
+                                       </rdf:Description>
+                                    </skos:topConceptOf>
+                                    <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                                    <skos:broader rdf:resource="http://example.org/concept/A01C7/04"/>
+                                    <skos:narrower>
+                                       <rdf:Description rdf:about="http://example.org/concept/ecla/A01C7/04B1B">
+                                          <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                                          <skos:topConceptOf>
+                                             <rdf:Description rdf:about="http://example.org/concept/ecla">
+                                                <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C7/04B1B"/>
+                                             </rdf:Description>
+                                          </skos:topConceptOf>
+                                          <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                                          <skos:broader rdf:resource="http://example.org/concept/A01C7/04B"/>
+                                       </rdf:Description>
+                                    </skos:narrower>
+                                 </rdf:Description>
+                              </skos:narrower>
+                           </rdf:Description>
+                        </skos:narrower>
+                        <skos:narrower>
+                           <rdf:Description rdf:about="http://example.org/concept/ecla/A01C7/04C">
+                              <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                              <skos:topConceptOf>
+                                 <rdf:Description rdf:about="http://example.org/concept/ecla">
+                                    <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C7/04C"/>
+                                 </rdf:Description>
+                              </skos:topConceptOf>
+                              <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                              <skos:broader rdf:resource="http://example.org/concept/A01C7/00"/>
+                           </rdf:Description>
+                        </skos:narrower>
+                        <skos:prefLabel xml:lang="en">Single-grain seeders with or without suction devices</skos:prefLabel>
+                        <dcterms:references rdf:resource="http://example.org/concept/ecla/A01C7/10"/>
+                        <dcterms:references rdf:resource="http://example.org/concept/ecla/A01C7/18"/>
+                     </rdf:Description>
+                  </skos:narrower>
+                  <skos:narrower>
+                     <rdf:Description rdf:about="http://example.org/concept/ecla/A01C7/06">
+                        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                        <skos:topConceptOf>
+                           <rdf:Description rdf:about="http://example.org/concept/ecla">
+                              <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C7/06"/>
+                           </rdf:Description>
+                        </skos:topConceptOf>
+                        <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                        <skos:broader rdf:resource="http://example.org/concept/A01C1/00"/>
+                        <skos:prefLabel xml:lang="en">Seeders combined with fertilising apparatus</skos:prefLabel>
+                        <skos:definition xml:lang="en">; combinations with soil working tools A01B49/04</skos:definition>
+                        <skos:scopeNote xml:lang="en">conducting and depositing seed A01C7/20; apparatus for two kinds of fertiliser A01C15/00</skos:scopeNote>
+                        <dcterms:references rdf:resource="http://example.org/concept/ecla/A01C7/20"/>
+                        <dcterms:references rdf:resource="http://example.org/concept/ecla/A01C15/00"/>
+                        <dcterms:references rdf:resource="http://example.org/concept/ecla/A01B49/04"/>
+                     </rdf:Description>
+                  </skos:narrower>
+                  <skos:narrower>
+                     <rdf:Description rdf:about="http://example.org/concept/ecla/A01C7/08">
+                        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                        <skos:topConceptOf>
+                           <rdf:Description rdf:about="http://example.org/concept/ecla">
+                              <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C7/08"/>
+                           </rdf:Description>
+                        </skos:topConceptOf>
+                        <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                        <skos:broader rdf:resource="http://example.org/concept/A01C1/00"/>
+                        <skos:narrower>
+                           <rdf:Description rdf:about="http://example.org/concept/ecla/A01C7/08B">
+                              <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                              <skos:topConceptOf>
+                                 <rdf:Description rdf:about="http://example.org/concept/ecla">
+                                    <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C7/08B"/>
+                                 </rdf:Description>
+                              </skos:topConceptOf>
+                              <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                              <skos:broader rdf:resource="http://example.org/concept/A01C7/00"/>
+                              <skos:narrower>
+                                 <rdf:Description rdf:about="http://example.org/concept/ecla/A01C7/08B1">
+                                    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                                    <skos:topConceptOf>
+                                       <rdf:Description rdf:about="http://example.org/concept/ecla">
+                                          <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C7/08B1"/>
+                                       </rdf:Description>
+                                    </skos:topConceptOf>
+                                    <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                                    <skos:broader rdf:resource="http://example.org/concept/A01C7/08"/>
+                                 </rdf:Description>
+                              </skos:narrower>
+                              <skos:narrower>
+                                 <rdf:Description rdf:about="http://example.org/concept/ecla/A01C7/08B2">
+                                    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                                    <skos:topConceptOf>
+                                       <rdf:Description rdf:about="http://example.org/concept/ecla">
+                                          <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C7/08B2"/>
+                                       </rdf:Description>
+                                    </skos:topConceptOf>
+                                    <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                                    <skos:broader rdf:resource="http://example.org/concept/A01C7/08"/>
+                                 </rdf:Description>
+                              </skos:narrower>
+                           </rdf:Description>
+                        </skos:narrower>
+                        <skos:narrower>
+                           <rdf:Description rdf:about="http://example.org/concept/ecla/A01C7/08C">
+                              <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                              <skos:topConceptOf>
+                                 <rdf:Description rdf:about="http://example.org/concept/ecla">
+                                    <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C7/08C"/>
+                                 </rdf:Description>
+                              </skos:topConceptOf>
+                              <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                              <skos:broader rdf:resource="http://example.org/concept/A01C7/00"/>
+                           </rdf:Description>
+                        </skos:narrower>
+                        <skos:narrower>
+                           <rdf:Description rdf:about="http://example.org/concept/ecla/A01C7/08D">
+                              <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                              <skos:topConceptOf>
+                                 <rdf:Description rdf:about="http://example.org/concept/ecla">
+                                    <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C7/08D"/>
+                                 </rdf:Description>
+                              </skos:topConceptOf>
+                              <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                              <skos:broader rdf:resource="http://example.org/concept/A01C7/00"/>
+                           </rdf:Description>
+                        </skos:narrower>
+                        <skos:narrower>
+                           <rdf:Description rdf:about="http://example.org/concept/ecla/A01C7/08E">
+                              <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                              <skos:topConceptOf>
+                                 <rdf:Description rdf:about="http://example.org/concept/ecla">
+                                    <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C7/08E"/>
+                                 </rdf:Description>
+                              </skos:topConceptOf>
+                              <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                              <skos:broader rdf:resource="http://example.org/concept/A01C7/00"/>
+                           </rdf:Description>
+                        </skos:narrower>
+                        <skos:narrower>
+                           <rdf:Description rdf:about="http://example.org/concept/ecla/A01C7/10">
+                              <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                              <skos:topConceptOf>
+                                 <rdf:Description rdf:about="http://example.org/concept/ecla">
+                                    <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C7/10"/>
+                                 </rdf:Description>
+                              </skos:topConceptOf>
+                              <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                              <skos:broader rdf:resource="http://example.org/concept/A01C7/00"/>
+                              <skos:narrower>
+                                 <rdf:Description rdf:about="http://example.org/concept/ecla/A01C7/10B">
+                                    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                                    <skos:topConceptOf>
+                                       <rdf:Description rdf:about="http://example.org/concept/ecla">
+                                          <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C7/10B"/>
+                                       </rdf:Description>
+                                    </skos:topConceptOf>
+                                    <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                                    <skos:broader rdf:resource="http://example.org/concept/A01C7/08"/>
+                                    <skos:narrower>
+                                       <rdf:Description rdf:about="http://example.org/concept/ecla/A01C7/10B1">
+                                          <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                                          <skos:topConceptOf>
+                                             <rdf:Description rdf:about="http://example.org/concept/ecla">
+                                                <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C7/10B1"/>
+                                             </rdf:Description>
+                                          </skos:topConceptOf>
+                                          <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                                          <skos:broader rdf:resource="http://example.org/concept/A01C7/10"/>
+                                       </rdf:Description>
+                                    </skos:narrower>
+                                 </rdf:Description>
+                              </skos:narrower>
+                              <skos:narrower>
+                                 <rdf:Description rdf:about="http://example.org/concept/ecla/A01C7/10C">
+                                    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                                    <skos:topConceptOf>
+                                       <rdf:Description rdf:about="http://example.org/concept/ecla">
+                                          <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C7/10C"/>
+                                       </rdf:Description>
+                                    </skos:topConceptOf>
+                                    <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                                    <skos:broader rdf:resource="http://example.org/concept/A01C7/08"/>
+                                 </rdf:Description>
+                              </skos:narrower>
+                              <skos:prefLabel xml:lang="en">Devices for adjusting the seed-box</skos:prefLabel>
+                           </rdf:Description>
+                        </skos:narrower>
+                        <skos:narrower>
+                           <rdf:Description rdf:about="http://example.org/concept/ecla/A01C7/12">
+                              <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                              <skos:topConceptOf>
+                                 <rdf:Description rdf:about="http://example.org/concept/ecla">
+                                    <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C7/12"/>
+                                 </rdf:Description>
+                              </skos:topConceptOf>
+                              <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                              <skos:broader rdf:resource="http://example.org/concept/A01C7/00"/>
+                              <skos:narrower>
+                                 <rdf:Description rdf:about="http://example.org/concept/ecla/A01C7/12A">
+                                    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                                    <skos:topConceptOf>
+                                       <rdf:Description rdf:about="http://example.org/concept/ecla">
+                                          <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C7/12A"/>
+                                       </rdf:Description>
+                                    </skos:topConceptOf>
+                                    <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                                    <skos:broader rdf:resource="http://example.org/concept/A01C7/08"/>
+                                    <skos:narrower>
+                                       <rdf:Description rdf:about="http://example.org/concept/ecla/A01C7/12A1">
+                                          <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                                          <skos:topConceptOf>
+                                             <rdf:Description rdf:about="http://example.org/concept/ecla">
+                                                <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C7/12A1"/>
+                                             </rdf:Description>
+                                          </skos:topConceptOf>
+                                          <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                                          <skos:broader rdf:resource="http://example.org/concept/A01C7/12"/>
+                                       </rdf:Description>
+                                    </skos:narrower>
+                                 </rdf:Description>
+                              </skos:narrower>
+                              <skos:narrower>
+                                 <rdf:Description rdf:about="http://example.org/concept/ecla/A01C7/12B">
+                                    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                                    <skos:topConceptOf>
+                                       <rdf:Description rdf:about="http://example.org/concept/ecla">
+                                          <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C7/12B"/>
+                                       </rdf:Description>
+                                    </skos:topConceptOf>
+                                    <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                                    <skos:broader rdf:resource="http://example.org/concept/A01C7/08"/>
+                                    <skos:narrower>
+                                       <rdf:Description rdf:about="http://example.org/concept/ecla/A01C7/12B1">
+                                          <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                                          <skos:topConceptOf>
+                                             <rdf:Description rdf:about="http://example.org/concept/ecla">
+                                                <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C7/12B1"/>
+                                             </rdf:Description>
+                                          </skos:topConceptOf>
+                                          <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                                          <skos:broader rdf:resource="http://example.org/concept/A01C7/12"/>
+                                       </rdf:Description>
+                                    </skos:narrower>
+                                    <skos:narrower>
+                                       <rdf:Description rdf:about="http://example.org/concept/ecla/A01C7/12B2">
+                                          <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                                          <skos:topConceptOf>
+                                             <rdf:Description rdf:about="http://example.org/concept/ecla">
+                                                <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C7/12B2"/>
+                                             </rdf:Description>
+                                          </skos:topConceptOf>
+                                          <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                                          <skos:broader rdf:resource="http://example.org/concept/A01C7/12"/>
+                                       </rdf:Description>
+                                    </skos:narrower>
+                                 </rdf:Description>
+                              </skos:narrower>
+                              <skos:narrower>
+                                 <rdf:Description rdf:about="http://example.org/concept/ecla/A01C7/12C">
+                                    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                                    <skos:topConceptOf>
+                                       <rdf:Description rdf:about="http://example.org/concept/ecla">
+                                          <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C7/12C"/>
+                                       </rdf:Description>
+                                    </skos:topConceptOf>
+                                    <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                                    <skos:broader rdf:resource="http://example.org/concept/A01C7/08"/>
+                                 </rdf:Description>
+                              </skos:narrower>
+                              <skos:narrower>
+                                 <rdf:Description rdf:about="http://example.org/concept/ecla/A01C7/12D">
+                                    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                                    <skos:topConceptOf>
+                                       <rdf:Description rdf:about="http://example.org/concept/ecla">
+                                          <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C7/12D"/>
+                                       </rdf:Description>
+                                    </skos:topConceptOf>
+                                    <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                                    <skos:broader rdf:resource="http://example.org/concept/A01C7/08"/>
+                                    <skos:narrower>
+                                       <rdf:Description rdf:about="http://example.org/concept/ecla/A01C7/12D1">
+                                          <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                                          <skos:topConceptOf>
+                                             <rdf:Description rdf:about="http://example.org/concept/ecla">
+                                                <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C7/12D1"/>
+                                             </rdf:Description>
+                                          </skos:topConceptOf>
+                                          <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                                          <skos:broader rdf:resource="http://example.org/concept/A01C7/12"/>
+                                       </rdf:Description>
+                                    </skos:narrower>
+                                 </rdf:Description>
+                              </skos:narrower>
+                              <skos:narrower>
+                                 <rdf:Description rdf:about="http://example.org/concept/ecla/A01C7/14">
+                                    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                                    <skos:topConceptOf>
+                                       <rdf:Description rdf:about="http://example.org/concept/ecla">
+                                          <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C7/14"/>
+                                       </rdf:Description>
+                                    </skos:topConceptOf>
+                                    <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                                    <skos:broader rdf:resource="http://example.org/concept/A01C7/08"/>
+                                    <skos:prefLabel xml:lang="en">Seeders with spoon or bucket wheels</skos:prefLabel>
+                                 </rdf:Description>
+                              </skos:narrower>
+                              <skos:prefLabel xml:lang="en">Seeders with feeding wheels</skos:prefLabel>
+                           </rdf:Description>
+                        </skos:narrower>
+                        <skos:narrower>
+                           <rdf:Description rdf:about="http://example.org/concept/ecla/A01C7/16">
+                              <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                              <skos:topConceptOf>
+                                 <rdf:Description rdf:about="http://example.org/concept/ecla">
+                                    <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C7/16"/>
+                                 </rdf:Description>
+                              </skos:topConceptOf>
+                              <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                              <skos:broader rdf:resource="http://example.org/concept/A01C7/00"/>
+                              <skos:narrower>
+                                 <rdf:Description rdf:about="http://example.org/concept/ecla/A01C7/16B">
+                                    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                                    <skos:topConceptOf>
+                                       <rdf:Description rdf:about="http://example.org/concept/ecla">
+                                          <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C7/16B"/>
+                                       </rdf:Description>
+                                    </skos:topConceptOf>
+                                    <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                                    <skos:broader rdf:resource="http://example.org/concept/A01C7/08"/>
+                                 </rdf:Description>
+                              </skos:narrower>
+                              <skos:narrower>
+                                 <rdf:Description rdf:about="http://example.org/concept/ecla/A01C7/16C">
+                                    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                                    <skos:topConceptOf>
+                                       <rdf:Description rdf:about="http://example.org/concept/ecla">
+                                          <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C7/16C"/>
+                                       </rdf:Description>
+                                    </skos:topConceptOf>
+                                    <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                                    <skos:broader rdf:resource="http://example.org/concept/A01C7/08"/>
+                                    <dcterms:references rdf:resource="http://example.org/concept/ecla/A01C15/04"/>
+                                 </rdf:Description>
+                              </skos:narrower>
+                              <skos:prefLabel xml:lang="en">Seeders with other distributing devices, e.g. brushes, discs, screws, slides</skos:prefLabel>
+                              <skos:definition xml:lang="en">; with chains A01C15/18</skos:definition>
+                              <skos:scopeNote xml:lang="en">with distributing slots A01C15/06; with slides A01C15/12C</skos:scopeNote>
+                              <dcterms:references rdf:resource="http://example.org/concept/ecla/A01C15/06"/>
+                              <dcterms:references rdf:resource="http://example.org/concept/ecla/A01C15/12C"/>
+                              <dcterms:references rdf:resource="http://example.org/concept/ecla/A01C15/18"/>
+                           </rdf:Description>
+                        </skos:narrower>
+                        <skos:prefLabel xml:lang="en">Broadcast seeders</skos:prefLabel>
+                        <skos:prefLabel xml:lang="en">Seeders depositing seeds in rows</skos:prefLabel>
+                        <dcterms:references rdf:resource="http://example.org/concept/ecla/A01C5/06"/>
+                        <dcterms:references rdf:resource="http://example.org/concept/ecla/A01B49/06"/>
+                        <dcterms:references rdf:resource="http://example.org/concept/ecla/A01B73/00"/>
+                     </rdf:Description>
+                  </skos:narrower>
+                  <skos:narrower>
+                     <rdf:Description rdf:about="http://example.org/concept/ecla/A01C7/18">
+                        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                        <skos:topConceptOf>
+                           <rdf:Description rdf:about="http://example.org/concept/ecla">
+                              <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C7/18"/>
+                           </rdf:Description>
+                        </skos:topConceptOf>
+                        <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                        <skos:broader rdf:resource="http://example.org/concept/A01C1/00"/>
+                        <skos:narrower>
+                           <rdf:Description rdf:about="http://example.org/concept/ecla/A01C7/18B">
+                              <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                              <skos:topConceptOf>
+                                 <rdf:Description rdf:about="http://example.org/concept/ecla">
+                                    <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C7/18B"/>
+                                 </rdf:Description>
+                              </skos:topConceptOf>
+                              <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                              <skos:broader rdf:resource="http://example.org/concept/A01C7/00"/>
+                           </rdf:Description>
+                        </skos:narrower>
+                        <skos:prefLabel xml:lang="en">Machines for depositing quantities of seed at intervals</skos:prefLabel>
+                        <dcterms:references rdf:resource="http://example.org/concept/ecla/A01C7/00B"/>
+                        <dcterms:references rdf:resource="http://example.org/concept/ecla/A01C7/04"/>
+                        <dcterms:references rdf:resource="http://example.org/concept/ecla/A01C7/10B"/>
+                        <dcterms:references rdf:resource="http://example.org/concept/ecla/A01B69/02"/>
+                     </rdf:Description>
+                  </skos:narrower>
+                  <skos:narrower>
+                     <rdf:Description rdf:about="http://example.org/concept/ecla/A01C7/20">
+                        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                        <skos:topConceptOf>
+                           <rdf:Description rdf:about="http://example.org/concept/ecla">
+                              <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C7/20"/>
+                           </rdf:Description>
+                        </skos:topConceptOf>
+                        <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                        <skos:broader rdf:resource="http://example.org/concept/A01C1/00"/>
+                        <skos:narrower>
+                           <rdf:Description rdf:about="http://example.org/concept/ecla/A01C7/20B">
+                              <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                              <skos:topConceptOf>
+                                 <rdf:Description rdf:about="http://example.org/concept/ecla">
+                                    <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C7/20B"/>
+                                 </rdf:Description>
+                              </skos:topConceptOf>
+                              <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                              <skos:broader rdf:resource="http://example.org/concept/A01C7/00"/>
+                              <skos:narrower>
+                                 <rdf:Description rdf:about="http://example.org/concept/ecla/A01C7/20B1">
+                                    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                                    <skos:topConceptOf>
+                                       <rdf:Description rdf:about="http://example.org/concept/ecla">
+                                          <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C7/20B1"/>
+                                       </rdf:Description>
+                                    </skos:topConceptOf>
+                                    <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                                    <skos:broader rdf:resource="http://example.org/concept/A01C7/20"/>
+                                 </rdf:Description>
+                              </skos:narrower>
+                              <skos:narrower>
+                                 <rdf:Description rdf:about="http://example.org/concept/ecla/A01C7/20B2">
+                                    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                                    <skos:topConceptOf>
+                                       <rdf:Description rdf:about="http://example.org/concept/ecla">
+                                          <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C7/20B2"/>
+                                       </rdf:Description>
+                                    </skos:topConceptOf>
+                                    <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                                    <skos:broader rdf:resource="http://example.org/concept/A01C7/20"/>
+                                 </rdf:Description>
+                              </skos:narrower>
+                           </rdf:Description>
+                        </skos:narrower>
+                        <skos:narrower>
+                           <rdf:Description rdf:about="http://example.org/concept/ecla/A01C7/20C">
+                              <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                              <skos:topConceptOf>
+                                 <rdf:Description rdf:about="http://example.org/concept/ecla">
+                                    <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C7/20C"/>
+                                 </rdf:Description>
+                              </skos:topConceptOf>
+                              <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                              <skos:broader rdf:resource="http://example.org/concept/A01C7/00"/>
+                           </rdf:Description>
+                        </skos:narrower>
+                        <skos:narrower>
+                           <rdf:Description rdf:about="http://example.org/concept/ecla/A01C7/20D">
+                              <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                              <skos:topConceptOf>
+                                 <rdf:Description rdf:about="http://example.org/concept/ecla">
+                                    <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C7/20D"/>
+                                 </rdf:Description>
+                              </skos:topConceptOf>
+                              <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                              <skos:broader rdf:resource="http://example.org/concept/A01C7/00"/>
+                              <dcterms:references rdf:resource="http://example.org/concept/ecla/A01C15/00F2"/>
+                           </rdf:Description>
+                        </skos:narrower>
+                        <skos:prefLabel xml:lang="en">Parts of seeders for conducting and depositing seed</skos:prefLabel>
+                        <dcterms:references rdf:resource="http://example.org/concept/ecla/A01C7/06"/>
+                     </rdf:Description>
+                  </skos:narrower>
+                  <skos:prefLabel xml:lang="en">Sowing</skos:prefLabel>
+                  <skos:definition xml:lang="en">arrangements for driving working parts A01C19/00</skos:definition>
+                  <skos:scopeNote xml:lang="en">with centrifugal wheels A01C17/00</skos:scopeNote>
+                  <dcterms:references rdf:resource="http://example.org/concept/ecla/A01C17/00"/>
+                  <dcterms:references rdf:resource="http://example.org/concept/ecla/A01C19/00"/>
+               </rdf:Description>
+            </skos:member>
+            <skos:member>
+               <rdf:Description rdf:about="http://example.org/concept/ecla/A01C9/00">
+                  <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                  <skos:topConceptOf>
+                     <rdf:Description rdf:about="http://example.org/concept/ecla">
+                        <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C9/00"/>
+                     </rdf:Description>
+                  </skos:topConceptOf>
+                  <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                  <skos:broader rdf:resource="http://example.org/concept/A01C"/>
+                  <skos:narrower>
+                     <rdf:Description rdf:about="http://example.org/concept/ecla/A01C9/02">
+                        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                        <skos:topConceptOf>
+                           <rdf:Description rdf:about="http://example.org/concept/ecla">
+                              <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C9/02"/>
+                           </rdf:Description>
+                        </skos:topConceptOf>
+                        <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                        <skos:broader rdf:resource="http://example.org/concept/A01C1/00"/>
+                        <skos:prefLabel xml:lang="en">with conveyer belts</skos:prefLabel>
+                     </rdf:Description>
+                  </skos:narrower>
+                  <skos:narrower>
+                     <rdf:Description rdf:about="http://example.org/concept/ecla/A01C9/04">
+                        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                        <skos:topConceptOf>
+                           <rdf:Description rdf:about="http://example.org/concept/ecla">
+                              <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C9/04"/>
+                           </rdf:Description>
+                        </skos:topConceptOf>
+                        <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                        <skos:broader rdf:resource="http://example.org/concept/A01C1/00"/>
+                        <skos:prefLabel xml:lang="en">with bucket wheels</skos:prefLabel>
+                        <dcterms:references rdf:resource="http://example.org/concept/ecla/A01C9/08"/>
+                     </rdf:Description>
+                  </skos:narrower>
+                  <skos:narrower>
+                     <rdf:Description rdf:about="http://example.org/concept/ecla/A01C9/06">
+                        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                        <skos:topConceptOf>
+                           <rdf:Description rdf:about="http://example.org/concept/ecla">
+                              <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C9/06"/>
+                           </rdf:Description>
+                        </skos:topConceptOf>
+                        <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                        <skos:broader rdf:resource="http://example.org/concept/A01C1/00"/>
+                        <skos:prefLabel xml:lang="en">with piercing or grasping devices</skos:prefLabel>
+                     </rdf:Description>
+                  </skos:narrower>
+                  <skos:narrower>
+                     <rdf:Description rdf:about="http://example.org/concept/ecla/A01C9/08">
+                        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                        <skos:topConceptOf>
+                           <rdf:Description rdf:about="http://example.org/concept/ecla">
+                              <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C9/08"/>
+                           </rdf:Description>
+                        </skos:topConceptOf>
+                        <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                        <skos:broader rdf:resource="http://example.org/concept/A01C1/00"/>
+                        <skos:prefLabel xml:lang="en">with other distributing devices e.g. flaps, screws, horizontal turning plates</skos:prefLabel>
+                        <dcterms:references rdf:resource="http://example.org/concept/ecla/A01C9/04"/>
+                     </rdf:Description>
+                  </skos:narrower>
+                  <skos:prefLabel xml:lang="en">Potato planters</skos:prefLabel>
+                  <skos:definition xml:lang="en">; combinations with soil working tools A01B49/04</skos:definition>
+                  <skos:scopeNote xml:lang="en">planting by hand A01C7/02</skos:scopeNote>
+                  <dcterms:references rdf:resource="http://example.org/concept/ecla/A01C7/02"/>
+                  <dcterms:references rdf:resource="http://example.org/concept/ecla/A01B49/04"/>
+               </rdf:Description>
+            </skos:member>
+            <skos:member>
+               <rdf:Description rdf:about="http://example.org/concept/ecla/A01C11/00">
+                  <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                  <skos:topConceptOf>
+                     <rdf:Description rdf:about="http://example.org/concept/ecla">
+                        <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C11/00"/>
+                     </rdf:Description>
+                  </skos:topConceptOf>
+                  <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                  <skos:broader rdf:resource="http://example.org/concept/A01C"/>
+                  <skos:narrower>
+                     <rdf:Description rdf:about="http://example.org/concept/ecla/A01C11/00B">
+                        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                        <skos:topConceptOf>
+                           <rdf:Description rdf:about="http://example.org/concept/ecla">
+                              <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C11/00B"/>
+                           </rdf:Description>
+                        </skos:topConceptOf>
+                        <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                        <skos:broader rdf:resource="http://example.org/concept/A01C1/00"/>
+                     </rdf:Description>
+                  </skos:narrower>
+                  <skos:narrower>
+                     <rdf:Description rdf:about="http://example.org/concept/ecla/A01C11/00C">
+                        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                        <skos:topConceptOf>
+                           <rdf:Description rdf:about="http://example.org/concept/ecla">
+                              <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C11/00C"/>
+                           </rdf:Description>
+                        </skos:topConceptOf>
+                        <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                        <skos:broader rdf:resource="http://example.org/concept/A01C1/00"/>
+                     </rdf:Description>
+                  </skos:narrower>
+                  <skos:narrower>
+                     <rdf:Description rdf:about="http://example.org/concept/ecla/A01C11/02">
+                        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                        <skos:topConceptOf>
+                           <rdf:Description rdf:about="http://example.org/concept/ecla">
+                              <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C11/02"/>
+                           </rdf:Description>
+                        </skos:topConceptOf>
+                        <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                        <skos:broader rdf:resource="http://example.org/concept/A01C1/00"/>
+                        <skos:narrower>
+                           <rdf:Description rdf:about="http://example.org/concept/ecla/A01C11/02B">
+                              <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                              <skos:topConceptOf>
+                                 <rdf:Description rdf:about="http://example.org/concept/ecla">
+                                    <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C11/02B"/>
+                                 </rdf:Description>
+                              </skos:topConceptOf>
+                              <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                              <skos:broader rdf:resource="http://example.org/concept/A01C11/00"/>
+                           </rdf:Description>
+                        </skos:narrower>
+                        <skos:prefLabel xml:lang="en">for seedlings</skos:prefLabel>
+                     </rdf:Description>
+                  </skos:narrower>
+                  <skos:narrower>
+                     <rdf:Description rdf:about="http://example.org/concept/ecla/A01C11/04">
+                        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                        <skos:topConceptOf>
+                           <rdf:Description rdf:about="http://example.org/concept/ecla">
+                              <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C11/04"/>
+                           </rdf:Description>
+                        </skos:topConceptOf>
+                        <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                        <skos:broader rdf:resource="http://example.org/concept/A01C1/00"/>
+                        <skos:prefLabel xml:lang="en">for deeper setting or shifting of plants</skos:prefLabel>
+                     </rdf:Description>
+                  </skos:narrower>
+                  <skos:prefLabel xml:lang="en">Transplanting machines</skos:prefLabel>
+                  <skos:definition xml:lang="en">; carriers for supporting persons A01B75/00; transplanting devices for trees A01G23/02</skos:definition>
+                  <skos:scopeNote xml:lang="en">hand sowing A01C7/02</skos:scopeNote>
+                  <dcterms:references rdf:resource="http://example.org/concept/ecla/A01C7/02"/>
+                  <dcterms:references rdf:resource="http://example.org/concept/ecla/A01B75/00"/>
+                  <dcterms:references rdf:resource="http://example.org/concept/ecla/A01G23/02"/>
+               </rdf:Description>
+            </skos:member>
+            <skos:member>
+               <rdf:Description rdf:about="http://example.org/concept/ecla/A01C13/00">
+                  <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                  <skos:topConceptOf>
+                     <rdf:Description rdf:about="http://example.org/concept/ecla">
+                        <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C13/00"/>
+                     </rdf:Description>
+                  </skos:topConceptOf>
+                  <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                  <skos:broader rdf:resource="http://example.org/concept/A01C"/>
+                  <skos:prefLabel xml:lang="en">Machines or apparatus for consolidating soil around plants</skos:prefLabel>
+               </rdf:Description>
+            </skos:member>
+            <skos:member>
+               <rdf:Description rdf:about="http://example.org/concept/ecla/A01C14/00">
+                  <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                  <skos:topConceptOf>
+                     <rdf:Description rdf:about="http://example.org/concept/ecla">
+                        <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C14/00"/>
+                     </rdf:Description>
+                  </skos:topConceptOf>
+                  <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                  <skos:broader rdf:resource="http://example.org/concept/A01C"/>
+                  <skos:prefLabel xml:lang="en">Methods or apparatus for planting not provided for in other groups of this subclass</skos:prefLabel>
+               </rdf:Description>
+            </skos:member>
+            <skos:member>
+               <rdf:Description rdf:about="http://example.org/concept/ecla/A01C15/00">
+                  <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                  <skos:topConceptOf>
+                     <rdf:Description rdf:about="http://example.org/concept/ecla">
+                        <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C15/00"/>
+                     </rdf:Description>
+                  </skos:topConceptOf>
+                  <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                  <skos:broader rdf:resource="http://example.org/concept/A01C"/>
+                  <skos:narrower>
+                     <rdf:Description rdf:about="http://example.org/concept/ecla/A01C15/00B">
+                        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                        <skos:topConceptOf>
+                           <rdf:Description rdf:about="http://example.org/concept/ecla">
+                              <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C15/00B"/>
+                           </rdf:Description>
+                        </skos:topConceptOf>
+                        <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                        <skos:broader rdf:resource="http://example.org/concept/A01C1/00"/>
+                     </rdf:Description>
+                  </skos:narrower>
+                  <skos:narrower>
+                     <rdf:Description rdf:about="http://example.org/concept/ecla/A01C15/00C">
+                        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                        <skos:topConceptOf>
+                           <rdf:Description rdf:about="http://example.org/concept/ecla">
+                              <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C15/00C"/>
+                           </rdf:Description>
+                        </skos:topConceptOf>
+                        <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                        <skos:broader rdf:resource="http://example.org/concept/A01C1/00"/>
+                     </rdf:Description>
+                  </skos:narrower>
+                  <skos:narrower>
+                     <rdf:Description rdf:about="http://example.org/concept/ecla/A01C15/00D">
+                        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                        <skos:topConceptOf>
+                           <rdf:Description rdf:about="http://example.org/concept/ecla">
+                              <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C15/00D"/>
+                           </rdf:Description>
+                        </skos:topConceptOf>
+                        <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                        <skos:broader rdf:resource="http://example.org/concept/A01C1/00"/>
+                     </rdf:Description>
+                  </skos:narrower>
+                  <skos:narrower>
+                     <rdf:Description rdf:about="http://example.org/concept/ecla/A01C15/00F">
+                        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                        <skos:topConceptOf>
+                           <rdf:Description rdf:about="http://example.org/concept/ecla">
+                              <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C15/00F"/>
+                           </rdf:Description>
+                        </skos:topConceptOf>
+                        <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                        <skos:broader rdf:resource="http://example.org/concept/A01C1/00"/>
+                        <skos:narrower>
+                           <rdf:Description rdf:about="http://example.org/concept/ecla/A01C15/00F2">
+                              <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                              <skos:topConceptOf>
+                                 <rdf:Description rdf:about="http://example.org/concept/ecla">
+                                    <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C15/00F2"/>
+                                 </rdf:Description>
+                              </skos:topConceptOf>
+                              <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                              <skos:broader rdf:resource="http://example.org/concept/A01C15/00"/>
+                              <skos:narrower>
+                                 <rdf:Description rdf:about="http://example.org/concept/ecla/A01C15/00F2B">
+                                    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                                    <skos:topConceptOf>
+                                       <rdf:Description rdf:about="http://example.org/concept/ecla">
+                                          <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C15/00F2B"/>
+                                       </rdf:Description>
+                                    </skos:topConceptOf>
+                                    <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                                    <skos:broader rdf:resource="http://example.org/concept/A01C15/00F"/>
+                                 </rdf:Description>
+                              </skos:narrower>
+                           </rdf:Description>
+                        </skos:narrower>
+                        <skos:narrower>
+                           <rdf:Description rdf:about="http://example.org/concept/ecla/A01C15/00F3">
+                              <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                              <skos:topConceptOf>
+                                 <rdf:Description rdf:about="http://example.org/concept/ecla">
+                                    <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C15/00F3"/>
+                                 </rdf:Description>
+                              </skos:topConceptOf>
+                              <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                              <skos:broader rdf:resource="http://example.org/concept/A01C15/00"/>
+                           </rdf:Description>
+                        </skos:narrower>
+                     </rdf:Description>
+                  </skos:narrower>
+                  <skos:narrower>
+                     <rdf:Description rdf:about="http://example.org/concept/ecla/A01C15/02">
+                        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                        <skos:topConceptOf>
+                           <rdf:Description rdf:about="http://example.org/concept/ecla">
+                              <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C15/02"/>
+                           </rdf:Description>
+                        </skos:topConceptOf>
+                        <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                        <skos:broader rdf:resource="http://example.org/concept/A01C1/00"/>
+                        <skos:prefLabel xml:lang="en">for hand use</skos:prefLabel>
+                        <dcterms:references rdf:resource="http://example.org/concept/ecla/A01C7/02"/>
+                     </rdf:Description>
+                  </skos:narrower>
+                  <skos:narrower>
+                     <rdf:Description rdf:about="http://example.org/concept/ecla/A01C15/04">
+                        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                        <skos:topConceptOf>
+                           <rdf:Description rdf:about="http://example.org/concept/ecla">
+                              <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C15/04"/>
+                           </rdf:Description>
+                        </skos:topConceptOf>
+                        <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                        <skos:broader rdf:resource="http://example.org/concept/A01C1/00"/>
+                        <skos:prefLabel xml:lang="en">using blowers</skos:prefLabel>
+                     </rdf:Description>
+                  </skos:narrower>
+                  <skos:narrower>
+                     <rdf:Description rdf:about="http://example.org/concept/ecla/A01C15/06">
+                        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                        <skos:topConceptOf>
+                           <rdf:Description rdf:about="http://example.org/concept/ecla">
+                              <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C15/06"/>
+                           </rdf:Description>
+                        </skos:topConceptOf>
+                        <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                        <skos:broader rdf:resource="http://example.org/concept/A01C1/00"/>
+                        <skos:narrower>
+                           <rdf:Description rdf:about="http://example.org/concept/ecla/A01C15/08">
+                              <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                              <skos:topConceptOf>
+                                 <rdf:Description rdf:about="http://example.org/concept/ecla">
+                                    <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C15/08"/>
+                                 </rdf:Description>
+                              </skos:topConceptOf>
+                              <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                              <skos:broader rdf:resource="http://example.org/concept/A01C15/00"/>
+                              <skos:narrower>
+                                 <rdf:Description rdf:about="http://example.org/concept/ecla/A01C15/10">
+                                    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                                    <skos:topConceptOf>
+                                       <rdf:Description rdf:about="http://example.org/concept/ecla">
+                                          <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C15/10"/>
+                                       </rdf:Description>
+                                    </skos:topConceptOf>
+                                    <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                                    <skos:broader rdf:resource="http://example.org/concept/A01C15/06"/>
+                                    <skos:prefLabel xml:lang="en">with reciprocating pushers</skos:prefLabel>
+                                    <dcterms:references rdf:resource="http://example.org/concept/ecla/A01C15/18"/>
+                                 </rdf:Description>
+                              </skos:narrower>
+                              <skos:prefLabel xml:lang="en">with pushers or stirrers in the slots</skos:prefLabel>
+                           </rdf:Description>
+                        </skos:narrower>
+                        <skos:prefLabel xml:lang="en">with distributing slots,</skos:prefLabel>
+                     </rdf:Description>
+                  </skos:narrower>
+                  <skos:narrower>
+                     <rdf:Description rdf:about="http://example.org/concept/ecla/A01C15/12">
+                        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                        <skos:topConceptOf>
+                           <rdf:Description rdf:about="http://example.org/concept/ecla">
+                              <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C15/12"/>
+                           </rdf:Description>
+                        </skos:topConceptOf>
+                        <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                        <skos:broader rdf:resource="http://example.org/concept/A01C1/00"/>
+                        <skos:narrower>
+                           <rdf:Description rdf:about="http://example.org/concept/ecla/A01C15/12B">
+                              <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                              <skos:topConceptOf>
+                                 <rdf:Description rdf:about="http://example.org/concept/ecla">
+                                    <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C15/12B"/>
+                                 </rdf:Description>
+                              </skos:topConceptOf>
+                              <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                              <skos:broader rdf:resource="http://example.org/concept/A01C15/00"/>
+                              <dcterms:references rdf:resource="http://example.org/concept/ecla/A01C15/18"/>
+                           </rdf:Description>
+                        </skos:narrower>
+                        <skos:narrower>
+                           <rdf:Description rdf:about="http://example.org/concept/ecla/A01C15/12C">
+                              <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                              <skos:topConceptOf>
+                                 <rdf:Description rdf:about="http://example.org/concept/ecla">
+                                    <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C15/12C"/>
+                                 </rdf:Description>
+                              </skos:topConceptOf>
+                              <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                              <skos:broader rdf:resource="http://example.org/concept/A01C15/00"/>
+                              <skos:narrower>
+                                 <rdf:Description rdf:about="http://example.org/concept/ecla/A01C15/12C1">
+                                    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                                    <skos:topConceptOf>
+                                       <rdf:Description rdf:about="http://example.org/concept/ecla">
+                                          <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C15/12C1"/>
+                                       </rdf:Description>
+                                    </skos:topConceptOf>
+                                    <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                                    <skos:broader rdf:resource="http://example.org/concept/A01C15/12"/>
+                                 </rdf:Description>
+                              </skos:narrower>
+                              <skos:narrower>
+                                 <rdf:Description rdf:about="http://example.org/concept/ecla/A01C15/12C2">
+                                    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                                    <skos:topConceptOf>
+                                       <rdf:Description rdf:about="http://example.org/concept/ecla">
+                                          <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C15/12C2"/>
+                                       </rdf:Description>
+                                    </skos:topConceptOf>
+                                    <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                                    <skos:broader rdf:resource="http://example.org/concept/A01C15/12"/>
+                                    <dcterms:references rdf:resource="http://example.org/concept/ecla/A01C15/18"/>
+                                 </rdf:Description>
+                              </skos:narrower>
+                           </rdf:Description>
+                        </skos:narrower>
+                        <skos:prefLabel xml:lang="en">with movable parts of the receptacle</skos:prefLabel>
+                     </rdf:Description>
+                  </skos:narrower>
+                  <skos:narrower>
+                     <rdf:Description rdf:about="http://example.org/concept/ecla/A01C15/14">
+                        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                        <skos:topConceptOf>
+                           <rdf:Description rdf:about="http://example.org/concept/ecla">
+                              <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C15/14"/>
+                           </rdf:Description>
+                        </skos:topConceptOf>
+                        <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                        <skos:broader rdf:resource="http://example.org/concept/A01C1/00"/>
+                        <skos:prefLabel xml:lang="en">with means for lifting out the fertiliser</skos:prefLabel>
+                        <dcterms:references rdf:resource="http://example.org/concept/ecla/A01C7/12"/>
+                        <dcterms:references rdf:resource="http://example.org/concept/ecla/A01C7/14"/>
+                     </rdf:Description>
+                  </skos:narrower>
+                  <skos:narrower>
+                     <rdf:Description rdf:about="http://example.org/concept/ecla/A01C15/16">
+                        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                        <skos:topConceptOf>
+                           <rdf:Description rdf:about="http://example.org/concept/ecla">
+                              <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C15/16"/>
+                           </rdf:Description>
+                        </skos:topConceptOf>
+                        <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                        <skos:broader rdf:resource="http://example.org/concept/A01C1/00"/>
+                        <skos:prefLabel xml:lang="en">with means for pushing out the fertiliser, e.g. by a roller</skos:prefLabel>
+                     </rdf:Description>
+                  </skos:narrower>
+                  <skos:narrower>
+                     <rdf:Description rdf:about="http://example.org/concept/ecla/A01C15/18">
+                        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                        <skos:topConceptOf>
+                           <rdf:Description rdf:about="http://example.org/concept/ecla">
+                              <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C15/18"/>
+                           </rdf:Description>
+                        </skos:topConceptOf>
+                        <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                        <skos:broader rdf:resource="http://example.org/concept/A01C1/00"/>
+                        <skos:prefLabel xml:lang="en">with endless chains,</skos:prefLabel>
+                     </rdf:Description>
+                  </skos:narrower>
+                  <skos:prefLabel xml:lang="en">Fertiliser distributors</skos:prefLabel>
+                  <skos:definition xml:lang="en">7/06 takes precedence;</skos:definition>
+                  <skos:definition xml:lang="en">; arrangements for driving working parts A01C19/00;</skos:definition>
+                  <skos:definition xml:lang="en">; sand, gravel or salt spreaders for roads E01C19/20</skos:definition>
+                  <skos:scopeNote xml:lang="en">combined with seeders A01C7/06</skos:scopeNote>
+                  <skos:scopeNote xml:lang="en">harrows with special additional arrangements A01B19/00</skos:scopeNote>
+                  <dcterms:references rdf:resource="http://example.org/concept/ecla/A01C7/06"/>
+                  <dcterms:references rdf:resource="http://example.org/concept/ecla/A01C19/00"/>
+                  <dcterms:references rdf:resource="http://example.org/concept/ecla/A01B19/00"/>
+                  <dcterms:references rdf:resource="http://example.org/concept/ecla/E01C19/20"/>
+               </rdf:Description>
+            </skos:member>
+            <skos:member>
+               <rdf:Description rdf:about="http://example.org/concept/ecla/A01C17/00">
+                  <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                  <skos:topConceptOf>
+                     <rdf:Description rdf:about="http://example.org/concept/ecla">
+                        <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C17/00"/>
+                     </rdf:Description>
+                  </skos:topConceptOf>
+                  <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                  <skos:broader rdf:resource="http://example.org/concept/A01C"/>
+                  <skos:narrower>
+                     <rdf:Description rdf:about="http://example.org/concept/ecla/A01C17/00B">
+                        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                        <skos:topConceptOf>
+                           <rdf:Description rdf:about="http://example.org/concept/ecla">
+                              <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C17/00B"/>
+                           </rdf:Description>
+                        </skos:topConceptOf>
+                        <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                        <skos:broader rdf:resource="http://example.org/concept/A01C1/00"/>
+                     </rdf:Description>
+                  </skos:narrower>
+                  <skos:narrower>
+                     <rdf:Description rdf:about="http://example.org/concept/ecla/A01C17/00C">
+                        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                        <skos:topConceptOf>
+                           <rdf:Description rdf:about="http://example.org/concept/ecla">
+                              <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C17/00C"/>
+                           </rdf:Description>
+                        </skos:topConceptOf>
+                        <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                        <skos:broader rdf:resource="http://example.org/concept/A01C1/00"/>
+                     </rdf:Description>
+                  </skos:narrower>
+                  <skos:narrower>
+                     <rdf:Description rdf:about="http://example.org/concept/ecla/A01C17/00D">
+                        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                        <skos:topConceptOf>
+                           <rdf:Description rdf:about="http://example.org/concept/ecla">
+                              <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C17/00D"/>
+                           </rdf:Description>
+                        </skos:topConceptOf>
+                        <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                        <skos:broader rdf:resource="http://example.org/concept/A01C1/00"/>
+                     </rdf:Description>
+                  </skos:narrower>
+                  <skos:narrower>
+                     <rdf:Description rdf:about="http://example.org/concept/ecla/A01C17/00F">
+                        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                        <skos:topConceptOf>
+                           <rdf:Description rdf:about="http://example.org/concept/ecla">
+                              <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C17/00F"/>
+                           </rdf:Description>
+                        </skos:topConceptOf>
+                        <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                        <skos:broader rdf:resource="http://example.org/concept/A01C1/00"/>
+                        <skos:narrower>
+                           <rdf:Description rdf:about="http://example.org/concept/ecla/A01C17/00F2">
+                              <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                              <skos:topConceptOf>
+                                 <rdf:Description rdf:about="http://example.org/concept/ecla">
+                                    <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C17/00F2"/>
+                                 </rdf:Description>
+                              </skos:topConceptOf>
+                              <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                              <skos:broader rdf:resource="http://example.org/concept/A01C17/00"/>
+                           </rdf:Description>
+                        </skos:narrower>
+                     </rdf:Description>
+                  </skos:narrower>
+                  <skos:prefLabel xml:lang="en">Fertilisers or seeders with centrifugal wheels</skos:prefLabel>
+                  <skos:definition xml:lang="en">; mechanical throwing machines for articles or solid bulk materials, in general B65G31/00; sand, gravel or salt spreaders E01C19/20</skos:definition>
+                  <skos:scopeNote xml:lang="en">hand-used implements A01C7/02, A01C15/02; fertiliser distributors A01C15/00</skos:scopeNote>
+                  <dcterms:references rdf:resource="http://example.org/concept/ecla/A01C7/02"/>
+                  <dcterms:references rdf:resource="http://example.org/concept/ecla/A01C15/02"/>
+                  <dcterms:references rdf:resource="http://example.org/concept/ecla/A01C15/00"/>
+                  <dcterms:references rdf:resource="http://example.org/concept/ecla/B65G31/00"/>
+                  <dcterms:references rdf:resource="http://example.org/concept/ecla/E01C19/20"/>
+               </rdf:Description>
+            </skos:member>
+            <skos:member>
+               <rdf:Description rdf:about="http://example.org/concept/ecla/A01C19/00">
+                  <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                  <skos:topConceptOf>
+                     <rdf:Description rdf:about="http://example.org/concept/ecla">
+                        <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C19/00"/>
+                     </rdf:Description>
+                  </skos:topConceptOf>
+                  <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                  <skos:broader rdf:resource="http://example.org/concept/A01C"/>
+                  <skos:narrower>
+                     <rdf:Description rdf:about="http://example.org/concept/ecla/A01C19/02">
+                        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                        <skos:topConceptOf>
+                           <rdf:Description rdf:about="http://example.org/concept/ecla">
+                              <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C19/02"/>
+                           </rdf:Description>
+                        </skos:topConceptOf>
+                        <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                        <skos:broader rdf:resource="http://example.org/concept/A01C1/00"/>
+                        <skos:prefLabel xml:lang="en">by a motor</skos:prefLabel>
+                     </rdf:Description>
+                  </skos:narrower>
+                  <skos:narrower>
+                     <rdf:Description rdf:about="http://example.org/concept/ecla/A01C19/04">
+                        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                        <skos:topConceptOf>
+                           <rdf:Description rdf:about="http://example.org/concept/ecla">
+                              <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C19/04"/>
+                           </rdf:Description>
+                        </skos:topConceptOf>
+                        <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                        <skos:broader rdf:resource="http://example.org/concept/A01C1/00"/>
+                        <skos:narrower>
+                           <rdf:Description rdf:about="http://example.org/concept/ecla/A01C19/04B">
+                              <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                              <skos:topConceptOf>
+                                 <rdf:Description rdf:about="http://example.org/concept/ecla">
+                                    <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C19/04B"/>
+                                 </rdf:Description>
+                              </skos:topConceptOf>
+                              <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                              <skos:broader rdf:resource="http://example.org/concept/A01C19/00"/>
+                           </rdf:Description>
+                        </skos:narrower>
+                        <skos:prefLabel xml:lang="en">by a ground-engaging wheel</skos:prefLabel>
+                     </rdf:Description>
+                  </skos:narrower>
+                  <skos:prefLabel xml:lang="en">Arrangements for driving working parts of fertilisers or seeders</skos:prefLabel>
+                  <dcterms:references rdf:resource="http://example.org/concept/ecla/A01C17/00D"/>
+               </rdf:Description>
+            </skos:member>
+            <skos:member>
+               <rdf:Description rdf:about="http://example.org/concept/ecla/A01C21/00">
+                  <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                  <skos:topConceptOf>
+                     <rdf:Description rdf:about="http://example.org/concept/ecla">
+                        <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C21/00"/>
+                     </rdf:Description>
+                  </skos:topConceptOf>
+                  <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                  <skos:broader rdf:resource="http://example.org/concept/A01C"/>
+                  <skos:narrower>
+                     <rdf:Description rdf:about="http://example.org/concept/ecla/A01C21/00B">
+                        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                        <skos:topConceptOf>
+                           <rdf:Description rdf:about="http://example.org/concept/ecla">
+                              <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C21/00B"/>
+                           </rdf:Description>
+                        </skos:topConceptOf>
+                        <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                        <skos:broader rdf:resource="http://example.org/concept/A01C1/00"/>
+                     </rdf:Description>
+                  </skos:narrower>
+                  <skos:prefLabel xml:lang="en">Methods of fertilising</skos:prefLabel>
+                  <skos:prefLabel xml:lang="en">;</skos:prefLabel>
+                  <skos:definition xml:lang="en">fertilisers C05; soil-conditioning or soil-stabilising materials C09K17/00</skos:definition>
+                  <dcterms:references rdf:resource="http://example.org/concept/ecla/C05"/>
+                  <dcterms:references rdf:resource="http://example.org/concept/ecla/C09K17/00"/>
+               </rdf:Description>
+            </skos:member>
+            <skos:member>
+               <rdf:Description rdf:about="http://example.org/concept/ecla/A01C23/00">
+                  <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                  <skos:topConceptOf>
+                     <rdf:Description rdf:about="http://example.org/concept/ecla">
+                        <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C23/00"/>
+                     </rdf:Description>
+                  </skos:topConceptOf>
+                  <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                  <skos:broader rdf:resource="http://example.org/concept/A01C"/>
+                  <skos:narrower>
+                     <rdf:Description rdf:about="http://example.org/concept/ecla/A01C23/00B">
+                        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                        <skos:topConceptOf>
+                           <rdf:Description rdf:about="http://example.org/concept/ecla">
+                              <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C23/00B"/>
+                           </rdf:Description>
+                        </skos:topConceptOf>
+                        <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                        <skos:broader rdf:resource="http://example.org/concept/A01C1/00"/>
+                        <skos:narrower>
+                           <rdf:Description rdf:about="http://example.org/concept/ecla/A01C23/00B1">
+                              <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                              <skos:topConceptOf>
+                                 <rdf:Description rdf:about="http://example.org/concept/ecla">
+                                    <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C23/00B1"/>
+                                 </rdf:Description>
+                              </skos:topConceptOf>
+                              <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                              <skos:broader rdf:resource="http://example.org/concept/A01C23/00"/>
+                           </rdf:Description>
+                        </skos:narrower>
+                        <skos:narrower>
+                           <rdf:Description rdf:about="http://example.org/concept/ecla/A01C23/00B2">
+                              <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                              <skos:topConceptOf>
+                                 <rdf:Description rdf:about="http://example.org/concept/ecla">
+                                    <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C23/00B2"/>
+                                 </rdf:Description>
+                              </skos:topConceptOf>
+                              <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                              <skos:broader rdf:resource="http://example.org/concept/A01C23/00"/>
+                              <skos:narrower>
+                                 <rdf:Description rdf:about="http://example.org/concept/ecla/A01C23/00B2B">
+                                    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                                    <skos:topConceptOf>
+                                       <rdf:Description rdf:about="http://example.org/concept/ecla">
+                                          <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C23/00B2B"/>
+                                       </rdf:Description>
+                                    </skos:topConceptOf>
+                                    <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                                    <skos:broader rdf:resource="http://example.org/concept/A01C23/00B"/>
+                                 </rdf:Description>
+                              </skos:narrower>
+                           </rdf:Description>
+                        </skos:narrower>
+                     </rdf:Description>
+                  </skos:narrower>
+                  <skos:narrower>
+                     <rdf:Description rdf:about="http://example.org/concept/ecla/A01C23/00C">
+                        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                        <skos:topConceptOf>
+                           <rdf:Description rdf:about="http://example.org/concept/ecla">
+                              <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C23/00C"/>
+                           </rdf:Description>
+                        </skos:topConceptOf>
+                        <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                        <skos:broader rdf:resource="http://example.org/concept/A01C1/00"/>
+                        <dcterms:references rdf:resource="http://example.org/concept/ecla/A01C23/02C1"/>
+                        <dcterms:references rdf:resource="http://example.org/concept/ecla/A01C23/04"/>
+                     </rdf:Description>
+                  </skos:narrower>
+                  <skos:narrower>
+                     <rdf:Description rdf:about="http://example.org/concept/ecla/A01C23/00D">
+                        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                        <skos:topConceptOf>
+                           <rdf:Description rdf:about="http://example.org/concept/ecla">
+                              <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C23/00D"/>
+                           </rdf:Description>
+                        </skos:topConceptOf>
+                        <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                        <skos:broader rdf:resource="http://example.org/concept/A01C1/00"/>
+                     </rdf:Description>
+                  </skos:narrower>
+                  <skos:narrower>
+                     <rdf:Description rdf:about="http://example.org/concept/ecla/A01C23/00E">
+                        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                        <skos:topConceptOf>
+                           <rdf:Description rdf:about="http://example.org/concept/ecla">
+                              <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C23/00E"/>
+                           </rdf:Description>
+                        </skos:topConceptOf>
+                        <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                        <skos:broader rdf:resource="http://example.org/concept/A01C1/00"/>
+                     </rdf:Description>
+                  </skos:narrower>
+                  <skos:narrower>
+                     <rdf:Description rdf:about="http://example.org/concept/ecla/A01C23/02">
+                        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                        <skos:topConceptOf>
+                           <rdf:Description rdf:about="http://example.org/concept/ecla">
+                              <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C23/02"/>
+                           </rdf:Description>
+                        </skos:topConceptOf>
+                        <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                        <skos:broader rdf:resource="http://example.org/concept/A01C1/00"/>
+                        <skos:narrower>
+                           <rdf:Description rdf:about="http://example.org/concept/ecla/A01C23/02B">
+                              <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                              <skos:topConceptOf>
+                                 <rdf:Description rdf:about="http://example.org/concept/ecla">
+                                    <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C23/02B"/>
+                                 </rdf:Description>
+                              </skos:topConceptOf>
+                              <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                              <skos:broader rdf:resource="http://example.org/concept/A01C23/00"/>
+                              <skos:narrower>
+                                 <rdf:Description rdf:about="http://example.org/concept/ecla/A01C23/02B1">
+                                    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                                    <skos:topConceptOf>
+                                       <rdf:Description rdf:about="http://example.org/concept/ecla">
+                                          <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C23/02B1"/>
+                                       </rdf:Description>
+                                    </skos:topConceptOf>
+                                    <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                                    <skos:broader rdf:resource="http://example.org/concept/A01C23/02"/>
+                                    <dcterms:references rdf:resource="http://example.org/concept/ecla/A01C5/06C"/>
+                                 </rdf:Description>
+                              </skos:narrower>
+                           </rdf:Description>
+                        </skos:narrower>
+                        <skos:narrower>
+                           <rdf:Description rdf:about="http://example.org/concept/ecla/A01C23/02C">
+                              <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                              <skos:topConceptOf>
+                                 <rdf:Description rdf:about="http://example.org/concept/ecla">
+                                    <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C23/02C"/>
+                                 </rdf:Description>
+                              </skos:topConceptOf>
+                              <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                              <skos:broader rdf:resource="http://example.org/concept/A01C23/00"/>
+                              <skos:narrower>
+                                 <rdf:Description rdf:about="http://example.org/concept/ecla/A01C23/02C1">
+                                    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                                    <skos:topConceptOf>
+                                       <rdf:Description rdf:about="http://example.org/concept/ecla">
+                                          <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C23/02C1"/>
+                                       </rdf:Description>
+                                    </skos:topConceptOf>
+                                    <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                                    <skos:broader rdf:resource="http://example.org/concept/A01C23/02"/>
+                                 </rdf:Description>
+                              </skos:narrower>
+                              <skos:narrower>
+                                 <rdf:Description rdf:about="http://example.org/concept/ecla/A01C23/02C2">
+                                    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                                    <skos:topConceptOf>
+                                       <rdf:Description rdf:about="http://example.org/concept/ecla">
+                                          <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C23/02C2"/>
+                                       </rdf:Description>
+                                    </skos:topConceptOf>
+                                    <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                                    <skos:broader rdf:resource="http://example.org/concept/A01C23/02"/>
+                                 </rdf:Description>
+                              </skos:narrower>
+                              <skos:narrower>
+                                 <rdf:Description rdf:about="http://example.org/concept/ecla/A01C23/02C3">
+                                    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                                    <skos:topConceptOf>
+                                       <rdf:Description rdf:about="http://example.org/concept/ecla">
+                                          <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C23/02C3"/>
+                                       </rdf:Description>
+                                    </skos:topConceptOf>
+                                    <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                                    <skos:broader rdf:resource="http://example.org/concept/A01C23/02"/>
+                                 </rdf:Description>
+                              </skos:narrower>
+                           </rdf:Description>
+                        </skos:narrower>
+                        <skos:narrower>
+                           <rdf:Description rdf:about="http://example.org/concept/ecla/A01C23/02D">
+                              <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                              <skos:topConceptOf>
+                                 <rdf:Description rdf:about="http://example.org/concept/ecla">
+                                    <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C23/02D"/>
+                                 </rdf:Description>
+                              </skos:topConceptOf>
+                              <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                              <skos:broader rdf:resource="http://example.org/concept/A01C23/00"/>
+                              <skos:narrower>
+                                 <rdf:Description rdf:about="http://example.org/concept/ecla/A01C23/02D1">
+                                    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                                    <skos:topConceptOf>
+                                       <rdf:Description rdf:about="http://example.org/concept/ecla">
+                                          <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C23/02D1"/>
+                                       </rdf:Description>
+                                    </skos:topConceptOf>
+                                    <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                                    <skos:broader rdf:resource="http://example.org/concept/A01C23/02"/>
+                                 </rdf:Description>
+                              </skos:narrower>
+                              <dcterms:references rdf:resource="http://example.org/concept/ecla/A01C21/00B"/>
+                              <dcterms:references rdf:resource="http://example.org/concept/ecla/A01G25/06"/>
+                           </rdf:Description>
+                        </skos:narrower>
+                        <skos:prefLabel xml:lang="en">Special arrangements for delivering the liquid directly into the soil</skos:prefLabel>
+                     </rdf:Description>
+                  </skos:narrower>
+                  <skos:narrower>
+                     <rdf:Description rdf:about="http://example.org/concept/ecla/A01C23/04">
+                        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                        <skos:topConceptOf>
+                           <rdf:Description rdf:about="http://example.org/concept/ecla">
+                              <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C23/04"/>
+                           </rdf:Description>
+                        </skos:topConceptOf>
+                        <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                        <skos:broader rdf:resource="http://example.org/concept/A01C1/00"/>
+                        <skos:narrower>
+                           <rdf:Description rdf:about="http://example.org/concept/ecla/A01C23/04B">
+                              <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                              <skos:topConceptOf>
+                                 <rdf:Description rdf:about="http://example.org/concept/ecla">
+                                    <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C23/04B"/>
+                                 </rdf:Description>
+                              </skos:topConceptOf>
+                              <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                              <skos:broader rdf:resource="http://example.org/concept/A01C23/00"/>
+                              <dcterms:references rdf:resource="http://example.org/concept/ecla/A01M7/00"/>
+                           </rdf:Description>
+                        </skos:narrower>
+                        <skos:narrower>
+                           <rdf:Description rdf:about="http://example.org/concept/ecla/A01C23/04C">
+                              <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                              <skos:topConceptOf>
+                                 <rdf:Description rdf:about="http://example.org/concept/ecla">
+                                    <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C23/04C"/>
+                                 </rdf:Description>
+                              </skos:topConceptOf>
+                              <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                              <skos:broader rdf:resource="http://example.org/concept/A01C23/00"/>
+                              <dcterms:references rdf:resource="http://example.org/concept/ecla/F16L37/00"/>
+                           </rdf:Description>
+                        </skos:narrower>
+                        <skos:narrower>
+                           <rdf:Description rdf:about="http://example.org/concept/ecla/A01C23/04D">
+                              <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+                              <skos:topConceptOf>
+                                 <rdf:Description rdf:about="http://example.org/concept/ecla">
+                                    <skos:hasTopConcept rdf:resource="http://example.org/concept/ecla/A01C23/04D"/>
+                                 </rdf:Description>
+                              </skos:topConceptOf>
+                              <skos:inScheme rdf:resource="http://example.org/concept/ecla"/>
+                              <skos:broader rdf:resource="http://example.org/concept/A01C23/00"/>
+                              <dcterms:references rdf:resource="http://example.org/concept/ecla/A01C23/00C"/>
+                              <dcterms:references rdf:resource="http://example.org/concept/ecla/A01G25/00"/>
+                           </rdf:Description>
+                        </skos:narrower>
+                        <skos:prefLabel xml:lang="en">Distributing under pressure</skos:prefLabel>
+                        <skos:prefLabel xml:lang="en">Distributing mud</skos:prefLabel>
+                        <skos:prefLabel xml:lang="en">Adaptation of watering systems for fertilising-liquids</skos:prefLabel>
+                     </rdf:Description>
+                  </skos:narrower>
+                  <skos:prefLabel xml:lang="en">Distributing devices specially adapted for liquid manure or other fertilising liquid, including ammonia, e.g. transport tanks, sprinkling wagons</skos:prefLabel>
+                  <skos:definition xml:lang="en">watering fields in general A01G25/00; spraying or applying liquids or other fluent materials in general B05</skos:definition>
+                  <dcterms:references rdf:resource="http://example.org/concept/ecla/A01G25/00"/>
+                  <dcterms:references rdf:resource="http://example.org/concept/ecla/B05"/>
+               </rdf:Description>
+            </skos:member>
+         </rdf:Description>
+      </skos:member>
+      <skos:prefLabel xml:lang="en">PLANTING</skos:prefLabel>
+      <skos:prefLabel xml:lang="en">SOWING</skos:prefLabel>
+      <skos:prefLabel xml:lang="en">FERTILISING</skos:prefLabel>
+      <skos:definition xml:lang="en">combined with general working of soil A01B49/04; parts, details or accessories of agricultural machines or implements, in general A01B51/00 to A01B75/00;</skos:definition>
+      <skos:scopeNote xml:lang="en">apparatus for spreading sand or salt E01C; sowing and fertilising with aircraft B64D1/16 to B64D1/20</skos:scopeNote>
+      <dcterms:references rdf:resource="http://example.org/concept/ecla/A01B49/04"/>
+      <dcterms:references rdf:resource="http://example.org/concept/ecla/A01B51/00"/>
+      <dcterms:references rdf:resource="http://example.org/concept/ecla/A01B75/00"/>
+      <dcterms:references rdf:resource="http://example.org/concept/ecla/E01C"/>
+      <dcterms:references rdf:resource="http://example.org/concept/ecla/B64D1/16"/>
+      <dcterms:references rdf:resource="http://example.org/concept/ecla/B64D1/20"/>
+   </rdf:Description>
+</rdf:RDF>

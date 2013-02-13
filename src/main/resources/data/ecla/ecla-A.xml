@@ -1,0 +1,1524 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class-scheme xmlns="http://www.epo.org/eclaexport" scheme-type="ecla">
+  <classification-item level="2">
+    <classification-symbol>A</classification-symbol>
+    <class-title>
+      <title-part>
+        <text scheme="ipc">HUMAN NECESSITIES</text>
+      </title-part>
+    </class-title>
+    <classification-item level="3">
+      <classification-symbol>A01</classification-symbol>
+      <class-title>
+        <title-part>
+          <text scheme="ipc">Agriculture</text>
+        </title-part>
+      </class-title>
+      <classification-item level="4">
+        <classification-symbol>A01</classification-symbol>
+        <class-title>
+          <title-part>
+            <text scheme="ipc">AGRICULTURE</text>
+          </title-part>
+          <title-part>
+            <text scheme="ipc"> FORESTRY</text>
+          </title-part>
+          <title-part>
+            <text scheme="ipc"> ANIMAL HUSBANDRY</text>
+          </title-part>
+          <title-part>
+            <text scheme="ipc"> HUNTING</text>
+          </title-part>
+          <title-part>
+            <text scheme="ipc"> TRAPPING</text>
+          </title-part>
+          <title-part>
+            <text scheme="ipc"> FISHING</text>
+          </title-part>
+        </class-title>
+        <classification-item link-file="ecla-A01B.xml" level="5">
+          <classification-symbol>A01B</classification-symbol>
+          <class-title>
+            <title-part>
+              <text scheme="ipc">SOIL WORKING IN AGRICULTURE OR FORESTRY</text>
+            </title-part>
+            <title-part>
+              <text scheme="ipc"> PARTS, DETAILS, OR ACCESSORIES OF AGRICULTURAL MACHINES OR IMPLEMENTS, IN GENERAL </text>
+              <explanation>
+                <text scheme="ipc">making or covering furrows or holes for sowing, planting, or manuring <class-ref scheme="ecla">A01C5/00</class-ref>; soil working for engineering purposes <class-ref scheme="ecla">E01</class-ref>, <class-ref scheme="ecla">E02</class-ref>, <class-ref scheme="ecla">E21</class-ref>; </text>
+                <comment>
+                  <text scheme="ecla">measuring areas for agricultural purposes <class-ref scheme="ecla">G01B</class-ref></text>
+                </comment>
+              </explanation>
+            </title-part>
+          </class-title>
+        </classification-item>
+        <classification-item link-file="ecla-A01C.xml" level="5">
+          <classification-symbol>A01C</classification-symbol>
+          <class-title>
+            <title-part>
+              <text scheme="ipc">PLANTING</text>
+            </title-part>
+            <title-part>
+              <text scheme="ipc"> SOWING</text>
+            </title-part>
+            <title-part>
+              <text scheme="ipc"> FERTILISING </text>
+              <explanation>
+                <text scheme="ipc">combined with general working of soil <class-ref scheme="ecla">A01B49/04</class-ref>; parts, details or accessories of agricultural machines or implements, in general <class-ref scheme="ecla">A01B51/00</class-ref> to <class-ref scheme="ecla">A01B75/00</class-ref>; </text>
+                <comment>
+                  <text scheme="ecla">apparatus for spreading sand or salt <class-ref scheme="ecla">E01C</class-ref>; sowing and fertilising with aircraft <class-ref scheme="ecla">B64D1/16</class-ref> to <class-ref scheme="ecla">B64D1/20</class-ref></text>
+                </comment>
+              </explanation>
+            </title-part>
+          </class-title>
+        </classification-item>
+        <classification-item link-file="ecla-A01D.xml" level="5">
+          <classification-symbol>A01D</classification-symbol>
+          <class-title>
+            <title-part>
+              <text scheme="ipc">HARVESTING</text>
+            </title-part>
+            <title-part>
+              <text scheme="ipc"> MOWING </text>
+              <comment>
+                <explanation>
+                  <text scheme="ecla">parts, details or accessories of agricultural machines or implements in general <class-ref scheme="ecla">A01B51/00</class-ref> to <class-ref scheme="ecla">A01B75/00</class-ref></text>
+                </explanation>
+              </comment>
+            </title-part>
+          </class-title>
+        </classification-item>
+        <classification-item link-file="ecla-A01F.xml" level="5">
+          <classification-symbol>A01F</classification-symbol>
+          <class-title>
+            <title-part>
+              <text scheme="ipc">PROCESSING OF HARVESTED PRODUCE</text>
+            </title-part>
+            <title-part>
+              <text scheme="ipc"> HAY OR STRAW PRESSES</text>
+            </title-part>
+            <title-part>
+              <text scheme="ipc"> DEVICES FOR STORING AGRICULTURAL OR HORTICULTURAL PRODUCE </text>
+              <explanation>
+                <text scheme="ipc">devices for topping or skinning onions or flower bulbs <class-ref scheme="ecla">A23N15/08</class-ref></text>
+              </explanation>
+            </title-part>
+          </class-title>
+        </classification-item>
+        <classification-item link-file="ecla-A01G.xml" level="5">
+          <classification-symbol>A01G</classification-symbol>
+          <class-title>
+            <title-part>
+              <text scheme="ipc">HORTICULTURE</text>
+            </title-part>
+            <title-part>
+              <text scheme="ipc"> CULTIVATION OF VEGETABLES, FLOWERS, RICE, FRUIT, VINES, HOPS OR SEAWEED</text>
+            </title-part>
+            <title-part>
+              <text scheme="ipc"> FORESTRY</text>
+            </title-part>
+            <title-part>
+              <text scheme="ipc"> WATERING </text>
+              <explanation>
+                <text scheme="ipc">picking of fruits, vegetables, hops, or the like <class-ref scheme="ecla">A01D46/00</class-ref>; plant reproduction by tissue culture techniques <class-ref scheme="ecla">A01H4/00</class-ref>; devices for topping or skinning onions or flower bulbs <class-ref scheme="ecla">A23N15/08</class-ref>; propagating unicellular algae <class-ref scheme="ecla">C12N1/12</class-ref>; plant cell culture <class-ref scheme="ecla">C12N5/00</class-ref></text>
+              </explanation>
+            </title-part>
+          </class-title>
+        </classification-item>
+        <classification-item link-file="ecla-A01H.xml" level="5">
+          <classification-symbol>A01H</classification-symbol>
+          <class-title>
+            <title-part>
+              <text scheme="ipc">NEW PLANTS OR PROCESSES FOR OBTAINING THEM</text>
+            </title-part>
+            <title-part>
+              <text scheme="ipc"> PLANT REPRODUCTION BY TISSUE CULTURE TECHNIQUES</text>
+            </title-part>
+          </class-title>
+        </classification-item>
+        <classification-item link-file="ecla-A01J.xml" level="5">
+          <classification-symbol>A01J</classification-symbol>
+          <class-title>
+            <title-part>
+              <text scheme="ipc">MANUFACTURE OF DAIRY PRODUCTS </text>
+              <explanation>
+                <text scheme="ipc">preservation, pasteurisation, sterilisation of milk products A23; for chemical matters, see subclass A23C</text>
+              </explanation>
+            </title-part>
+          </class-title>
+        </classification-item>
+        <classification-item link-file="ecla-A01K.xml" level="5">
+          <classification-symbol>A01K</classification-symbol>
+          <class-title>
+            <title-part>
+              <text scheme="ipc">ANIMAL HUSBANDRY</text>
+            </title-part>
+            <title-part>
+              <text scheme="ipc"> CARE OF BIRDS, FISHES, INSECTS</text>
+            </title-part>
+            <title-part>
+              <text scheme="ipc"> FISHING</text>
+            </title-part>
+            <title-part>
+              <text scheme="ipc"> REARING OR BREEDING ANIMALS, NOT OTHERWISE PROVIDED FOR</text>
+            </title-part>
+            <title-part>
+              <text scheme="ipc"> NEW BREEDS OF ANIMALS</text>
+            </title-part>
+          </class-title>
+        </classification-item>
+        <classification-item link-file="ecla-A01L.xml" level="5">
+          <classification-symbol>A01L</classification-symbol>
+          <class-title>
+            <title-part>
+              <text scheme="ipc">SHOEING OF ANIMALS </text>
+              <comment>
+                <explanation>
+                  <text scheme="ecla">making metal horseshoes by rolling <class-ref scheme="ecla">B21H7/12</class-ref>; making horseshoes or appurtenances therefor by forging or pressing <class-ref scheme="ecla">B21K15/02</class-ref>; casting of metals <class-ref scheme="ecla">B22D</class-ref></text>
+                </explanation>
+              </comment>
+            </title-part>
+          </class-title>
+        </classification-item>
+        <classification-item link-file="ecla-A01M.xml" level="5">
+          <classification-symbol>A01M</classification-symbol>
+          <class-title>
+            <title-part>
+              <text scheme="ipc">CATCHING OR TRAPPING OF ANIMALS </text>
+              <explanation>
+                <text scheme="ipc">apiculture <class-ref scheme="ecla">A01K47/00</class-ref> to <class-ref scheme="ecla">A01K59/00</class-ref>; fishing <class-ref scheme="ecla">A01K69/00</class-ref> to <class-ref scheme="ecla">A01K97/00</class-ref>; pesticides A01N</text>
+              </explanation>
+            </title-part>
+            <title-part>
+              <text scheme="ipc"> APPARATUS FOR THE DESTRUCTION OF NOXIOUS ANIMALS OR NOXIOUS PLANTS </text>
+              <explanation>
+                <text scheme="ipc">equipment fitted in or to aircraft for dropping or releasing powdered, liquid or gaseous matter, e.g. pesticides, herbicides, <class-ref scheme="ecla">B64D1/16</class-ref></text>
+              </explanation>
+            </title-part>
+          </class-title>
+        </classification-item>
+        <classification-item link-file="ecla-A01N.xml" level="5">
+          <classification-symbol>A01N</classification-symbol>
+          <class-title date-revised="9908">
+            <title-part>
+              <text scheme="ipc">PRESERVATION OF BODIES OF HUMANS OR ANIMALS OR PLANTS OR PARTS THEREOF</text>
+            </title-part>
+            <title-part>
+              <text scheme="ipc"> BIOCIDES, e.g. AS DISINFECTANTS, AS PESTICIDES, AS HERBICIDES </text>
+              <explanation>
+                <text scheme="ipc">preparations for medical, dental or toilet purposes A61K; methods or apparatus for disinfection or sterilisation in general, or for deodorising of air A61L</text>
+              </explanation>
+            </title-part>
+            <title-part>
+              <text scheme="ipc"> PEST REPELLANTS OR ATTRACTANTS </text>
+              <explanation>
+                <text scheme="ipc">decoys <class-ref scheme="ecla">A01M1/06</class-ref>; medicinal preparations A61K</text>
+              </explanation>
+            </title-part>
+            <title-part>
+              <text scheme="ipc"> PLANT GROWTH REGULATORS </text>
+              <explanation>
+                <text scheme="ipc">compounds in general C01, C07, C08; fertilisers C05; soil conditioners or stabilisers <class-ref scheme="ecla">C09K17/00</class-ref></text>
+              </explanation>
+            </title-part>
+          </class-title>
+        </classification-item>
+      </classification-item>
+    </classification-item>
+    <classification-item level="3">
+      <classification-symbol>A21</classification-symbol>
+      <class-title>
+        <title-part>
+          <text scheme="ipc">Foodstuffs</text>
+        </title-part>
+        <title-part>
+          <text scheme="ipc"> tobacco</text>
+        </title-part>
+      </class-title>
+      <classification-item level="4">
+        <classification-symbol>A21</classification-symbol>
+        <class-title>
+          <title-part>
+            <text scheme="ipc">BAKING</text>
+          </title-part>
+          <title-part>
+            <text scheme="ipc"> EDIBLE DOUGHS</text>
+          </title-part>
+        </class-title>
+        <classification-item link-file="ecla-A21B.xml" level="5">
+          <classification-symbol>A21B</classification-symbol>
+          <class-title>
+            <title-part>
+              <text scheme="ipc">BAKERS` OVENS</text>
+            </title-part>
+            <title-part>
+              <text scheme="ipc"> MACHINES OR EQUIPMENT FOR BAKING </text>
+              <explanation>
+                <text scheme="ipc">domestic baking equipment <class-ref scheme="ecla">A47J37/00</class-ref>; combustion apparatus <class-ref scheme="ecla">F23</class-ref>; domestic stoves or ranges being wholly or partly ovens <class-ref scheme="ecla">F24B</class-ref>, <class-ref scheme="ecla">F24C</class-ref></text>
+              </explanation>
+            </title-part>
+          </class-title>
+        </classification-item>
+        <classification-item link-file="ecla-A21C.xml" level="5">
+          <classification-symbol>A21C</classification-symbol>
+          <class-title>
+            <title-part>
+              <text scheme="ipc">MACHINES OR EQUIPMENT FOR MAKING OR PROCESSING DOUGHS</text>
+            </title-part>
+            <title-part>
+              <text scheme="ipc"> HANDLING BAKED ARTICLES MADE FROM DOUGH</text>
+            </title-part>
+          </class-title>
+        </classification-item>
+        <classification-item link-file="ecla-A21D.xml" level="5">
+          <classification-symbol>A21D</classification-symbol>
+          <class-title>
+            <title-part>
+              <text scheme="ipc">TREATMENT, e.g. PRESERVATION, OF FLOUR OR DOUGH, e.g. BY ADDITION OF MATERIALS</text>
+            </title-part>
+            <title-part>
+              <text scheme="ipc"> BAKING</text>
+            </title-part>
+            <title-part>
+              <text scheme="ipc"> BAKERY PRODUCTS</text>
+            </title-part>
+            <title-part>
+              <text scheme="ipc"> PRESERVATION THEREOF</text>
+            </title-part>
+          </class-title>
+        </classification-item>
+      </classification-item>
+      <classification-item level="4">
+        <classification-symbol>A22</classification-symbol>
+        <class-title>
+          <title-part>
+            <text scheme="ipc">BUTCHERING</text>
+          </title-part>
+          <title-part>
+            <text scheme="ipc"> MEAT TREATMENT</text>
+          </title-part>
+          <title-part>
+            <text scheme="ipc"> PROCESSING POULTRY OR FISH</text>
+          </title-part>
+        </class-title>
+        <classification-item link-file="ecla-A22B.xml" level="5">
+          <classification-symbol>A22B</classification-symbol>
+          <class-title>
+            <title-part>
+              <text scheme="ipc">SLAUGHTERING</text>
+            </title-part>
+          </class-title>
+        </classification-item>
+        <classification-item link-file="ecla-A22C.xml" level="5">
+          <classification-symbol>A22C</classification-symbol>
+          <class-title date-revised="9409">
+            <title-part>
+              <text scheme="ipc">PROCESSING MEAT, POULTRY, OR FISH </text>
+              <explanation>
+                <text scheme="ipc">preserving A23B; obtaining protein compositions for foodstuffs <class-ref scheme="ecla">A23J1/00</class-ref>; fish, meat or poultry preparations A23L; disintegrating, e.g. chopping meat, <class-ref scheme="ecla">B02C18/00</class-ref>; preparation of proteins <class-ref scheme="ecla">C07K1/00</class-ref></text>
+              </explanation>
+            </title-part>
+          </class-title>
+        </classification-item>
+      </classification-item>
+      <classification-item level="4">
+        <classification-symbol>A23</classification-symbol>
+        <class-title>
+          <title-part>
+            <text scheme="ipc">FOODS OR FOODSTUFFS</text>
+          </title-part>
+          <title-part>
+            <text scheme="ipc"> THEIR TREATMENT, NOT COVERED BY OTHER CLASSES</text>
+          </title-part>
+        </class-title>
+        <notes-and-warnings>
+          <note type="note">
+            <note-paragraph>Attention is drawn to the following places:
+<pre><br/><class-ref scheme="ecla">C08B</class-ref>   Polysaccharides, derivatives thereof <br/><class-ref scheme="ecla">C11</class-ref>    Animal or vegetable oils, fats, fatty substances or waxes <br/><class-ref scheme="ecla">C12</class-ref>    Biochemistry, beer, spirits, wine, vinegar <br/><class-ref scheme="ecla">C13</class-ref>    Sugar industry</pre>
+</note-paragraph>
+          </note>
+        </notes-and-warnings>
+        <classification-item link-file="ecla-A23B.xml" level="5">
+          <classification-symbol>A23B</classification-symbol>
+          <class-title>
+            <title-part>
+              <text scheme="ipc">PRESERVING, e.g. BY CANNING, MEAT, FISH, EGGS, FRUIT, VEGETABLES, EDIBLE SEEDS</text>
+            </title-part>
+            <title-part>
+              <text scheme="ipc"> CHEMICAL RIPENING OF FRUIT OR VEGETABLES</text>
+            </title-part>
+            <title-part>
+              <text scheme="ipc"> THE PRESERVED, RIPENED, OR CANNED PRODUCTS </text>
+              <explanation>
+                <text scheme="ipc">preserving foodstuffs in general <class-ref scheme="ecla">A23L3/00</class-ref>; preserving in general A61L; applying food preservatives in packages <class-ref scheme="ecla">B65D81/28</class-ref></text>
+              </explanation>
+            </title-part>
+          </class-title>
+        </classification-item>
+        <classification-item link-file="ecla-A23C.xml" level="5">
+          <classification-symbol>A23C</classification-symbol>
+          <class-title date-revised="9409">
+            <title-part>
+              <text scheme="ipc">DAIRY PRODUCTS, e.g. MILK, BUTTER, CHEESE</text>
+            </title-part>
+            <title-part>
+              <text scheme="ipc"> MILK OR CHEESE SUBSTITUTES</text>
+            </title-part>
+            <title-part>
+              <text scheme="ipc"> MAKING THEREOF </text>
+              <explanation>
+                <text scheme="ipc">obtaining protein compositions for foodstuffs, </text>
+                <comment>
+                  <text scheme="ecla">e.g. from milk</text>
+                </comment>
+                <text scheme="ipc">, <class-ref scheme="ecla">A23J1/00</class-ref>; preparation of peptides, e.g. of proteins, in general <class-ref scheme="ecla">C07K1/00</class-ref></text>
+              </explanation>
+            </title-part>
+          </class-title>
+        </classification-item>
+        <classification-item link-file="ecla-A23D.xml" level="5">
+          <classification-symbol>A23D</classification-symbol>
+          <class-title>
+            <title-part>
+              <text scheme="ipc">EDIBLE OILS OF FATS, e.g. MARGARINES, SHORTENINGS, COOKING OILS </text>
+              <explanation>
+                <text scheme="ipc">animal feeding-stuffs <class-ref scheme="ecla">A23K1/00</class-ref>; foods or foodstuffs containing edible oils or fats <class-ref scheme="ecla">A21D</class-ref>, <class-ref scheme="ecla">A23C</class-ref>, <class-ref scheme="ecla">A23G</class-ref>, <class-ref scheme="ecla">A23L</class-ref>; obtaining, refining, preserving <class-ref scheme="ecla">C11B</class-ref>, <class-ref scheme="ecla">C11C</class-ref>; hydrogenation <class-ref scheme="ecla">C11C3/12</class-ref></text>
+              </explanation>
+            </title-part>
+          </class-title>
+        </classification-item>
+        <classification-item link-file="ecla-A23F.xml" level="5">
+          <classification-symbol>A23F</classification-symbol>
+          <class-title>
+            <title-part>
+              <text scheme="ipc">COFFEE</text>
+            </title-part>
+            <title-part>
+              <text scheme="ipc"> TEA</text>
+            </title-part>
+            <title-part>
+              <text scheme="ipc"> THEIR SUBSTITUTES</text>
+            </title-part>
+            <title-part>
+              <text scheme="ipc"> MANUFACTURE, PREPARATION, OR INFUSION THEREOF </text>
+              <explanation>
+                <text scheme="ipc">coffee or tea pots <class-ref scheme="ecla">A47G19/14</class-ref>; tea infusers <class-ref scheme="ecla">A47G19/16</class-ref>; apparatus for making beverages, e.g. coffee or tea, <class-ref scheme="ecla">A47J31/00</class-ref>; coffee mills <class-ref scheme="ecla">A47J42/00</class-ref></text>
+              </explanation>
+            </title-part>
+          </class-title>
+        </classification-item>
+        <classification-item link-file="ecla-A23G.xml" level="5">
+          <classification-symbol>A23G</classification-symbol>
+          <class-title date-revised="0509">
+            <title-part>
+              <text scheme="ipc">COCOA</text>
+            </title-part>
+            <title-part>
+              <text scheme="ipc"> COCOA PRODUCTS, e.g. CHOCOLATE</text>
+            </title-part>
+            <title-part>
+              <text scheme="ipc"> SUBSTITUTES FOR COCOA OR COCOA PRODUCTS</text>
+            </title-part>
+            <title-part>
+              <text scheme="ipc"> CONFECTIONERY</text>
+            </title-part>
+            <title-part>
+              <text scheme="ipc"> CHEWING GUM</text>
+            </title-part>
+            <title-part>
+              <text scheme="ipc"> ICE-CREAM</text>
+            </title-part>
+            <title-part>
+              <text scheme="ipc"> PREPARATION THEREOF </text>
+            </title-part>
+          </class-title>
+        </classification-item>
+        <classification-item link-file="ecla-A23J.xml" level="5">
+          <classification-symbol>A23J</classification-symbol>
+          <class-title>
+            <title-part>
+              <text scheme="ipc">PROTEIN COMPOSITIONS FOR FOODSTUFFS</text>
+            </title-part>
+            <title-part>
+              <text scheme="ipc"> WORKING-UP PROTEINS FOR FOODSTUFFS</text>
+            </title-part>
+            <title-part>
+              <text scheme="ipc"> PHOSPHATIDE COMPOSITIONS FOR FOODSTUFFS </text>
+              <explanation>
+                <text scheme="ipc">fodder <class-ref scheme="ecla">A23K</class-ref>; protein compositions or phosphatide compositions for pharmaceuticals <class-ref scheme="ecla">A61K</class-ref>; phosphatides per se <class-ref scheme="ecla">C07F9/10</class-ref>; proteins per se <class-ref scheme="ecla">C07K</class-ref></text>
+              </explanation>
+            </title-part>
+          </class-title>
+        </classification-item>
+        <classification-item link-file="ecla-A23K.xml" level="5">
+          <classification-symbol>A23K</classification-symbol>
+          <class-title>
+            <title-part>
+              <text scheme="ipc">FODDER</text>
+            </title-part>
+          </class-title>
+        </classification-item>
+        <classification-item link-file="ecla-A23L.xml" level="5">
+          <classification-symbol>A23L</classification-symbol>
+          <class-title>
+            <title-part>
+              <text scheme="ipc">FOODS, FOODSTUFFS, OR NON-ALCOHOLIC BEVERAGES, NOT COVERED BY SUBCLASSES A23B TO A23J</text>
+            </title-part>
+            <title-part>
+              <text scheme="ipc"> THEIR PREPARATION OR TREATMENT, e.g. COOKING, MODIFICATION OF NUTRITIVE QUALITIES, PHYSICAL TREATMENT </text>
+              <explanation>
+                <text scheme="ipc">shaping or working, not fully covered by this subclass, A23P</text>
+              </explanation>
+            </title-part>
+            <title-part>
+              <text scheme="ipc"> PRESERVATION OF FOODS OR FOODSTUFFS, IN GENERAL</text>
+            </title-part>
+          </class-title>
+        </classification-item>
+        <classification-item link-file="ecla-A23N.xml" level="5">
+          <classification-symbol>A23N</classification-symbol>
+          <class-title>
+            <title-part>
+              <text scheme="ipc">MACHINES OR APPARATUS FOR TREATING HARVESTED FRUIT, VEGETABLES OR FLOWER BULBS IN BULK, NOT OTHERWISE PROVIDED FOR</text>
+            </title-part>
+            <title-part>
+              <text scheme="ipc"> PEELING VEGETABLES OR FRUIT IN BULK</text>
+            </title-part>
+            <title-part>
+              <text scheme="ipc"> APPARATUS FOR PREPARING ANIMAL FEEDING- STUFFS </text>
+              <explanation>
+                <text scheme="ipc">machines for cutting straw or fodder <class-ref scheme="ecla">A01F29/00</class-ref>; disintegrating, e.g. shredding, <class-ref scheme="ecla">B02C</class-ref>; severing, e.g. cutting, splitting, slicing <class-ref scheme="ecla">B26B</class-ref>, <class-ref scheme="ecla">B26D</class-ref></text>
+              </explanation>
+            </title-part>
+          </class-title>
+        </classification-item>
+        <classification-item link-file="ecla-A23P.xml" level="5">
+          <classification-symbol>A23P</classification-symbol>
+          <class-title>
+            <title-part>
+              <text scheme="ipc">SHAPING OR WORKING OF FOODSTUFFS, NOT FULLY COVERED BY A SINGLE OTHER SUBCLASS </text>
+              <explanation>
+                <text scheme="ipc">shaping substances in a plastic state in general <class-ref scheme="ecla">B29C</class-ref></text>
+              </explanation>
+            </title-part>
+          </class-title>
+        </classification-item>
+      </classification-item>
+      <classification-item level="4">
+        <classification-symbol>A24</classification-symbol>
+        <class-title>
+          <title-part>
+            <text scheme="ipc">TOBACCO</text>
+          </title-part>
+          <title-part>
+            <text scheme="ipc"> CIGARS</text>
+          </title-part>
+          <title-part>
+            <text scheme="ipc"> CIGARETTES</text>
+          </title-part>
+          <title-part>
+            <text scheme="ipc"> SMOKERS` REQUISITES</text>
+          </title-part>
+        </class-title>
+        <classification-item link-file="ecla-A24B.xml" level="5">
+          <classification-symbol>A24B</classification-symbol>
+          <class-title>
+            <title-part>
+              <text scheme="ipc">MANUFACTURE OR PREPARATION OF TOBACCO FOR SMOKING OR CHEWING</text>
+            </title-part>
+            <title-part>
+              <text scheme="ipc"> TOBACCO</text>
+            </title-part>
+            <title-part>
+              <text scheme="ipc"> SNUFF</text>
+            </title-part>
+          </class-title>
+        </classification-item>
+        <classification-item link-file="ecla-A24C.xml" level="5">
+          <classification-symbol>A24C</classification-symbol>
+          <class-title>
+            <title-part>
+              <text scheme="ipc">MACHINES FOR MAKING CIGARS OR CIGARETTES</text>
+            </title-part>
+          </class-title>
+        </classification-item>
+        <classification-item link-file="ecla-A24D.xml" level="5">
+          <classification-symbol>A24D</classification-symbol>
+          <class-title>
+            <title-part>
+              <text scheme="ipc">CIGARS</text>
+            </title-part>
+            <title-part>
+              <text scheme="ipc"> CIGARETTES</text>
+            </title-part>
+            <title-part>
+              <text scheme="ipc"> TOBACCO SMOKE FILTERS</text>
+            </title-part>
+            <title-part>
+              <text scheme="ipc"> MOUTHPIECES FOR CIGARS OR CIGARETTES</text>
+            </title-part>
+            <title-part>
+              <text scheme="ipc"> MANUFACTURE OF TOBACCO SMOKE FILTERS OR MOUTHPIECES</text>
+            </title-part>
+          </class-title>
+        </classification-item>
+        <classification-item link-file="ecla-A24F.xml" level="5">
+          <classification-symbol>A24F</classification-symbol>
+          <class-title>
+            <title-part>
+              <text scheme="ipc">SMOKERS` REQUISITES</text>
+            </title-part>
+            <title-part>
+              <text scheme="ipc"> MATCH BOXES </text>
+              <explanation>
+                <text scheme="ipc">lighters <class-ref scheme="ecla">F23Q</class-ref></text>
+              </explanation>
+            </title-part>
+          </class-title>
+        </classification-item>
+      </classification-item>
+    </classification-item>
+    <classification-item level="3">
+      <classification-symbol>A41</classification-symbol>
+      <class-title>
+        <title-part>
+          <text scheme="ipc">Personal or domestic articles</text>
+        </title-part>
+      </class-title>
+      <classification-item level="4">
+        <classification-symbol>A41</classification-symbol>
+        <class-title>
+          <title-part>
+            <text scheme="ipc">WEARING APPAREL</text>
+          </title-part>
+        </class-title>
+        <classification-item link-file="ecla-A41B.xml" level="5">
+          <classification-symbol>A41B</classification-symbol>
+          <class-title date-revised="0008">
+            <title-part>
+              <text scheme="ipc">SHIRTS</text>
+            </title-part>
+            <title-part>
+              <text scheme="ipc"> UNDERWEAR</text>
+            </title-part>
+            <title-part>
+              <text scheme="ipc"> BABY LINEN</text>
+            </title-part>
+            <title-part>
+              <text scheme="ipc"> HANDKERCHIEFS </text>
+            </title-part>
+          </class-title>
+        </classification-item>
+        <classification-item link-file="ecla-A41C.xml" level="5">
+          <classification-symbol>A41C</classification-symbol>
+          <class-title date-revised="0008">
+            <title-part>
+              <text scheme="ipc">CORSETS</text>
+            </title-part>
+            <title-part>
+              <text scheme="ipc"> BRASSIERES </text>
+            </title-part>
+          </class-title>
+        </classification-item>
+        <classification-item link-file="ecla-A41D.xml" level="5">
+          <classification-symbol>A41D</classification-symbol>
+          <class-title>
+            <title-part>
+              <text scheme="ipc">OUTERWEAR</text>
+            </title-part>
+            <title-part>
+              <text scheme="ipc"> PROTECTIVE GARMENTS</text>
+            </title-part>
+            <title-part>
+              <text scheme="ipc"> ACCESSORIES </text>
+              <explanation>
+                <text scheme="ipc">eye or ear protectors <class-ref scheme="ecla">A61F9/00</class-ref>,  <class-ref scheme="ecla">A61F11/00</class-ref>; sweating suits <class-ref scheme="ecla">A61H36/00</class-ref></text>
+              </explanation>
+            </title-part>
+          </class-title>
+        </classification-item>
+        <classification-item link-file="ecla-A41F.xml" level="5">
+          <classification-symbol>A41F</classification-symbol>
+          <class-title>
+            <title-part>
+              <text scheme="ipc">GARMENT FASTENINGS</text>
+            </title-part>
+            <title-part>
+              <text scheme="ipc"> SUSPENDERS</text>
+            </title-part>
+          </class-title>
+        </classification-item>
+        <classification-item link-file="ecla-A41G.xml" level="5">
+          <classification-symbol>A41G</classification-symbol>
+          <class-title>
+            <title-part>
+              <text scheme="ipc">ARTIFICIAL FLOWERS</text>
+            </title-part>
+            <title-part>
+              <text scheme="ipc"> WIGS</text>
+            </title-part>
+            <title-part>
+              <text scheme="ipc"> MASKS</text>
+            </title-part>
+            <title-part>
+              <text scheme="ipc"> FEATHERS</text>
+            </title-part>
+          </class-title>
+        </classification-item>
+        <classification-item link-file="ecla-A41H.xml" level="5">
+          <classification-symbol>A41H</classification-symbol>
+          <class-title>
+            <title-part>
+              <text scheme="ipc">APPLIANCES OR METHODS FOR MAKING CLOTHES, e.g. FOR DRESS-MAKING, FOR TAILORING, NOT OTHERWISE PROVIDED FOR </text>
+              <explanation>
+                <text scheme="ipc">machines, appliances, or methods for making particular articles of apparel, see the relevant groups for these articles in A41B to A41F; cutting tools or machines in general B26; weaving, braiding, lace-making, knitting, tufting, treating of textiles D03 to D06; sewing-machines, sewing appliances, seam-ripping devices D05B; cutting or otherwise severing textile materials <class-ref scheme="ecla">D06H7/00</class-ref></text>
+              </explanation>
+            </title-part>
+          </class-title>
+        </classification-item>
+      </classification-item>
+      <classification-item level="4">
+        <classification-symbol>A42</classification-symbol>
+        <class-title>
+          <title-part>
+            <text scheme="ipc">HEADWEAR</text>
+          </title-part>
+        </class-title>
+        <classification-item link-file="ecla-A42B.xml" level="5">
+          <classification-symbol>A42B</classification-symbol>
+          <class-title>
+            <title-part>
+              <text scheme="ipc">HATS</text>
+            </title-part>
+            <title-part>
+              <text scheme="ipc"> HEAD COVERINGS </text>
+              <explanation>
+                <text scheme="ipc">headbands, head-scarves <class-ref scheme="ecla">A41D20/00</class-ref>, <class-ref scheme="ecla">A41D23/00</class-ref></text>
+              </explanation>
+            </title-part>
+          </class-title>
+        </classification-item>
+        <classification-item link-file="ecla-A42C.xml" level="5">
+          <classification-symbol>A42C</classification-symbol>
+          <class-title>
+            <title-part>
+              <text scheme="ipc">MANUFACTURING OR TRIMMING HATS OR OTHER HEAD COVERINGS</text>
+            </title-part>
+          </class-title>
+        </classification-item>
+      </classification-item>
+      <classification-item level="4">
+        <classification-symbol>A43</classification-symbol>
+        <class-title>
+          <title-part>
+            <text scheme="ipc">FOOTWEAR</text>
+          </title-part>
+        </class-title>
+        <classification-item link-file="ecla-A43B.xml" level="5">
+          <classification-symbol>A43B</classification-symbol>
+          <class-title>
+            <title-part>
+              <text scheme="ipc">CHARACTERISTIC FEATURES OF FOOTWEAR</text>
+            </title-part>
+            <title-part>
+              <text scheme="ipc"> PARTS OF FOOTWEAR</text>
+            </title-part>
+          </class-title>
+        </classification-item>
+        <classification-item link-file="ecla-A43C.xml" level="5">
+          <classification-symbol>A43C</classification-symbol>
+          <class-title>
+            <title-part>
+              <text scheme="ipc">FASTENINGS OR ATTACHMENTS OF FOOTWEAR</text>
+            </title-part>
+            <title-part>
+              <text scheme="ipc"> LACES IN GENERAL</text>
+            </title-part>
+          </class-title>
+        </classification-item>
+        <classification-item link-file="ecla-A43D.xml" level="5">
+          <classification-symbol>A43D</classification-symbol>
+          <class-title>
+            <title-part>
+              <text scheme="ipc">MACHINES, TOOLS, EQUIPMENT OR METHODS FOR MANUFACTURING OR REPAIRING FOOTWEAR</text>
+            </title-part>
+          </class-title>
+        </classification-item>
+      </classification-item>
+      <classification-item level="4">
+        <classification-symbol>A44</classification-symbol>
+        <class-title>
+          <title-part>
+            <text scheme="ipc">HABERDASHERY</text>
+          </title-part>
+          <title-part>
+            <text scheme="ipc"> JEWELLERY</text>
+          </title-part>
+        </class-title>
+        <classification-item link-file="ecla-A44B.xml" level="5">
+          <classification-symbol>A44B</classification-symbol>
+          <class-title>
+            <title-part>
+              <text scheme="ipc">BUTTONS, PINS, BUCKLES, SLIDE FASTENERS, OR THE LIKE </text>
+              <explanation>
+                <text scheme="ipc">fastenings specially adapted for footwear A43C</text>
+              </explanation>
+            </title-part>
+          </class-title>
+        </classification-item>
+        <classification-item link-file="ecla-A44C.xml" level="5">
+          <classification-symbol>A44C</classification-symbol>
+          <class-title>
+            <title-part>
+              <text scheme="ipc">JEWELLERY</text>
+            </title-part>
+            <title-part>
+              <text scheme="ipc"> BRACELETS</text>
+            </title-part>
+            <title-part>
+              <text scheme="ipc"> OTHER PERSONAL ADORNMENTS</text>
+            </title-part>
+            <title-part>
+              <text scheme="ipc"> COINS </text>
+              <explanation>
+                <text scheme="ipc">jewel boxes <class-ref scheme="ecla">A45C11/16</class-ref></text>
+              </explanation>
+            </title-part>
+          </class-title>
+        </classification-item>
+      </classification-item>
+      <classification-item level="4">
+        <classification-symbol>A45</classification-symbol>
+        <class-title>
+          <title-part>
+            <text scheme="ipc">HAND OR TRAVELLING ARTICLES</text>
+          </title-part>
+        </class-title>
+        <classification-item link-file="ecla-A45B.xml" level="5">
+          <classification-symbol>A45B</classification-symbol>
+          <class-title>
+            <title-part>
+              <text scheme="ipc">WALKING STICKS</text>
+            </title-part>
+            <title-part>
+              <text scheme="ipc"> UMBRELLAS</text>
+            </title-part>
+            <title-part>
+              <text scheme="ipc"> LADIES` OR LIKE FANS </text>
+              <explanation>
+                <text scheme="ipc">cane or umbrella stands or holders <class-ref scheme="ecla">A47G25/12</class-ref></text>
+              </explanation>
+            </title-part>
+          </class-title>
+        </classification-item>
+        <classification-item link-file="ecla-A45C.xml" level="5">
+          <classification-symbol>A45C</classification-symbol>
+          <class-title>
+            <title-part>
+              <text scheme="ipc">PURSES</text>
+            </title-part>
+            <title-part>
+              <text scheme="ipc"> LUGGAGE</text>
+            </title-part>
+            <title-part>
+              <text scheme="ipc"> HAND CARRIED BAGS </text>
+              <explanation>
+                <text scheme="ipc">sacks or packs carried on the body A45Fcontainers in general B65D, e.g. portable flexible containers, <class-ref scheme="ecla">B65D27/00</class-ref> to <class-ref scheme="ecla">B65D37/00</class-ref>; making leather, canvas, or like articles B68F</text>
+              </explanation>
+            </title-part>
+          </class-title>
+        </classification-item>
+        <classification-item link-file="ecla-A45D.xml" level="5">
+          <classification-symbol>A45D</classification-symbol>
+          <class-title>
+            <title-part>
+              <text scheme="ipc">HAIRDRESSING OR SHAVING EQUIPMENT</text>
+            </title-part>
+            <title-part>
+              <text scheme="ipc"> MANICURING OR OTHER COSMETIC TREATMENT </text>
+              <explanation>
+                <text scheme="ipc">wigs, toupees, or the like <class-ref scheme="ecla">A41G3/00</class-ref>, <class-ref scheme="ecla">A41G5/00</class-ref>; hairdressers` chairs <class-ref scheme="ecla">A47C1/04</class-ref>; hair cutting appliances, razors B26B</text>
+              </explanation>
+            </title-part>
+          </class-title>
+        </classification-item>
+        <classification-item link-file="ecla-A45F.xml" level="5">
+          <classification-symbol>A45F</classification-symbol>
+          <class-title date-revised="0412">
+            <title-part>
+              <text scheme="ipc">TRAVELLING OR CAMP EQUIPMENT</text>
+            </title-part>
+            <title-part>
+              <text scheme="ipc"> SACKS OR PACKS CARRIED ON THE BODY </text>
+              <explanation>
+                <text scheme="ipc">hand carried bags or luggage<class-ref scheme="ecla">A45C</class-ref></text>
+              </explanation>
+            </title-part>
+          </class-title>
+        </classification-item>
+      </classification-item>
+      <classification-item level="4">
+        <classification-symbol>A46</classification-symbol>
+        <class-title>
+          <title-part>
+            <text scheme="ipc">BRUSHWARE</text>
+          </title-part>
+        </class-title>
+        <classification-item link-file="ecla-A46B.xml" level="5">
+          <classification-symbol>A46B</classification-symbol>
+          <class-title>
+            <title-part>
+              <text scheme="ipc">BRUSHES </text>
+              <explanation>
+                <text scheme="ipc">handles not integral with brushware B25G</text>
+              </explanation>
+            </title-part>
+          </class-title>
+        </classification-item>
+        <classification-item link-file="ecla-A46D.xml" level="5">
+          <classification-symbol>A46D</classification-symbol>
+          <class-title>
+            <title-part>
+              <text scheme="ipc">MANUFACTURE OF BRUSHES</text>
+            </title-part>
+          </class-title>
+        </classification-item>
+      </classification-item>
+      <classification-item level="4">
+        <classification-symbol>A47</classification-symbol>
+        <class-title>
+          <title-part>
+            <text scheme="ipc">FURNITURE </text>
+            <explanation>
+              <text scheme="ipc">arrangements of seats for, or adaptations of seats to, vehicles <class-ref scheme="ecla">B60N</class-ref></text>
+            </explanation>
+          </title-part>
+          <title-part>
+            <text scheme="ipc"> DOMESTIC ARTICLES OR APPLIANCES</text>
+          </title-part>
+          <title-part>
+            <text scheme="ipc"> COFFEE MILLS</text>
+          </title-part>
+          <title-part>
+            <text scheme="ipc"> SPICE MILLS</text>
+          </title-part>
+          <title-part>
+            <text scheme="ipc"> SUCTION CLEANERS IN GENERAL </text>
+            <explanation>
+              <text scheme="ipc">ladders <class-ref scheme="ecla">E06C</class-ref></text>
+            </explanation>
+          </title-part>
+        </class-title>
+        <notes-and-warnings>
+          <note type="note">
+            <note-paragraph>In this subclass, the following term is used with the meaning indicated: 
+<pre><br/>- "furniture" covers also easels or stands, e.g. for blackboards or <br/>  drawing tables.</pre>
+</note-paragraph>
+          </note>
+        </notes-and-warnings>
+        <classification-item link-file="ecla-A47B.xml" level="5">
+          <classification-symbol>A47B</classification-symbol>
+          <class-title date-revised="0901">
+            <title-part>
+              <text scheme="ipc">TABLES</text>
+            </title-part>
+            <title-part>
+              <text scheme="ipc"> DESKS</text>
+            </title-part>
+            <title-part>
+              <text scheme="ipc"> OFFICE FURNITURE</text>
+            </title-part>
+            <title-part>
+              <text scheme="ipc"> CABINETS</text>
+            </title-part>
+            <title-part>
+              <text scheme="ipc"> DRAWERS</text>
+            </title-part>
+            <title-part>
+              <text scheme="ipc"> GENERAL DETAILS OF FURNITURE </text>
+              <explanation>
+                <text scheme="ipc">furniture jointing F16B</text>
+              </explanation>
+            </title-part>
+          </class-title>
+        </classification-item>
+        <classification-item link-file="ecla-A47C.xml" level="5">
+          <classification-symbol>A47C</classification-symbol>
+          <class-title date-revised="0710">
+            <title-part>
+              <text scheme="ipc">CHAIRS </text>
+              <explanation>
+                <text scheme="ipc">seats specially adapted for vehicles <class-ref scheme="ecla">B60N2/00</class-ref>; </text>
+                <comment>
+                  <text scheme="ecla"> hunting stands, e.g. hunting seats <class-ref scheme="ecla">A01M31/02</class-ref>; seats adapted for angling, e.g. fisherman's seats <class-ref scheme="ecla">A01K97/22</class-ref>; bath seats <class-ref scheme="ecla">A47K3/12</class-ref>; shower seats <class-ref scheme="ecla">A47K3/28B1</class-ref>; chairs with toilet means <class-ref scheme="ecla">A47K11/04</class-ref>; seats for surgeons, dentists <class-ref scheme="ecla">A61B19/00J</class-ref>; chairs for disabled persons <class-ref scheme="ecla">A61G5/00</class-ref>; operating chairs, dental chairs, physiotherapeutic chairs, gynaecological chairs <class-ref scheme="ecla">A61G15/00</class-ref>; chairs with massage means <class-ref scheme="ecla">A61H1/00B4</class-ref>; ski-lift seats <class-ref scheme="ecla">B61B12/00B</class-ref>; rail vehicles seats <class-ref scheme="ecla">B61D33/00</class-ref>; vessel furniture, e.g. boat seats <class-ref scheme="ecla">B63B29/04</class-ref>; aircraft seats <class-ref scheme="ecla">B64D11/06</class-ref></text>
+                </comment>
+              </explanation>
+            </title-part>
+            <title-part>
+              <text scheme="ipc">  SOFAS</text>
+            </title-part>
+            <title-part>
+              <text scheme="ipc"> BEDS </text>
+              <explanation>
+                <text scheme="ipc">upholstery in general B68G; </text>
+                <comment>
+                  <text scheme="ecla"> beds specially adapted for nursing <class-ref scheme="ecla">A61G7/00</class-ref>; sleeping accomodation for caravans <class-ref scheme="ecla">B60P3/38</class-ref>, sleeping accommodation for rail vehicles <class-ref scheme="ecla">B61D31/00</class-ref>; sleeping accommodation for load-carrying vehicles <class-ref scheme="ecla">B62D33/06D</class-ref>; berths for vessels <class-ref scheme="ecla">B63B29/10</class-ref></text>
+                </comment>
+              </explanation>
+            </title-part>
+          </class-title>
+        </classification-item>
+        <classification-item link-file="ecla-A47D.xml" level="5">
+          <classification-symbol>A47D</classification-symbol>
+          <class-title>
+            <title-part>
+              <text scheme="ipc">FURNITURE SPECIALLY ADAPTED FOR CHILDREN </text>
+              <explanation>
+                <text scheme="ipc">school benches or desks <class-ref scheme="ecla">A47B39/00</class-ref>, <class-ref scheme="ecla">A47B41/00</class-ref></text>
+              </explanation>
+            </title-part>
+          </class-title>
+        </classification-item>
+        <classification-item link-file="ecla-A47F.xml" level="5">
+          <classification-symbol>A47F</classification-symbol>
+          <class-title>
+            <title-part>
+              <text scheme="ipc">SPECIAL FURNITURE, FITTINGS, OR ACCESSORIES FOR SHOPS, STOREHOUSES, BARS, RESTAURANTS OR THE LIKE</text>
+            </title-part>
+            <title-part>
+              <text scheme="ipc"> PAYING COUNTERS</text>
+            </title-part>
+          </class-title>
+        </classification-item>
+        <classification-item link-file="ecla-A47G.xml" level="5">
+          <classification-symbol>A47G</classification-symbol>
+          <class-title>
+            <title-part>
+              <text scheme="ipc">HOUSEHOLD OR TABLE EQUIPMENT </text>
+              <explanation>
+                <text scheme="ipc">book-ends <class-ref scheme="ecla">A47B5/00</class-ref>; knives B26B</text>
+              </explanation>
+            </title-part>
+          </class-title>
+        </classification-item>
+        <classification-item link-file="ecla-A47H.xml" level="5">
+          <classification-symbol>A47H</classification-symbol>
+          <class-title>
+            <title-part>
+              <text scheme="ipc">FURNISHINGS FOR WINDOWS OR DOORS </text>
+              <explanation>
+                <text scheme="ipc">concerned with the functioning of the door or window E05; roller blinds E06B</text>
+              </explanation>
+            </title-part>
+          </class-title>
+        </classification-item>
+        <classification-item link-file="ecla-A47J.xml" level="5">
+          <classification-symbol>A47J</classification-symbol>
+          <class-title date-revised="9508">
+            <title-part>
+              <text scheme="ipc">KITCHEN EQUIPMENT </text>
+              <comment>
+                <explanation>
+                  <text scheme="ecla">domestic washing or cleaning A47L; refuse receptacles <class-ref scheme="ecla">B65F1/00</class-ref></text>
+                </explanation>
+              </comment>
+            </title-part>
+            <title-part>
+              <text scheme="ipc"> COFFEE MILLS</text>
+            </title-part>
+            <title-part>
+              <text scheme="ipc"> SPICE MILLS</text>
+            </title-part>
+            <title-part>
+              <text scheme="ipc"> APPARATUS FOR MAKING BEVERAGES </text>
+              <explanation>
+                <text scheme="ecla">disintegrating, e.g. mincing, B02C; severing, e.g. cutting, slicing, B26B, B26D</text>
+              </explanation>
+            </title-part>
+          </class-title>
+        </classification-item>
+        <classification-item link-file="ecla-A47K.xml" level="5">
+          <classification-symbol>A47K</classification-symbol>
+          <class-title>
+            <title-part>
+              <text scheme="ipc">SANITARY EQUIPMENT NOT OTHERWISE PROVIDED FOR </text>
+              <explanation>
+                <text scheme="ipc">connecting to water supply or waste pipe, sinks <class-ref scheme="ecla">E03C</class-ref>; water-closets <class-ref scheme="ecla">E03D</class-ref></text>
+              </explanation>
+            </title-part>
+            <title-part>
+              <text scheme="ipc"> TOILET ACCESSORIES </text>
+              <explanation>
+                <text scheme="ipc">cosmetic equipment <class-ref scheme="ecla">A45D</class-ref></text>
+              </explanation>
+            </title-part>
+          </class-title>
+        </classification-item>
+        <classification-item link-file="ecla-A47L.xml" level="5">
+          <classification-symbol>A47L</classification-symbol>
+          <class-title date-revised="9502">
+            <title-part>
+              <text scheme="ipc">DOMESTIC WASHING OR CLEANING </text>
+              <explanation>
+                <text scheme="ipc">brushes A46B; cleaning quantities of bottles or of other hollow articles of one kind <class-ref scheme="ecla">B08B9/00</class-ref>; laundry D06F</text>
+              </explanation>
+            </title-part>
+            <title-part>
+              <text scheme="ipc"> SUCTION CLEANERS IN GENERAL </text>
+              <explanation>
+                <text scheme="ipc">cleaning in general B08</text>
+              </explanation>
+            </title-part>
+          </class-title>
+        </classification-item>
+      </classification-item>
+    </classification-item>
+    <classification-item level="3">
+      <classification-symbol>A61</classification-symbol>
+      <class-title>
+        <title-part>
+          <text scheme="ipc">Health</text>
+        </title-part>
+        <title-part>
+          <text scheme="ipc"> amusement</text>
+        </title-part>
+      </class-title>
+      <classification-item level="4">
+        <classification-symbol>A61</classification-symbol>
+        <class-title>
+          <title-part>
+            <text scheme="ipc">MEDICAL OR VETERINARY SCIENCE</text>
+          </title-part>
+          <title-part>
+            <text scheme="ipc"> HYGIENE</text>
+          </title-part>
+        </class-title>
+        <classification-item link-file="ecla-A61B.xml" level="5">
+          <classification-symbol>A61B</classification-symbol>
+          <class-title>
+            <title-part>
+              <text scheme="ipc">DIAGNOSIS</text>
+            </title-part>
+            <title-part>
+              <text scheme="ipc"> SURGERY</text>
+            </title-part>
+            <title-part>
+              <text scheme="ipc"> IDENTIFICATION </text>
+              <explanation>
+                <text scheme="ipc">analysing biological material G01N, e.g. <class-ref scheme="ecla">G01N33/48</class-ref>; obtaining records using waves other than optical waves, in general <class-ref scheme="ecla">G03B42/00</class-ref></text>
+              </explanation>
+            </title-part>
+          </class-title>
+        </classification-item>
+        <classification-item link-file="ecla-A61C.xml" level="5">
+          <classification-symbol>A61C</classification-symbol>
+          <class-title>
+            <title-part>
+              <text scheme="ipc">DENTISTRY</text>
+            </title-part>
+            <title-part>
+              <text scheme="ipc"> APPARATUS OR METHODS FOR ORAL OR DENTAL HYGIENE </text>
+              <explanation>
+                <text scheme="ipc">non-driven toothbrushes A46B; </text>
+                <comment>
+                  <text scheme="ecla"> tongue scrapers <class-ref scheme="ecla">A61B17/24</class-ref>;</text>
+                </comment>
+                <text scheme="ipc"> preparations for dentistry <class-ref scheme="ecla">A61K6/00</class-ref>; preparations for cleaning the teeth or mouth <class-ref scheme="ecla">A61K8/00</class-ref>, <class-ref scheme="ecla">A61Q11/00</class-ref></text>
+              </explanation>
+            </title-part>
+          </class-title>
+        </classification-item>
+        <classification-item link-file="ecla-A61D.xml" level="5">
+          <classification-symbol>A61D</classification-symbol>
+          <class-title>
+            <title-part>
+              <text scheme="ipc">VETERINARY INSTRUMENTS, IMPLEMENTS, TOOLS, OR METHODS</text>
+            </title-part>
+          </class-title>
+        </classification-item>
+        <classification-item link-file="ecla-A61F.xml" level="5">
+          <classification-symbol>A61F</classification-symbol>
+          <class-title>
+            <title-part>
+              <text scheme="ipc">FILTERS IMPLANTABLE INTO BLOOD VESSELS</text>
+            </title-part>
+            <title-part>
+              <text scheme="ipc"> PROSTHESES</text>
+            </title-part>
+            <title-part>
+              <text scheme="ipc"> ORTHOPAEDIC, NURSING OR CONTRACEPTIVE DEVICES</text>
+            </title-part>
+            <title-part>
+              <text scheme="ipc"> FOMENTATION</text>
+            </title-part>
+            <title-part>
+              <text scheme="ipc"> TREATMENT OR PROTECTION OF EYES OR EARS</text>
+            </title-part>
+            <title-part>
+              <text scheme="ipc"> BANDAGES, DRESSINGS OR ABSORBENT PADS</text>
+            </title-part>
+            <title-part>
+              <text scheme="ipc"> FIRST-AID KITS </text>
+              <explanation>
+                <text scheme="ipc">dental prosthetics A61C</text>
+              </explanation>
+            </title-part>
+          </class-title>
+        </classification-item>
+        <classification-item link-file="ecla-A61G.xml" level="5">
+          <classification-symbol>A61G</classification-symbol>
+          <class-title>
+            <title-part>
+              <text scheme="ipc">TRANSPORT OR ACCOMODATION FOR PATIENTS</text>
+            </title-part>
+            <title-part>
+              <text scheme="ipc"> OPERATING TABLES OR CHAIRS</text>
+            </title-part>
+            <title-part>
+              <text scheme="ipc"> CHAIRS FOR DENTISTRY</text>
+            </title-part>
+            <title-part>
+              <text scheme="ipc"> FUNERAL DEVICES </text>
+              <explanation>
+                <text scheme="ipc">embalming corpses <class-ref scheme="ecla">A01N1/00</class-ref>; </text>
+                <comment>
+                  <text scheme="ecla"> chairs or beds in general A47C; walking aids <class-ref scheme="ecla">A61H3/00</class-ref></text>
+                </comment>
+              </explanation>
+            </title-part>
+          </class-title>
+        </classification-item>
+        <classification-item link-file="ecla-A61H.xml" level="5">
+          <classification-symbol>A61H</classification-symbol>
+          <class-title date-revised="9604">
+            <title-part>
+              <text scheme="ipc">PHYSICAL THERAPY APPARATUS, e.g. DEVICES FOR LOCATING OR STIMULATING REFLEX POINTS IN THE BODY</text>
+            </title-part>
+            <title-part>
+              <text scheme="ipc"> ARTIFICIAL RESPIRATION</text>
+            </title-part>
+            <title-part>
+              <text scheme="ipc"> MASSAGE</text>
+            </title-part>
+            <title-part>
+              <text scheme="ipc"> BATHING DEVICES FOR SPECIAL THERAPEUTIC OR HYGIENIC PURPOSES OR SPECIFIC PARTS OF THE BODY </text>
+              <explanation>
+                <text scheme="ipc">methods or devices enabling invalids to operate an apparatus or a device not forming part of the body <class-ref scheme="ecla">A61F4/00</class-ref>; electrotherapy, magnetotherapy, radiation therapy, ultrasound therapy A61N</text>
+              </explanation>
+            </title-part>
+          </class-title>
+        </classification-item>
+        <classification-item link-file="ecla-A61J.xml" level="5">
+          <classification-symbol>A61J</classification-symbol>
+          <class-title>
+            <title-part>
+              <text scheme="ipc">CONTAINERS SPECIALLY ADAPTED FOR MEDICAL OR PHARMACEUTICAL PURPOSES</text>
+            </title-part>
+            <title-part>
+              <text scheme="ipc"> DEVICES OR METHODS SPECIALLY ADAPTED FOR BRINGING PHARMACEUTICAL PRODUCTS INTO PARTICULAR PHYSICAL OR ADMINISTERING FORMS</text>
+            </title-part>
+            <title-part>
+              <text scheme="ipc"> DEVICES FOR ADMINISTERING FOOD OR MEDICINES ORALLY</text>
+            </title-part>
+            <title-part>
+              <text scheme="ipc"> BABY COMFORTERS</text>
+            </title-part>
+            <title-part>
+              <text scheme="ipc"> DEVICES FOR RECEIVING SPITTLE</text>
+            </title-part>
+          </class-title>
+        </classification-item>
+        <classification-item link-file="ecla-A61K.xml" level="5">
+          <classification-symbol>A61K</classification-symbol>
+          <class-title date-revised="1003">
+            <title-part>
+              <text scheme="ipc">PREPARATIONS FOR MEDICAL, DENTAL, OR TOILET PURPOSES </text>
+              <explanation>
+                <text scheme="ipc">devices or methods specially adapted for bringing pharmaceutical products into particular physical or administering forms <class-ref scheme="ecla">A61J3/00</class-ref>; chemical aspects of, or use of materials for deodorisation of air, for disinfection or sterilisation, or for bandages, dressings, absorbent pads or surgical articles A61L; </text>
+                <comment>
+                  <text scheme="ecla"> compounds per se C01, C07, C08, C12N</text>
+                </comment>
+                <text scheme="ipc">; soap compositions C11D; </text>
+                <comment>
+                  <text scheme="ecla"> micro-organisms per se C12N</text>
+                </comment>
+              </explanation>
+            </title-part>
+          </class-title>
+        </classification-item>
+        <classification-item link-file="ecla-A61L.xml" level="5">
+          <classification-symbol>A61L</classification-symbol>
+          <class-title>
+            <title-part>
+              <text scheme="ipc">METHODS OR APPARATUS FOR STERILISING MATERIALS OR OBJECTS IN GENERAL</text>
+            </title-part>
+            <title-part>
+              <text scheme="ipc"> DISINFECTION, STERILISATION, OR DEODORISATION OF AIR</text>
+            </title-part>
+            <title-part>
+              <text scheme="ipc"> CHEMICAL ASPECTS OF BANDAGES, DRESSINGS, ABSORBENT PADS, OR SURGICAL ARTICLES</text>
+            </title-part>
+            <title-part>
+              <text scheme="ipc"> MATERIALS FOR BANDAGES, DRESSINGS, ABSORBENT PADS, OR SURGICAL ARTICLES </text>
+              <explanation>
+                <text scheme="ipc">preservation of bodies or disinfecting characterised by the agent employed A01N; preserving, e.g. sterilising, food or foodstuffs A23; preparations for medical, dental or toilet purposes A61K; preparation of ozone <class-ref scheme="ecla">C01B13/10</class-ref></text>
+              </explanation>
+            </title-part>
+          </class-title>
+        </classification-item>
+        <classification-item link-file="ecla-A61M.xml" level="5">
+          <classification-symbol>A61M</classification-symbol>
+          <class-title>
+            <title-part>
+              <text scheme="ipc">DEVICES FOR INTRODUCING MEDIA INTO, OR ONTO, THE BODY </text>
+              <explanation>
+                <text scheme="ipc">introducing media into or onto the bodies of animals <class-ref scheme="ecla">A61D7/00</class-ref>; means for inserting tampons <class-ref scheme="ecla">A61F13/26</class-ref>; devices for administering food or medicines orally A61J; containers for collecting, storing or administering blood or medical fluids <class-ref scheme="ecla">A61J1/05</class-ref></text>
+              </explanation>
+            </title-part>
+            <title-part>
+              <text scheme="ipc"> DEVICES FOR TRANSDUCING BODY MEDIA OR FOR TAKING MEDIA FROM THE BODY </text>
+              <explanation>
+                <text scheme="ipc">surgery A61B; chemical aspects of surgical articles A61L</text>
+              </explanation>
+            </title-part>
+            <title-part>
+              <text scheme="ipc"> DEVICES FOR PRODUCING OR ENDING SLEEP OR STUPOR</text>
+            </title-part>
+          </class-title>
+        </classification-item>
+        <classification-item link-file="ecla-A61N.xml" level="5">
+          <classification-symbol>A61N</classification-symbol>
+          <class-title>
+            <title-part>
+              <text scheme="ipc">ELECTROTHERAPY</text>
+            </title-part>
+            <title-part>
+              <text scheme="ipc"> MAGNETOTHERAPY</text>
+            </title-part>
+            <title-part>
+              <text scheme="ipc"> RADIATION THERAPY </text>
+              <explanation>
+                <text scheme="ipc">measurement of bio-electric currents A61B; electrosurgical apparatus or circuits therefor <class-ref scheme="ecla">A61B17/36</class-ref>; physical therapy arrangements in general A61H; anaesthetic apparatus in general A61M; incandescent lamps H01K; infra-red radiators for heating H05B</text>
+              </explanation>
+            </title-part>
+          </class-title>
+        </classification-item>
+        <classification-item link-file="ecla-A61Q.xml" level="5">
+          <classification-symbol>A61Q</classification-symbol>
+          <class-title>
+            <title-part>
+              <text scheme="ipc">SPECIFIC USE OF COSMETICS OR SIMILAR TOILET PREPARATIONS</text>
+            </title-part>
+          </class-title>
+        </classification-item>
+      </classification-item>
+      <classification-item level="4">
+        <classification-symbol>A62</classification-symbol>
+        <class-title>
+          <title-part>
+            <text scheme="ipc">LIFE-SAVING</text>
+          </title-part>
+          <title-part>
+            <text scheme="ipc"> FIRE-FIGHTING </text>
+            <explanation>
+              <text scheme="ipc">ladders <class-ref scheme="ecla">E06C</class-ref></text>
+            </explanation>
+          </title-part>
+        </class-title>
+        <classification-item link-file="ecla-A62B.xml" level="5">
+          <classification-symbol>A62B</classification-symbol>
+          <class-title>
+            <title-part>
+              <text scheme="ipc">DEVICES, APPARATUS OR METHODS FOR LIFE-SAVING </text>
+              <explanation>
+                <text scheme="ipc">valves specially adapted for medical use <class-ref scheme="ecla">A61M39/00</class-ref>; life-saving devices, apparatus or methods specially adapted for use in water <class-ref scheme="ecla">B63C9/00</class-ref>; divers` equipment <class-ref scheme="ecla">B63C11/00</class-ref>; specially adopted for use with aircraft, e.g. parachutes, ejector seats, B64D; rescue devices peculiar to mining <class-ref scheme="ecla">E21F11/00</class-ref></text>
+              </explanation>
+            </title-part>
+          </class-title>
+        </classification-item>
+        <classification-item link-file="ecla-A62C.xml" level="5">
+          <classification-symbol>A62C</classification-symbol>
+          <class-title>
+            <title-part>
+              <text scheme="ipc">FIRE-FIGHTING </text>
+              <explanation>
+                <text scheme="ipc">fire-extinguishing compositions, use of chemical substances in extinguishing fires <class-ref scheme="ecla">A62D1/00</class-ref>; spraying, applying liquids or other fluent materials to surfaces in general B05; alarm arrangements G08B, e.g. fire alarms actuated by smoke or gases <class-ref scheme="ecla">G08B17/10</class-ref></text>
+              </explanation>
+            </title-part>
+          </class-title>
+        </classification-item>
+        <classification-item link-file="ecla-A62D.xml" level="5">
+          <classification-symbol>A62D</classification-symbol>
+          <class-title>
+            <title-part>
+              <text scheme="ipc">CHEMICAL MEANS FOR EXTINGUISHING FIRES OR FOR COMBATING OR PROTECTING AGAINST HARMFUL CHEMICAL AGENTS</text>
+            </title-part>
+            <title-part>
+              <text scheme="ipc"> CHEMICAL MATERIALS FOR USE IN BREATHING APPARATUS</text>
+            </title-part>
+          </class-title>
+        </classification-item>
+      </classification-item>
+      <classification-item level="4">
+        <classification-symbol>A63</classification-symbol>
+        <class-title>
+          <title-part>
+            <text scheme="ipc">SPORTS</text>
+          </title-part>
+          <title-part>
+            <text scheme="ipc"> GAMES</text>
+          </title-part>
+          <title-part>
+            <text scheme="ipc"> AMUSEMENTS</text>
+          </title-part>
+        </class-title>
+        <classification-item link-file="ecla-A63B.xml" level="5">
+          <classification-symbol>A63B</classification-symbol>
+          <class-title>
+            <title-part>
+              <text scheme="ipc">APPARATUS FOR PHYSICAL TRAINING, GYMNASTICS, SWIMMING, CLIMBING, OR FENCING</text>
+            </title-part>
+            <title-part>
+              <text scheme="ipc"> BALL GAMES</text>
+            </title-part>
+            <title-part>
+              <text scheme="ipc"> TRAINING EQUIPMENT </text>
+              <explanation>
+                <text scheme="ipc">apparatus for passive exercising, massage A61H</text>
+              </explanation>
+            </title-part>
+          </class-title>
+        </classification-item>
+        <classification-item link-file="ecla-A63C.xml" level="5">
+          <classification-symbol>A63C</classification-symbol>
+          <class-title>
+            <title-part>
+              <text scheme="ipc">SKATES</text>
+            </title-part>
+            <title-part>
+              <text scheme="ipc"> SKIS</text>
+            </title-part>
+            <title-part>
+              <text scheme="ipc"> ROLLER SKATES</text>
+            </title-part>
+            <title-part>
+              <text scheme="ipc"> DESIGN OR LAYOUT OF COURTS, RINKS OR THE LIKE </text>
+              <explanation>
+                <text scheme="ipc">devices for underwater sports <class-ref scheme="ecla">A63B31/00</class-ref>, <class-ref scheme="ecla">A63B33/00</class-ref>, <class-ref scheme="ecla">B63C11/00</class-ref>; devices for gliding on water, e.g. water skis, <class-ref scheme="ecla">B63B35/79</class-ref>, <class-ref scheme="ecla">B63B35/81</class-ref>, <class-ref scheme="ecla">B63B35/83</class-ref></text>
+              </explanation>
+            </title-part>
+          </class-title>
+        </classification-item>
+        <classification-item link-file="ecla-A63D.xml" level="5">
+          <classification-symbol>A63D</classification-symbol>
+          <class-title>
+            <title-part>
+              <text scheme="ipc">BOWLING-ALLEYS</text>
+            </title-part>
+            <title-part>
+              <text scheme="ipc"> BOWLING GAMES</text>
+            </title-part>
+            <title-part>
+              <text scheme="ipc"> BOCCIA</text>
+            </title-part>
+            <title-part>
+              <text scheme="ipc"> BOWLS</text>
+            </title-part>
+            <title-part>
+              <text scheme="ipc"> BAGATELLE</text>
+            </title-part>
+            <title-part>
+              <text scheme="ipc"> BILLIARDS </text>
+              <explanation>
+                <text scheme="ipc">balls A63B; indoor games using small moving playing bodies, e.g. balls, <class-ref scheme="ecla">A63F7/00</class-ref></text>
+              </explanation>
+            </title-part>
+          </class-title>
+        </classification-item>
+        <classification-item link-file="ecla-A63F.xml" level="5">
+          <classification-symbol>A63F</classification-symbol>
+          <class-title>
+            <title-part>
+              <text scheme="ipc">CARD, BOARD, OR ROULETTE GAMES</text>
+            </title-part>
+            <title-part>
+              <text scheme="ipc"> INDOOR GAMES USING SMALL MOVING PLAYING BODIES</text>
+            </title-part>
+            <title-part>
+              <text scheme="ipc"> MISCELLANEOUS GAMES </text>
+              <explanation>
+                <text scheme="ipc">data-processing equipment characterised by a specific application for game playing <class-ref scheme="ecla">G06F17/00</class-ref>, <class-ref scheme="ecla">G06F19/00</class-ref>; </text>
+                <comment>
+                  <text scheme="ecla"> coin-freed apparatus for games <class-ref scheme="ecla">G07F17/32</class-ref></text>
+                </comment>
+              </explanation>
+            </title-part>
+          </class-title>
+        </classification-item>
+        <classification-item link-file="ecla-A63G.xml" level="5">
+          <classification-symbol>A63G</classification-symbol>
+          <class-title>
+            <title-part>
+              <text scheme="ipc">MERRY-GO-ROUNDS</text>
+            </title-part>
+            <title-part>
+              <text scheme="ipc"> SWINGS</text>
+            </title-part>
+            <title-part>
+              <text scheme="ipc"> ROCKING-HORSES</text>
+            </title-part>
+            <title-part>
+              <text scheme="ipc"> CHUTES</text>
+            </title-part>
+            <title-part>
+              <text scheme="ipc"> SWITCHBACKS</text>
+            </title-part>
+            <title-part>
+              <text scheme="ipc"> SIMILAR DEVICES FOR PUBLIC AMUSEMENT</text>
+            </title-part>
+          </class-title>
+        </classification-item>
+        <classification-item link-file="ecla-A63H.xml" level="5">
+          <classification-symbol>A63H</classification-symbol>
+          <class-title>
+            <title-part>
+              <text scheme="ipc">TOYS, e.g. TOPS, DOLLS, HOOPS, BUILDING BLOCKS</text>
+            </title-part>
+          </class-title>
+        </classification-item>
+        <classification-item link-file="ecla-A63J.xml" level="5">
+          <classification-symbol>A63J</classification-symbol>
+          <class-title>
+            <title-part>
+              <text scheme="ipc">DEVICES FOR THEATRES, CIRCUSES, OR THE LIKE</text>
+            </title-part>
+            <title-part>
+              <text scheme="ipc">  CONJURING APPLIANCES OR THE LIKE </text>
+              <explanation>
+                <text scheme="ipc">buildings for meetings, entertainments or sports <class-ref scheme="ecla">E04H3/10</class-ref></text>
+              </explanation>
+            </title-part>
+          </class-title>
+        </classification-item>
+        <classification-item link-file="ecla-A63K.xml" level="5">
+          <classification-symbol>A63K</classification-symbol>
+          <class-title>
+            <title-part>
+              <text scheme="ipc">RACING</text>
+            </title-part>
+            <title-part>
+              <text scheme="ipc"> RIDING SPORTS</text>
+            </title-part>
+            <title-part>
+              <text scheme="ipc"> EQUIPMENT OR ACCESSORIES THEREFOR </text>
+              <explanation>
+                <text scheme="ipc">stop watches <class-ref scheme="ecla">G04F7/06</class-ref>; timing <class-ref scheme="ecla">G07C1/22</class-ref>; indicating arrangements for variable information by selection or combination of individual elements <class-ref scheme="ecla">G09F9/00</class-ref></text>
+              </explanation>
+            </title-part>
+          </class-title>
+        </classification-item>
+      </classification-item>
+    </classification-item>
+  </classification-item>
+</class-scheme>
