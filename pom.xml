@@ -102,6 +102,11 @@
       <artifactId>org.apache.stanbol.entityhub.model.clerezza</artifactId>
       <version>0.11.0-SNAPSHOT</version>
     </dependency>   
+     <dependency>
+      <groupId>org.apache.stanbol</groupId>
+      <artifactId>org.apache.stanbol.commons.web.base</artifactId>
+      <version>0.11.0-SNAPSHOT</version>
+    </dependency>    
     <dependency>
       <groupId>org.slf4j</groupId>
       <artifactId>slf4j-api</artifactId>
@@ -131,8 +136,8 @@
     <dependency>
       <groupId>org.apache.stanbol</groupId>
       <artifactId>org.apache.stanbol.enhancer.rdfentities</artifactId>
-      <version>0.10.0-SNAPSHOT</version>
-      <scope>test</scope>
+      <version>0.10.0</version>
+      <type>bundle</type>
     </dependency>
         <dependency>
       <groupId>org.apache.stanbol</groupId>

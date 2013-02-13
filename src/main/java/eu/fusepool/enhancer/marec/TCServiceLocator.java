@@ -1,7 +1,7 @@
 /**
  * 
  */
-package eu.fusepool.enahncer.marec;
+package eu.fusepool.enhancer.marec;
 
 import org.apache.clerezza.rdf.core.TripleCollection;
 import org.osgi.framework.BundleContext;
