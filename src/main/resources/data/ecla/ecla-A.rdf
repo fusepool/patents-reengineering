@@ -16,24 +16,40 @@
    <rdf:Description rdf:about="http://csarven.ca/#i">
       <rdf:type rdf:resource="http://www.w3.org/ns/prov#Agent"/>
    </rdf:Description>
+   <rdf:Description rdf:about="http://example.org/concept/ecla">
+      <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentClassification"/>
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+      <skos:notation>ECLA</skos:notation>
+      <skos:prefLabel xml:lang="en">European Patent Classification</skos:prefLabel>
+      <foaf:homepage rdf:resource="http://worldwide.espacenet.com/classification"/>
+      <foaf:page rdf:resource="http://www.epo.org/"/>
+   </rdf:Description>
    <rdf:Description rdf:about="http://example.org/concept/ecla/2/A">
+      <skos:notation>A</skos:notation>
       <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
       <rdf:type rdf:resource="http://purl.org/linked-data/xkos#ClassificationLevel"/>
+      <rdf:type rdf:resource="ECLACategoory"/>
       <xkos:depth>2</xkos:depth>
       <skos:member>
          <rdf:Description rdf:about="http://example.org/concept/ecla/3/A01">
+            <skos:notation>A01</skos:notation>
             <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
             <rdf:type rdf:resource="http://purl.org/linked-data/xkos#ClassificationLevel"/>
+            <rdf:type rdf:resource="ECLACategoory"/>
             <xkos:depth>3</xkos:depth>
             <skos:member>
                <rdf:Description rdf:about="http://example.org/concept/ecla/4/A01">
+                  <skos:notation>A01</skos:notation>
                   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
                   <rdf:type rdf:resource="http://purl.org/linked-data/xkos#ClassificationLevel"/>
+                  <rdf:type rdf:resource="ECLACategoory"/>
                   <xkos:depth>4</xkos:depth>
                   <skos:member>
                      <rdf:Description rdf:about="http://example.org/concept/ecla/5/A01B">
+                        <skos:notation>A01B</skos:notation>
                         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
                         <rdf:type rdf:resource="http://purl.org/linked-data/xkos#ClassificationLevel"/>
+                        <rdf:type rdf:resource="ECLACategoory"/>
                         <xkos:depth>5</xkos:depth>
                         <skos:prefLabel xml:lang="en">SOIL WORKING IN AGRICULTURE OR FORESTRY</skos:prefLabel>
                         <skos:prefLabel xml:lang="en">PARTS, DETAILS, OR ACCESSORIES OF AGRICULTURAL MACHINES OR IMPLEMENTS, IN GENERAL</skos:prefLabel>
@@ -48,8 +64,10 @@
                   </skos:member>
                   <skos:member>
                      <rdf:Description rdf:about="http://example.org/concept/ecla/5/A01C">
+                        <skos:notation>A01C</skos:notation>
                         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
                         <rdf:type rdf:resource="http://purl.org/linked-data/xkos#ClassificationLevel"/>
+                        <rdf:type rdf:resource="ECLACategoory"/>
                         <xkos:depth>5</xkos:depth>
                         <skos:prefLabel xml:lang="en">PLANTING</skos:prefLabel>
                         <skos:prefLabel xml:lang="en">SOWING</skos:prefLabel>
@@ -66,19 +84,24 @@
                   </skos:member>
                   <skos:member>
                      <rdf:Description rdf:about="http://example.org/concept/ecla/5/A01D">
+                        <skos:notation>A01D</skos:notation>
                         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
                         <rdf:type rdf:resource="http://purl.org/linked-data/xkos#ClassificationLevel"/>
+                        <rdf:type rdf:resource="ECLACategoory"/>
                         <xkos:depth>5</xkos:depth>
                         <skos:prefLabel xml:lang="en">HARVESTING</skos:prefLabel>
                         <skos:prefLabel xml:lang="en">MOWING</skos:prefLabel>
+                        <skos:definition xml:lang="en">parts, details or accessories of agricultural machines or implements in general A01B51/00 to A01B75/00</skos:definition>
                         <dcterms:references rdf:resource="http://example.org/concept/ecla/A01B51/00"/>
                         <dcterms:references rdf:resource="http://example.org/concept/ecla/A01B75/00"/>
                      </rdf:Description>
                   </skos:member>
                   <skos:member>
                      <rdf:Description rdf:about="http://example.org/concept/ecla/5/A01F">
+                        <skos:notation>A01F</skos:notation>
                         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
                         <rdf:type rdf:resource="http://purl.org/linked-data/xkos#ClassificationLevel"/>
+                        <rdf:type rdf:resource="ECLACategoory"/>
                         <xkos:depth>5</xkos:depth>
                         <skos:prefLabel xml:lang="en">PROCESSING OF HARVESTED PRODUCE</skos:prefLabel>
                         <skos:prefLabel xml:lang="en">HAY OR STRAW PRESSES</skos:prefLabel>
@@ -89,8 +112,10 @@
                   </skos:member>
                   <skos:member>
                      <rdf:Description rdf:about="http://example.org/concept/ecla/5/A01G">
+                        <skos:notation>A01G</skos:notation>
                         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
                         <rdf:type rdf:resource="http://purl.org/linked-data/xkos#ClassificationLevel"/>
+                        <rdf:type rdf:resource="ECLACategoory"/>
                         <xkos:depth>5</xkos:depth>
                         <skos:prefLabel xml:lang="en">HORTICULTURE</skos:prefLabel>
                         <skos:prefLabel xml:lang="en">CULTIVATION OF VEGETABLES, FLOWERS, RICE, FRUIT, VINES, HOPS OR SEAWEED</skos:prefLabel>
@@ -106,8 +131,10 @@
                   </skos:member>
                   <skos:member>
                      <rdf:Description rdf:about="http://example.org/concept/ecla/5/A01H">
+                        <skos:notation>A01H</skos:notation>
                         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
                         <rdf:type rdf:resource="http://purl.org/linked-data/xkos#ClassificationLevel"/>
+                        <rdf:type rdf:resource="ECLACategoory"/>
                         <xkos:depth>5</xkos:depth>
                         <skos:prefLabel xml:lang="en">NEW PLANTS OR PROCESSES FOR OBTAINING THEM</skos:prefLabel>
                         <skos:prefLabel xml:lang="en">PLANT REPRODUCTION BY TISSUE CULTURE TECHNIQUES</skos:prefLabel>
@@ -115,8 +142,10 @@
                   </skos:member>
                   <skos:member>
                      <rdf:Description rdf:about="http://example.org/concept/ecla/5/A01J">
+                        <skos:notation>A01J</skos:notation>
                         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
                         <rdf:type rdf:resource="http://purl.org/linked-data/xkos#ClassificationLevel"/>
+                        <rdf:type rdf:resource="ECLACategoory"/>
                         <xkos:depth>5</xkos:depth>
                         <skos:prefLabel xml:lang="en">MANUFACTURE OF DAIRY PRODUCTS</skos:prefLabel>
                         <skos:definition xml:lang="en">preservation, pasteurisation, sterilisation of milk products A23; for chemical matters, see subclass A23C</skos:definition>
@@ -124,8 +153,10 @@
                   </skos:member>
                   <skos:member>
                      <rdf:Description rdf:about="http://example.org/concept/ecla/5/A01K">
+                        <skos:notation>A01K</skos:notation>
                         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
                         <rdf:type rdf:resource="http://purl.org/linked-data/xkos#ClassificationLevel"/>
+                        <rdf:type rdf:resource="ECLACategoory"/>
                         <xkos:depth>5</xkos:depth>
                         <skos:prefLabel xml:lang="en">ANIMAL HUSBANDRY</skos:prefLabel>
                         <skos:prefLabel xml:lang="en">CARE OF BIRDS, FISHES, INSECTS</skos:prefLabel>
@@ -136,10 +167,13 @@
                   </skos:member>
                   <skos:member>
                      <rdf:Description rdf:about="http://example.org/concept/ecla/5/A01L">
+                        <skos:notation>A01L</skos:notation>
                         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
                         <rdf:type rdf:resource="http://purl.org/linked-data/xkos#ClassificationLevel"/>
+                        <rdf:type rdf:resource="ECLACategoory"/>
                         <xkos:depth>5</xkos:depth>
                         <skos:prefLabel xml:lang="en">SHOEING OF ANIMALS</skos:prefLabel>
+                        <skos:definition xml:lang="en">making metal horseshoes by rolling B21H7/12; making horseshoes or appurtenances therefor by forging or pressing B21K15/02; casting of metals B22D</skos:definition>
                         <dcterms:references rdf:resource="http://example.org/concept/ecla/B21H7/12"/>
                         <dcterms:references rdf:resource="http://example.org/concept/ecla/B21K15/02"/>
                         <dcterms:references rdf:resource="http://example.org/concept/ecla/B22D"/>
@@ -147,8 +181,10 @@
                   </skos:member>
                   <skos:member>
                      <rdf:Description rdf:about="http://example.org/concept/ecla/5/A01M">
+                        <skos:notation>A01M</skos:notation>
                         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
                         <rdf:type rdf:resource="http://purl.org/linked-data/xkos#ClassificationLevel"/>
+                        <rdf:type rdf:resource="ECLACategoory"/>
                         <xkos:depth>5</xkos:depth>
                         <skos:prefLabel xml:lang="en">CATCHING OR TRAPPING OF ANIMALS</skos:prefLabel>
                         <skos:definition xml:lang="en">apiculture A01K47/00 to A01K59/00; fishing A01K69/00 to A01K97/00; pesticides A01N</skos:definition>
@@ -163,8 +199,10 @@
                   </skos:member>
                   <skos:member>
                      <rdf:Description rdf:about="http://example.org/concept/ecla/5/A01N">
+                        <skos:notation>A01N</skos:notation>
                         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
                         <rdf:type rdf:resource="http://purl.org/linked-data/xkos#ClassificationLevel"/>
+                        <rdf:type rdf:resource="ECLACategoory"/>
                         <xkos:depth>5</xkos:depth>
                         <skos:prefLabel xml:lang="en">PRESERVATION OF BODIES OF HUMANS OR ANIMALS OR PLANTS OR PARTS THEREOF</skos:prefLabel>
                         <skos:prefLabel xml:lang="en">BIOCIDES, e.g. AS DISINFECTANTS, AS PESTICIDES, AS HERBICIDES</skos:prefLabel>
@@ -177,6 +215,28 @@
                         <dcterms:references rdf:resource="http://example.org/concept/ecla/C09K17/00"/>
                      </rdf:Description>
                   </skos:member>
+                  <pmo:subCategory rdf:resource="http://example.org/concept/ecla/5/A01B"/>
+                  <pmo:parentCategory rdf:resource="http://example.org/concept/ecla/4/A01"/>
+                  <pmo:subCategory rdf:resource="http://example.org/concept/ecla/5/A01C"/>
+                  <pmo:parentCategory rdf:resource="http://example.org/concept/ecla/4/A01"/>
+                  <pmo:subCategory rdf:resource="http://example.org/concept/ecla/5/A01D"/>
+                  <pmo:parentCategory rdf:resource="http://example.org/concept/ecla/4/A01"/>
+                  <pmo:subCategory rdf:resource="http://example.org/concept/ecla/5/A01F"/>
+                  <pmo:parentCategory rdf:resource="http://example.org/concept/ecla/4/A01"/>
+                  <pmo:subCategory rdf:resource="http://example.org/concept/ecla/5/A01G"/>
+                  <pmo:parentCategory rdf:resource="http://example.org/concept/ecla/4/A01"/>
+                  <pmo:subCategory rdf:resource="http://example.org/concept/ecla/5/A01H"/>
+                  <pmo:parentCategory rdf:resource="http://example.org/concept/ecla/4/A01"/>
+                  <pmo:subCategory rdf:resource="http://example.org/concept/ecla/5/A01J"/>
+                  <pmo:parentCategory rdf:resource="http://example.org/concept/ecla/4/A01"/>
+                  <pmo:subCategory rdf:resource="http://example.org/concept/ecla/5/A01K"/>
+                  <pmo:parentCategory rdf:resource="http://example.org/concept/ecla/4/A01"/>
+                  <pmo:subCategory rdf:resource="http://example.org/concept/ecla/5/A01L"/>
+                  <pmo:parentCategory rdf:resource="http://example.org/concept/ecla/4/A01"/>
+                  <pmo:subCategory rdf:resource="http://example.org/concept/ecla/5/A01M"/>
+                  <pmo:parentCategory rdf:resource="http://example.org/concept/ecla/4/A01"/>
+                  <pmo:subCategory rdf:resource="http://example.org/concept/ecla/5/A01N"/>
+                  <pmo:parentCategory rdf:resource="http://example.org/concept/ecla/4/A01"/>
                   <skos:prefLabel xml:lang="en">AGRICULTURE</skos:prefLabel>
                   <skos:prefLabel xml:lang="en">FORESTRY</skos:prefLabel>
                   <skos:prefLabel xml:lang="en">ANIMAL HUSBANDRY</skos:prefLabel>
@@ -185,23 +245,31 @@
                   <skos:prefLabel xml:lang="en">FISHING</skos:prefLabel>
                </rdf:Description>
             </skos:member>
+            <pmo:subCategory rdf:resource="http://example.org/concept/ecla/4/A01"/>
+            <pmo:parentCategory rdf:resource="http://example.org/concept/ecla/3/A01"/>
             <skos:prefLabel xml:lang="en">Agriculture</skos:prefLabel>
          </rdf:Description>
       </skos:member>
       <skos:member>
          <rdf:Description rdf:about="http://example.org/concept/ecla/3/A21">
+            <skos:notation>A21</skos:notation>
             <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
             <rdf:type rdf:resource="http://purl.org/linked-data/xkos#ClassificationLevel"/>
+            <rdf:type rdf:resource="ECLACategoory"/>
             <xkos:depth>3</xkos:depth>
             <skos:member>
                <rdf:Description rdf:about="http://example.org/concept/ecla/4/A21">
+                  <skos:notation>A21</skos:notation>
                   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
                   <rdf:type rdf:resource="http://purl.org/linked-data/xkos#ClassificationLevel"/>
+                  <rdf:type rdf:resource="ECLACategoory"/>
                   <xkos:depth>4</xkos:depth>
                   <skos:member>
                      <rdf:Description rdf:about="http://example.org/concept/ecla/5/A21B">
+                        <skos:notation>A21B</skos:notation>
                         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
                         <rdf:type rdf:resource="http://purl.org/linked-data/xkos#ClassificationLevel"/>
+                        <rdf:type rdf:resource="ECLACategoory"/>
                         <xkos:depth>5</xkos:depth>
                         <skos:prefLabel xml:lang="en">BAKERS` OVENS</skos:prefLabel>
                         <skos:prefLabel xml:lang="en">MACHINES OR EQUIPMENT FOR BAKING</skos:prefLabel>
@@ -214,8 +282,10 @@
                   </skos:member>
                   <skos:member>
                      <rdf:Description rdf:about="http://example.org/concept/ecla/5/A21C">
+                        <skos:notation>A21C</skos:notation>
                         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
                         <rdf:type rdf:resource="http://purl.org/linked-data/xkos#ClassificationLevel"/>
+                        <rdf:type rdf:resource="ECLACategoory"/>
                         <xkos:depth>5</xkos:depth>
                         <skos:prefLabel xml:lang="en">MACHINES OR EQUIPMENT FOR MAKING OR PROCESSING DOUGHS</skos:prefLabel>
                         <skos:prefLabel xml:lang="en">HANDLING BAKED ARTICLES MADE FROM DOUGH</skos:prefLabel>
@@ -223,8 +293,10 @@
                   </skos:member>
                   <skos:member>
                      <rdf:Description rdf:about="http://example.org/concept/ecla/5/A21D">
+                        <skos:notation>A21D</skos:notation>
                         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
                         <rdf:type rdf:resource="http://purl.org/linked-data/xkos#ClassificationLevel"/>
+                        <rdf:type rdf:resource="ECLACategoory"/>
                         <xkos:depth>5</xkos:depth>
                         <skos:prefLabel xml:lang="en">TREATMENT, e.g. PRESERVATION, OF FLOUR OR DOUGH, e.g. BY ADDITION OF MATERIALS</skos:prefLabel>
                         <skos:prefLabel xml:lang="en">BAKING</skos:prefLabel>
@@ -232,27 +304,39 @@
                         <skos:prefLabel xml:lang="en">PRESERVATION THEREOF</skos:prefLabel>
                      </rdf:Description>
                   </skos:member>
+                  <pmo:subCategory rdf:resource="http://example.org/concept/ecla/5/A21B"/>
+                  <pmo:parentCategory rdf:resource="http://example.org/concept/ecla/4/A21"/>
+                  <pmo:subCategory rdf:resource="http://example.org/concept/ecla/5/A21C"/>
+                  <pmo:parentCategory rdf:resource="http://example.org/concept/ecla/4/A21"/>
+                  <pmo:subCategory rdf:resource="http://example.org/concept/ecla/5/A21D"/>
+                  <pmo:parentCategory rdf:resource="http://example.org/concept/ecla/4/A21"/>
                   <skos:prefLabel xml:lang="en">BAKING</skos:prefLabel>
                   <skos:prefLabel xml:lang="en">EDIBLE DOUGHS</skos:prefLabel>
                </rdf:Description>
             </skos:member>
             <skos:member>
                <rdf:Description rdf:about="http://example.org/concept/ecla/4/A22">
+                  <skos:notation>A22</skos:notation>
                   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
                   <rdf:type rdf:resource="http://purl.org/linked-data/xkos#ClassificationLevel"/>
+                  <rdf:type rdf:resource="ECLACategoory"/>
                   <xkos:depth>4</xkos:depth>
                   <skos:member>
                      <rdf:Description rdf:about="http://example.org/concept/ecla/5/A22B">
+                        <skos:notation>A22B</skos:notation>
                         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
                         <rdf:type rdf:resource="http://purl.org/linked-data/xkos#ClassificationLevel"/>
+                        <rdf:type rdf:resource="ECLACategoory"/>
                         <xkos:depth>5</xkos:depth>
                         <skos:prefLabel xml:lang="en">SLAUGHTERING</skos:prefLabel>
                      </rdf:Description>
                   </skos:member>
                   <skos:member>
                      <rdf:Description rdf:about="http://example.org/concept/ecla/5/A22C">
+                        <skos:notation>A22C</skos:notation>
                         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
                         <rdf:type rdf:resource="http://purl.org/linked-data/xkos#ClassificationLevel"/>
+                        <rdf:type rdf:resource="ECLACategoory"/>
                         <xkos:depth>5</xkos:depth>
                         <skos:prefLabel xml:lang="en">PROCESSING MEAT, POULTRY, OR FISH</skos:prefLabel>
                         <skos:definition xml:lang="en">preserving A23B; obtaining protein compositions for foodstuffs A23J1/00; fish, meat or poultry preparations A23L; disintegrating, e.g. chopping meat, B02C18/00; preparation of proteins C07K1/00</skos:definition>
@@ -261,6 +345,10 @@
                         <dcterms:references rdf:resource="http://example.org/concept/ecla/C07K1/00"/>
                      </rdf:Description>
                   </skos:member>
+                  <pmo:subCategory rdf:resource="http://example.org/concept/ecla/5/A22B"/>
+                  <pmo:parentCategory rdf:resource="http://example.org/concept/ecla/4/A22"/>
+                  <pmo:subCategory rdf:resource="http://example.org/concept/ecla/5/A22C"/>
+                  <pmo:parentCategory rdf:resource="http://example.org/concept/ecla/4/A22"/>
                   <skos:prefLabel xml:lang="en">BUTCHERING</skos:prefLabel>
                   <skos:prefLabel xml:lang="en">MEAT TREATMENT</skos:prefLabel>
                   <skos:prefLabel xml:lang="en">PROCESSING POULTRY OR FISH</skos:prefLabel>
@@ -268,13 +356,17 @@
             </skos:member>
             <skos:member>
                <rdf:Description rdf:about="http://example.org/concept/ecla/4/A23">
+                  <skos:notation>A23</skos:notation>
                   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
                   <rdf:type rdf:resource="http://purl.org/linked-data/xkos#ClassificationLevel"/>
+                  <rdf:type rdf:resource="ECLACategoory"/>
                   <xkos:depth>4</xkos:depth>
                   <skos:member>
                      <rdf:Description rdf:about="http://example.org/concept/ecla/5/A23B">
+                        <skos:notation>A23B</skos:notation>
                         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
                         <rdf:type rdf:resource="http://purl.org/linked-data/xkos#ClassificationLevel"/>
+                        <rdf:type rdf:resource="ECLACategoory"/>
                         <xkos:depth>5</xkos:depth>
                         <skos:prefLabel xml:lang="en">PRESERVING, e.g. BY CANNING, MEAT, FISH, EGGS, FRUIT, VEGETABLES, EDIBLE SEEDS</skos:prefLabel>
                         <skos:prefLabel xml:lang="en">CHEMICAL RIPENING OF FRUIT OR VEGETABLES</skos:prefLabel>
@@ -286,8 +378,10 @@
                   </skos:member>
                   <skos:member>
                      <rdf:Description rdf:about="http://example.org/concept/ecla/5/A23C">
+                        <skos:notation>A23C</skos:notation>
                         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
                         <rdf:type rdf:resource="http://purl.org/linked-data/xkos#ClassificationLevel"/>
+                        <rdf:type rdf:resource="ECLACategoory"/>
                         <xkos:depth>5</xkos:depth>
                         <skos:prefLabel xml:lang="en">DAIRY PRODUCTS, e.g. MILK, BUTTER, CHEESE</skos:prefLabel>
                         <skos:prefLabel xml:lang="en">MILK OR CHEESE SUBSTITUTES</skos:prefLabel>
@@ -301,8 +395,10 @@
                   </skos:member>
                   <skos:member>
                      <rdf:Description rdf:about="http://example.org/concept/ecla/5/A23D">
+                        <skos:notation>A23D</skos:notation>
                         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
                         <rdf:type rdf:resource="http://purl.org/linked-data/xkos#ClassificationLevel"/>
+                        <rdf:type rdf:resource="ECLACategoory"/>
                         <xkos:depth>5</xkos:depth>
                         <skos:prefLabel xml:lang="en">EDIBLE OILS OF FATS, e.g. MARGARINES, SHORTENINGS, COOKING OILS</skos:prefLabel>
                         <skos:definition xml:lang="en">animal feeding-stuffs A23K1/00; foods or foodstuffs containing edible oils or fats A21D, A23C, A23G, A23L; obtaining, refining, preserving C11B, C11C; hydrogenation C11C3/12</skos:definition>
@@ -318,8 +414,10 @@
                   </skos:member>
                   <skos:member>
                      <rdf:Description rdf:about="http://example.org/concept/ecla/5/A23F">
+                        <skos:notation>A23F</skos:notation>
                         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
                         <rdf:type rdf:resource="http://purl.org/linked-data/xkos#ClassificationLevel"/>
+                        <rdf:type rdf:resource="ECLACategoory"/>
                         <xkos:depth>5</xkos:depth>
                         <skos:prefLabel xml:lang="en">COFFEE</skos:prefLabel>
                         <skos:prefLabel xml:lang="en">TEA</skos:prefLabel>
@@ -334,8 +432,10 @@
                   </skos:member>
                   <skos:member>
                      <rdf:Description rdf:about="http://example.org/concept/ecla/5/A23G">
+                        <skos:notation>A23G</skos:notation>
                         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
                         <rdf:type rdf:resource="http://purl.org/linked-data/xkos#ClassificationLevel"/>
+                        <rdf:type rdf:resource="ECLACategoory"/>
                         <xkos:depth>5</xkos:depth>
                         <skos:prefLabel xml:lang="en">COCOA</skos:prefLabel>
                         <skos:prefLabel xml:lang="en">COCOA PRODUCTS, e.g. CHOCOLATE</skos:prefLabel>
@@ -348,8 +448,10 @@
                   </skos:member>
                   <skos:member>
                      <rdf:Description rdf:about="http://example.org/concept/ecla/5/A23J">
+                        <skos:notation>A23J</skos:notation>
                         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
                         <rdf:type rdf:resource="http://purl.org/linked-data/xkos#ClassificationLevel"/>
+                        <rdf:type rdf:resource="ECLACategoory"/>
                         <xkos:depth>5</xkos:depth>
                         <skos:prefLabel xml:lang="en">PROTEIN COMPOSITIONS FOR FOODSTUFFS</skos:prefLabel>
                         <skos:prefLabel xml:lang="en">WORKING-UP PROTEINS FOR FOODSTUFFS</skos:prefLabel>
@@ -363,16 +465,20 @@
                   </skos:member>
                   <skos:member>
                      <rdf:Description rdf:about="http://example.org/concept/ecla/5/A23K">
+                        <skos:notation>A23K</skos:notation>
                         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
                         <rdf:type rdf:resource="http://purl.org/linked-data/xkos#ClassificationLevel"/>
+                        <rdf:type rdf:resource="ECLACategoory"/>
                         <xkos:depth>5</xkos:depth>
                         <skos:prefLabel xml:lang="en">FODDER</skos:prefLabel>
                      </rdf:Description>
                   </skos:member>
                   <skos:member>
                      <rdf:Description rdf:about="http://example.org/concept/ecla/5/A23L">
+                        <skos:notation>A23L</skos:notation>
                         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
                         <rdf:type rdf:resource="http://purl.org/linked-data/xkos#ClassificationLevel"/>
+                        <rdf:type rdf:resource="ECLACategoory"/>
                         <xkos:depth>5</xkos:depth>
                         <skos:prefLabel xml:lang="en">FOODS, FOODSTUFFS, OR NON-ALCOHOLIC BEVERAGES, NOT COVERED BY SUBCLASSES A23B TO A23J</skos:prefLabel>
                         <skos:prefLabel xml:lang="en">THEIR PREPARATION OR TREATMENT, e.g. COOKING, MODIFICATION OF NUTRITIVE QUALITIES, PHYSICAL TREATMENT</skos:prefLabel>
@@ -382,8 +488,10 @@
                   </skos:member>
                   <skos:member>
                      <rdf:Description rdf:about="http://example.org/concept/ecla/5/A23N">
+                        <skos:notation>A23N</skos:notation>
                         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
                         <rdf:type rdf:resource="http://purl.org/linked-data/xkos#ClassificationLevel"/>
+                        <rdf:type rdf:resource="ECLACategoory"/>
                         <xkos:depth>5</xkos:depth>
                         <skos:prefLabel xml:lang="en">MACHINES OR APPARATUS FOR TREATING HARVESTED FRUIT, VEGETABLES OR FLOWER BULBS IN BULK, NOT OTHERWISE PROVIDED FOR</skos:prefLabel>
                         <skos:prefLabel xml:lang="en">PEELING VEGETABLES OR FRUIT IN BULK</skos:prefLabel>
@@ -397,14 +505,36 @@
                   </skos:member>
                   <skos:member>
                      <rdf:Description rdf:about="http://example.org/concept/ecla/5/A23P">
+                        <skos:notation>A23P</skos:notation>
                         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
                         <rdf:type rdf:resource="http://purl.org/linked-data/xkos#ClassificationLevel"/>
+                        <rdf:type rdf:resource="ECLACategoory"/>
                         <xkos:depth>5</xkos:depth>
                         <skos:prefLabel xml:lang="en">SHAPING OR WORKING OF FOODSTUFFS, NOT FULLY COVERED BY A SINGLE OTHER SUBCLASS</skos:prefLabel>
                         <skos:definition xml:lang="en">shaping substances in a plastic state in general B29C</skos:definition>
                         <dcterms:references rdf:resource="http://example.org/concept/ecla/B29C"/>
                      </rdf:Description>
                   </skos:member>
+                  <pmo:subCategory rdf:resource="http://example.org/concept/ecla/5/A23B"/>
+                  <pmo:parentCategory rdf:resource="http://example.org/concept/ecla/4/A23"/>
+                  <pmo:subCategory rdf:resource="http://example.org/concept/ecla/5/A23C"/>
+                  <pmo:parentCategory rdf:resource="http://example.org/concept/ecla/4/A23"/>
+                  <pmo:subCategory rdf:resource="http://example.org/concept/ecla/5/A23D"/>
+                  <pmo:parentCategory rdf:resource="http://example.org/concept/ecla/4/A23"/>
+                  <pmo:subCategory rdf:resource="http://example.org/concept/ecla/5/A23F"/>
+                  <pmo:parentCategory rdf:resource="http://example.org/concept/ecla/4/A23"/>
+                  <pmo:subCategory rdf:resource="http://example.org/concept/ecla/5/A23G"/>
+                  <pmo:parentCategory rdf:resource="http://example.org/concept/ecla/4/A23"/>
+                  <pmo:subCategory rdf:resource="http://example.org/concept/ecla/5/A23J"/>
+                  <pmo:parentCategory rdf:resource="http://example.org/concept/ecla/4/A23"/>
+                  <pmo:subCategory rdf:resource="http://example.org/concept/ecla/5/A23K"/>
+                  <pmo:parentCategory rdf:resource="http://example.org/concept/ecla/4/A23"/>
+                  <pmo:subCategory rdf:resource="http://example.org/concept/ecla/5/A23L"/>
+                  <pmo:parentCategory rdf:resource="http://example.org/concept/ecla/4/A23"/>
+                  <pmo:subCategory rdf:resource="http://example.org/concept/ecla/5/A23N"/>
+                  <pmo:parentCategory rdf:resource="http://example.org/concept/ecla/4/A23"/>
+                  <pmo:subCategory rdf:resource="http://example.org/concept/ecla/5/A23P"/>
+                  <pmo:parentCategory rdf:resource="http://example.org/concept/ecla/4/A23"/>
                   <skos:prefLabel xml:lang="en">FOODS OR FOODSTUFFS</skos:prefLabel>
                   <skos:prefLabel xml:lang="en">THEIR TREATMENT, NOT COVERED BY OTHER CLASSES</skos:prefLabel>
                   <skos:note xml:lang="en">Attention is drawn to the following places: C08B Polysaccharides, derivatives thereof C11 Animal or vegetable oils, fats, fatty substances or waxes C12 Biochemistry, beer, spirits, wine, vinegar C13 Sugar industry</skos:note>
@@ -416,13 +546,17 @@
             </skos:member>
             <skos:member>
                <rdf:Description rdf:about="http://example.org/concept/ecla/4/A24">
+                  <skos:notation>A24</skos:notation>
                   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
                   <rdf:type rdf:resource="http://purl.org/linked-data/xkos#ClassificationLevel"/>
+                  <rdf:type rdf:resource="ECLACategoory"/>
                   <xkos:depth>4</xkos:depth>
                   <skos:member>
                      <rdf:Description rdf:about="http://example.org/concept/ecla/5/A24B">
+                        <skos:notation>A24B</skos:notation>
                         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
                         <rdf:type rdf:resource="http://purl.org/linked-data/xkos#ClassificationLevel"/>
+                        <rdf:type rdf:resource="ECLACategoory"/>
                         <xkos:depth>5</xkos:depth>
                         <skos:prefLabel xml:lang="en">MANUFACTURE OR PREPARATION OF TOBACCO FOR SMOKING OR CHEWING</skos:prefLabel>
                         <skos:prefLabel xml:lang="en">TOBACCO</skos:prefLabel>
@@ -431,16 +565,20 @@
                   </skos:member>
                   <skos:member>
                      <rdf:Description rdf:about="http://example.org/concept/ecla/5/A24C">
+                        <skos:notation>A24C</skos:notation>
                         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
                         <rdf:type rdf:resource="http://purl.org/linked-data/xkos#ClassificationLevel"/>
+                        <rdf:type rdf:resource="ECLACategoory"/>
                         <xkos:depth>5</xkos:depth>
                         <skos:prefLabel xml:lang="en">MACHINES FOR MAKING CIGARS OR CIGARETTES</skos:prefLabel>
                      </rdf:Description>
                   </skos:member>
                   <skos:member>
                      <rdf:Description rdf:about="http://example.org/concept/ecla/5/A24D">
+                        <skos:notation>A24D</skos:notation>
                         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
                         <rdf:type rdf:resource="http://purl.org/linked-data/xkos#ClassificationLevel"/>
+                        <rdf:type rdf:resource="ECLACategoory"/>
                         <xkos:depth>5</xkos:depth>
                         <skos:prefLabel xml:lang="en">CIGARS</skos:prefLabel>
                         <skos:prefLabel xml:lang="en">CIGARETTES</skos:prefLabel>
@@ -451,8 +589,10 @@
                   </skos:member>
                   <skos:member>
                      <rdf:Description rdf:about="http://example.org/concept/ecla/5/A24F">
+                        <skos:notation>A24F</skos:notation>
                         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
                         <rdf:type rdf:resource="http://purl.org/linked-data/xkos#ClassificationLevel"/>
+                        <rdf:type rdf:resource="ECLACategoory"/>
                         <xkos:depth>5</xkos:depth>
                         <skos:prefLabel xml:lang="en">SMOKERS` REQUISITES</skos:prefLabel>
                         <skos:prefLabel xml:lang="en">MATCH BOXES</skos:prefLabel>
@@ -460,30 +600,52 @@
                         <dcterms:references rdf:resource="http://example.org/concept/ecla/F23Q"/>
                      </rdf:Description>
                   </skos:member>
+                  <pmo:subCategory rdf:resource="http://example.org/concept/ecla/5/A24B"/>
+                  <pmo:parentCategory rdf:resource="http://example.org/concept/ecla/4/A24"/>
+                  <pmo:subCategory rdf:resource="http://example.org/concept/ecla/5/A24C"/>
+                  <pmo:parentCategory rdf:resource="http://example.org/concept/ecla/4/A24"/>
+                  <pmo:subCategory rdf:resource="http://example.org/concept/ecla/5/A24D"/>
+                  <pmo:parentCategory rdf:resource="http://example.org/concept/ecla/4/A24"/>
+                  <pmo:subCategory rdf:resource="http://example.org/concept/ecla/5/A24F"/>
+                  <pmo:parentCategory rdf:resource="http://example.org/concept/ecla/4/A24"/>
                   <skos:prefLabel xml:lang="en">TOBACCO</skos:prefLabel>
                   <skos:prefLabel xml:lang="en">CIGARS</skos:prefLabel>
                   <skos:prefLabel xml:lang="en">CIGARETTES</skos:prefLabel>
                   <skos:prefLabel xml:lang="en">SMOKERS` REQUISITES</skos:prefLabel>
                </rdf:Description>
             </skos:member>
+            <pmo:subCategory rdf:resource="http://example.org/concept/ecla/4/A21"/>
+            <pmo:parentCategory rdf:resource="http://example.org/concept/ecla/3/A21"/>
+            <pmo:subCategory rdf:resource="http://example.org/concept/ecla/4/A22"/>
+            <pmo:parentCategory rdf:resource="http://example.org/concept/ecla/3/A21"/>
+            <pmo:subCategory rdf:resource="http://example.org/concept/ecla/4/A23"/>
+            <pmo:parentCategory rdf:resource="http://example.org/concept/ecla/3/A21"/>
+            <pmo:subCategory rdf:resource="http://example.org/concept/ecla/4/A24"/>
+            <pmo:parentCategory rdf:resource="http://example.org/concept/ecla/3/A21"/>
             <skos:prefLabel xml:lang="en">Foodstuffs</skos:prefLabel>
             <skos:prefLabel xml:lang="en">tobacco</skos:prefLabel>
          </rdf:Description>
       </skos:member>
       <skos:member>
          <rdf:Description rdf:about="http://example.org/concept/ecla/3/A41">
+            <skos:notation>A41</skos:notation>
             <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
             <rdf:type rdf:resource="http://purl.org/linked-data/xkos#ClassificationLevel"/>
+            <rdf:type rdf:resource="ECLACategoory"/>
             <xkos:depth>3</xkos:depth>
             <skos:member>
                <rdf:Description rdf:about="http://example.org/concept/ecla/4/A41">
+                  <skos:notation>A41</skos:notation>
                   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
                   <rdf:type rdf:resource="http://purl.org/linked-data/xkos#ClassificationLevel"/>
+                  <rdf:type rdf:resource="ECLACategoory"/>
                   <xkos:depth>4</xkos:depth>
                   <skos:member>
                      <rdf:Description rdf:about="http://example.org/concept/ecla/5/A41B">
+                        <skos:notation>A41B</skos:notation>
                         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
                         <rdf:type rdf:resource="http://purl.org/linked-data/xkos#ClassificationLevel"/>
+                        <rdf:type rdf:resource="ECLACategoory"/>
                         <xkos:depth>5</xkos:depth>
                         <skos:prefLabel xml:lang="en">SHIRTS</skos:prefLabel>
                         <skos:prefLabel xml:lang="en">UNDERWEAR</skos:prefLabel>
@@ -493,8 +655,10 @@
                   </skos:member>
                   <skos:member>
                      <rdf:Description rdf:about="http://example.org/concept/ecla/5/A41C">
+                        <skos:notation>A41C</skos:notation>
                         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
                         <rdf:type rdf:resource="http://purl.org/linked-data/xkos#ClassificationLevel"/>
+                        <rdf:type rdf:resource="ECLACategoory"/>
                         <xkos:depth>5</xkos:depth>
                         <skos:prefLabel xml:lang="en">CORSETS</skos:prefLabel>
                         <skos:prefLabel xml:lang="en">BRASSIERES</skos:prefLabel>
@@ -502,8 +666,10 @@
                   </skos:member>
                   <skos:member>
                      <rdf:Description rdf:about="http://example.org/concept/ecla/5/A41D">
+                        <skos:notation>A41D</skos:notation>
                         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
                         <rdf:type rdf:resource="http://purl.org/linked-data/xkos#ClassificationLevel"/>
+                        <rdf:type rdf:resource="ECLACategoory"/>
                         <xkos:depth>5</xkos:depth>
                         <skos:prefLabel xml:lang="en">OUTERWEAR</skos:prefLabel>
                         <skos:prefLabel xml:lang="en">PROTECTIVE GARMENTS</skos:prefLabel>
@@ -516,8 +682,10 @@
                   </skos:member>
                   <skos:member>
                      <rdf:Description rdf:about="http://example.org/concept/ecla/5/A41F">
+                        <skos:notation>A41F</skos:notation>
                         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
                         <rdf:type rdf:resource="http://purl.org/linked-data/xkos#ClassificationLevel"/>
+                        <rdf:type rdf:resource="ECLACategoory"/>
                         <xkos:depth>5</xkos:depth>
                         <skos:prefLabel xml:lang="en">GARMENT FASTENINGS</skos:prefLabel>
                         <skos:prefLabel xml:lang="en">SUSPENDERS</skos:prefLabel>
@@ -525,8 +693,10 @@
                   </skos:member>
                   <skos:member>
                      <rdf:Description rdf:about="http://example.org/concept/ecla/5/A41G">
+                        <skos:notation>A41G</skos:notation>
                         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
                         <rdf:type rdf:resource="http://purl.org/linked-data/xkos#ClassificationLevel"/>
+                        <rdf:type rdf:resource="ECLACategoory"/>
                         <xkos:depth>5</xkos:depth>
                         <skos:prefLabel xml:lang="en">ARTIFICIAL FLOWERS</skos:prefLabel>
                         <skos:prefLabel xml:lang="en">WIGS</skos:prefLabel>
@@ -536,26 +706,44 @@
                   </skos:member>
                   <skos:member>
                      <rdf:Description rdf:about="http://example.org/concept/ecla/5/A41H">
+                        <skos:notation>A41H</skos:notation>
                         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
                         <rdf:type rdf:resource="http://purl.org/linked-data/xkos#ClassificationLevel"/>
+                        <rdf:type rdf:resource="ECLACategoory"/>
                         <xkos:depth>5</xkos:depth>
                         <skos:prefLabel xml:lang="en">APPLIANCES OR METHODS FOR MAKING CLOTHES, e.g. FOR DRESS-MAKING, FOR TAILORING, NOT OTHERWISE PROVIDED FOR</skos:prefLabel>
                         <skos:definition xml:lang="en">machines, appliances, or methods for making particular articles of apparel, see the relevant groups for these articles in A41B to A41F; cutting tools or machines in general B26; weaving, braiding, lace-making, knitting, tufting, treating of textiles D03 to D06; sewing-machines, sewing appliances, seam-ripping devices D05B; cutting or otherwise severing textile materials D06H7/00</skos:definition>
                         <dcterms:references rdf:resource="http://example.org/concept/ecla/D06H7/00"/>
                      </rdf:Description>
                   </skos:member>
+                  <pmo:subCategory rdf:resource="http://example.org/concept/ecla/5/A41B"/>
+                  <pmo:parentCategory rdf:resource="http://example.org/concept/ecla/4/A41"/>
+                  <pmo:subCategory rdf:resource="http://example.org/concept/ecla/5/A41C"/>
+                  <pmo:parentCategory rdf:resource="http://example.org/concept/ecla/4/A41"/>
+                  <pmo:subCategory rdf:resource="http://example.org/concept/ecla/5/A41D"/>
+                  <pmo:parentCategory rdf:resource="http://example.org/concept/ecla/4/A41"/>
+                  <pmo:subCategory rdf:resource="http://example.org/concept/ecla/5/A41F"/>
+                  <pmo:parentCategory rdf:resource="http://example.org/concept/ecla/4/A41"/>
+                  <pmo:subCategory rdf:resource="http://example.org/concept/ecla/5/A41G"/>
+                  <pmo:parentCategory rdf:resource="http://example.org/concept/ecla/4/A41"/>
+                  <pmo:subCategory rdf:resource="http://example.org/concept/ecla/5/A41H"/>
+                  <pmo:parentCategory rdf:resource="http://example.org/concept/ecla/4/A41"/>
                   <skos:prefLabel xml:lang="en">WEARING APPAREL</skos:prefLabel>
                </rdf:Description>
             </skos:member>
             <skos:member>
                <rdf:Description rdf:about="http://example.org/concept/ecla/4/A42">
+                  <skos:notation>A42</skos:notation>
                   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
                   <rdf:type rdf:resource="http://purl.org/linked-data/xkos#ClassificationLevel"/>
+                  <rdf:type rdf:resource="ECLACategoory"/>
                   <xkos:depth>4</xkos:depth>
                   <skos:member>
                      <rdf:Description rdf:about="http://example.org/concept/ecla/5/A42B">
+                        <skos:notation>A42B</skos:notation>
                         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
                         <rdf:type rdf:resource="http://purl.org/linked-data/xkos#ClassificationLevel"/>
+                        <rdf:type rdf:resource="ECLACategoory"/>
                         <xkos:depth>5</xkos:depth>
                         <skos:prefLabel xml:lang="en">HATS</skos:prefLabel>
                         <skos:prefLabel xml:lang="en">HEAD COVERINGS</skos:prefLabel>
@@ -566,24 +754,34 @@
                   </skos:member>
                   <skos:member>
                      <rdf:Description rdf:about="http://example.org/concept/ecla/5/A42C">
+                        <skos:notation>A42C</skos:notation>
                         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
                         <rdf:type rdf:resource="http://purl.org/linked-data/xkos#ClassificationLevel"/>
+                        <rdf:type rdf:resource="ECLACategoory"/>
                         <xkos:depth>5</xkos:depth>
                         <skos:prefLabel xml:lang="en">MANUFACTURING OR TRIMMING HATS OR OTHER HEAD COVERINGS</skos:prefLabel>
                      </rdf:Description>
                   </skos:member>
+                  <pmo:subCategory rdf:resource="http://example.org/concept/ecla/5/A42B"/>
+                  <pmo:parentCategory rdf:resource="http://example.org/concept/ecla/4/A42"/>
+                  <pmo:subCategory rdf:resource="http://example.org/concept/ecla/5/A42C"/>
+                  <pmo:parentCategory rdf:resource="http://example.org/concept/ecla/4/A42"/>
                   <skos:prefLabel xml:lang="en">HEADWEAR</skos:prefLabel>
                </rdf:Description>
             </skos:member>
             <skos:member>
                <rdf:Description rdf:about="http://example.org/concept/ecla/4/A43">
+                  <skos:notation>A43</skos:notation>
                   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
                   <rdf:type rdf:resource="http://purl.org/linked-data/xkos#ClassificationLevel"/>
+                  <rdf:type rdf:resource="ECLACategoory"/>
                   <xkos:depth>4</xkos:depth>
                   <skos:member>
                      <rdf:Description rdf:about="http://example.org/concept/ecla/5/A43B">
+                        <skos:notation>A43B</skos:notation>
                         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
                         <rdf:type rdf:resource="http://purl.org/linked-data/xkos#ClassificationLevel"/>
+                        <rdf:type rdf:resource="ECLACategoory"/>
                         <xkos:depth>5</xkos:depth>
                         <skos:prefLabel xml:lang="en">CHARACTERISTIC FEATURES OF FOOTWEAR</skos:prefLabel>
                         <skos:prefLabel xml:lang="en">PARTS OF FOOTWEAR</skos:prefLabel>
@@ -591,8 +789,10 @@
                   </skos:member>
                   <skos:member>
                      <rdf:Description rdf:about="http://example.org/concept/ecla/5/A43C">
+                        <skos:notation>A43C</skos:notation>
                         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
                         <rdf:type rdf:resource="http://purl.org/linked-data/xkos#ClassificationLevel"/>
+                        <rdf:type rdf:resource="ECLACategoory"/>
                         <xkos:depth>5</xkos:depth>
                         <skos:prefLabel xml:lang="en">FASTENINGS OR ATTACHMENTS OF FOOTWEAR</skos:prefLabel>
                         <skos:prefLabel xml:lang="en">LACES IN GENERAL</skos:prefLabel>
@@ -600,24 +800,36 @@
                   </skos:member>
                   <skos:member>
                      <rdf:Description rdf:about="http://example.org/concept/ecla/5/A43D">
+                        <skos:notation>A43D</skos:notation>
                         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
                         <rdf:type rdf:resource="http://purl.org/linked-data/xkos#ClassificationLevel"/>
+                        <rdf:type rdf:resource="ECLACategoory"/>
                         <xkos:depth>5</xkos:depth>
                         <skos:prefLabel xml:lang="en">MACHINES, TOOLS, EQUIPMENT OR METHODS FOR MANUFACTURING OR REPAIRING FOOTWEAR</skos:prefLabel>
                      </rdf:Description>
                   </skos:member>
+                  <pmo:subCategory rdf:resource="http://example.org/concept/ecla/5/A43B"/>
+                  <pmo:parentCategory rdf:resource="http://example.org/concept/ecla/4/A43"/>
+                  <pmo:subCategory rdf:resource="http://example.org/concept/ecla/5/A43C"/>
+                  <pmo:parentCategory rdf:resource="http://example.org/concept/ecla/4/A43"/>
+                  <pmo:subCategory rdf:resource="http://example.org/concept/ecla/5/A43D"/>
+                  <pmo:parentCategory rdf:resource="http://example.org/concept/ecla/4/A43"/>
                   <skos:prefLabel xml:lang="en">FOOTWEAR</skos:prefLabel>
                </rdf:Description>
             </skos:member>
             <skos:member>
                <rdf:Description rdf:about="http://example.org/concept/ecla/4/A44">
+                  <skos:notation>A44</skos:notation>
                   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
                   <rdf:type rdf:resource="http://purl.org/linked-data/xkos#ClassificationLevel"/>
+                  <rdf:type rdf:resource="ECLACategoory"/>
                   <xkos:depth>4</xkos:depth>
                   <skos:member>
                      <rdf:Description rdf:about="http://example.org/concept/ecla/5/A44B">
+                        <skos:notation>A44B</skos:notation>
                         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
                         <rdf:type rdf:resource="http://purl.org/linked-data/xkos#ClassificationLevel"/>
+                        <rdf:type rdf:resource="ECLACategoory"/>
                         <xkos:depth>5</xkos:depth>
                         <skos:prefLabel xml:lang="en">BUTTONS, PINS, BUCKLES, SLIDE FASTENERS, OR THE LIKE</skos:prefLabel>
                         <skos:definition xml:lang="en">fastenings specially adapted for footwear A43C</skos:definition>
@@ -625,8 +837,10 @@
                   </skos:member>
                   <skos:member>
                      <rdf:Description rdf:about="http://example.org/concept/ecla/5/A44C">
+                        <skos:notation>A44C</skos:notation>
                         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
                         <rdf:type rdf:resource="http://purl.org/linked-data/xkos#ClassificationLevel"/>
+                        <rdf:type rdf:resource="ECLACategoory"/>
                         <xkos:depth>5</xkos:depth>
                         <skos:prefLabel xml:lang="en">JEWELLERY</skos:prefLabel>
                         <skos:prefLabel xml:lang="en">BRACELETS</skos:prefLabel>
@@ -636,19 +850,27 @@
                         <dcterms:references rdf:resource="http://example.org/concept/ecla/A45C11/16"/>
                      </rdf:Description>
                   </skos:member>
+                  <pmo:subCategory rdf:resource="http://example.org/concept/ecla/5/A44B"/>
+                  <pmo:parentCategory rdf:resource="http://example.org/concept/ecla/4/A44"/>
+                  <pmo:subCategory rdf:resource="http://example.org/concept/ecla/5/A44C"/>
+                  <pmo:parentCategory rdf:resource="http://example.org/concept/ecla/4/A44"/>
                   <skos:prefLabel xml:lang="en">HABERDASHERY</skos:prefLabel>
                   <skos:prefLabel xml:lang="en">JEWELLERY</skos:prefLabel>
                </rdf:Description>
             </skos:member>
             <skos:member>
                <rdf:Description rdf:about="http://example.org/concept/ecla/4/A45">
+                  <skos:notation>A45</skos:notation>
                   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
                   <rdf:type rdf:resource="http://purl.org/linked-data/xkos#ClassificationLevel"/>
+                  <rdf:type rdf:resource="ECLACategoory"/>
                   <xkos:depth>4</xkos:depth>
                   <skos:member>
                      <rdf:Description rdf:about="http://example.org/concept/ecla/5/A45B">
+                        <skos:notation>A45B</skos:notation>
                         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
                         <rdf:type rdf:resource="http://purl.org/linked-data/xkos#ClassificationLevel"/>
+                        <rdf:type rdf:resource="ECLACategoory"/>
                         <xkos:depth>5</xkos:depth>
                         <skos:prefLabel xml:lang="en">WALKING STICKS</skos:prefLabel>
                         <skos:prefLabel xml:lang="en">UMBRELLAS</skos:prefLabel>
@@ -659,8 +881,10 @@
                   </skos:member>
                   <skos:member>
                      <rdf:Description rdf:about="http://example.org/concept/ecla/5/A45C">
+                        <skos:notation>A45C</skos:notation>
                         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
                         <rdf:type rdf:resource="http://purl.org/linked-data/xkos#ClassificationLevel"/>
+                        <rdf:type rdf:resource="ECLACategoory"/>
                         <xkos:depth>5</xkos:depth>
                         <skos:prefLabel xml:lang="en">PURSES</skos:prefLabel>
                         <skos:prefLabel xml:lang="en">LUGGAGE</skos:prefLabel>
@@ -672,8 +896,10 @@
                   </skos:member>
                   <skos:member>
                      <rdf:Description rdf:about="http://example.org/concept/ecla/5/A45D">
+                        <skos:notation>A45D</skos:notation>
                         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
                         <rdf:type rdf:resource="http://purl.org/linked-data/xkos#ClassificationLevel"/>
+                        <rdf:type rdf:resource="ECLACategoory"/>
                         <xkos:depth>5</xkos:depth>
                         <skos:prefLabel xml:lang="en">HAIRDRESSING OR SHAVING EQUIPMENT</skos:prefLabel>
                         <skos:prefLabel xml:lang="en">MANICURING OR OTHER COSMETIC TREATMENT</skos:prefLabel>
@@ -685,8 +911,10 @@
                   </skos:member>
                   <skos:member>
                      <rdf:Description rdf:about="http://example.org/concept/ecla/5/A45F">
+                        <skos:notation>A45F</skos:notation>
                         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
                         <rdf:type rdf:resource="http://purl.org/linked-data/xkos#ClassificationLevel"/>
+                        <rdf:type rdf:resource="ECLACategoory"/>
                         <xkos:depth>5</xkos:depth>
                         <skos:prefLabel xml:lang="en">TRAVELLING OR CAMP EQUIPMENT</skos:prefLabel>
                         <skos:prefLabel xml:lang="en">SACKS OR PACKS CARRIED ON THE BODY</skos:prefLabel>
@@ -694,18 +922,30 @@
                         <dcterms:references rdf:resource="http://example.org/concept/ecla/A45C"/>
                      </rdf:Description>
                   </skos:member>
+                  <pmo:subCategory rdf:resource="http://example.org/concept/ecla/5/A45B"/>
+                  <pmo:parentCategory rdf:resource="http://example.org/concept/ecla/4/A45"/>
+                  <pmo:subCategory rdf:resource="http://example.org/concept/ecla/5/A45C"/>
+                  <pmo:parentCategory rdf:resource="http://example.org/concept/ecla/4/A45"/>
+                  <pmo:subCategory rdf:resource="http://example.org/concept/ecla/5/A45D"/>
+                  <pmo:parentCategory rdf:resource="http://example.org/concept/ecla/4/A45"/>
+                  <pmo:subCategory rdf:resource="http://example.org/concept/ecla/5/A45F"/>
+                  <pmo:parentCategory rdf:resource="http://example.org/concept/ecla/4/A45"/>
                   <skos:prefLabel xml:lang="en">HAND OR TRAVELLING ARTICLES</skos:prefLabel>
                </rdf:Description>
             </skos:member>
             <skos:member>
                <rdf:Description rdf:about="http://example.org/concept/ecla/4/A46">
+                  <skos:notation>A46</skos:notation>
                   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
                   <rdf:type rdf:resource="http://purl.org/linked-data/xkos#ClassificationLevel"/>
+                  <rdf:type rdf:resource="ECLACategoory"/>
                   <xkos:depth>4</xkos:depth>
                   <skos:member>
                      <rdf:Description rdf:about="http://example.org/concept/ecla/5/A46B">
+                        <skos:notation>A46B</skos:notation>
                         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
                         <rdf:type rdf:resource="http://purl.org/linked-data/xkos#ClassificationLevel"/>
+                        <rdf:type rdf:resource="ECLACategoory"/>
                         <xkos:depth>5</xkos:depth>
                         <skos:prefLabel xml:lang="en">BRUSHES</skos:prefLabel>
                         <skos:definition xml:lang="en">handles not integral with brushware B25G</skos:definition>
@@ -713,24 +953,34 @@
                   </skos:member>
                   <skos:member>
                      <rdf:Description rdf:about="http://example.org/concept/ecla/5/A46D">
+                        <skos:notation>A46D</skos:notation>
                         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
                         <rdf:type rdf:resource="http://purl.org/linked-data/xkos#ClassificationLevel"/>
+                        <rdf:type rdf:resource="ECLACategoory"/>
                         <xkos:depth>5</xkos:depth>
                         <skos:prefLabel xml:lang="en">MANUFACTURE OF BRUSHES</skos:prefLabel>
                      </rdf:Description>
                   </skos:member>
+                  <pmo:subCategory rdf:resource="http://example.org/concept/ecla/5/A46B"/>
+                  <pmo:parentCategory rdf:resource="http://example.org/concept/ecla/4/A46"/>
+                  <pmo:subCategory rdf:resource="http://example.org/concept/ecla/5/A46D"/>
+                  <pmo:parentCategory rdf:resource="http://example.org/concept/ecla/4/A46"/>
                   <skos:prefLabel xml:lang="en">BRUSHWARE</skos:prefLabel>
                </rdf:Description>
             </skos:member>
             <skos:member>
                <rdf:Description rdf:about="http://example.org/concept/ecla/4/A47">
+                  <skos:notation>A47</skos:notation>
                   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
                   <rdf:type rdf:resource="http://purl.org/linked-data/xkos#ClassificationLevel"/>
+                  <rdf:type rdf:resource="ECLACategoory"/>
                   <xkos:depth>4</xkos:depth>
                   <skos:member>
                      <rdf:Description rdf:about="http://example.org/concept/ecla/5/A47B">
+                        <skos:notation>A47B</skos:notation>
                         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
                         <rdf:type rdf:resource="http://purl.org/linked-data/xkos#ClassificationLevel"/>
+                        <rdf:type rdf:resource="ECLACategoory"/>
                         <xkos:depth>5</xkos:depth>
                         <skos:prefLabel xml:lang="en">TABLES</skos:prefLabel>
                         <skos:prefLabel xml:lang="en">DESKS</skos:prefLabel>
@@ -743,8 +993,10 @@
                   </skos:member>
                   <skos:member>
                      <rdf:Description rdf:about="http://example.org/concept/ecla/5/A47C">
+                        <skos:notation>A47C</skos:notation>
                         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
                         <rdf:type rdf:resource="http://purl.org/linked-data/xkos#ClassificationLevel"/>
+                        <rdf:type rdf:resource="ECLACategoory"/>
                         <xkos:depth>5</xkos:depth>
                         <skos:prefLabel xml:lang="en">CHAIRS</skos:prefLabel>
                         <skos:definition xml:lang="en">seats specially adapted for vehicles B60N2/00;</skos:definition>
@@ -776,8 +1028,10 @@
                   </skos:member>
                   <skos:member>
                      <rdf:Description rdf:about="http://example.org/concept/ecla/5/A47D">
+                        <skos:notation>A47D</skos:notation>
                         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
                         <rdf:type rdf:resource="http://purl.org/linked-data/xkos#ClassificationLevel"/>
+                        <rdf:type rdf:resource="ECLACategoory"/>
                         <xkos:depth>5</xkos:depth>
                         <skos:prefLabel xml:lang="en">FURNITURE SPECIALLY ADAPTED FOR CHILDREN</skos:prefLabel>
                         <skos:definition xml:lang="en">school benches or desks A47B39/00, A47B41/00</skos:definition>
@@ -787,8 +1041,10 @@
                   </skos:member>
                   <skos:member>
                      <rdf:Description rdf:about="http://example.org/concept/ecla/5/A47F">
+                        <skos:notation>A47F</skos:notation>
                         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
                         <rdf:type rdf:resource="http://purl.org/linked-data/xkos#ClassificationLevel"/>
+                        <rdf:type rdf:resource="ECLACategoory"/>
                         <xkos:depth>5</xkos:depth>
                         <skos:prefLabel xml:lang="en">SPECIAL FURNITURE, FITTINGS, OR ACCESSORIES FOR SHOPS, STOREHOUSES, BARS, RESTAURANTS OR THE LIKE</skos:prefLabel>
                         <skos:prefLabel xml:lang="en">PAYING COUNTERS</skos:prefLabel>
@@ -796,8 +1052,10 @@
                   </skos:member>
                   <skos:member>
                      <rdf:Description rdf:about="http://example.org/concept/ecla/5/A47G">
+                        <skos:notation>A47G</skos:notation>
                         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
                         <rdf:type rdf:resource="http://purl.org/linked-data/xkos#ClassificationLevel"/>
+                        <rdf:type rdf:resource="ECLACategoory"/>
                         <xkos:depth>5</xkos:depth>
                         <skos:prefLabel xml:lang="en">HOUSEHOLD OR TABLE EQUIPMENT</skos:prefLabel>
                         <skos:definition xml:lang="en">book-ends A47B5/00; knives B26B</skos:definition>
@@ -806,8 +1064,10 @@
                   </skos:member>
                   <skos:member>
                      <rdf:Description rdf:about="http://example.org/concept/ecla/5/A47H">
+                        <skos:notation>A47H</skos:notation>
                         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
                         <rdf:type rdf:resource="http://purl.org/linked-data/xkos#ClassificationLevel"/>
+                        <rdf:type rdf:resource="ECLACategoory"/>
                         <xkos:depth>5</xkos:depth>
                         <skos:prefLabel xml:lang="en">FURNISHINGS FOR WINDOWS OR DOORS</skos:prefLabel>
                         <skos:definition xml:lang="en">concerned with the functioning of the door or window E05; roller blinds E06B</skos:definition>
@@ -815,10 +1075,13 @@
                   </skos:member>
                   <skos:member>
                      <rdf:Description rdf:about="http://example.org/concept/ecla/5/A47J">
+                        <skos:notation>A47J</skos:notation>
                         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
                         <rdf:type rdf:resource="http://purl.org/linked-data/xkos#ClassificationLevel"/>
+                        <rdf:type rdf:resource="ECLACategoory"/>
                         <xkos:depth>5</xkos:depth>
                         <skos:prefLabel xml:lang="en">KITCHEN EQUIPMENT</skos:prefLabel>
+                        <skos:definition xml:lang="en">domestic washing or cleaning A47L; refuse receptacles B65F1/00</skos:definition>
                         <skos:prefLabel xml:lang="en">COFFEE MILLS</skos:prefLabel>
                         <skos:prefLabel xml:lang="en">SPICE MILLS</skos:prefLabel>
                         <skos:prefLabel xml:lang="en">APPARATUS FOR MAKING BEVERAGES</skos:prefLabel>
@@ -828,8 +1091,10 @@
                   </skos:member>
                   <skos:member>
                      <rdf:Description rdf:about="http://example.org/concept/ecla/5/A47K">
+                        <skos:notation>A47K</skos:notation>
                         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
                         <rdf:type rdf:resource="http://purl.org/linked-data/xkos#ClassificationLevel"/>
+                        <rdf:type rdf:resource="ECLACategoory"/>
                         <xkos:depth>5</xkos:depth>
                         <skos:prefLabel xml:lang="en">SANITARY EQUIPMENT NOT OTHERWISE PROVIDED FOR</skos:prefLabel>
                         <skos:definition xml:lang="en">connecting to water supply or waste pipe, sinks E03C; water-closets E03D</skos:definition>
@@ -842,8 +1107,10 @@
                   </skos:member>
                   <skos:member>
                      <rdf:Description rdf:about="http://example.org/concept/ecla/5/A47L">
+                        <skos:notation>A47L</skos:notation>
                         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
                         <rdf:type rdf:resource="http://purl.org/linked-data/xkos#ClassificationLevel"/>
+                        <rdf:type rdf:resource="ECLACategoory"/>
                         <xkos:depth>5</xkos:depth>
                         <skos:prefLabel xml:lang="en">DOMESTIC WASHING OR CLEANING</skos:prefLabel>
                         <skos:definition xml:lang="en">brushes A46B; cleaning quantities of bottles or of other hollow articles of one kind B08B9/00; laundry D06F</skos:definition>
@@ -852,6 +1119,24 @@
                         <dcterms:references rdf:resource="http://example.org/concept/ecla/B08B9/00"/>
                      </rdf:Description>
                   </skos:member>
+                  <pmo:subCategory rdf:resource="http://example.org/concept/ecla/5/A47B"/>
+                  <pmo:parentCategory rdf:resource="http://example.org/concept/ecla/4/A47"/>
+                  <pmo:subCategory rdf:resource="http://example.org/concept/ecla/5/A47C"/>
+                  <pmo:parentCategory rdf:resource="http://example.org/concept/ecla/4/A47"/>
+                  <pmo:subCategory rdf:resource="http://example.org/concept/ecla/5/A47D"/>
+                  <pmo:parentCategory rdf:resource="http://example.org/concept/ecla/4/A47"/>
+                  <pmo:subCategory rdf:resource="http://example.org/concept/ecla/5/A47F"/>
+                  <pmo:parentCategory rdf:resource="http://example.org/concept/ecla/4/A47"/>
+                  <pmo:subCategory rdf:resource="http://example.org/concept/ecla/5/A47G"/>
+                  <pmo:parentCategory rdf:resource="http://example.org/concept/ecla/4/A47"/>
+                  <pmo:subCategory rdf:resource="http://example.org/concept/ecla/5/A47H"/>
+                  <pmo:parentCategory rdf:resource="http://example.org/concept/ecla/4/A47"/>
+                  <pmo:subCategory rdf:resource="http://example.org/concept/ecla/5/A47J"/>
+                  <pmo:parentCategory rdf:resource="http://example.org/concept/ecla/4/A47"/>
+                  <pmo:subCategory rdf:resource="http://example.org/concept/ecla/5/A47K"/>
+                  <pmo:parentCategory rdf:resource="http://example.org/concept/ecla/4/A47"/>
+                  <pmo:subCategory rdf:resource="http://example.org/concept/ecla/5/A47L"/>
+                  <pmo:parentCategory rdf:resource="http://example.org/concept/ecla/4/A47"/>
                   <skos:prefLabel xml:lang="en">FURNITURE</skos:prefLabel>
                   <skos:definition xml:lang="en">arrangements of seats for, or adaptations of seats to, vehicles B60N</skos:definition>
                   <skos:prefLabel xml:lang="en">DOMESTIC ARTICLES OR APPLIANCES</skos:prefLabel>
@@ -864,23 +1149,43 @@
                   <skos:note xml:lang="en">In this subclass, the following term is used with the meaning indicated: - "furniture" covers also easels or stands, e.g. for blackboards or drawing tables.</skos:note>
                </rdf:Description>
             </skos:member>
+            <pmo:subCategory rdf:resource="http://example.org/concept/ecla/4/A41"/>
+            <pmo:parentCategory rdf:resource="http://example.org/concept/ecla/3/A41"/>
+            <pmo:subCategory rdf:resource="http://example.org/concept/ecla/4/A42"/>
+            <pmo:parentCategory rdf:resource="http://example.org/concept/ecla/3/A41"/>
+            <pmo:subCategory rdf:resource="http://example.org/concept/ecla/4/A43"/>
+            <pmo:parentCategory rdf:resource="http://example.org/concept/ecla/3/A41"/>
+            <pmo:subCategory rdf:resource="http://example.org/concept/ecla/4/A44"/>
+            <pmo:parentCategory rdf:resource="http://example.org/concept/ecla/3/A41"/>
+            <pmo:subCategory rdf:resource="http://example.org/concept/ecla/4/A45"/>
+            <pmo:parentCategory rdf:resource="http://example.org/concept/ecla/3/A41"/>
+            <pmo:subCategory rdf:resource="http://example.org/concept/ecla/4/A46"/>
+            <pmo:parentCategory rdf:resource="http://example.org/concept/ecla/3/A41"/>
+            <pmo:subCategory rdf:resource="http://example.org/concept/ecla/4/A47"/>
+            <pmo:parentCategory rdf:resource="http://example.org/concept/ecla/3/A41"/>
             <skos:prefLabel xml:lang="en">Personal or domestic articles</skos:prefLabel>
          </rdf:Description>
       </skos:member>
       <skos:member>
          <rdf:Description rdf:about="http://example.org/concept/ecla/3/A61">
+            <skos:notation>A61</skos:notation>
             <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
             <rdf:type rdf:resource="http://purl.org/linked-data/xkos#ClassificationLevel"/>
+            <rdf:type rdf:resource="ECLACategoory"/>
             <xkos:depth>3</xkos:depth>
             <skos:member>
                <rdf:Description rdf:about="http://example.org/concept/ecla/4/A61">
+                  <skos:notation>A61</skos:notation>
                   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
                   <rdf:type rdf:resource="http://purl.org/linked-data/xkos#ClassificationLevel"/>
+                  <rdf:type rdf:resource="ECLACategoory"/>
                   <xkos:depth>4</xkos:depth>
                   <skos:member>
                      <rdf:Description rdf:about="http://example.org/concept/ecla/5/A61B">
+                        <skos:notation>A61B</skos:notation>
                         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
                         <rdf:type rdf:resource="http://purl.org/linked-data/xkos#ClassificationLevel"/>
+                        <rdf:type rdf:resource="ECLACategoory"/>
                         <xkos:depth>5</xkos:depth>
                         <skos:prefLabel xml:lang="en">DIAGNOSIS</skos:prefLabel>
                         <skos:prefLabel xml:lang="en">SURGERY</skos:prefLabel>
@@ -892,8 +1197,10 @@
                   </skos:member>
                   <skos:member>
                      <rdf:Description rdf:about="http://example.org/concept/ecla/5/A61C">
+                        <skos:notation>A61C</skos:notation>
                         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
                         <rdf:type rdf:resource="http://purl.org/linked-data/xkos#ClassificationLevel"/>
+                        <rdf:type rdf:resource="ECLACategoory"/>
                         <xkos:depth>5</xkos:depth>
                         <skos:prefLabel xml:lang="en">DENTISTRY</skos:prefLabel>
                         <skos:prefLabel xml:lang="en">APPARATUS OR METHODS FOR ORAL OR DENTAL HYGIENE</skos:prefLabel>
@@ -908,16 +1215,20 @@
                   </skos:member>
                   <skos:member>
                      <rdf:Description rdf:about="http://example.org/concept/ecla/5/A61D">
+                        <skos:notation>A61D</skos:notation>
                         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
                         <rdf:type rdf:resource="http://purl.org/linked-data/xkos#ClassificationLevel"/>
+                        <rdf:type rdf:resource="ECLACategoory"/>
                         <xkos:depth>5</xkos:depth>
                         <skos:prefLabel xml:lang="en">VETERINARY INSTRUMENTS, IMPLEMENTS, TOOLS, OR METHODS</skos:prefLabel>
                      </rdf:Description>
                   </skos:member>
                   <skos:member>
                      <rdf:Description rdf:about="http://example.org/concept/ecla/5/A61F">
+                        <skos:notation>A61F</skos:notation>
                         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
                         <rdf:type rdf:resource="http://purl.org/linked-data/xkos#ClassificationLevel"/>
+                        <rdf:type rdf:resource="ECLACategoory"/>
                         <xkos:depth>5</xkos:depth>
                         <skos:prefLabel xml:lang="en">FILTERS IMPLANTABLE INTO BLOOD VESSELS</skos:prefLabel>
                         <skos:prefLabel xml:lang="en">PROSTHESES</skos:prefLabel>
@@ -931,8 +1242,10 @@
                   </skos:member>
                   <skos:member>
                      <rdf:Description rdf:about="http://example.org/concept/ecla/5/A61G">
+                        <skos:notation>A61G</skos:notation>
                         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
                         <rdf:type rdf:resource="http://purl.org/linked-data/xkos#ClassificationLevel"/>
+                        <rdf:type rdf:resource="ECLACategoory"/>
                         <xkos:depth>5</xkos:depth>
                         <skos:prefLabel xml:lang="en">TRANSPORT OR ACCOMODATION FOR PATIENTS</skos:prefLabel>
                         <skos:prefLabel xml:lang="en">OPERATING TABLES OR CHAIRS</skos:prefLabel>
@@ -946,8 +1259,10 @@
                   </skos:member>
                   <skos:member>
                      <rdf:Description rdf:about="http://example.org/concept/ecla/5/A61H">
+                        <skos:notation>A61H</skos:notation>
                         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
                         <rdf:type rdf:resource="http://purl.org/linked-data/xkos#ClassificationLevel"/>
+                        <rdf:type rdf:resource="ECLACategoory"/>
                         <xkos:depth>5</xkos:depth>
                         <skos:prefLabel xml:lang="en">PHYSICAL THERAPY APPARATUS, e.g. DEVICES FOR LOCATING OR STIMULATING REFLEX POINTS IN THE BODY</skos:prefLabel>
                         <skos:prefLabel xml:lang="en">ARTIFICIAL RESPIRATION</skos:prefLabel>
@@ -959,8 +1274,10 @@
                   </skos:member>
                   <skos:member>
                      <rdf:Description rdf:about="http://example.org/concept/ecla/5/A61J">
+                        <skos:notation>A61J</skos:notation>
                         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
                         <rdf:type rdf:resource="http://purl.org/linked-data/xkos#ClassificationLevel"/>
+                        <rdf:type rdf:resource="ECLACategoory"/>
                         <xkos:depth>5</xkos:depth>
                         <skos:prefLabel xml:lang="en">CONTAINERS SPECIALLY ADAPTED FOR MEDICAL OR PHARMACEUTICAL PURPOSES</skos:prefLabel>
                         <skos:prefLabel xml:lang="en">DEVICES OR METHODS SPECIALLY ADAPTED FOR BRINGING PHARMACEUTICAL PRODUCTS INTO PARTICULAR PHYSICAL OR ADMINISTERING FORMS</skos:prefLabel>
@@ -971,8 +1288,10 @@
                   </skos:member>
                   <skos:member>
                      <rdf:Description rdf:about="http://example.org/concept/ecla/5/A61K">
+                        <skos:notation>A61K</skos:notation>
                         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
                         <rdf:type rdf:resource="http://purl.org/linked-data/xkos#ClassificationLevel"/>
+                        <rdf:type rdf:resource="ECLACategoory"/>
                         <xkos:depth>5</xkos:depth>
                         <skos:prefLabel xml:lang="en">PREPARATIONS FOR MEDICAL, DENTAL, OR TOILET PURPOSES</skos:prefLabel>
                         <skos:definition xml:lang="en">devices or methods specially adapted for bringing pharmaceutical products into particular physical or administering forms A61J3/00; chemical aspects of, or use of materials for deodorisation of air, for disinfection or sterilisation, or for bandages, dressings, absorbent pads or surgical articles A61L;</skos:definition>
@@ -984,8 +1303,10 @@
                   </skos:member>
                   <skos:member>
                      <rdf:Description rdf:about="http://example.org/concept/ecla/5/A61L">
+                        <skos:notation>A61L</skos:notation>
                         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
                         <rdf:type rdf:resource="http://purl.org/linked-data/xkos#ClassificationLevel"/>
+                        <rdf:type rdf:resource="ECLACategoory"/>
                         <xkos:depth>5</xkos:depth>
                         <skos:prefLabel xml:lang="en">METHODS OR APPARATUS FOR STERILISING MATERIALS OR OBJECTS IN GENERAL</skos:prefLabel>
                         <skos:prefLabel xml:lang="en">DISINFECTION, STERILISATION, OR DEODORISATION OF AIR</skos:prefLabel>
@@ -997,8 +1318,10 @@
                   </skos:member>
                   <skos:member>
                      <rdf:Description rdf:about="http://example.org/concept/ecla/5/A61M">
+                        <skos:notation>A61M</skos:notation>
                         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
                         <rdf:type rdf:resource="http://purl.org/linked-data/xkos#ClassificationLevel"/>
+                        <rdf:type rdf:resource="ECLACategoory"/>
                         <xkos:depth>5</xkos:depth>
                         <skos:prefLabel xml:lang="en">DEVICES FOR INTRODUCING MEDIA INTO, OR ONTO, THE BODY</skos:prefLabel>
                         <skos:definition xml:lang="en">introducing media into or onto the bodies of animals A61D7/00; means for inserting tampons A61F13/26; devices for administering food or medicines orally A61J; containers for collecting, storing or administering blood or medical fluids A61J1/05</skos:definition>
@@ -1012,8 +1335,10 @@
                   </skos:member>
                   <skos:member>
                      <rdf:Description rdf:about="http://example.org/concept/ecla/5/A61N">
+                        <skos:notation>A61N</skos:notation>
                         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
                         <rdf:type rdf:resource="http://purl.org/linked-data/xkos#ClassificationLevel"/>
+                        <rdf:type rdf:resource="ECLACategoory"/>
                         <xkos:depth>5</xkos:depth>
                         <skos:prefLabel xml:lang="en">ELECTROTHERAPY</skos:prefLabel>
                         <skos:prefLabel xml:lang="en">MAGNETOTHERAPY</skos:prefLabel>
@@ -1024,25 +1349,55 @@
                   </skos:member>
                   <skos:member>
                      <rdf:Description rdf:about="http://example.org/concept/ecla/5/A61Q">
+                        <skos:notation>A61Q</skos:notation>
                         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
                         <rdf:type rdf:resource="http://purl.org/linked-data/xkos#ClassificationLevel"/>
+                        <rdf:type rdf:resource="ECLACategoory"/>
                         <xkos:depth>5</xkos:depth>
                         <skos:prefLabel xml:lang="en">SPECIFIC USE OF COSMETICS OR SIMILAR TOILET PREPARATIONS</skos:prefLabel>
                      </rdf:Description>
                   </skos:member>
+                  <pmo:subCategory rdf:resource="http://example.org/concept/ecla/5/A61B"/>
+                  <pmo:parentCategory rdf:resource="http://example.org/concept/ecla/4/A61"/>
+                  <pmo:subCategory rdf:resource="http://example.org/concept/ecla/5/A61C"/>
+                  <pmo:parentCategory rdf:resource="http://example.org/concept/ecla/4/A61"/>
+                  <pmo:subCategory rdf:resource="http://example.org/concept/ecla/5/A61D"/>
+                  <pmo:parentCategory rdf:resource="http://example.org/concept/ecla/4/A61"/>
+                  <pmo:subCategory rdf:resource="http://example.org/concept/ecla/5/A61F"/>
+                  <pmo:parentCategory rdf:resource="http://example.org/concept/ecla/4/A61"/>
+                  <pmo:subCategory rdf:resource="http://example.org/concept/ecla/5/A61G"/>
+                  <pmo:parentCategory rdf:resource="http://example.org/concept/ecla/4/A61"/>
+                  <pmo:subCategory rdf:resource="http://example.org/concept/ecla/5/A61H"/>
+                  <pmo:parentCategory rdf:resource="http://example.org/concept/ecla/4/A61"/>
+                  <pmo:subCategory rdf:resource="http://example.org/concept/ecla/5/A61J"/>
+                  <pmo:parentCategory rdf:resource="http://example.org/concept/ecla/4/A61"/>
+                  <pmo:subCategory rdf:resource="http://example.org/concept/ecla/5/A61K"/>
+                  <pmo:parentCategory rdf:resource="http://example.org/concept/ecla/4/A61"/>
+                  <pmo:subCategory rdf:resource="http://example.org/concept/ecla/5/A61L"/>
+                  <pmo:parentCategory rdf:resource="http://example.org/concept/ecla/4/A61"/>
+                  <pmo:subCategory rdf:resource="http://example.org/concept/ecla/5/A61M"/>
+                  <pmo:parentCategory rdf:resource="http://example.org/concept/ecla/4/A61"/>
+                  <pmo:subCategory rdf:resource="http://example.org/concept/ecla/5/A61N"/>
+                  <pmo:parentCategory rdf:resource="http://example.org/concept/ecla/4/A61"/>
+                  <pmo:subCategory rdf:resource="http://example.org/concept/ecla/5/A61Q"/>
+                  <pmo:parentCategory rdf:resource="http://example.org/concept/ecla/4/A61"/>
                   <skos:prefLabel xml:lang="en">MEDICAL OR VETERINARY SCIENCE</skos:prefLabel>
                   <skos:prefLabel xml:lang="en">HYGIENE</skos:prefLabel>
                </rdf:Description>
             </skos:member>
             <skos:member>
                <rdf:Description rdf:about="http://example.org/concept/ecla/4/A62">
+                  <skos:notation>A62</skos:notation>
                   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
                   <rdf:type rdf:resource="http://purl.org/linked-data/xkos#ClassificationLevel"/>
+                  <rdf:type rdf:resource="ECLACategoory"/>
                   <xkos:depth>4</xkos:depth>
                   <skos:member>
                      <rdf:Description rdf:about="http://example.org/concept/ecla/5/A62B">
+                        <skos:notation>A62B</skos:notation>
                         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
                         <rdf:type rdf:resource="http://purl.org/linked-data/xkos#ClassificationLevel"/>
+                        <rdf:type rdf:resource="ECLACategoory"/>
                         <xkos:depth>5</xkos:depth>
                         <skos:prefLabel xml:lang="en">DEVICES, APPARATUS OR METHODS FOR LIFE-SAVING</skos:prefLabel>
                         <skos:definition xml:lang="en">valves specially adapted for medical use A61M39/00; life-saving devices, apparatus or methods specially adapted for use in water B63C9/00; divers` equipment B63C11/00; specially adopted for use with aircraft, e.g. parachutes, ejector seats, B64D; rescue devices peculiar to mining E21F11/00</skos:definition>
@@ -1054,8 +1409,10 @@
                   </skos:member>
                   <skos:member>
                      <rdf:Description rdf:about="http://example.org/concept/ecla/5/A62C">
+                        <skos:notation>A62C</skos:notation>
                         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
                         <rdf:type rdf:resource="http://purl.org/linked-data/xkos#ClassificationLevel"/>
+                        <rdf:type rdf:resource="ECLACategoory"/>
                         <xkos:depth>5</xkos:depth>
                         <skos:prefLabel xml:lang="en">FIRE-FIGHTING</skos:prefLabel>
                         <skos:definition xml:lang="en">fire-extinguishing compositions, use of chemical substances in extinguishing fires A62D1/00; spraying, applying liquids or other fluent materials to surfaces in general B05; alarm arrangements G08B, e.g. fire alarms actuated by smoke or gases G08B17/10</skos:definition>
@@ -1065,13 +1422,21 @@
                   </skos:member>
                   <skos:member>
                      <rdf:Description rdf:about="http://example.org/concept/ecla/5/A62D">
+                        <skos:notation>A62D</skos:notation>
                         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
                         <rdf:type rdf:resource="http://purl.org/linked-data/xkos#ClassificationLevel"/>
+                        <rdf:type rdf:resource="ECLACategoory"/>
                         <xkos:depth>5</xkos:depth>
                         <skos:prefLabel xml:lang="en">CHEMICAL MEANS FOR EXTINGUISHING FIRES OR FOR COMBATING OR PROTECTING AGAINST HARMFUL CHEMICAL AGENTS</skos:prefLabel>
                         <skos:prefLabel xml:lang="en">CHEMICAL MATERIALS FOR USE IN BREATHING APPARATUS</skos:prefLabel>
                      </rdf:Description>
                   </skos:member>
+                  <pmo:subCategory rdf:resource="http://example.org/concept/ecla/5/A62B"/>
+                  <pmo:parentCategory rdf:resource="http://example.org/concept/ecla/4/A62"/>
+                  <pmo:subCategory rdf:resource="http://example.org/concept/ecla/5/A62C"/>
+                  <pmo:parentCategory rdf:resource="http://example.org/concept/ecla/4/A62"/>
+                  <pmo:subCategory rdf:resource="http://example.org/concept/ecla/5/A62D"/>
+                  <pmo:parentCategory rdf:resource="http://example.org/concept/ecla/4/A62"/>
                   <skos:prefLabel xml:lang="en">LIFE-SAVING</skos:prefLabel>
                   <skos:prefLabel xml:lang="en">FIRE-FIGHTING</skos:prefLabel>
                   <skos:definition xml:lang="en">ladders E06C</skos:definition>
@@ -1080,13 +1445,17 @@
             </skos:member>
             <skos:member>
                <rdf:Description rdf:about="http://example.org/concept/ecla/4/A63">
+                  <skos:notation>A63</skos:notation>
                   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
                   <rdf:type rdf:resource="http://purl.org/linked-data/xkos#ClassificationLevel"/>
+                  <rdf:type rdf:resource="ECLACategoory"/>
                   <xkos:depth>4</xkos:depth>
                   <skos:member>
                      <rdf:Description rdf:about="http://example.org/concept/ecla/5/A63B">
+                        <skos:notation>A63B</skos:notation>
                         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
                         <rdf:type rdf:resource="http://purl.org/linked-data/xkos#ClassificationLevel"/>
+                        <rdf:type rdf:resource="ECLACategoory"/>
                         <xkos:depth>5</xkos:depth>
                         <skos:prefLabel xml:lang="en">APPARATUS FOR PHYSICAL TRAINING, GYMNASTICS, SWIMMING, CLIMBING, OR FENCING</skos:prefLabel>
                         <skos:prefLabel xml:lang="en">BALL GAMES</skos:prefLabel>
@@ -1096,8 +1465,10 @@
                   </skos:member>
                   <skos:member>
                      <rdf:Description rdf:about="http://example.org/concept/ecla/5/A63C">
+                        <skos:notation>A63C</skos:notation>
                         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
                         <rdf:type rdf:resource="http://purl.org/linked-data/xkos#ClassificationLevel"/>
+                        <rdf:type rdf:resource="ECLACategoory"/>
                         <xkos:depth>5</xkos:depth>
                         <skos:prefLabel xml:lang="en">SKATES</skos:prefLabel>
                         <skos:prefLabel xml:lang="en">SKIS</skos:prefLabel>
@@ -1114,8 +1485,10 @@
                   </skos:member>
                   <skos:member>
                      <rdf:Description rdf:about="http://example.org/concept/ecla/5/A63D">
+                        <skos:notation>A63D</skos:notation>
                         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
                         <rdf:type rdf:resource="http://purl.org/linked-data/xkos#ClassificationLevel"/>
+                        <rdf:type rdf:resource="ECLACategoory"/>
                         <xkos:depth>5</xkos:depth>
                         <skos:prefLabel xml:lang="en">BOWLING-ALLEYS</skos:prefLabel>
                         <skos:prefLabel xml:lang="en">BOWLING GAMES</skos:prefLabel>
@@ -1129,8 +1502,10 @@
                   </skos:member>
                   <skos:member>
                      <rdf:Description rdf:about="http://example.org/concept/ecla/5/A63F">
+                        <skos:notation>A63F</skos:notation>
                         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
                         <rdf:type rdf:resource="http://purl.org/linked-data/xkos#ClassificationLevel"/>
+                        <rdf:type rdf:resource="ECLACategoory"/>
                         <xkos:depth>5</xkos:depth>
                         <skos:prefLabel xml:lang="en">CARD, BOARD, OR ROULETTE GAMES</skos:prefLabel>
                         <skos:prefLabel xml:lang="en">INDOOR GAMES USING SMALL MOVING PLAYING BODIES</skos:prefLabel>
@@ -1144,8 +1519,10 @@
                   </skos:member>
                   <skos:member>
                      <rdf:Description rdf:about="http://example.org/concept/ecla/5/A63G">
+                        <skos:notation>A63G</skos:notation>
                         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
                         <rdf:type rdf:resource="http://purl.org/linked-data/xkos#ClassificationLevel"/>
+                        <rdf:type rdf:resource="ECLACategoory"/>
                         <xkos:depth>5</xkos:depth>
                         <skos:prefLabel xml:lang="en">MERRY-GO-ROUNDS</skos:prefLabel>
                         <skos:prefLabel xml:lang="en">SWINGS</skos:prefLabel>
@@ -1157,16 +1534,20 @@
                   </skos:member>
                   <skos:member>
                      <rdf:Description rdf:about="http://example.org/concept/ecla/5/A63H">
+                        <skos:notation>A63H</skos:notation>
                         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
                         <rdf:type rdf:resource="http://purl.org/linked-data/xkos#ClassificationLevel"/>
+                        <rdf:type rdf:resource="ECLACategoory"/>
                         <xkos:depth>5</xkos:depth>
                         <skos:prefLabel xml:lang="en">TOYS, e.g. TOPS, DOLLS, HOOPS, BUILDING BLOCKS</skos:prefLabel>
                      </rdf:Description>
                   </skos:member>
                   <skos:member>
                      <rdf:Description rdf:about="http://example.org/concept/ecla/5/A63J">
+                        <skos:notation>A63J</skos:notation>
                         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
                         <rdf:type rdf:resource="http://purl.org/linked-data/xkos#ClassificationLevel"/>
+                        <rdf:type rdf:resource="ECLACategoory"/>
                         <xkos:depth>5</xkos:depth>
                         <skos:prefLabel xml:lang="en">DEVICES FOR THEATRES, CIRCUSES, OR THE LIKE</skos:prefLabel>
                         <skos:prefLabel xml:lang="en">CONJURING APPLIANCES OR THE LIKE</skos:prefLabel>
@@ -1176,8 +1557,10 @@
                   </skos:member>
                   <skos:member>
                      <rdf:Description rdf:about="http://example.org/concept/ecla/5/A63K">
+                        <skos:notation>A63K</skos:notation>
                         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
                         <rdf:type rdf:resource="http://purl.org/linked-data/xkos#ClassificationLevel"/>
+                        <rdf:type rdf:resource="ECLACategoory"/>
                         <xkos:depth>5</xkos:depth>
                         <skos:prefLabel xml:lang="en">RACING</skos:prefLabel>
                         <skos:prefLabel xml:lang="en">RIDING SPORTS</skos:prefLabel>
@@ -1188,15 +1571,45 @@
                         <dcterms:references rdf:resource="http://example.org/concept/ecla/G09F9/00"/>
                      </rdf:Description>
                   </skos:member>
+                  <pmo:subCategory rdf:resource="http://example.org/concept/ecla/5/A63B"/>
+                  <pmo:parentCategory rdf:resource="http://example.org/concept/ecla/4/A63"/>
+                  <pmo:subCategory rdf:resource="http://example.org/concept/ecla/5/A63C"/>
+                  <pmo:parentCategory rdf:resource="http://example.org/concept/ecla/4/A63"/>
+                  <pmo:subCategory rdf:resource="http://example.org/concept/ecla/5/A63D"/>
+                  <pmo:parentCategory rdf:resource="http://example.org/concept/ecla/4/A63"/>
+                  <pmo:subCategory rdf:resource="http://example.org/concept/ecla/5/A63F"/>
+                  <pmo:parentCategory rdf:resource="http://example.org/concept/ecla/4/A63"/>
+                  <pmo:subCategory rdf:resource="http://example.org/concept/ecla/5/A63G"/>
+                  <pmo:parentCategory rdf:resource="http://example.org/concept/ecla/4/A63"/>
+                  <pmo:subCategory rdf:resource="http://example.org/concept/ecla/5/A63H"/>
+                  <pmo:parentCategory rdf:resource="http://example.org/concept/ecla/4/A63"/>
+                  <pmo:subCategory rdf:resource="http://example.org/concept/ecla/5/A63J"/>
+                  <pmo:parentCategory rdf:resource="http://example.org/concept/ecla/4/A63"/>
+                  <pmo:subCategory rdf:resource="http://example.org/concept/ecla/5/A63K"/>
+                  <pmo:parentCategory rdf:resource="http://example.org/concept/ecla/4/A63"/>
                   <skos:prefLabel xml:lang="en">SPORTS</skos:prefLabel>
                   <skos:prefLabel xml:lang="en">GAMES</skos:prefLabel>
                   <skos:prefLabel xml:lang="en">AMUSEMENTS</skos:prefLabel>
                </rdf:Description>
             </skos:member>
+            <pmo:subCategory rdf:resource="http://example.org/concept/ecla/4/A61"/>
+            <pmo:parentCategory rdf:resource="http://example.org/concept/ecla/3/A61"/>
+            <pmo:subCategory rdf:resource="http://example.org/concept/ecla/4/A62"/>
+            <pmo:parentCategory rdf:resource="http://example.org/concept/ecla/3/A61"/>
+            <pmo:subCategory rdf:resource="http://example.org/concept/ecla/4/A63"/>
+            <pmo:parentCategory rdf:resource="http://example.org/concept/ecla/3/A61"/>
             <skos:prefLabel xml:lang="en">Health</skos:prefLabel>
             <skos:prefLabel xml:lang="en">amusement</skos:prefLabel>
          </rdf:Description>
       </skos:member>
+      <pmo:subCategory rdf:resource="http://example.org/concept/ecla/3/A01"/>
+      <pmo:parentCategory rdf:resource="http://example.org/concept/ecla/2/A"/>
+      <pmo:subCategory rdf:resource="http://example.org/concept/ecla/3/A21"/>
+      <pmo:parentCategory rdf:resource="http://example.org/concept/ecla/2/A"/>
+      <pmo:subCategory rdf:resource="http://example.org/concept/ecla/3/A41"/>
+      <pmo:parentCategory rdf:resource="http://example.org/concept/ecla/2/A"/>
+      <pmo:subCategory rdf:resource="http://example.org/concept/ecla/3/A61"/>
+      <pmo:parentCategory rdf:resource="http://example.org/concept/ecla/2/A"/>
       <skos:prefLabel xml:lang="en">HUMAN NECESSITIES</skos:prefLabel>
    </rdf:Description>
 </rdf:RDF>
