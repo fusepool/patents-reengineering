@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:uuid="java:java.util.UUID"
-         xmlns:foaf="http://xmlns.com/foaf/0.1/"
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:foaf="http://xmlns.com/foaf/0.1/"
          xmlns:prov="http://www.w3.org/ns/prov#"
          xmlns:skos="http://www.w3.org/2004/02/skos/core#"
          xmlns:xkos="http://purl.org/linked-data/xkos#"
@@ -14,18 +13,20 @@
          xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
          xmlns:property="http://example.org/property/"
          xmlns:schema="http://schema.org/">
-   <rdf:Description rdf:about="http://example.org/#i">
+   <rdf:Description rdf:about="http://csarven.ca/#i">
       <rdf:type rdf:resource="http://www.w3.org/ns/prov#Agent"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://example.org/provenance/activity/20130205175856">
+   <rdf:Description xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                    rdf:about="http://example.org/provenance/activity/20130214060707">
       <rdf:type rdf:resource="http://www.w3.org/ns/prov#Activity"/>
-      <prov:startedAtTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2013-02-05T17:58:56Z</prov:startedAtTime>
-      <prov:wasAssociatedWith rdf:resource="http://example.org/#i"/>
-      <prov:used rdf:resource="http://example.org/EP-1000006-A1.xml"/>
-      <prov:used rdf:resource="https://github.com/fusepool/patents-reengineering/scripts/marec.xsl"/>
+      <prov:startedAtTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2013-02-14T06:07:07Z</prov:startedAtTime>
+      <prov:wasAssociatedWith rdf:resource="http://csarven.ca/#i"/>
+      <prov:used rdf:resource="http://example.org/data/EP-1000006-A1.xml"/>
+      <prov:used rdf:resource="https://github.com/fusepool/patents-reengineering/src/main/resources/scripts/marec.xsl"/>
       <prov:generated>
          <rdf:Description rdf:about="http://example.org/patent/EP-1000006-A1">
-            <prov:wasDerivedFrom rdf:resource="http://example.org/EP-1000006-A1.xml"/>
+            <prov:wasDerivedFrom rdf:resource="http://example.org/data/EP-1000006-A1.xml"/>
+            <prov:wasGeneratedBy rdf:resource="http://example.org/provenance/activity/20130214060707"/>
          </rdf:Description>
       </prov:generated>
    </rdf:Description>
@@ -96,13 +97,123 @@
       </property:priority-claim>
    </rdf:Description>
    <rdf:Description rdf:about="http://example.org/patent/EP-1000006-A1">
+      <pmo:classifiedAs>
+         <rdf:Description rdf:about="http://example.org/concept/ecla/B01J31/18C">
+            <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+            <pmo:classifiedPatent rdf:resource="http://example.org/patent/EP-1000006-A1"/>
+            <pmo:classifiedPatent rdf:resource="http://example.org/concept/B01J31/18C"/>
+            <pmo:classificationCode>B01J31/18C</pmo:classificationCode>
+            <skos:notation>B01J31/18C</skos:notation>
+         </rdf:Description>
+      </pmo:classifiedAs>
+      <pmo:classifiedAs>
+         <rdf:Description rdf:about="http://example.org/concept/ecla/B01J31/18C2">
+            <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+            <pmo:classifiedPatent rdf:resource="http://example.org/patent/EP-1000006-A1"/>
+            <pmo:classifiedPatent rdf:resource="http://example.org/concept/B01J31/18C2"/>
+            <pmo:classificationCode>B01J31/18C2</pmo:classificationCode>
+            <skos:notation>B01J31/18C2</skos:notation>
+         </rdf:Description>
+      </pmo:classifiedAs>
+      <pmo:classifiedAs>
+         <rdf:Description rdf:about="http://example.org/concept/ecla/C07C45/50">
+            <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+            <pmo:classifiedPatent rdf:resource="http://example.org/patent/EP-1000006-A1"/>
+            <pmo:classifiedPatent rdf:resource="http://example.org/concept/C07C45/50"/>
+            <pmo:classificationCode>C07C45/50</pmo:classificationCode>
+            <skos:notation>C07C45/50</skos:notation>
+         </rdf:Description>
+      </pmo:classifiedAs>
+      <pmo:classifiedAs>
+         <rdf:Description rdf:about="http://example.org/concept/ecla/C07C45/80">
+            <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+            <pmo:classifiedPatent rdf:resource="http://example.org/patent/EP-1000006-A1"/>
+            <pmo:classifiedPatent rdf:resource="http://example.org/concept/C07C45/80"/>
+            <pmo:classificationCode>C07C45/80</pmo:classificationCode>
+            <skos:notation>C07C45/80</skos:notation>
+         </rdf:Description>
+      </pmo:classifiedAs>
+      <pmo:classifiedAs>
+         <rdf:Description rdf:about="http://example.org/concept/ecla/C07C51/373">
+            <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+            <pmo:classifiedPatent rdf:resource="http://example.org/patent/EP-1000006-A1"/>
+            <pmo:classifiedPatent rdf:resource="http://example.org/concept/C07C51/373"/>
+            <pmo:classificationCode>C07C51/373</pmo:classificationCode>
+            <skos:notation>C07C51/373</skos:notation>
+         </rdf:Description>
+      </pmo:classifiedAs>
+      <pmo:classifiedAs>
+         <rdf:Description rdf:about="http://example.org/concept/ecla/C07C67/313">
+            <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+            <pmo:classifiedPatent rdf:resource="http://example.org/patent/EP-1000006-A1"/>
+            <pmo:classifiedPatent rdf:resource="http://example.org/concept/C07C67/313"/>
+            <pmo:classificationCode>C07C67/313</pmo:classificationCode>
+            <skos:notation>C07C67/313</skos:notation>
+         </rdf:Description>
+      </pmo:classifiedAs>
+      <pmo:classifiedAs>
+         <rdf:Description rdf:about="http://example.org/concept/ecla/C07C67/347">
+            <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+            <pmo:classifiedPatent rdf:resource="http://example.org/patent/EP-1000006-A1"/>
+            <pmo:classifiedPatent rdf:resource="http://example.org/concept/C07C67/347"/>
+            <pmo:classificationCode>C07C67/347</pmo:classificationCode>
+            <skos:notation>C07C67/347</skos:notation>
+         </rdf:Description>
+      </pmo:classifiedAs>
+      <pmo:classifiedAs>
+         <rdf:Description rdf:about="http://example.org/concept/ecla/C07F9/145">
+            <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+            <pmo:classifiedPatent rdf:resource="http://example.org/patent/EP-1000006-A1"/>
+            <pmo:classifiedPatent rdf:resource="http://example.org/concept/C07F9/145"/>
+            <pmo:classificationCode>C07F9/145</pmo:classificationCode>
+            <skos:notation>C07F9/145</skos:notation>
+         </rdf:Description>
+      </pmo:classifiedAs>
+      <pmo:classifiedAs>
+         <rdf:Description rdf:about="http://example.org/concept/ecla/L01J231">
+            <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+            <pmo:classifiedPatent rdf:resource="http://example.org/patent/EP-1000006-A1"/>
+            <pmo:classifiedPatent rdf:resource="http://example.org/concept/L01J231"/>
+            <pmo:classificationCode>L01J231</pmo:classificationCode>
+            <skos:notation>L01J231</skos:notation>
+         </rdf:Description>
+      </pmo:classifiedAs>
+      <pmo:classifiedAs>
+         <rdf:Description rdf:about="http://example.org/concept/ecla/L01J531">
+            <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+            <pmo:classifiedPatent rdf:resource="http://example.org/patent/EP-1000006-A1"/>
+            <pmo:classifiedPatent rdf:resource="http://example.org/concept/L01J531"/>
+            <pmo:classificationCode>L01J531</pmo:classificationCode>
+            <skos:notation>L01J531</skos:notation>
+         </rdf:Description>
+      </pmo:classifiedAs>
+      <pmo:classifiedAs>
+         <rdf:Description rdf:about="http://example.org/concept/ecla/L01J531">
+            <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+            <pmo:classifiedPatent rdf:resource="http://example.org/patent/EP-1000006-A1"/>
+            <pmo:classifiedPatent rdf:resource="http://example.org/concept/L01J531"/>
+            <pmo:classificationCode>L01J531</pmo:classificationCode>
+            <skos:notation>L01J531</skos:notation>
+         </rdf:Description>
+      </pmo:classifiedAs>
+      <pmo:classifiedAs>
+         <rdf:Description rdf:about="http://example.org/concept/ecla/L01J531">
+            <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+            <pmo:classifiedPatent rdf:resource="http://example.org/patent/EP-1000006-A1"/>
+            <pmo:classifiedPatent rdf:resource="http://example.org/concept/L01J531"/>
+            <pmo:classificationCode>L01J531</pmo:classificationCode>
+            <skos:notation>L01J531</skos:notation>
+         </rdf:Description>
+      </pmo:classifiedAs>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://example.org/patent/EP-1000006-A1">
       <dcterms:title xml:lang="de">VERFAHREN ZUR HERSTELLUNG VON RECHTKETTIGEN ALDEHYDEN</dcterms:title>
       <dcterms:title xml:lang="en">IMPROVED PROCESS OF PREPARATION OF LINEAR ALDEHYDES</dcterms:title>
       <dcterms:title xml:lang="fr">PROCEDE AMELIORE DE PREPARATION D'ALDEHYDES LINEAIRES</dcterms:title>
    </rdf:Description>
    <rdf:Description rdf:about="http://example.org/patent/EP-1000006-A1">
       <pmo:applicant>
-         <rdf:Description rdf:about="urn:uuid:82665e38-26e1-4feb-ba00-5270419f0cb3">
+         <rdf:Description rdf:about="urn:uuid:186eb103-4a00-4dd4-a47b-65d29270d50a">
             <rdf:type rdf:resource="http://www.owl-ontologies.com/sumo.owl#CognitiveAgent"/>
             <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
             <pmo:applicantOf rdf:resource="http://example.org/patent/EP-1000006-A1"/>
@@ -118,7 +229,7 @@
    </rdf:Description>
    <rdf:Description rdf:about="http://example.org/patent/EP-1000006-A1">
       <pmo:applicant>
-         <rdf:Description rdf:about="urn:uuid:f3ccf5cb-218d-4707-a6d0-1d1e93c715f6">
+         <rdf:Description rdf:about="urn:uuid:aea7f01c-bcb0-4597-b08f-e881b54c2ff4">
             <rdf:type rdf:resource="http://www.owl-ontologies.com/sumo.owl#CognitiveAgent"/>
             <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
             <pmo:applicantOf rdf:resource="http://example.org/patent/EP-1000006-A1"/>
@@ -134,7 +245,7 @@
    </rdf:Description>
    <rdf:Description rdf:about="http://example.org/patent/EP-1000006-A1">
       <pmo:applicant>
-         <rdf:Description rdf:about="urn:uuid:dcc6aacb-3cdf-4b53-aa6b-77d546ec2321">
+         <rdf:Description rdf:about="urn:uuid:6dd9fa35-7c8f-44e1-ab88-5ad843c792cc">
             <rdf:type rdf:resource="http://www.owl-ontologies.com/sumo.owl#CognitiveAgent"/>
             <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
             <pmo:applicantOf rdf:resource="http://example.org/patent/EP-1000006-A1"/>
@@ -144,7 +255,7 @@
    </rdf:Description>
    <rdf:Description rdf:about="http://example.org/patent/EP-1000006-A1">
       <pmo:applicant>
-         <rdf:Description rdf:about="urn:uuid:b8d353e2-bbfd-41d0-b859-60ec2af7e23a">
+         <rdf:Description rdf:about="urn:uuid:63f24099-1820-4d7c-bda9-ff739b226f06">
             <rdf:type rdf:resource="http://www.owl-ontologies.com/sumo.owl#CognitiveAgent"/>
             <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
             <pmo:applicantOf rdf:resource="http://example.org/patent/EP-1000006-A1"/>
@@ -154,7 +265,7 @@
    </rdf:Description>
    <rdf:Description rdf:about="http://example.org/patent/EP-1000006-A1">
       <pmo:applicant>
-         <rdf:Description rdf:about="urn:uuid:84b77be2-d363-46d1-b73e-23a2777c2827">
+         <rdf:Description rdf:about="urn:uuid:dbe7be25-b158-42cd-a852-935515205ab4">
             <rdf:type rdf:resource="http://www.owl-ontologies.com/sumo.owl#CognitiveAgent"/>
             <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
             <pmo:applicantOf rdf:resource="http://example.org/patent/EP-1000006-A1"/>
@@ -172,7 +283,7 @@
    </rdf:Description>
    <rdf:Description rdf:about="http://example.org/patent/EP-1000006-A1">
       <pmo:applicant>
-         <rdf:Description rdf:about="urn:uuid:87c61f74-4f07-4f4a-8664-e99dfaf10f40">
+         <rdf:Description rdf:about="urn:uuid:6e4a95c2-9647-4256-bddf-4f8c492714aa">
             <rdf:type rdf:resource="http://www.owl-ontologies.com/sumo.owl#CognitiveAgent"/>
             <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
             <pmo:applicantOf rdf:resource="http://example.org/patent/EP-1000006-A1"/>
@@ -190,7 +301,7 @@
    </rdf:Description>
    <rdf:Description rdf:about="http://example.org/patent/EP-1000006-A1">
       <pmo:inventor>
-         <rdf:Description rdf:about="urn:uuid:c4d0b63d-1b18-4a90-bb7f-8ff1ed9eaadf">
+         <rdf:Description rdf:about="urn:uuid:02d114e3-9588-4ba6-aadc-503cea041845">
             <rdf:type rdf:resource="http://www.owl-ontologies.com/sumo.owl#Human"/>
             <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
             <pmo:inventorOf rdf:resource="http://example.org/patent/EP-1000006-A1"/>
@@ -206,7 +317,7 @@
    </rdf:Description>
    <rdf:Description rdf:about="http://example.org/patent/EP-1000006-A1">
       <pmo:inventor>
-         <rdf:Description rdf:about="urn:uuid:b5f837f9-66d8-4cc9-804b-9c4e7e02ed32">
+         <rdf:Description rdf:about="urn:uuid:4e708967-2b46-4146-8fb5-a8fe11d9f168">
             <rdf:type rdf:resource="http://www.owl-ontologies.com/sumo.owl#Human"/>
             <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
             <pmo:inventorOf rdf:resource="http://example.org/patent/EP-1000006-A1"/>
@@ -216,7 +327,7 @@
    </rdf:Description>
    <rdf:Description rdf:about="http://example.org/patent/EP-1000006-A1">
       <pmo:inventor>
-         <rdf:Description rdf:about="urn:uuid:2b33cac7-c9a0-4d6c-8bae-2871b32b01c6">
+         <rdf:Description rdf:about="urn:uuid:c327d9a3-65a5-43fb-ad7a-243eb10d6ca4">
             <rdf:type rdf:resource="http://www.owl-ontologies.com/sumo.owl#Human"/>
             <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
             <pmo:inventorOf rdf:resource="http://example.org/patent/EP-1000006-A1"/>
@@ -234,7 +345,7 @@
    </rdf:Description>
    <rdf:Description rdf:about="http://example.org/patent/EP-1000006-A1">
       <property:agent>
-         <rdf:Description rdf:about="urn:uuid:67fdff1c-b1b4-42a8-a234-7c95ae763856">
+         <rdf:Description rdf:about="urn:uuid:37772b13-d5b9-4ffa-9bc6-d4f4b9111bc4">
             <rdf:type rdf:resource="http://www.owl-ontologies.com/sumo.owl#Agent"/>
             <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
             <property:agentOf rdf:resource="http://example.org/patent/EP-1000006-A1"/>
