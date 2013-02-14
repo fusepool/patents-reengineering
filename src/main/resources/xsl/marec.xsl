@@ -41,7 +41,7 @@ TODO: ignore DTD check. saxonb-xslt breaks if offline
 
     <xsl:strip-space elements="*"/>
 
-    <xsl:variable name="xslDocument" select="'https://github.com/fusepool/patents-reengineering/scripts/marec.xsl'"/>
+    <xsl:variable name="xslDocument" select="'https://github.com/fusepool/patents-reengineering/src/main/resources/scripts/marec.xsl'"/>
 
     <xsl:template match="/patent-document">
         <rdf:RDF>
