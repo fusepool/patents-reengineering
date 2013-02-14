@@ -5,6 +5,7 @@
 <xsl:stylesheet version="2.0"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
     xmlns:owl="http://www.w3.org/2002/07/owl#"
@@ -71,6 +72,13 @@
 
         <xsl:value-of select="normalize-space(.)"/>
     </xsl:template>
+
+
+    <xsl:function name="fn:substring-before-if-contains" as="xs:string?">
+        <xsl:param name="arg" as="xs:string?"/>
+        <xsl:param name="delim" as="xs:string"/>
+        <xsl:sequence select="if (contains($arg,$delim)) then substring-before($arg,$delim) else $arg"/>
+    </xsl:function>
 
 
     <!--Copied from https://github.com/csarven/sdmx-to-qb/blob/master/scripts/common.xsl -->

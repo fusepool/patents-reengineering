@@ -285,7 +285,7 @@ XXX: Normally we don't really want to define other patents from here. In case th
         <xsl:param name="ucid" tunnel="yes"/>
 
         <xsl:for-each select="technical-data">
-            <xsl:apply-templates select="classification-ipc"/>
+            <xsl:call-template name="classifications"/>
 
             <rdf:Description rdf:about="{$patent}{$ucid}">
                 <xsl:apply-templates select="invention-title"/>
@@ -293,35 +293,44 @@ XXX: Normally we don't really want to define other patents from here. In case th
         </xsl:for-each>
     </xsl:template>
 
-    <xsl:template match="classification-ipc">
+    <xsl:template name="classifications">
         <xsl:param name="ucid" tunnel="yes"/>
 
         <rdf:Description rdf:about="{$patent}{$ucid}">
-            <xsl:for-each select="*[name() = 'main-classification' or name() = 'further-classification']">
-                <xsl:variable name="id" select="normalize-space(replace(., '\s+', ''))"/>
+            <xsl:for-each select="*[name() = 'classificaiton-ipc' or name() = 'classification-ecla']
+                                  /*[name() = 'main-classification' or
+                                     name() = 'further-classification' or
+                                     name() = 'classification-symbol']">
+<!--
+XXX: This removes the codes after + or : in ECLA. There might be a particular use even though spec says it is not generally needed.
+-->
+                <xsl:variable name="id" select="fn:substring-before-if-contains(fn:substring-before-if-contains(normalize-space(replace(., '\s+', '')), '+'), ':')"/>
 <!--
 TODO: Differentiate between main-classification and further-classification
 -->
+
+                <xsl:variable name="conceptURI" select="concat($concept, 'ecla/', $id)"/>
+
                 <pmo:classifiedAs>
 <!--
 XXX: Maybe switch to a code list
 -->
-                    <rdf:Description rdf:about="{$concept}{$id}">
-                        <xsl:call-template name="generalParameterEntities"/>
+                    <rdf:Description rdf:about="{$conceptURI}">
+<!--                        <xsl:call-template name="generalParameterEntities"/>-->
 
-                        <rdf:type rdf:resource="{$pmo}PatentClassificationCategory"/>
-                        <rdf:type rdf:resource="{$pmo}IPCCategory"/>
+<!--                        <rdf:type rdf:resource="{$pmo}PatentClassificationCategory"/>-->
+<!--                        <rdf:type rdf:resource="{$pmo}IPCCategory"/>-->
                         <rdf:type rdf:resource="{$skos}Concept"/>
 
                         <pmo:classifiedPatent rdf:resource="{$patent}{$ucid}"/>
 
-                        <skos:inScheme rdf:resource="{$concept}ipc"/>
-                        <skos:topConceptOf>
-                            <rdf:Description rdf:about="{$concept}ipc">
-                                <skos:hasTopConcept rdf:resource="{$concept}{$id}"/>
+<!--                        <skos:inScheme rdf:resource="{$concept}ipc"/>-->
+<!--                        <skos:topConceptOf>-->
+<!--                            <rdf:Description rdf:about="{$concept}ipc">-->
+<!--                                <skos:hasTopConcept rdf:resource="{$concept}{$id}"/>-->
                                 <pmo:classifiedPatent rdf:resource="{$concept}{$id}"/>
-                            </rdf:Description>
-                        </skos:topConceptOf>
+<!--                            </rdf:Description>-->
+<!--                        </skos:topConceptOf>-->
 
                         <pmo:classificationCode><xsl:value-of select="$id"/></pmo:classificationCode>
                         <skos:notation><xsl:value-of select="$id"/></skos:notation>
