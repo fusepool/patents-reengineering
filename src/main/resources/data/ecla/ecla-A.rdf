@@ -407,6 +407,11 @@
                   </skos:member>
                   <skos:prefLabel xml:lang="en">FOODS OR FOODSTUFFS</skos:prefLabel>
                   <skos:prefLabel xml:lang="en">THEIR TREATMENT, NOT COVERED BY OTHER CLASSES</skos:prefLabel>
+                  <skos:note xml:lang="en">Attention is drawn to the following places: C08B Polysaccharides, derivatives thereof C11 Animal or vegetable oils, fats, fatty substances or waxes C12 Biochemistry, beer, spirits, wine, vinegar C13 Sugar industry</skos:note>
+                  <dcterms:references rdf:resource="http://example.org/concept/ecla/C08B"/>
+                  <dcterms:references rdf:resource="http://example.org/concept/ecla/C11"/>
+                  <dcterms:references rdf:resource="http://example.org/concept/ecla/C12"/>
+                  <dcterms:references rdf:resource="http://example.org/concept/ecla/C13"/>
                </rdf:Description>
             </skos:member>
             <skos:member>
@@ -856,6 +861,7 @@
                   <skos:definition xml:lang="en">ladders E06C</skos:definition>
                   <dcterms:references rdf:resource="http://example.org/concept/ecla/B60N"/>
                   <dcterms:references rdf:resource="http://example.org/concept/ecla/E06C"/>
+                  <skos:note xml:lang="en">In this subclass, the following term is used with the meaning indicated: - "furniture" covers also easels or stands, e.g. for blackboards or drawing tables.</skos:note>
                </rdf:Description>
             </skos:member>
             <skos:prefLabel xml:lang="en">Personal or domestic articles</skos:prefLabel>

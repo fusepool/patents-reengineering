@@ -35,7 +35,7 @@
 
     <xsl:strip-space elements="*"/>
 
-    <xsl:variable name="xslDocument" select="'https://github.com/fusepool/patents-reengineering/scripts/ecla.xsl'"/>
+    <xsl:variable name="xslDocument" select="'https://github.com/fusepool/patents-reengineering/src/main/resources/scripts/ecla.xsl'"/>
 
     <xsl:template match="/class-scheme">
         <rdf:RDF>
@@ -100,12 +100,22 @@
             <xsl:call-template name="class-title">
                 <xsl:with-param name="conceptURI" select="$conceptURI" tunnel="yes"/>
             </xsl:call-template>
+            <xsl:call-template name="notes-and-warnings">
+                <xsl:with-param name="conceptURI" select="$conceptURI" tunnel="yes"/>
+            </xsl:call-template>
         </rdf:Description>
     </xsl:template>
 
     <xsl:template name="class-title">
         <xsl:for-each select="class-title">
             <xsl:apply-templates select="title-part"/>
+            <xsl:apply-templates select=".//class-ref"/>
+        </xsl:for-each>
+    </xsl:template>
+
+    <xsl:template name="notes-and-warnings">
+        <xsl:for-each select="notes-and-warnings">
+            <xsl:apply-templates select="note"/>
             <xsl:apply-templates select=".//class-ref"/>
         </xsl:for-each>
     </xsl:template>
@@ -124,6 +134,9 @@
         <xsl:apply-templates select="text" mode="skos:scopeNote"/>
     </xsl:template>
 
+    <xsl:template match="note">
+        <xsl:apply-templates select="note-paragraph" mode="skos:note"/>
+    </xsl:template>
 
     <xsl:template match="text" mode="skos:prefLabel">
         <skos:prefLabel><xsl:call-template name="langTextNode"/></skos:prefLabel>
@@ -137,6 +150,9 @@
         <skos:scopeNote><xsl:call-template name="langTextNode"/></skos:scopeNote>
     </xsl:template>
 
+    <xsl:template match="note-paragraph" mode="skos:note">
+        <skos:note><xsl:call-template name="langTextNode"/></skos:note>
+    </xsl:template>
 
     <xsl:template match="class-ref">
         <dcterms:references rdf:resource="{concat($concept, 'ecla/', normalize-space(.))}"/>

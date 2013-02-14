@@ -3607,6 +3607,11 @@
                         <dcterms:references rdf:resource="http://example.org/concept/ecla/A01B3/111"/>
                         <dcterms:references rdf:resource="http://example.org/concept/ecla/A01B3/16"/>
                         <dcterms:references rdf:resource="http://example.org/concept/ecla/A01B63/24"/>
+                        <skos:note xml:lang="en">Documents of group A01B63/00B and subgroups are in the process of being reorganised to groups A01B63/111 , A01B63/16 , A01B63/24C0312</skos:note>
+                        <dcterms:references rdf:resource="http://example.org/concept/ecla/A01B63/00B"/>
+                        <dcterms:references rdf:resource="http://example.org/concept/ecla/A01B63/111"/>
+                        <dcterms:references rdf:resource="http://example.org/concept/ecla/A01B63/16"/>
+                        <dcterms:references rdf:resource="http://example.org/concept/ecla/A01B63/24"/>
                      </rdf:Description>
                   </skos:narrower>
                   <skos:narrower>
@@ -4291,6 +4296,7 @@
                   <skos:prefLabel xml:lang="en">Guiding agricultural machines or implements on a desired track</skos:prefLabel>
                   <skos:definition xml:lang="en">vehicle course control in general G05D1/02</skos:definition>
                   <dcterms:references rdf:resource="http://example.org/concept/ecla/G05D1/02"/>
+                  <skos:note xml:lang="en">In this group it is obligatory to classify subject-matter in the first appropriate place. It is however allowed to apply multiple classification where considered useful for search</skos:note>
                </rdf:Description>
             </skos:member>
             <skos:member>
@@ -4659,5 +4665,12 @@
       <dcterms:references rdf:resource="http://example.org/concept/ecla/E02"/>
       <dcterms:references rdf:resource="http://example.org/concept/ecla/E21"/>
       <dcterms:references rdf:resource="http://example.org/concept/ecla/G01B"/>
+      <skos:note xml:lang="en">The following IPC groups are not used in the internal ECLA classification system. Subject matter covered by these groups is classified in the following ECLA groups: A01B69/04 covered by A01B69/00F1A01B69/06 covered by A01B69/00E2A01B69/08 covered by A01B69/00E3</skos:note>
+      <dcterms:references rdf:resource="http://example.org/concept/ecla/A01B69/04"/>
+      <dcterms:references rdf:resource="http://example.org/concept/ecla/A01B69/00F1"/>
+      <dcterms:references rdf:resource="http://example.org/concept/ecla/A01B69/06"/>
+      <dcterms:references rdf:resource="http://example.org/concept/ecla/A01B69/00E2"/>
+      <dcterms:references rdf:resource="http://example.org/concept/ecla/A01B69/08"/>
+      <dcterms:references rdf:resource="http://example.org/concept/ecla/A01B69/00E3"/>
    </rdf:Description>
 </rdf:RDF>
