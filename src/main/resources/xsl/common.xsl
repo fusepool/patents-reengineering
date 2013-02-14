@@ -73,7 +73,7 @@
         <xsl:value-of select="normalize-space(.)"/>
     </xsl:template>
 
-
+    <!-- Copied from http://www.xsltfunctions.com/xsl/functx_substring-before-if-contains.html -->
     <xsl:function name="fn:substring-before-if-contains" as="xs:string?">
         <xsl:param name="arg" as="xs:string?"/>
         <xsl:param name="delim" as="xs:string"/>
