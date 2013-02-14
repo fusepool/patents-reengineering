@@ -31,7 +31,7 @@
     <xsl:variable name="class" select="concat($baseURI, 'class', $uriThingSeparator)"/>
     <xsl:variable name="property" select="concat($baseURI, 'property', $uriThingSeparator)"/>
     <xsl:variable name="dataset" select="concat($baseURI, 'dataset/')"/>
-    <xsl:variable name="patent" select="concat($baseURI, 'patent', $uriThingSeparator)"/>
+    <xsl:variable name="patent" select="concat($baseURI, 'patent/')"/>
     <xsl:variable name="patentFamily" select="concat($baseURI, 'family', $uriThingSeparator)"/>
     <xsl:variable name="party" select="concat($baseURI, 'party', $uriThingSeparator)"/>
     <xsl:variable name="provDocument" select="document($pathToProvDocument)/rdf:RDF"/>

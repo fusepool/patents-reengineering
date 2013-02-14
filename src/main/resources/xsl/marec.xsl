@@ -75,9 +75,9 @@ TODO: ignore DTD check. saxonb-xslt breaks if offline
                 <xsl:with-param name="ucid" select="$ucid" tunnel="yes"/>
             </xsl:call-template>
 <!--            <xsl:apply-templates select="description"/>-->
-<!--            <xsl:call-template name="claims">-->
-<!--                <xsl:with-param name="patentURI" select="$patentURI" tunnel="yes"/>-->
-<!--            </xsl:call-template>-->
+            <xsl:call-template name="claims">
+                <xsl:with-param name="ucid" select="$ucid" tunnel="yes"/>
+            </xsl:call-template>
 <!--            <xsl:apply-templates select="drawings"/>-->
             <xsl:call-template name="copyright">
                 <xsl:with-param name="ucid" select="$ucid" tunnel="yes"/>
@@ -598,22 +598,26 @@ Add members
     <xsl:template match="description">
     </xsl:template>
 
-<!--    <xsl:template name="claims">-->
-<!--        <xsl:param name="patentURI" tunnel="yes"/>-->
+    <xsl:template name="claims">
+        <xsl:param name="ucid" tunnel="yes"/>
 
-<!--        <xsl:for-each select="claims">-->
-<!--            <xsl:variable name="lang" select="@lang"/>-->
+        <xsl:for-each select="claims">
+            <xsl:variable name="lang" select="@lang"/>
+            <xsl:for-each select="claim">
+                <rdf:Description rdf:about="{$patent}{$ucid}">
+                    <property:hasClaim>
+                        <rdf:Description rdf:about="{$patent}{$ucid}/claim/{@num}">
+                            <rdf:type rdf:resource="{$pso}Claim"/>
+                            <rdf:type rdf:resource="{$skos}Concept"/>
 
-<!--            <xsl:for-each select="claim">-->
-<!--                <rdf:Description rdf:about="{$claim}{@num}">-->
-<!--                    <rdf:type rdf:resource="{$pso}Claim"/>-->
-<!--                    <rdf:type rdf:resource="{$skos}Concept"/>-->
-
-<!--                    <skos:definition xml:lang="{lower-case($lang)}"><xsl:value-of select="claim-text/normalize-space(text())"/></skos:definition>	-->
-<!--                </rdf:Description>-->
-<!--            </xsl:for-each>-->
-<!--        </xsl:for-each>-->
-<!--    </xsl:template>-->
+                            <skos:notation><xsl:value-of select="@num"/></skos:notation>
+                            <skos:definition xml:lang="{lower-case($lang)}"><xsl:copy-of select="claim-text/normalize-space(.)"/></skos:definition>
+                        </rdf:Description>
+                    </property:hasClaim>
+                </rdf:Description>
+            </xsl:for-each>
+        </xsl:for-each>
+    </xsl:template>
 
 
     <xsl:template match="drawings">
