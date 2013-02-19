@@ -41,7 +41,7 @@ TODO: ignore DTD check. saxonb-xslt breaks if offline
 
     <xsl:strip-space elements="*"/>
 
-    <xsl:variable name="xslDocument" select="'https://github.com/fusepool/patents-reengineering/scripts/marec.xsl'"/>
+    <xsl:variable name="xslDocument" select="'https://github.com/fusepool/patents-reengineering/src/main/resources/scripts/marec.xsl'"/>
 
     <xsl:template match="/patent-document">
         <rdf:RDF>
@@ -75,9 +75,9 @@ TODO: ignore DTD check. saxonb-xslt breaks if offline
                 <xsl:with-param name="ucid" select="$ucid" tunnel="yes"/>
             </xsl:call-template>
 <!--            <xsl:apply-templates select="description"/>-->
-<!--            <xsl:call-template name="claims">-->
-<!--                <xsl:with-param name="patentURI" select="$patentURI" tunnel="yes"/>-->
-<!--            </xsl:call-template>-->
+            <xsl:call-template name="claims">
+                <xsl:with-param name="ucid" select="$ucid" tunnel="yes"/>
+            </xsl:call-template>
 <!--            <xsl:apply-templates select="drawings"/>-->
             <xsl:call-template name="copyright">
                 <xsl:with-param name="ucid" select="$ucid" tunnel="yes"/>
@@ -285,7 +285,7 @@ XXX: Normally we don't really want to define other patents from here. In case th
         <xsl:param name="ucid" tunnel="yes"/>
 
         <xsl:for-each select="technical-data">
-            <xsl:apply-templates select="classification-ipc"/>
+            <xsl:call-template name="classifications"/>
 
             <rdf:Description rdf:about="{$patent}{$ucid}">
                 <xsl:apply-templates select="invention-title"/>
@@ -293,35 +293,44 @@ XXX: Normally we don't really want to define other patents from here. In case th
         </xsl:for-each>
     </xsl:template>
 
-    <xsl:template match="classification-ipc">
+    <xsl:template name="classifications">
         <xsl:param name="ucid" tunnel="yes"/>
 
         <rdf:Description rdf:about="{$patent}{$ucid}">
-            <xsl:for-each select="*[name() = 'main-classification' or name() = 'further-classification']">
-                <xsl:variable name="id" select="normalize-space(replace(., '\s+', ''))"/>
+            <xsl:for-each select="*[name() = 'classificaiton-ipc' or name() = 'classification-ecla']
+                                  /*[name() = 'main-classification' or
+                                     name() = 'further-classification' or
+                                     name() = 'classification-symbol']">
+<!--
+XXX: This removes the codes after + or : in ECLA. There might be a particular use even though spec says it is not generally needed.
+-->
+                <xsl:variable name="id" select="fn:substring-before-if-contains(fn:substring-before-if-contains(normalize-space(replace(., '\s+', '')), '+'), ':')"/>
 <!--
 TODO: Differentiate between main-classification and further-classification
 -->
+
+                <xsl:variable name="conceptURI" select="concat($concept, 'ecla/', $id)"/>
+
                 <pmo:classifiedAs>
 <!--
 XXX: Maybe switch to a code list
 -->
-                    <rdf:Description rdf:about="{$concept}{$id}">
-                        <xsl:call-template name="generalParameterEntities"/>
+                    <rdf:Description rdf:about="{$conceptURI}">
+<!--                        <xsl:call-template name="generalParameterEntities"/>-->
 
-                        <rdf:type rdf:resource="{$pmo}PatentClassificationCategory"/>
-                        <rdf:type rdf:resource="{$pmo}IPCCategory"/>
+<!--                        <rdf:type rdf:resource="{$pmo}PatentClassificationCategory"/>-->
+<!--                        <rdf:type rdf:resource="{$pmo}IPCCategory"/>-->
                         <rdf:type rdf:resource="{$skos}Concept"/>
 
                         <pmo:classifiedPatent rdf:resource="{$patent}{$ucid}"/>
 
-                        <skos:inScheme rdf:resource="{$concept}ipc"/>
-                        <skos:topConceptOf>
-                            <rdf:Description rdf:about="{$concept}ipc">
-                                <skos:hasTopConcept rdf:resource="{$concept}{$id}"/>
+<!--                        <skos:inScheme rdf:resource="{$concept}ipc"/>-->
+<!--                        <skos:topConceptOf>-->
+<!--                            <rdf:Description rdf:about="{$concept}ipc">-->
+<!--                                <skos:hasTopConcept rdf:resource="{$concept}{$id}"/>-->
                                 <pmo:classifiedPatent rdf:resource="{$concept}{$id}"/>
-                            </rdf:Description>
-                        </skos:topConceptOf>
+<!--                            </rdf:Description>-->
+<!--                        </skos:topConceptOf>-->
 
                         <pmo:classificationCode><xsl:value-of select="$id"/></pmo:classificationCode>
                         <skos:notation><xsl:value-of select="$id"/></skos:notation>
@@ -589,22 +598,26 @@ Add members
     <xsl:template match="description">
     </xsl:template>
 
-<!--    <xsl:template name="claims">-->
-<!--        <xsl:param name="patentURI" tunnel="yes"/>-->
+    <xsl:template name="claims">
+        <xsl:param name="ucid" tunnel="yes"/>
 
-<!--        <xsl:for-each select="claims">-->
-<!--            <xsl:variable name="lang" select="@lang"/>-->
+        <xsl:for-each select="claims">
+            <xsl:variable name="lang" select="@lang"/>
+            <xsl:for-each select="claim">
+                <rdf:Description rdf:about="{$patent}{$ucid}">
+                    <property:hasClaim>
+                        <rdf:Description rdf:about="{$patent}{$ucid}/claim/{@num}">
+                            <rdf:type rdf:resource="{$pso}Claim"/>
+                            <rdf:type rdf:resource="{$skos}Concept"/>
 
-<!--            <xsl:for-each select="claim">-->
-<!--                <rdf:Description rdf:about="{$claim}{@num}">-->
-<!--                    <rdf:type rdf:resource="{$pso}Claim"/>-->
-<!--                    <rdf:type rdf:resource="{$skos}Concept"/>-->
-
-<!--                    <skos:definition xml:lang="{lower-case($lang)}"><xsl:value-of select="claim-text/normalize-space(text())"/></skos:definition>	-->
-<!--                </rdf:Description>-->
-<!--            </xsl:for-each>-->
-<!--        </xsl:for-each>-->
-<!--    </xsl:template>-->
+                            <skos:notation><xsl:value-of select="@num"/></skos:notation>
+                            <skos:definition xml:lang="{lower-case($lang)}"><xsl:copy-of select="claim-text/normalize-space(.)"/></skos:definition>
+                        </rdf:Description>
+                    </property:hasClaim>
+                </rdf:Description>
+            </xsl:for-each>
+        </xsl:for-each>
+    </xsl:template>
 
 
     <xsl:template match="drawings">

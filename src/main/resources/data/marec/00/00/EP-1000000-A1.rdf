@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:uuid="java:java.util.UUID"
-         xmlns:foaf="http://xmlns.com/foaf/0.1/"
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:foaf="http://xmlns.com/foaf/0.1/"
          xmlns:prov="http://www.w3.org/ns/prov#"
          xmlns:skos="http://www.w3.org/2004/02/skos/core#"
          xmlns:xkos="http://purl.org/linked-data/xkos#"
@@ -14,18 +13,20 @@
          xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
          xmlns:property="http://example.org/property/"
          xmlns:schema="http://schema.org/">
-   <rdf:Description rdf:about="http://example.org/#i">
+   <rdf:Description rdf:about="http://csarven.ca/#i">
       <rdf:type rdf:resource="http://www.w3.org/ns/prov#Agent"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://example.org/provenance/activity/20130205175849">
+   <rdf:Description xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                    rdf:about="http://example.org/provenance/activity/20130214070619">
       <rdf:type rdf:resource="http://www.w3.org/ns/prov#Activity"/>
-      <prov:startedAtTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2013-02-05T17:58:49Z</prov:startedAtTime>
-      <prov:wasAssociatedWith rdf:resource="http://example.org/#i"/>
-      <prov:used rdf:resource="http://example.org/EP-1000000-A1.xml"/>
-      <prov:used rdf:resource="https://github.com/fusepool/patents-reengineering/scripts/marec.xsl"/>
+      <prov:startedAtTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2013-02-14T07:06:19Z</prov:startedAtTime>
+      <prov:wasAssociatedWith rdf:resource="http://csarven.ca/#i"/>
+      <prov:used rdf:resource="http://example.org/data/EP-1000000-A1.xml"/>
+      <prov:used rdf:resource="https://github.com/fusepool/patents-reengineering/src/main/resources/scripts/marec.xsl"/>
       <prov:generated>
          <rdf:Description rdf:about="http://example.org/patent/EP-1000000-A1">
-            <prov:wasDerivedFrom rdf:resource="http://example.org/EP-1000000-A1.xml"/>
+            <prov:wasDerivedFrom rdf:resource="http://example.org/data/EP-1000000-A1.xml"/>
+            <prov:wasGeneratedBy rdf:resource="http://example.org/provenance/activity/20130214070619"/>
          </rdf:Description>
       </prov:generated>
    </rdf:Description>
@@ -89,13 +90,51 @@
       </property:priority-claim>
    </rdf:Description>
    <rdf:Description rdf:about="http://example.org/patent/EP-1000000-A1">
+      <pmo:classifiedAs>
+         <rdf:Description rdf:about="http://example.org/concept/ecla/B28B1/29">
+            <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+            <pmo:classifiedPatent rdf:resource="http://example.org/patent/EP-1000000-A1"/>
+            <pmo:classifiedPatent rdf:resource="http://example.org/concept/B28B1/29"/>
+            <pmo:classificationCode>B28B1/29</pmo:classificationCode>
+            <skos:notation>B28B1/29</skos:notation>
+         </rdf:Description>
+      </pmo:classifiedAs>
+      <pmo:classifiedAs>
+         <rdf:Description rdf:about="http://example.org/concept/ecla/B28B5/02B2">
+            <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+            <pmo:classifiedPatent rdf:resource="http://example.org/patent/EP-1000000-A1"/>
+            <pmo:classifiedPatent rdf:resource="http://example.org/concept/B28B5/02B2"/>
+            <pmo:classificationCode>B28B5/02B2</pmo:classificationCode>
+            <skos:notation>B28B5/02B2</skos:notation>
+         </rdf:Description>
+      </pmo:classifiedAs>
+      <pmo:classifiedAs>
+         <rdf:Description rdf:about="http://example.org/concept/ecla/B28B7/00F">
+            <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+            <pmo:classifiedPatent rdf:resource="http://example.org/patent/EP-1000000-A1"/>
+            <pmo:classifiedPatent rdf:resource="http://example.org/concept/B28B7/00F"/>
+            <pmo:classificationCode>B28B7/00F</pmo:classificationCode>
+            <skos:notation>B28B7/00F</skos:notation>
+         </rdf:Description>
+      </pmo:classifiedAs>
+      <pmo:classifiedAs>
+         <rdf:Description rdf:about="http://example.org/concept/ecla/H02P6/08">
+            <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+            <pmo:classifiedPatent rdf:resource="http://example.org/patent/EP-1000000-A1"/>
+            <pmo:classifiedPatent rdf:resource="http://example.org/concept/H02P6/08"/>
+            <pmo:classificationCode>H02P6/08</pmo:classificationCode>
+            <skos:notation>H02P6/08</skos:notation>
+         </rdf:Description>
+      </pmo:classifiedAs>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://example.org/patent/EP-1000000-A1">
       <dcterms:title xml:lang="de">Vorrichtung zur Herstellung von Steinformlingen für die Ziegelindustrie</dcterms:title>
       <dcterms:title xml:lang="en">Apparatus for manufacturing green bricks for the brick manufacturing industry</dcterms:title>
       <dcterms:title xml:lang="fr">Dispositif pour la fabrication de briques crues utilisées dans l'industrie manufacturière des briques</dcterms:title>
    </rdf:Description>
    <rdf:Description rdf:about="http://example.org/patent/EP-1000000-A1">
       <pmo:applicant>
-         <rdf:Description rdf:about="urn:uuid:3ddc334b-19ac-4eca-bffe-fb4a1b7bc9a8">
+         <rdf:Description rdf:about="urn:uuid:de80da30-631f-45da-b62e-797cf805668b">
             <rdf:type rdf:resource="http://www.owl-ontologies.com/sumo.owl#CognitiveAgent"/>
             <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
             <pmo:applicantOf rdf:resource="http://example.org/patent/EP-1000000-A1"/>
@@ -111,7 +150,7 @@
    </rdf:Description>
    <rdf:Description rdf:about="http://example.org/patent/EP-1000000-A1">
       <pmo:applicant>
-         <rdf:Description rdf:about="urn:uuid:7a400c90-2665-40b1-896e-38e2a720153f">
+         <rdf:Description rdf:about="urn:uuid:b74095fe-6a6f-460e-96fa-e70efe9b2b3c">
             <rdf:type rdf:resource="http://www.owl-ontologies.com/sumo.owl#CognitiveAgent"/>
             <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
             <pmo:applicantOf rdf:resource="http://example.org/patent/EP-1000000-A1"/>
@@ -121,7 +160,7 @@
    </rdf:Description>
    <rdf:Description rdf:about="http://example.org/patent/EP-1000000-A1">
       <pmo:applicant>
-         <rdf:Description rdf:about="urn:uuid:dec63a13-64bf-4ec6-88ee-459d95a64001">
+         <rdf:Description rdf:about="urn:uuid:d63f34cf-3ee3-4bfe-9627-7ed50e70ecf5">
             <rdf:type rdf:resource="http://www.owl-ontologies.com/sumo.owl#CognitiveAgent"/>
             <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
             <pmo:applicantOf rdf:resource="http://example.org/patent/EP-1000000-A1"/>
@@ -139,7 +178,7 @@
    </rdf:Description>
    <rdf:Description rdf:about="http://example.org/patent/EP-1000000-A1">
       <pmo:inventor>
-         <rdf:Description rdf:about="urn:uuid:63336bcb-41b7-4fdb-a4a2-1ea0f44b504e">
+         <rdf:Description rdf:about="urn:uuid:dfcc5ca2-8028-4296-93f0-a7dbefa499fb">
             <rdf:type rdf:resource="http://www.owl-ontologies.com/sumo.owl#Human"/>
             <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
             <pmo:inventorOf rdf:resource="http://example.org/patent/EP-1000000-A1"/>
@@ -155,7 +194,7 @@
    </rdf:Description>
    <rdf:Description rdf:about="http://example.org/patent/EP-1000000-A1">
       <pmo:inventor>
-         <rdf:Description rdf:about="urn:uuid:0001bfdc-2984-4de7-8ad0-9f4e8117bc85">
+         <rdf:Description rdf:about="urn:uuid:158ffb26-ab97-4b28-ba5a-f1aeed142a4c">
             <rdf:type rdf:resource="http://www.owl-ontologies.com/sumo.owl#Human"/>
             <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
             <pmo:inventorOf rdf:resource="http://example.org/patent/EP-1000000-A1"/>
@@ -165,7 +204,7 @@
    </rdf:Description>
    <rdf:Description rdf:about="http://example.org/patent/EP-1000000-A1">
       <pmo:inventor>
-         <rdf:Description rdf:about="urn:uuid:0e4b8b0a-400e-4856-8bfb-b1d0c45a14ac">
+         <rdf:Description rdf:about="urn:uuid:161c522d-e2f4-4062-aadb-ae8ac3c2ae53">
             <rdf:type rdf:resource="http://www.owl-ontologies.com/sumo.owl#Human"/>
             <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
             <pmo:inventorOf rdf:resource="http://example.org/patent/EP-1000000-A1"/>
@@ -183,7 +222,7 @@
    </rdf:Description>
    <rdf:Description rdf:about="http://example.org/patent/EP-1000000-A1">
       <property:agent>
-         <rdf:Description rdf:about="urn:uuid:0136e6dc-9e11-4e14-80c2-e34394be2ecb">
+         <rdf:Description rdf:about="urn:uuid:2013e82d-ab39-4daa-9faa-b2a2832433ce">
             <rdf:type rdf:resource="http://www.owl-ontologies.com/sumo.owl#Agent"/>
             <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
             <property:agentOf rdf:resource="http://example.org/patent/EP-1000000-A1"/>
@@ -198,6 +237,116 @@
             </schema:address>
          </rdf:Description>
       </property:agent>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://example.org/patent/EP-1000000-A1">
+      <property:hasClaim>
+         <rdf:Description rdf:about="http://example.org/patent/EP-1000000-A1/claim/1">
+            <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pso.owl#Claim"/>
+            <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+            <skos:notation>1</skos:notation>
+            <skos:definition xml:lang="en">Apparatus for manufacturing green bricks from clay for the brick manufacturing industry, comprising a circulating conveyor carrying mould containers combined to mould container parts, a reservoir for clay arranged above the mould containers, means for carrying clay out of the reservoir into the mould containers, means for pressing and trimming clay in the mould containers, means for supplying and placing take-off plates for the green bricks and means for discharging green bricks released from the mould containers, characterized in that the apparatus further comprises means for moving the mould container parts filled with green bricks such that a protruding edge is formed on at least one side of the green bricks.</skos:definition>
+         </rdf:Description>
+      </property:hasClaim>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://example.org/patent/EP-1000000-A1">
+      <property:hasClaim>
+         <rdf:Description rdf:about="http://example.org/patent/EP-1000000-A1/claim/2">
+            <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pso.owl#Claim"/>
+            <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+            <skos:notation>2</skos:notation>
+            <skos:definition xml:lang="en">Apparatus as claimed in claim 1, wherein the edge-forming means are adapted to move the mould container parts repeatedly for a certain period.</skos:definition>
+         </rdf:Description>
+      </property:hasClaim>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://example.org/patent/EP-1000000-A1">
+      <property:hasClaim>
+         <rdf:Description rdf:about="http://example.org/patent/EP-1000000-A1/claim/3">
+            <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pso.owl#Claim"/>
+            <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+            <skos:notation>3</skos:notation>
+            <skos:definition xml:lang="en">Apparatus as claimed in claim 1 or 2, wherein the edge-forming means are adapted to move the mould container parts substantially transversely of the transporting direction.</skos:definition>
+         </rdf:Description>
+      </property:hasClaim>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://example.org/patent/EP-1000000-A1">
+      <property:hasClaim>
+         <rdf:Description rdf:about="http://example.org/patent/EP-1000000-A1/claim/4">
+            <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pso.owl#Claim"/>
+            <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+            <skos:notation>4</skos:notation>
+            <skos:definition xml:lang="en">Apparatus as claimed in any of the foregoing claims, wherein the edge-forming means comprise a frame which is adapted to engage individually on a mould container part.</skos:definition>
+         </rdf:Description>
+      </property:hasClaim>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://example.org/patent/EP-1000000-A1">
+      <property:hasClaim>
+         <rdf:Description rdf:about="http://example.org/patent/EP-1000000-A1/claim/5">
+            <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pso.owl#Claim"/>
+            <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+            <skos:notation>5</skos:notation>
+            <skos:definition xml:lang="en">Apparatus as claimed in claim 4, wherein the frame spans the mould container part and is provided on both sides with stop members which are situated during operation at the location of the side walls of the mould container part.</skos:definition>
+         </rdf:Description>
+      </property:hasClaim>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://example.org/patent/EP-1000000-A1">
+      <property:hasClaim>
+         <rdf:Description rdf:about="http://example.org/patent/EP-1000000-A1/claim/6">
+            <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pso.owl#Claim"/>
+            <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+            <skos:notation>6</skos:notation>
+            <skos:definition xml:lang="en">Apparatus as claimed in claim 5, wherein the stop members are provided with stop surfaces which preferably comprise plastic.</skos:definition>
+         </rdf:Description>
+      </property:hasClaim>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://example.org/patent/EP-1000000-A1">
+      <property:hasClaim>
+         <rdf:Description rdf:about="http://example.org/patent/EP-1000000-A1/claim/7">
+            <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pso.owl#Claim"/>
+            <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+            <skos:notation>7</skos:notation>
+            <skos:definition xml:lang="en">Apparatus as claimed in claim 5 or 6, wherein the mould container parts are provided on their side walls with stop surfaces which preferably comprise plastic.</skos:definition>
+         </rdf:Description>
+      </property:hasClaim>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://example.org/patent/EP-1000000-A1">
+      <property:hasClaim>
+         <rdf:Description rdf:about="http://example.org/patent/EP-1000000-A1/claim/8">
+            <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pso.owl#Claim"/>
+            <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+            <skos:notation>8</skos:notation>
+            <skos:definition xml:lang="en">Apparatus as claimed in claim 4, 5, 6 or 7, wherein the edge-forming means comprise an eccentric drive for the frame.</skos:definition>
+         </rdf:Description>
+      </property:hasClaim>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://example.org/patent/EP-1000000-A1">
+      <property:hasClaim>
+         <rdf:Description rdf:about="http://example.org/patent/EP-1000000-A1/claim/9">
+            <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pso.owl#Claim"/>
+            <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+            <skos:notation>9</skos:notation>
+            <skos:definition xml:lang="en">Apparatus as claimed in any of the foregoing claims, wherein each mould container part is provided with a number of spacer members for supporting the take-off plates at a distance above the green bricks.</skos:definition>
+         </rdf:Description>
+      </property:hasClaim>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://example.org/patent/EP-1000000-A1">
+      <property:hasClaim>
+         <rdf:Description rdf:about="http://example.org/patent/EP-1000000-A1/claim/10">
+            <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pso.owl#Claim"/>
+            <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+            <skos:notation>10</skos:notation>
+            <skos:definition xml:lang="en">Apparatus as claimed in any of the foregoing claims, wherein the mould container parts are fixed movably onto the conveyor with some clearance in the direction of movement.</skos:definition>
+         </rdf:Description>
+      </property:hasClaim>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://example.org/patent/EP-1000000-A1">
+      <property:hasClaim>
+         <rdf:Description rdf:about="http://example.org/patent/EP-1000000-A1/claim/11">
+            <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pso.owl#Claim"/>
+            <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+            <skos:notation>11</skos:notation>
+            <skos:definition xml:lang="en">Apparatus as claimed in claim 10, wherein the conveyor is a chain conveyor and the mould container parts are coupled with some clearance in the direction of movement to a chain part connectable to the chain.</skos:definition>
+         </rdf:Description>
+      </property:hasClaim>
    </rdf:Description>
    <rdf:Description rdf:about="http://example.org/patent/EP-1000000-A1">
       <dcterms:license>User acknowledges that the Information Retrieval Facility (IRF) and its third party providers retain all right, title and interest in and to this xml under applicable copyright laws. User acquires no ownership rights to this xml including but not limited to its format. User hereby accepts the terms and conditions of the Licence Agreement set forth at http://www.ir-facility.org/legal/marec/data_licence</dcterms:license>

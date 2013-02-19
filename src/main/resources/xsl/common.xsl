@@ -5,6 +5,7 @@
 <xsl:stylesheet version="2.0"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
     xmlns:owl="http://www.w3.org/2002/07/owl#"
@@ -30,7 +31,7 @@
     <xsl:variable name="class" select="concat($baseURI, 'class', $uriThingSeparator)"/>
     <xsl:variable name="property" select="concat($baseURI, 'property', $uriThingSeparator)"/>
     <xsl:variable name="dataset" select="concat($baseURI, 'dataset/')"/>
-    <xsl:variable name="patent" select="concat($baseURI, 'patent', $uriThingSeparator)"/>
+    <xsl:variable name="patent" select="concat($baseURI, 'patent/')"/>
     <xsl:variable name="patentFamily" select="concat($baseURI, 'family', $uriThingSeparator)"/>
     <xsl:variable name="party" select="concat($baseURI, 'party', $uriThingSeparator)"/>
     <xsl:variable name="provDocument" select="document($pathToProvDocument)/rdf:RDF"/>
@@ -71,6 +72,13 @@
 
         <xsl:value-of select="normalize-space(.)"/>
     </xsl:template>
+
+    <!-- Copied from http://www.xsltfunctions.com/xsl/functx_substring-before-if-contains.html -->
+    <xsl:function name="fn:substring-before-if-contains" as="xs:string?">
+        <xsl:param name="arg" as="xs:string?"/>
+        <xsl:param name="delim" as="xs:string"/>
+        <xsl:sequence select="if (contains($arg,$delim)) then substring-before($arg,$delim) else $arg"/>
+    </xsl:function>
 
 
     <!--Copied from https://github.com/csarven/sdmx-to-qb/blob/master/scripts/common.xsl -->

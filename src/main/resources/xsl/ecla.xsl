@@ -35,7 +35,7 @@
 
     <xsl:strip-space elements="*"/>
 
-    <xsl:variable name="xslDocument" select="'https://github.com/fusepool/patents-reengineering/scripts/ecla.xsl'"/>
+    <xsl:variable name="xslDocument" select="'https://github.com/fusepool/patents-reengineering/src/main/resources/scripts/ecla.xsl'"/>
 
     <xsl:template match="/class-scheme">
         <rdf:RDF>
@@ -43,6 +43,14 @@
                 <rdf:type rdf:resource="{$prov}Agent"/>
             </rdf:Description>
 
+            <rdf:Description rdf:about="{$concept}ecla">
+                <rdf:type rdf:resource="{$pmo}PatentClassification"/>
+                <rdf:type rdf:resource="{$skos}ConceptScheme"/>
+                <skos:notation>ECLA</skos:notation>
+                <skos:prefLabel xml:lang="en">European Patent Classification</skos:prefLabel>
+                <foaf:homepage rdf:resource="http://worldwide.espacenet.com/classification"/>
+                <foaf:page rdf:resource="http://www.epo.org/"/>
+            </rdf:Description>
             <xsl:apply-templates/>
         </rdf:RDF>
     </xsl:template>
@@ -62,16 +70,28 @@
 <!--</xsl:message>-->
 
         <rdf:Description rdf:about="{$conceptURI}">
+            <skos:notation><xsl:value-of select="$conceptID"/></skos:notation>
+
             <xsl:choose>
                 <xsl:when test="$level &lt; 7">
                     <rdf:type rdf:resource="{$skos}Collection"/>
                     <rdf:type rdf:resource="{$xkos}ClassificationLevel"/>
+                    <rdf:type rdf:resource="{pmo}ECLACategoory"/>
                     <xkos:depth><xsl:value-of select="$level"/></xkos:depth>
 
                     <xsl:for-each select="classification-item">
                         <skos:member>
                             <xsl:apply-templates select="."/>
                         </skos:member>
+                    </xsl:for-each>
+
+                    <xsl:for-each select="classification-item[number(normalize-space(@level)) &lt; 7]">
+                        <xsl:variable name="level" select="number(normalize-space(@level))"/>
+                        <xsl:variable name="subConceptID" select="normalize-space(classification-symbol)"/>
+                        <xsl:variable name="subConceptURI" select="concat($concept, 'ecla/', $level, '/', $subConceptID)"/>
+
+                        <pmo:subCategory rdf:resource="{$subConceptURI}"/>
+                        <pmo:parentCategory rdf:resource="{$conceptURI}"/>
                     </xsl:for-each>
                 </xsl:when>
                 <xsl:otherwise>
@@ -94,10 +114,15 @@
                             <xsl:apply-templates select="."/>
                         </skos:narrower>
                     </xsl:for-each>
+
+                    <pmo:classificationCode><xsl:value-of select="$conceptID"/></pmo:classificationCode>
                 </xsl:otherwise>
             </xsl:choose>
 
             <xsl:call-template name="class-title">
+                <xsl:with-param name="conceptURI" select="$conceptURI" tunnel="yes"/>
+            </xsl:call-template>
+            <xsl:call-template name="notes-and-warnings">
                 <xsl:with-param name="conceptURI" select="$conceptURI" tunnel="yes"/>
             </xsl:call-template>
         </rdf:Description>
@@ -110,20 +135,36 @@
         </xsl:for-each>
     </xsl:template>
 
+    <xsl:template name="notes-and-warnings">
+        <xsl:for-each select="notes-and-warnings">
+            <xsl:apply-templates select="note"/>
+            <xsl:apply-templates select=".//class-ref"/>
+        </xsl:for-each>
+    </xsl:template>
+
     <xsl:template match="title-part">
         <xsl:apply-templates select="text" mode="skos:prefLabel"/>
         <xsl:apply-templates select="explanation"/>
+        <xsl:apply-templates select="comment" mode="fn:title-part"/>
     </xsl:template>
 
     <xsl:template match="explanation">
         <xsl:apply-templates select="text" mode="skos:definition"/>
-        <xsl:apply-templates select="comment"/>
+        <xsl:apply-templates select="comment" mode="skos:scopeNote"/>
     </xsl:template>
 
-    <xsl:template match="comment">
+    <xsl:template match="comment" mode="skos:scopeNote">
         <xsl:apply-templates select="text" mode="skos:scopeNote"/>
     </xsl:template>
 
+    <xsl:template match="comment" mode="fn:title-part">
+        <xsl:apply-templates select="text" mode="skos:prefLabel"/>
+        <xsl:apply-templates select="explanation"/>
+    </xsl:template>
+
+    <xsl:template match="note">
+        <xsl:apply-templates select="note-paragraph" mode="skos:note"/>
+    </xsl:template>
 
     <xsl:template match="text" mode="skos:prefLabel">
         <skos:prefLabel><xsl:call-template name="langTextNode"/></skos:prefLabel>
@@ -137,6 +178,9 @@
         <skos:scopeNote><xsl:call-template name="langTextNode"/></skos:scopeNote>
     </xsl:template>
 
+    <xsl:template match="note-paragraph" mode="skos:note">
+        <skos:note><xsl:call-template name="langTextNode"/></skos:note>
+    </xsl:template>
 
     <xsl:template match="class-ref">
         <dcterms:references rdf:resource="{concat($concept, 'ecla/', normalize-space(.))}"/>
