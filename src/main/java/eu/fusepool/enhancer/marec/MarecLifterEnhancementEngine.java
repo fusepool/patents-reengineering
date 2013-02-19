@@ -112,7 +112,7 @@ implements EnhancementEngine, ServiceProperties {
 		 
 		
 		
-		try {
+		try { // TODO: errore nell'attivazione ?
 			serviceLocator = new TCServiceLocator(ce.getBundleContext(), "graph.uri=om.go5th.yard.clerezza.01") ;		
 		} catch (InvalidSyntaxException e) {
 			// TODO Auto-generated catch block
@@ -143,7 +143,7 @@ implements EnhancementEngine, ServiceProperties {
 		String mimeType = ci.getMimeType() ;
 		
 
-		// check if mimetype is supported
+		//TODO: check if mimetype is supported
 //		if(!isSupported(mimeType)) {
 //			throw new EngineException("Cannot enhance mimetype: "+mimeType) ;
 //		}
@@ -190,9 +190,6 @@ implements EnhancementEngine, ServiceProperties {
 				System.out.println("\n\nCannot add collection to yard...");
 			}
 		}
-		// now it should be written to the entityhub
-
-		//Entity entity = updateOrCreateEntity("*", representations, true, true) ;
 
 		ci.getLock().writeLock().lock();
 
@@ -202,12 +199,6 @@ implements EnhancementEngine, ServiceProperties {
 		try {
 			MGraph graph = ci.getMetadata();
 			graph.addAll(rdfGraph) ;
-			/*
-			UriRef textEnhancement = EnhancementEngineHelper.createTextEnhancement(ci, this);
-			graph.add(new TripleImpl(textEnhancement,
-					new UriRef("http://example.org/likes"), 
-					new UriRef("http://fusepool.eu")));
-		   */
 
 		} finally {
 			ci.getLock().writeLock().unlock();
@@ -232,8 +223,6 @@ implements EnhancementEngine, ServiceProperties {
 	//@Deactivate
 	public void unregistered(ServiceReference ref) {
 		logService.log(LogService.LOG_INFO, "DummyEngine unregistered") ;
-
-		//log.debug("unregistered "+this.getClass().getName()) ;
 	}
 
 

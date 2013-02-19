@@ -27,10 +27,10 @@ public class TCServiceLocator implements ServiceListener {
 		if("".equals(graphUri)||graphUri==null) {
 			throw new Exception(this.getClass().getSimpleName()+": graph URI can't be null") ;
 		}
-		if(lookupCollection()) {
+		//if(lookupCollection()) {
 			ctx.addServiceListener(this, "("+graphUri+")") ;
 			System.out.println("Added listenere to service: "+graphUri);
-		} // TODO: else ??
+		//} // TODO: else ??
 		
 	}
 	
@@ -41,10 +41,7 @@ public class TCServiceLocator implements ServiceListener {
 		//Filter filter = ce.getBundleContext().createFilter("(graph.uri=om.go5th.yard.clerezza.01)") ;
 		ServiceReference[] se = ctx.getAllServiceReferences(org.apache.clerezza.rdf.core.TripleCollection.class.getName(), 
 													"("+graphUri+")") ;
-		for(ServiceReference s : se) {
-			System.out.println(s.getBundle().getSymbolicName()+ " - "+s.getBundle().getBundleId()+
-					" - "+s.getBundle().getLocation());
-		}
+
 		if(se != null && se.length>0) {
 			System.out.println("Registering triplestore reference: "+graphUri);
 			tripleCollection = (TripleCollection) ctx.getService(se[0]) ;
@@ -82,6 +79,13 @@ public class TCServiceLocator implements ServiceListener {
 
 
 	public TripleCollection getTripleCollection() {
+		if(tripleCollection==null) {
+			try {
+				lookupCollection() ;
+			} catch (InvalidSyntaxException e) {
+				e.printStackTrace();
+			}
+		}
 		return tripleCollection;
 	}
 
