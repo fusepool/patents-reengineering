@@ -37,8 +37,6 @@ import org.osgi.framework.ServiceReference;
 import org.osgi.service.cm.ConfigurationException;
 import org.osgi.service.component.ComponentContext;
 import org.osgi.service.log.LogService;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import eu.fusepool.enhancer.marec.xslt.XSLTProcessor;
 
@@ -68,7 +66,7 @@ implements EnhancementEngine, ServiceProperties {
 	public static final Integer defaultOrder = ORDERING_EXTRACTION_ENHANCEMENT;
 
 
-	private static final Logger log = LoggerFactory.getLogger(MarecLifterEnhancementEngine.class);
+	//private static final Logger log = LoggerFactory.getLogger(MarecLifterEnhancementEngine.class);
 
 	private TCServiceLocator serviceLocator ;
 	
@@ -115,12 +113,11 @@ implements EnhancementEngine, ServiceProperties {
 		try { // TODO: errore nell'attivazione ?
 			serviceLocator = new TCServiceLocator(ce.getBundleContext(), "graph.uri=om.go5th.yard.clerezza.01") ;		
 		} catch (InvalidSyntaxException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			logService.log(LogService.LOG_ERROR,"Invalid graph.uri syntax", e) ;
 		} catch (Exception e) {
-			e.printStackTrace();
+			logService.log(LogService.LOG_ERROR, "Error creating service locator", e) ;
 		}
-		log.info("activating "+this.getClass().getName());
+		logService.log(LogService.LOG_INFO, "activating "+this.getClass().getName());
 
 	}
 
@@ -139,7 +136,7 @@ implements EnhancementEngine, ServiceProperties {
 		logService.log(LogService.LOG_INFO, "UriRef: "+contentItemId.getUnicodeString()) ;
 
 
-		MGraph g = ci.getMetadata();
+		//MGraph g = ci.getMetadata();
 		String mimeType = ci.getMimeType() ;
 		
 
@@ -148,20 +145,23 @@ implements EnhancementEngine, ServiceProperties {
 //			throw new EngineException("Cannot enhance mimetype: "+mimeType) ;
 //		}
 		
-		
-
 		// Load rdf graph 
 		MGraph rdfGraph = new IndexedMGraph();
 		
-		XSLTProcessor processor = new XSLTProcessor() ;
-		InputStream rdfIs = null ;
+		
 		try {
-			rdfIs = processor.processPatentXML(ci.getStream()) ;
-			parser.parse(rdfGraph, rdfIs, SupportedFormat.RDF_XML) ;
-			rdfIs.close() ;
-		} catch (Exception e) {
-			throw new EngineException(e) ;
-		}
+	
+			ci.getLock().writeLock().lock();
+			XSLTProcessor processor = new XSLTProcessor() ;
+			InputStream rdfIs = null ;
+			try {
+				rdfIs = processor.processPatentXML(ci.getStream()) ;
+				parser.parse(rdfGraph, rdfIs, SupportedFormat.RDF_XML) ;
+				rdfIs.close() ;
+			} catch (Exception e) {
+				logService.log(LogService.LOG_ERROR, "Wrong data format for the "+this.getName()+" enhancer", e) ;
+				return ;
+			}
 		
 
 		RdfValueFactory valueFactory = RdfValueFactory.getInstance();
@@ -176,8 +176,8 @@ implements EnhancementEngine, ServiceProperties {
 				representations.put(((UriRef)resource).getUnicodeString(),
 						valueFactory.createRdfRepresentation((UriRef)resource, rdfGraph));
 			} else {
-				System.out.println("skipped: "+curTriple);
-				System.out.println("not UriRef: "+resource);			
+				logService.log(LogService.LOG_DEBUG, "skipped: "+curTriple);
+				logService.log(LogService.LOG_DEBUG, "not UriRef: "+resource);	
 			}
 		}
 		
@@ -185,26 +185,26 @@ implements EnhancementEngine, ServiceProperties {
 		TripleCollection tripleCollection = serviceLocator.getTripleCollection() ;
 		if(tripleCollection!=null) {
 			if(tripleCollection.addAll(rdfGraph)) {
-				System.out.println("\n\nadded collection to yard...");
+				logService.log(LogService.LOG_INFO, this.getClass().getName()+" added collection to yard...");
 			} else{
-				System.out.println("\n\nCannot add collection to yard...");
+				logService.log(LogService.LOG_INFO, this.getClass().getName()+" collection NOT added to yard...");
 			}
 		}
 
-		ci.getLock().writeLock().lock();
+		
 
 		/*
 		 * Enhancement phase
 		 */
-		try {
+
 			MGraph graph = ci.getMetadata();
 			graph.addAll(rdfGraph) ;
-
+		} catch (Exception e) {
+			logService.log(LogService.LOG_ERROR, "", e) ;
+			
 		} finally {
 			ci.getLock().writeLock().unlock();
 		}
-
-		//entityHub.store(representation)
 	}
 
 	@Override
@@ -216,13 +216,13 @@ implements EnhancementEngine, ServiceProperties {
 
 	//@Activate
 	public void registered(ServiceReference ref) {
-		logService.log(LogService.LOG_INFO, "DummyEngine registered") ;
-		//log.debug("registered "+this.getClass().getName()) ;
+		logService.log(LogService.LOG_INFO, this.getClass().getName()
+									+" registered") ;
 	}
 
 	//@Deactivate
 	public void unregistered(ServiceReference ref) {
-		logService.log(LogService.LOG_INFO, "DummyEngine unregistered") ;
+		logService.log(LogService.LOG_INFO, this.getClass().getName()+" unregistered") ;
 	}
 
 

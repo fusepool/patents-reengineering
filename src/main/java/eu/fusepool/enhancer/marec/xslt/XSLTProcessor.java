@@ -5,7 +5,6 @@ package eu.fusepool.enhancer.marec.xslt;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
-import java.io.FileOutputStream;
 import java.io.InputStream;
 
 import javax.xml.transform.Transformer;
@@ -21,12 +20,13 @@ import javax.xml.transform.stream.StreamSource;
  */
 public class XSLTProcessor {
 	
-	private static TransformerFactory tFactory ;
+	private TransformerFactory tFactory ;
 	
 	
 	public XSLTProcessor() {
 		if(tFactory==null) {
-			tFactory = TransformerFactory.newInstance("net.sf.saxon.TransformerFactoryImpl", this.getClass().getClassLoader());
+			tFactory = TransformerFactory.newInstance("net.sf.saxon.TransformerFactoryImpl", //null) ; 
+												this.getClass().getClassLoader());
 		}
 	}
 	
@@ -43,6 +43,7 @@ public class XSLTProcessor {
 		StreamSource sSource = new StreamSource(is) ;
 		StreamResult sRes = new StreamResult(outputStream) ;
 		transformer.transform(sSource, sRes) ; 
+		
 		InputStream toRet = new ByteArrayInputStream(outputStream.toByteArray());
 		return toRet ;
 	}
@@ -50,11 +51,13 @@ public class XSLTProcessor {
 	/**
 	 * @param args
 	 */
+	/*
 	public static void main(String[] args) {
 	       try {  
 	    	   System.setProperty("javax.xml.transform.TransformerFactory",
 	    			   "net.sf.saxon.TransformerFactoryImpl");
-	    	      TransformerFactory tFactory = TransformerFactory.newInstance();
+	    	      //TransformerFactory tFactory = TransformerFactory.newInstance();
+	    	      TransformerFactory tFactory = TransformerFactory.newInstance("net.sf.saxon.TransformerFactoryImpl", null) ;
 	    	      URIResolver defResolver = tFactory.getURIResolver() ;
 	    	      ResourceURIResolver customResolver = new ResourceURIResolver(defResolver) ;
 	    	      tFactory.setURIResolver(customResolver) ;
@@ -66,7 +69,7 @@ public class XSLTProcessor {
 	    	          t.printStackTrace();
    	        }
 	}
-
+	*/
 	
 	
 }

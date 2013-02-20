@@ -9,6 +9,7 @@ import org.osgi.framework.InvalidSyntaxException;
 import org.osgi.framework.ServiceEvent;
 import org.osgi.framework.ServiceListener;
 import org.osgi.framework.ServiceReference;
+import org.osgi.service.log.LogService;
 
 /**
  * @author giorgio
@@ -21,17 +22,19 @@ public class TCServiceLocator implements ServiceListener {
 	
 	TripleCollection tripleCollection ;
 	
+	protected LogService logService ;
+	
+	
+	
 	public TCServiceLocator(BundleContext ctx, String graphUri) throws Exception {
 		this.ctx = ctx ;
-		this.graphUri = graphUri ;
+		this.graphUri = graphUri ; 
+		getLogService() ;
 		if("".equals(graphUri)||graphUri==null) {
 			throw new Exception(this.getClass().getSimpleName()+": graph URI can't be null") ;
 		}
-		//if(lookupCollection()) {
-			ctx.addServiceListener(this, "("+graphUri+")") ;
-			System.out.println("Added listenere to service: "+graphUri);
-		//} // TODO: else ??
-		
+		ctx.addServiceListener(this, "("+graphUri+")") ;
+		logService.log(LogService.LOG_INFO, "Added listener to service: "+graphUri) ;
 	}
 	
 	
@@ -43,7 +46,7 @@ public class TCServiceLocator implements ServiceListener {
 													"("+graphUri+")") ;
 
 		if(se != null && se.length>0) {
-			System.out.println("Registering triplestore reference: "+graphUri);
+			logService.log(LogService.LOG_DEBUG, "Registering triplestore reference: "+graphUri);
 			tripleCollection = (TripleCollection) ctx.getService(se[0]) ;
 			
 			return true ;
@@ -63,13 +66,13 @@ public class TCServiceLocator implements ServiceListener {
 		case ServiceEvent.REGISTERED:
 			{
 				tripleCollection = (TripleCollection) ctx.getService(ref) ;
-				System.out.println("TripleCollection ("+graphUri+") registered or changed");
+				logService.log(LogService.LOG_DEBUG, "TripleCollection ("+graphUri+") registered or changed");
 				break ;
 			}
 		case ServiceEvent.UNREGISTERING:
 			{
 				tripleCollection = null ;
-				System.out.println("TripleCollection ("+graphUri+") unregistered");
+				logService.log(LogService.LOG_DEBUG, "TripleCollection ("+graphUri+") unregistered");
 			}
 			
 		}
@@ -95,4 +98,12 @@ public class TCServiceLocator implements ServiceListener {
 		return graphUri;
 	}
 
+	private void getLogService() {
+		ServiceReference ref = ctx.getServiceReference(LogService.class.getName()) ;
+		if(ref!=null) {
+			logService = (LogService)ctx.getService(ref) ;
+		}
+	}
+	
+	
 }
