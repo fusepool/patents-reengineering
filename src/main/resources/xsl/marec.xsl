@@ -74,7 +74,11 @@ TODO: ignore DTD check. saxonb-xslt breaks if offline
             <xsl:call-template name="bibliographic-data">
                 <xsl:with-param name="ucid" select="$ucid" tunnel="yes"/>
             </xsl:call-template>
-<!--            <xsl:apply-templates select="description"/>-->
+
+            <xsl:call-template name="description">
+                <xsl:with-param name="ucid" select="$ucid" tunnel="yes"/>
+            </xsl:call-template>
+
             <xsl:call-template name="claims">
                 <xsl:with-param name="ucid" select="$ucid" tunnel="yes"/>
             </xsl:call-template>
@@ -328,7 +332,7 @@ XXX: Maybe switch to a code list
 <!--                        <skos:topConceptOf>-->
 <!--                            <rdf:Description rdf:about="{$concept}ipc">-->
 <!--                                <skos:hasTopConcept rdf:resource="{$concept}{$id}"/>-->
-                                <pmo:classifiedPatent rdf:resource="{$concept}{$id}"/>
+<!--                                <pmo:classifiedPatent rdf:resource="{$concept}{$id}"/>-->
 <!--                            </rdf:Description>-->
 <!--                        </skos:topConceptOf>-->
 
@@ -595,7 +599,32 @@ Add members
         </pmo:patentFamily>
     </xsl:template>
 
-    <xsl:template match="description">
+    <xsl:template name="description">
+        <xsl:param name="ucid" tunnel="yes"/>
+
+        <xsl:for-each select="description">
+            <rdf:Description rdf:about="{$patent}{$ucid}">
+                <xsl:variable name="lang" select="@lang"/>
+                <skos:definition rdf:parseType="Literal"><xsl:copy-of select="./*"/></skos:definition>
+
+                <pso:hasDescriptionSection>
+                    <rdf:Description rdf:about="{$patent}{$ucid}/description">
+                        <rdf:type rdf:resource="{$pso}Description"/>
+
+                        <xsl:for-each select="p">
+                            <dcterms:hasPart>
+                                <rdf:Description rdf:about="{$patent}{$ucid}/description{$uriThingSeparator}{@num}">
+                                    <dcterms:isPartOf rdf:resource="{$patent}{$ucid}/description"/>
+                                    <rdfs:label xml:lang="en"><xsl:value-of select="concat('Paragraph ', @num)"/></rdfs:label>
+                                    <dcterms:identifier><xsl:value-of select="@num"/></dcterms:identifier>
+                                    <dcterms:description xml:lang="{lower-case($lang)}"><xsl:copy-of select="normalize-space(.)"/></dcterms:description>
+                                </rdf:Description>
+                            </dcterms:hasPart>
+                        </xsl:for-each>
+                    </rdf:Description>
+                </pso:hasDescriptionSection>
+            </rdf:Description>
+        </xsl:for-each>
     </xsl:template>
 
     <xsl:template name="claims">

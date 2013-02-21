@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:foaf="http://xmlns.com/foaf/0.1/"
+         xmlns:prov="http://www.w3.org/ns/prov#"
+         xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+         xmlns:xkos="http://purl.org/linked-data/xkos#"
+         xmlns:pso="http://www.patexpert.org/ontologies/pso.owl#"
+         xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:pulo="http://www.patexpert.org/ontologies/pulo.owl#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:sumo="http://www.owl-ontologies.com/sumo.owl#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xmlns:pmo="http://www.patexpert.org/ontologies/pmo.owl#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:property="http://example.org/property/"
+         xmlns:schema="http://schema.org/">
+   <rdf:Description rdf:about="http://csarven.ca/#i">
+      <rdf:type rdf:resource="http://www.w3.org/ns/prov#Agent"/>
+   </rdf:Description>
+   <rdf:Description xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                    rdf:about="http://example.org/provenance/activity/20130221142934">
+      <rdf:type rdf:resource="http://www.w3.org/ns/prov#Activity"/>
+      <prov:startedAtTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2013-02-21T14:29:34Z</prov:startedAtTime>
+      <prov:wasAssociatedWith rdf:resource="http://csarven.ca/#i"/>
+      <prov:used rdf:resource="http://example.org/data/JP-10000001-A.xml"/>
+      <prov:used rdf:resource="https://github.com/fusepool/patents-reengineering/src/main/resources/scripts/marec.xsl"/>
+      <prov:generated>
+         <rdf:Description rdf:about="http://example.org/patent/JP-10000001-A">
+            <prov:wasDerivedFrom rdf:resource="http://example.org/data/JP-10000001-A.xml"/>
+            <prov:wasGeneratedBy rdf:resource="http://example.org/provenance/activity/20130221142934"/>
+         </rdf:Description>
+      </prov:generated>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://example.org/patent/JP-10000001-A">
+      <rdf:type rdf:resource="http://www.owl-ontologies.com/sumo.owl#Patent"/>
+      <property:status>new</property:status>
+      <pmo:patentFamily>
+         <rdf:Description rdf:about="http://example.org/family/16000725">
+            <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily"/>
+            <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
+            <skos:notation>16000725</skos:notation>
+         </rdf:Description>
+      </pmo:patentFamily>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://example.org/patent/JP-10000001-A">
+      <dcterms:references>
+         <rdf:Description rdf:about="http://example.org/patent/JP-10000001-A/publication">
+            <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#IntellectualPropertyDocument"/>
+            <property:status>new</property:status>
+            <dcterms:hasPart>
+               <rdf:Description rdf:about="http://example.org/patent/JP-10000001-A/publication/19980106">
+                  <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentPublication"/>
+                  <dcterms:isPartOf rdf:resource="http://example.org/patent/JP-10000001-A/publication"/>
+                  <property:status>new</property:status>
+                  <pulo:fileFormat>original</pulo:fileFormat>
+                  <property:filing-office rdf:resource="http://example.org/code/filing-office/JP"/>
+                  <pmo:publicationNumber>10000001</pmo:publicationNumber>
+                  <pmo:dateOfPublication rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1998-01-06</pmo:dateOfPublication>
+               </rdf:Description>
+            </dcterms:hasPart>
+         </rdf:Description>
+      </dcterms:references>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://example.org/patent/JP-10000001-A">
+      <dcterms:references>
+         <rdf:Description rdf:about="http://example.org/patent/JP-17570096-A/application">
+            <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#IntellectualPropertyDocument"/>
+            <property:status>new</property:status>
+            <property:is-representative>NO</property:is-representative>
+            <dcterms:hasPart>
+               <rdf:Description rdf:about="http://example.org/patent/JP-17570096-A/application/19960614">
+                  <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentPublication"/>
+                  <dcterms:isPartOf rdf:resource="http://example.org/patent/JP-17570096-A/application"/>
+                  <property:status>new</property:status>
+                  <pulo:fileFormat>epo</pulo:fileFormat>
+                  <property:filing-office rdf:resource="http://example.org/code/filing-office/JP"/>
+                  <pmo:applicationNumber>17570096</pmo:applicationNumber>
+                  <pmo:dateOfPublication rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1996-06-14</pmo:dateOfPublication>
+               </rdf:Description>
+            </dcterms:hasPart>
+         </rdf:Description>
+      </dcterms:references>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://example.org/patent/JP-10000001-A">
+      <property:priority-claim>
+         <rdf:Description rdf:about="http://example.org/patent/JP-17570096-A/publication/1">
+            <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentPublication"/>
+         </rdf:Description>
+      </property:priority-claim>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://example.org/patent/JP-10000001-A"/>
+   <rdf:Description rdf:about="http://example.org/patent/JP-10000001-A">
+      <dcterms:title xml:lang="en">SOIL IMPROVEMENT AND OPERATING MACHINE THEREFOR</dcterms:title>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://example.org/patent/JP-10000001-A">
+      <pmo:applicant>
+         <rdf:Description rdf:about="urn:uuid:e0a19bd5-a3d3-4edd-9700-d724072adc7d">
+            <rdf:type rdf:resource="http://www.owl-ontologies.com/sumo.owl#CognitiveAgent"/>
+            <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+            <pmo:applicantOf rdf:resource="http://example.org/patent/JP-10000001-A"/>
+            <foaf:name>SUGANO NOKI KK</foaf:name>
+         </rdf:Description>
+      </pmo:applicant>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://example.org/patent/JP-10000001-A">
+      <pmo:applicant>
+         <rdf:Description rdf:about="urn:uuid:983d071d-a568-4284-b6a6-fab91726582d">
+            <rdf:type rdf:resource="http://www.owl-ontologies.com/sumo.owl#CognitiveAgent"/>
+            <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+            <pmo:applicantOf rdf:resource="http://example.org/patent/JP-10000001-A"/>
+            <foaf:name>SUGANO NOKI KK</foaf:name>
+         </rdf:Description>
+      </pmo:applicant>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://example.org/patent/JP-10000001-A">
+      <pmo:applicant>
+         <rdf:Description rdf:about="urn:uuid:b7209503-cd7b-42a2-8c73-647b32c3e1d6">
+            <rdf:type rdf:resource="http://www.owl-ontologies.com/sumo.owl#CognitiveAgent"/>
+            <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+            <pmo:applicantOf rdf:resource="http://example.org/patent/JP-10000001-A"/>
+            <foaf:lastName>SUGANO NOKI KK</foaf:lastName>
+         </rdf:Description>
+      </pmo:applicant>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://example.org/patent/JP-10000001-A">
+      <pmo:inventor>
+         <rdf:Description rdf:about="urn:uuid:de20c3c8-24b9-475f-8929-66c0cbc55e0b">
+            <rdf:type rdf:resource="http://www.owl-ontologies.com/sumo.owl#Human"/>
+            <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+            <pmo:inventorOf rdf:resource="http://example.org/patent/JP-10000001-A"/>
+            <foaf:name>NAKAYAMA TOYOICHI</foaf:name>
+         </rdf:Description>
+      </pmo:inventor>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://example.org/patent/JP-10000001-A">
+      <pmo:inventor>
+         <rdf:Description rdf:about="urn:uuid:27d09427-c5dc-466b-a0e2-93aa2ffc01a7">
+            <rdf:type rdf:resource="http://www.owl-ontologies.com/sumo.owl#Human"/>
+            <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+            <pmo:inventorOf rdf:resource="http://example.org/patent/JP-10000001-A"/>
+            <foaf:name>NAKAYAMA TOYOICHI</foaf:name>
+         </rdf:Description>
+      </pmo:inventor>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://example.org/patent/JP-10000001-A">
+      <pmo:inventor>
+         <rdf:Description rdf:about="urn:uuid:da7cb9e3-aad9-4fe0-9cb6-8d1128a0773f">
+            <rdf:type rdf:resource="http://www.owl-ontologies.com/sumo.owl#Human"/>
+            <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+            <pmo:inventorOf rdf:resource="http://example.org/patent/JP-10000001-A"/>
+            <foaf:lastName>NAKAYAMA TOYOICHI</foaf:lastName>
+         </rdf:Description>
+      </pmo:inventor>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://example.org/patent/JP-10000001-A">
+      <dcterms:license>User acknowledges that the Information Retrieval Facility (IRF) and its third party providers retain all right, title and interest in and to this xml under applicable copyright laws. User acquires no ownership rights to this xml including but not limited to its format. User hereby accepts the terms and conditions of the Licence Agreement set forth at http://www.ir-facility.org/legal/marec/data_licence</dcterms:license>
+   </rdf:Description>
+</rdf:RDF>

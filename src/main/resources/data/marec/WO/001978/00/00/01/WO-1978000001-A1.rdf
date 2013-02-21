@@ -1,0 +1,1206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:foaf="http://xmlns.com/foaf/0.1/"
+         xmlns:prov="http://www.w3.org/ns/prov#"
+         xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+         xmlns:xkos="http://purl.org/linked-data/xkos#"
+         xmlns:pso="http://www.patexpert.org/ontologies/pso.owl#"
+         xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:pulo="http://www.patexpert.org/ontologies/pulo.owl#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:sumo="http://www.owl-ontologies.com/sumo.owl#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xmlns:pmo="http://www.patexpert.org/ontologies/pmo.owl#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:property="http://example.org/property/"
+         xmlns:schema="http://schema.org/">
+   <rdf:Description rdf:about="http://csarven.ca/#i">
+      <rdf:type rdf:resource="http://www.w3.org/ns/prov#Agent"/>
+   </rdf:Description>
+   <rdf:Description xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                    rdf:about="http://example.org/provenance/activity/20130221142937">
+      <rdf:type rdf:resource="http://www.w3.org/ns/prov#Activity"/>
+      <prov:startedAtTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2013-02-21T14:29:37Z</prov:startedAtTime>
+      <prov:wasAssociatedWith rdf:resource="http://csarven.ca/#i"/>
+      <prov:used rdf:resource="http://example.org/data/WO-1978000001-A1.xml"/>
+      <prov:used rdf:resource="https://github.com/fusepool/patents-reengineering/src/main/resources/scripts/marec.xsl"/>
+      <prov:generated>
+         <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1">
+            <prov:wasDerivedFrom rdf:resource="http://example.org/data/WO-1978000001-A1.xml"/>
+            <prov:wasGeneratedBy rdf:resource="http://example.org/provenance/activity/20130221142937"/>
+         </rdf:Description>
+      </prov:generated>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1">
+      <rdf:type rdf:resource="http://www.owl-ontologies.com/sumo.owl#Patent"/>
+      <property:status>new</property:status>
+      <pmo:patentFamily>
+         <rdf:Description rdf:about="http://example.org/family/27125127">
+            <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily"/>
+            <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
+            <skos:notation>27125127</skos:notation>
+         </rdf:Description>
+      </pmo:patentFamily>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1">
+      <dcterms:references>
+         <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1/publication">
+            <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#IntellectualPropertyDocument"/>
+            <property:status>new</property:status>
+            <dcterms:hasPart>
+               <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1/publication/19781019">
+                  <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentPublication"/>
+                  <dcterms:isPartOf rdf:resource="http://example.org/patent/WO-1978000001-A1/publication"/>
+                  <property:status>new</property:status>
+                  <pulo:fileFormat>original</pulo:fileFormat>
+                  <property:filing-office rdf:resource="http://example.org/code/filing-office/WO"/>
+                  <pmo:publicationNumber>1978000001</pmo:publicationNumber>
+                  <pmo:kindCode>A1</pmo:kindCode>
+                  <pmo:dateOfPublication rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1978-10-19</pmo:dateOfPublication>
+               </rdf:Description>
+            </dcterms:hasPart>
+         </rdf:Description>
+      </dcterms:references>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1">
+      <dcterms:references>
+         <rdf:Description rdf:about="http://example.org/patent/US-7800002-W/application">
+            <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#IntellectualPropertyDocument"/>
+            <property:status>new</property:status>
+            <property:is-representative>NO</property:is-representative>
+            <dcterms:hasPart>
+               <rdf:Description rdf:about="http://example.org/patent/US-7800002-W/application/19780601">
+                  <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentPublication"/>
+                  <dcterms:isPartOf rdf:resource="http://example.org/patent/US-7800002-W/application"/>
+                  <property:status>new</property:status>
+                  <pulo:fileFormat>epo</pulo:fileFormat>
+                  <property:filing-office rdf:resource="http://example.org/code/filing-office/US"/>
+                  <pmo:applicationNumber>7800002</pmo:applicationNumber>
+                  <pmo:dateOfPublication rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1978-06-01</pmo:dateOfPublication>
+               </rdf:Description>
+            </dcterms:hasPart>
+         </rdf:Description>
+      </dcterms:references>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1">
+      <property:priority-claim>
+         <rdf:Description rdf:about="http://example.org/patent/US-82772577-A/publication/1">
+            <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentPublication"/>
+         </rdf:Description>
+      </property:priority-claim>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1">
+      <property:priority-claim>
+         <rdf:Description rdf:about="http://example.org/patent/US-89418878-A/publication/1">
+            <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentPublication"/>
+         </rdf:Description>
+      </property:priority-claim>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1">
+      <pmo:classifiedAs>
+         <rdf:Description rdf:about="http://example.org/concept/ecla/B01D13/04H">
+            <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+            <pmo:classifiedPatent rdf:resource="http://example.org/patent/WO-1978000001-A1"/>
+            <pmo:classificationCode>B01D13/04H</pmo:classificationCode>
+            <skos:notation>B01D13/04H</skos:notation>
+         </rdf:Description>
+      </pmo:classifiedAs>
+      <pmo:classifiedAs>
+         <rdf:Description rdf:about="http://example.org/concept/ecla/B01D17/02B">
+            <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+            <pmo:classifiedPatent rdf:resource="http://example.org/patent/WO-1978000001-A1"/>
+            <pmo:classificationCode>B01D17/02B</pmo:classificationCode>
+            <skos:notation>B01D17/02B</skos:notation>
+         </rdf:Description>
+      </pmo:classifiedAs>
+      <pmo:classifiedAs>
+         <rdf:Description rdf:about="http://example.org/concept/ecla/B01D39/20B">
+            <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+            <pmo:classifiedPatent rdf:resource="http://example.org/patent/WO-1978000001-A1"/>
+            <pmo:classificationCode>B01D39/20B</pmo:classificationCode>
+            <skos:notation>B01D39/20B</skos:notation>
+         </rdf:Description>
+      </pmo:classifiedAs>
+      <pmo:classifiedAs>
+         <rdf:Description rdf:about="http://example.org/concept/ecla/B01J20/28">
+            <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+            <pmo:classifiedPatent rdf:resource="http://example.org/patent/WO-1978000001-A1"/>
+            <pmo:classificationCode>B01J20/28</pmo:classificationCode>
+            <skos:notation>B01J20/28</skos:notation>
+         </rdf:Description>
+      </pmo:classifiedAs>
+      <pmo:classifiedAs>
+         <rdf:Description rdf:about="http://example.org/concept/ecla/B01J35/06B">
+            <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+            <pmo:classifiedPatent rdf:resource="http://example.org/patent/WO-1978000001-A1"/>
+            <pmo:classificationCode>B01J35/06B</pmo:classificationCode>
+            <skos:notation>B01J35/06B</skos:notation>
+         </rdf:Description>
+      </pmo:classifiedAs>
+      <pmo:classifiedAs>
+         <rdf:Description rdf:about="http://example.org/concept/ecla/B01J37/02C">
+            <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+            <pmo:classifiedPatent rdf:resource="http://example.org/patent/WO-1978000001-A1"/>
+            <pmo:classificationCode>B01J37/02C</pmo:classificationCode>
+            <skos:notation>B01J37/02C</skos:notation>
+         </rdf:Description>
+      </pmo:classifiedAs>
+      <pmo:classifiedAs>
+         <rdf:Description rdf:about="http://example.org/concept/ecla/C02F1/68C">
+            <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+            <pmo:classifiedPatent rdf:resource="http://example.org/patent/WO-1978000001-A1"/>
+            <pmo:classificationCode>C02F1/68C</pmo:classificationCode>
+            <skos:notation>C02F1/68C</skos:notation>
+         </rdf:Description>
+      </pmo:classifiedAs>
+      <pmo:classifiedAs>
+         <rdf:Description rdf:about="http://example.org/concept/ecla/C03B19/12">
+            <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+            <pmo:classifiedPatent rdf:resource="http://example.org/patent/WO-1978000001-A1"/>
+            <pmo:classificationCode>C03B19/12</pmo:classificationCode>
+            <skos:notation>C03B19/12</skos:notation>
+         </rdf:Description>
+      </pmo:classifiedAs>
+      <pmo:classifiedAs>
+         <rdf:Description rdf:about="http://example.org/concept/ecla/C03B37/016">
+            <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+            <pmo:classifiedPatent rdf:resource="http://example.org/patent/WO-1978000001-A1"/>
+            <pmo:classificationCode>C03B37/016</pmo:classificationCode>
+            <skos:notation>C03B37/016</skos:notation>
+         </rdf:Description>
+      </pmo:classifiedAs>
+      <pmo:classifiedAs>
+         <rdf:Description rdf:about="http://example.org/concept/ecla/C03C11/00">
+            <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+            <pmo:classifiedPatent rdf:resource="http://example.org/patent/WO-1978000001-A1"/>
+            <pmo:classificationCode>C03C11/00</pmo:classificationCode>
+            <skos:notation>C03C11/00</skos:notation>
+         </rdf:Description>
+      </pmo:classifiedAs>
+      <pmo:classifiedAs>
+         <rdf:Description rdf:about="http://example.org/concept/ecla/C03C13/04">
+            <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+            <pmo:classifiedPatent rdf:resource="http://example.org/patent/WO-1978000001-A1"/>
+            <pmo:classificationCode>C03C13/04</pmo:classificationCode>
+            <skos:notation>C03C13/04</skos:notation>
+         </rdf:Description>
+      </pmo:classifiedAs>
+      <pmo:classifiedAs>
+         <rdf:Description rdf:about="http://example.org/concept/ecla/C03C23/00S">
+            <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+            <pmo:classifiedPatent rdf:resource="http://example.org/patent/WO-1978000001-A1"/>
+            <pmo:classificationCode>C03C23/00S</pmo:classificationCode>
+            <skos:notation>C03C23/00S</skos:notation>
+         </rdf:Description>
+      </pmo:classifiedAs>
+      <pmo:classifiedAs>
+         <rdf:Description rdf:about="http://example.org/concept/ecla/C03C3/00">
+            <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+            <pmo:classifiedPatent rdf:resource="http://example.org/patent/WO-1978000001-A1"/>
+            <pmo:classificationCode>C03C3/00</pmo:classificationCode>
+            <skos:notation>C03C3/00</skos:notation>
+         </rdf:Description>
+      </pmo:classifiedAs>
+      <pmo:classifiedAs>
+         <rdf:Description rdf:about="http://example.org/concept/ecla/C08J5/22">
+            <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+            <pmo:classifiedPatent rdf:resource="http://example.org/patent/WO-1978000001-A1"/>
+            <pmo:classificationCode>C08J5/22</pmo:classificationCode>
+            <skos:notation>C08J5/22</skos:notation>
+         </rdf:Description>
+      </pmo:classifiedAs>
+      <pmo:classifiedAs>
+         <rdf:Description rdf:about="http://example.org/concept/ecla/C12H1/04B">
+            <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+            <pmo:classifiedPatent rdf:resource="http://example.org/patent/WO-1978000001-A1"/>
+            <pmo:classificationCode>C12H1/04B</pmo:classificationCode>
+            <skos:notation>C12H1/04B</skos:notation>
+         </rdf:Description>
+      </pmo:classifiedAs>
+      <pmo:classifiedAs>
+         <rdf:Description rdf:about="http://example.org/concept/ecla/G21F9/12">
+            <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+            <pmo:classifiedPatent rdf:resource="http://example.org/patent/WO-1978000001-A1"/>
+            <pmo:classificationCode>G21F9/12</pmo:classificationCode>
+            <skos:notation>G21F9/12</skos:notation>
+         </rdf:Description>
+      </pmo:classifiedAs>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1">
+      <dcterms:title xml:lang="en">LOW TEMPERATURE SYNTHESIS OF VITREOUS BODIES AND THEIR INTERMEDIATES</dcterms:title>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1">
+      <pmo:applicant>
+         <rdf:Description rdf:about="urn:uuid:78661a32-587a-446e-aba6-f6bbe350263b">
+            <rdf:type rdf:resource="http://www.owl-ontologies.com/sumo.owl#CognitiveAgent"/>
+            <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+            <pmo:applicantOf rdf:resource="http://example.org/patent/WO-1978000001-A1"/>
+            <foaf:name>SAMANTA M</foaf:name>
+            <schema:address>
+               <rdf:Description>
+                  <rdf:type rdf:resource="http://schema.org/PostalAddress"/>
+                  <schema:addressCountry rdf:resource="http://example.org/code/country/US"/>
+               </rdf:Description>
+            </schema:address>
+         </rdf:Description>
+      </pmo:applicant>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1">
+      <pmo:applicant>
+         <rdf:Description rdf:about="urn:uuid:d6352895-5d5d-40a2-9136-79d65af406fc">
+            <rdf:type rdf:resource="http://www.owl-ontologies.com/sumo.owl#CognitiveAgent"/>
+            <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+            <pmo:applicantOf rdf:resource="http://example.org/patent/WO-1978000001-A1"/>
+            <foaf:name>SAMANTA M</foaf:name>
+         </rdf:Description>
+      </pmo:applicant>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1">
+      <pmo:inventor>
+         <rdf:Description rdf:about="urn:uuid:e03b2081-ae7b-45c3-b16a-115e4a16e87b">
+            <rdf:type rdf:resource="http://www.owl-ontologies.com/sumo.owl#Human"/>
+            <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+            <pmo:inventorOf rdf:resource="http://example.org/patent/WO-1978000001-A1"/>
+            <foaf:name>SAMANTA M</foaf:name>
+            <schema:address>
+               <rdf:Description>
+                  <rdf:type rdf:resource="http://schema.org/PostalAddress"/>
+                  <schema:addressCountry rdf:resource="http://example.org/code/country/US"/>
+               </rdf:Description>
+            </schema:address>
+         </rdf:Description>
+      </pmo:inventor>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1">
+      <pmo:inventor>
+         <rdf:Description rdf:about="urn:uuid:2f8df882-7858-414e-a8ee-be9f99dcbc4e">
+            <rdf:type rdf:resource="http://www.owl-ontologies.com/sumo.owl#Human"/>
+            <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+            <pmo:inventorOf rdf:resource="http://example.org/patent/WO-1978000001-A1"/>
+            <foaf:name>SAMANTA M</foaf:name>
+         </rdf:Description>
+      </pmo:inventor>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1">
+      <skos:definition rdf:parseType="Literal">
+         <p num="p0001"> LOW TEMPERATURE SYNTHESIS OF VITREOUS BODIES AND THEIR INTERMEDIATES</p>
+         <p num="p0002">FIELD OF THE INVENTION</p>
+         <p num="p0003">This invention relates to a novel method for making a vitreous body and its intermediates. More particularly, the method relates to a low temperature production of a vitreous body via synthesis of a self-supporting body by solution deposition.</p>
+         <p num="p0004">DESCRIPTION OF THE PRIOR ART</p>
+         <p num="p0005">In recent years, the most commonly employed commercial process for the manufacture of glass is the direct melting process. This process is somewhat tedious and has not been very successful in the melting of easily devitrifiable and high refrac¬ tory glass. Many of the latest technological advances demand glass to be in a state of high purity which is seldom met in a direct process. Operational cost of the direct process is energy-sensitive and recurring energy crises continue to have significant impact on glass making operations. Consequently, a method for preparing glass at low cost, in a state of high purity and in relatively unlimited composition is needed.</p>
+         <p num="p0006">A number of indirect processes, namely, anodization, shockwave treatment, and neutron bombardment, have been proposed, but their use has never been realized on a large scale. These processes severely limit the operational flexibility and in most cases, the production cost is higher than for the direct process.</p>
+         <p num="p0007">In U.S. Patents 2,480,672, 2,106,744 and 3,785,793, for example, a process is disclosed wherein the silica content of an easily meltable alkali-borosilicate glass is enriched by phase 
+<!-- EPO <DP n="4"/>-->
+separation and leaching. The porous glass which is obtained as an intermediate product is thermally consolidated at elevated tempera¬ ture. Although the process is comparatively inexpensive, it suffers from the limitation with respect to choice and regulation of glass-forming compounds. Choice and regulation of modifying compounds can, however, be achieved via a doping operation in the pores of porous glass. Physical doping operations are dis¬ closed, for example, in U.S. Patents 2,336,227, 3,232,782, 3,938,974 and in the Ph.D. Thesis of M. Samanta, "Molecular Engineering of Silica-Rich Glasses Produced by Phase Separation," Catholic University of America, 1975. A chemical doping process is disclosed in a pending U.S. patent application, Serial No. 832,230 filed September 12, 1977 by M. Samanta.</p>
+         <p num="p0008">High purity glass has been prepared by a vapor deposi- tion process as described, for example, in U.S. Patents 2, 326,059, 3,884,550 and 4,062,665 among many others. In such a process vitreous silica is deposited in the form of a self-supporting porous body singly or in combination with a dopant. This process is expensive and the shape of bodies obtainable from such a process is limited.</p>
+         <p num="p0009">Polymerization processes have been tried for glass making with limited success. Two distinct lines of approach have been attempted. First is the concentration of a colloidal solu¬ tion under controlled conditions as described, for example in U.S. Patents 2,886,404 and 3,535,890. Second is the interaction in solution between a silicon compound and a polymerizing agent therefor, as described, for example in U.S. Patents 3,678,144, 3,827,893, and 4,059,658. The main difficulty in both lines of approach is the large shrinkage accompanying the process which makes the glass susceptible to breakage and which presents a poten¬ tial problem in the design of molds. 
+<!-- EPO <DP n="5"/>-->
+ SUMMARY OF THE INVENTION</p>
+         <p num="p0010">In the process of the present invention, first and second solutions separated by a permeable barrier are provided. The first solution contains at least one basic or alkaline glass forming solute and the second solution contains at least one acidic solute with the permeable barrier being substantially permeable to the acidic solute but substantially impermeable to the basic solute. When the first solution and the second solution are originally at suitable concentrations, passage of the second solution through the barrier occurs and a chemical combination takes place resulting in the deposition of a porous self-supporting body on the side of the barrier in contact with the first solution. The porous body can be purified, dried and thermally consolidated to a non-porous glass.</p>
+         <p num="p0011">DETAILED DESCRIPTION OF THE INVENTION</p>
+         <p num="p0012">The present invention facilitates an economical mass production of vitreous bodies in a state of high purity and in virtually unlimited shapes. According to this invention, a porous self-supporting body deposits on a substrate, when a first solu- tion containing a suitable concentration of at least one basic glass forming solute is allowed to react, on the substrate with a second solution containing a suitable concentration of at least one acidic solute. When the concentration of the acidic solute in the second solution falls outside of the range of suitable concentrations, amorphous or crystalline particles result with no interconnectivity. The broadness of the range of appropriate con¬ centrations depends on the particular type of reaction and can be determined experimentally by trial and error. The first solution and the second solution are separated by a permeable barrier the walls of which act as a substrate for deposition of a porous self-supporting body. The second solution is diffused through the 
+<!-- EPO <DP n="6"/>-->
+through the barrier which is substantially permeable to the acidic solute but substantially impermeable to the basic glass forming solute. This assures a reaction between the first solution and the second solution on the barrier to deposit a porous self supporting body.</p>
+         <p num="p0013">The nature and composition of the solutions which are useful for glass formation are shown in Table 1 (first solution) and Table 2 (second solution) . The solutions may be binary (containing one solute) or multicomponent (containing more than one solute) . The solvents useful for the purpose of making a solution may be water, hydrocarbons such as benzene, alcohols such as methanol, ketones such as acetone, ethers such as diethyl ether, carboxylic acids such as acetic acid and mixtures thereof.</p>
+         <p num="p0014">TABLE 1</p>
+         <p num="p0015">First Solution</p>
+         <p num="p0016">All solutions contain moderately high to very high concentrations of the basic glass forming solute. The solutions may be true solutions or colloidal solutions. 
+<!-- EPO <DP n="7"/>--></p>
+         <p num="p0017">
+            <img id="imgf000007_0001" orientation="portrait" wi="121" img-format="tif"
+                 img-content="table"
+                 file="imgf000007_0001.tif"
+                 inline="no"
+                 he="129"/>
+         </p>
+         <p num="p0018">The solutes exemplified in the above table may be simple solutes or complex solutes. Simple solutes are those which are combinations of two different oxides; complex solutes are those which are combinations of more than two oxides. An example of the simple solute is the silicate Na<sub>2</sub>O,x Si0<sub>2</sub> where x= 2 to 4 available in commercial water glass solution. An example of the complex solute is the silicate or borate,</p>
+         <p num="p0019">K<sub>2</sub>O. 2B<sub>2</sub>O<sub>3</sub>. 3SiO<sub>2</sub> which can be made synthetically. A convenient method for making an aqueous solution of a simple solute or comp¬ lex solute is to mix suitable raw materials in desired proportion, fuse the mixture at high temperature and finally treat the fused mass with hot water with or without the use of pressure. 
+<!-- EPO <DP n="8"/>-->
+Other methods include dissolving amorphous oxide in hot aqueous alkali. In many cases the aqueous solutions of the simple solutes or complex solutes are turbid, presumably due to the homogeneous distribution of some undissolved solute in colloidal dimension. In cases where more than one basic glass forming solute is used complications might arise due to the interaction of two solutes leading to the formation of a gel. As an example, the inter¬ action of sodium silicate and sodium aluminate in aqueous solu¬ tion leads to the formation of a gel. The problem can be avoided by using a low concentration of one solute so that gel is formed in small amounts which can be dispersed throughout the solution in colloidal dimension.</p>
+         <p num="p0020">The prefered concentration range of the basic glass forming solute in the first solution should be such that it will be able to provide from 0.10 mole to 40 moles of glass forming oxide from 1 liter of solution. Stronger or weaker concentra¬ tions may also be used to tailor the process to the product desired. In case more than one basic glass forming solute is present or in case the basic glass forming solute is a complex one, the first solution should be able to provide from 0.10 moles to 40 moles of at least one glass forming oxide.</p>
+         <p num="p0021">TABLE 2</p>
+         <p num="p0022">Second Solution</p>
+         <p num="p0023">Most solutions should contain very low to moderately high concentrations of the acidic solute; very high concentrations have been found to be useful in special circumstances. The con¬ centration range of the acidic solute in the second solution depends on the concentration of the first solution and can be ascertained by trial and error. The solution must be a true solution. 
+<!-- EPO <DP n="9"/>--></p>
+         <p num="p0024">
+            <img id="imgf000009_0001" orientation="portrait" wi="134" img-format="tif"
+                 img-content="table"
+                 file="imgf000009_0001.tif"
+                 inline="yes"
+                 he="200"/>
+            <!-- EPO <DP n="10"/>-->
+Table 2 continued -</p>
+         <p num="p0025">
+            <img id="imgf000010_0001" orientation="portrait" wi="139" img-format="tif"
+                 img-content="table"
+                 file="imgf000010_0001.tif"
+                 inline="yes"
+                 he="136"/>
+            <!-- EPO <DP n="11"/>--></p>
+         <p num="p0026">is a rapid initial movement of the second solution into the first solution because of large differences in osmotic pressures between the two solutions. With the progress of reaction, this difference decrease because some of the impermeable component deposits out of the solution. The reaction at any stage can be controlled by using external pressure either on the first solution or on the second solution.</p>
+         <p num="p0027">Various additives may be added to the first solution and/or the second solution to have the desired effects. Suitable additives include peptizing agents, protective colloids, coagulating agents, structure modifiers and composition modifiers. Additives may be present in the first solution as dissolved solute or in homogeneous suspension. They increase the viscosity of the solution and offer resistance to the movement of the basic solute which is desirable for producing a self-supporting structure. The additives may co-deposit in the porous body to increase the porosity and pore-size. Additives for the second solution must be present as dissolved solute. They may increase the pH buffering capacity and/or the osmotic pressure of the second solution which is desirable.</p>
+         <p num="p0028">The porosity and pore-size of the porous self-supporting body are found to be directly proportional to the concentration of the second solution and inversely proportional to the concentration of. the first solution. Thus, an asymmetric distribution of pore- sizes in the deposited porous body can be achieved merely by pro¬ per manipulation of the concentrations of the solutions at various instants of the process. It has been found that washing the depo¬ sited porous body with water increased the pore diameter and the porosity to a small extent due to the slight dissolution of the porous skeleton by a solution of unreacted basic solute. 
+<!-- EPO <DP n="12"/>--><!-- EPO <DP n="13"/>-->
+ The thickness of the deposited porous structure is a function of duration of combination. The duration of combination also determines a composition profile within the porous body. A portion of the porous body near the walls of the porous container has more complete deposition than a portion far from the walls. This profile in composition can be destroyed- by leaching with an acid.</p>
+         <p num="p0029">It has already been pointed out that depending on the concentration of the first solution, a range of concentrations of the second solution can be used to form a self-supporting porous body. When the actual concentration is high in the range of concentrations, the deposited porous body is predominantly crystalline. When the actual concentration of the second solution is low in the range of concentrations the deposited porous body is predominantly vitreous.</p>
+         <p num="p0030">It is possible to develop in the porous body two or more layers having different compositions merely by replacing the first solution and/or second solution with a different composition. This is an example of discontinuous variation of composition in the porous body. A continuous variation of composition in the porous body can be achieved by varying the composition of the first solution and/or the second solution continuously. In making compositionally inhomogeneous porous body, the importance of both first solution and second solution has to be considered since in the deposition process, the glass forming oxide corresponding to the basic glass forming solute is deposited either singly or in combination with an oxide derived from the acidic solute.</p>
+         <p num="p0031">The physically bound impurities in the porous self- supporting body can be removed by washing with water at room temperature. The composition profile in the porous body due to non-uniform deposition can be eliminated by leaching. Leaching is done with N/1000 to 3N dilute mineral acid at temperatures 
+<!-- EPO <DP n="14"/>-->
+varying from 25°C to 100°C.</p>
+         <p num="p0032">The porous structure can be doped physically or chemically with a modifier. Physical doping processes are described, for example in U.S. Patents 2,336,227, 2,232,782, and 3,938,974 and in the Ph.D. Thesis of M. Samanta, "Molecular Engineering of Silica-Rich Glasses Produced by Phase Separation", Catholic University of America, 1975. In this process, the porous body is impregnated with a solution of dopant, dried at room temperature to remove most of the solvent, heated to decompose the dopant into an oxide and finally consolidated at high tempera¬ ture to incorporate the oxide. A chemical doping process is disclosed in pending U.S. patent application, Serial No. 832,230 filed September 12, 1977 by M. Samanta. This chemical doping process involves exchange of protons in the porous body with cations in a weak basic medium.</p>
+         <p num="p0033">Most of the physically bound water in the undoped or doped porous body can be removed by room temperature drying. Rapid drying introduces tension, particularly at the cut edges of the porous body which then tends to crack. This can be prevented by coating the cut edge with a thin film of polyethylene glycol as described in U.S. Patent 2,861, 351. For a porous structure containing pores of 200 A or lower, controlled drying under a relative humidity of 60-90% is preferable. Capillary forces in this case ar-e very high and too rapid drying causes breakage of the structure.</p>
+         <p num="p0034">Chemically bound water in the form of surface hydroxyl groups cannot be removed by room temperature drying. These can be removed by vacuum drying at temperatures below the consolidation temperature of the porous body as described in U.S. Patent 2,505,001 or by chemical methods as described in</p>
+         <p num="p0035">U.S. Patents 2,982,053, 3,459,522 and 3,535,890 wherein replace¬ ment of hydroxyl groups in the porous body is done by halogen. 
+<!-- EPO <DP n="15"/>-->
+An efficient chemical method ϊs&gt; disclosed in U.S. patent application Serial No. 832,231 filed September 12, 1977 by M. Samanta. In this method, the combination of two non-bridging hydroxyl groups in the porous body to form a single bridging oxide group is sought to be achieved in the presence of an acid anhydride.</p>
+         <p num="p0036">The doped or undoped porous structure, after removal of most of the physically bound water by room temperature drying for 2 days is heated at the rate of 100°C per hour. It is then kept at about 600° for 2 hours and chemically bound water is removed by appropriate treatment. The temperature is raised again at the rate of 100°C per hour until the porous body is consolidated to a non-porous vitreous body. For a crystalline porous body, the consolidation temperature is close to the liquidus temperature of the consolidated glass (liquidus temperature is the maximum temperature at which glass coexists with crystal) . For a vitreous porous body the consolidation temperature is close to. the glass transition temperature of the consolidated glass (glass transition temperature is the temperature corresponding to the breakpoint of the specific heat versus temperature curve of a glass) . For a mixed phase porous body, the consolidation temperature lies between the glass transition temperature and the liquidus temperature.</p>
+         <p num="p0037">It is found that glass prepared by the process of this invention is extremely pure. Thus, in the deposition of a germania and silica porous body, impurities like Fe, Co, Ni, Cu, Cr preferentially migrate into solution. Glass made from such a porous body is highly transparent to ultraviolet, visible and infrared radiation.</p>
+         <p num="p0038">In order to indicate more fully the nature and utility of my invention, the following specific examples are set forth. In all examples, tubular cellulose dialyzer membranes having 
+<!-- EPO <DP n="16"/>-->
+an average pore diameter of 4.8 nm are used. All concentrations expressed in percentage are gms per 100 ml of solution except where otherwise differently stated. All chemicals are laboratory reagent grade chemicals except for sodium silicate and cesium nitrate.</p>
+         <p num="p0039">EXAMPLE 1</p>
+         <p num="p0040">In each of the following experiments, a dialyzer tube 4" in length and 0.5" in diameter is closed at one end and then filled with 40°Be aqueous sodium silicate solution (first solution). 40°Be aqueous sodium silicate solution has a composition of 6.5% Na<sub>2</sub>O, 25% SiO<sub>2</sub> and 68.5% H<sub>2</sub>0, all percentages being expressed in gms per 100 gms of the solution. The tube is then closed at the other end. The closed tube which has a length of 2.5" is almost filled with silicate solution and contains very little space filled with air. The tube is completely immersed in a horizontal position in 3000 ml aqueous ammonium chloride solution (second solution) for 24 hours. .Because of the molecular sizes, only ammonium chloride molecules and no sodium silicate molecules can diffuse through the membrane. The results of various experiments are shown in Table 3. The average room temperature recorded during the experiments is 24°C. 
+<!-- EPO <DP n="17"/>--></p>
+         <p num="p0041">TABLE 3</p>
+         <p num="p0042">
+            <img id="imgf000017_0001" orientation="portrait" wi="145" img-format="tif"
+                 img-content="table"
+                 file="imgf000017_0001.tif"
+                 inline="yes"
+                 he="190"/>
+            <!-- EPO <DP n="18"/>-->
+Table 3 continued -</p>
+         <p num="p0043">
+            <img id="imgf000018_0001" orientation="portrait" wi="129" img-format="tif"
+                 img-content="table"
+                 file="imgf000018_0001.tif"
+                 inline="yes"
+                 he="205"/>
+            <!-- EPO <DP n="19"/>-->
+Table 3 shows that against a concentration of 40°Be aqueous sodium silicate solution (first solution) concentrations of aqueous ammonium chloride solution (second solution) corres¬ ponding to Experiment Numbers 4, 5, 6, and 7 are suitable for the formation of a porous self-supporting body. Thus, against a concentration of 40°Be aqueous sodium silicate solution (first solution) the range of suitable concentrations is from 0.5% to 5% for aqueous ammonium chloride solution (second solution) . Table 3 also shows that when the actual concen- tration of aqueous ammonium chloride solution is high in the range of concentrations, the deposited porous self-supporting body is predominantly crystalline; when the actual concentra¬ tion of aqueous ammonium chloride solution is low in the range of concentrations, the deposited porous self-supporting body is predominantly vitreous.</p>
+         <p num="p0044">The concentrations of the reactants useful for deposition of a porous self-supporting body, as demonstrated above, may not be suitable under a set of different conditions. Use of a membrane of different pore size, use of different temperature and use of pressure on either solution can alter the concentration of either solute available for reaction on the membrane substrate. Four deposited porous self-supporting bodies are separated from the membranes and their diameters appear to be larger than the diameter of the original dialyzer tube. This is due to the fact that in the initial stage, there is rapid absorption of ammonium chloride solution within the tube due to the large difference in osmotic pressure between the ammonium chloride solution and the sodium silicate solu- tion. Consequently, within the tube there is a development of pressure which is partially relieved by expansion of the tube both in diameter and length. The porous bodies after washing with water 2 times, are leached with .01N H<sub>2</sub>SO<sub>4</sub> at 21°C for 10 hours to remove sodium ions and then washed with water to remove the acid.. 
+<!-- EPO <DP n="20"/>-->
+The porous bodies after washing are dried at 21°C for 48 hours to remove most of the physically bound water. They are heated under vacuum at the rate of 100°C per hour. They are then held at 600°C for 2 hours. The temperature is raised again at the rate of 100°C per hour until the porous bodies are consolidated to a non-porous glass. Table 3 shows that consolidation temperature for a crystalline porous body is higher than that for a vitreous porous body. Theoretically, a crystalline porous body should have a consolidation tempera- ture close to the liquidus temperature of the consolidated glass, whereas a vitreous porous body should have a consolidation temperature close to the glass transition tempera¬ ture of the consolidated glass. All four consolidated glasses are analyzed for silica, sodium and iron concentration. The average sodium concentration is 50 ppm, the average iron concentration is 15 ppb, and the average silica concentration is 99.99%. Thus, it is found that very pure silica glass can be prepared by this invention. The concentration of sodium which deteriorates the refractoriness and the concentration of iron which deteriorates the optical quality can be further decreased by using raw materials of high purity and/or using a more severe leaching condition.</p>
+         <p num="p0045">EXAMPLE 2</p>
+         <p num="p0046">In each of the following experiments, a dialyzer tube 4" in length arid 0.5" in diameter is closed at one end and then filled with 40°Be aqueous sodium silicate solution. The tube is closed at the other end. The closed tube which has a length of 2.5" is almost filled with silicate solution and contains very little air space. The tube is completely immersed in a horizontal position in 3000 ml 50% aqueous aluminum sulfate solution for the desired time. The deposited porous vitreous body is separated from the dialyzer tube and washed with water. The wall thickness of the washed product 
+<!-- EPO <DP n="21"/>-->
+is measured. The results of various experiments are shown in Table 4.</p>
+         <p num="p0047">TABLE 4</p>
+         <p num="p0048">Average temperature of the experiments = 24°C.</p>
+         <p num="p0049">
+            <img id="imgf000021_0001" orientation="portrait" wi="127" img-format="tif"
+                 img-content="table"
+                 file="imgf000021_0001.tif"
+                 inline="yes"
+                 he="83"/>
+         </p>
+         <p num="p0050">This example verifies that wall thickness of the deposited porous body is directly proportional to the duration of combination of the two solutions. In the above experiments, changes in length and in diameter of the dailyzer tubes are practically zero, presumably because the osmotic pressures of the two solutions are very close. It has to be noted that reaction between aqueous aluminum sulfate solution and aqueous sodium silicate solution is very slow. Other reactions like the reaction between aqueous ammonium chloride solution and aqueous sodium silicate solution are very fast and a consider¬ able amount of wall thickness of porous body can be built up in a very short time. 
+<!-- EPO <DP n="22"/>-->
+ EXAMPLE 3</p>
+         <p num="p0051">In the experiments of Example 1, it is found that the shape and size of the deposited porous body were slightly different from the original shape and size of the membrane. This is due to the rapid osmotic absorption of the second<sup>"</sup> solution within the tube towards the beginning of the experi¬ ment. This leads to a development of pressure and makes the membrane dimensionally unstable. In the following experi¬ ment (Experiment No. 12) the system is buffered with respect to change in pressure. A dialyzer tube 0.5" in diameter and 20" in length is closed at one end and is partially filled with 75 ml 40 Be aqueous sodium silicate solution. The open end of the dialyzer tube is fastened to a support and the tube is suspended vertically in 5000 ml 0.5% aqueous ammonium chlo- ride solution so that 75% of the solution within the dialyzer tube is immersed in ammonium chloride solution. The part of the dialyzer tube which is not filled with silicate solution remains more or less collapsed. The initial rapid diffusion - of the second solution into the tube is thus prevented by a counter acting hydrostatic pressure. Further, solution diffused into the dialyzer tube is accommodated by the inflation of the collapsed portion of the dialyzer tube and this prevents any dimensional instability of the immersed portion of the dialyzer tube. The deposited porous glass tube is found to be perfectly cylindrical conforming to the shape and size of the dialyzer tube. The average room temperature recorded during the experiment is 24°C.</p>
+         <p num="p0052">It is found that non-uniformity in deposition can be caused by variation in pressure from point to point in a porous container. This gives rise to a problem when the portion of the porous container directly involved in the deposition process had a large vertical length. This problem can 
+<!-- EPO <DP n="23"/>-->
+ be minimized or eliminated by positioning the porous container in the second solution to occupy the shortest vertical distance, and providing the porous container with a flexible non-porous closure which can expend to relieve the pressure developed in course of the process. It is preferable to have the porous container as rigid as possible and to have solutions of very close osmotic pressure. An alternative method for relieving the pressure is to provide the opening of the porous container with a solution-tight piston which can yield to pressure by moving away from the container across a path enclosed by a non-porous structure. In another alternative method a hollow needle may be used to bleed off excess pressure.</p>
+         <p num="p0053">EXAMPLE 4</p>
+         <p num="p0054">138 gms potassium carbonate, 248 gms boric acid and 314 gms germania are intimately mixed together and the mixture is vitrified by melting in the ceramic crucible at 1300°C. While hot, the molten mass is poured into 1000 ml of water at room temperature whereby the glass is broken into numerous fragile particles. The mixture is filtered and both the resi- due and filtrate are further treated. The residue is ground to powder which is then added back to the filtrate and the combina¬ tion is heated at 100°C for one hour to dissolve as much solute as possible. The volume of the solution is adjusted to 1000 ml. The potassium borogermanate solution thus obtained contains one mole of K<sub>2</sub>O, two moles of B<sub>2</sub>O<sub>3</sub> and 3 moles of GeO<sub>2</sub>. The solu¬ tion appears turbid, presumably due to the homogeneous suspen¬ sion of some undissolved solute in colloidal dimension.</p>
+         <p num="p0055">15,000 ml of pH 5.00 acetic acid-sodium acetate buffer solurion is prepared as follows. 10,000 ml sodium hydroxide solution and 10,000 ml acetic acid solution, each of approximately 0.5N concentration are made. The actual 
+<!-- EPO <DP n="24"/>-->
+concentrations of acetic acid solution and sodium hydroxide solution are determined by titration and are found to be 0.500N and 0.426N respectively. Using these values, a 15,000 ml pH 5.00 acetic acid-sodium acetate buffer is prepared by adding 6420 ml of sodium acetate to 8580 ml of acetic acid.</p>
+         <p num="p0056">In each of the following experiments, a dialyzer tube 0.5" in diameter and 20" in length is closed at one end and is partially filled with 75 ml aqueous potassium borogermanate solution. The open end of the dialyzer tube is fastened to a support and the tube is suspended vertically in 5000 ml acetic acid-sodium acetate buffer solution so that 75% of the solution within the dialyzer tube is immersed in buffer solution and the other 25% of the solution stays above the buffer solution. After the desired length of time, the deposited porous glass body is taken out and is separated from the dialyzer tube.</p>
+         <p num="p0057">The porous glass tube is washed with water five times and dried at room temperature for two days. The samples from several locations inside glass tubes are analyzed for potassium oxide concentration. The results of various experiments are shown in Table 5. 
+<!-- EPO <DP n="25"/>--></p>
+         <p num="p0058">TABLE 5</p>
+         <p num="p0059">
+            <img id="imgf000025_0001" orientation="portrait" wi="125" img-format="tif"
+                 img-content="table"
+                 file="imgf000025_0001.tif"
+                 inline="yes"
+                 he="108"/>
+            <!-- EPO <DP n="26"/>--></p>
+         <p num="p0060">This example demonstrates the use of a complex solute (consisting of more than two oxides) in the first solution and the use of a buffered second solution containing an organic acid. Further, this example demonsrates the existance of a composition profile which is a function of time.</p>
+         <p num="p0061">EXAMPLE 5</p>
+         <p num="p0062">To 1000 ml vigorously boiling distilled water is added drop by drop, a freshly prepared solution made by dissolving 5gms of ferric chloride in 5 cc of water. As each drop falls into the boiling water, ferric chloride suffers hydrolysis, forming a beautiful deep red ferric oxide sol. The sol obtained is rapidly dialyzed in a cellphane bag against warm water to free it from the hydrochloric acid and undecomposed ferric chloride. The purified sol is then concentrated to a volume of 10 ml by slow evaporation.</p>
+         <p num="p0063">In the following experiment (Experiment No. 16) 75 ml red colloidal solution is prepared by uniformly mixing 70 ml of 40°Be aqueous sodium silicate and 5 ml of ferric oxide sol. A dialyzer tube 0.5" in diameter and 20" in length is closed at one end and is partially filled with 75 ml red colloidal solution. The open end of the dialyzer tube is fastened to a support and the tube is suspended vertically in 5000 ml 0.75% aqueous ammonium nitrate solution So that 75% of the solution within the dialyzer tube is immersed in ammonium nitrate solution and the other 25% of the solution stays above the ammonium nitrate solution. After 30 hours, the deposited red porous body is taken out and is separated from the dialyzer tube. The deposited porous body on analysis shows the presence of ferric oxide. The average room temperature recorded during the experiment was 24°C. 
+<!-- EPO <DP n="27"/>-->
+ This example demonstrates the use of an additive in the first solution to incorporate a modifying compound in the deposited porous hody.</p>
+         <p num="p0064">EXAMPLE 6</p>
+         <p num="p0065">In the following experiment (Experiment No. 17), a dialyzer tube 0.5" in diameter and 20" in length is closed at one end and partially filled with 75 ml of 40° aqueous sodium silicate solution. The open end of the dialyzer tube is fastened to a support and the tube is suspended vertically in 5000 ml 0.5% aqueous ammonium chloride solution so that 75% of the solution within the dialyzer tube is immersed in ammonium chloride solution and the other 25% of the solution stays above the ammonium chloride solution. After 25 hours of reaction, the solution within the dialyzer tube is replaced by 70 ml of of aqueous potassium borogermante solution as prepared in</p>
+         <p num="p0066">Example 4; other conditions of the experiment remain unchanged. The reaction is allowed to continue for another 25 hours. The deposited composite porous glass is taken out and is separated from the dialyzer tube. The average temperature recorded during the experiment is 27°C. The porous body, after washing with water two times, is leached with 0.005N H<sub>2</sub>SO<sub>4</sub> at 27°C for 10 hours to remove sodium ions and potassium ions and then washed with water to remove acids. The porous body after washing is dried at 21°C for 48 hours to remove most of the physically bound water. It is heated under vacuum at the rate of 100°C per hour up to 600°C. The vacuum is then taken off and the porous glass is treated with SO<sub>3</sub> vapor for 2 hours at 600°C. This process removes the chemically bound water. The porous glass is subjected to vacuum again and the temperature is raised again at the rate of 100°C per hour until the porous body is consolidated at 1450°C to a transparent non-porous glass tube. The tube is a composite with the outer wall substantially made of silica and the inner wall substantially 
+<!-- EPO <DP n="28"/>-->
+made of germania.</p>
+         <p num="p0067">EXAMPLE 7</p>
+         <p num="p0068">In the following experiment (Experiment No. 18) doping with cesium salt is performed using the porous silica glass made in Example 3. For good optical quality, both the cesium salt and the porous glass need to be purified. The purification of porous glass is done by leaching with 0.005N H<sub>2</sub>SO<sub>4</sub> at 27°C for 10 hours. A more severe leaching condition is next adopted by leaching the porous glass with 2N H<sub>2</sub>SO<sub>4</sub> at 95°C for 24 hours. The tube is washed with water to remove acids and is ready for the doping operation.</p>
+         <p num="p0069">Commercial grade CsNO<sub>3</sub> contains 3 - 5 ppm of iron which is detrimental to the optical quality of glass. It is found that a solution of CsNO<sub>3</sub> saturated at 100°C has a pH of 6, at which some iron must precipitate in order to maintain the solubility product of Fe(OH), at its extremely low value. 250 ml of solution of CsNO<sub>3</sub> saturated at 100°C is vigorously boiled under reflux for 6 hours. The solution turns reddish due to precipitation of Fe(OH)<sub>3</sub> and the filtered solution is cooled to crystalization at 23°C. The crystals are separated by filtration and the filtrate which is a saturated solution of CsNO<sub>3</sub> in water at 23°C is used in the doping process.</p>
+         <p num="p0070">To 100 ml of CsNO<sub>3</sub> solution is added 200 ml of liquid NH,. The purified porous glass tube is dipped into the above solution. In this process, the protons from the porous glass are replaced by the cesium ions. The ion exchange is complete in three days. The tube which looks white is washed with water to remove CsN0<sub>3</sub> and NH<sub>3</sub>. The tube is dried at 23°C for 48 hours to remove most of the physically bound water. It is heated under vacuum at the rate of 100°C per hour up to 600°C. It is held at that temperature for 2 hours. 
+<!-- EPO <DP n="29"/>-->
+The temperature is raised again at the rate of 100°C per hour until the porous body is consolidated at 1450°C to a trans¬ parent non-porous glass tube.</p>
+         <p num="p0071">It is found that the first solution and the second solution used in the above examples would form a gel when combined without the use of a porous container. The use of a porous container densifies the gel structure which is intra- connected so as to form a self-supporting porous structure. Thus, although the discussion and the example mainly concern themselves with the formation of certain inorganic oxide porous bodies by acid-base type reactions within a porous container, any reaction in which the reactants fulfill the requirement of gel formation and the requirements of permeability for one and impermeability for the other will be suitable for formation of a porous self-supporting body. Thus manufacture of metallic glasses, organic glasses and other inorganic glasses is possible by the process of this invention. In the method thus generalized for low temperature synthesis of a porous self-supporting body a first solution containing at least one first solute and a second solution containing at least one second solute are provided, wherein the first solution is capable of reacting with the second solution to form a gel. The first solution is confined within a porous container the walls of which are sub¬ stantially impermeable to the first solute and the second solution is diffused into the porous container the walls of which are substantially permeable to the second solute. Within the porous container the reaction between the first solution and the second solution takes place to deposit a porous self-supporting body on the walls. The selection of the concen- tation of the first solution and of the concentration of the second solution are done by trial and error. 
+<!-- EPO <DP n="30"/>-->
+The first solution and/or the second solution may contain additives to have desired effects. The additives are, for example, peptizing agents, coagulating agents, protective colloids, structure modifiers and composition modifiers as known in the art. Additives offer resistance to the movement of the first solute and this may cause an otherwise permeable (through the walls of the porous container) first solute to become an apparently impermeable one. A weakly gel forming reaction can be converted into a strongly gel forming one by use of certain additives. The porous self-supporting body can be purified, dried and consolidated to a non-porous body. The following table summarizes different types of reactions which can be used to synthesize a porous self-supporting body. 
+<!-- EPO <DP n="31"/>--></p>
+         <p num="p0072">TABLE 6</p>
+         <p num="p0073">
+            <img id="imgf000031_0001" orientation="portrait" wi="137" img-format="tif"
+                 img-content="table"
+                 file="imgf000031_0001.tif"
+                 inline="yes"
+                 he="202"/>
+            <!-- EPO <DP n="32"/>-->
+ By using the process of this invention vitreous bodies and their intermediates can be made at a much lower cost,with much higher purity, in virtually unlimited compositions and in virtually unlimited shapes. It has a great deal of operational flexibility which is a contrast to the tedious conventional process. The simplicity of the process allows it to be prac¬ ticed in a light chemical facility provided with a minimal number of process accessories. Most of the raw materials useful for the process are cheap, easily available and pose very little danger to the environment. Many of the raw materials can be made indigenously. Atmospheric pollution due to emission of harmful gases is totally absent in many cases and this is a big plus over direct melting processes where pollution is caused by oxides of nitrogen, phosphorus, arsenic, carbon and sulfur.</p>
+         <p num="p0074">The porous self-supporting body prepared by this invention has many desirable physical and chemical properties. These are high refractoriness, chemical inertness, large surface area, controlled porosity and exceptional purity. The main uses of the porous body are as a filtering medium, as a carrier, as an absorbent and as an ion-exchange medium.</p>
+         <p num="p0075">Dispersed solids can be separated from liquids and gases by means of the porous body. The separation is based on the molecular size and the porous body can be used for purifi- cation of toxic gases and polluted air and for separation of suspended impurities from waste water.</p>
+         <p num="p0076">Dissolved solute on the other hand, can be separated from the solvent by hyperfiltration using a membrane made from the porous body of this invention. For this purpose the porous body is considered to be superior to the organic membrane com¬ monly used. Use of an asymmetric membrane will contribute to more efficiency. The separation is based on reverse osmosis and can be used for desalination of saline water, purification of 
+<!-- EPO <DP n="33"/>-->
+waste water and separation of mixtures of fluids from one another.</p>
+         <p num="p0077">Dissolved solutes can be separated from one another by ultrafiltration using a membrane made from the porous body of this invention. As in the case of hyperfiltration, an asymmetric membrane will be found more useful in this case. The separation is based on molecular sizes and can be used in laboratory and industrial dialysis. When coated with non- thrombogenic material, the membrane can be used in an artificial kidney.</p>
+         <p num="p0078">Other potential uses of ultrafiltration or hyper- filtration using a membrane made from a porous body of this invention are in the dairy industry, in food processing, in pulp and paper manufacture and in electroplating waste treatment. The membrane useful for ultrafiltration and hyper- filtration can be in the form of flat membranes, tubes or hollow fibers which are easy to fabricate by following the process of this invention.</p>
+         <p num="p0079">The porous body can be used for chromatographic applications and as a carrier for biologically active materials such as antigens, antibodies and enzymes. As a catalytic support, the porous body will find applications in chemical process industries like petroleum refineries and in the cata¬ lytic converters of internal combustion engines.</p>
+         <p num="p0080">The porous body of this invention is a strong absorbent for certain types of molecules which may be solids, liquids or gases. As an absorbent, it can purify liquids and gases like purification of air in an enclosed space and puri¬ fication of beer and wine. It can be used as a drying agent 
+<!-- EPO <DP n="34"/>-->
+to remove moisture from a system. It can be used to separate a mixture of gases and mixture of liquids which are not readily separable by any other means. An example is the separation of n-hexane and n-octane.</p>
+         <p num="p0081">The porous body of this invention is a very good medium for ion exchange. The exchange is conveniently done by following the procedure disclosed in U.S. patent application Serial No. 832,230, filed September 12, 1977, by M. Samanta.</p>
+         <p num="p0082">A prospective use will be purification of nuclear waste liquid containing radiocesium Cs<sup>137</sup>. When a porous body immersed in waste liquid is treated with NH<sub>3</sub>, Cs<sup>137</sup>will be absorbed in the porous body and other radioactive impurities like radio- strontium will be precipitated. The precipitate and porous body will be separated from the liquid which will thus be free from the radioactive material. The precipitate can be properly sealed in a suitable container and the porous body can be consolidated before disposal of the concentrated waste.</p>
+         <p num="p0083">An alternate procedure will be to exchange the protons in the porous body with Li<sup>+</sup>, Na<sup>+</sup> or K<sup>+</sup> and then treat the nuclear waste liquid with the exchanged porous body whereby all the radioactive cations will be absorbed within the porous body.</p>
+         <p num="p0084">A porous body exchanged with an alkali metal cation can be used for water softening, absorbing Ca<sup>++</sup> and Mg<sup>++</sup> during the process.</p>
+         <p num="p0085">The porous body prepared by this invention is hydro- philic and it has a strong affinity for water. A mambrane made from the body is readily wetted by water. The membrane will allow the water to pass through, but no air or gas entrained in the liquid will be able to pass. This property makes the membrane useful for intravenous injection devices where the passage of air into the veins has to be prevented by all means. 
+<!-- EPO <DP n="35"/>-->
+ The porous body prepared by this invention can be made hydrophobic by coating the hydrophilic surface with a hydrophobic material or by deactivating the surface hydroxyl groups. A membrane made from a body so treated will not be wetted by water. The membrane will allow air to pass through, but no water entrained in the air will be able to pass. Typical use of the membrane will be in the design of vents. The hydrophobic porous body has a strong affinity for gasoline and oil. So, it can be used for removal of water from gasoline and for removal of oil slicks from sea water.</p>
+         <p num="p0086">The porous body can be used as a filler and reinforce¬ ment for polymeric material and as a thermal insulator for home and industry. It can be used as an intermediate in processes for making foam glasses.</p>
+         <p num="p0087">Other uses of the porous body made by this invention are as an electrolytic separator in an electrochemical cell, as a microorganism-impervious cover for medical containers, as a matrix for a composite super conductive body and as a carrier for dynamically produced reverse osmosis membranes.</p>
+         <p num="p0088">The consolidated glass having a composition profile will have two basic uses. One will be glass strengthening, wherein glass will have a compressive skin because of the composition profile. Typical uses may be in high strength radar domes, and in chemical strengthening of laboratory and commer- cial glassware. The second basic use will be in fiberoptics. Because of the very high purity and the composition profile, glass will be used in making step-index and graded index optical fibers for optical communication and medical endoscopy. 
+<!-- EPO <DP n="36"/>-->
+ The proposed uses of consolidated glass without any profile potentially are many. This invention permits the making of glass within such wide limits of composition that virtually any desired mechanical, chemical, optical and dielectric property can be obtained by selecting a suitable composition. Important uses of consolidated glass should in¬ clude the uses related to household glassware, general labora¬ tory equipment, packaging for electrical components, mirror blanks for astronomical telescopes, acoustic delay lines, wind¬ shields for supersonic vehicles, accessories for thermonuclear reactors, and nose cones for intercontinental ballistic missiles.</p>
+         <p num="p0089">Of course, many variations and modifications of the subject invention are possible in the light of the above teachings. It is, therefore, to be understood that within the scope of the appended claims, the invention may be practiced otherwise than as specifically described. 
+</p>
+      </skos:definition>
+      <pso:hasDescriptionSection>
+         <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1/description">
+            <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pso.owl#Description"/>
+            <dcterms:hasPart>
+               <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1/description/p0001">
+                  <dcterms:isPartOf rdf:resource="http://example.org/patent/WO-1978000001-A1/description"/>
+                  <rdfs:label xml:lang="en">Paragraph p0001</rdfs:label>
+                  <dcterms:identifier>p0001</dcterms:identifier>
+                  <dcterms:description xml:lang="en">LOW TEMPERATURE SYNTHESIS OF VITREOUS BODIES AND THEIR INTERMEDIATES</dcterms:description>
+               </rdf:Description>
+            </dcterms:hasPart>
+            <dcterms:hasPart>
+               <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1/description/p0002">
+                  <dcterms:isPartOf rdf:resource="http://example.org/patent/WO-1978000001-A1/description"/>
+                  <rdfs:label xml:lang="en">Paragraph p0002</rdfs:label>
+                  <dcterms:identifier>p0002</dcterms:identifier>
+                  <dcterms:description xml:lang="en">FIELD OF THE INVENTION</dcterms:description>
+               </rdf:Description>
+            </dcterms:hasPart>
+            <dcterms:hasPart>
+               <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1/description/p0003">
+                  <dcterms:isPartOf rdf:resource="http://example.org/patent/WO-1978000001-A1/description"/>
+                  <rdfs:label xml:lang="en">Paragraph p0003</rdfs:label>
+                  <dcterms:identifier>p0003</dcterms:identifier>
+                  <dcterms:description xml:lang="en">This invention relates to a novel method for making a vitreous body and its intermediates. More particularly, the method relates to a low temperature production of a vitreous body via synthesis of a self-supporting body by solution deposition.</dcterms:description>
+               </rdf:Description>
+            </dcterms:hasPart>
+            <dcterms:hasPart>
+               <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1/description/p0004">
+                  <dcterms:isPartOf rdf:resource="http://example.org/patent/WO-1978000001-A1/description"/>
+                  <rdfs:label xml:lang="en">Paragraph p0004</rdfs:label>
+                  <dcterms:identifier>p0004</dcterms:identifier>
+                  <dcterms:description xml:lang="en">DESCRIPTION OF THE PRIOR ART</dcterms:description>
+               </rdf:Description>
+            </dcterms:hasPart>
+            <dcterms:hasPart>
+               <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1/description/p0005">
+                  <dcterms:isPartOf rdf:resource="http://example.org/patent/WO-1978000001-A1/description"/>
+                  <rdfs:label xml:lang="en">Paragraph p0005</rdfs:label>
+                  <dcterms:identifier>p0005</dcterms:identifier>
+                  <dcterms:description xml:lang="en">In recent years, the most commonly employed commercial process for the manufacture of glass is the direct melting process. This process is somewhat tedious and has not been very successful in the melting of easily devitrifiable and high refrac¬ tory glass. Many of the latest technological advances demand glass to be in a state of high purity which is seldom met in a direct process. Operational cost of the direct process is energy-sensitive and recurring energy crises continue to have significant impact on glass making operations. Consequently, a method for preparing glass at low cost, in a state of high purity and in relatively unlimited composition is needed.</dcterms:description>
+               </rdf:Description>
+            </dcterms:hasPart>
+            <dcterms:hasPart>
+               <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1/description/p0006">
+                  <dcterms:isPartOf rdf:resource="http://example.org/patent/WO-1978000001-A1/description"/>
+                  <rdfs:label xml:lang="en">Paragraph p0006</rdfs:label>
+                  <dcterms:identifier>p0006</dcterms:identifier>
+                  <dcterms:description xml:lang="en">A number of indirect processes, namely, anodization, shockwave treatment, and neutron bombardment, have been proposed, but their use has never been realized on a large scale. These processes severely limit the operational flexibility and in most cases, the production cost is higher than for the direct process.</dcterms:description>
+               </rdf:Description>
+            </dcterms:hasPart>
+            <dcterms:hasPart>
+               <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1/description/p0007">
+                  <dcterms:isPartOf rdf:resource="http://example.org/patent/WO-1978000001-A1/description"/>
+                  <rdfs:label xml:lang="en">Paragraph p0007</rdfs:label>
+                  <dcterms:identifier>p0007</dcterms:identifier>
+                  <dcterms:description xml:lang="en">In U.S. Patents 2,480,672, 2,106,744 and 3,785,793, for example, a process is disclosed wherein the silica content of an easily meltable alkali-borosilicate glass is enriched by phase separation and leaching. The porous glass which is obtained as an intermediate product is thermally consolidated at elevated tempera¬ ture. Although the process is comparatively inexpensive, it suffers from the limitation with respect to choice and regulation of glass-forming compounds. Choice and regulation of modifying compounds can, however, be achieved via a doping operation in the pores of porous glass. Physical doping operations are dis¬ closed, for example, in U.S. Patents 2,336,227, 3,232,782, 3,938,974 and in the Ph.D. Thesis of M. Samanta, "Molecular Engineering of Silica-Rich Glasses Produced by Phase Separation," Catholic University of America, 1975. A chemical doping process is disclosed in a pending U.S. patent application, Serial No. 832,230 filed September 12, 1977 by M. Samanta.</dcterms:description>
+               </rdf:Description>
+            </dcterms:hasPart>
+            <dcterms:hasPart>
+               <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1/description/p0008">
+                  <dcterms:isPartOf rdf:resource="http://example.org/patent/WO-1978000001-A1/description"/>
+                  <rdfs:label xml:lang="en">Paragraph p0008</rdfs:label>
+                  <dcterms:identifier>p0008</dcterms:identifier>
+                  <dcterms:description xml:lang="en">High purity glass has been prepared by a vapor deposi- tion process as described, for example, in U.S. Patents 2, 326,059, 3,884,550 and 4,062,665 among many others. In such a process vitreous silica is deposited in the form of a self-supporting porous body singly or in combination with a dopant. This process is expensive and the shape of bodies obtainable from such a process is limited.</dcterms:description>
+               </rdf:Description>
+            </dcterms:hasPart>
+            <dcterms:hasPart>
+               <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1/description/p0009">
+                  <dcterms:isPartOf rdf:resource="http://example.org/patent/WO-1978000001-A1/description"/>
+                  <rdfs:label xml:lang="en">Paragraph p0009</rdfs:label>
+                  <dcterms:identifier>p0009</dcterms:identifier>
+                  <dcterms:description xml:lang="en">Polymerization processes have been tried for glass making with limited success. Two distinct lines of approach have been attempted. First is the concentration of a colloidal solu¬ tion under controlled conditions as described, for example in U.S. Patents 2,886,404 and 3,535,890. Second is the interaction in solution between a silicon compound and a polymerizing agent therefor, as described, for example in U.S. Patents 3,678,144, 3,827,893, and 4,059,658. The main difficulty in both lines of approach is the large shrinkage accompanying the process which makes the glass susceptible to breakage and which presents a poten¬ tial problem in the design of molds. SUMMARY OF THE INVENTION</dcterms:description>
+               </rdf:Description>
+            </dcterms:hasPart>
+            <dcterms:hasPart>
+               <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1/description/p0010">
+                  <dcterms:isPartOf rdf:resource="http://example.org/patent/WO-1978000001-A1/description"/>
+                  <rdfs:label xml:lang="en">Paragraph p0010</rdfs:label>
+                  <dcterms:identifier>p0010</dcterms:identifier>
+                  <dcterms:description xml:lang="en">In the process of the present invention, first and second solutions separated by a permeable barrier are provided. The first solution contains at least one basic or alkaline glass forming solute and the second solution contains at least one acidic solute with the permeable barrier being substantially permeable to the acidic solute but substantially impermeable to the basic solute. When the first solution and the second solution are originally at suitable concentrations, passage of the second solution through the barrier occurs and a chemical combination takes place resulting in the deposition of a porous self-supporting body on the side of the barrier in contact with the first solution. The porous body can be purified, dried and thermally consolidated to a non-porous glass.</dcterms:description>
+               </rdf:Description>
+            </dcterms:hasPart>
+            <dcterms:hasPart>
+               <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1/description/p0011">
+                  <dcterms:isPartOf rdf:resource="http://example.org/patent/WO-1978000001-A1/description"/>
+                  <rdfs:label xml:lang="en">Paragraph p0011</rdfs:label>
+                  <dcterms:identifier>p0011</dcterms:identifier>
+                  <dcterms:description xml:lang="en">DETAILED DESCRIPTION OF THE INVENTION</dcterms:description>
+               </rdf:Description>
+            </dcterms:hasPart>
+            <dcterms:hasPart>
+               <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1/description/p0012">
+                  <dcterms:isPartOf rdf:resource="http://example.org/patent/WO-1978000001-A1/description"/>
+                  <rdfs:label xml:lang="en">Paragraph p0012</rdfs:label>
+                  <dcterms:identifier>p0012</dcterms:identifier>
+                  <dcterms:description xml:lang="en">The present invention facilitates an economical mass production of vitreous bodies in a state of high purity and in virtually unlimited shapes. According to this invention, a porous self-supporting body deposits on a substrate, when a first solu- tion containing a suitable concentration of at least one basic glass forming solute is allowed to react, on the substrate with a second solution containing a suitable concentration of at least one acidic solute. When the concentration of the acidic solute in the second solution falls outside of the range of suitable concentrations, amorphous or crystalline particles result with no interconnectivity. The broadness of the range of appropriate con¬ centrations depends on the particular type of reaction and can be determined experimentally by trial and error. The first solution and the second solution are separated by a permeable barrier the walls of which act as a substrate for deposition of a porous self-supporting body. The second solution is diffused through the through the barrier which is substantially permeable to the acidic solute but substantially impermeable to the basic glass forming solute. This assures a reaction between the first solution and the second solution on the barrier to deposit a porous self supporting body.</dcterms:description>
+               </rdf:Description>
+            </dcterms:hasPart>
+            <dcterms:hasPart>
+               <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1/description/p0013">
+                  <dcterms:isPartOf rdf:resource="http://example.org/patent/WO-1978000001-A1/description"/>
+                  <rdfs:label xml:lang="en">Paragraph p0013</rdfs:label>
+                  <dcterms:identifier>p0013</dcterms:identifier>
+                  <dcterms:description xml:lang="en">The nature and composition of the solutions which are useful for glass formation are shown in Table 1 (first solution) and Table 2 (second solution) . The solutions may be binary (containing one solute) or multicomponent (containing more than one solute) . The solvents useful for the purpose of making a solution may be water, hydrocarbons such as benzene, alcohols such as methanol, ketones such as acetone, ethers such as diethyl ether, carboxylic acids such as acetic acid and mixtures thereof.</dcterms:description>
+               </rdf:Description>
+            </dcterms:hasPart>
+            <dcterms:hasPart>
+               <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1/description/p0014">
+                  <dcterms:isPartOf rdf:resource="http://example.org/patent/WO-1978000001-A1/description"/>
+                  <rdfs:label xml:lang="en">Paragraph p0014</rdfs:label>
+                  <dcterms:identifier>p0014</dcterms:identifier>
+                  <dcterms:description xml:lang="en">TABLE 1</dcterms:description>
+               </rdf:Description>
+            </dcterms:hasPart>
+            <dcterms:hasPart>
+               <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1/description/p0015">
+                  <dcterms:isPartOf rdf:resource="http://example.org/patent/WO-1978000001-A1/description"/>
+                  <rdfs:label xml:lang="en">Paragraph p0015</rdfs:label>
+                  <dcterms:identifier>p0015</dcterms:identifier>
+                  <dcterms:description xml:lang="en">First Solution</dcterms:description>
+               </rdf:Description>
+            </dcterms:hasPart>
+            <dcterms:hasPart>
+               <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1/description/p0016">
+                  <dcterms:isPartOf rdf:resource="http://example.org/patent/WO-1978000001-A1/description"/>
+                  <rdfs:label xml:lang="en">Paragraph p0016</rdfs:label>
+                  <dcterms:identifier>p0016</dcterms:identifier>
+                  <dcterms:description xml:lang="en">All solutions contain moderately high to very high concentrations of the basic glass forming solute. The solutions may be true solutions or colloidal solutions.</dcterms:description>
+               </rdf:Description>
+            </dcterms:hasPart>
+            <dcterms:hasPart>
+               <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1/description/p0017">
+                  <dcterms:isPartOf rdf:resource="http://example.org/patent/WO-1978000001-A1/description"/>
+                  <rdfs:label xml:lang="en">Paragraph p0017</rdfs:label>
+                  <dcterms:identifier>p0017</dcterms:identifier>
+                  <dcterms:description xml:lang="en"/>
+               </rdf:Description>
+            </dcterms:hasPart>
+            <dcterms:hasPart>
+               <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1/description/p0018">
+                  <dcterms:isPartOf rdf:resource="http://example.org/patent/WO-1978000001-A1/description"/>
+                  <rdfs:label xml:lang="en">Paragraph p0018</rdfs:label>
+                  <dcterms:identifier>p0018</dcterms:identifier>
+                  <dcterms:description xml:lang="en">The solutes exemplified in the above table may be simple solutes or complex solutes. Simple solutes are those which are combinations of two different oxides; complex solutes are those which are combinations of more than two oxides. An example of the simple solute is the silicate Na2O,x Si02 where x= 2 to 4 available in commercial water glass solution. An example of the complex solute is the silicate or borate,</dcterms:description>
+               </rdf:Description>
+            </dcterms:hasPart>
+            <dcterms:hasPart>
+               <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1/description/p0019">
+                  <dcterms:isPartOf rdf:resource="http://example.org/patent/WO-1978000001-A1/description"/>
+                  <rdfs:label xml:lang="en">Paragraph p0019</rdfs:label>
+                  <dcterms:identifier>p0019</dcterms:identifier>
+                  <dcterms:description xml:lang="en">K2O. 2B2O3. 3SiO2 which can be made synthetically. A convenient method for making an aqueous solution of a simple solute or comp¬ lex solute is to mix suitable raw materials in desired proportion, fuse the mixture at high temperature and finally treat the fused mass with hot water with or without the use of pressure. Other methods include dissolving amorphous oxide in hot aqueous alkali. In many cases the aqueous solutions of the simple solutes or complex solutes are turbid, presumably due to the homogeneous distribution of some undissolved solute in colloidal dimension. In cases where more than one basic glass forming solute is used complications might arise due to the interaction of two solutes leading to the formation of a gel. As an example, the inter¬ action of sodium silicate and sodium aluminate in aqueous solu¬ tion leads to the formation of a gel. The problem can be avoided by using a low concentration of one solute so that gel is formed in small amounts which can be dispersed throughout the solution in colloidal dimension.</dcterms:description>
+               </rdf:Description>
+            </dcterms:hasPart>
+            <dcterms:hasPart>
+               <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1/description/p0020">
+                  <dcterms:isPartOf rdf:resource="http://example.org/patent/WO-1978000001-A1/description"/>
+                  <rdfs:label xml:lang="en">Paragraph p0020</rdfs:label>
+                  <dcterms:identifier>p0020</dcterms:identifier>
+                  <dcterms:description xml:lang="en">The prefered concentration range of the basic glass forming solute in the first solution should be such that it will be able to provide from 0.10 mole to 40 moles of glass forming oxide from 1 liter of solution. Stronger or weaker concentra¬ tions may also be used to tailor the process to the product desired. In case more than one basic glass forming solute is present or in case the basic glass forming solute is a complex one, the first solution should be able to provide from 0.10 moles to 40 moles of at least one glass forming oxide.</dcterms:description>
+               </rdf:Description>
+            </dcterms:hasPart>
+            <dcterms:hasPart>
+               <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1/description/p0021">
+                  <dcterms:isPartOf rdf:resource="http://example.org/patent/WO-1978000001-A1/description"/>
+                  <rdfs:label xml:lang="en">Paragraph p0021</rdfs:label>
+                  <dcterms:identifier>p0021</dcterms:identifier>
+                  <dcterms:description xml:lang="en">TABLE 2</dcterms:description>
+               </rdf:Description>
+            </dcterms:hasPart>
+            <dcterms:hasPart>
+               <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1/description/p0022">
+                  <dcterms:isPartOf rdf:resource="http://example.org/patent/WO-1978000001-A1/description"/>
+                  <rdfs:label xml:lang="en">Paragraph p0022</rdfs:label>
+                  <dcterms:identifier>p0022</dcterms:identifier>
+                  <dcterms:description xml:lang="en">Second Solution</dcterms:description>
+               </rdf:Description>
+            </dcterms:hasPart>
+            <dcterms:hasPart>
+               <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1/description/p0023">
+                  <dcterms:isPartOf rdf:resource="http://example.org/patent/WO-1978000001-A1/description"/>
+                  <rdfs:label xml:lang="en">Paragraph p0023</rdfs:label>
+                  <dcterms:identifier>p0023</dcterms:identifier>
+                  <dcterms:description xml:lang="en">Most solutions should contain very low to moderately high concentrations of the acidic solute; very high concentrations have been found to be useful in special circumstances. The con¬ centration range of the acidic solute in the second solution depends on the concentration of the first solution and can be ascertained by trial and error. The solution must be a true solution.</dcterms:description>
+               </rdf:Description>
+            </dcterms:hasPart>
+            <dcterms:hasPart>
+               <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1/description/p0024">
+                  <dcterms:isPartOf rdf:resource="http://example.org/patent/WO-1978000001-A1/description"/>
+                  <rdfs:label xml:lang="en">Paragraph p0024</rdfs:label>
+                  <dcterms:identifier>p0024</dcterms:identifier>
+                  <dcterms:description xml:lang="en">Table 2 continued -</dcterms:description>
+               </rdf:Description>
+            </dcterms:hasPart>
+            <dcterms:hasPart>
+               <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1/description/p0025">
+                  <dcterms:isPartOf rdf:resource="http://example.org/patent/WO-1978000001-A1/description"/>
+                  <rdfs:label xml:lang="en">Paragraph p0025</rdfs:label>
+                  <dcterms:identifier>p0025</dcterms:identifier>
+                  <dcterms:description xml:lang="en"/>
+               </rdf:Description>
+            </dcterms:hasPart>
+            <dcterms:hasPart>
+               <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1/description/p0026">
+                  <dcterms:isPartOf rdf:resource="http://example.org/patent/WO-1978000001-A1/description"/>
+                  <rdfs:label xml:lang="en">Paragraph p0026</rdfs:label>
+                  <dcterms:identifier>p0026</dcterms:identifier>
+                  <dcterms:description xml:lang="en">is a rapid initial movement of the second solution into the first solution because of large differences in osmotic pressures between the two solutions. With the progress of reaction, this difference decrease because some of the impermeable component deposits out of the solution. The reaction at any stage can be controlled by using external pressure either on the first solution or on the second solution.</dcterms:description>
+               </rdf:Description>
+            </dcterms:hasPart>
+            <dcterms:hasPart>
+               <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1/description/p0027">
+                  <dcterms:isPartOf rdf:resource="http://example.org/patent/WO-1978000001-A1/description"/>
+                  <rdfs:label xml:lang="en">Paragraph p0027</rdfs:label>
+                  <dcterms:identifier>p0027</dcterms:identifier>
+                  <dcterms:description xml:lang="en">Various additives may be added to the first solution and/or the second solution to have the desired effects. Suitable additives include peptizing agents, protective colloids, coagulating agents, structure modifiers and composition modifiers. Additives may be present in the first solution as dissolved solute or in homogeneous suspension. They increase the viscosity of the solution and offer resistance to the movement of the basic solute which is desirable for producing a self-supporting structure. The additives may co-deposit in the porous body to increase the porosity and pore-size. Additives for the second solution must be present as dissolved solute. They may increase the pH buffering capacity and/or the osmotic pressure of the second solution which is desirable.</dcterms:description>
+               </rdf:Description>
+            </dcterms:hasPart>
+            <dcterms:hasPart>
+               <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1/description/p0028">
+                  <dcterms:isPartOf rdf:resource="http://example.org/patent/WO-1978000001-A1/description"/>
+                  <rdfs:label xml:lang="en">Paragraph p0028</rdfs:label>
+                  <dcterms:identifier>p0028</dcterms:identifier>
+                  <dcterms:description xml:lang="en">The porosity and pore-size of the porous self-supporting body are found to be directly proportional to the concentration of the second solution and inversely proportional to the concentration of. the first solution. Thus, an asymmetric distribution of pore- sizes in the deposited porous body can be achieved merely by pro¬ per manipulation of the concentrations of the solutions at various instants of the process. It has been found that washing the depo¬ sited porous body with water increased the pore diameter and the porosity to a small extent due to the slight dissolution of the porous skeleton by a solution of unreacted basic solute. The thickness of the deposited porous structure is a function of duration of combination. The duration of combination also determines a composition profile within the porous body. A portion of the porous body near the walls of the porous container has more complete deposition than a portion far from the walls. This profile in composition can be destroyed- by leaching with an acid.</dcterms:description>
+               </rdf:Description>
+            </dcterms:hasPart>
+            <dcterms:hasPart>
+               <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1/description/p0029">
+                  <dcterms:isPartOf rdf:resource="http://example.org/patent/WO-1978000001-A1/description"/>
+                  <rdfs:label xml:lang="en">Paragraph p0029</rdfs:label>
+                  <dcterms:identifier>p0029</dcterms:identifier>
+                  <dcterms:description xml:lang="en">It has already been pointed out that depending on the concentration of the first solution, a range of concentrations of the second solution can be used to form a self-supporting porous body. When the actual concentration is high in the range of concentrations, the deposited porous body is predominantly crystalline. When the actual concentration of the second solution is low in the range of concentrations the deposited porous body is predominantly vitreous.</dcterms:description>
+               </rdf:Description>
+            </dcterms:hasPart>
+            <dcterms:hasPart>
+               <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1/description/p0030">
+                  <dcterms:isPartOf rdf:resource="http://example.org/patent/WO-1978000001-A1/description"/>
+                  <rdfs:label xml:lang="en">Paragraph p0030</rdfs:label>
+                  <dcterms:identifier>p0030</dcterms:identifier>
+                  <dcterms:description xml:lang="en">It is possible to develop in the porous body two or more layers having different compositions merely by replacing the first solution and/or second solution with a different composition. This is an example of discontinuous variation of composition in the porous body. A continuous variation of composition in the porous body can be achieved by varying the composition of the first solution and/or the second solution continuously. In making compositionally inhomogeneous porous body, the importance of both first solution and second solution has to be considered since in the deposition process, the glass forming oxide corresponding to the basic glass forming solute is deposited either singly or in combination with an oxide derived from the acidic solute.</dcterms:description>
+               </rdf:Description>
+            </dcterms:hasPart>
+            <dcterms:hasPart>
+               <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1/description/p0031">
+                  <dcterms:isPartOf rdf:resource="http://example.org/patent/WO-1978000001-A1/description"/>
+                  <rdfs:label xml:lang="en">Paragraph p0031</rdfs:label>
+                  <dcterms:identifier>p0031</dcterms:identifier>
+                  <dcterms:description xml:lang="en">The physically bound impurities in the porous self- supporting body can be removed by washing with water at room temperature. The composition profile in the porous body due to non-uniform deposition can be eliminated by leaching. Leaching is done with N/1000 to 3N dilute mineral acid at temperatures varying from 25°C to 100°C.</dcterms:description>
+               </rdf:Description>
+            </dcterms:hasPart>
+            <dcterms:hasPart>
+               <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1/description/p0032">
+                  <dcterms:isPartOf rdf:resource="http://example.org/patent/WO-1978000001-A1/description"/>
+                  <rdfs:label xml:lang="en">Paragraph p0032</rdfs:label>
+                  <dcterms:identifier>p0032</dcterms:identifier>
+                  <dcterms:description xml:lang="en">The porous structure can be doped physically or chemically with a modifier. Physical doping processes are described, for example in U.S. Patents 2,336,227, 2,232,782, and 3,938,974 and in the Ph.D. Thesis of M. Samanta, "Molecular Engineering of Silica-Rich Glasses Produced by Phase Separation", Catholic University of America, 1975. In this process, the porous body is impregnated with a solution of dopant, dried at room temperature to remove most of the solvent, heated to decompose the dopant into an oxide and finally consolidated at high tempera¬ ture to incorporate the oxide. A chemical doping process is disclosed in pending U.S. patent application, Serial No. 832,230 filed September 12, 1977 by M. Samanta. This chemical doping process involves exchange of protons in the porous body with cations in a weak basic medium.</dcterms:description>
+               </rdf:Description>
+            </dcterms:hasPart>
+            <dcterms:hasPart>
+               <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1/description/p0033">
+                  <dcterms:isPartOf rdf:resource="http://example.org/patent/WO-1978000001-A1/description"/>
+                  <rdfs:label xml:lang="en">Paragraph p0033</rdfs:label>
+                  <dcterms:identifier>p0033</dcterms:identifier>
+                  <dcterms:description xml:lang="en">Most of the physically bound water in the undoped or doped porous body can be removed by room temperature drying. Rapid drying introduces tension, particularly at the cut edges of the porous body which then tends to crack. This can be prevented by coating the cut edge with a thin film of polyethylene glycol as described in U.S. Patent 2,861, 351. For a porous structure containing pores of 200 A or lower, controlled drying under a relative humidity of 60-90% is preferable. Capillary forces in this case ar-e very high and too rapid drying causes breakage of the structure.</dcterms:description>
+               </rdf:Description>
+            </dcterms:hasPart>
+            <dcterms:hasPart>
+               <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1/description/p0034">
+                  <dcterms:isPartOf rdf:resource="http://example.org/patent/WO-1978000001-A1/description"/>
+                  <rdfs:label xml:lang="en">Paragraph p0034</rdfs:label>
+                  <dcterms:identifier>p0034</dcterms:identifier>
+                  <dcterms:description xml:lang="en">Chemically bound water in the form of surface hydroxyl groups cannot be removed by room temperature drying. These can be removed by vacuum drying at temperatures below the consolidation temperature of the porous body as described in U.S. Patent 2,505,001 or by chemical methods as described in</dcterms:description>
+               </rdf:Description>
+            </dcterms:hasPart>
+            <dcterms:hasPart>
+               <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1/description/p0035">
+                  <dcterms:isPartOf rdf:resource="http://example.org/patent/WO-1978000001-A1/description"/>
+                  <rdfs:label xml:lang="en">Paragraph p0035</rdfs:label>
+                  <dcterms:identifier>p0035</dcterms:identifier>
+                  <dcterms:description xml:lang="en">U.S. Patents 2,982,053, 3,459,522 and 3,535,890 wherein replace¬ ment of hydroxyl groups in the porous body is done by halogen. An efficient chemical method ϊs&gt; disclosed in U.S. patent application Serial No. 832,231 filed September 12, 1977 by M. Samanta. In this method, the combination of two non-bridging hydroxyl groups in the porous body to form a single bridging oxide group is sought to be achieved in the presence of an acid anhydride.</dcterms:description>
+               </rdf:Description>
+            </dcterms:hasPart>
+            <dcterms:hasPart>
+               <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1/description/p0036">
+                  <dcterms:isPartOf rdf:resource="http://example.org/patent/WO-1978000001-A1/description"/>
+                  <rdfs:label xml:lang="en">Paragraph p0036</rdfs:label>
+                  <dcterms:identifier>p0036</dcterms:identifier>
+                  <dcterms:description xml:lang="en">The doped or undoped porous structure, after removal of most of the physically bound water by room temperature drying for 2 days is heated at the rate of 100°C per hour. It is then kept at about 600° for 2 hours and chemically bound water is removed by appropriate treatment. The temperature is raised again at the rate of 100°C per hour until the porous body is consolidated to a non-porous vitreous body. For a crystalline porous body, the consolidation temperature is close to the liquidus temperature of the consolidated glass (liquidus temperature is the maximum temperature at which glass coexists with crystal) . For a vitreous porous body the consolidation temperature is close to. the glass transition temperature of the consolidated glass (glass transition temperature is the temperature corresponding to the breakpoint of the specific heat versus temperature curve of a glass) . For a mixed phase porous body, the consolidation temperature lies between the glass transition temperature and the liquidus temperature.</dcterms:description>
+               </rdf:Description>
+            </dcterms:hasPart>
+            <dcterms:hasPart>
+               <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1/description/p0037">
+                  <dcterms:isPartOf rdf:resource="http://example.org/patent/WO-1978000001-A1/description"/>
+                  <rdfs:label xml:lang="en">Paragraph p0037</rdfs:label>
+                  <dcterms:identifier>p0037</dcterms:identifier>
+                  <dcterms:description xml:lang="en">It is found that glass prepared by the process of this invention is extremely pure. Thus, in the deposition of a germania and silica porous body, impurities like Fe, Co, Ni, Cu, Cr preferentially migrate into solution. Glass made from such a porous body is highly transparent to ultraviolet, visible and infrared radiation.</dcterms:description>
+               </rdf:Description>
+            </dcterms:hasPart>
+            <dcterms:hasPart>
+               <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1/description/p0038">
+                  <dcterms:isPartOf rdf:resource="http://example.org/patent/WO-1978000001-A1/description"/>
+                  <rdfs:label xml:lang="en">Paragraph p0038</rdfs:label>
+                  <dcterms:identifier>p0038</dcterms:identifier>
+                  <dcterms:description xml:lang="en">In order to indicate more fully the nature and utility of my invention, the following specific examples are set forth. In all examples, tubular cellulose dialyzer membranes having an average pore diameter of 4.8 nm are used. All concentrations expressed in percentage are gms per 100 ml of solution except where otherwise differently stated. All chemicals are laboratory reagent grade chemicals except for sodium silicate and cesium nitrate.</dcterms:description>
+               </rdf:Description>
+            </dcterms:hasPart>
+            <dcterms:hasPart>
+               <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1/description/p0039">
+                  <dcterms:isPartOf rdf:resource="http://example.org/patent/WO-1978000001-A1/description"/>
+                  <rdfs:label xml:lang="en">Paragraph p0039</rdfs:label>
+                  <dcterms:identifier>p0039</dcterms:identifier>
+                  <dcterms:description xml:lang="en">EXAMPLE 1</dcterms:description>
+               </rdf:Description>
+            </dcterms:hasPart>
+            <dcterms:hasPart>
+               <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1/description/p0040">
+                  <dcterms:isPartOf rdf:resource="http://example.org/patent/WO-1978000001-A1/description"/>
+                  <rdfs:label xml:lang="en">Paragraph p0040</rdfs:label>
+                  <dcterms:identifier>p0040</dcterms:identifier>
+                  <dcterms:description xml:lang="en">In each of the following experiments, a dialyzer tube 4" in length and 0.5" in diameter is closed at one end and then filled with 40°Be aqueous sodium silicate solution (first solution). 40°Be aqueous sodium silicate solution has a composition of 6.5% Na2O, 25% SiO2 and 68.5% H20, all percentages being expressed in gms per 100 gms of the solution. The tube is then closed at the other end. The closed tube which has a length of 2.5" is almost filled with silicate solution and contains very little space filled with air. The tube is completely immersed in a horizontal position in 3000 ml aqueous ammonium chloride solution (second solution) for 24 hours. .Because of the molecular sizes, only ammonium chloride molecules and no sodium silicate molecules can diffuse through the membrane. The results of various experiments are shown in Table 3. The average room temperature recorded during the experiments is 24°C.</dcterms:description>
+               </rdf:Description>
+            </dcterms:hasPart>
+            <dcterms:hasPart>
+               <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1/description/p0041">
+                  <dcterms:isPartOf rdf:resource="http://example.org/patent/WO-1978000001-A1/description"/>
+                  <rdfs:label xml:lang="en">Paragraph p0041</rdfs:label>
+                  <dcterms:identifier>p0041</dcterms:identifier>
+                  <dcterms:description xml:lang="en">TABLE 3</dcterms:description>
+               </rdf:Description>
+            </dcterms:hasPart>
+            <dcterms:hasPart>
+               <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1/description/p0042">
+                  <dcterms:isPartOf rdf:resource="http://example.org/patent/WO-1978000001-A1/description"/>
+                  <rdfs:label xml:lang="en">Paragraph p0042</rdfs:label>
+                  <dcterms:identifier>p0042</dcterms:identifier>
+                  <dcterms:description xml:lang="en">Table 3 continued -</dcterms:description>
+               </rdf:Description>
+            </dcterms:hasPart>
+            <dcterms:hasPart>
+               <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1/description/p0043">
+                  <dcterms:isPartOf rdf:resource="http://example.org/patent/WO-1978000001-A1/description"/>
+                  <rdfs:label xml:lang="en">Paragraph p0043</rdfs:label>
+                  <dcterms:identifier>p0043</dcterms:identifier>
+                  <dcterms:description xml:lang="en">Table 3 shows that against a concentration of 40°Be aqueous sodium silicate solution (first solution) concentrations of aqueous ammonium chloride solution (second solution) corres¬ ponding to Experiment Numbers 4, 5, 6, and 7 are suitable for the formation of a porous self-supporting body. Thus, against a concentration of 40°Be aqueous sodium silicate solution (first solution) the range of suitable concentrations is from 0.5% to 5% for aqueous ammonium chloride solution (second solution) . Table 3 also shows that when the actual concen- tration of aqueous ammonium chloride solution is high in the range of concentrations, the deposited porous self-supporting body is predominantly crystalline; when the actual concentra¬ tion of aqueous ammonium chloride solution is low in the range of concentrations, the deposited porous self-supporting body is predominantly vitreous.</dcterms:description>
+               </rdf:Description>
+            </dcterms:hasPart>
+            <dcterms:hasPart>
+               <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1/description/p0044">
+                  <dcterms:isPartOf rdf:resource="http://example.org/patent/WO-1978000001-A1/description"/>
+                  <rdfs:label xml:lang="en">Paragraph p0044</rdfs:label>
+                  <dcterms:identifier>p0044</dcterms:identifier>
+                  <dcterms:description xml:lang="en">The concentrations of the reactants useful for deposition of a porous self-supporting body, as demonstrated above, may not be suitable under a set of different conditions. Use of a membrane of different pore size, use of different temperature and use of pressure on either solution can alter the concentration of either solute available for reaction on the membrane substrate. Four deposited porous self-supporting bodies are separated from the membranes and their diameters appear to be larger than the diameter of the original dialyzer tube. This is due to the fact that in the initial stage, there is rapid absorption of ammonium chloride solution within the tube due to the large difference in osmotic pressure between the ammonium chloride solution and the sodium silicate solu- tion. Consequently, within the tube there is a development of pressure which is partially relieved by expansion of the tube both in diameter and length. The porous bodies after washing with water 2 times, are leached with .01N H2SO4 at 21°C for 10 hours to remove sodium ions and then washed with water to remove the acid.. The porous bodies after washing are dried at 21°C for 48 hours to remove most of the physically bound water. They are heated under vacuum at the rate of 100°C per hour. They are then held at 600°C for 2 hours. The temperature is raised again at the rate of 100°C per hour until the porous bodies are consolidated to a non-porous glass. Table 3 shows that consolidation temperature for a crystalline porous body is higher than that for a vitreous porous body. Theoretically, a crystalline porous body should have a consolidation tempera- ture close to the liquidus temperature of the consolidated glass, whereas a vitreous porous body should have a consolidation temperature close to the glass transition tempera¬ ture of the consolidated glass. All four consolidated glasses are analyzed for silica, sodium and iron concentration. The average sodium concentration is 50 ppm, the average iron concentration is 15 ppb, and the average silica concentration is 99.99%. Thus, it is found that very pure silica glass can be prepared by this invention. The concentration of sodium which deteriorates the refractoriness and the concentration of iron which deteriorates the optical quality can be further decreased by using raw materials of high purity and/or using a more severe leaching condition.</dcterms:description>
+               </rdf:Description>
+            </dcterms:hasPart>
+            <dcterms:hasPart>
+               <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1/description/p0045">
+                  <dcterms:isPartOf rdf:resource="http://example.org/patent/WO-1978000001-A1/description"/>
+                  <rdfs:label xml:lang="en">Paragraph p0045</rdfs:label>
+                  <dcterms:identifier>p0045</dcterms:identifier>
+                  <dcterms:description xml:lang="en">EXAMPLE 2</dcterms:description>
+               </rdf:Description>
+            </dcterms:hasPart>
+            <dcterms:hasPart>
+               <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1/description/p0046">
+                  <dcterms:isPartOf rdf:resource="http://example.org/patent/WO-1978000001-A1/description"/>
+                  <rdfs:label xml:lang="en">Paragraph p0046</rdfs:label>
+                  <dcterms:identifier>p0046</dcterms:identifier>
+                  <dcterms:description xml:lang="en">In each of the following experiments, a dialyzer tube 4" in length arid 0.5" in diameter is closed at one end and then filled with 40°Be aqueous sodium silicate solution. The tube is closed at the other end. The closed tube which has a length of 2.5" is almost filled with silicate solution and contains very little air space. The tube is completely immersed in a horizontal position in 3000 ml 50% aqueous aluminum sulfate solution for the desired time. The deposited porous vitreous body is separated from the dialyzer tube and washed with water. The wall thickness of the washed product is measured. The results of various experiments are shown in Table 4.</dcterms:description>
+               </rdf:Description>
+            </dcterms:hasPart>
+            <dcterms:hasPart>
+               <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1/description/p0047">
+                  <dcterms:isPartOf rdf:resource="http://example.org/patent/WO-1978000001-A1/description"/>
+                  <rdfs:label xml:lang="en">Paragraph p0047</rdfs:label>
+                  <dcterms:identifier>p0047</dcterms:identifier>
+                  <dcterms:description xml:lang="en">TABLE 4</dcterms:description>
+               </rdf:Description>
+            </dcterms:hasPart>
+            <dcterms:hasPart>
+               <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1/description/p0048">
+                  <dcterms:isPartOf rdf:resource="http://example.org/patent/WO-1978000001-A1/description"/>
+                  <rdfs:label xml:lang="en">Paragraph p0048</rdfs:label>
+                  <dcterms:identifier>p0048</dcterms:identifier>
+                  <dcterms:description xml:lang="en">Average temperature of the experiments = 24°C.</dcterms:description>
+               </rdf:Description>
+            </dcterms:hasPart>
+            <dcterms:hasPart>
+               <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1/description/p0049">
+                  <dcterms:isPartOf rdf:resource="http://example.org/patent/WO-1978000001-A1/description"/>
+                  <rdfs:label xml:lang="en">Paragraph p0049</rdfs:label>
+                  <dcterms:identifier>p0049</dcterms:identifier>
+                  <dcterms:description xml:lang="en"/>
+               </rdf:Description>
+            </dcterms:hasPart>
+            <dcterms:hasPart>
+               <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1/description/p0050">
+                  <dcterms:isPartOf rdf:resource="http://example.org/patent/WO-1978000001-A1/description"/>
+                  <rdfs:label xml:lang="en">Paragraph p0050</rdfs:label>
+                  <dcterms:identifier>p0050</dcterms:identifier>
+                  <dcterms:description xml:lang="en">This example verifies that wall thickness of the deposited porous body is directly proportional to the duration of combination of the two solutions. In the above experiments, changes in length and in diameter of the dailyzer tubes are practically zero, presumably because the osmotic pressures of the two solutions are very close. It has to be noted that reaction between aqueous aluminum sulfate solution and aqueous sodium silicate solution is very slow. Other reactions like the reaction between aqueous ammonium chloride solution and aqueous sodium silicate solution are very fast and a consider¬ able amount of wall thickness of porous body can be built up in a very short time. EXAMPLE 3</dcterms:description>
+               </rdf:Description>
+            </dcterms:hasPart>
+            <dcterms:hasPart>
+               <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1/description/p0051">
+                  <dcterms:isPartOf rdf:resource="http://example.org/patent/WO-1978000001-A1/description"/>
+                  <rdfs:label xml:lang="en">Paragraph p0051</rdfs:label>
+                  <dcterms:identifier>p0051</dcterms:identifier>
+                  <dcterms:description xml:lang="en">In the experiments of Example 1, it is found that the shape and size of the deposited porous body were slightly different from the original shape and size of the membrane. This is due to the rapid osmotic absorption of the second" solution within the tube towards the beginning of the experi¬ ment. This leads to a development of pressure and makes the membrane dimensionally unstable. In the following experi¬ ment (Experiment No. 12) the system is buffered with respect to change in pressure. A dialyzer tube 0.5" in diameter and 20" in length is closed at one end and is partially filled with 75 ml 40 Be aqueous sodium silicate solution. The open end of the dialyzer tube is fastened to a support and the tube is suspended vertically in 5000 ml 0.5% aqueous ammonium chlo- ride solution so that 75% of the solution within the dialyzer tube is immersed in ammonium chloride solution. The part of the dialyzer tube which is not filled with silicate solution remains more or less collapsed. The initial rapid diffusion - of the second solution into the tube is thus prevented by a counter acting hydrostatic pressure. Further, solution diffused into the dialyzer tube is accommodated by the inflation of the collapsed portion of the dialyzer tube and this prevents any dimensional instability of the immersed portion of the dialyzer tube. The deposited porous glass tube is found to be perfectly cylindrical conforming to the shape and size of the dialyzer tube. The average room temperature recorded during the experiment is 24°C.</dcterms:description>
+               </rdf:Description>
+            </dcterms:hasPart>
+            <dcterms:hasPart>
+               <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1/description/p0052">
+                  <dcterms:isPartOf rdf:resource="http://example.org/patent/WO-1978000001-A1/description"/>
+                  <rdfs:label xml:lang="en">Paragraph p0052</rdfs:label>
+                  <dcterms:identifier>p0052</dcterms:identifier>
+                  <dcterms:description xml:lang="en">It is found that non-uniformity in deposition can be caused by variation in pressure from point to point in a porous container. This gives rise to a problem when the portion of the porous container directly involved in the deposition process had a large vertical length. This problem can be minimized or eliminated by positioning the porous container in the second solution to occupy the shortest vertical distance, and providing the porous container with a flexible non-porous closure which can expend to relieve the pressure developed in course of the process. It is preferable to have the porous container as rigid as possible and to have solutions of very close osmotic pressure. An alternative method for relieving the pressure is to provide the opening of the porous container with a solution-tight piston which can yield to pressure by moving away from the container across a path enclosed by a non-porous structure. In another alternative method a hollow needle may be used to bleed off excess pressure.</dcterms:description>
+               </rdf:Description>
+            </dcterms:hasPart>
+            <dcterms:hasPart>
+               <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1/description/p0053">
+                  <dcterms:isPartOf rdf:resource="http://example.org/patent/WO-1978000001-A1/description"/>
+                  <rdfs:label xml:lang="en">Paragraph p0053</rdfs:label>
+                  <dcterms:identifier>p0053</dcterms:identifier>
+                  <dcterms:description xml:lang="en">EXAMPLE 4</dcterms:description>
+               </rdf:Description>
+            </dcterms:hasPart>
+            <dcterms:hasPart>
+               <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1/description/p0054">
+                  <dcterms:isPartOf rdf:resource="http://example.org/patent/WO-1978000001-A1/description"/>
+                  <rdfs:label xml:lang="en">Paragraph p0054</rdfs:label>
+                  <dcterms:identifier>p0054</dcterms:identifier>
+                  <dcterms:description xml:lang="en">138 gms potassium carbonate, 248 gms boric acid and 314 gms germania are intimately mixed together and the mixture is vitrified by melting in the ceramic crucible at 1300°C. While hot, the molten mass is poured into 1000 ml of water at room temperature whereby the glass is broken into numerous fragile particles. The mixture is filtered and both the resi- due and filtrate are further treated. The residue is ground to powder which is then added back to the filtrate and the combina¬ tion is heated at 100°C for one hour to dissolve as much solute as possible. The volume of the solution is adjusted to 1000 ml. The potassium borogermanate solution thus obtained contains one mole of K2O, two moles of B2O3 and 3 moles of GeO2. The solu¬ tion appears turbid, presumably due to the homogeneous suspen¬ sion of some undissolved solute in colloidal dimension.</dcterms:description>
+               </rdf:Description>
+            </dcterms:hasPart>
+            <dcterms:hasPart>
+               <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1/description/p0055">
+                  <dcterms:isPartOf rdf:resource="http://example.org/patent/WO-1978000001-A1/description"/>
+                  <rdfs:label xml:lang="en">Paragraph p0055</rdfs:label>
+                  <dcterms:identifier>p0055</dcterms:identifier>
+                  <dcterms:description xml:lang="en">15,000 ml of pH 5.00 acetic acid-sodium acetate buffer solurion is prepared as follows. 10,000 ml sodium hydroxide solution and 10,000 ml acetic acid solution, each of approximately 0.5N concentration are made. The actual concentrations of acetic acid solution and sodium hydroxide solution are determined by titration and are found to be 0.500N and 0.426N respectively. Using these values, a 15,000 ml pH 5.00 acetic acid-sodium acetate buffer is prepared by adding 6420 ml of sodium acetate to 8580 ml of acetic acid.</dcterms:description>
+               </rdf:Description>
+            </dcterms:hasPart>
+            <dcterms:hasPart>
+               <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1/description/p0056">
+                  <dcterms:isPartOf rdf:resource="http://example.org/patent/WO-1978000001-A1/description"/>
+                  <rdfs:label xml:lang="en">Paragraph p0056</rdfs:label>
+                  <dcterms:identifier>p0056</dcterms:identifier>
+                  <dcterms:description xml:lang="en">In each of the following experiments, a dialyzer tube 0.5" in diameter and 20" in length is closed at one end and is partially filled with 75 ml aqueous potassium borogermanate solution. The open end of the dialyzer tube is fastened to a support and the tube is suspended vertically in 5000 ml acetic acid-sodium acetate buffer solution so that 75% of the solution within the dialyzer tube is immersed in buffer solution and the other 25% of the solution stays above the buffer solution. After the desired length of time, the deposited porous glass body is taken out and is separated from the dialyzer tube.</dcterms:description>
+               </rdf:Description>
+            </dcterms:hasPart>
+            <dcterms:hasPart>
+               <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1/description/p0057">
+                  <dcterms:isPartOf rdf:resource="http://example.org/patent/WO-1978000001-A1/description"/>
+                  <rdfs:label xml:lang="en">Paragraph p0057</rdfs:label>
+                  <dcterms:identifier>p0057</dcterms:identifier>
+                  <dcterms:description xml:lang="en">The porous glass tube is washed with water five times and dried at room temperature for two days. The samples from several locations inside glass tubes are analyzed for potassium oxide concentration. The results of various experiments are shown in Table 5.</dcterms:description>
+               </rdf:Description>
+            </dcterms:hasPart>
+            <dcterms:hasPart>
+               <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1/description/p0058">
+                  <dcterms:isPartOf rdf:resource="http://example.org/patent/WO-1978000001-A1/description"/>
+                  <rdfs:label xml:lang="en">Paragraph p0058</rdfs:label>
+                  <dcterms:identifier>p0058</dcterms:identifier>
+                  <dcterms:description xml:lang="en">TABLE 5</dcterms:description>
+               </rdf:Description>
+            </dcterms:hasPart>
+            <dcterms:hasPart>
+               <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1/description/p0059">
+                  <dcterms:isPartOf rdf:resource="http://example.org/patent/WO-1978000001-A1/description"/>
+                  <rdfs:label xml:lang="en">Paragraph p0059</rdfs:label>
+                  <dcterms:identifier>p0059</dcterms:identifier>
+                  <dcterms:description xml:lang="en"/>
+               </rdf:Description>
+            </dcterms:hasPart>
+            <dcterms:hasPart>
+               <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1/description/p0060">
+                  <dcterms:isPartOf rdf:resource="http://example.org/patent/WO-1978000001-A1/description"/>
+                  <rdfs:label xml:lang="en">Paragraph p0060</rdfs:label>
+                  <dcterms:identifier>p0060</dcterms:identifier>
+                  <dcterms:description xml:lang="en">This example demonstrates the use of a complex solute (consisting of more than two oxides) in the first solution and the use of a buffered second solution containing an organic acid. Further, this example demonsrates the existance of a composition profile which is a function of time.</dcterms:description>
+               </rdf:Description>
+            </dcterms:hasPart>
+            <dcterms:hasPart>
+               <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1/description/p0061">
+                  <dcterms:isPartOf rdf:resource="http://example.org/patent/WO-1978000001-A1/description"/>
+                  <rdfs:label xml:lang="en">Paragraph p0061</rdfs:label>
+                  <dcterms:identifier>p0061</dcterms:identifier>
+                  <dcterms:description xml:lang="en">EXAMPLE 5</dcterms:description>
+               </rdf:Description>
+            </dcterms:hasPart>
+            <dcterms:hasPart>
+               <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1/description/p0062">
+                  <dcterms:isPartOf rdf:resource="http://example.org/patent/WO-1978000001-A1/description"/>
+                  <rdfs:label xml:lang="en">Paragraph p0062</rdfs:label>
+                  <dcterms:identifier>p0062</dcterms:identifier>
+                  <dcterms:description xml:lang="en">To 1000 ml vigorously boiling distilled water is added drop by drop, a freshly prepared solution made by dissolving 5gms of ferric chloride in 5 cc of water. As each drop falls into the boiling water, ferric chloride suffers hydrolysis, forming a beautiful deep red ferric oxide sol. The sol obtained is rapidly dialyzed in a cellphane bag against warm water to free it from the hydrochloric acid and undecomposed ferric chloride. The purified sol is then concentrated to a volume of 10 ml by slow evaporation.</dcterms:description>
+               </rdf:Description>
+            </dcterms:hasPart>
+            <dcterms:hasPart>
+               <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1/description/p0063">
+                  <dcterms:isPartOf rdf:resource="http://example.org/patent/WO-1978000001-A1/description"/>
+                  <rdfs:label xml:lang="en">Paragraph p0063</rdfs:label>
+                  <dcterms:identifier>p0063</dcterms:identifier>
+                  <dcterms:description xml:lang="en">In the following experiment (Experiment No. 16) 75 ml red colloidal solution is prepared by uniformly mixing 70 ml of 40°Be aqueous sodium silicate and 5 ml of ferric oxide sol. A dialyzer tube 0.5" in diameter and 20" in length is closed at one end and is partially filled with 75 ml red colloidal solution. The open end of the dialyzer tube is fastened to a support and the tube is suspended vertically in 5000 ml 0.75% aqueous ammonium nitrate solution So that 75% of the solution within the dialyzer tube is immersed in ammonium nitrate solution and the other 25% of the solution stays above the ammonium nitrate solution. After 30 hours, the deposited red porous body is taken out and is separated from the dialyzer tube. The deposited porous body on analysis shows the presence of ferric oxide. The average room temperature recorded during the experiment was 24°C. This example demonstrates the use of an additive in the first solution to incorporate a modifying compound in the deposited porous hody.</dcterms:description>
+               </rdf:Description>
+            </dcterms:hasPart>
+            <dcterms:hasPart>
+               <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1/description/p0064">
+                  <dcterms:isPartOf rdf:resource="http://example.org/patent/WO-1978000001-A1/description"/>
+                  <rdfs:label xml:lang="en">Paragraph p0064</rdfs:label>
+                  <dcterms:identifier>p0064</dcterms:identifier>
+                  <dcterms:description xml:lang="en">EXAMPLE 6</dcterms:description>
+               </rdf:Description>
+            </dcterms:hasPart>
+            <dcterms:hasPart>
+               <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1/description/p0065">
+                  <dcterms:isPartOf rdf:resource="http://example.org/patent/WO-1978000001-A1/description"/>
+                  <rdfs:label xml:lang="en">Paragraph p0065</rdfs:label>
+                  <dcterms:identifier>p0065</dcterms:identifier>
+                  <dcterms:description xml:lang="en">In the following experiment (Experiment No. 17), a dialyzer tube 0.5" in diameter and 20" in length is closed at one end and partially filled with 75 ml of 40° aqueous sodium silicate solution. The open end of the dialyzer tube is fastened to a support and the tube is suspended vertically in 5000 ml 0.5% aqueous ammonium chloride solution so that 75% of the solution within the dialyzer tube is immersed in ammonium chloride solution and the other 25% of the solution stays above the ammonium chloride solution. After 25 hours of reaction, the solution within the dialyzer tube is replaced by 70 ml of of aqueous potassium borogermante solution as prepared in</dcterms:description>
+               </rdf:Description>
+            </dcterms:hasPart>
+            <dcterms:hasPart>
+               <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1/description/p0066">
+                  <dcterms:isPartOf rdf:resource="http://example.org/patent/WO-1978000001-A1/description"/>
+                  <rdfs:label xml:lang="en">Paragraph p0066</rdfs:label>
+                  <dcterms:identifier>p0066</dcterms:identifier>
+                  <dcterms:description xml:lang="en">Example 4; other conditions of the experiment remain unchanged. The reaction is allowed to continue for another 25 hours. The deposited composite porous glass is taken out and is separated from the dialyzer tube. The average temperature recorded during the experiment is 27°C. The porous body, after washing with water two times, is leached with 0.005N H2SO4 at 27°C for 10 hours to remove sodium ions and potassium ions and then washed with water to remove acids. The porous body after washing is dried at 21°C for 48 hours to remove most of the physically bound water. It is heated under vacuum at the rate of 100°C per hour up to 600°C. The vacuum is then taken off and the porous glass is treated with SO3 vapor for 2 hours at 600°C. This process removes the chemically bound water. The porous glass is subjected to vacuum again and the temperature is raised again at the rate of 100°C per hour until the porous body is consolidated at 1450°C to a transparent non-porous glass tube. The tube is a composite with the outer wall substantially made of silica and the inner wall substantially made of germania.</dcterms:description>
+               </rdf:Description>
+            </dcterms:hasPart>
+            <dcterms:hasPart>
+               <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1/description/p0067">
+                  <dcterms:isPartOf rdf:resource="http://example.org/patent/WO-1978000001-A1/description"/>
+                  <rdfs:label xml:lang="en">Paragraph p0067</rdfs:label>
+                  <dcterms:identifier>p0067</dcterms:identifier>
+                  <dcterms:description xml:lang="en">EXAMPLE 7</dcterms:description>
+               </rdf:Description>
+            </dcterms:hasPart>
+            <dcterms:hasPart>
+               <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1/description/p0068">
+                  <dcterms:isPartOf rdf:resource="http://example.org/patent/WO-1978000001-A1/description"/>
+                  <rdfs:label xml:lang="en">Paragraph p0068</rdfs:label>
+                  <dcterms:identifier>p0068</dcterms:identifier>
+                  <dcterms:description xml:lang="en">In the following experiment (Experiment No. 18) doping with cesium salt is performed using the porous silica glass made in Example 3. For good optical quality, both the cesium salt and the porous glass need to be purified. The purification of porous glass is done by leaching with 0.005N H2SO4 at 27°C for 10 hours. A more severe leaching condition is next adopted by leaching the porous glass with 2N H2SO4 at 95°C for 24 hours. The tube is washed with water to remove acids and is ready for the doping operation.</dcterms:description>
+               </rdf:Description>
+            </dcterms:hasPart>
+            <dcterms:hasPart>
+               <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1/description/p0069">
+                  <dcterms:isPartOf rdf:resource="http://example.org/patent/WO-1978000001-A1/description"/>
+                  <rdfs:label xml:lang="en">Paragraph p0069</rdfs:label>
+                  <dcterms:identifier>p0069</dcterms:identifier>
+                  <dcterms:description xml:lang="en">Commercial grade CsNO3 contains 3 - 5 ppm of iron which is detrimental to the optical quality of glass. It is found that a solution of CsNO3 saturated at 100°C has a pH of 6, at which some iron must precipitate in order to maintain the solubility product of Fe(OH), at its extremely low value. 250 ml of solution of CsNO3 saturated at 100°C is vigorously boiled under reflux for 6 hours. The solution turns reddish due to precipitation of Fe(OH)3 and the filtered solution is cooled to crystalization at 23°C. The crystals are separated by filtration and the filtrate which is a saturated solution of CsNO3 in water at 23°C is used in the doping process.</dcterms:description>
+               </rdf:Description>
+            </dcterms:hasPart>
+            <dcterms:hasPart>
+               <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1/description/p0070">
+                  <dcterms:isPartOf rdf:resource="http://example.org/patent/WO-1978000001-A1/description"/>
+                  <rdfs:label xml:lang="en">Paragraph p0070</rdfs:label>
+                  <dcterms:identifier>p0070</dcterms:identifier>
+                  <dcterms:description xml:lang="en">To 100 ml of CsNO3 solution is added 200 ml of liquid NH,. The purified porous glass tube is dipped into the above solution. In this process, the protons from the porous glass are replaced by the cesium ions. The ion exchange is complete in three days. The tube which looks white is washed with water to remove CsN03 and NH3. The tube is dried at 23°C for 48 hours to remove most of the physically bound water. It is heated under vacuum at the rate of 100°C per hour up to 600°C. It is held at that temperature for 2 hours. The temperature is raised again at the rate of 100°C per hour until the porous body is consolidated at 1450°C to a trans¬ parent non-porous glass tube.</dcterms:description>
+               </rdf:Description>
+            </dcterms:hasPart>
+            <dcterms:hasPart>
+               <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1/description/p0071">
+                  <dcterms:isPartOf rdf:resource="http://example.org/patent/WO-1978000001-A1/description"/>
+                  <rdfs:label xml:lang="en">Paragraph p0071</rdfs:label>
+                  <dcterms:identifier>p0071</dcterms:identifier>
+                  <dcterms:description xml:lang="en">It is found that the first solution and the second solution used in the above examples would form a gel when combined without the use of a porous container. The use of a porous container densifies the gel structure which is intra- connected so as to form a self-supporting porous structure. Thus, although the discussion and the example mainly concern themselves with the formation of certain inorganic oxide porous bodies by acid-base type reactions within a porous container, any reaction in which the reactants fulfill the requirement of gel formation and the requirements of permeability for one and impermeability for the other will be suitable for formation of a porous self-supporting body. Thus manufacture of metallic glasses, organic glasses and other inorganic glasses is possible by the process of this invention. In the method thus generalized for low temperature synthesis of a porous self-supporting body a first solution containing at least one first solute and a second solution containing at least one second solute are provided, wherein the first solution is capable of reacting with the second solution to form a gel. The first solution is confined within a porous container the walls of which are sub¬ stantially impermeable to the first solute and the second solution is diffused into the porous container the walls of which are substantially permeable to the second solute. Within the porous container the reaction between the first solution and the second solution takes place to deposit a porous self-supporting body on the walls. The selection of the concen- tation of the first solution and of the concentration of the second solution are done by trial and error. The first solution and/or the second solution may contain additives to have desired effects. The additives are, for example, peptizing agents, coagulating agents, protective colloids, structure modifiers and composition modifiers as known in the art. Additives offer resistance to the movement of the first solute and this may cause an otherwise permeable (through the walls of the porous container) first solute to become an apparently impermeable one. A weakly gel forming reaction can be converted into a strongly gel forming one by use of certain additives. The porous self-supporting body can be purified, dried and consolidated to a non-porous body. The following table summarizes different types of reactions which can be used to synthesize a porous self-supporting body.</dcterms:description>
+               </rdf:Description>
+            </dcterms:hasPart>
+            <dcterms:hasPart>
+               <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1/description/p0072">
+                  <dcterms:isPartOf rdf:resource="http://example.org/patent/WO-1978000001-A1/description"/>
+                  <rdfs:label xml:lang="en">Paragraph p0072</rdfs:label>
+                  <dcterms:identifier>p0072</dcterms:identifier>
+                  <dcterms:description xml:lang="en">TABLE 6</dcterms:description>
+               </rdf:Description>
+            </dcterms:hasPart>
+            <dcterms:hasPart>
+               <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1/description/p0073">
+                  <dcterms:isPartOf rdf:resource="http://example.org/patent/WO-1978000001-A1/description"/>
+                  <rdfs:label xml:lang="en">Paragraph p0073</rdfs:label>
+                  <dcterms:identifier>p0073</dcterms:identifier>
+                  <dcterms:description xml:lang="en">By using the process of this invention vitreous bodies and their intermediates can be made at a much lower cost,with much higher purity, in virtually unlimited compositions and in virtually unlimited shapes. It has a great deal of operational flexibility which is a contrast to the tedious conventional process. The simplicity of the process allows it to be prac¬ ticed in a light chemical facility provided with a minimal number of process accessories. Most of the raw materials useful for the process are cheap, easily available and pose very little danger to the environment. Many of the raw materials can be made indigenously. Atmospheric pollution due to emission of harmful gases is totally absent in many cases and this is a big plus over direct melting processes where pollution is caused by oxides of nitrogen, phosphorus, arsenic, carbon and sulfur.</dcterms:description>
+               </rdf:Description>
+            </dcterms:hasPart>
+            <dcterms:hasPart>
+               <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1/description/p0074">
+                  <dcterms:isPartOf rdf:resource="http://example.org/patent/WO-1978000001-A1/description"/>
+                  <rdfs:label xml:lang="en">Paragraph p0074</rdfs:label>
+                  <dcterms:identifier>p0074</dcterms:identifier>
+                  <dcterms:description xml:lang="en">The porous self-supporting body prepared by this invention has many desirable physical and chemical properties. These are high refractoriness, chemical inertness, large surface area, controlled porosity and exceptional purity. The main uses of the porous body are as a filtering medium, as a carrier, as an absorbent and as an ion-exchange medium.</dcterms:description>
+               </rdf:Description>
+            </dcterms:hasPart>
+            <dcterms:hasPart>
+               <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1/description/p0075">
+                  <dcterms:isPartOf rdf:resource="http://example.org/patent/WO-1978000001-A1/description"/>
+                  <rdfs:label xml:lang="en">Paragraph p0075</rdfs:label>
+                  <dcterms:identifier>p0075</dcterms:identifier>
+                  <dcterms:description xml:lang="en">Dispersed solids can be separated from liquids and gases by means of the porous body. The separation is based on the molecular size and the porous body can be used for purifi- cation of toxic gases and polluted air and for separation of suspended impurities from waste water.</dcterms:description>
+               </rdf:Description>
+            </dcterms:hasPart>
+            <dcterms:hasPart>
+               <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1/description/p0076">
+                  <dcterms:isPartOf rdf:resource="http://example.org/patent/WO-1978000001-A1/description"/>
+                  <rdfs:label xml:lang="en">Paragraph p0076</rdfs:label>
+                  <dcterms:identifier>p0076</dcterms:identifier>
+                  <dcterms:description xml:lang="en">Dissolved solute on the other hand, can be separated from the solvent by hyperfiltration using a membrane made from the porous body of this invention. For this purpose the porous body is considered to be superior to the organic membrane com¬ monly used. Use of an asymmetric membrane will contribute to more efficiency. The separation is based on reverse osmosis and can be used for desalination of saline water, purification of waste water and separation of mixtures of fluids from one another.</dcterms:description>
+               </rdf:Description>
+            </dcterms:hasPart>
+            <dcterms:hasPart>
+               <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1/description/p0077">
+                  <dcterms:isPartOf rdf:resource="http://example.org/patent/WO-1978000001-A1/description"/>
+                  <rdfs:label xml:lang="en">Paragraph p0077</rdfs:label>
+                  <dcterms:identifier>p0077</dcterms:identifier>
+                  <dcterms:description xml:lang="en">Dissolved solutes can be separated from one another by ultrafiltration using a membrane made from the porous body of this invention. As in the case of hyperfiltration, an asymmetric membrane will be found more useful in this case. The separation is based on molecular sizes and can be used in laboratory and industrial dialysis. When coated with non- thrombogenic material, the membrane can be used in an artificial kidney.</dcterms:description>
+               </rdf:Description>
+            </dcterms:hasPart>
+            <dcterms:hasPart>
+               <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1/description/p0078">
+                  <dcterms:isPartOf rdf:resource="http://example.org/patent/WO-1978000001-A1/description"/>
+                  <rdfs:label xml:lang="en">Paragraph p0078</rdfs:label>
+                  <dcterms:identifier>p0078</dcterms:identifier>
+                  <dcterms:description xml:lang="en">Other potential uses of ultrafiltration or hyper- filtration using a membrane made from a porous body of this invention are in the dairy industry, in food processing, in pulp and paper manufacture and in electroplating waste treatment. The membrane useful for ultrafiltration and hyper- filtration can be in the form of flat membranes, tubes or hollow fibers which are easy to fabricate by following the process of this invention.</dcterms:description>
+               </rdf:Description>
+            </dcterms:hasPart>
+            <dcterms:hasPart>
+               <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1/description/p0079">
+                  <dcterms:isPartOf rdf:resource="http://example.org/patent/WO-1978000001-A1/description"/>
+                  <rdfs:label xml:lang="en">Paragraph p0079</rdfs:label>
+                  <dcterms:identifier>p0079</dcterms:identifier>
+                  <dcterms:description xml:lang="en">The porous body can be used for chromatographic applications and as a carrier for biologically active materials such as antigens, antibodies and enzymes. As a catalytic support, the porous body will find applications in chemical process industries like petroleum refineries and in the cata¬ lytic converters of internal combustion engines.</dcterms:description>
+               </rdf:Description>
+            </dcterms:hasPart>
+            <dcterms:hasPart>
+               <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1/description/p0080">
+                  <dcterms:isPartOf rdf:resource="http://example.org/patent/WO-1978000001-A1/description"/>
+                  <rdfs:label xml:lang="en">Paragraph p0080</rdfs:label>
+                  <dcterms:identifier>p0080</dcterms:identifier>
+                  <dcterms:description xml:lang="en">The porous body of this invention is a strong absorbent for certain types of molecules which may be solids, liquids or gases. As an absorbent, it can purify liquids and gases like purification of air in an enclosed space and puri¬ fication of beer and wine. It can be used as a drying agent to remove moisture from a system. It can be used to separate a mixture of gases and mixture of liquids which are not readily separable by any other means. An example is the separation of n-hexane and n-octane.</dcterms:description>
+               </rdf:Description>
+            </dcterms:hasPart>
+            <dcterms:hasPart>
+               <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1/description/p0081">
+                  <dcterms:isPartOf rdf:resource="http://example.org/patent/WO-1978000001-A1/description"/>
+                  <rdfs:label xml:lang="en">Paragraph p0081</rdfs:label>
+                  <dcterms:identifier>p0081</dcterms:identifier>
+                  <dcterms:description xml:lang="en">The porous body of this invention is a very good medium for ion exchange. The exchange is conveniently done by following the procedure disclosed in U.S. patent application Serial No. 832,230, filed September 12, 1977, by M. Samanta.</dcterms:description>
+               </rdf:Description>
+            </dcterms:hasPart>
+            <dcterms:hasPart>
+               <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1/description/p0082">
+                  <dcterms:isPartOf rdf:resource="http://example.org/patent/WO-1978000001-A1/description"/>
+                  <rdfs:label xml:lang="en">Paragraph p0082</rdfs:label>
+                  <dcterms:identifier>p0082</dcterms:identifier>
+                  <dcterms:description xml:lang="en">A prospective use will be purification of nuclear waste liquid containing radiocesium Cs137. When a porous body immersed in waste liquid is treated with NH3, Cs137will be absorbed in the porous body and other radioactive impurities like radio- strontium will be precipitated. The precipitate and porous body will be separated from the liquid which will thus be free from the radioactive material. The precipitate can be properly sealed in a suitable container and the porous body can be consolidated before disposal of the concentrated waste.</dcterms:description>
+               </rdf:Description>
+            </dcterms:hasPart>
+            <dcterms:hasPart>
+               <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1/description/p0083">
+                  <dcterms:isPartOf rdf:resource="http://example.org/patent/WO-1978000001-A1/description"/>
+                  <rdfs:label xml:lang="en">Paragraph p0083</rdfs:label>
+                  <dcterms:identifier>p0083</dcterms:identifier>
+                  <dcterms:description xml:lang="en">An alternate procedure will be to exchange the protons in the porous body with Li+, Na+ or K+ and then treat the nuclear waste liquid with the exchanged porous body whereby all the radioactive cations will be absorbed within the porous body.</dcterms:description>
+               </rdf:Description>
+            </dcterms:hasPart>
+            <dcterms:hasPart>
+               <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1/description/p0084">
+                  <dcterms:isPartOf rdf:resource="http://example.org/patent/WO-1978000001-A1/description"/>
+                  <rdfs:label xml:lang="en">Paragraph p0084</rdfs:label>
+                  <dcterms:identifier>p0084</dcterms:identifier>
+                  <dcterms:description xml:lang="en">A porous body exchanged with an alkali metal cation can be used for water softening, absorbing Ca++ and Mg++ during the process.</dcterms:description>
+               </rdf:Description>
+            </dcterms:hasPart>
+            <dcterms:hasPart>
+               <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1/description/p0085">
+                  <dcterms:isPartOf rdf:resource="http://example.org/patent/WO-1978000001-A1/description"/>
+                  <rdfs:label xml:lang="en">Paragraph p0085</rdfs:label>
+                  <dcterms:identifier>p0085</dcterms:identifier>
+                  <dcterms:description xml:lang="en">The porous body prepared by this invention is hydro- philic and it has a strong affinity for water. A mambrane made from the body is readily wetted by water. The membrane will allow the water to pass through, but no air or gas entrained in the liquid will be able to pass. This property makes the membrane useful for intravenous injection devices where the passage of air into the veins has to be prevented by all means. The porous body prepared by this invention can be made hydrophobic by coating the hydrophilic surface with a hydrophobic material or by deactivating the surface hydroxyl groups. A membrane made from a body so treated will not be wetted by water. The membrane will allow air to pass through, but no water entrained in the air will be able to pass. Typical use of the membrane will be in the design of vents. The hydrophobic porous body has a strong affinity for gasoline and oil. So, it can be used for removal of water from gasoline and for removal of oil slicks from sea water.</dcterms:description>
+               </rdf:Description>
+            </dcterms:hasPart>
+            <dcterms:hasPart>
+               <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1/description/p0086">
+                  <dcterms:isPartOf rdf:resource="http://example.org/patent/WO-1978000001-A1/description"/>
+                  <rdfs:label xml:lang="en">Paragraph p0086</rdfs:label>
+                  <dcterms:identifier>p0086</dcterms:identifier>
+                  <dcterms:description xml:lang="en">The porous body can be used as a filler and reinforce¬ ment for polymeric material and as a thermal insulator for home and industry. It can be used as an intermediate in processes for making foam glasses.</dcterms:description>
+               </rdf:Description>
+            </dcterms:hasPart>
+            <dcterms:hasPart>
+               <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1/description/p0087">
+                  <dcterms:isPartOf rdf:resource="http://example.org/patent/WO-1978000001-A1/description"/>
+                  <rdfs:label xml:lang="en">Paragraph p0087</rdfs:label>
+                  <dcterms:identifier>p0087</dcterms:identifier>
+                  <dcterms:description xml:lang="en">Other uses of the porous body made by this invention are as an electrolytic separator in an electrochemical cell, as a microorganism-impervious cover for medical containers, as a matrix for a composite super conductive body and as a carrier for dynamically produced reverse osmosis membranes.</dcterms:description>
+               </rdf:Description>
+            </dcterms:hasPart>
+            <dcterms:hasPart>
+               <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1/description/p0088">
+                  <dcterms:isPartOf rdf:resource="http://example.org/patent/WO-1978000001-A1/description"/>
+                  <rdfs:label xml:lang="en">Paragraph p0088</rdfs:label>
+                  <dcterms:identifier>p0088</dcterms:identifier>
+                  <dcterms:description xml:lang="en">The consolidated glass having a composition profile will have two basic uses. One will be glass strengthening, wherein glass will have a compressive skin because of the composition profile. Typical uses may be in high strength radar domes, and in chemical strengthening of laboratory and commer- cial glassware. The second basic use will be in fiberoptics. Because of the very high purity and the composition profile, glass will be used in making step-index and graded index optical fibers for optical communication and medical endoscopy. The proposed uses of consolidated glass without any profile potentially are many. This invention permits the making of glass within such wide limits of composition that virtually any desired mechanical, chemical, optical and dielectric property can be obtained by selecting a suitable composition. Important uses of consolidated glass should in¬ clude the uses related to household glassware, general labora¬ tory equipment, packaging for electrical components, mirror blanks for astronomical telescopes, acoustic delay lines, wind¬ shields for supersonic vehicles, accessories for thermonuclear reactors, and nose cones for intercontinental ballistic missiles.</dcterms:description>
+               </rdf:Description>
+            </dcterms:hasPart>
+            <dcterms:hasPart>
+               <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1/description/p0089">
+                  <dcterms:isPartOf rdf:resource="http://example.org/patent/WO-1978000001-A1/description"/>
+                  <rdfs:label xml:lang="en">Paragraph p0089</rdfs:label>
+                  <dcterms:identifier>p0089</dcterms:identifier>
+                  <dcterms:description xml:lang="en">Of course, many variations and modifications of the subject invention are possible in the light of the above teachings. It is, therefore, to be understood that within the scope of the appended claims, the invention may be practiced otherwise than as specifically described.</dcterms:description>
+               </rdf:Description>
+            </dcterms:hasPart>
+         </rdf:Description>
+      </pso:hasDescriptionSection>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1">
+      <property:hasClaim>
+         <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1/claim/0001">
+            <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pso.owl#Claim"/>
+            <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+            <skos:notation>0001</skos:notation>
+            <skos:definition xml:lang="en"> I CLAIM; 1. A method for the synthesis of a porous self-supporting body, comprising the steps of: providing a first solution containing at least one basic glass forming solute; providing a second solution containing at least one acidic solute; providing in contact with and separating said solutions a permeable barrier substantially impermeable to said at least one basic solute and substan¬ tially permeable to said at least one acidic solute; and permitting said second solution to pass through said barrier to react with said first solution to deposit on the side of said barrier in contact with said first solution a porous self-supporting body. 2. The method of Claim 1 wherein said permeable barrier is a dialyzer membrane. 3. The method of Claim 1 wherein said at least one basic solute is selected from the group consisting of borates, aluminates, silicates, germanates, stannates, plumbates, phosphates, arsenates, antimonates, bismuthates, selenates, tellurates, zirconates, titanates, tungstates, vanadates and molybdates. 4. The method of Claim 1 wherein said first solution is a true solution. 5. The method of Claim 1 wherein said first solu¬ tion is a colloidal solution. 6. The method of Claim 1 and including the step of varying the time during which said solutions are in contact with said barrier so as to obtain a certain thickness for said deposited self-supporting body. 7. The method of Claim 1 wherein said deposited self-supporting body is crystalline. 8. The method of Claim 1 wherein said deposited self-supporting body is partially vitreous and partially crystalline. 9. The method of Claim 1 wherein said deposited self-supporting body is vitreous. 10. The method of Claim 1 and including the step of heating said porous body to consolidate it into a non- porous vitreous body. 11. The method of Claim 1 and including the steps of: leaching said porous body with acid: washing said porous body with water: drying, said porous body; and heating said porous body to consolidate it into a non-porous vitreous body. 12. The method of Claim 1 and including the step of doping said porous body. 13. A product made by the process of Claim 1. 14. A product made by the process of Claim 10. 15. The method of Claim 1 wherein said first solution contains an additive. 16. The method of Claim 1 wherein said second solution contains an additive. 17. The method of Claim 1 wherein said first and second solutions contain additives. 18. The method of Claim 1 and including the step of varying the rate of deposition of said self-supporting body. 19. The method of Claim 1 and including the step of varying the rate of reaction by varying the concentrations of said solutions. 20. The method of Claim 1 and including the step of varying the rate of reaction by varying the temperature of said solutions. 21. The method of Claim 1 and including the step of varying the rate of reaction by varying the relative pressures of said solutions. 22. The method of Claim 1 and including the step of varying the porosity and pore size of said self-supporting body by varying the concentrations of said first and second solutions. 23. The method of Claim 1 and including the step of varying the porosity and pore size of said self-supporting body by varying the concentration of said first solution. 24. The method of Claim 1 and including the step of varying the porosity and pore size of said self-supporting body by varying the concentration of said second solution. 25. The method of Claim 1 wherein said at least one acidic solute is seleced from the group consisting of acids and salts of strong acids and weak bases. 26. The method of Claim 1 wherein the concentration of said first solution is such that one liter of said first solution contains from 0.10 moles to 40 moles of at least one glass forming oxide. 27. The method of Claim 1 wherein the solvents for said- first and second solutions are selected from the group consisting of water, hydrocarbons, alcohols, ketones, ethers, carboxylic acids and mixtures thereof. 28. The method of Claim 1 wherein said at least one basic solute is a simple solute consisting of two oxides. 29. The method of Claim 1 wherein said at least one basic solute is a complex solute consisting of more than two oxides 30. The method of Claim 1 wherein said at least one acidic solute is a salt of a strong acid and a weak base. 31. The method of Claim 1 wherein said at least one basic solute is selected from the group consisting of silicates and germanates. 32. The method of Claim 1 wherein said barrier is in the form of a container with said first solution on the inside of said container and said second solution on the outside of said container. 33. The method of Claim 1 wherein said barrier is in the form of a shaped article whereby said porous self- supporting body conforms to the shape of said barrier. 34. A pro duct made by the process of Claim 33. 35. The method of Claim 1 and including the step of changing the compositions of said first solution and said second solution during deposition of said self-supporting body to develop in said body, layers of different composition. 36. The method of Claim 1 and including the step of changing the composition .of said first solution during deposition of said self-supporting body to develop in said body, layers of different composition. 37. The method of Slaim 1 and including the step of changing the composition of said second solution during deposition of said self-supporting body to develop in said body, layers of different composition. 38. The method of Claim 1 and including the step of continuously varying the composition of said first solution and said second solution during deposition of said self- supporting body to develop in said body a continuous variation in composition. 39. The method of Claim 1 and including the step of continuously varying the composition of said first solution during deposition of said self-supporting body to develop in said body a continuous variation in composition. 40. The method of Claim 1 and including the step of continouously varying the composition of said second solution during deposition of said self-supporting body to develop in said Body a continuous variation in composition. 41. The method of Claim 1 and including the step of varying the time during which said solutions are in contact with said barrier so as to develop a certain composition profile for said porous self-supporting body. 42. A method for the synthesis of a porous self- supporting body, comprising the steps of: providing a first solution containing at least one gel forming solute: providing a second solution containing at least one solute which will form a gel with the said first solution: providing in contact with and separating said solutions a permeable barrier substantially impermeable to said at least one first solution solute and substantially permeable to said at least one second solution solute: and permitting said second solution to pass through said barrier to react with the said first solution to deposit on the side of said barrier in contact with said first solution a porous self-supporting body. 43. The method of Claim 30 wherein said salt of a strong acid and a weak base is an ammonium salt, 44. A product made by the process of Claim 41. 45. A product made by the process of Claim 40.</skos:definition>
+         </rdf:Description>
+      </property:hasClaim>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1">
+      <dcterms:license>User acknowledges that the Information Retrieval Facility (IRF) and its third party providers retain all right, title and interest in and to this xml under applicable copyright laws. User acquires no ownership rights to this xml including but not limited to its format. User hereby accepts the terms and conditions of the Licence Agreement set forth at http://www.ir-facility.org/legal/marec/data_licence</dcterms:license>
+   </rdf:Description>
+</rdf:RDF>
