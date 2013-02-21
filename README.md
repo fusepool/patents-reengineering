@@ -1,6 +1,6 @@
-# MAREC to RDF
+# MAREC-RDF
 
-XSLT 2.0 templates to transform MAREC XML to RDF/XML.
+XSLT 2.0 templates to transform MAREC XML to RDF/XML, ECLA to RDF/XML and supporting data.
 
 ## Requirements
 
@@ -11,13 +11,16 @@ Currently it does two types of transformations: patents and classifications. The
 
 From patents, it transforms bibliogrpahic-data, publication and application references, priority-claims, technical-data (classifications), parties (applicants, inventors, assignees), claims.
 
+There is also a small script that converts a list of filing offices from the EPO websites into N-Triples.
+
+Classifications and filing offices are both used in patents.
 
 ## What is inside?
 
 It comes with scripts and sample data. Tested with `saxonb-xslt` tool for Debian from command-line.
 
 ### Scripts
-The `scripts/` directory contains Bash script to test it on provided sample data.
+The `scripts/` directory contains Bash script to test on sample data.
 
 ### XSL
 The `xsl/` directory is for MAREC and ECLA transformations.
