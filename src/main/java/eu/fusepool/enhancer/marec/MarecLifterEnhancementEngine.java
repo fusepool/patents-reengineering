@@ -70,6 +70,11 @@ implements EnhancementEngine, ServiceProperties {
 
 	private TCServiceLocator serviceLocator ;
 	
+	
+	@SuppressWarnings("unused")
+	private final boolean isDebug = false ;
+	
+	
 	/**
 	 * The literal factory
 	 */
@@ -111,7 +116,13 @@ implements EnhancementEngine, ServiceProperties {
 		
 		
 		try { // TODO: errore nell'attivazione ?
-			serviceLocator = new TCServiceLocator(ce.getBundleContext(), "graph.uri=om.go5th.yard.clerezza.01") ;		
+			serviceLocator = new TCServiceLocator(ce.getBundleContext(), "graph.uri=om.go5th.yard.clerezza.01") ;	
+			if(isDebug) {
+				TripleCollection collection = serviceLocator.getTripleCollection() ;
+				if(collection!=null) {
+					collection.clear() ;
+				}
+			}
 		} catch (InvalidSyntaxException e) {
 			logService.log(LogService.LOG_ERROR,"Invalid graph.uri syntax", e) ;
 		} catch (Exception e) {
@@ -136,11 +147,11 @@ implements EnhancementEngine, ServiceProperties {
 		logService.log(LogService.LOG_INFO, "UriRef: "+contentItemId.getUnicodeString()) ;
 
 
-		//MGraph g = ci.getMetadata();
-		String mimeType = ci.getMimeType() ;
+
 		
 
 		//TODO: check if mimetype is supported
+//		String mimeType = ci.getMimeType() ;
 //		if(!isSupported(mimeType)) {
 //			throw new EngineException("Cannot enhance mimetype: "+mimeType) ;
 //		}
@@ -170,14 +181,12 @@ implements EnhancementEngine, ServiceProperties {
 		for(Iterator<Triple> st = rdfGraph.iterator();st.hasNext();){
 			Triple curTriple = st.next() ;
 			NonLiteral resource = curTriple.getSubject();
-			if(resource instanceof UriRef && processed.add(resource)){
-				//build a new representation
-				//UriRef ref = new UriRef(unicodeString)
+			if(resource instanceof UriRef /*&& processed.add(resource)*/){
 				representations.put(((UriRef)resource).getUnicodeString(),
 						valueFactory.createRdfRepresentation((UriRef)resource, rdfGraph));
 			} else {
-				logService.log(LogService.LOG_DEBUG, "skipped: "+curTriple);
-				logService.log(LogService.LOG_DEBUG, "not UriRef: "+resource);	
+				logService.log(LogService.LOG_INFO, "skipped: "+curTriple);
+				logService.log(LogService.LOG_INFO, "not UriRef: "+resource);	
 			}
 		}
 		
@@ -187,11 +196,9 @@ implements EnhancementEngine, ServiceProperties {
 			if(tripleCollection.addAll(rdfGraph)) {
 				logService.log(LogService.LOG_INFO, this.getClass().getName()+" added collection to yard...");
 			} else{
-				logService.log(LogService.LOG_INFO, this.getClass().getName()+" collection NOT added to yard...");
+				logService.log(LogService.LOG_WARNING, this.getClass().getName()+" collection NOT added to yard...");
 			}
 		}
-
-		
 
 		/*
 		 * Enhancement phase
@@ -226,43 +233,16 @@ implements EnhancementEngine, ServiceProperties {
 	}
 
 
-	/**
-	 * n.d.G.: credo verrà eliminata
-	 * 
-	 * @param is
-	 * @return
-	 */
-//	public String convertStreamToString(InputStream is) { 
-//		BufferedReader reader = new BufferedReader(new InputStreamReader(is)); 
-//		StringBuilder sb = new StringBuilder(); 
-//
-//		String line = null; 
-//
-//		try { 
-//			while ((line = reader.readLine()) != null) { 
-//				sb.append(line + "\n"); 
-//			} 
-//		} catch (IOException e) { 
-//			e.printStackTrace(); 
-//		} finally { 
-//			try { 
-//				is.close(); 
-//			} catch (IOException e) { 
-//				e.printStackTrace(); 
-//			} 
-//		}
-//
-//		return sb.toString(); 
-//	}
 
 	/**
 	 * Converts the type and the subtype of the parsed media type to the
-	 * string representation as stored in {@link #supportedMediaTypes} and than
+	 * string representation as stored in {@link #supportedMediaTypes} and then
 	 * checks if the parsed media type is contained in this list.
 	 * @param mediaType the MediaType instance to check
 	 * @return <code>true</code> if the parsed media type is not 
 	 * <code>null</code> and supported. 
 	 */
+	@SuppressWarnings("unused")
 	private boolean isSupported(String mediaType){
 		return mediaType == null ? false : supportedMediaTypes.contains(
 				mediaType.toLowerCase());
