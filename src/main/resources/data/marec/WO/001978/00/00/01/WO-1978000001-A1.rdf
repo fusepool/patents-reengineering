@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:foaf="http://xmlns.com/foaf/0.1/"
+         xmlns:prov="http://www.w3.org/ns/prov#"
+         xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+         xmlns:xkos="http://purl.org/linked-data/xkos#"
+         xmlns:pso="http://www.patexpert.org/ontologies/pso.owl#"
+         xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:pulo="http://www.patexpert.org/ontologies/pulo.owl#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:sumo="http://www.owl-ontologies.com/sumo.owl#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xmlns:pmo="http://www.patexpert.org/ontologies/pmo.owl#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:property="http://example.org/property/"
+         xmlns:schema="http://schema.org/">
+   <rdf:Description rdf:about="http://csarven.ca/#i">
+      <rdf:type rdf:resource="http://www.w3.org/ns/prov#Agent"/>
+   </rdf:Description>
+   <rdf:Description xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                    rdf:about="http://example.org/provenance/activity/20130221095658">
+      <rdf:type rdf:resource="http://www.w3.org/ns/prov#Activity"/>
+      <prov:startedAtTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2013-02-21T09:56:58Z</prov:startedAtTime>
+      <prov:wasAssociatedWith rdf:resource="http://csarven.ca/#i"/>
+      <prov:used rdf:resource="http://example.org/data/WO-1978000001-A1.xml"/>
+      <prov:used rdf:resource="https://github.com/fusepool/patents-reengineering/src/main/resources/scripts/marec.xsl"/>
+      <prov:generated>
+         <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1">
+            <prov:wasDerivedFrom rdf:resource="http://example.org/data/WO-1978000001-A1.xml"/>
+            <prov:wasGeneratedBy rdf:resource="http://example.org/provenance/activity/20130221095658"/>
+         </rdf:Description>
+      </prov:generated>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1">
+      <rdf:type rdf:resource="http://www.owl-ontologies.com/sumo.owl#Patent"/>
+      <property:status>new</property:status>
+      <pmo:patentFamily>
+         <rdf:Description rdf:about="http://example.org/family/27125127">
+            <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily"/>
+            <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
+            <skos:notation>27125127</skos:notation>
+         </rdf:Description>
+      </pmo:patentFamily>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1">
+      <dcterms:references>
+         <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1/publication">
+            <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#IntellectualPropertyDocument"/>
+            <property:status>new</property:status>
+            <dcterms:hasPart>
+               <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1/publication/19781019">
+                  <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentPublication"/>
+                  <dcterms:isPartOf rdf:resource="http://example.org/patent/WO-1978000001-A1/publication"/>
+                  <property:status>new</property:status>
+                  <pulo:fileFormat>original</pulo:fileFormat>
+                  <property:filing-office rdf:resource="http://example.org/code/filing-office/WO"/>
+                  <pmo:publicationNumber>1978000001</pmo:publicationNumber>
+                  <pmo:kindCode>A1</pmo:kindCode>
+                  <pmo:dateOfPublication rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1978-10-19</pmo:dateOfPublication>
+               </rdf:Description>
+            </dcterms:hasPart>
+         </rdf:Description>
+      </dcterms:references>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1">
+      <dcterms:references>
+         <rdf:Description rdf:about="http://example.org/patent/US-7800002-W/application">
+            <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#IntellectualPropertyDocument"/>
+            <property:status>new</property:status>
+            <property:is-representative>NO</property:is-representative>
+            <dcterms:hasPart>
+               <rdf:Description rdf:about="http://example.org/patent/US-7800002-W/application/19780601">
+                  <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentPublication"/>
+                  <dcterms:isPartOf rdf:resource="http://example.org/patent/US-7800002-W/application"/>
+                  <property:status>new</property:status>
+                  <pulo:fileFormat>epo</pulo:fileFormat>
+                  <property:filing-office rdf:resource="http://example.org/code/filing-office/US"/>
+                  <pmo:applicationNumber>7800002</pmo:applicationNumber>
+                  <pmo:dateOfPublication rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1978-06-01</pmo:dateOfPublication>
+               </rdf:Description>
+            </dcterms:hasPart>
+         </rdf:Description>
+      </dcterms:references>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1">
+      <property:priority-claim>
+         <rdf:Description rdf:about="http://example.org/patent/US-82772577-A/publication/1">
+            <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentPublication"/>
+         </rdf:Description>
+      </property:priority-claim>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1">
+      <property:priority-claim>
+         <rdf:Description rdf:about="http://example.org/patent/US-89418878-A/publication/1">
+            <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentPublication"/>
+         </rdf:Description>
+      </property:priority-claim>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1">
+      <pmo:classifiedAs>
+         <rdf:Description rdf:about="http://example.org/concept/ecla/B01D13/04H">
+            <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+            <pmo:classifiedPatent rdf:resource="http://example.org/patent/WO-1978000001-A1"/>
+            <pmo:classifiedPatent rdf:resource="http://example.org/concept/B01D13/04H"/>
+            <pmo:classificationCode>B01D13/04H</pmo:classificationCode>
+            <skos:notation>B01D13/04H</skos:notation>
+         </rdf:Description>
+      </pmo:classifiedAs>
+      <pmo:classifiedAs>
+         <rdf:Description rdf:about="http://example.org/concept/ecla/B01D17/02B">
+            <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+            <pmo:classifiedPatent rdf:resource="http://example.org/patent/WO-1978000001-A1"/>
+            <pmo:classifiedPatent rdf:resource="http://example.org/concept/B01D17/02B"/>
+            <pmo:classificationCode>B01D17/02B</pmo:classificationCode>
+            <skos:notation>B01D17/02B</skos:notation>
+         </rdf:Description>
+      </pmo:classifiedAs>
+      <pmo:classifiedAs>
+         <rdf:Description rdf:about="http://example.org/concept/ecla/B01D39/20B">
+            <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+            <pmo:classifiedPatent rdf:resource="http://example.org/patent/WO-1978000001-A1"/>
+            <pmo:classifiedPatent rdf:resource="http://example.org/concept/B01D39/20B"/>
+            <pmo:classificationCode>B01D39/20B</pmo:classificationCode>
+            <skos:notation>B01D39/20B</skos:notation>
+         </rdf:Description>
+      </pmo:classifiedAs>
+      <pmo:classifiedAs>
+         <rdf:Description rdf:about="http://example.org/concept/ecla/B01J20/28">
+            <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+            <pmo:classifiedPatent rdf:resource="http://example.org/patent/WO-1978000001-A1"/>
+            <pmo:classifiedPatent rdf:resource="http://example.org/concept/B01J20/28"/>
+            <pmo:classificationCode>B01J20/28</pmo:classificationCode>
+            <skos:notation>B01J20/28</skos:notation>
+         </rdf:Description>
+      </pmo:classifiedAs>
+      <pmo:classifiedAs>
+         <rdf:Description rdf:about="http://example.org/concept/ecla/B01J35/06B">
+            <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+            <pmo:classifiedPatent rdf:resource="http://example.org/patent/WO-1978000001-A1"/>
+            <pmo:classifiedPatent rdf:resource="http://example.org/concept/B01J35/06B"/>
+            <pmo:classificationCode>B01J35/06B</pmo:classificationCode>
+            <skos:notation>B01J35/06B</skos:notation>
+         </rdf:Description>
+      </pmo:classifiedAs>
+      <pmo:classifiedAs>
+         <rdf:Description rdf:about="http://example.org/concept/ecla/B01J37/02C">
+            <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+            <pmo:classifiedPatent rdf:resource="http://example.org/patent/WO-1978000001-A1"/>
+            <pmo:classifiedPatent rdf:resource="http://example.org/concept/B01J37/02C"/>
+            <pmo:classificationCode>B01J37/02C</pmo:classificationCode>
+            <skos:notation>B01J37/02C</skos:notation>
+         </rdf:Description>
+      </pmo:classifiedAs>
+      <pmo:classifiedAs>
+         <rdf:Description rdf:about="http://example.org/concept/ecla/C02F1/68C">
+            <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+            <pmo:classifiedPatent rdf:resource="http://example.org/patent/WO-1978000001-A1"/>
+            <pmo:classifiedPatent rdf:resource="http://example.org/concept/C02F1/68C"/>
+            <pmo:classificationCode>C02F1/68C</pmo:classificationCode>
+            <skos:notation>C02F1/68C</skos:notation>
+         </rdf:Description>
+      </pmo:classifiedAs>
+      <pmo:classifiedAs>
+         <rdf:Description rdf:about="http://example.org/concept/ecla/C03B19/12">
+            <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+            <pmo:classifiedPatent rdf:resource="http://example.org/patent/WO-1978000001-A1"/>
+            <pmo:classifiedPatent rdf:resource="http://example.org/concept/C03B19/12"/>
+            <pmo:classificationCode>C03B19/12</pmo:classificationCode>
+            <skos:notation>C03B19/12</skos:notation>
+         </rdf:Description>
+      </pmo:classifiedAs>
+      <pmo:classifiedAs>
+         <rdf:Description rdf:about="http://example.org/concept/ecla/C03B37/016">
+            <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+            <pmo:classifiedPatent rdf:resource="http://example.org/patent/WO-1978000001-A1"/>
+            <pmo:classifiedPatent rdf:resource="http://example.org/concept/C03B37/016"/>
+            <pmo:classificationCode>C03B37/016</pmo:classificationCode>
+            <skos:notation>C03B37/016</skos:notation>
+         </rdf:Description>
+      </pmo:classifiedAs>
+      <pmo:classifiedAs>
+         <rdf:Description rdf:about="http://example.org/concept/ecla/C03C11/00">
+            <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+            <pmo:classifiedPatent rdf:resource="http://example.org/patent/WO-1978000001-A1"/>
+            <pmo:classifiedPatent rdf:resource="http://example.org/concept/C03C11/00"/>
+            <pmo:classificationCode>C03C11/00</pmo:classificationCode>
+            <skos:notation>C03C11/00</skos:notation>
+         </rdf:Description>
+      </pmo:classifiedAs>
+      <pmo:classifiedAs>
+         <rdf:Description rdf:about="http://example.org/concept/ecla/C03C13/04">
+            <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+            <pmo:classifiedPatent rdf:resource="http://example.org/patent/WO-1978000001-A1"/>
+            <pmo:classifiedPatent rdf:resource="http://example.org/concept/C03C13/04"/>
+            <pmo:classificationCode>C03C13/04</pmo:classificationCode>
+            <skos:notation>C03C13/04</skos:notation>
+         </rdf:Description>
+      </pmo:classifiedAs>
+      <pmo:classifiedAs>
+         <rdf:Description rdf:about="http://example.org/concept/ecla/C03C23/00S">
+            <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+            <pmo:classifiedPatent rdf:resource="http://example.org/patent/WO-1978000001-A1"/>
+            <pmo:classifiedPatent rdf:resource="http://example.org/concept/C03C23/00S"/>
+            <pmo:classificationCode>C03C23/00S</pmo:classificationCode>
+            <skos:notation>C03C23/00S</skos:notation>
+         </rdf:Description>
+      </pmo:classifiedAs>
+      <pmo:classifiedAs>
+         <rdf:Description rdf:about="http://example.org/concept/ecla/C03C3/00">
+            <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+            <pmo:classifiedPatent rdf:resource="http://example.org/patent/WO-1978000001-A1"/>
+            <pmo:classifiedPatent rdf:resource="http://example.org/concept/C03C3/00"/>
+            <pmo:classificationCode>C03C3/00</pmo:classificationCode>
+            <skos:notation>C03C3/00</skos:notation>
+         </rdf:Description>
+      </pmo:classifiedAs>
+      <pmo:classifiedAs>
+         <rdf:Description rdf:about="http://example.org/concept/ecla/C08J5/22">
+            <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+            <pmo:classifiedPatent rdf:resource="http://example.org/patent/WO-1978000001-A1"/>
+            <pmo:classifiedPatent rdf:resource="http://example.org/concept/C08J5/22"/>
+            <pmo:classificationCode>C08J5/22</pmo:classificationCode>
+            <skos:notation>C08J5/22</skos:notation>
+         </rdf:Description>
+      </pmo:classifiedAs>
+      <pmo:classifiedAs>
+         <rdf:Description rdf:about="http://example.org/concept/ecla/C12H1/04B">
+            <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+            <pmo:classifiedPatent rdf:resource="http://example.org/patent/WO-1978000001-A1"/>
+            <pmo:classifiedPatent rdf:resource="http://example.org/concept/C12H1/04B"/>
+            <pmo:classificationCode>C12H1/04B</pmo:classificationCode>
+            <skos:notation>C12H1/04B</skos:notation>
+         </rdf:Description>
+      </pmo:classifiedAs>
+      <pmo:classifiedAs>
+         <rdf:Description rdf:about="http://example.org/concept/ecla/G21F9/12">
+            <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+            <pmo:classifiedPatent rdf:resource="http://example.org/patent/WO-1978000001-A1"/>
+            <pmo:classifiedPatent rdf:resource="http://example.org/concept/G21F9/12"/>
+            <pmo:classificationCode>G21F9/12</pmo:classificationCode>
+            <skos:notation>G21F9/12</skos:notation>
+         </rdf:Description>
+      </pmo:classifiedAs>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1">
+      <dcterms:title xml:lang="en">LOW TEMPERATURE SYNTHESIS OF VITREOUS BODIES AND THEIR INTERMEDIATES</dcterms:title>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1">
+      <pmo:applicant>
+         <rdf:Description rdf:about="urn:uuid:3d6c3a5c-99ff-443a-9a6c-ec07bf84536f">
+            <rdf:type rdf:resource="http://www.owl-ontologies.com/sumo.owl#CognitiveAgent"/>
+            <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+            <pmo:applicantOf rdf:resource="http://example.org/patent/WO-1978000001-A1"/>
+            <foaf:name>SAMANTA M</foaf:name>
+            <schema:address>
+               <rdf:Description>
+                  <rdf:type rdf:resource="http://schema.org/PostalAddress"/>
+                  <schema:addressCountry rdf:resource="http://example.org/code/country/US"/>
+               </rdf:Description>
+            </schema:address>
+         </rdf:Description>
+      </pmo:applicant>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1">
+      <pmo:applicant>
+         <rdf:Description rdf:about="urn:uuid:396d676e-62ea-4d24-8c99-886dbe28c7bc">
+            <rdf:type rdf:resource="http://www.owl-ontologies.com/sumo.owl#CognitiveAgent"/>
+            <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+            <pmo:applicantOf rdf:resource="http://example.org/patent/WO-1978000001-A1"/>
+            <foaf:name>SAMANTA M</foaf:name>
+         </rdf:Description>
+      </pmo:applicant>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1">
+      <pmo:inventor>
+         <rdf:Description rdf:about="urn:uuid:ca62657e-ec54-43a0-a29f-0fdd38030215">
+            <rdf:type rdf:resource="http://www.owl-ontologies.com/sumo.owl#Human"/>
+            <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+            <pmo:inventorOf rdf:resource="http://example.org/patent/WO-1978000001-A1"/>
+            <foaf:name>SAMANTA M</foaf:name>
+            <schema:address>
+               <rdf:Description>
+                  <rdf:type rdf:resource="http://schema.org/PostalAddress"/>
+                  <schema:addressCountry rdf:resource="http://example.org/code/country/US"/>
+               </rdf:Description>
+            </schema:address>
+         </rdf:Description>
+      </pmo:inventor>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1">
+      <pmo:inventor>
+         <rdf:Description rdf:about="urn:uuid:bd956032-faf0-4257-b103-6166dbde8da2">
+            <rdf:type rdf:resource="http://www.owl-ontologies.com/sumo.owl#Human"/>
+            <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+            <pmo:inventorOf rdf:resource="http://example.org/patent/WO-1978000001-A1"/>
+            <foaf:name>SAMANTA M</foaf:name>
+         </rdf:Description>
+      </pmo:inventor>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1">
+      <property:hasClaim>
+         <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1/claim/0001">
+            <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pso.owl#Claim"/>
+            <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+            <skos:notation>0001</skos:notation>
+            <skos:definition xml:lang="en"> I CLAIM; 1. A method for the synthesis of a porous self-supporting body, comprising the steps of: providing a first solution containing at least one basic glass forming solute; providing a second solution containing at least one acidic solute; providing in contact with and separating said solutions a permeable barrier substantially impermeable to said at least one basic solute and substan¬ tially permeable to said at least one acidic solute; and permitting said second solution to pass through said barrier to react with said first solution to deposit on the side of said barrier in contact with said first solution a porous self-supporting body. 2. The method of Claim 1 wherein said permeable barrier is a dialyzer membrane. 3. The method of Claim 1 wherein said at least one basic solute is selected from the group consisting of borates, aluminates, silicates, germanates, stannates, plumbates, phosphates, arsenates, antimonates, bismuthates, selenates, tellurates, zirconates, titanates, tungstates, vanadates and molybdates. 4. The method of Claim 1 wherein said first solution is a true solution. 5. The method of Claim 1 wherein said first solu¬ tion is a colloidal solution. 6. The method of Claim 1 and including the step of varying the time during which said solutions are in contact with said barrier so as to obtain a certain thickness for said deposited self-supporting body. 7. The method of Claim 1 wherein said deposited self-supporting body is crystalline. 8. The method of Claim 1 wherein said deposited self-supporting body is partially vitreous and partially crystalline. 9. The method of Claim 1 wherein said deposited self-supporting body is vitreous. 10. The method of Claim 1 and including the step of heating said porous body to consolidate it into a non- porous vitreous body. 11. The method of Claim 1 and including the steps of: leaching said porous body with acid: washing said porous body with water: drying, said porous body; and heating said porous body to consolidate it into a non-porous vitreous body. 12. The method of Claim 1 and including the step of doping said porous body. 13. A product made by the process of Claim 1. 14. A product made by the process of Claim 10. 15. The method of Claim 1 wherein said first solution contains an additive. 16. The method of Claim 1 wherein said second solution contains an additive. 17. The method of Claim 1 wherein said first and second solutions contain additives. 18. The method of Claim 1 and including the step of varying the rate of deposition of said self-supporting body. 19. The method of Claim 1 and including the step of varying the rate of reaction by varying the concentrations of said solutions. 20. The method of Claim 1 and including the step of varying the rate of reaction by varying the temperature of said solutions. 21. The method of Claim 1 and including the step of varying the rate of reaction by varying the relative pressures of said solutions. 22. The method of Claim 1 and including the step of varying the porosity and pore size of said self-supporting body by varying the concentrations of said first and second solutions. 23. The method of Claim 1 and including the step of varying the porosity and pore size of said self-supporting body by varying the concentration of said first solution. 24. The method of Claim 1 and including the step of varying the porosity and pore size of said self-supporting body by varying the concentration of said second solution. 25. The method of Claim 1 wherein said at least one acidic solute is seleced from the group consisting of acids and salts of strong acids and weak bases. 26. The method of Claim 1 wherein the concentration of said first solution is such that one liter of said first solution contains from 0.10 moles to 40 moles of at least one glass forming oxide. 27. The method of Claim 1 wherein the solvents for said- first and second solutions are selected from the group consisting of water, hydrocarbons, alcohols, ketones, ethers, carboxylic acids and mixtures thereof. 28. The method of Claim 1 wherein said at least one basic solute is a simple solute consisting of two oxides. 29. The method of Claim 1 wherein said at least one basic solute is a complex solute consisting of more than two oxides 30. The method of Claim 1 wherein said at least one acidic solute is a salt of a strong acid and a weak base. 31. The method of Claim 1 wherein said at least one basic solute is selected from the group consisting of silicates and germanates. 32. The method of Claim 1 wherein said barrier is in the form of a container with said first solution on the inside of said container and said second solution on the outside of said container. 33. The method of Claim 1 wherein said barrier is in the form of a shaped article whereby said porous self- supporting body conforms to the shape of said barrier. 34. A pro duct made by the process of Claim 33. 35. The method of Claim 1 and including the step of changing the compositions of said first solution and said second solution during deposition of said self-supporting body to develop in said body, layers of different composition. 36. The method of Claim 1 and including the step of changing the composition .of said first solution during deposition of said self-supporting body to develop in said body, layers of different composition. 37. The method of Slaim 1 and including the step of changing the composition of said second solution during deposition of said self-supporting body to develop in said body, layers of different composition. 38. The method of Claim 1 and including the step of continuously varying the composition of said first solution and said second solution during deposition of said self- supporting body to develop in said body a continuous variation in composition. 39. The method of Claim 1 and including the step of continuously varying the composition of said first solution during deposition of said self-supporting body to develop in said body a continuous variation in composition. 40. The method of Claim 1 and including the step of continouously varying the composition of said second solution during deposition of said self-supporting body to develop in said Body a continuous variation in composition. 41. The method of Claim 1 and including the step of varying the time during which said solutions are in contact with said barrier so as to develop a certain composition profile for said porous self-supporting body. 42. A method for the synthesis of a porous self- supporting body, comprising the steps of: providing a first solution containing at least one gel forming solute: providing a second solution containing at least one solute which will form a gel with the said first solution: providing in contact with and separating said solutions a permeable barrier substantially impermeable to said at least one first solution solute and substantially permeable to said at least one second solution solute: and permitting said second solution to pass through said barrier to react with the said first solution to deposit on the side of said barrier in contact with said first solution a porous self-supporting body. 43. The method of Claim 30 wherein said salt of a strong acid and a weak base is an ammonium salt, 44. A product made by the process of Claim 41. 45. A product made by the process of Claim 40.</skos:definition>
+         </rdf:Description>
+      </property:hasClaim>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1">
+      <dcterms:license>User acknowledges that the Information Retrieval Facility (IRF) and its third party providers retain all right, title and interest in and to this xml under applicable copyright laws. User acquires no ownership rights to this xml including but not limited to its format. User hereby accepts the terms and conditions of the Licence Agreement set forth at http://www.ir-facility.org/legal/marec/data_licence</dcterms:license>
+   </rdf:Description>
+</rdf:RDF>
