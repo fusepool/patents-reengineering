@@ -328,7 +328,7 @@ XXX: Maybe switch to a code list
 <!--                        <skos:topConceptOf>-->
 <!--                            <rdf:Description rdf:about="{$concept}ipc">-->
 <!--                                <skos:hasTopConcept rdf:resource="{$concept}{$id}"/>-->
-                                <pmo:classifiedPatent rdf:resource="{$concept}{$id}"/>
+<!--                                <pmo:classifiedPatent rdf:resource="{$concept}{$id}"/>-->
 <!--                            </rdf:Description>-->
 <!--                        </skos:topConceptOf>-->
 

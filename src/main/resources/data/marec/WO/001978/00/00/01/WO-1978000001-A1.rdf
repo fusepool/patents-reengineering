@@ -17,16 +17,16 @@
       <rdf:type rdf:resource="http://www.w3.org/ns/prov#Agent"/>
    </rdf:Description>
    <rdf:Description xmlns:xs="http://www.w3.org/2001/XMLSchema"
-                    rdf:about="http://example.org/provenance/activity/20130221095658">
+                    rdf:about="http://example.org/provenance/activity/20130221114303">
       <rdf:type rdf:resource="http://www.w3.org/ns/prov#Activity"/>
-      <prov:startedAtTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2013-02-21T09:56:58Z</prov:startedAtTime>
+      <prov:startedAtTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2013-02-21T11:43:03Z</prov:startedAtTime>
       <prov:wasAssociatedWith rdf:resource="http://csarven.ca/#i"/>
       <prov:used rdf:resource="http://example.org/data/WO-1978000001-A1.xml"/>
       <prov:used rdf:resource="https://github.com/fusepool/patents-reengineering/src/main/resources/scripts/marec.xsl"/>
       <prov:generated>
          <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1">
             <prov:wasDerivedFrom rdf:resource="http://example.org/data/WO-1978000001-A1.xml"/>
-            <prov:wasGeneratedBy rdf:resource="http://example.org/provenance/activity/20130221095658"/>
+            <prov:wasGeneratedBy rdf:resource="http://example.org/provenance/activity/20130221114303"/>
          </rdf:Description>
       </prov:generated>
    </rdf:Description>
@@ -100,7 +100,6 @@
          <rdf:Description rdf:about="http://example.org/concept/ecla/B01D13/04H">
             <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
             <pmo:classifiedPatent rdf:resource="http://example.org/patent/WO-1978000001-A1"/>
-            <pmo:classifiedPatent rdf:resource="http://example.org/concept/B01D13/04H"/>
             <pmo:classificationCode>B01D13/04H</pmo:classificationCode>
             <skos:notation>B01D13/04H</skos:notation>
          </rdf:Description>
@@ -109,7 +108,6 @@
          <rdf:Description rdf:about="http://example.org/concept/ecla/B01D17/02B">
             <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
             <pmo:classifiedPatent rdf:resource="http://example.org/patent/WO-1978000001-A1"/>
-            <pmo:classifiedPatent rdf:resource="http://example.org/concept/B01D17/02B"/>
             <pmo:classificationCode>B01D17/02B</pmo:classificationCode>
             <skos:notation>B01D17/02B</skos:notation>
          </rdf:Description>
@@ -118,7 +116,6 @@
          <rdf:Description rdf:about="http://example.org/concept/ecla/B01D39/20B">
             <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
             <pmo:classifiedPatent rdf:resource="http://example.org/patent/WO-1978000001-A1"/>
-            <pmo:classifiedPatent rdf:resource="http://example.org/concept/B01D39/20B"/>
             <pmo:classificationCode>B01D39/20B</pmo:classificationCode>
             <skos:notation>B01D39/20B</skos:notation>
          </rdf:Description>
@@ -127,7 +124,6 @@
          <rdf:Description rdf:about="http://example.org/concept/ecla/B01J20/28">
             <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
             <pmo:classifiedPatent rdf:resource="http://example.org/patent/WO-1978000001-A1"/>
-            <pmo:classifiedPatent rdf:resource="http://example.org/concept/B01J20/28"/>
             <pmo:classificationCode>B01J20/28</pmo:classificationCode>
             <skos:notation>B01J20/28</skos:notation>
          </rdf:Description>
@@ -136,7 +132,6 @@
          <rdf:Description rdf:about="http://example.org/concept/ecla/B01J35/06B">
             <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
             <pmo:classifiedPatent rdf:resource="http://example.org/patent/WO-1978000001-A1"/>
-            <pmo:classifiedPatent rdf:resource="http://example.org/concept/B01J35/06B"/>
             <pmo:classificationCode>B01J35/06B</pmo:classificationCode>
             <skos:notation>B01J35/06B</skos:notation>
          </rdf:Description>
@@ -145,7 +140,6 @@
          <rdf:Description rdf:about="http://example.org/concept/ecla/B01J37/02C">
             <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
             <pmo:classifiedPatent rdf:resource="http://example.org/patent/WO-1978000001-A1"/>
-            <pmo:classifiedPatent rdf:resource="http://example.org/concept/B01J37/02C"/>
             <pmo:classificationCode>B01J37/02C</pmo:classificationCode>
             <skos:notation>B01J37/02C</skos:notation>
          </rdf:Description>
@@ -154,7 +148,6 @@
          <rdf:Description rdf:about="http://example.org/concept/ecla/C02F1/68C">
             <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
             <pmo:classifiedPatent rdf:resource="http://example.org/patent/WO-1978000001-A1"/>
-            <pmo:classifiedPatent rdf:resource="http://example.org/concept/C02F1/68C"/>
             <pmo:classificationCode>C02F1/68C</pmo:classificationCode>
             <skos:notation>C02F1/68C</skos:notation>
          </rdf:Description>
@@ -163,7 +156,6 @@
          <rdf:Description rdf:about="http://example.org/concept/ecla/C03B19/12">
             <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
             <pmo:classifiedPatent rdf:resource="http://example.org/patent/WO-1978000001-A1"/>
-            <pmo:classifiedPatent rdf:resource="http://example.org/concept/C03B19/12"/>
             <pmo:classificationCode>C03B19/12</pmo:classificationCode>
             <skos:notation>C03B19/12</skos:notation>
          </rdf:Description>
@@ -172,7 +164,6 @@
          <rdf:Description rdf:about="http://example.org/concept/ecla/C03B37/016">
             <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
             <pmo:classifiedPatent rdf:resource="http://example.org/patent/WO-1978000001-A1"/>
-            <pmo:classifiedPatent rdf:resource="http://example.org/concept/C03B37/016"/>
             <pmo:classificationCode>C03B37/016</pmo:classificationCode>
             <skos:notation>C03B37/016</skos:notation>
          </rdf:Description>
@@ -181,7 +172,6 @@
          <rdf:Description rdf:about="http://example.org/concept/ecla/C03C11/00">
             <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
             <pmo:classifiedPatent rdf:resource="http://example.org/patent/WO-1978000001-A1"/>
-            <pmo:classifiedPatent rdf:resource="http://example.org/concept/C03C11/00"/>
             <pmo:classificationCode>C03C11/00</pmo:classificationCode>
             <skos:notation>C03C11/00</skos:notation>
          </rdf:Description>
@@ -190,7 +180,6 @@
          <rdf:Description rdf:about="http://example.org/concept/ecla/C03C13/04">
             <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
             <pmo:classifiedPatent rdf:resource="http://example.org/patent/WO-1978000001-A1"/>
-            <pmo:classifiedPatent rdf:resource="http://example.org/concept/C03C13/04"/>
             <pmo:classificationCode>C03C13/04</pmo:classificationCode>
             <skos:notation>C03C13/04</skos:notation>
          </rdf:Description>
@@ -199,7 +188,6 @@
          <rdf:Description rdf:about="http://example.org/concept/ecla/C03C23/00S">
             <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
             <pmo:classifiedPatent rdf:resource="http://example.org/patent/WO-1978000001-A1"/>
-            <pmo:classifiedPatent rdf:resource="http://example.org/concept/C03C23/00S"/>
             <pmo:classificationCode>C03C23/00S</pmo:classificationCode>
             <skos:notation>C03C23/00S</skos:notation>
          </rdf:Description>
@@ -208,7 +196,6 @@
          <rdf:Description rdf:about="http://example.org/concept/ecla/C03C3/00">
             <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
             <pmo:classifiedPatent rdf:resource="http://example.org/patent/WO-1978000001-A1"/>
-            <pmo:classifiedPatent rdf:resource="http://example.org/concept/C03C3/00"/>
             <pmo:classificationCode>C03C3/00</pmo:classificationCode>
             <skos:notation>C03C3/00</skos:notation>
          </rdf:Description>
@@ -217,7 +204,6 @@
          <rdf:Description rdf:about="http://example.org/concept/ecla/C08J5/22">
             <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
             <pmo:classifiedPatent rdf:resource="http://example.org/patent/WO-1978000001-A1"/>
-            <pmo:classifiedPatent rdf:resource="http://example.org/concept/C08J5/22"/>
             <pmo:classificationCode>C08J5/22</pmo:classificationCode>
             <skos:notation>C08J5/22</skos:notation>
          </rdf:Description>
@@ -226,7 +212,6 @@
          <rdf:Description rdf:about="http://example.org/concept/ecla/C12H1/04B">
             <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
             <pmo:classifiedPatent rdf:resource="http://example.org/patent/WO-1978000001-A1"/>
-            <pmo:classifiedPatent rdf:resource="http://example.org/concept/C12H1/04B"/>
             <pmo:classificationCode>C12H1/04B</pmo:classificationCode>
             <skos:notation>C12H1/04B</skos:notation>
          </rdf:Description>
@@ -235,7 +220,6 @@
          <rdf:Description rdf:about="http://example.org/concept/ecla/G21F9/12">
             <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
             <pmo:classifiedPatent rdf:resource="http://example.org/patent/WO-1978000001-A1"/>
-            <pmo:classifiedPatent rdf:resource="http://example.org/concept/G21F9/12"/>
             <pmo:classificationCode>G21F9/12</pmo:classificationCode>
             <skos:notation>G21F9/12</skos:notation>
          </rdf:Description>
@@ -246,7 +230,7 @@
    </rdf:Description>
    <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1">
       <pmo:applicant>
-         <rdf:Description rdf:about="urn:uuid:3d6c3a5c-99ff-443a-9a6c-ec07bf84536f">
+         <rdf:Description rdf:about="urn:uuid:45b2bde4-cdb5-4dfd-8e51-b2146fb25a1c">
             <rdf:type rdf:resource="http://www.owl-ontologies.com/sumo.owl#CognitiveAgent"/>
             <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
             <pmo:applicantOf rdf:resource="http://example.org/patent/WO-1978000001-A1"/>
@@ -262,7 +246,7 @@
    </rdf:Description>
    <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1">
       <pmo:applicant>
-         <rdf:Description rdf:about="urn:uuid:396d676e-62ea-4d24-8c99-886dbe28c7bc">
+         <rdf:Description rdf:about="urn:uuid:e23f26f8-912a-4a4d-af4e-fb2ba1202755">
             <rdf:type rdf:resource="http://www.owl-ontologies.com/sumo.owl#CognitiveAgent"/>
             <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
             <pmo:applicantOf rdf:resource="http://example.org/patent/WO-1978000001-A1"/>
@@ -272,7 +256,7 @@
    </rdf:Description>
    <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1">
       <pmo:inventor>
-         <rdf:Description rdf:about="urn:uuid:ca62657e-ec54-43a0-a29f-0fdd38030215">
+         <rdf:Description rdf:about="urn:uuid:74db2422-0aa0-4c5b-a4f6-2b939066a6f6">
             <rdf:type rdf:resource="http://www.owl-ontologies.com/sumo.owl#Human"/>
             <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
             <pmo:inventorOf rdf:resource="http://example.org/patent/WO-1978000001-A1"/>
@@ -288,7 +272,7 @@
    </rdf:Description>
    <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1">
       <pmo:inventor>
-         <rdf:Description rdf:about="urn:uuid:bd956032-faf0-4257-b103-6166dbde8da2">
+         <rdf:Description rdf:about="urn:uuid:df9435d3-812e-410d-b04d-43f08be4d6ec">
             <rdf:type rdf:resource="http://www.owl-ontologies.com/sumo.owl#Human"/>
             <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
             <pmo:inventorOf rdf:resource="http://example.org/patent/WO-1978000001-A1"/>
