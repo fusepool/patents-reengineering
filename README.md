@@ -17,7 +17,10 @@ From patents, it transforms bibliogrpahic-data, publication and application refe
 It comes with scripts and sample data. Tested with `saxonb-xslt` tool for Debian from command-line.
 
 ### Scripts
-The `scripts/` directory contains XSLT 2.0 templates and a simple Bash script to test it on provided sample data.
+The `scripts/` directory contains Bash script to test it on provided sample data.
+
+### XSL
+The `xsl/` directory is for MAREC and ECLA transformations.
 
 ### Data
 There is some sample data under `data/`.
