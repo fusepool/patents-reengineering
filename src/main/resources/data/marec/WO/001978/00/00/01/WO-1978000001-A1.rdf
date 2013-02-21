@@ -17,16 +17,16 @@
       <rdf:type rdf:resource="http://www.w3.org/ns/prov#Agent"/>
    </rdf:Description>
    <rdf:Description xmlns:xs="http://www.w3.org/2001/XMLSchema"
-                    rdf:about="http://example.org/provenance/activity/20130221142937">
+                    rdf:about="http://example.org/provenance/activity/20130221174744">
       <rdf:type rdf:resource="http://www.w3.org/ns/prov#Activity"/>
-      <prov:startedAtTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2013-02-21T14:29:37Z</prov:startedAtTime>
+      <prov:startedAtTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2013-02-21T17:47:44Z</prov:startedAtTime>
       <prov:wasAssociatedWith rdf:resource="http://csarven.ca/#i"/>
       <prov:used rdf:resource="http://example.org/data/WO-1978000001-A1.xml"/>
       <prov:used rdf:resource="https://github.com/fusepool/patents-reengineering/src/main/resources/scripts/marec.xsl"/>
       <prov:generated>
          <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1">
             <prov:wasDerivedFrom rdf:resource="http://example.org/data/WO-1978000001-A1.xml"/>
-            <prov:wasGeneratedBy rdf:resource="http://example.org/provenance/activity/20130221142937"/>
+            <prov:wasGeneratedBy rdf:resource="http://example.org/provenance/activity/20130221174744"/>
          </rdf:Description>
       </prov:generated>
    </rdf:Description>
@@ -229,8 +229,62 @@
       <dcterms:title xml:lang="en">LOW TEMPERATURE SYNTHESIS OF VITREOUS BODIES AND THEIR INTERMEDIATES</dcterms:title>
    </rdf:Description>
    <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1">
+      <pmo:cites>
+         <rdf:Description rdf:about="http://example.org/patent/US-3560400-A">
+            <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#IntellectualPropertyDocument"/>
+            <pmo:citedBy rdf:resource="http://example.org/patent/WO-1978000001-A1"/>
+            <dcterms:hasPart>
+               <rdf:Description rdf:about="http://example.org/patent/US-3560400-A/publication/1">
+                  <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentPublication"/>
+                  <dcterms:isPartOf rdf:resource="http://example.org/patent/US-3560400-A/publication"/>
+                  <property:status>new</property:status>
+                  <pulo:fileFormat>epo</pulo:fileFormat>
+                  <property:filing-office rdf:resource="http://example.org/code/filing-office/US"/>
+                  <pmo:publicationNumber>3560400</pmo:publicationNumber>
+               </rdf:Description>
+            </dcterms:hasPart>
+         </rdf:Description>
+      </pmo:cites>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1">
+      <pmo:cites>
+         <rdf:Description rdf:about="http://example.org/patent/US-3597252-A">
+            <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#IntellectualPropertyDocument"/>
+            <pmo:citedBy rdf:resource="http://example.org/patent/WO-1978000001-A1"/>
+            <dcterms:hasPart>
+               <rdf:Description rdf:about="http://example.org/patent/US-3597252-A/publication/1">
+                  <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentPublication"/>
+                  <dcterms:isPartOf rdf:resource="http://example.org/patent/US-3597252-A/publication"/>
+                  <property:status>new</property:status>
+                  <pulo:fileFormat>epo</pulo:fileFormat>
+                  <property:filing-office rdf:resource="http://example.org/code/filing-office/US"/>
+                  <pmo:publicationNumber>3597252</pmo:publicationNumber>
+               </rdf:Description>
+            </dcterms:hasPart>
+         </rdf:Description>
+      </pmo:cites>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1">
+      <pmo:cites>
+         <rdf:Description rdf:about="http://example.org/patent/US-3699050-A">
+            <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#IntellectualPropertyDocument"/>
+            <pmo:citedBy rdf:resource="http://example.org/patent/WO-1978000001-A1"/>
+            <dcterms:hasPart>
+               <rdf:Description rdf:about="http://example.org/patent/US-3699050-A/publication/1">
+                  <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentPublication"/>
+                  <dcterms:isPartOf rdf:resource="http://example.org/patent/US-3699050-A/publication"/>
+                  <property:status>new</property:status>
+                  <pulo:fileFormat>epo</pulo:fileFormat>
+                  <property:filing-office rdf:resource="http://example.org/code/filing-office/US"/>
+                  <pmo:publicationNumber>3699050</pmo:publicationNumber>
+               </rdf:Description>
+            </dcterms:hasPart>
+         </rdf:Description>
+      </pmo:cites>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1">
       <pmo:applicant>
-         <rdf:Description rdf:about="urn:uuid:78661a32-587a-446e-aba6-f6bbe350263b">
+         <rdf:Description rdf:about="urn:uuid:7ed7e038-c878-4c6a-aae6-8dd18bc8aba6">
             <rdf:type rdf:resource="http://www.owl-ontologies.com/sumo.owl#CognitiveAgent"/>
             <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
             <pmo:applicantOf rdf:resource="http://example.org/patent/WO-1978000001-A1"/>
@@ -246,7 +300,7 @@
    </rdf:Description>
    <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1">
       <pmo:applicant>
-         <rdf:Description rdf:about="urn:uuid:d6352895-5d5d-40a2-9136-79d65af406fc">
+         <rdf:Description rdf:about="urn:uuid:eeffb26f-e938-49e4-9d9c-6b3f8f2a0994">
             <rdf:type rdf:resource="http://www.owl-ontologies.com/sumo.owl#CognitiveAgent"/>
             <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
             <pmo:applicantOf rdf:resource="http://example.org/patent/WO-1978000001-A1"/>
@@ -256,7 +310,7 @@
    </rdf:Description>
    <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1">
       <pmo:inventor>
-         <rdf:Description rdf:about="urn:uuid:e03b2081-ae7b-45c3-b16a-115e4a16e87b">
+         <rdf:Description rdf:about="urn:uuid:1a7d0867-fc60-4de6-bf8b-97087ba63330">
             <rdf:type rdf:resource="http://www.owl-ontologies.com/sumo.owl#Human"/>
             <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
             <pmo:inventorOf rdf:resource="http://example.org/patent/WO-1978000001-A1"/>
@@ -272,7 +326,7 @@
    </rdf:Description>
    <rdf:Description rdf:about="http://example.org/patent/WO-1978000001-A1">
       <pmo:inventor>
-         <rdf:Description rdf:about="urn:uuid:2f8df882-7858-414e-a8ee-be9f99dcbc4e">
+         <rdf:Description rdf:about="urn:uuid:18a93913-7ccf-42fb-b9ab-489f21cafa98">
             <rdf:type rdf:resource="http://www.owl-ontologies.com/sumo.owl#Human"/>
             <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
             <pmo:inventorOf rdf:resource="http://example.org/patent/WO-1978000001-A1"/>
