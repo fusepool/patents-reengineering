@@ -196,7 +196,8 @@ XXX: Normally we don't really want to define other patents from here. In case th
 
         <xsl:variable name="referenceType">
             <xsl:choose>
-                <xsl:when test="local-name() = 'publication-reference'">
+                <xsl:when test="local-name() = 'publication-reference'
+                                or local-name() = 'patcit'">
                     <xsl:value-of select="'publication'"/>
                 </xsl:when>
                 <xsl:when test="local-name() = 'application-reference'">
@@ -294,6 +295,8 @@ XXX: Normally we don't really want to define other patents from here. In case th
             <rdf:Description rdf:about="{$patent}{$ucid}">
                 <xsl:apply-templates select="invention-title"/>
             </rdf:Description>
+
+            <xsl:call-template name="citations"/>
         </xsl:for-each>
     </xsl:template>
 
@@ -348,6 +351,38 @@ XXX: Maybe switch to a code list
         <dcterms:title><xsl:call-template name="langTextNode"/></dcterms:title>
     </xsl:template>
 
+    <xsl:template name="citations">
+        <xsl:param name="ucid" tunnel="yes"/>
+
+        <xsl:for-each select="citations/patent-citations/patcit">
+            <rdf:Description rdf:about="{$patent}{$ucid}">
+                <pmo:cites>
+                    <rdf:Description rdf:about="{$patent}{@ucid}">
+                        <rdf:type rdf:resource="{$pmo}IntellectualPropertyDocument"/>
+                        <pmo:citedBy rdf:resource="{$patent}{$ucid}"/>
+
+                        <xsl:call-template name="document-id">
+                            <xsl:with-param name="ucid" select="@ucid" tunnel="yes"/>
+                        </xsl:call-template>
+<!--TODO:-->
+<!--            <sources>-->
+<!--              <source category="A" name="SEA" created-by-npl="N"/>-->
+<!--            </sources>-->
+                    </rdf:Description>
+                </pmo:cites>
+            </rdf:Description>
+        </xsl:for-each>
+
+<!-- TODO -->
+<!--        <non-patent-citations>-->
+<!--          <nplcit status="new">-->
+<!--            <text>See references of WO     9906345A1</text>-->
+<!--            <sources>-->
+<!--              <source name="SEA" created-by-npl="N"/>-->
+<!--            </sources>-->
+<!--          </nplcit>-->
+<!--        </non-patent-citations>-->
+    </xsl:template>
 
     <xsl:template name="parties">
         <xsl:for-each select="parties">
