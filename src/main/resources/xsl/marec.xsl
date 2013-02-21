@@ -74,7 +74,11 @@ TODO: ignore DTD check. saxonb-xslt breaks if offline
             <xsl:call-template name="bibliographic-data">
                 <xsl:with-param name="ucid" select="$ucid" tunnel="yes"/>
             </xsl:call-template>
-<!--            <xsl:apply-templates select="description"/>-->
+
+            <xsl:call-template name="description">
+                <xsl:with-param name="ucid" select="$ucid" tunnel="yes"/>
+            </xsl:call-template>
+
             <xsl:call-template name="claims">
                 <xsl:with-param name="ucid" select="$ucid" tunnel="yes"/>
             </xsl:call-template>
@@ -595,7 +599,26 @@ Add members
         </pmo:patentFamily>
     </xsl:template>
 
-    <xsl:template match="description">
+    <xsl:template name="description">
+        <xsl:param name="ucid" tunnel="yes"/>
+
+        <xsl:for-each select="description">
+            <rdf:Description rdf:about="{$patent}{$ucid}">
+                <xsl:variable name="lang" select="@lang"/>
+                <skos:definition rdf:parseType="Literal"><xsl:copy-of select="./*"/></skos:definition>
+
+                <xsl:for-each select="p">
+                    <pso:hasDescriptionSection>
+                        <rdf:Description rdf:about="{$patent}{$ucid}/description/{@num}">
+                            <rdf:type rdf:resource="{$pso}Description"/>
+
+                            <skos:notation><xsl:value-of select="@num"/></skos:notation>
+                            <skos:definition xml:lang="{lower-case($lang)}"><xsl:copy-of select="normalize-space(.)"/></skos:definition>
+                        </rdf:Description>
+                    </pso:hasDescriptionSection>
+                </xsl:for-each>
+            </rdf:Description>
+        </xsl:for-each>
     </xsl:template>
 
     <xsl:template name="claims">
