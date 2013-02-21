@@ -607,16 +607,22 @@ Add members
                 <xsl:variable name="lang" select="@lang"/>
                 <skos:definition rdf:parseType="Literal"><xsl:copy-of select="./*"/></skos:definition>
 
-                <xsl:for-each select="p">
-                    <pso:hasDescriptionSection>
-                        <rdf:Description rdf:about="{$patent}{$ucid}/description/{@num}">
-                            <rdf:type rdf:resource="{$pso}Description"/>
+                <pso:hasDescriptionSection>
+                    <rdf:Description rdf:about="{$patent}{$ucid}/description">
+                        <rdf:type rdf:resource="{$pso}Description"/>
 
-                            <skos:notation><xsl:value-of select="@num"/></skos:notation>
-                            <skos:definition xml:lang="{lower-case($lang)}"><xsl:copy-of select="normalize-space(.)"/></skos:definition>
-                        </rdf:Description>
-                    </pso:hasDescriptionSection>
-                </xsl:for-each>
+                        <xsl:for-each select="p">
+                            <dcterms:hasPart>
+                                <rdf:Description rdf:about="{$patent}{$ucid}/description{$uriThingSeparator}{@num}">
+                                    <dcterms:isPartOf rdf:resource="{$patent}{$ucid}/description"/>
+                                    <rdfs:label xml:lang="en"><xsl:value-of select="concat('Paragraph ', @num)"/></rdfs:label>
+                                    <dcterms:identifier><xsl:value-of select="@num"/></dcterms:identifier>
+                                    <dcterms:description xml:lang="{lower-case($lang)}"><xsl:copy-of select="normalize-space(.)"/></dcterms:description>
+                                </rdf:Description>
+                            </dcterms:hasPart>
+                        </xsl:for-each>
+                    </rdf:Description>
+                </pso:hasDescriptionSection>
             </rdf:Description>
         </xsl:for-each>
     </xsl:template>
