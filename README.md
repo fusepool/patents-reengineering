@@ -7,7 +7,10 @@ XSLT 2.0 templates to transform MAREC XML to RDF/XML.
 An XSLT 2.0 processor to transform, and some configuring to change defaults.
 
 ## What can it do?
-Currently it handles bibliogrpahic-data: publication and application references, priority-claims, technical-data (classifications), parties (applicants, inventors, assignees).
+Currently it does two types of transformations: patents and classifications. The patents are based on the MAREC standard which is a superset of the patents from EP, US, JP, WO offices. The classifications are based on ECLA (and soon to be on CPC).
+
+From patents, it transforms bibliogrpahic-data, publication and application references, priority-claims, technical-data (classifications), parties (applicants, inventors, assignees), claims.
+
 
 ## What is inside?
 
@@ -20,6 +23,4 @@ The `scripts/` directory contains XSLT 2.0 templates and a simple Bash script to
 There is some sample data under `data/`.
 
 ## How-to
-Either use the provided Bash script for sample data, or take `marec.xsl`, `common.xsl` to your application. Run marec.xsl (it imports `common.xsl`).
-
-If you want to configure, edit `common.xsl` directly becauase apparently having a config in the first place was a bit too confusing - pretty standard practice to have config separetely but away it went (see commit 99f479aa249728acb9aa594614a608d394b22d5b).
+Either use the provided Bash script for sample data, or take `marec.xsl`, `common.xsl` to your application. Run marec.xsl (it imports `common.xsl`). Same goes for `ecla.xsl`.
