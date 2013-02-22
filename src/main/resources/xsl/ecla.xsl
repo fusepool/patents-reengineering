@@ -20,7 +20,7 @@
     xmlns:pulo="http://www.patexpert.org/ontologies/pulo.owl#"
     xmlns:sumo="http://www.owl-ontologies.com/sumo.owl#"
     xmlns:pmo="http://www.patexpert.org/ontologies/pmo.owl#"
-    xmlns:property="http://example.org/property/"
+    xmlns:property="http://fusepool.info/property/"
     xmlns:schema="http://schema.org/"
 
     xpath-default-namespace="http://www.epo.org/eclaexport"

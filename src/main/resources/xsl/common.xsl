@@ -19,8 +19,8 @@
 
     <xsl:output encoding="utf-8" indent="yes" method="xml" omit-xml-declaration="no"/>
 <!-- CONFIG START -->
-    <xsl:variable name="xmlDocumentBaseURI" select="'http://example.org/data/'"/>
-    <xsl:variable name="baseURI" select="'http://example.org/'"/>
+    <xsl:variable name="xmlDocumentBaseURI" select="'http://fusepool.info/data/'"/>
+    <xsl:variable name="baseURI" select="'http://fusepool.info/'"/>
     <xsl:variable name="creator" select="'http://csarven.ca/#i'"/>
     <xsl:variable name="lang" select="'en'"/>
     <xsl:variable name="uriThingSeparator" select="'/'"/>
