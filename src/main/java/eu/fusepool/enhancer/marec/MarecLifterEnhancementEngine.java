@@ -4,6 +4,7 @@ package eu.fusepool.enhancer.marec;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Collections;
+import java.util.Dictionary;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
@@ -46,7 +47,8 @@ import eu.fusepool.enhancer.marec.xslt.XSLTProcessor;
 @Service
 @Properties(value={
 		@Property(name=EnhancementEngine.PROPERTY_NAME, value="marecEngine"),
-		@Property(name=Constants.SERVICE_RANKING,intValue=MarecLifterEnhancementEngine.DEFAULT_SERVICE_RANKING)
+		@Property(name=Constants.SERVICE_RANKING,intValue=MarecLifterEnhancementEngine.DEFAULT_SERVICE_RANKING),
+		@Property(name="CLEAN_ON_STARTUP", boolValue=MarecLifterEnhancementEngine.DEF_CLEAN)
 })
 public class MarecLifterEnhancementEngine 
 extends AbstractEnhancementEngine<IOException,RuntimeException> 
@@ -67,12 +69,16 @@ implements EnhancementEngine, ServiceProperties {
 
 
 	//private static final Logger log = LoggerFactory.getLogger(MarecLifterEnhancementEngine.class);
-
 	private TCServiceLocator serviceLocator ;
 	
+	/*****
+	 * graph uri for the triplestore
+	 */
+	private static final String graphUri = "eu.fusepool.clerezza.01" ;
 	
-	@SuppressWarnings("unused")
-	private final boolean isDebug = false ;
+	//@SuppressWarnings("unused")
+	public static final boolean DEF_CLEAN = false ;
+	public static boolean CLEAN_ON_STARTUP = false ;
 	
 	
 	/**
@@ -112,12 +118,17 @@ implements EnhancementEngine, ServiceProperties {
 		super.activate(ce);
 		this.componentContext = ce ;
 		
-		 
+		Dictionary dict = ce.getProperties() ;
+		Object o = dict.get("CLEAN_ON_STARTUP") ;
+		if(o!=null)  {
+			CLEAN_ON_STARTUP = (Boolean) o ;
+		}
 		
 		
 		try { // TODO: errore nell'attivazione ?
-			serviceLocator = new TCServiceLocator(ce.getBundleContext(), "graph.uri=om.go5th.yard.clerezza.01") ;	
-			if(isDebug) {
+			serviceLocator = new TCServiceLocator(ce.getBundleContext(), "graph.uri="+graphUri) ;
+					//"graph.uri=om.go5th.yard.clerezza.01") ;	
+			if(CLEAN_ON_STARTUP) {
 				TripleCollection collection = serviceLocator.getTripleCollection() ;
 				if(collection!=null) {
 					collection.clear() ;
