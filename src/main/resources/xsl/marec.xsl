@@ -673,6 +673,7 @@ Add members
                         <rdf:Description rdf:about="{$patent}{$ucid}/claim/{@num}">
                             <rdf:type rdf:resource="{$pso}Claim"/>
                             <rdf:type rdf:resource="{$skos}Concept"/>
+                            <skos:prefLabel xml:lang="{lower-case($lang)}"><xsl:value-of select="concat('Claim ', @num)"/></skos:prefLabel>
 
                             <skos:notation><xsl:value-of select="@num"/></skos:notation>
                             <skos:definition xml:lang="{lower-case($lang)}"><xsl:copy-of select="claim-text/normalize-space(.)"/></skos:definition>
