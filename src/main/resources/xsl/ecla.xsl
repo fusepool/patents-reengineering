@@ -76,7 +76,7 @@
                 <xsl:when test="$level &lt; 7">
                     <rdf:type rdf:resource="{$skos}Collection"/>
                     <rdf:type rdf:resource="{$xkos}ClassificationLevel"/>
-                    <rdf:type rdf:resource="{pmo}ECLACategoory"/>
+                    <rdf:type rdf:resource="{$pmo}ECLACategoory"/>
                     <xkos:depth><xsl:value-of select="$level"/></xkos:depth>
 
                     <xsl:for-each select="classification-item">
@@ -99,7 +99,7 @@
                     <xsl:variable name="broaderConceptID" select="../../classification-symbol"/>
 
                     <xsl:if test="$broaderConceptID">
-                        <xsl:variable name="broaderConceptURI" select="concat($concept, $broaderConceptID)"/>
+                        <xsl:variable name="broaderConceptURI" select="concat($concept, 'ecla/', $broaderConceptID)"/>
                         <skos:topConceptOf>
                             <rdf:Description rdf:about="{concat($concept, 'ecla')}">
                                 <skos:hasTopConcept rdf:resource="{$conceptURI}"/>
