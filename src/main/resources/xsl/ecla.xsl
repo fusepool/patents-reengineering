@@ -189,7 +189,7 @@
 
     <xsl:template match="class-ref">
         <xsl:variable name="classRef" select="normalize-space(.)"/>
-        <xsl:if test="not(contains($class-ref, ' '))">
+        <xsl:if test="not(contains($classRef, ' '))">
             <dcterms:references>
                 <rdf:Description rdf:about="{concat($concept, 'ecla/', $classRef)}">
                     <skos:notation><xsl:value-of select="$classRef"/></skos:notation>
