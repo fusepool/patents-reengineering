@@ -188,13 +188,15 @@
     </xsl:template>
 
     <xsl:template match="class-ref">
-        <dcterms:references>
-            <rdf:Description rdf:about="{concat($concept, 'ecla/', normalize-space(.))}">
-                <skos:notation><xsl:value-of select="normalize-space(.)"/></skos:notation>
-            </rdf:Description>
-        </dcterms:references>
+        <xsl:variable name="classRef" select="normalize-space(.)"/>
+        <xsl:if test="not(contains($class-ref, ' '))">
+            <dcterms:references>
+                <rdf:Description rdf:about="{concat($concept, 'ecla/', $classRef)}">
+                    <skos:notation><xsl:value-of select="$classRef"/></skos:notation>
+                </rdf:Description>
+            </dcterms:references>
+        </xsl:if>
     </xsl:template>
-
 
 <!--<xsl:message>-->
 <!--<xsl:text>-->
