@@ -77,7 +77,7 @@
                     <rdf:type rdf:resource="{$skos}Collection"/>
                     <rdf:type rdf:resource="{$xkos}ClassificationLevel"/>
                     <rdf:type rdf:resource="{$pmo}ECLACategoory"/>
-                    <xkos:depth><xsl:value-of select="$level"/></xkos:depth>
+                    <xkos:depth rdf:datatype="{$xsd}integer"><xsl:value-of select="$level"/></xkos:depth>
 
                     <xsl:for-each select="classification-item">
                         <skos:member>
