@@ -5,7 +5,7 @@
 #    Author URI: http://csarven.ca/#i
 #
 
-. ./oecd.config.sh
+. ./patents.config.sh
 
 echo "Updating tdbstats";
 java "$JVM_ARGS" tdb.tdbstats --loc="$db" --graph=urn:x-arq:UnionGraph > "$db"stats2.opt ;
