@@ -1,7 +1,7 @@
 #!/bin/bash
 
 namespace="http://fusepool.info/";
-repoMeta="/usr/lib/patents-reengineering/src/main/resources/data/meta/";
+repoMeta="/home/fusepool/patents-reengineering/src/main/resources/data/meta/";
 marec="/data/marec/";
 ecla="/data/ecla/";
 tdbAssembler="/usr/lib/fuseki/tdb.patents.ttl";
