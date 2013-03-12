@@ -96,10 +96,15 @@
                 </xsl:when>
                 <xsl:otherwise>
                     <rdf:type rdf:resource="{$skos}Concept"/>
-                    <xsl:variable name="broaderConceptID" select="../../classification-symbol"/>
+                    <xsl:variable name="broaderConceptID" select="../classification-symbol"/>
 
                     <xsl:if test="$broaderConceptID">
-                        <xsl:variable name="broaderConceptURI" select="concat($concept, 'ecla/', $broaderConceptID)"/>
+                        <xsl:variable name="broaderConceptLevel">
+                            <xsl:if test="../@level &lt; 7">
+                                <xsl:value-of select="concat(../@level, '/')"/>
+                            </xsl:if>
+                        </xsl:variable>
+                        <xsl:variable name="broaderConceptURI" select="concat($concept, 'ecla/', $broaderConceptLevel, $broaderConceptID)"/>
                         <skos:topConceptOf>
                             <rdf:Description rdf:about="{concat($concept, 'ecla')}">
                                 <skos:hasTopConcept rdf:resource="{$conceptURI}"/>
@@ -183,7 +188,11 @@
     </xsl:template>
 
     <xsl:template match="class-ref">
-        <dcterms:references rdf:resource="{concat($concept, 'ecla/', normalize-space(.))}"/>
+        <dcterms:references>
+            <rdf:Description rdf:about="{concat($concept, 'ecla/', normalize-space(.))}">
+                <skos:notation><xsl:value-of select="normalize-space(.)"/></skos:notation>
+            </rdf:Description>
+        </dcterms:references>
     </xsl:template>
 
 
