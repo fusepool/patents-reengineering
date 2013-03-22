@@ -75,6 +75,10 @@ TODO: ignore DTD check. saxonb-xslt breaks if offline
                 <xsl:with-param name="ucid" select="$ucid" tunnel="yes"/>
             </xsl:call-template>
 
+            <xsl:call-template name="abstract">
+                <xsl:with-param name="ucid" select="$ucid" tunnel="yes"/>
+            </xsl:call-template>
+
             <xsl:call-template name="description">
                 <xsl:with-param name="ucid" select="$ucid" tunnel="yes"/>
             </xsl:call-template>
@@ -661,6 +665,19 @@ Add members
             </rdf:Description>
         </xsl:for-each>
     </xsl:template>
+
+
+    <xsl:template name="abstract">
+        <xsl:param name="ucid" tunnel="yes"/>
+
+        <xsl:for-each select="abstract">
+            <rdf:Description rdf:about="{$patent}{$ucid}">
+                <xsl:variable name="lang" select="@lang"/>
+                <dcterms:abstract rdf:parseType="Literal" xml:lang="{lower-case($lang)}"><xsl:copy-of select="./*"/></dcterms:abstract>
+            </rdf:Description>
+        </xsl:for-each>
+    </xsl:template>
+
 
     <xsl:template name="claims">
         <xsl:param name="ucid" tunnel="yes"/>
