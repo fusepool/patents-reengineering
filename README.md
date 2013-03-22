@@ -1,4 +1,16 @@
-# MAREC-RDF
+PATENTS RE-ENGINEERING
+
+#Stanbol Enhancement Engine
+
+The outcome of this project is an OSGi bundle (enhancement engine) for Apache Stanbol that takes a patent document XML file as input and gives RDF triples as output.
+It uses an XSLT transformation to map the MAREC XML elements and attributes to classes and properties of a patent ontology as explained below.
+
+The name of the engine is marecEngine. This same name must be used when configuring a chain in order to use it.
+
+The bundle saves the triples into a Clerezza Yard that must be configured in the Felix console before using the engine in a chain.
+The uri of the Clerezza Yard is urn:fusepool-graph1
+
+# XSLT 2.0 Tranformation
 
 XSLT 2.0 templates to transform MAREC XML to RDF/XML, ECLA to RDF/XML and supporting data.
 
