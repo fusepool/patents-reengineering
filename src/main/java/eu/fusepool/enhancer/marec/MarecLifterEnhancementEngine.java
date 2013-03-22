@@ -74,7 +74,7 @@ implements EnhancementEngine, ServiceProperties {
 	/*****
 	 * graph uri for the triplestore
 	 */
-	private static final String graphUri = "eu.fusepool.clerezza.01" ;
+	private static final String graphUri = "urn:fusepool-graph1" ;
 	
 	//@SuppressWarnings("unused")
 	public static final boolean DEF_CLEAN = false ;
