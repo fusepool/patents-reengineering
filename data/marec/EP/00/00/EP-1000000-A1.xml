@@ -1,0 +1,497 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE patent-document PUBLIC "-//MXW//DTD patent-document XML//EN" "http://www.ir-facility.org/dtds/patents/v1.4/patent-document.dtd">
+<patent-document ucid="EP-1000000-A1" country="EP" doc-number="1000000" kind="A1" lang="EN" family-id="19768124" status="new" date-produced="20090516" date="20000517">
+  <bibliographic-data>
+    <publication-reference ucid="EP-1000000-A1" status="new" fvid="22846487">
+      <document-id status="new" format="original">
+        <country>EP</country>
+        <doc-number>1000000</doc-number>
+        <kind>A1</kind>
+        <date>20000517</date>
+      </document-id>
+    </publication-reference>
+    <application-reference ucid="EP-99203729-A" status="new" is-representative="NO">
+      <document-id status="new" format="epo">
+        <country>EP</country>
+        <doc-number>99203729</doc-number>
+        <kind>A</kind>
+        <date>19991108</date>
+      </document-id>
+    </application-reference>
+    <priority-claims status="new">
+      <priority-claim ucid="NL-1010536-A" status="new">
+        <document-id status="new" format="epo">
+          <country>NL</country>
+          <doc-number>1010536</doc-number>
+          <kind>A</kind>
+          <date>19981112</date>
+        </document-id>
+      </priority-claim>
+    </priority-claims>
+    <technical-data status="new">
+      <classifications-ipcr>
+        <classification-ipcr status="new">B28B   1/00        20060101C I20051008RMEP        </classification-ipcr>
+        <classification-ipcr status="new">B28B   1/29        20060101A I20051008RMEP        </classification-ipcr>
+        <classification-ipcr status="new">B28B   5/00        20060101C I20051008RMEP        </classification-ipcr>
+        <classification-ipcr status="new">B28B   5/02        20060101A I20051008RMEP        </classification-ipcr>
+        <classification-ipcr status="new">B28B   7/00        20060101A I20051008RMEP        </classification-ipcr>
+        <classification-ipcr status="new">B28B   7/00        20060101C I20051008RMEP        </classification-ipcr>
+        <classification-ipcr status="new">H02P   6/08        20060101A I20051008RMEP        </classification-ipcr>
+        <classification-ipcr status="new">H02P   6/08        20060101C I20051008RMEP        </classification-ipcr>
+      </classifications-ipcr>
+      <classification-ecla status="new">
+        <classification-symbol scheme="EC">B28B   1/29</classification-symbol>
+        <classification-symbol scheme="EC">B28B   5/02B2</classification-symbol>
+        <classification-symbol scheme="EC">B28B   7/00F</classification-symbol>
+        <classification-symbol scheme="EC">H02P   6/08</classification-symbol>
+      </classification-ecla>
+      <invention-title load-source="ep" status="new" lang="DE">Vorrichtung zur Herstellung von Steinformlingen für die Ziegelindustrie</invention-title>
+      <invention-title load-source="ep" status="new" lang="EN">Apparatus for manufacturing green bricks for the brick manufacturing industry</invention-title>
+      <invention-title load-source="ep" status="new" lang="FR">Dispositif pour la fabrication de briques crues utilisées dans l'industrie manufacturière des briques</invention-title>
+      <citations>
+        <patent-citations>
+          <patcit ucid="DE-3546191-A1" status="new">
+            <document-id status="new" format="epo">
+              <country>DE</country>
+              <doc-number>3546191</doc-number>
+              <kind>A1</kind>
+            </document-id>
+            <sources>
+              <source category="A" name="SEA" created-by-npl="N"/>
+            </sources>
+          </patcit>
+          <patcit ucid="EP-0680812-A1" status="new">
+            <document-id status="new" format="epo">
+              <country>EP</country>
+              <doc-number>0680812</doc-number>
+              <kind>A1</kind>
+            </document-id>
+            <sources>
+              <source category="A" name="SEA" created-by-npl="N"/>
+            </sources>
+          </patcit>
+          <patcit ucid="NL-9400663-A" status="new">
+            <document-id status="new" format="epo">
+              <country>NL</country>
+              <doc-number>9400663</doc-number>
+              <kind>A</kind>
+            </document-id>
+            <sources>
+              <source category="A" name="SEA" created-by-npl="N"/>
+            </sources>
+          </patcit>
+        </patent-citations>
+      </citations>
+    </technical-data>
+    <parties>
+      <applicants>
+        <applicant status="new" format="epo">
+          <addressbook>
+            <name>BOER BEHEER NIJMEGEN BV DE</name>
+            <address>
+              <country>NL</country>
+            </address>
+          </addressbook>
+        </applicant>
+        <applicant status="new" format="intermediate">
+          <addressbook>
+            <name>BEHEERMAATSCHAPPIJ DE BOER NIJMEGEN B.V.</name>
+          </addressbook>
+        </applicant>
+        <applicant status="new" format="original">
+          <addressbook>
+            <last-name>Beheermaatschappij De Boer Nijmegen B.V.</last-name>
+            <address>
+              <street>Koopvaardijweg 2</street>
+              <city>6541 BS Nijmegen</city>
+              <country>NL</country>
+            </address>
+          </addressbook>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor status="new" format="epo">
+          <addressbook>
+            <name>KOSMAN WILHELMUS JACOBUS MARIA</name>
+            <address>
+              <country>NL</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor status="new" format="intermediate">
+          <addressbook>
+            <name>KOSMAN, WILHELMUS JACOBUS MARIA</name>
+          </addressbook>
+        </inventor>
+        <inventor status="new" format="original">
+          <addressbook>
+            <last-name>KOSMAN, WILHELMUS JACOBUS MARIA</last-name>
+            <address>
+              <street>Bredeweg 9</street>
+              <city>6562 DA Groesbeek</city>
+              <country>NL</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+      <agents>
+        <agent status="new" format="original">
+          <addressbook>
+            <last-name>Schumann, Bernard Herman Johan</last-name>
+            <address>
+              <street>Arnold &amp;amp; Siedsma, Advocaten en Octrooigemachtigden, Sweelinckplein 1</street>
+              <city>2517 GK Den Haag</city>
+              <country>NL</country>
+            </address>
+          </addressbook>
+        </agent>
+      </agents>
+    </parties>
+    <international-convention-data>
+      <designated-states>
+        <ep-contracting-states>
+          <country>AT</country>
+          <country>BE</country>
+          <country>CH</country>
+          <country>CY</country>
+          <country>DE</country>
+          <country>DK</country>
+          <country>ES</country>
+          <country>FI</country>
+          <country>FR</country>
+          <country>GB</country>
+          <country>GR</country>
+          <country>IE</country>
+          <country>IT</country>
+          <country>LI</country>
+          <country>LU</country>
+          <country>MC</country>
+          <country>NL</country>
+          <country>PT</country>
+          <country>SE</country>
+        </ep-contracting-states>
+      </designated-states>
+    </international-convention-data>
+  </bibliographic-data>
+  <abstract load-source="ep" status="new" lang="EN">
+    <p>The invention relates to an apparatus (1) for
+manufacturing green bricks from clay for the brick
+manufacturing industry, comprising a circulating conveyor (3)
+carrying mould containers combined to mould container
+parts (4), a reservoir (5) for clay arranged above the mould
+containers, means for carrying clay out of the reservoir (5)
+into the mould containers, means (9) for pressing and
+trimming clay in the mould containers, means (11) for
+supplying and placing take-off plates for the green
+bricks (13) and means for discharging green bricks released
+from the mould containers, characterized in that the
+apparatus further comprises means (22) for moving the mould
+container parts (4) filled with green bricks such that a
+protruding edge is formed on at least one side of the
+green bricks.
+<img id="img-00000001" orientation="unknown" wi="131" img-format="tif" img-content="ad" file="00000001.tif" inline="no" he="80"/></p>
+  </abstract>
+  <description load-source="ep" status="new" lang="EN">
+    <p num="0001">The invention relates to an apparatus for
+manufacturing green bricks from clay for the brick
+manufacturing industry, comprising a circulating conveyor
+carrying mould containers combined to mould container
+parts, a reservoir for clay arranged above the mould
+containers, means for carrying clay out of the reservoir
+into the mould containers, means for pressing and
+trimming clay in the mould containers, means for
+supplying and placing take-off plates for the green
+bricks and means for discharging green bricks released
+from the mould containers. Such an apparatus is known in
+the field and is for instance described in the patent
+1000186 of applicant. The known apparatus is extremely
+suitable for automated production of large numbers of
+green bricks for the brick manufacturing industry. The
+bricks fired from these green bricks have a substantially
+smooth, uniform appearance.</p>
+    <p num="0002">A recent demand has developed on the market
+for bricks which appear as if they have been manufactured
+according to traditional methods.</p>
+    <p num="0003">The invention has for its object to adapt the
+known apparatus such that it can produce in automated
+manner large numbers of green bricks with a traditional
+appearance.</p>
+    <p num="0004">For this purpose the apparatus according to the
+invention has the feature that the apparatus further
+comprises means for moving the mould container parts
+filled with green bricks such that a protruding edge is
+formed on at least one side of the green bricks.</p>
+    <p num="0005">The bricks fired from the green bricks produced
+using the apparatus according to the invention impart
+beautiful shadow effects to the wall into which they have 
+been built when the sun shines thereon. This aesthetic
+effect is an important commercial advantage.</p>
+    <p num="0006">The edge-forming means are preferably adapted
+to move the mould container parts repeatedly for a
+certain period. Repetition a number of times, for
+instance three times, is found in practice to be
+sufficient to obtain the intended effect.</p>
+    <p num="0007">In a practical preferred embodiment the edge-forming
+means are adapted to move the mould container
+parts substantially transversely of the transporting
+direction.</p>
+    <p num="0008">In a further preferred embodiment the edge-forming
+means comprise a frame which is adapted to engage
+individually on a mould container part. This preferred
+embodiment has the significant advantage that the edge-forming
+means can act on one mould container part while
+another mould container part undergoes another operation
+and is for instance filled with clay. The edge-forming
+means can therefore be added to the known apparatus
+without this affecting the production time.</p>
+    <p num="0009">In yet another preferred embodiment the frame
+spans the mould container part and is provided on both
+sides with stop members which are situated during
+operation at the location of the side walls of the mould
+container part. An exceptionally compact embodiment of
+the invention is hereby realized which utilizes the
+available space economically and can be arranged without
+difficulty on the known apparatus.</p>
+    <p num="0010">In order to prevent unnecessary damage to the
+mould container parts, these latter are provided on their
+side walls with stop surfaces, preferably of plastic. In
+preference the stop members of the frame of the edge-forming
+means are also provided with these, preferably
+plastic, stop surfaces.</p>
+    <p num="0011">The invention is described in more detail
+hereinbelow with reference to the drawing in which:
+<sl><li>figure 1 shows schematically a preferred
+embodiment of the apparatus according to the invention; </li><li>figure 2 shows in more detail a perspective
+view of a part of the apparatus of figure 1 with the
+edge-forming means therein;</li><li>figure 3 shows the edge-forming means of figure
+2 in even more detail;</li><li>figure 4 is a perspective view of a first
+preferred embodiment of a mould container part which is
+suitable for use in the apparatus according to the
+invention;</li><li>figure 5 is a perspective view of a second
+preferred embodiment of a mould container part; and</li><li>figure 6 shows schematically a part of a wall
+which has been built using bricks provided with an edge
+and fired from the green bricks manufactured using the
+apparatus according to the invention.</li></sl></p>
+    <p num="0012">Like components are provided in the figures
+with like reference numerals.</p>
+    <p num="0013">Figure 1 shows a preferred embodiment of an
+apparatus for manufacturing green bricks for the brick
+manufacturing industry according to the invention.
+Apparatus 1 comprises a conveyor 3. Mould containers
+combined to a unit are placed in the form of a mould
+container part 4 on the conveyor. The mould container
+parts fit closely against each other. Placed above the
+mould containers is a reservoir 5 for clay which is kept
+in continuous movement by an agitator 6 which is driven
+by the electric motor 7. Clay is supplied to reservoir 5
+by a circulating conveyor 8. The clay is carried out of
+reservoir 5 into the mould containers and then pressed
+down by pressing device 9 which is pivotable on shaft 10.
+The excess clay is also trimmed using means which are not
+drawn. The device 11 carries take-off plates 12 onto a
+mould container part such that, after turning over of the
+mould container part, the green bricks 13 come to lie on
+the plates after being released from the mould
+containers.</p>
+    <p num="0014">Edge-forming means 22 are arranged between
+device 9 and device 11. The edge-forming means move each 
+mould container part 4 such that a protruding edge forms
+on the upper side of the green bricks received therein.</p>
+    <p num="0015">Figure 2 shows in more detail the part of
+apparatus 1 comprising edge-forming means 22. In the
+shown preferred embodiment, the edge-forming means 22
+comprise a frame 26 which spans mould container part 4.
+Frame 26 is provided on either side with stop members 27
+which are situated at the position of side walls 30 of
+the mould container part. The distance between stop
+members 27 is greater than the length of the mould
+container part. Frame 26 can be moved reciprocally by
+means of drive 31 as designated by means of arrow B. In
+preference the direction of movement B of frame 26 lies
+substantially transversely of the transporting direction
+T of conveyor 3. By moving frame 26 repeatedly the stop
+members 27 strike alternately against the side walls 30
+of the mould container part 4 which is spanned at that
+moment by frame 26. As a result the relevant mould
+container part is as it were shaken back and forth,
+whereby the green bricks 13 situated during operation in
+mould containers 21 of mould container part 4 rise a
+certain distance in the mould containers. This results in
+the intended edge forming on the upper side of each green
+brick.</p>
+    <p num="0016">Drive 31 is preferably an eccentric drive which
+can subject heavy components to a smooth movement owing
+to a good distribution of forces. The eccentric drive can
+for instance be adjusted such that the moment a stop
+member comes up against one of the side walls of a mould
+container part, the maximum force is exerted by the drive
+on this mould container part.</p>
+    <p num="0017">Each mould container part 4 is coupled with
+some clearance to conveyor 3 in the direction of movement
+B. In the shown preferred embodiment each mould container
+part is even disengageably coupled to an associated chain
+part 15 of chain conveyor 3. The coupling of both parts
+takes place using the bolt-nut connections 16, 17 respectively.
+Bolt holes 33 are given an oval form in order to 
+create the necessary clearance. Chain part 15 of chain
+conveyor 3 comprises ears 18, 19, 20 which serve as links
+of the chain conveyor. It is noted that instead of a
+chain conveyor many other conveyors known in the field
+can be used.</p>
+    <p num="0018">Figure 3 shows edge-forming means 22 in even
+more detail. So as to prevent damage, stop members 27 are
+provided with stop surfaces 28 and corresponding stop
+surfaces 29 are arranged on side walls 30 of the mould
+container parts. The stop surfaces are preferably of
+plastic.</p>
+    <p num="0019">Each mould container part 4 is further provided
+at both sides with spacer members 32 on walls 30. These
+spacer members protrude slightly above the mould container
+part itself, so that take-off plates 12 can rest
+thereon without damaging the edge which has just been
+formed on green bricks 13. It has been found in practice
+that the form of green bricks 13, including the edge, is
+retained after the mould container part has been turned
+over.</p>
+    <p num="0020">Figure 4 shows a first preferred embodiment of
+a mould container part 4 and a chain part 15 in uncoupled
+situation. The different mould containers 21 are combined
+to a unit on mould container part 4. It is noted that the
+use of edge-forming means 22 has the further important
+advantage that additional means for releasing the green
+bricks from the mould containers are no longer necessary.
+An example of such releasing means known in the field are
+bottoms 23 displaceable by means of ejectors 24 such as
+are arranged in the second preferred embodiment shown in
+figure 5. This ejector lies under bias of spring 25 which
+centres the ejector such that no separate guiding is
+necessary in chain part 15. Ejector 24 is operated by a
+per se known driving device (not shown) during release of
+the green bricks. These releasing means are used by
+applicant in a number of their apparatuses and are the
+subject of the patent 1000186 in the name of applicant.
+Figure 5 shows how with some modifications the mould 
+container parts and chain parts of the known apparatus
+can be used in combination with the edge-forming means
+according to the invention. The modifications relate to
+enlargement of the holes 34 for ejectors 24 such that
+mould container part 4 is coupled to chain part 15 with
+some clearance in the direction of movement B. Holes 34
+can for instance be oval for this purpose. It is noted
+that the multi-part mould container part as described in
+applicant's non-prepublished patent application 1007600
+can also be made suitable in like manner for use in an
+apparatus provided with the edge-forming means according
+to the invention.</p>
+    <p num="0021">Finally, figure 6 shows a wall 35 which is
+built from bricks 36 provided with a protruding edge 37
+by using the apparatus according to the invention. It is
+possible to imagine that an exceptional shadow effect can
+be caused by sunlight incident upon the wall.</p>
+    <p num="0022">The present invention is of course not limited
+to the described and illustrated embodiment but comprises
+all embodiments which fall within the scope of the appended
+claims.</p>
+  </description>
+  <claims load-source="ep" status="new" lang="EN">
+    <claim num="1">
+      <claim-text>Apparatus for manufacturing green bricks
+from clay for the brick manufacturing industry,
+comprising a circulating conveyor carrying mould
+containers combined to mould container parts, a reservoir
+for clay arranged above the mould containers, means for
+carrying clay out of the reservoir into the mould
+containers, means for pressing and trimming clay in the
+mould containers, means for supplying and placing take-off
+plates for the green bricks and means for discharging
+green bricks released from the mould containers,
+characterized in that the apparatus further comprises
+means for moving the mould container parts filled with
+green bricks such that a protruding edge is formed on at
+least one side of the green bricks.</claim-text>
+    </claim>
+    <claim num="2">
+      <claim-text>Apparatus as claimed in claim 1, wherein the
+edge-forming means are adapted to move the mould container
+parts repeatedly for a certain period.</claim-text>
+    </claim>
+    <claim num="3">
+      <claim-text>Apparatus as claimed in claim 1 or 2,
+wherein the edge-forming means are adapted to move the
+mould container parts substantially transversely of the
+transporting direction.</claim-text>
+    </claim>
+    <claim num="4">
+      <claim-text>Apparatus as claimed in any of the foregoing
+claims, wherein the edge-forming means comprise a frame
+which is adapted to engage individually on a mould container
+part.</claim-text>
+    </claim>
+    <claim num="5">
+      <claim-text>Apparatus as claimed in claim 4, wherein the
+frame spans the mould container part and is provided on
+both sides with stop members which are situated during
+operation at the location of the side walls of the mould
+container part.</claim-text>
+    </claim>
+    <claim num="6">
+      <claim-text>Apparatus as claimed in claim 5, wherein the
+stop members are provided with stop surfaces which
+preferably comprise plastic.</claim-text>
+    </claim>
+    <claim num="7">
+      <claim-text>Apparatus as claimed in claim 5 or 6,
+wherein the mould container parts are provided on their
+side walls with stop surfaces which preferably comprise
+plastic.</claim-text>
+    </claim>
+    <claim num="8">
+      <claim-text>Apparatus as claimed in claim 4, 5, 6 or 7,
+wherein the edge-forming means comprise an eccentric
+drive for the frame.</claim-text>
+    </claim>
+    <claim num="9">
+      <claim-text>Apparatus as claimed in any of the foregoing
+claims, wherein each mould container part is provided
+with a number of spacer members for supporting the take-off
+plates at a distance above the green bricks.</claim-text>
+    </claim>
+    <claim num="10">
+      <claim-text>Apparatus as claimed in any of the
+foregoing claims, wherein the mould container parts are
+fixed movably onto the conveyor with some clearance in
+the direction of movement.</claim-text>
+    </claim>
+    <claim num="11">
+      <claim-text>Apparatus as claimed in claim 10, wherein
+the conveyor is a chain conveyor and the mould container
+parts are coupled with some clearance in the direction of
+movement to a chain part connectable to the chain.</claim-text>
+    </claim>
+  </claims>
+  <drawings status="new">
+    <figure num="1">
+      <img id="img-00090001" orientation="unknown" wi="157" img-format="tif" img-content="dr" file="00090001.tif" inline="no" he="190"/>
+    </figure>
+    <figure num="2">
+      <img id="img-00100001" orientation="unknown" wi="152" img-format="tif" img-content="dr" file="00100001.tif" inline="no" he="242"/>
+    </figure>
+    <figure num="3">
+      <img id="img-00110001" orientation="unknown" wi="118" img-format="tif" img-content="dr" file="00110001.tif" inline="no" he="242"/>
+    </figure>
+    <figure num="4">
+      <img id="img-00120001" orientation="unknown" wi="156" img-format="tif" img-content="dr" file="00120001.tif" inline="no" he="243"/>
+    </figure>
+    <figure num="5">
+      <img id="img-00130001" orientation="unknown" wi="156" img-format="tif" img-content="dr" file="00130001.tif" inline="no" he="226"/>
+    </figure>
+    <figure num="6">
+      <img id="img-00140001" orientation="unknown" wi="138" img-format="tif" img-content="dr" file="00140001.tif" inline="no" he="221"/>
+    </figure>
+  </drawings>
+  <search-report-data status="new">
+    <doc-page id="img--90000001" orientation="portrait" wi="156" status="new" file="90000001.tif" he="242" type="tif"/>
+    <doc-page id="img--90010001" orientation="portrait" wi="157" status="new" file="90010001.tif" he="241" type="tif"/>
+  </search-report-data>
+  <copyright>User acknowledges that the Information Retrieval Facility (IRF) and its third party providers retain all right, title and interest in and to this xml under applicable copyright laws. User acquires no ownership rights to this xml including but not limited to its format. User hereby accepts the terms and conditions of the Licence Agreement set forth at http://www.ir-facility.org/legal/marec/data_licence</copyright>
+</patent-document>
