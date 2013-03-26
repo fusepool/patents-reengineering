@@ -35,7 +35,7 @@
 
     <xsl:strip-space elements="*"/>
 
-    <xsl:variable name="xslDocument" select="'https://github.com/fusepool/patents-reengineering/src/main/resources/scripts/ecla.xsl'"/>
+    <xsl:variable name="xslDocument" select="'https://github.com/fusepool/patents-reengineering/src/main/resources/xsl/ecla.xsl'"/>
 
     <xsl:template match="/class-scheme">
         <rdf:RDF>
