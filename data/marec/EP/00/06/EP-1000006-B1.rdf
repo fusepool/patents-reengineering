@@ -17,16 +17,16 @@
       <rdf:type rdf:resource="http://www.w3.org/ns/prov#Agent"/>
    </rdf:Description>
    <rdf:Description xmlns:xs="http://www.w3.org/2001/XMLSchema"
-                    rdf:about="http://fusepool.info/provenance/activity/20130326143515">
+                    rdf:about="http://fusepool.info/provenance/activity/20130326145711">
       <rdf:type rdf:resource="http://www.w3.org/ns/prov#Activity"/>
-      <prov:startedAtTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2013-03-26T14:35:15Z</prov:startedAtTime>
+      <prov:startedAtTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2013-03-26T14:57:11Z</prov:startedAtTime>
       <prov:wasAssociatedWith rdf:resource="http://csarven.ca/#i"/>
       <prov:used rdf:resource="http://fusepool.info/data/EP-1000006-B1.xml"/>
       <prov:used rdf:resource="https://github.com/fusepool/patents-reengineering/src/main/resources/xsl/marec.xsl"/>
       <prov:generated>
          <rdf:Description rdf:about="http://fusepool.info/patent/EP-1000006-B1">
             <prov:wasDerivedFrom rdf:resource="http://fusepool.info/data/EP-1000006-B1.xml"/>
-            <prov:wasGeneratedBy rdf:resource="http://fusepool.info/provenance/activity/20130326143515"/>
+            <prov:wasGeneratedBy rdf:resource="http://fusepool.info/provenance/activity/20130326145711"/>
          </rdf:Description>
       </prov:generated>
    </rdf:Description>
@@ -63,7 +63,6 @@
             <property:filing-office rdf:resource="http://fusepool.info/code/filing-office/EP"/>
             <pmo:applicationNumber>98937268</pmo:applicationNumber>
             <pmo:kindCode>A</pmo:kindCode>
-            <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pso.owl#ADocument"/>
             <pmo:dateOfPublication rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1998-07-29</pmo:dateOfPublication>
             <dcterms:language>en</dcterms:language>
          </rdf:Description>
@@ -191,7 +190,7 @@
    </rdf:Description>
    <rdf:Description rdf:about="http://fusepool.info/patent/EP-1000006-B1">
       <pmo:applicant>
-         <rdf:Description rdf:about="urn:uuid:008a08fc-2f64-4506-928e-7af5cc80190b">
+         <rdf:Description rdf:about="urn:uuid:b9f889a4-2065-487c-8663-0b6ca9013e12">
             <rdf:type rdf:resource="http://www.owl-ontologies.com/sumo.owl#CognitiveAgent"/>
             <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
             <pmo:applicantOf rdf:resource="http://fusepool.info/patent/EP-1000006-B1"/>
@@ -207,7 +206,7 @@
    </rdf:Description>
    <rdf:Description rdf:about="http://fusepool.info/patent/EP-1000006-B1">
       <pmo:applicant>
-         <rdf:Description rdf:about="urn:uuid:cdcd754d-1070-44e7-8e71-2fde2064bc4a">
+         <rdf:Description rdf:about="urn:uuid:a6011c41-198b-4e4f-a197-7eba912b97f3">
             <rdf:type rdf:resource="http://www.owl-ontologies.com/sumo.owl#CognitiveAgent"/>
             <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
             <pmo:applicantOf rdf:resource="http://fusepool.info/patent/EP-1000006-B1"/>
@@ -223,7 +222,7 @@
    </rdf:Description>
    <rdf:Description rdf:about="http://fusepool.info/patent/EP-1000006-B1">
       <pmo:applicant>
-         <rdf:Description rdf:about="urn:uuid:da402be9-e5e7-452a-943d-d31f4020fd15">
+         <rdf:Description rdf:about="urn:uuid:f246df84-2890-4f52-9a50-9f3b9ce9c3ff">
             <rdf:type rdf:resource="http://www.owl-ontologies.com/sumo.owl#CognitiveAgent"/>
             <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
             <pmo:applicantOf rdf:resource="http://fusepool.info/patent/EP-1000006-B1"/>
@@ -233,7 +232,7 @@
    </rdf:Description>
    <rdf:Description rdf:about="http://fusepool.info/patent/EP-1000006-B1">
       <pmo:applicant>
-         <rdf:Description rdf:about="urn:uuid:14943ccd-e549-4999-95d7-74e03b1d77ff">
+         <rdf:Description rdf:about="urn:uuid:a4e7852d-2e45-48f5-bd3c-ae1aac4b0962">
             <rdf:type rdf:resource="http://www.owl-ontologies.com/sumo.owl#CognitiveAgent"/>
             <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
             <pmo:applicantOf rdf:resource="http://fusepool.info/patent/EP-1000006-B1"/>
@@ -243,7 +242,7 @@
    </rdf:Description>
    <rdf:Description rdf:about="http://fusepool.info/patent/EP-1000006-B1">
       <pmo:inventor>
-         <rdf:Description rdf:about="urn:uuid:59664bc7-f7f4-4b7c-86c1-8cb5524a1265">
+         <rdf:Description rdf:about="urn:uuid:8557033b-7efc-485e-816e-814447d2d29f">
             <rdf:type rdf:resource="http://www.owl-ontologies.com/sumo.owl#Human"/>
             <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
             <pmo:inventorOf rdf:resource="http://fusepool.info/patent/EP-1000006-B1"/>
@@ -259,7 +258,7 @@
    </rdf:Description>
    <rdf:Description rdf:about="http://fusepool.info/patent/EP-1000006-B1">
       <pmo:inventor>
-         <rdf:Description rdf:about="urn:uuid:3120d3f1-f626-4009-afd3-ab6f4815a18f">
+         <rdf:Description rdf:about="urn:uuid:b1383cf0-0396-44cd-9b42-b673473f7bbf">
             <rdf:type rdf:resource="http://www.owl-ontologies.com/sumo.owl#Human"/>
             <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
             <pmo:inventorOf rdf:resource="http://fusepool.info/patent/EP-1000006-B1"/>
@@ -269,7 +268,7 @@
    </rdf:Description>
    <rdf:Description rdf:about="http://fusepool.info/patent/EP-1000006-B1">
       <pmo:inventor>
-         <rdf:Description rdf:about="urn:uuid:8f6e91b2-db1c-4194-9b99-b9e160d847fe">
+         <rdf:Description rdf:about="urn:uuid:e1b9ca16-5145-4717-875b-a06b09df797a">
             <rdf:type rdf:resource="http://www.owl-ontologies.com/sumo.owl#Human"/>
             <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
             <pmo:inventorOf rdf:resource="http://fusepool.info/patent/EP-1000006-B1"/>
@@ -287,7 +286,7 @@
    </rdf:Description>
    <rdf:Description rdf:about="http://fusepool.info/patent/EP-1000006-B1">
       <pmo:assignee>
-         <rdf:Description rdf:about="urn:uuid:5f268b07-025b-4559-ac83-95c607cff8ea">
+         <rdf:Description rdf:about="urn:uuid:fb28d1c7-d6fa-4afc-bb08-f37f3e1fe713">
             <rdf:type rdf:resource="http://www.owl-ontologies.com/sumo.owl#CognitiveAgent"/>
             <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
             <pmo:assigneeOf rdf:resource="http://fusepool.info/patent/EP-1000006-B1"/>
@@ -305,7 +304,7 @@
    </rdf:Description>
    <rdf:Description rdf:about="http://fusepool.info/patent/EP-1000006-B1">
       <pmo:assignee>
-         <rdf:Description rdf:about="urn:uuid:1d65e203-9f5f-41c1-9d31-c4a4944c40b4">
+         <rdf:Description rdf:about="urn:uuid:a553e75d-2e22-493d-8842-2d6bff746681">
             <rdf:type rdf:resource="http://www.owl-ontologies.com/sumo.owl#CognitiveAgent"/>
             <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
             <pmo:assigneeOf rdf:resource="http://fusepool.info/patent/EP-1000006-B1"/>
@@ -323,7 +322,7 @@
    </rdf:Description>
    <rdf:Description rdf:about="http://fusepool.info/patent/EP-1000006-B1">
       <property:agent>
-         <rdf:Description rdf:about="urn:uuid:863ccb75-eda2-4c15-a3dc-bc7eabbc87e0">
+         <rdf:Description rdf:about="urn:uuid:2144edf8-e50d-40fa-8234-1da44ce761c3">
             <rdf:type rdf:resource="http://www.owl-ontologies.com/sumo.owl#Agent"/>
             <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
             <property:agentOf rdf:resource="http://fusepool.info/patent/EP-1000006-B1"/>
