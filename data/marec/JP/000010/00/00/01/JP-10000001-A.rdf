@@ -17,22 +17,21 @@
       <rdf:type rdf:resource="http://www.w3.org/ns/prov#Agent"/>
    </rdf:Description>
    <rdf:Description xmlns:xs="http://www.w3.org/2001/XMLSchema"
-                    rdf:about="http://fusepool.info/provenance/activity/20130320104631">
+                    rdf:about="http://fusepool.info/provenance/activity/20130326143547">
       <rdf:type rdf:resource="http://www.w3.org/ns/prov#Activity"/>
-      <prov:startedAtTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2013-03-20T10:46:31Z</prov:startedAtTime>
+      <prov:startedAtTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2013-03-26T14:35:47Z</prov:startedAtTime>
       <prov:wasAssociatedWith rdf:resource="http://csarven.ca/#i"/>
       <prov:used rdf:resource="http://fusepool.info/data/JP-10000001-A.xml"/>
-      <prov:used rdf:resource="https://github.com/fusepool/patents-reengineering/src/main/resources/scripts/marec.xsl"/>
+      <prov:used rdf:resource="https://github.com/fusepool/patents-reengineering/src/main/resources/xsl/marec.xsl"/>
       <prov:generated>
          <rdf:Description rdf:about="http://fusepool.info/patent/JP-10000001-A">
             <prov:wasDerivedFrom rdf:resource="http://fusepool.info/data/JP-10000001-A.xml"/>
-            <prov:wasGeneratedBy rdf:resource="http://fusepool.info/provenance/activity/20130320104631"/>
+            <prov:wasGeneratedBy rdf:resource="http://fusepool.info/provenance/activity/20130326143547"/>
          </rdf:Description>
       </prov:generated>
    </rdf:Description>
    <rdf:Description rdf:about="http://fusepool.info/patent/JP-10000001-A">
-      <rdf:type rdf:resource="http://www.owl-ontologies.com/sumo.owl#Patent"/>
-      <property:status>new</property:status>
+      <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentPublication"/>
       <pmo:patentFamily>
          <rdf:Description rdf:about="http://fusepool.info/family/16000725">
             <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily"/>
@@ -42,48 +41,38 @@
       </pmo:patentFamily>
    </rdf:Description>
    <rdf:Description rdf:about="http://fusepool.info/patent/JP-10000001-A">
-      <dcterms:references>
-         <rdf:Description rdf:about="http://fusepool.info/patent/JP-10000001-A/publication">
-            <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#IntellectualPropertyDocument"/>
-            <property:status>new</property:status>
-            <dcterms:hasPart>
-               <rdf:Description rdf:about="http://fusepool.info/patent/JP-10000001-A/publication/19980106">
-                  <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentPublication"/>
-                  <dcterms:isPartOf rdf:resource="http://fusepool.info/patent/JP-10000001-A/publication"/>
-                  <property:status>new</property:status>
-                  <pulo:fileFormat>original</pulo:fileFormat>
-                  <property:filing-office rdf:resource="http://fusepool.info/code/filing-office/JP"/>
-                  <pmo:publicationNumber>10000001</pmo:publicationNumber>
-                  <pmo:dateOfPublication rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1998-01-06</pmo:dateOfPublication>
-               </rdf:Description>
-            </dcterms:hasPart>
-         </rdf:Description>
-      </dcterms:references>
+      <property:status>new</property:status>
+      <pulo:fileFormat>original</pulo:fileFormat>
+      <pmo:countryOfFiling>JP</pmo:countryOfFiling>
+      <property:filing-office rdf:resource="http://fusepool.info/code/filing-office/JP"/>
+      <pmo:publicationNumber>10000001</pmo:publicationNumber>
+      <pmo:kindCode>A</pmo:kindCode>
+      <pmo:dateOfPublication rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1998-01-06</pmo:dateOfPublication>
    </rdf:Description>
    <rdf:Description rdf:about="http://fusepool.info/patent/JP-10000001-A">
       <dcterms:references>
-         <rdf:Description rdf:about="http://fusepool.info/patent/JP-17570096-A/application">
-            <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#IntellectualPropertyDocument"/>
+         <rdf:Description rdf:about="http://fusepool.info/patent/JP-17570096-A">
+            <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentPublication"/>
             <property:status>new</property:status>
             <property:is-representative>NO</property:is-representative>
-            <dcterms:hasPart>
-               <rdf:Description rdf:about="http://fusepool.info/patent/JP-17570096-A/application/19960614">
-                  <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentPublication"/>
-                  <dcterms:isPartOf rdf:resource="http://fusepool.info/patent/JP-17570096-A/application"/>
-                  <property:status>new</property:status>
-                  <pulo:fileFormat>epo</pulo:fileFormat>
-                  <property:filing-office rdf:resource="http://fusepool.info/code/filing-office/JP"/>
-                  <pmo:applicationNumber>17570096</pmo:applicationNumber>
-                  <pmo:dateOfPublication rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1996-06-14</pmo:dateOfPublication>
-               </rdf:Description>
-            </dcterms:hasPart>
+            <pulo:fileFormat>epo</pulo:fileFormat>
+            <pmo:countryOfFiling>JP</pmo:countryOfFiling>
+            <property:filing-office rdf:resource="http://fusepool.info/code/filing-office/JP"/>
+            <pmo:applicationNumber>17570096</pmo:applicationNumber>
+            <pmo:kindCode>A</pmo:kindCode>
+            <pmo:dateOfPublication rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1996-06-14</pmo:dateOfPublication>
          </rdf:Description>
       </dcterms:references>
    </rdf:Description>
    <rdf:Description rdf:about="http://fusepool.info/patent/JP-10000001-A">
       <property:priority-claim>
-         <rdf:Description rdf:about="http://fusepool.info/patent/JP-17570096-A/publication/1">
+         <rdf:Description rdf:about="http://fusepool.info/patent/JP-17570096-A">
             <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentPublication"/>
+            <pulo:fileFormat>epo</pulo:fileFormat>
+            <pmo:countryOfFiling>JP</pmo:countryOfFiling>
+            <property:filing-office rdf:resource="http://fusepool.info/code/filing-office/JP"/>
+            <pmo:kindCode>A</pmo:kindCode>
+            <pmo:dateOfPublication rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1996-06-14</pmo:dateOfPublication>
          </rdf:Description>
       </property:priority-claim>
    </rdf:Description>
@@ -93,7 +82,7 @@
    </rdf:Description>
    <rdf:Description rdf:about="http://fusepool.info/patent/JP-10000001-A">
       <pmo:applicant>
-         <rdf:Description rdf:about="urn:uuid:a3e93580-0935-4697-a590-1434ab5b399f">
+         <rdf:Description rdf:about="urn:uuid:bcd5e8ea-625f-4d3f-adbf-10aaa1758f4b">
             <rdf:type rdf:resource="http://www.owl-ontologies.com/sumo.owl#CognitiveAgent"/>
             <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
             <pmo:applicantOf rdf:resource="http://fusepool.info/patent/JP-10000001-A"/>
@@ -103,7 +92,7 @@
    </rdf:Description>
    <rdf:Description rdf:about="http://fusepool.info/patent/JP-10000001-A">
       <pmo:applicant>
-         <rdf:Description rdf:about="urn:uuid:82e2c5d9-64fd-4529-8d7d-e51c5863cf78">
+         <rdf:Description rdf:about="urn:uuid:881dd762-ca19-414f-8271-ea2094fc4e91">
             <rdf:type rdf:resource="http://www.owl-ontologies.com/sumo.owl#CognitiveAgent"/>
             <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
             <pmo:applicantOf rdf:resource="http://fusepool.info/patent/JP-10000001-A"/>
@@ -113,7 +102,7 @@
    </rdf:Description>
    <rdf:Description rdf:about="http://fusepool.info/patent/JP-10000001-A">
       <pmo:applicant>
-         <rdf:Description rdf:about="urn:uuid:aac685df-4dc4-43ee-903f-75acd0c191ae">
+         <rdf:Description rdf:about="urn:uuid:73577ad0-2194-43fe-8f5f-d7cc9446b560">
             <rdf:type rdf:resource="http://www.owl-ontologies.com/sumo.owl#CognitiveAgent"/>
             <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
             <pmo:applicantOf rdf:resource="http://fusepool.info/patent/JP-10000001-A"/>
@@ -123,7 +112,7 @@
    </rdf:Description>
    <rdf:Description rdf:about="http://fusepool.info/patent/JP-10000001-A">
       <pmo:inventor>
-         <rdf:Description rdf:about="urn:uuid:1cebb248-bc4f-4cce-926d-9fa45115f723">
+         <rdf:Description rdf:about="urn:uuid:4a36fae6-4f6a-4779-a1b4-dd229ea9929e">
             <rdf:type rdf:resource="http://www.owl-ontologies.com/sumo.owl#Human"/>
             <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
             <pmo:inventorOf rdf:resource="http://fusepool.info/patent/JP-10000001-A"/>
@@ -133,7 +122,7 @@
    </rdf:Description>
    <rdf:Description rdf:about="http://fusepool.info/patent/JP-10000001-A">
       <pmo:inventor>
-         <rdf:Description rdf:about="urn:uuid:6a5b5b43-6167-4869-a93c-110fff93da4f">
+         <rdf:Description rdf:about="urn:uuid:0b8c6a9c-debb-49f5-837b-c31834200860">
             <rdf:type rdf:resource="http://www.owl-ontologies.com/sumo.owl#Human"/>
             <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
             <pmo:inventorOf rdf:resource="http://fusepool.info/patent/JP-10000001-A"/>
@@ -143,7 +132,7 @@
    </rdf:Description>
    <rdf:Description rdf:about="http://fusepool.info/patent/JP-10000001-A">
       <pmo:inventor>
-         <rdf:Description rdf:about="urn:uuid:d84734d3-5e68-476b-8492-97a93f05436c">
+         <rdf:Description rdf:about="urn:uuid:fbba6b41-6cf9-48bc-b89c-c2f9b342eb31">
             <rdf:type rdf:resource="http://www.owl-ontologies.com/sumo.owl#Human"/>
             <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
             <pmo:inventorOf rdf:resource="http://fusepool.info/patent/JP-10000001-A"/>

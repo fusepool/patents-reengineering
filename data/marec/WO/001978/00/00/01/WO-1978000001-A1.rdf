@@ -17,22 +17,21 @@
       <rdf:type rdf:resource="http://www.w3.org/ns/prov#Agent"/>
    </rdf:Description>
    <rdf:Description xmlns:xs="http://www.w3.org/2001/XMLSchema"
-                    rdf:about="http://fusepool.info/provenance/activity/20130320104635">
+                    rdf:about="http://fusepool.info/provenance/activity/20130326143553">
       <rdf:type rdf:resource="http://www.w3.org/ns/prov#Activity"/>
-      <prov:startedAtTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2013-03-20T10:46:35Z</prov:startedAtTime>
+      <prov:startedAtTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2013-03-26T14:35:53Z</prov:startedAtTime>
       <prov:wasAssociatedWith rdf:resource="http://csarven.ca/#i"/>
       <prov:used rdf:resource="http://fusepool.info/data/WO-1978000001-A1.xml"/>
-      <prov:used rdf:resource="https://github.com/fusepool/patents-reengineering/src/main/resources/scripts/marec.xsl"/>
+      <prov:used rdf:resource="https://github.com/fusepool/patents-reengineering/src/main/resources/xsl/marec.xsl"/>
       <prov:generated>
          <rdf:Description rdf:about="http://fusepool.info/patent/WO-1978000001-A1">
             <prov:wasDerivedFrom rdf:resource="http://fusepool.info/data/WO-1978000001-A1.xml"/>
-            <prov:wasGeneratedBy rdf:resource="http://fusepool.info/provenance/activity/20130320104635"/>
+            <prov:wasGeneratedBy rdf:resource="http://fusepool.info/provenance/activity/20130326143553"/>
          </rdf:Description>
       </prov:generated>
    </rdf:Description>
    <rdf:Description rdf:about="http://fusepool.info/patent/WO-1978000001-A1">
-      <rdf:type rdf:resource="http://www.owl-ontologies.com/sumo.owl#Patent"/>
-      <property:status>new</property:status>
+      <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentPublication"/>
       <pmo:patentFamily>
          <rdf:Description rdf:about="http://fusepool.info/family/27125127">
             <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily"/>
@@ -42,56 +41,52 @@
       </pmo:patentFamily>
    </rdf:Description>
    <rdf:Description rdf:about="http://fusepool.info/patent/WO-1978000001-A1">
-      <dcterms:references>
-         <rdf:Description rdf:about="http://fusepool.info/patent/WO-1978000001-A1/publication">
-            <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#IntellectualPropertyDocument"/>
-            <property:status>new</property:status>
-            <dcterms:hasPart>
-               <rdf:Description rdf:about="http://fusepool.info/patent/WO-1978000001-A1/publication/19781019">
-                  <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentPublication"/>
-                  <dcterms:isPartOf rdf:resource="http://fusepool.info/patent/WO-1978000001-A1/publication"/>
-                  <property:status>new</property:status>
-                  <pulo:fileFormat>original</pulo:fileFormat>
-                  <property:filing-office rdf:resource="http://fusepool.info/code/filing-office/WO"/>
-                  <pmo:publicationNumber>1978000001</pmo:publicationNumber>
-                  <pmo:kindCode>A1</pmo:kindCode>
-                  <pmo:dateOfPublication rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1978-10-19</pmo:dateOfPublication>
-               </rdf:Description>
-            </dcterms:hasPart>
-         </rdf:Description>
-      </dcterms:references>
+      <property:status>new</property:status>
+      <pulo:fileFormat>original</pulo:fileFormat>
+      <pmo:countryOfFiling>WO</pmo:countryOfFiling>
+      <property:filing-office rdf:resource="http://fusepool.info/code/filing-office/WO"/>
+      <pmo:publicationNumber>1978000001</pmo:publicationNumber>
+      <pmo:kindCode>A1</pmo:kindCode>
+      <pmo:dateOfPublication rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1978-10-19</pmo:dateOfPublication>
    </rdf:Description>
    <rdf:Description rdf:about="http://fusepool.info/patent/WO-1978000001-A1">
       <dcterms:references>
-         <rdf:Description rdf:about="http://fusepool.info/patent/US-7800002-W/application">
-            <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#IntellectualPropertyDocument"/>
+         <rdf:Description rdf:about="http://fusepool.info/patent/US-7800002-W">
+            <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentPublication"/>
             <property:status>new</property:status>
             <property:is-representative>NO</property:is-representative>
-            <dcterms:hasPart>
-               <rdf:Description rdf:about="http://fusepool.info/patent/US-7800002-W/application/19780601">
-                  <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentPublication"/>
-                  <dcterms:isPartOf rdf:resource="http://fusepool.info/patent/US-7800002-W/application"/>
-                  <property:status>new</property:status>
-                  <pulo:fileFormat>epo</pulo:fileFormat>
-                  <property:filing-office rdf:resource="http://fusepool.info/code/filing-office/US"/>
-                  <pmo:applicationNumber>7800002</pmo:applicationNumber>
-                  <pmo:dateOfPublication rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1978-06-01</pmo:dateOfPublication>
-               </rdf:Description>
-            </dcterms:hasPart>
+            <pulo:fileFormat>epo</pulo:fileFormat>
+            <pmo:countryOfFiling>US</pmo:countryOfFiling>
+            <property:filing-office rdf:resource="http://fusepool.info/code/filing-office/US"/>
+            <pmo:applicationNumber>7800002</pmo:applicationNumber>
+            <pmo:kindCode>W</pmo:kindCode>
+            <pmo:dateOfPublication rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1978-06-01</pmo:dateOfPublication>
          </rdf:Description>
       </dcterms:references>
    </rdf:Description>
    <rdf:Description rdf:about="http://fusepool.info/patent/WO-1978000001-A1">
       <property:priority-claim>
-         <rdf:Description rdf:about="http://fusepool.info/patent/US-82772577-A/publication/1">
+         <rdf:Description rdf:about="http://fusepool.info/patent/US-82772577-A">
             <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentPublication"/>
+            <pulo:fileFormat>epo</pulo:fileFormat>
+            <pmo:countryOfFiling>US</pmo:countryOfFiling>
+            <property:filing-office rdf:resource="http://fusepool.info/code/filing-office/US"/>
+            <pmo:kindCode>A</pmo:kindCode>
+            <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#GrantedPatent"/>
+            <pmo:dateOfPublication rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1977-08-25</pmo:dateOfPublication>
          </rdf:Description>
       </property:priority-claim>
    </rdf:Description>
    <rdf:Description rdf:about="http://fusepool.info/patent/WO-1978000001-A1">
       <property:priority-claim>
-         <rdf:Description rdf:about="http://fusepool.info/patent/US-89418878-A/publication/1">
+         <rdf:Description rdf:about="http://fusepool.info/patent/US-89418878-A">
             <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentPublication"/>
+            <pulo:fileFormat>epo</pulo:fileFormat>
+            <pmo:countryOfFiling>US</pmo:countryOfFiling>
+            <property:filing-office rdf:resource="http://fusepool.info/code/filing-office/US"/>
+            <pmo:kindCode>A</pmo:kindCode>
+            <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#GrantedPatent"/>
+            <pmo:dateOfPublication rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1978-04-06</pmo:dateOfPublication>
          </rdf:Description>
       </property:priority-claim>
    </rdf:Description>
@@ -231,60 +226,48 @@
    <rdf:Description rdf:about="http://fusepool.info/patent/WO-1978000001-A1">
       <pmo:cites>
          <rdf:Description rdf:about="http://fusepool.info/patent/US-3560400-A">
-            <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#IntellectualPropertyDocument"/>
+            <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentPublication"/>
             <pmo:citedBy rdf:resource="http://fusepool.info/patent/WO-1978000001-A1"/>
-            <dcterms:hasPart>
-               <rdf:Description rdf:about="http://fusepool.info/patent/US-3560400-A/publication/1">
-                  <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentPublication"/>
-                  <dcterms:isPartOf rdf:resource="http://fusepool.info/patent/US-3560400-A/publication"/>
-                  <property:status>new</property:status>
-                  <pulo:fileFormat>epo</pulo:fileFormat>
-                  <property:filing-office rdf:resource="http://fusepool.info/code/filing-office/US"/>
-                  <pmo:publicationNumber>3560400</pmo:publicationNumber>
-               </rdf:Description>
-            </dcterms:hasPart>
+            <pulo:fileFormat>epo</pulo:fileFormat>
+            <pmo:countryOfFiling>US</pmo:countryOfFiling>
+            <property:filing-office rdf:resource="http://fusepool.info/code/filing-office/US"/>
+            <pmo:publicationNumber>3560400</pmo:publicationNumber>
+            <pmo:kindCode>A</pmo:kindCode>
+            <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#GrantedPatent"/>
          </rdf:Description>
       </pmo:cites>
    </rdf:Description>
    <rdf:Description rdf:about="http://fusepool.info/patent/WO-1978000001-A1">
       <pmo:cites>
          <rdf:Description rdf:about="http://fusepool.info/patent/US-3597252-A">
-            <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#IntellectualPropertyDocument"/>
+            <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentPublication"/>
             <pmo:citedBy rdf:resource="http://fusepool.info/patent/WO-1978000001-A1"/>
-            <dcterms:hasPart>
-               <rdf:Description rdf:about="http://fusepool.info/patent/US-3597252-A/publication/1">
-                  <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentPublication"/>
-                  <dcterms:isPartOf rdf:resource="http://fusepool.info/patent/US-3597252-A/publication"/>
-                  <property:status>new</property:status>
-                  <pulo:fileFormat>epo</pulo:fileFormat>
-                  <property:filing-office rdf:resource="http://fusepool.info/code/filing-office/US"/>
-                  <pmo:publicationNumber>3597252</pmo:publicationNumber>
-               </rdf:Description>
-            </dcterms:hasPart>
+            <pulo:fileFormat>epo</pulo:fileFormat>
+            <pmo:countryOfFiling>US</pmo:countryOfFiling>
+            <property:filing-office rdf:resource="http://fusepool.info/code/filing-office/US"/>
+            <pmo:publicationNumber>3597252</pmo:publicationNumber>
+            <pmo:kindCode>A</pmo:kindCode>
+            <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#GrantedPatent"/>
          </rdf:Description>
       </pmo:cites>
    </rdf:Description>
    <rdf:Description rdf:about="http://fusepool.info/patent/WO-1978000001-A1">
       <pmo:cites>
          <rdf:Description rdf:about="http://fusepool.info/patent/US-3699050-A">
-            <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#IntellectualPropertyDocument"/>
+            <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentPublication"/>
             <pmo:citedBy rdf:resource="http://fusepool.info/patent/WO-1978000001-A1"/>
-            <dcterms:hasPart>
-               <rdf:Description rdf:about="http://fusepool.info/patent/US-3699050-A/publication/1">
-                  <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentPublication"/>
-                  <dcterms:isPartOf rdf:resource="http://fusepool.info/patent/US-3699050-A/publication"/>
-                  <property:status>new</property:status>
-                  <pulo:fileFormat>epo</pulo:fileFormat>
-                  <property:filing-office rdf:resource="http://fusepool.info/code/filing-office/US"/>
-                  <pmo:publicationNumber>3699050</pmo:publicationNumber>
-               </rdf:Description>
-            </dcterms:hasPart>
+            <pulo:fileFormat>epo</pulo:fileFormat>
+            <pmo:countryOfFiling>US</pmo:countryOfFiling>
+            <property:filing-office rdf:resource="http://fusepool.info/code/filing-office/US"/>
+            <pmo:publicationNumber>3699050</pmo:publicationNumber>
+            <pmo:kindCode>A</pmo:kindCode>
+            <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#GrantedPatent"/>
          </rdf:Description>
       </pmo:cites>
    </rdf:Description>
    <rdf:Description rdf:about="http://fusepool.info/patent/WO-1978000001-A1">
       <pmo:applicant>
-         <rdf:Description rdf:about="urn:uuid:84c83da6-8475-4406-819e-27541b864d0f">
+         <rdf:Description rdf:about="urn:uuid:e415a3d6-29a2-4f66-9c3a-008da0797ad4">
             <rdf:type rdf:resource="http://www.owl-ontologies.com/sumo.owl#CognitiveAgent"/>
             <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
             <pmo:applicantOf rdf:resource="http://fusepool.info/patent/WO-1978000001-A1"/>
@@ -300,7 +283,7 @@
    </rdf:Description>
    <rdf:Description rdf:about="http://fusepool.info/patent/WO-1978000001-A1">
       <pmo:applicant>
-         <rdf:Description rdf:about="urn:uuid:7b35544d-1495-4826-a7ef-8ba36d67ce33">
+         <rdf:Description rdf:about="urn:uuid:b4627e9b-c91d-4390-9f36-ab2e09eda011">
             <rdf:type rdf:resource="http://www.owl-ontologies.com/sumo.owl#CognitiveAgent"/>
             <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
             <pmo:applicantOf rdf:resource="http://fusepool.info/patent/WO-1978000001-A1"/>
@@ -310,7 +293,7 @@
    </rdf:Description>
    <rdf:Description rdf:about="http://fusepool.info/patent/WO-1978000001-A1">
       <pmo:inventor>
-         <rdf:Description rdf:about="urn:uuid:2a11f652-583f-4616-88a4-388355317853">
+         <rdf:Description rdf:about="urn:uuid:eb0dcfaf-18dd-47d1-a3f0-dd8e66d21d39">
             <rdf:type rdf:resource="http://www.owl-ontologies.com/sumo.owl#Human"/>
             <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
             <pmo:inventorOf rdf:resource="http://fusepool.info/patent/WO-1978000001-A1"/>
@@ -326,7 +309,7 @@
    </rdf:Description>
    <rdf:Description rdf:about="http://fusepool.info/patent/WO-1978000001-A1">
       <pmo:inventor>
-         <rdf:Description rdf:about="urn:uuid:22256dff-dd22-4b53-b517-134d7b55d23b">
+         <rdf:Description rdf:about="urn:uuid:566b981b-2e1e-4daa-9cbe-4db4e4e99354">
             <rdf:type rdf:resource="http://www.owl-ontologies.com/sumo.owl#Human"/>
             <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
             <pmo:inventorOf rdf:resource="http://fusepool.info/patent/WO-1978000001-A1"/>
