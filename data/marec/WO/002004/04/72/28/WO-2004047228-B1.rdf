@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:foaf="http://xmlns.com/foaf/0.1/"
+         xmlns:prov="http://www.w3.org/ns/prov#"
+         xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+         xmlns:xkos="http://purl.org/linked-data/xkos#"
+         xmlns:pso="http://www.patexpert.org/ontologies/pso.owl#"
+         xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:pulo="http://www.patexpert.org/ontologies/pulo.owl#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:sumo="http://www.owl-ontologies.com/sumo.owl#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xmlns:pmo="http://www.patexpert.org/ontologies/pmo.owl#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:property="http://fusepool.info/property/"
+         xmlns:schema="http://schema.org/">
+   <rdf:Description rdf:about="http://csarven.ca/#i">
+      <rdf:type rdf:resource="http://www.w3.org/ns/prov#Agent"/>
+   </rdf:Description>
+   <rdf:Description xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                    rdf:about="http://fusepool.info/provenance/activity/20130326143600">
+      <rdf:type rdf:resource="http://www.w3.org/ns/prov#Activity"/>
+      <prov:startedAtTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2013-03-26T14:36:00Z</prov:startedAtTime>
+      <prov:wasAssociatedWith rdf:resource="http://csarven.ca/#i"/>
+      <prov:used rdf:resource="http://fusepool.info/data/WO-2004047228-B1.xml"/>
+      <prov:used rdf:resource="https://github.com/fusepool/patents-reengineering/src/main/resources/xsl/marec.xsl"/>
+      <prov:generated>
+         <rdf:Description rdf:about="http://fusepool.info/patent/WO-2004047228-B1">
+            <prov:wasDerivedFrom rdf:resource="http://fusepool.info/data/WO-2004047228-B1.xml"/>
+            <prov:wasGeneratedBy rdf:resource="http://fusepool.info/provenance/activity/20130326143600"/>
+         </rdf:Description>
+      </prov:generated>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://fusepool.info/patent/WO-2004047228-B1">
+      <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentPublication"/>
+      <pmo:patentFamily>
+         <rdf:Description rdf:about="http://fusepool.info/family/32321746">
+            <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentFamily"/>
+            <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
+            <skos:notation>32321746</skos:notation>
+         </rdf:Description>
+      </pmo:patentFamily>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://fusepool.info/patent/WO-2004047228-B1">
+      <property:status>new</property:status>
+      <pulo:fileFormat>original</pulo:fileFormat>
+      <pmo:countryOfFiling>WO</pmo:countryOfFiling>
+      <property:filing-office rdf:resource="http://fusepool.info/code/filing-office/WO"/>
+      <pmo:publicationNumber>2004047228</pmo:publicationNumber>
+      <pmo:kindCode>B1</pmo:kindCode>
+      <pmo:dateOfPublication rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2004-08-19</pmo:dateOfPublication>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://fusepool.info/patent/WO-2004047228-B1">
+      <dcterms:references>
+         <rdf:Description rdf:about="http://fusepool.info/patent/US-0336952-W">
+            <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentPublication"/>
+            <property:status>new</property:status>
+            <property:is-representative>NO</property:is-representative>
+            <pulo:fileFormat>epo</pulo:fileFormat>
+            <pmo:countryOfFiling>US</pmo:countryOfFiling>
+            <property:filing-office rdf:resource="http://fusepool.info/code/filing-office/US"/>
+            <pmo:applicationNumber>0336952</pmo:applicationNumber>
+            <pmo:kindCode>W</pmo:kindCode>
+            <pmo:dateOfPublication rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2003-11-19</pmo:dateOfPublication>
+         </rdf:Description>
+      </dcterms:references>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://fusepool.info/patent/WO-2004047228-B1">
+      <property:priority-claim>
+         <rdf:Description rdf:about="http://fusepool.info/patent/JP-2002334972-A">
+            <rdf:type rdf:resource="http://www.patexpert.org/ontologies/pmo.owl#PatentPublication"/>
+            <pulo:fileFormat>epo</pulo:fileFormat>
+            <pmo:countryOfFiling>JP</pmo:countryOfFiling>
+            <property:filing-office rdf:resource="http://fusepool.info/code/filing-office/JP"/>
+            <pmo:kindCode>A</pmo:kindCode>
+            <pmo:dateOfPublication rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2002-11-19</pmo:dateOfPublication>
+         </rdf:Description>
+      </property:priority-claim>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://fusepool.info/patent/WO-2004047228-B1">
+      <pmo:classifiedAs>
+         <rdf:Description rdf:about="http://fusepool.info/concept/ecla/G06K7/00K2">
+            <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+            <pmo:classifiedPatent rdf:resource="http://fusepool.info/patent/WO-2004047228-B1"/>
+            <pmo:classificationCode>G06K7/00K2</pmo:classificationCode>
+            <skos:notation>G06K7/00K2</skos:notation>
+         </rdf:Description>
+      </pmo:classifiedAs>
+      <pmo:classifiedAs>
+         <rdf:Description rdf:about="http://fusepool.info/concept/ecla/H01R23/68B2">
+            <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+            <pmo:classifiedPatent rdf:resource="http://fusepool.info/patent/WO-2004047228-B1"/>
+            <pmo:classificationCode>H01R23/68B2</pmo:classificationCode>
+            <skos:notation>H01R23/68B2</skos:notation>
+         </rdf:Description>
+      </pmo:classifiedAs>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://fusepool.info/patent/WO-2004047228-B1">
+      <dcterms:title xml:lang="en">IMPROVED MEMORY CARD CONNECTOR</dcterms:title>
+      <dcterms:title xml:lang="fr">CONNECTEUR DE CARTE MEMOIRE AMELIORE</dcterms:title>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://fusepool.info/patent/WO-2004047228-B1">
+      <pmo:applicant>
+         <rdf:Description rdf:about="urn:uuid:98101f30-daf3-4e96-8c17-f3996f86e124">
+            <rdf:type rdf:resource="http://www.owl-ontologies.com/sumo.owl#CognitiveAgent"/>
+            <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+            <pmo:applicantOf rdf:resource="http://fusepool.info/patent/WO-2004047228-B1"/>
+            <foaf:name>MOLEX INC</foaf:name>
+            <schema:address>
+               <rdf:Description>
+                  <rdf:type rdf:resource="http://schema.org/PostalAddress"/>
+                  <schema:addressCountry rdf:resource="http://fusepool.info/code/country/US"/>
+               </rdf:Description>
+            </schema:address>
+         </rdf:Description>
+      </pmo:applicant>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://fusepool.info/patent/WO-2004047228-B1">
+      <pmo:applicant>
+         <rdf:Description rdf:about="urn:uuid:6b4a8aca-8cde-4593-a719-d826ac26bb78">
+            <rdf:type rdf:resource="http://www.owl-ontologies.com/sumo.owl#CognitiveAgent"/>
+            <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+            <pmo:applicantOf rdf:resource="http://fusepool.info/patent/WO-2004047228-B1"/>
+            <foaf:name>TOSHIHISA HIRATA</foaf:name>
+            <schema:address>
+               <rdf:Description>
+                  <rdf:type rdf:resource="http://schema.org/PostalAddress"/>
+                  <schema:addressCountry rdf:resource="http://fusepool.info/code/country/JP"/>
+               </rdf:Description>
+            </schema:address>
+         </rdf:Description>
+      </pmo:applicant>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://fusepool.info/patent/WO-2004047228-B1">
+      <pmo:applicant>
+         <rdf:Description rdf:about="urn:uuid:9ba2f305-3322-4d23-90c1-49283b7241ef">
+            <rdf:type rdf:resource="http://www.owl-ontologies.com/sumo.owl#CognitiveAgent"/>
+            <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+            <pmo:applicantOf rdf:resource="http://fusepool.info/patent/WO-2004047228-B1"/>
+            <foaf:name>MOLEX INCORPORATED</foaf:name>
+         </rdf:Description>
+      </pmo:applicant>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://fusepool.info/patent/WO-2004047228-B1">
+      <pmo:applicant>
+         <rdf:Description rdf:about="urn:uuid:f94c5d59-d602-425a-85df-f4cb03f480e5">
+            <rdf:type rdf:resource="http://www.owl-ontologies.com/sumo.owl#CognitiveAgent"/>
+            <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+            <pmo:applicantOf rdf:resource="http://fusepool.info/patent/WO-2004047228-B1"/>
+            <foaf:name>TOSHIHISA, HIRATA</foaf:name>
+         </rdf:Description>
+      </pmo:applicant>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://fusepool.info/patent/WO-2004047228-B1">
+      <pmo:inventor>
+         <rdf:Description rdf:about="urn:uuid:dc84a5b0-a3a4-4ca2-b257-b436ae40ba48">
+            <rdf:type rdf:resource="http://www.owl-ontologies.com/sumo.owl#Human"/>
+            <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+            <pmo:inventorOf rdf:resource="http://fusepool.info/patent/WO-2004047228-B1"/>
+            <foaf:name>TOSHIHISA HIRATA</foaf:name>
+            <schema:address>
+               <rdf:Description>
+                  <rdf:type rdf:resource="http://schema.org/PostalAddress"/>
+                  <schema:addressCountry rdf:resource="http://fusepool.info/code/country/JP"/>
+               </rdf:Description>
+            </schema:address>
+         </rdf:Description>
+      </pmo:inventor>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://fusepool.info/patent/WO-2004047228-B1">
+      <pmo:inventor>
+         <rdf:Description rdf:about="urn:uuid:26c3088b-1a4e-407c-887d-7d960bee2ca2">
+            <rdf:type rdf:resource="http://www.owl-ontologies.com/sumo.owl#Human"/>
+            <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+            <pmo:inventorOf rdf:resource="http://fusepool.info/patent/WO-2004047228-B1"/>
+            <foaf:name>TOSHIHISA, HIRATA</foaf:name>
+         </rdf:Description>
+      </pmo:inventor>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://fusepool.info/patent/WO-2004047228-B1">
+      <dcterms:abstract rdf:parseType="Literal" xml:lang="en">
+         <p>A memory card connector is provided for receiving a memory card having a plurality of conductive contacts. The connector includes an insulating housing mounting a plurality of conductive terminals. A cover has a receptacle for receiving the memory card. A pivot-detent mechanism is operatively associated between the cover and the housing and movably mounts the cover to the housing. The mechanism includes a pivot device engageable between the cover and the housing to mount the cover for pivotal movement between an open position to allow the memory card to be received on the cover and a closed position bringing the contacts of the memory card into engagement with the terminals on the housing. The mechanism includes a detent device engageable between the cover and the housing to allow the cover to slidably move from the closed position to a latched position. A portion of the pivot device provides a dual function of forming a portion of the detent device.</p>
+      </dcterms:abstract>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://fusepool.info/patent/WO-2004047228-B1">
+      <dcterms:abstract rdf:parseType="Literal" xml:lang="fr">
+         <p>La présente invention concerne un connecteur de carte mémoire destiné à recevoir une carte mémoire comprenant une pluralité de contacts conducteurs. Le connecteur comprend un logement isolant sur lequel sont montées une pluralité de bornes conductrices. Un couvercle comprend un réceptacle destiné à recevoir la carte mémoire. Un mécanisme de détente pivotante est fonctionnellement associé au couvercle et au logement, entre ces derniers, et assemble de façon mobile le couvercle au logement. Le mécanisme précité comprend un dispositif pivotant destiné à s'emboîter entre le couvercle et le logement pour fixer le couvercle de façon qu'il peut pivoter entre une position ouverte permettant à la carte mémoire d'être reçue dans le couvercle et une position fermée dans laquelle les contacts de la carte mémoire sont amenés en contact avec les bornes montées sur le logement. Le mécanisme comprend un dispositif de détente pouvant coopérer entre le couvercle et le logement pour permettre au couvercle de se déplacer par coulissement de la position fermée jusque dans une position verrouillée. Une partie du dispositif pivotant assume une double fonction en ce qu'elle forme une partie du dispositif de détente.</p>
+      </dcterms:abstract>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://fusepool.info/patent/WO-2004047228-B1">
+      <dcterms:license>User acknowledges that the Information Retrieval Facility (IRF) and its third party providers retain all right, title and interest in and to this xml under applicable copyright laws. User acquires no ownership rights to this xml including but not limited to its format. User hereby accepts the terms and conditions of the Licence Agreement set forth at http://www.ir-facility.org/legal/marec/data_licence</dcterms:license>
+   </rdf:Description>
+</rdf:RDF>
