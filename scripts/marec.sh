@@ -20,3 +20,4 @@ saxonb-xslt -ext:on -t -tree:linked -s ../data/marec/JP/000010/00/00/01/JP-10000
 
 saxonb-xslt -ext:on -t -tree:linked -s ../data/marec/WO/001978/00/00/01/WO-1978000001-A1.xml -xsl ../src/main/resources/xsl/marec.xsl > ../data/marec/WO/001978/00/00/01/WO-1978000001-A1.rdf
 
+saxonb-xslt -ext:on -t -tree:linked -s ../data/marec/WO/002004/04/72/28/WO-2004047228-B1.xml -xsl ../src/main/resources/xsl/marec.xsl > ../data/marec/WO/002004/04/72/28/WO-2004047228-B1.rdf
