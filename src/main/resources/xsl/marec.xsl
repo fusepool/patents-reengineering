@@ -255,7 +255,9 @@ XXX: Normally we don't really want to define other patents from here. In case th
             <pmo:kindCode><xsl:value-of select="kind"/></pmo:kindCode>
             
             <xsl:if test="country = 'EP'">
-                <rdf:type rdf:resource="{$pso}{kind}Document"/>
+                <xsl:if test="string-length(kind) = 2">
+                    <rdf:type rdf:resource="{$pso}{kind}Document"/>
+                </xsl:if>
 
                 <xsl:if test="kind = 'B1'
                             or kind = 'B2'
