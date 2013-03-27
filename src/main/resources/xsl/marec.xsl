@@ -614,7 +614,7 @@ XXX: Perhaps switch to blank nodes instead
 
     <xsl:template match="address">
         <schema:address>
-            <rdf:Description>
+            <rdf:Description rdf:about="urn:uuid:{uuid:randomUUID()}">
                 <rdf:type rdf:resource="{$schema}PostalAddress"/>
                 <xsl:if test="address-1">
                     <schema:streetAddress><xsl:value-of select="address1"/></schema:streetAddress>
