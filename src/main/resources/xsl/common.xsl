@@ -35,7 +35,6 @@
     <xsl:variable name="patentFamily" select="concat($baseURI, 'family', $uriThingSeparator)"/>
     <xsl:variable name="party" select="concat($baseURI, 'party', $uriThingSeparator)"/>
     <xsl:variable name="provDocument" select="document($pathToProvDocument)/rdf:RDF"/>
-    <xsl:variable name="cpcConcordances" select="document($pathToCPCConcordances)/conversion-list/section/subclass"/>
 <!-- CONFIG END -->
 
     <xsl:variable name="now" select="fn:now()"/>

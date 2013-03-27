@@ -39,6 +39,7 @@ TODO: ignore DTD check. saxonb-xslt breaks if offline
 
     <xsl:param name="pathToProvDocument"/>
     <xsl:param name="pathToCPCConcordances"/>
+    <xsl:variable name="cpcConcordances" select="document($pathToCPCConcordances)/conversion-list/section/subclass"/>
 
     <xsl:strip-space elements="*"/>
 
