@@ -6,3 +6,5 @@
 marec="../data/marec/";
 
 java "$JVM_ARGS" tdb.tdbloader --desc="$tdbAssembler" --graph="$namespace"graph/patents "$marec"import/marec.nt
+
+./tdbstats.sh
