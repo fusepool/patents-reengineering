@@ -337,72 +337,70 @@ XXX: Normally we don't really want to define other patents from here. In case th
                                   /*[name() = 'main-classification' or
                                      name() = 'further-classification' or
                                      name() = 'classification-symbol']">
-                <xsl:variable name="classificationNodeName" select="name()"/>
+<!--                <xsl:variable name="classificationNodeName" select="name()"/>-->
 <!--
 XXX: This removes the codes after + or : in ECLA. There might be a particular use even though spec says it is not generally needed.
 -->
 <!-- XXX: This works with ECLA fine                <xsl:variable name="id" select="fn:substring-before-if-contains(fn:substring-before-if-contains(normalize-space(replace(., '\s+', '')), '+'), ':')"/>
 -->
 
-                <xsl:variable name="classificationID" select="fn:substring-before-if-contains(replace(normalize-space(replace(., '\s+', '')), ':', '/'), '+')"/>
+                <xsl:variable name="classificationIdentifier" select="fn:substring-before-if-contains(replace(normalize-space(replace(., '\s+', '')), ':', '/'), '+')"/>
 
-
-<!--                <xsl:variable name="id" select="$cpcConcordancesDocument/section/subclass/item[$classificationScheme = $classificationID]/CPC"/>-->
-
-<!-- Cheaper hardcoding EC/IPC -->
-                <xsl:variable name="id">
+                <xsl:variable name="classificationNode">
                     <xsl:choose>
-                        <xsl:when test="$classificationNodeName = 'classification-symbol'">
-                            <xsl:value-of select="$cpcConcordances/item[EC = $classificationID]/CPC"/>
+                        <xsl:when test="name() = 'classification-symbol'">
+                            <xsl:value-of select="'EC'"/>
                         </xsl:when>
                         <xsl:otherwise>
-                           <xsl:value-of select="$cpcConcordances/item[IPC = $classificationID]/CPC"/>
+                            <xsl:value-of select="'IPC'"/>
                         </xsl:otherwise>
                     </xsl:choose>
                 </xsl:variable>
 
-                <xsl:variable name="id">
+
+                <xsl:variable name="identifiers" select="distinct-values($cpcConcordances/item[*[name() = $classificationNode] and *[text() = $classificationIdentifier]]/CPC)"/>
+
+                <xsl:variable name="identifiers">
                     <xsl:choose>
-                        <xsl:when test="$id = ''">
-                            <xsl:value-of select="$classificationID"/>
+                        <xsl:when test="$identifiers = ''">
+                            <xsl:value-of select="$classificationIdentifier"/>
                         </xsl:when>
                         <xsl:otherwise>
-                            <xsl:value-of select="$id"/>
+                            <xsl:value-of select="$identifiers"/>
                         </xsl:otherwise>
                     </xsl:choose>
                 </xsl:variable>
 
-<!--
-TODO: Differentiate between main-classification and further-classification
--->
+                <xsl:for-each select="tokenize($identifiers, ' ')">
+                    <xsl:variable name="id" select="."/>
+                    <xsl:variable name="conceptURI" select="concat($concept, 'cpc/', $id)"/>
 
-                <xsl:variable name="conceptURI" select="concat($concept, 'cpc/', $id)"/>
+                    <pmo:classifiedAs>
+    <!--
+    XXX: Maybe switch to a code list
+    -->
+                        <rdf:Description rdf:about="{$conceptURI}">
+    <!--                        <xsl:call-template name="generalParameterEntities"/>-->
 
-                <pmo:classifiedAs>
-<!--
-XXX: Maybe switch to a code list
--->
-                    <rdf:Description rdf:about="{$conceptURI}">
-<!--                        <xsl:call-template name="generalParameterEntities"/>-->
+    <!--                        <rdf:type rdf:resource="{$pmo}PatentClassificationCategory"/>-->
+    <!--                        <rdf:type rdf:resource="{$pmo}IPCCategory"/>-->
+                            <rdf:type rdf:resource="{$skos}Concept"/>
 
-<!--                        <rdf:type rdf:resource="{$pmo}PatentClassificationCategory"/>-->
-<!--                        <rdf:type rdf:resource="{$pmo}IPCCategory"/>-->
-                        <rdf:type rdf:resource="{$skos}Concept"/>
+                            <pmo:classifiedPatent rdf:resource="{$patent}{$ucid}"/>
 
-                        <pmo:classifiedPatent rdf:resource="{$patent}{$ucid}"/>
+    <!--                        <skos:inScheme rdf:resource="{$concept}ipc"/>-->
+    <!--                        <skos:topConceptOf>-->
+    <!--                            <rdf:Description rdf:about="{$concept}ipc">-->
+    <!--                                <skos:hasTopConcept rdf:resource="{$concept}{$id}"/>-->
+    <!--                                <pmo:classifiedPatent rdf:resource="{$concept}{$id}"/>-->
+    <!--                            </rdf:Description>-->
+    <!--                        </skos:topConceptOf>-->
 
-<!--                        <skos:inScheme rdf:resource="{$concept}ipc"/>-->
-<!--                        <skos:topConceptOf>-->
-<!--                            <rdf:Description rdf:about="{$concept}ipc">-->
-<!--                                <skos:hasTopConcept rdf:resource="{$concept}{$id}"/>-->
-<!--                                <pmo:classifiedPatent rdf:resource="{$concept}{$id}"/>-->
-<!--                            </rdf:Description>-->
-<!--                        </skos:topConceptOf>-->
-
-                        <pmo:classificationCode><xsl:value-of select="$id"/></pmo:classificationCode>
-                        <skos:notation><xsl:value-of select="$id"/></skos:notation>
-                    </rdf:Description>
-                </pmo:classifiedAs>
+                            <pmo:classificationCode><xsl:value-of select="$id"/></pmo:classificationCode>
+                            <skos:notation><xsl:value-of select="$id"/></skos:notation>
+                        </rdf:Description>
+                    </pmo:classifiedAs>
+                </xsl:for-each>
             </xsl:for-each>
         </rdf:Description>
     </xsl:template>

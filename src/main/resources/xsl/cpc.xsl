@@ -153,11 +153,11 @@
 
     <xsl:template match="title-part">
         <xsl:apply-templates select="text" mode="skos:prefLabel"/>
-        <xsl:apply-templates select="explanation"/>
-        <xsl:apply-templates select="comment" mode="fn:title-part"/>
+        <xsl:apply-templates select="explanation | reference"/>
+        <xsl:apply-templates select="comment | CPC-specific-text" mode="fn:title-part"/>
     </xsl:template>
 
-    <xsl:template match="explanation">
+    <xsl:template match="explanation | reference">
         <xsl:apply-templates select="text" mode="skos:definition"/>
         <xsl:apply-templates select="comment" mode="skos:scopeNote"/>
     </xsl:template>
@@ -166,9 +166,9 @@
         <xsl:apply-templates select="text" mode="skos:scopeNote"/>
     </xsl:template>
 
-    <xsl:template match="comment" mode="fn:title-part">
+    <xsl:template match="comment | CPC-specific-text" mode="fn:title-part">
         <xsl:apply-templates select="text" mode="skos:prefLabel"/>
-        <xsl:apply-templates select="explanation"/>
+        <xsl:apply-templates select="explanation | reference"/>
     </xsl:template>
 
     <xsl:template match="note">
