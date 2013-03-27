@@ -333,11 +333,11 @@ XXX: Normally we don't really want to define other patents from here. In case th
         <xsl:param name="ucid" tunnel="yes"/>
 
         <rdf:Description rdf:about="{$patent}{$ucid}">
-            <xsl:for-each select="*[name() = 'classificaiton-ipc' or name() = 'classification-ecla']
+            <xsl:for-each select="*[name() = 'classification-ipc' or name() = 'classification-ecla']
                                   /*[name() = 'main-classification' or
                                      name() = 'further-classification' or
                                      name() = 'classification-symbol']">
-
+                <xsl:variable name="classificationNodeName" select="name()"/>
 <!--
 XXX: This removes the codes after + or : in ECLA. There might be a particular use even though spec says it is not generally needed.
 -->
@@ -352,11 +352,14 @@ XXX: This removes the codes after + or : in ECLA. There might be a particular us
 <!-- Cheaper hardcoding EC/IPC -->
                 <xsl:variable name="id">
                     <xsl:choose>
-                        <xsl:when test="name() = 'classification-symbol'">
+                        <xsl:when test="$classificationNodeName = 'classification-symbol'">
                             <xsl:value-of select="$cpcConcordances/item[EC = $classificationID]/CPC"/>
-                            </xsl:when>
-                        <xsl:otherwise>
+                        </xsl:when>
+                        <xsl:when test="$classificationNodeName = 'main-classification' or $classificationNodeName = 'further-classification'">
                            <xsl:value-of select="$cpcConcordances/item[IPC = $classificationID]/CPC"/>
+                        </xsl:when>
+                        <xsl:otherwise>
+                            <xsl:value-of select="$classificationID"/>
                         </xsl:otherwise>
                     </xsl:choose>
                 </xsl:variable>
