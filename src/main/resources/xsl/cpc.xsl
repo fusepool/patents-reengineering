@@ -2,7 +2,7 @@
     Author: Sarven Capadisli <info@csarven.ca>
     Author URI: http://csarven.ca/#i
 
-    Description: XSLT for ECLA Cooperative Patent Classification
+    Description: XSLT for CPC (Cooperative Patent Classification)
 -->
 <xsl:stylesheet version="2.0"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
@@ -23,9 +23,10 @@
     xmlns:property="http://fusepool.info/property/"
     xmlns:schema="http://schema.org/"
 
-    xpath-default-namespace="http://www.epo.org/eclaexport"
     exclude-result-prefixes="xsl fn"
     >
+
+<!--    xpath-default-namespace="http://www.epo.org/eclaexport"-->
 
     <xsl:import href="common.xsl"/>
 
@@ -35,7 +36,7 @@
 
     <xsl:strip-space elements="*"/>
 
-    <xsl:variable name="xslDocument" select="'https://github.com/fusepool/patents-reengineering/src/main/resources/xsl/ecla.xsl'"/>
+    <xsl:variable name="xslDocument" select="'https://github.com/fusepool/patents-reengineering/src/main/resources/xsl/cpc.xsl'"/>
 
     <xsl:template match="/class-scheme">
         <rdf:RDF>
@@ -43,14 +44,14 @@
                 <rdf:type rdf:resource="{$prov}Agent"/>
             </rdf:Description>
 
-            <rdf:Description rdf:about="{$concept}ecla">
+            <rdf:Description rdf:about="{$concept}cpc">
                 <rdf:type rdf:resource="{$pmo}PatentClassification"/>
                 <rdf:type rdf:resource="{$skos}ConceptScheme"/>
-                <skos:notation>ECLA</skos:notation>
-                <skos:prefLabel xml:lang="en">European Patent Classification</skos:prefLabel>
-                <foaf:homepage rdf:resource="http://worldwide.espacenet.com/classification"/>
-                <foaf:page rdf:resource="http://www.epo.org/"/>
+                <skos:notation>CPC</skos:notation>
+                <skos:prefLabel xml:lang="en">Cooperative Patent Classification</skos:prefLabel>
+                <foaf:page rdf:resource="http://www.cooperativepatentclassification.org/"/>
             </rdf:Description>
+
             <xsl:apply-templates/>
         </rdf:RDF>
     </xsl:template>
@@ -63,7 +64,7 @@
             </xsl:if>
         </xsl:variable>
         <xsl:variable name="conceptID" select="normalize-space(classification-symbol)"/>
-        <xsl:variable name="conceptURI" select="concat($concept, 'ecla/', $levelPath, $conceptID)"/>
+        <xsl:variable name="conceptURI" select="concat($concept, 'cpc/', $levelPath, $conceptID)"/>
 
 <!--<xsl:message>-->
 <!--<xsl:value-of select="@level"/>-->
@@ -76,7 +77,7 @@
                 <xsl:when test="$level &lt; 7">
                     <rdf:type rdf:resource="{$skos}Collection"/>
                     <rdf:type rdf:resource="{$xkos}ClassificationLevel"/>
-                    <rdf:type rdf:resource="{$pmo}ECLACategoory"/>
+<!--                    <rdf:type rdf:resource="{$pmo}ECLACategory"/>-->
                     <xkos:depth rdf:datatype="{$xsd}integer"><xsl:value-of select="$level"/></xkos:depth>
 
                     <xsl:for-each select="classification-item">
@@ -88,10 +89,13 @@
                     <xsl:for-each select="classification-item[number(normalize-space(@level)) &lt; 7]">
                         <xsl:variable name="level" select="number(normalize-space(@level))"/>
                         <xsl:variable name="subConceptID" select="normalize-space(classification-symbol)"/>
-                        <xsl:variable name="subConceptURI" select="concat($concept, 'ecla/', $level, '/', $subConceptID)"/>
+                        <xsl:variable name="subConceptURI" select="concat($concept, 'cpc/', $level, '/', $subConceptID)"/>
 
-                        <pmo:subCategory rdf:resource="{$subConceptURI}"/>
-                        <pmo:parentCategory rdf:resource="{$conceptURI}"/>
+                        <pmo:subCategory>
+                            <rdf:Description rdf:about="{$subConceptURI}">
+                                <pmo:parentCategory rdf:resource="{$conceptURI}"/>
+                            </rdf:Description>
+                        </pmo:subCategory>
                     </xsl:for-each>
                 </xsl:when>
                 <xsl:otherwise>
@@ -104,13 +108,13 @@
                                 <xsl:value-of select="concat(../@level, '/')"/>
                             </xsl:if>
                         </xsl:variable>
-                        <xsl:variable name="broaderConceptURI" select="concat($concept, 'ecla/', $broaderConceptLevel, $broaderConceptID)"/>
+                        <xsl:variable name="broaderConceptURI" select="concat($concept, 'cpc/', $broaderConceptLevel, $broaderConceptID)"/>
                         <skos:topConceptOf>
-                            <rdf:Description rdf:about="{concat($concept, 'ecla')}">
+                            <rdf:Description rdf:about="{concat($concept, 'cpc')}">
                                 <skos:hasTopConcept rdf:resource="{$conceptURI}"/>
                             </rdf:Description>
                         </skos:topConceptOf>
-                        <skos:inScheme rdf:resource="{concat($concept, 'ecla')}"/>
+                        <skos:inScheme rdf:resource="{concat($concept, 'cpc')}"/>
                         <skos:broader rdf:resource="{$broaderConceptURI}"/>
                     </xsl:if>
 
@@ -191,7 +195,7 @@
         <xsl:variable name="classRef" select="normalize-space(.)"/>
         <xsl:if test="not(contains($classRef, ' '))">
             <dcterms:references>
-                <rdf:Description rdf:about="{concat($concept, 'ecla/', $classRef)}">
+                <rdf:Description rdf:about="{concat($concept, 'cpc/', $classRef)}">
                     <skos:notation><xsl:value-of select="$classRef"/></skos:notation>
                 </rdf:Description>
             </dcterms:references>

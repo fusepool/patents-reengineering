@@ -38,6 +38,7 @@ TODO: ignore DTD check. saxonb-xslt breaks if offline
     <xsl:output encoding="utf-8" indent="yes" method="xml" omit-xml-declaration="no"/>
 
     <xsl:param name="pathToProvDocument"/>
+    <xsl:param name="pathToCPCConcordances"/>
 
     <xsl:strip-space elements="*"/>
 
@@ -335,15 +336,36 @@ XXX: Normally we don't really want to define other patents from here. In case th
                                   /*[name() = 'main-classification' or
                                      name() = 'further-classification' or
                                      name() = 'classification-symbol']">
+
 <!--
 XXX: This removes the codes after + or : in ECLA. There might be a particular use even though spec says it is not generally needed.
 -->
-                <xsl:variable name="id" select="fn:substring-before-if-contains(fn:substring-before-if-contains(normalize-space(replace(., '\s+', '')), '+'), ':')"/>
+<!-- XXX: This works with ECLA fine                <xsl:variable name="id" select="fn:substring-before-if-contains(fn:substring-before-if-contains(normalize-space(replace(., '\s+', '')), '+'), ':')"/>
+-->
+
+                <xsl:variable name="classificationID" select="fn:substring-before-if-contains(replace(normalize-space(replace(., '\s+', '')), ':', '/'), '+')"/>
+
+
+<!--                <xsl:variable name="id" select="$cpcConcordancesDocument/section/subclass/item[$classificationScheme = $classificationID]/CPC"/>-->
+
+<!-- Cheaper hardcoding EC/IPC -->
+                <xsl:variable name="id">
+                    <xsl:choose>
+                        <xsl:when test="name() = 'classification-symbol'">
+                            <xsl:value-of select="$cpcConcordances/item[EC = $classificationID]/CPC"/>
+                            </xsl:when>
+                        <xsl:otherwise>
+                           <xsl:value-of select="$cpcConcordances/item[IPC = $classificationID]/CPC"/>
+                        </xsl:otherwise>
+                    </xsl:choose>
+                </xsl:variable>
+
+
 <!--
 TODO: Differentiate between main-classification and further-classification
 -->
 
-                <xsl:variable name="conceptURI" select="concat($concept, 'ecla/', $id)"/>
+                <xsl:variable name="conceptURI" select="concat($concept, 'cpc/', $id)"/>
 
                 <pmo:classifiedAs>
 <!--
