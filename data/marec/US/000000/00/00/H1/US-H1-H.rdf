@@ -17,16 +17,16 @@
       <rdf:type rdf:resource="http://www.w3.org/ns/prov#Agent"/>
    </rdf:Description>
    <rdf:Description xmlns:xs="http://www.w3.org/2001/XMLSchema"
-                    rdf:about="http://fusepool.info/provenance/activity/20130326145738">
+                    rdf:about="http://fusepool.info/provenance/activity/20130327140841">
       <rdf:type rdf:resource="http://www.w3.org/ns/prov#Activity"/>
-      <prov:startedAtTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2013-03-26T14:57:38Z</prov:startedAtTime>
+      <prov:startedAtTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2013-03-27T14:08:41Z</prov:startedAtTime>
       <prov:wasAssociatedWith rdf:resource="http://csarven.ca/#i"/>
       <prov:used rdf:resource="http://fusepool.info/data/US-H1-H.xml"/>
       <prov:used rdf:resource="https://github.com/fusepool/patents-reengineering/src/main/resources/xsl/marec.xsl"/>
       <prov:generated>
          <rdf:Description rdf:about="http://fusepool.info/patent/US-H1-H">
             <prov:wasDerivedFrom rdf:resource="http://fusepool.info/data/US-H1-H.xml"/>
-            <prov:wasGeneratedBy rdf:resource="http://fusepool.info/provenance/activity/20130326145738"/>
+            <prov:wasGeneratedBy rdf:resource="http://fusepool.info/provenance/activity/20130327140841"/>
          </rdf:Description>
       </prov:generated>
    </rdf:Description>
@@ -84,11 +84,11 @@
    </rdf:Description>
    <rdf:Description rdf:about="http://fusepool.info/patent/US-H1-H">
       <pmo:classifiedAs>
-         <rdf:Description rdf:about="http://fusepool.info/concept/ecla/H01R4/24B3D1">
+         <rdf:Description rdf:about="http://fusepool.info/concept/cpc/H01R4/2441">
             <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
             <pmo:classifiedPatent rdf:resource="http://fusepool.info/patent/US-H1-H"/>
-            <pmo:classificationCode>H01R4/24B3D1</pmo:classificationCode>
-            <skos:notation>H01R4/24B3D1</skos:notation>
+            <pmo:classificationCode>H01R4/2441</pmo:classificationCode>
+            <skos:notation>H01R4/2441</skos:notation>
          </rdf:Description>
       </pmo:classifiedAs>
    </rdf:Description>
@@ -97,7 +97,7 @@
    </rdf:Description>
    <rdf:Description rdf:about="http://fusepool.info/patent/US-H1-H">
       <pmo:inventor>
-         <rdf:Description rdf:about="urn:uuid:06213089-6af2-4d56-bc3d-129f9c906598">
+         <rdf:Description rdf:about="urn:uuid:9e3e42ef-8143-4819-b4ee-54f7df037af7">
             <rdf:type rdf:resource="http://www.owl-ontologies.com/sumo.owl#Human"/>
             <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
             <pmo:inventorOf rdf:resource="http://fusepool.info/patent/US-H1-H"/>
@@ -116,7 +116,7 @@
    </rdf:Description>
    <rdf:Description rdf:about="http://fusepool.info/patent/US-H1-H">
       <pmo:assignee>
-         <rdf:Description rdf:about="urn:uuid:a9d08f38-0d62-4cdb-b18e-356c6140e371">
+         <rdf:Description rdf:about="urn:uuid:58350c7f-3d62-4217-a9fd-f54e265e0ba6">
             <rdf:type rdf:resource="http://www.owl-ontologies.com/sumo.owl#CognitiveAgent"/>
             <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
             <pmo:assigneeOf rdf:resource="http://fusepool.info/patent/US-H1-H"/>
@@ -134,7 +134,7 @@
    </rdf:Description>
    <rdf:Description rdf:about="http://fusepool.info/patent/US-H1-H">
       <property:agent>
-         <rdf:Description rdf:about="urn:uuid:c5edb17a-f036-4fc7-9c66-b55e222cd538">
+         <rdf:Description rdf:about="urn:uuid:3e8b5987-6670-4ac1-b4f3-b56e007f045f">
             <rdf:type rdf:resource="http://www.owl-ontologies.com/sumo.owl#Agent"/>
             <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
             <property:agentOf rdf:resource="http://fusepool.info/patent/US-H1-H"/>
