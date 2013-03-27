@@ -1,4 +1,5 @@
 #!/bin/bash
-data="/data/ecla/";
 
-for i in "$data"*.rdf ; do rapper -g "$i" >> "$data"import/ecla.nt ; done
+. ./patents.config.sh
+
+for i in "$eclascheme"*.rdf ; do rapper -g "$i" >> "$eclascheme"import/ecla.nt ; done
