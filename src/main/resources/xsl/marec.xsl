@@ -355,15 +355,22 @@ XXX: This removes the codes after + or : in ECLA. There might be a particular us
                         <xsl:when test="$classificationNodeName = 'classification-symbol'">
                             <xsl:value-of select="$cpcConcordances/item[EC = $classificationID]/CPC"/>
                         </xsl:when>
-                        <xsl:when test="$classificationNodeName = 'main-classification' or $classificationNodeName = 'further-classification'">
-                           <xsl:value-of select="$cpcConcordances/item[IPC = $classificationID]/CPC"/>
-                        </xsl:when>
                         <xsl:otherwise>
-                            <xsl:value-of select="$classificationID"/>
+                           <xsl:value-of select="$cpcConcordances/item[IPC = $classificationID]/CPC"/>
                         </xsl:otherwise>
                     </xsl:choose>
                 </xsl:variable>
 
+                <xsl:variable name="id">
+                    <xsl:choose>
+                        <xsl:when test="$id = ''">
+                            <xsl:value-of select="$classificationID"/>
+                        </xsl:when>
+                        <xsl:otherwise>
+                            <xsl:value-of select="$id"/>
+                        </xsl:otherwise>
+                    </xsl:choose>
+                </xsl:variable>
 
 <!--
 TODO: Differentiate between main-classification and further-classification
