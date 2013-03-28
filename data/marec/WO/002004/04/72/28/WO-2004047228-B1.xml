@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE patent-document PUBLIC "-//MXW//DTD patent-document XML//EN" "http://www.ir-facility.org/dtds/patents/v1.4/patent-document.dtd">
+<patent-document ucid="WO-2004047228-B1" country="WO" doc-number="2004047228" kind="B1" lang="XX" family-id="32321746" status="new" date-produced="20090508" date="20040819">
+  <bibliographic-data>
+    <publication-reference ucid="WO-2004047228-B1" status="new" fvid="78785616">
+      <document-id status="new" format="original">
+        <country>WO</country>
+        <doc-number>2004047228</doc-number>
+        <kind>B1</kind>
+        <date>20040819</date>
+      </document-id>
+    </publication-reference>
+    <application-reference ucid="US-0336952-W" status="new" is-representative="NO">
+      <document-id status="new" format="epo">
+        <country>US</country>
+        <doc-number>0336952</doc-number>
+        <kind>W</kind>
+        <date>20031119</date>
+      </document-id>
+    </application-reference>
+    <priority-claims status="new">
+      <priority-claim ucid="JP-2002334972-A" status="new">
+        <document-id status="new" format="epo">
+          <country>JP</country>
+          <doc-number>2002334972</doc-number>
+          <kind>A</kind>
+          <date>20021119</date>
+        </document-id>
+      </priority-claim>
+    </priority-claims>
+    <technical-data status="new">
+      <classification-ipc status="new">
+        <edition>7</edition>
+        <main-classification>H01R  12/16</main-classification>
+        <further-classification>G06K   7/00</further-classification>
+      </classification-ipc>
+      <classifications-ipcr>
+        <classification-ipcr status="new">G06K   7/00        20060101A I20051008RMEP        </classification-ipcr>
+        <classification-ipcr status="new">G06K   7/00        20060101C I20051008RMEP        </classification-ipcr>
+        <classification-ipcr status="new">G06K  17/00        20060101AFI20051220RMJP        </classification-ipcr>
+        <classification-ipcr status="new">G06K  17/00        20060101CFI20051220RMJP        </classification-ipcr>
+        <classification-ipcr status="new">H01R  12/00        20060101C I20051008RMEP        </classification-ipcr>
+        <classification-ipcr status="new">H01R  12/16        20060101A I20051008RMEP        </classification-ipcr>
+        <classification-ipcr status="new">H01R  12/18        20060101ALI20051220RMJP        </classification-ipcr>
+        <classification-ipcr status="new">H01R  13/639       20060101ALI20051220RMJP        </classification-ipcr>
+        <classification-ipcr status="new">H01R  13/639       20060101CLI20051220RMJP        </classification-ipcr>
+      </classifications-ipcr>
+      <classification-ecla status="new">
+        <classification-symbol scheme="EC">G06K   7/00K2</classification-symbol>
+        <classification-symbol scheme="EC">H01R  23/68B2</classification-symbol>
+      </classification-ecla>
+      <invention-title load-source="docdb" status="new" lang="EN">IMPROVED MEMORY CARD CONNECTOR</invention-title>
+      <invention-title load-source="docdb" status="new" lang="FR">CONNECTEUR DE CARTE MEMOIRE AMELIORE</invention-title>
+    </technical-data>
+    <parties>
+      <applicants>
+        <applicant status="new" format="epo">
+          <addressbook>
+            <name>MOLEX INC</name>
+            <address>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </applicant>
+        <applicant status="new" format="epo">
+          <addressbook>
+            <name>TOSHIHISA HIRATA</name>
+            <address>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </applicant>
+        <applicant status="new" format="intermediate">
+          <addressbook>
+            <name>MOLEX INCORPORATED</name>
+          </addressbook>
+        </applicant>
+        <applicant status="new" format="intermediate">
+          <addressbook>
+            <name>TOSHIHISA, HIRATA</name>
+          </addressbook>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor status="new" format="epo">
+          <addressbook>
+            <name>TOSHIHISA HIRATA</name>
+            <address>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor status="new" format="intermediate">
+          <addressbook>
+            <name>TOSHIHISA, HIRATA</name>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+  </bibliographic-data>
+  <abstract load-source="docdb" source="national office" status="new" lang="EN">
+    <p>A memory card connector is provided for receiving a memory card having a plurality of conductive contacts. The connector includes an insulating housing mounting a plurality of conductive terminals. A cover has a receptacle for receiving the memory card. A pivot-detent mechanism is operatively associated between the cover and the housing and movably mounts the cover to the housing. The mechanism includes a pivot device engageable between the cover and the housing to mount the cover for pivotal movement between an open position to allow the memory card to be received on the cover and a closed position bringing the contacts of the memory card into engagement with the terminals on the housing. The mechanism includes a detent device engageable between the cover and the housing to allow the cover to slidably move from the closed position to a latched position. A portion of the pivot device provides a dual function of forming a portion of the detent device.</p>
+  </abstract>
+  <abstract load-source="docdb" source="national office" status="new" lang="FR">
+    <p>La présente invention concerne un connecteur de carte mémoire destiné à recevoir une carte mémoire comprenant une pluralité de contacts conducteurs. Le connecteur comprend un logement isolant sur lequel sont montées une pluralité de bornes conductrices. Un couvercle comprend un réceptacle destiné à recevoir la carte mémoire. Un mécanisme de détente pivotante est fonctionnellement associé au couvercle et au logement, entre ces derniers, et assemble de façon mobile le couvercle au logement. Le mécanisme précité comprend un dispositif pivotant destiné à s'emboîter entre le couvercle et le logement pour fixer le couvercle de façon qu'il peut pivoter entre une position ouverte permettant à la carte mémoire d'être reçue dans le couvercle et une position fermée dans laquelle les contacts de la carte mémoire sont amenés en contact avec les bornes montées sur le logement. Le mécanisme comprend un dispositif de détente pouvant coopérer entre le couvercle et le logement pour permettre au couvercle de se déplacer par coulissement de la position fermée jusque dans une position verrouillée. Une partie du dispositif pivotant assume une double fonction en ce qu'elle forme une partie du dispositif de détente.</p>
+  </abstract>
+  <copyright>User acknowledges that the Information Retrieval Facility (IRF) and its third party providers retain all right, title and interest in and to this xml under applicable copyright laws. User acquires no ownership rights to this xml including but not limited to its format. User hereby accepts the terms and conditions of the Licence Agreement set forth at http://www.ir-facility.org/legal/marec/data_licence</copyright>
+</patent-document>

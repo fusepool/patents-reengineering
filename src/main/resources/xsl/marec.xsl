@@ -38,10 +38,12 @@ TODO: ignore DTD check. saxonb-xslt breaks if offline
     <xsl:output encoding="utf-8" indent="yes" method="xml" omit-xml-declaration="no"/>
 
     <xsl:param name="pathToProvDocument"/>
+    <xsl:param name="pathToCPCConcordances"/>
+    <xsl:variable name="cpcConcordances" select="document($pathToCPCConcordances)/conversion-list/section/subclass"/>
 
     <xsl:strip-space elements="*"/>
 
-    <xsl:variable name="xslDocument" select="'https://github.com/fusepool/patents-reengineering/src/main/resources/scripts/marec.xsl'"/>
+    <xsl:variable name="xslDocument" select="'https://github.com/fusepool/patents-reengineering/src/main/resources/xsl/marec.xsl'"/>
 
     <xsl:template match="/patent-document">
         <rdf:RDF>
@@ -62,9 +64,9 @@ TODO: ignore DTD check. saxonb-xslt breaks if offline
             </xsl:call-template>
 
             <rdf:Description rdf:about="{$patentURI}">
-                <rdf:type rdf:resource="{$sumo}Patent"/>
+                <rdf:type rdf:resource="{$pmo}PatentPublication"/>
 
-                <xsl:call-template name="generalParameterEntities"/>
+<!--                <xsl:call-template name="generalParameterEntities"/>-->
 
                 <xsl:call-template name="family-id">
                     <xsl:with-param name="ucid" select="$ucid" tunnel="yes"/>
@@ -114,17 +116,11 @@ TODO: ignore DTD check. saxonb-xslt breaks if offline
 
         <xsl:for-each select="publication-reference">
             <rdf:Description rdf:about="{$patent}{$ucid}">
-                <dcterms:references>
-                    <rdf:Description rdf:about="{$patent}{@ucid}/publication">
-                        <rdf:type rdf:resource="{$pmo}IntellectualPropertyDocument"/>
+                <xsl:call-template name="generalParameterEntities"/>
 
-                        <xsl:call-template name="generalParameterEntities"/>
-
-                        <xsl:call-template name="document-id">
-                            <xsl:with-param name="ucid" select="@ucid" tunnel="yes"/>
-                        </xsl:call-template>
-                    </rdf:Description>
-                </dcterms:references>
+                <xsl:call-template name="document-id">
+                    <xsl:with-param name="ucid" select="@ucid" tunnel="yes"/>
+                </xsl:call-template>
             </rdf:Description>
         </xsl:for-each>
     </xsl:template>
@@ -136,8 +132,8 @@ TODO: ignore DTD check. saxonb-xslt breaks if offline
         <xsl:for-each select="application-reference">
             <rdf:Description rdf:about="{$patent}{$ucid}">
                 <dcterms:references>
-                    <rdf:Description rdf:about="{$patent}{@ucid}/application">
-                        <rdf:type rdf:resource="{$pmo}IntellectualPropertyDocument"/>
+                    <rdf:Description rdf:about="{$patent}{@ucid}">
+                        <rdf:type rdf:resource="{$pmo}PatentPublication"/>
 
                         <xsl:call-template name="generalParameterEntities"/>
 
@@ -183,11 +179,16 @@ XXX: Skips priority-claims without @ucid
         <xsl:for-each select="priority-claims/priority-claim[@ucid]">
             <rdf:Description rdf:about="{$patent}{$ucid}">
                 <property:priority-claim>
-                    <rdf:Description rdf:about="{$patent}{@ucid}/publication{$uriThingSeparator}{$id}">
+                    <rdf:Description rdf:about="{$patent}{@ucid}">
 <!--
 XXX: Normally we don't really want to define other patents from here. In case this patent is not declared anywhere else, there is at least this type.
 -->
                         <rdf:type rdf:resource="{$pmo}PatentPublication"/>
+
+                        <xsl:call-template name="document-id">
+                            <xsl:with-param name="ucid" select="@ucid" tunnel="yes"/>
+                        </xsl:call-template>
+
                     </rdf:Description>
                 </property:priority-claim>
             </rdf:Description>
@@ -216,63 +217,87 @@ XXX: Normally we don't really want to define other patents from here. In case th
         </xsl:variable>
 
         <xsl:for-each select="document-id">
-            <dcterms:hasPart>
-                <xsl:variable name="id">
-                    <xsl:choose>
-                        <xsl:when test="date">
-                            <xsl:value-of select="replace(normalize-space(date), '\s+', '')"/>
-                        </xsl:when>
-                        <xsl:otherwise>
-                            <xsl:value-of select="position()"/>
-                        </xsl:otherwise>
-                    </xsl:choose>
-                </xsl:variable>
+            <xsl:variable name="id">
+                <xsl:choose>
+                    <xsl:when test="date">
+                        <xsl:value-of select="replace(normalize-space(date), '\s+', '')"/>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <xsl:value-of select="position()"/>
+                    </xsl:otherwise>
+                </xsl:choose>
+            </xsl:variable>
 
-                <rdf:Description rdf:about="{$patent}{$ucid}/{$referenceType}{$uriThingSeparator}{$id}">
-                    <rdf:type rdf:resource="{$pmo}PatentPublication"/>
+<!--                    <rdf:type rdf:resource="{$pmo}PatentPublication"/>-->
 
-                    <dcterms:isPartOf rdf:resource="{$patent}{$ucid}/{$referenceType}"/>
+<!--                    <dcterms:isPartOf rdf:resource="{$patent}{$ucid}/{$referenceType}"/>-->
 
-                    <xsl:call-template name="generalParameterEntities"/>
+<!--            <xsl:call-template name="generalParameterEntities"/>-->
 
-                    <xsl:apply-templates select="@format"/>
+            <xsl:apply-templates select="@format"/>
 
-                    <xsl:if test="country">
-                        <property:filing-office rdf:resource="{$code}filing-office{$uriThingSeparator}{country}"/>
-                    </xsl:if>
+            <xsl:if test="country">
+                <pmo:countryOfFiling><xsl:value-of select="country"/></pmo:countryOfFiling>
+                <property:filing-office rdf:resource="{$code}filing-office{$uriThingSeparator}{country}"/>
+            </xsl:if>
 
-                    <xsl:if test="doc-number">
-                        <xsl:choose>
-                            <xsl:when test="$referenceType = 'publication'">
-                                <pmo:publicationNumber><xsl:value-of select="doc-number"/></pmo:publicationNumber>
-                            </xsl:when>
-                            <xsl:when test="$referenceType = 'application'">
-                                <pmo:applicationNumber><xsl:value-of select="doc-number"/></pmo:applicationNumber>
-                            </xsl:when>
-                            <xsl:otherwise>
-                            </xsl:otherwise>
-                        </xsl:choose>
-                    </xsl:if>
+            <xsl:if test="doc-number">
+                <xsl:choose>
+                    <xsl:when test="$referenceType = 'publication'">
+                        <pmo:publicationNumber><xsl:value-of select="doc-number"/></pmo:publicationNumber>
+                    </xsl:when>
+                    <xsl:when test="$referenceType = 'application'">
+                        <pmo:applicationNumber><xsl:value-of select="doc-number"/></pmo:applicationNumber>
+                    </xsl:when>
+                    <xsl:otherwise>
+                    </xsl:otherwise>
+                </xsl:choose>
+            </xsl:if>
 
-                    <xsl:if test="string-length(kind) = 2">
-                        <pmo:kindCode><xsl:value-of select="kind"/></pmo:kindCode>
-                        
-                        <xsl:if test="country = 'EP'">
-                            <rdf:type rdf:resource="{$pso}{kind}Document"/>
-                        </xsl:if>
-                    </xsl:if>
+            <pmo:kindCode><xsl:value-of select="kind"/></pmo:kindCode>
+            
+            <xsl:if test="country = 'EP'">
+                <xsl:if test="string-length(kind) = 2">
+                    <rdf:type rdf:resource="{$pso}{kind}Document"/>
+                </xsl:if>
 
-                    <xsl:if test="date">
-                        <pmo:dateOfPublication>
-                            <xsl:call-template name="dateNormalized">
-                                <xsl:with-param name="date" select="date"/>
-                            </xsl:call-template>
-                        </pmo:dateOfPublication>
-                    </xsl:if>
+                <xsl:if test="kind = 'B1'
+                            or kind = 'B2'
+                            or kind = 'B8'
+                            or kind = 'B9'">
+                    <rdf:type rdf:resource="{$pmo}GrantedPatent"/>
+                </xsl:if>
+<!-- TODO: US granted -->
+            </xsl:if>
 
-                    <xsl:apply-templates select="lang"/>
-                </rdf:Description>
-            </dcterms:hasPart>
+            <xsl:if test="country = 'US'">
+                <xsl:if test="kind = 'A'
+                            or kind = 'S'
+                            or kind = 'P'
+                            or kind = 'H'
+                            or kind = 'E'
+                            or kind = 'I'
+                            or kind = 'B1'
+                            or kind = 'B2'
+                            or kind = 'P2'
+                            or kind = 'P3'
+                            or kind = 'S1'
+                            or kind = 'E1'
+                            or kind = 'H1'">
+                    <rdf:type rdf:resource="{$pmo}GrantedPatent"/>
+                </xsl:if>
+            </xsl:if>
+
+
+            <xsl:if test="date">
+                <pmo:dateOfPublication>
+                    <xsl:call-template name="dateNormalized">
+                        <xsl:with-param name="date" select="date"/>
+                    </xsl:call-template>
+                </pmo:dateOfPublication>
+            </xsl:if>
+
+            <xsl:apply-templates select="lang"/>
         </xsl:for-each>
     </xsl:template>
 
@@ -308,45 +333,74 @@ XXX: Normally we don't really want to define other patents from here. In case th
         <xsl:param name="ucid" tunnel="yes"/>
 
         <rdf:Description rdf:about="{$patent}{$ucid}">
-            <xsl:for-each select="*[name() = 'classificaiton-ipc' or name() = 'classification-ecla']
+            <xsl:for-each select="*[name() = 'classification-ipc' or name() = 'classification-ecla']
                                   /*[name() = 'main-classification' or
                                      name() = 'further-classification' or
                                      name() = 'classification-symbol']">
+<!--                <xsl:variable name="classificationNodeName" select="name()"/>-->
 <!--
 XXX: This removes the codes after + or : in ECLA. There might be a particular use even though spec says it is not generally needed.
 -->
-                <xsl:variable name="id" select="fn:substring-before-if-contains(fn:substring-before-if-contains(normalize-space(replace(., '\s+', '')), '+'), ':')"/>
-<!--
-TODO: Differentiate between main-classification and further-classification
+<!-- XXX: This works with ECLA fine                <xsl:variable name="id" select="fn:substring-before-if-contains(fn:substring-before-if-contains(normalize-space(replace(., '\s+', '')), '+'), ':')"/>
 -->
 
-                <xsl:variable name="conceptURI" select="concat($concept, 'ecla/', $id)"/>
+                <xsl:variable name="classificationIdentifier" select="fn:substring-before-if-contains(replace(normalize-space(replace(., '\s+', '')), ':', '/'), '+')"/>
 
-                <pmo:classifiedAs>
-<!--
-XXX: Maybe switch to a code list
--->
-                    <rdf:Description rdf:about="{$conceptURI}">
-<!--                        <xsl:call-template name="generalParameterEntities"/>-->
+                <xsl:variable name="classificationNode">
+                    <xsl:choose>
+                        <xsl:when test="name() = 'classification-symbol'">
+                            <xsl:value-of select="'EC'"/>
+                        </xsl:when>
+                        <xsl:otherwise>
+                            <xsl:value-of select="'IPC'"/>
+                        </xsl:otherwise>
+                    </xsl:choose>
+                </xsl:variable>
 
-<!--                        <rdf:type rdf:resource="{$pmo}PatentClassificationCategory"/>-->
-<!--                        <rdf:type rdf:resource="{$pmo}IPCCategory"/>-->
-                        <rdf:type rdf:resource="{$skos}Concept"/>
 
-                        <pmo:classifiedPatent rdf:resource="{$patent}{$ucid}"/>
+                <xsl:variable name="identifiers" select="distinct-values($cpcConcordances/item[*[name() = $classificationNode] and *[text() = $classificationIdentifier]]/CPC)"/>
 
-<!--                        <skos:inScheme rdf:resource="{$concept}ipc"/>-->
-<!--                        <skos:topConceptOf>-->
-<!--                            <rdf:Description rdf:about="{$concept}ipc">-->
-<!--                                <skos:hasTopConcept rdf:resource="{$concept}{$id}"/>-->
-<!--                                <pmo:classifiedPatent rdf:resource="{$concept}{$id}"/>-->
-<!--                            </rdf:Description>-->
-<!--                        </skos:topConceptOf>-->
+                <xsl:variable name="identifiers">
+                    <xsl:choose>
+                        <xsl:when test="$identifiers = ''">
+                            <xsl:value-of select="$classificationIdentifier"/>
+                        </xsl:when>
+                        <xsl:otherwise>
+                            <xsl:value-of select="$identifiers"/>
+                        </xsl:otherwise>
+                    </xsl:choose>
+                </xsl:variable>
 
-                        <pmo:classificationCode><xsl:value-of select="$id"/></pmo:classificationCode>
-                        <skos:notation><xsl:value-of select="$id"/></skos:notation>
-                    </rdf:Description>
-                </pmo:classifiedAs>
+                <xsl:for-each select="tokenize($identifiers, ' ')">
+                    <xsl:variable name="id" select="."/>
+                    <xsl:variable name="conceptURI" select="concat($concept, 'cpc/', $id)"/>
+
+                    <pmo:classifiedAs>
+    <!--
+    XXX: Maybe switch to a code list
+    -->
+                        <rdf:Description rdf:about="{$conceptURI}">
+    <!--                        <xsl:call-template name="generalParameterEntities"/>-->
+
+    <!--                        <rdf:type rdf:resource="{$pmo}PatentClassificationCategory"/>-->
+    <!--                        <rdf:type rdf:resource="{$pmo}IPCCategory"/>-->
+                            <rdf:type rdf:resource="{$skos}Concept"/>
+
+                            <pmo:classifiedPatent rdf:resource="{$patent}{$ucid}"/>
+
+    <!--                        <skos:inScheme rdf:resource="{$concept}ipc"/>-->
+    <!--                        <skos:topConceptOf>-->
+    <!--                            <rdf:Description rdf:about="{$concept}ipc">-->
+    <!--                                <skos:hasTopConcept rdf:resource="{$concept}{$id}"/>-->
+    <!--                                <pmo:classifiedPatent rdf:resource="{$concept}{$id}"/>-->
+    <!--                            </rdf:Description>-->
+    <!--                        </skos:topConceptOf>-->
+
+                            <pmo:classificationCode><xsl:value-of select="$id"/></pmo:classificationCode>
+                            <skos:notation><xsl:value-of select="$id"/></skos:notation>
+                        </rdf:Description>
+                    </pmo:classifiedAs>
+                </xsl:for-each>
             </xsl:for-each>
         </rdf:Description>
     </xsl:template>
@@ -362,7 +416,7 @@ XXX: Maybe switch to a code list
             <rdf:Description rdf:about="{$patent}{$ucid}">
                 <pmo:cites>
                     <rdf:Description rdf:about="{$patent}{@ucid}">
-                        <rdf:type rdf:resource="{$pmo}IntellectualPropertyDocument"/>
+                        <rdf:type rdf:resource="{$pmo}PatentPublication"/>
                         <pmo:citedBy rdf:resource="{$patent}{$ucid}"/>
 
                         <xsl:call-template name="document-id">
@@ -560,7 +614,7 @@ XXX: Perhaps switch to blank nodes instead
 
     <xsl:template match="address">
         <schema:address>
-            <rdf:Description>
+            <rdf:Description rdf:about="urn:uuid:{uuid:randomUUID()}">
                 <rdf:type rdf:resource="{$schema}PostalAddress"/>
                 <xsl:if test="address-1">
                     <schema:streetAddress><xsl:value-of select="address1"/></schema:streetAddress>
