@@ -110,7 +110,7 @@ implements EnhancementEngine, ServiceProperties {
 	@Reference
 	protected Parser parser ;
 
-	//protected TripleCollection tripleCollection ;
+	protected TripleCollection tripleCollection ;
 	
 
 	//@SuppressWarnings("unchecked")
@@ -126,7 +126,7 @@ implements EnhancementEngine, ServiceProperties {
 		
 		
 		try { // TODO: errore nell'attivazione ?
-			serviceLocator = new TCServiceLocator(ce.getBundleContext(), "graph.uri="+graphUri) ;
+			serviceLocator = new TCServiceLocator(ce.getBundleContext(), "graph.uri=" + graphUri) ;
 					//"graph.uri=om.go5th.yard.clerezza.01") ;	
 			if(CLEAN_ON_STARTUP) {
 				TripleCollection collection = serviceLocator.getTripleCollection() ;
@@ -185,14 +185,15 @@ implements EnhancementEngine, ServiceProperties {
 				return ;
 			}
 		
-
+		  
+		/*	
 		RdfValueFactory valueFactory = RdfValueFactory.getInstance();
 		Map<String,Representation> representations = new HashMap<String,Representation>();
 		Set<NonLiteral> processed = new HashSet<NonLiteral>();
 		for(Iterator<Triple> st = rdfGraph.iterator();st.hasNext();){
 			Triple curTriple = st.next() ;
 			NonLiteral resource = curTriple.getSubject();
-			if(resource instanceof UriRef /*&& processed.add(resource)*/){
+			if(resource instanceof UriRef){
 				representations.put(((UriRef)resource).getUnicodeString(),
 						valueFactory.createRdfRepresentation((UriRef)resource, rdfGraph));
 			} else {
@@ -201,7 +202,9 @@ implements EnhancementEngine, ServiceProperties {
 			}
 		}
 		
+		*/
 		
+		/* stores the triples in a graph	
 		TripleCollection tripleCollection = serviceLocator.getTripleCollection() ;
 		if(tripleCollection!=null) {
 			if(tripleCollection.addAll(rdfGraph)) {
@@ -210,13 +213,12 @@ implements EnhancementEngine, ServiceProperties {
 				logService.log(LogService.LOG_WARNING, this.getClass().getName()+" collection NOT added to yard...");
 			}
 		}
+		*/
 
-		/*
-		 * Enhancement phase
-		 */
-
-			MGraph graph = ci.getMetadata();
-			graph.addAll(rdfGraph) ;
+		
+		ci.getMetadata().addAll(rdfGraph) ;
+		
+			
 		} catch (Exception e) {
 			logService.log(LogService.LOG_ERROR, "", e) ;
 			
