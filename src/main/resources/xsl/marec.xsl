@@ -692,13 +692,20 @@ Add members
         </pmo:patentFamily>
     </xsl:template>
 
+
+    <xsl:template match="*" mode="xhtml">
+        <xsl:element name="{local-name()}" namespace="http://www.w3.org/1999/xhtml">
+            <xsl:apply-templates select="node() | @*"/>
+        </xsl:element>
+    </xsl:template>
+
     <xsl:template name="description">
         <xsl:param name="ucid" tunnel="yes"/>
 
         <xsl:for-each select="description">
             <rdf:Description rdf:about="{$patent}{$ucid}">
                 <xsl:variable name="lang" select="@lang"/>
-                <skos:definition rdf:parseType="Literal"><xsl:copy-of select="./*"/></skos:definition>
+                <skos:definition rdf:parseType="Literal"><xsl:apply-templates select="*" mode="xhtml"/></skos:definition>
 
                 <pso:hasDescriptionSection>
                     <rdf:Description rdf:about="{$patent}{$ucid}/description">
@@ -710,7 +717,9 @@ Add members
                                     <dcterms:isPartOf rdf:resource="{$patent}{$ucid}/description"/>
                                     <rdfs:label xml:lang="en"><xsl:value-of select="concat('Paragraph ', @num)"/></rdfs:label>
                                     <dcterms:identifier><xsl:value-of select="@num"/></dcterms:identifier>
-                                    <dcterms:description xml:lang="{lower-case($lang)}"><xsl:copy-of select="normalize-space(.)"/></dcterms:description>
+                                    <dcterms:description rdf:parseType="Literal" xml:lang="{lower-case($lang)}">
+                                        <xsl:apply-templates select="." mode="xhtml"/>
+                                    </dcterms:description>
                                 </rdf:Description>
                             </dcterms:hasPart>
                         </xsl:for-each>
@@ -727,7 +736,7 @@ Add members
         <xsl:for-each select="abstract">
             <rdf:Description rdf:about="{$patent}{$ucid}">
                 <xsl:variable name="lang" select="@lang"/>
-                <dcterms:abstract rdf:parseType="Literal" xml:lang="{lower-case($lang)}"><xsl:copy-of select="./*"/></dcterms:abstract>
+                <dcterms:abstract rdf:parseType="Literal" xml:lang="{lower-case($lang)}"><xsl:apply-templates select="*" mode="xhtml"/></dcterms:abstract>
             </rdf:Description>
         </xsl:for-each>
     </xsl:template>
@@ -747,7 +756,11 @@ Add members
                             <skos:prefLabel xml:lang="{lower-case($lang)}"><xsl:value-of select="concat('Claim ', @num)"/></skos:prefLabel>
 
                             <skos:notation><xsl:value-of select="@num"/></skos:notation>
-                            <skos:definition xml:lang="{lower-case($lang)}"><xsl:copy-of select="claim-text/normalize-space(.)"/></skos:definition>
+                            <skos:definition xml:lang="{lower-case($lang)}" rdf:parseType="Literal">
+                                <xsl:for-each select="claim-text">
+                                    <xsl:apply-templates select="." mode="xhtml"/>
+                                </xsl:for-each>
+                            </skos:definition>
                         </rdf:Description>
                     </property:hasClaim>
                 </rdf:Description>
