@@ -7,8 +7,7 @@ It uses an XSLT transformation to map the MAREC XML elements and attributes to c
 
 The name of the engine is marecEngine. This same name must be used when configuring a chain in order to use it.
 
-The bundle saves the triples into a Clerezza Yard that must be configured in the Felix console before using the engine in a chain.
-The uri of the Clerezza Yard is urn:fusepool-graph1
+When called from a client using the REST API the bundle will send back the RDF data extracted. 
 
 ## XSLT 2.0 Tranformation
 
