@@ -333,11 +333,8 @@ XXX: Normally we don't really want to define other patents from here. In case th
         <xsl:param name="ucid" tunnel="yes"/>
 
         <rdf:Description rdf:about="{$patent}{$ucid}">
-            <xsl:for-each select="*[name() = 'classification-ipc' or name() = 'classification-ecla']
-                                  /*[name() = 'main-classification' or
-                                     name() = 'further-classification' or
-                                     name() = 'classification-symbol']">
-<!--                <xsl:variable name="classificationNodeName" select="name()"/>-->
+            <xsl:for-each select="classification-ecla/classification-symbol">
+
 <!--
 XXX: This removes the codes after + or : in ECLA. There might be a particular use even though spec says it is not generally needed.
 -->
@@ -346,34 +343,21 @@ XXX: This removes the codes after + or : in ECLA. There might be a particular us
 
                 <xsl:variable name="classificationIdentifier" select="fn:substring-before-if-contains(replace(normalize-space(replace(., '\s+', '')), ':', '/'), '+')"/>
 
-                <xsl:variable name="classificationNode">
-                    <xsl:choose>
-                        <xsl:when test="name() = 'classification-symbol'">
-                            <xsl:value-of select="'EC'"/>
-                        </xsl:when>
-                        <xsl:otherwise>
-                            <xsl:value-of select="'IPC'"/>
-                        </xsl:otherwise>
-                    </xsl:choose>
-                </xsl:variable>
+                <xsl:for-each select="$cpcConcordances/item[EC/text() = $classificationIdentifier]">
+                    <xsl:variable name="id" select="CPC"/>
+                    <xsl:variable name="level" select="number(normalize-space(level))"/>
+                    <xsl:variable name="levelPath">
+                        <xsl:if test="$level &lt; 7">
+                            <xsl:value-of select="concat($level, '/')"/>
+                        </xsl:if>
+                    </xsl:variable>
 
+                    <xsl:variable name="conceptURI" select="concat($concept, 'cpc/', $levelPath, $id)"/>
 
-                <xsl:variable name="identifiers" select="distinct-values($cpcConcordances/item[*[name() = $classificationNode] and *[text() = $classificationIdentifier]]/CPC)"/>
+<xsl:message>
+<xsl:text>conceptURI: </xsl:text><xsl:value-of select="$conceptURI"/>
+</xsl:message>
 
-                <xsl:variable name="identifiers">
-                    <xsl:choose>
-                        <xsl:when test="$identifiers = ''">
-                            <xsl:value-of select="$classificationIdentifier"/>
-                        </xsl:when>
-                        <xsl:otherwise>
-                            <xsl:value-of select="$identifiers"/>
-                        </xsl:otherwise>
-                    </xsl:choose>
-                </xsl:variable>
-
-                <xsl:for-each select="tokenize($identifiers, ' ')">
-                    <xsl:variable name="id" select="."/>
-                    <xsl:variable name="conceptURI" select="concat($concept, 'cpc/', $id)"/>
 
                     <pmo:classifiedAs>
     <!--
