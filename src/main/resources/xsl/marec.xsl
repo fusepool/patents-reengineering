@@ -354,11 +354,6 @@ XXX: This removes the codes after + or : in ECLA. There might be a particular us
 
                     <xsl:variable name="conceptURI" select="concat($concept, 'cpc/', $levelPath, $id)"/>
 
-<xsl:message>
-<xsl:text>conceptURI: </xsl:text><xsl:value-of select="$conceptURI"/>
-</xsl:message>
-
-
                     <pmo:classifiedAs>
     <!--
     XXX: Maybe switch to a code list
