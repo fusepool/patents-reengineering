@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- (DS) NOTE: PUBLIC identifiers have an added 'X' ... -->
+
+
+<!--to include mathml2.dtd  change MATHML2_DTD value to "INCLUDE", 
+change MATH_PLACEHOLDER value to "IGNORE", the same for the TABLE_DTD 
+and TABLE_PLACEHOLDER
+
+INCLUDE
+IGNORE
+-->
+
+
+<!ENTITY % UNICODE_PLANE1D_ESCAPE "INCLUDE">
+<!ENTITY % MATHML2_DTD	"INCLUDE">
+<!ENTITY % TABLE_DTD "INCLUDE">
+
+<!ENTITY % MATH_PLACEHOLDER "IGNORE">
+<!ENTITY % TABLE_PLACEHOLDER "IGNORE">
+
+<![%UNICODE_PLANE1D_ESCAPE; [
+ <!ENTITY % plane1D  "&#38;#38;#xE">
+]]>
+
+
+<![%MATHML2_DTD; [
+<!-- DTD MathML2: maintained by W3C.  Download from:
+     http://www.w3.org/TR/MathML2/DTD-MathML-20010221.zip
+
+     If using nsgmls-based parser (SP, Near & Far Designer, etc.)
+     Uncomment 'mathml-charent-module' switch below or replace the 
+     Referenced MathML2 DTD with the version downloadable from:
+     http://www.w3.org/Math/DTD/dtd-sp.zip
+
+     This notice copied from: http://www.w3.org/Math/DTD/
+     
+     "DTD for nsgmls
+      Some systems (including the popular nsgmls parser) may not be able 
+      to process files using 'plane 1' characters which have Unicode 
+      numbers higher than #xFFFF. The versions of the DTD provided here
+      incorporate the modifications mentioned above, but the high 
+      characters are replaced by the equivalent mchar construct 
+      <mchar name="..." /> this allows the DTD to be read and for MathML
+      files to be validated using such systems."
+-->
+<!--ENTITY % mathml-charent.module "IGNORE" -->
+<!ENTITY % MATHML.prefixed "IGNORE">
+
+<!--Work around with Microsoft MSXML3 parser in IE-->
+<!ENTITY % MATHML.xmlns.attrib "">
+
+<!--import MathML2 dtd -->
+<!ENTITY % mathml2 PUBLIC "-//W3C//DTD MathML X 2.0//EN" "mathml2.dtd">
+%mathml2;
+]]>
+
+<![%TABLE_DTD; [
+<!-- DTD OASIS Open XML Exchange Table Model.  
+       Maintained by OASIS; download from:
+       http://oasis-open.org/specs/soextblx.dtd
+       Note that the FPI in soextblx.dtd refers to itself as 'calstblx'.  
+       That convention has been followed here.
+-->
+<!--  create content for title element in table  -->
+<!ENTITY % title "<!ELEMENT title (#PCDATA | b | i | o | u | sup | sub | smallcaps)* > ">
+%title;
+
+<!--override OASIS Exchange <entry> model -->
+<!ENTITY % tbl.entry.mdl "(#PCDATA | b | i | o | u | sup | sub | smallcaps | br 
+                 | patcit | nplcit | bio-deposit | crossref | figref | img | imgref
+                 | dl | ul | ol | sl | chemistry | maths | %st32math; | %st32chem;)* ">
+
+<!--import OASIS Exchange model -->
+<!ENTITY % calstblx PUBLIC "-//OASIS//DTD XML X Exchange Table Model 19990315//EN" 
+                           "soextblx.dtd">
+<!ENTITY % yesorno  "NMTOKEN" >
+<!ENTITY % tbl.table.att        " pgwide      %yesorno;       #IMPLIED
+                                  orient      (port | land)   #IMPLIED
+                                  tabstyle    NMTOKEN         #IMPLIED">
+<!ENTITY % tbl.entry.att "id CDATA #IMPLIED">
+%calstblx;
+]]>
+<![%MATH_PLACEHOLDER; [
+<!--(PLACEHOLDER:w3c math dtd)-->
+<!ELEMENT math EMPTY>
+]]>
+<![%TABLE_PLACEHOLDER; [
+<!--(PLACEHOLDER:cals table dtd)-->
+<!ELEMENT table EMPTY>
+]]>
+
+
