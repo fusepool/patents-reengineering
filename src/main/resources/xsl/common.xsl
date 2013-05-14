@@ -34,6 +34,7 @@
     <xsl:variable name="patent" select="concat($baseURI, 'patent/')"/>
     <xsl:variable name="patentFamily" select="concat($baseURI, 'family', $uriThingSeparator)"/>
     <xsl:variable name="party" select="concat($baseURI, 'party', $uriThingSeparator)"/>
+    <xsl:variable name="entityID" select="concat($baseURI, 'id', $uriThingSeparator)"/>
     <xsl:variable name="provDocument" select="document($pathToProvDocument)/rdf:RDF"/>
 <!-- CONFIG END -->
 
