@@ -590,7 +590,7 @@ XXX: This removes the codes after + or : in ECLA. There might be a particular us
 
     <xsl:template match="address">
         <schema:address>
-            <rdf:Description rdf:about="urn:uuid:{uuid:randomUUID()}">
+            <rdf:Description rdf:about="{concat($entityID, uuid:randomUUID())}">
                 <rdf:type rdf:resource="{$schema}PostalAddress"/>
                 <xsl:if test="address-1">
                     <schema:streetAddress><xsl:value-of select="address1"/></schema:streetAddress>
