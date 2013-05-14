@@ -485,10 +485,7 @@ XXX: This removes the codes after + or : in ECLA. There might be a particular us
         <xsl:param name="id"/>
         <xsl:param name="party-type"/>
 
-<!--
-XXX: Perhaps switch to blank nodes instead
--->
-        <rdf:Description rdf:about="urn:uuid:{uuid:randomUUID()}">
+        <rdf:Description rdf:about="{concat($entityID, uuid:randomUUID())}">
             <xsl:choose>
                 <xsl:when test="$party-type = 'applicant'">
                     <rdf:type rdf:resource="{$sumo}CognitiveAgent"/>
