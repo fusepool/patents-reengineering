@@ -33,7 +33,6 @@ import org.osgi.framework.ServiceReference;
 import org.osgi.framework.ServiceRegistration;
 import org.osgi.service.component.ComponentContext;
 import org.osgi.service.component.ComponentInstance;
-import org.osgi.service.log.LogService;
 
 public class MockComponentContext implements ComponentContext {
 

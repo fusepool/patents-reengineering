@@ -5,16 +5,11 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Collections;
 import java.util.Dictionary;
-import java.util.HashMap;
 import java.util.HashSet;
-import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
 
 import org.apache.clerezza.rdf.core.MGraph;
-import org.apache.clerezza.rdf.core.NonLiteral;
-import org.apache.clerezza.rdf.core.Triple;
-import org.apache.clerezza.rdf.core.TripleCollection;
 import org.apache.clerezza.rdf.core.UriRef;
 import org.apache.clerezza.rdf.core.serializedform.Parser;
 import org.apache.clerezza.rdf.core.serializedform.SupportedFormat;
@@ -29,9 +24,7 @@ import org.apache.stanbol.enhancer.servicesapi.EngineException;
 import org.apache.stanbol.enhancer.servicesapi.EnhancementEngine;
 import org.apache.stanbol.enhancer.servicesapi.ServiceProperties;
 import org.apache.stanbol.enhancer.servicesapi.impl.AbstractEnhancementEngine;
-import org.apache.stanbol.entityhub.model.clerezza.RdfValueFactory;
 import org.apache.stanbol.entityhub.servicesapi.Entityhub;
-import org.apache.stanbol.entityhub.servicesapi.model.Representation;
 import org.osgi.framework.Constants;
 import org.osgi.framework.InvalidSyntaxException;
 import org.osgi.framework.ServiceReference;
@@ -39,7 +32,9 @@ import org.osgi.service.cm.ConfigurationException;
 import org.osgi.service.component.ComponentContext;
 import org.osgi.service.log.LogService;
 
-import eu.fusepool.enhancer.marec.xslt.XSLTProcessor;
+import eu.fusepool.enhancer.marec.xslt.CatalogBuilder;
+import eu.fusepool.enhancer.marec.xslt.PatentXMLProcessor;
+import eu.fusepool.enhancer.marec.xslt.impl.XSLTProcessor;
 
 
 
@@ -101,6 +96,9 @@ implements EnhancementEngine, ServiceProperties {
 
 	protected ComponentContext componentContext ;
 
+	protected CatalogBuilder catalogBuilder ;
+	
+	
 	@Reference
 	protected Entityhub entityHub ;
 
@@ -110,7 +108,7 @@ implements EnhancementEngine, ServiceProperties {
 	@Reference
 	protected Parser parser ;
 
-	protected TripleCollection tripleCollection ;
+	//protected TripleCollection tripleCollection ;
 	
 
 	//@SuppressWarnings("unchecked")
@@ -124,16 +122,23 @@ implements EnhancementEngine, ServiceProperties {
 			CLEAN_ON_STARTUP = (Boolean) o ;
 		}
 		
+		catalogBuilder = new CatalogBuilder(ce.getBundleContext()) ;
+		try {
+			catalogBuilder.build() ;
+		} catch (Exception e1) {
+			// TODO Auto-generated catch block
+			logService.log(LogService.LOG_ERROR, "Error building dtd catalog", e1) ;
+		}
 		
 		try { // TODO: errore nell'attivazione ?
 			serviceLocator = new TCServiceLocator(ce.getBundleContext(), "graph.uri=" + graphUri) ;
 					//"graph.uri=om.go5th.yard.clerezza.01") ;	
-			if(CLEAN_ON_STARTUP) {
-				TripleCollection collection = serviceLocator.getTripleCollection() ;
-				if(collection!=null) {
-					collection.clear() ;
-				}
-			}
+//			if(CLEAN_ON_STARTUP) {
+//				TripleCollection collection = serviceLocator.getTripleCollection() ;
+//				if(collection!=null) {
+//					collection.clear() ;
+//				}
+//			}
 		} catch (InvalidSyntaxException e) {
 			logService.log(LogService.LOG_ERROR,"Invalid graph.uri syntax", e) ;
 		} catch (Exception e) {
@@ -145,6 +150,7 @@ implements EnhancementEngine, ServiceProperties {
 
 	protected void deactivate(ComponentContext ce) {
 		super.deactivate(ce);
+		catalogBuilder.cleanupFiles() ;
 	}
 
 	@Override
@@ -174,7 +180,7 @@ implements EnhancementEngine, ServiceProperties {
 		try {
 	
 			ci.getLock().writeLock().lock();
-			XSLTProcessor processor = new XSLTProcessor() ;
+			PatentXMLProcessor processor = new XSLTProcessor() ;
 			InputStream rdfIs = null ;
 			try {
 				rdfIs = processor.processPatentXML(ci.getStream()) ;

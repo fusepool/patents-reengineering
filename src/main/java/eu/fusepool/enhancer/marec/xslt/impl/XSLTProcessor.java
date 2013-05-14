@@ -1,48 +1,81 @@
 /**
  * 
  */
-package eu.fusepool.enhancer.marec.xslt;
+package eu.fusepool.enhancer.marec.xslt.impl;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.InputStream;
 
+import javax.xml.parsers.SAXParser;
+import javax.xml.parsers.SAXParserFactory;
 import javax.xml.transform.Transformer;
 import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.URIResolver;
+import javax.xml.transform.sax.SAXSource;
 import javax.xml.transform.stream.StreamResult;
 import javax.xml.transform.stream.StreamSource;
+
+import net.sf.saxon.Controller;
+
+import org.apache.xerces.util.XMLCatalogResolver;
+import org.apache.xml.resolver.tools.ResolvingXMLFilter;
+import org.xml.sax.InputSource;
+
+import eu.fusepool.enhancer.marec.xslt.CatalogBuilder;
+import eu.fusepool.enhancer.marec.xslt.MarecXMLReader;
+import eu.fusepool.enhancer.marec.xslt.PatentXMLProcessor;
+import eu.fusepool.enhancer.marec.xslt.ResourceURIResolver;
 
 
 /**
  * @author giorgio
  * 
  */
-public class XSLTProcessor {
+public class XSLTProcessor implements PatentXMLProcessor {
 	
 	private TransformerFactory tFactory ;
 	
 	
 	public XSLTProcessor() {
+		
+		
 		if(tFactory==null) {
+			
 			tFactory = TransformerFactory.newInstance("net.sf.saxon.TransformerFactoryImpl", //null) ; 
 												this.getClass().getClassLoader());
+			
+			//tFactory.setAttribute(FeatureKeys.SOURCE_PARSER_CLASS, MarecXMLReader.class.getName()) ;
+			//tFactory.setAttribute(FeatureKeys.STYLE_PARSER_CLASS, MarecXMLReader.class.getName()) ;
+		
 		}
 	}
 	
 	
 	
 
+	/* (non-Javadoc)
+	 * @see eu.fusepool.enhancer.marec.xslt.PatentXMLProcessor#processPatentXML(java.io.InputStream)
+	 */
+	@Override
 	public InputStream processPatentXML(InputStream is) throws Exception {
 	    URIResolver defResolver = tFactory.getURIResolver() ;
 	    ResourceURIResolver customResolver = new ResourceURIResolver(defResolver) ;
 	    tFactory.setURIResolver(customResolver) ;
+	    
 		ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
 		InputStream xslIs = this.getClass().getResourceAsStream("/xsl/marec.xsl") ;
-		Transformer transformer = tFactory.newTransformer(new StreamSource(xslIs));
-		StreamSource sSource = new StreamSource(is) ;
+		StreamSource xlsSS = new StreamSource(xslIs) ;
+		Transformer transformer = tFactory.newTransformer(xlsSS);
+//		Controller controller = (Controller)transformer ;
+		
+		InputSource inputSource = new InputSource(is) ;
+		
+		ResolvingXMLFilter filter = new ResolvingXMLFilter(new MarecXMLReader());
+		
+		SAXSource saxSource = new SAXSource(filter, inputSource) ;
 		StreamResult sRes = new StreamResult(outputStream) ;
-		transformer.transform(sSource, sRes) ; 
+		transformer.transform(saxSource, sRes) ; 
 		
 		InputStream toRet = new ByteArrayInputStream(outputStream.toByteArray());
 		return toRet ;

@@ -1,0 +1,1543 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+
+  XML DTD for standardized patent data
+
+  PUBLIC identifier: "-//MXW//DTD patent-document XML//EN"
+  
+  Version: 1.4
+  Author: David Santamauro (DS)
+  
+  Notes:
+  
+  Revision History:
+
+  20100220 (DS)
+  - added division-into to related-document relation enumeration
+
+  20100219 (DS)
+  - added imgref to content models of all in-line formating (sup/sub etc)
+
+  20100218 (DS)
+  - expanded @format enumeration on document-id to include mxw-std
+
+  20100216 (DS)
+  - add parent-grant-document to content model of parent-doc
+      (related-documents)
+
+  20091230 (DS)
+  - added jp-facet attribute to main/further-classification
+
+  20091223 (DS)
+  - dfltattrs added to legal-event and classification-symbol
+
+  20091209 (DS)
+  - added img to content model of all inline text formatting elements
+    *see i, b, sup, sub etc.
+  - changed content model of claims-statement to %ptext;
+
+  20091208 (DS)
+  - added mxw-id to default attributes in support of change-history
+     NOTE: more change history changes will follow.
+
+  20091203 (DS)
+  - added attachments/attachment elements for external, non-image files
+  - added attachments? to content model of chemistry
+
+  20091113 (DS)
+  - bumped version for major new release
+
+  20091030 (DS)
+  - MAJOR ADDITION: limitations (ep-limitations) and Petitions (ep-petition-reviews)
+
+  20091030 (DS)
+  - moved office-specific data to bottom of patent-document content model
+
+  20091007 (DS)
+  - added ref-ucid to dfltattr to handle reference data from other documents
+
+  20090923 (DS)
+  - added dfltattr to elements lapse-of-patent and all child
+     elements main, further etc, classification
+  - bumped version to 1.3
+
+  - added data issue container (will probably be further revised)
+     NOTE: this change introduces another namespace
+
+  20090722 (DS)
+  - added f-term (#PCDATA) to content model of technical data
+
+  20090706 (DS)
+  - added dfltattr to element country
+
+  20090609 (DS)
+  - JPO national data fills st36 out nicely, I changed content model (backwards compatible)
+    is : ELEMENT disclosure ((tech-problem | tech-solution | advantageous-effects)* | (heading* , p+)+)>
+    was: ELEMENT disclosure (heading*, p+)+ >
+
+  - added mode-num attribute to ELEMENT mode-for-invention
+
+
+  20090608 (DS)
+  - added a-371-of-international and non-provisional-of-provisional to related application enumeration
+
+  20090520 (DS)
+  - changed content model fr pct-filing/publication information
+
+  20090519 (DS)
+  - changed content model of related applications:
+      <!ELEMENT relation (document-id | (child-doc, parent-doc)) >
+
+  20090413 (DS)
+  - added UNKNOWN to source name enumeration
+
+  20090408 (DS)
+  - added copyright element as last child of root with content mode #PCDATA
+
+  20090407 (DS)
+  - ALPA-39. Introduced a new element (sources source+) into patcit and
+    moved attributes create-by-npl, category to source element.
+
+  20090401 (DS)
+  - added impact CDATA #IMPLIED to legal-event attributes
+
+  20090331 (DS)
+  - bumped version; fundamental changes coming
+  - changed description? to description* in preparation
+    for translations
+
+  20090227 (DS)
+  - changed entry attribute id from ID to CDATA
+  was: tbl.entry.att "id ID #IMPLIED"
+  is : tbl.entry.att "id CDATA #IMPLIED"
+
+  20090115 (DS)
+  - made search-report-data attributes IMPLIED
+
+  20090110 (DS)
+  - added id attribute to element heading
+  - changed content model of patcit to include
+    child text node (for EPO inline citations).
+  - in line with above, added dnum and dnum-type attributes to patcit
+
+  - added text as optional child of nplcit as well as
+    added attribute npl-type. Also in line with above EPO citation handling
+
+  - added img to content model of tables, chemistry and maths
+ 
+ - added id and num attributes to chemistry and tables
+
+  [ NOTE:  TEMPORARY ]
+  - changed all ID xml types to CDATA
+
+  - completed the in-line character markup matrix (see sub, sup etc...)
+
+
+  20081230 (DS)
+  - made edition optional for locarno classifications
+
+  20081223 (DS)
+  - made ucid on patcit IMPLIED
+    * for original citations, i.e., from US and EP, we cannot guarantee uniqueness without a kind
+      and that is most of not delivered.
+ - added new possibilities to listing-type enumeration
+   ->   listing-type (tabular|equation|sequence|program-listing|other) #REQUIRED
+
+
+  20081210 (DS)
+  - added field-of-search (US-only) element and added to content
+    model of technical data
+  - added @us-art-unit attribute to application-reference content model
+  - added @is-representative attribute to application-reference content model
+
+  20081208 (DS)
+  - added element equation to content model of maths (supporting US greenbook)
+
+  20081205 (DS)
+  - bumbed version to 1.1
+  - added a child to claims: claim-statement.
+  - expanded claim-ref content model to include claim-text as child
+  - added @us-series-code attribute to application-reference content model
+
+  20081111 (DS)
+  - bumped version to 1.0
+  - general preparation for 1.0 (comment completion, removal etc), no
+    models have changed
+
+  20081031 (DS)
+  - added st32:f to entity st32math
+  - shuffled order of external entities
+  - changed row content model to row (entry*), was row (entry+)
+      NOTE: This is a temporary solution for st32 table -> cals errors
+  - added st32chem and st32math entities to ptext and btext elements
+  - added imgref  and sl to content model of table entry
+
+  20081031 (DS)
+  - Major changes to IMG handling, added and updated new img-content enumeration tokens
+  img-content (abstract-drawing | ad |
+               chem             | cf |
+               clip             | ci |
+               program-listing  | cp |
+               dna              | dn |
+               drawing          | dr |
+               undefined             |
+               figure           | fg |
+               graph            | gr |
+               math             | mf |
+               page             | pa |
+               photograph       | ph |
+               search-report    | sr |
+               table            | tb |
+               character        | tx |
+               flowchart             |
+               undefined-char   | ff |
+               undefined-image  | ui
+             ) 'drawing'
+
+  - also, for EP, image identifiers are now in the format: img-$ucid-nnnnnnnn and file names
+    nnnnnnnn.tif (relative path, actually, no path)
+
+    NOTE: @ucid was taken and concatenated because when delivering mulitple
+   patent-document instances inside a patent-documents container, img-nnnnnnnn is
+   not a document-wide unique identifer (see @id on img element)
+
+  20081030 (DS)
+  - bumped version to 0.9
+  - changed imgref attribute from IDREFS - CDATA (EPO has decimal points)
+  - introduced new external DTD (see st32-merges.dtd, referenced as entity
+    below)
+    
+  - added new entities: st32math and st32chem as well as added them to content
+  models where ptext was present
+  
+  20081027 (DS)
+  - added imgref to entity ptext and btext and various
+    other occurrences where img is allowed
+  - changed heading @num to IMPLIED
+
+  20081013 (DS)
+  - added office-specific-data element to bibliographic-data conntent model
+    with coresponding sub-elements per authoritiy (ep and us first)
+  - added (alpa-206) no-a-document-published
+
+  20080926 (AK)
+  - nplcit: made a num attribtute IMPLIED (was REQUIRED) 
+  - changed legal-event content model [ was (dtext, legal-event-body?) is (dtext | legal-event-body)? ]
+  - changed citations content model [ was (patent-citations|non-patent-citations)? 
+                                       is (patent-citations?, non-patent-citations?) ]
+  - changed term-of-grant content mode [ was (text | disclaimer | length-of-grant | us-term-extension | lapse-of-patent)+
+                                          is (text | disclaimer | length-of-grant | us-term-extension | lapse-of-patent)*]
+
+  20080906 (DS)
+  - introduce figures element and subelements into technical-data model
+  - introduce number-of-claims and exemplary-claim to technical-data model
+
+  20080811 (DS)
+  - bumped version up to 0.7
+  - added missing designated-states to international-convention-data
+  - added container element regional for pct-designated-states
+  - changed document-id content model [ was (country, doc-number, ...) is (country, doc-number?, ...) ]
+  - (see parent DTD patent-documents.dtd): made all attributes IMPLIED (THIS IS TEMPORARY)
+
+  20080624 (DS)
+  - added source attribute to element abstract
+
+  20080604 (DS)
+  - moved version to 0.6
+  - replaced hard coded attribute for format on the 
+    remaining names where the ENTITY fmtattrs was not used
+
+  20080402 (DS)
+  - changed @date-publ on patent-document to @date
+  - added declaration for simple list (sl)
+  - added sl to content moded of entity 'ptext'
+  - added imgref element
+  - moved @country and @scheme from classifications-ecla to classification-symbol
+  - added img to content model of btext (entity)
+
+  20080214 (DS)
+  
+  - added fixed attribute on disclaimer element
+  
+  - made inventors '?' instead of of mandatory
+  
+  - added 'intermediate' to possible attribute @format values. This is the
+    intermediate DOCDBA format provided by docdb (not sure if this should be
+    exposed as such)
+    
+  - added us-assignee-type to assignee attribute list
+  
+  - changed @sequence to #IMPLIED everywhere
+  
+  - changed @num on paragraph element to #IMPLIED
+  
+  20080211 (DS)
+  - upped version to 0.4
+  
+  - added legal status events and children (subject to change and probably will)
+  
+  - added ucid (unique character ID) attribute (different than @id) to:
+      * publication-reference
+      * application-reference
+      * priority-claim
+      * patcit
+      * parent-doc, child-doc, parent-pct-doc
+      * pct-or-regional-filing-data, pct-or-regional-publication-data
+      
+  - changed @sequence on document-id to IMPLIED
+  
+  - added optional @url to img element.
+  
+  
+  20080129 (DS)
+  - upped version to 0.3
+  
+  - changed occurrence model for classifications
+  
+  - image layout (orientation) default changed to 'unknown'
+  
+  - removed container classifications-(ipc|national|ecla). Only
+    IPCR has container classificationS-ipcr
+    
+  - added attributes scheme and country to classification-ecla and removed
+    child 'edition'
+    
+  20080124 (DS):
+  
+  - upped version to 0.2
+  
+  - Added the subdocuments 'claims', 'amended-claims', 'amended-claims-statement',
+    'search-report-data' and 'drawings' with respective content models, children
+    and child definitions.
+  
+  - Changed priority-claim content model from 
+      (document-id)+ -> (document-id).
+    There is no need to mess up priorities with differing formats.
+    
+  - Added reassignment+ elements to content model of assignee-history
+  
+  - Commented a bit more extensively (work in progress)
+  
+  - Added republication-date and intention-to-grant to availability dates
+  
+  - Added withdrawn attribute on patent-document
+  
+  - Added term-of-grant and child elements to bibliographic-data
+  
+  
+  20080116 (DS): This version is a brainstorm beginning based heavily on the
+  emerging st36 standard. This new standard, like st32 which it
+  replaces, diverges significantly between issuing authorities and
+  this DTD is an attempt to unify them.
+
+
+  ***************
+  Relevant specifications/DTDs/Schemas
+  
+  EPO
+  http://docs.epoline.org/ebd//info.htm
+  http://docs.epoline.org/ebd//xmlinfo.htm
+  http://docs.epoline.org/ebd//doc/ep-patent-document-v1-2.dtd
+  
+  USPTO (includes legacy SGML)
+  http://www.uspto.gov/web/offices/ac/ido/oeip/sgml/st32/redbook/index.html
+  http://www.uspto.gov/web/forms/kindcodesum.html
+
+  WIPO
+  http://www.wipo.int/pct-safe/epct/schemaDocs/1.5/wo-bibliographic-data-v1-5_dtd/index.html
+  
+  WIPO Standards
+  http://www.wipo.int/scit/en/standards/standards.htm
+  Our interest: ST3, ST8, ST16, ST30, ST32, ST33, ST35, ST36
+  http://www.wipo.int/export/sites/www/scit/en/standards/pdf/03-03-01.pdf  
+
+-->
+
+
+
+
+<!-- General parameter entities
+  Upper-level containers will carry these attributes. They will signify
+  one or more sub-elements have changed or have been deleted within that
+  container, e.g., classifications-ipc(r), inventors, applicants etc...
+-->
+<!ENTITY % dfltattrs "
+  id ID #IMPLIED
+  mxw-id CDATA #IMPLIED
+  status (n|new|c|corrected|d|deleted) 'new'
+  load-source CDATA #IMPLIED
+  ref-ucid CDATA #IMPLIED
+">
+
+<!-- The contents of a paragraph or other block-level text element -->
+<!ENTITY % ptext "
+#PCDATA | b | i | u | o | sub | sup |smallcaps |
+br | pre | dl | ul | ol | sl | crossref | figref | patcit |
+nplcit | bio-deposit | img | imgref | chemistry | maths | tables | table-external-doc
+">
+
+<!-- The contents of headings or other block-level elements -->
+<!ENTITY % btext "#PCDATA | img | imgref | b | i | u | o | sub | sup | smallcaps" >
+
+
+<!-- External dependenies
+ These include Table and Math markup and all character references.
+-->
+<!-- The ST32 MATH and CHEM definitions -->
+<!ENTITY % st32 SYSTEM "st32-merges.dtd" >
+%st32;
+
+<!-- Namespaces and elements defined above in st32-merges.dtd -->
+<!ENTITY % st32math "st32:df | st32:dfg | st32:f">
+<!ENTITY % st32chem "st32:che | st32:chr | st32:crf">
+<!ENTITY % extdep PUBLIC "-//FV//DTD Ext 1.0//EN" "ext-dependencies.dtd">
+%extdep;
+
+
+<!ELEMENT patent-document (doc-page+ |
+                           (bibliographic-data,
+                            abstract*,
+                            description*,
+                            claims*, amended-claims*, amended-claims-statement*,
+                            drawings?,
+                            search-report-data*,
+                            legal-status?,
+                            revision-history?, copyright?))>
+
+<!--
+  @ucid: unique identifier
+  @file: internal (used by data provider)
+  @lang: language of publication
+  @country: originating office
+  @doc-number: document publication number
+  @kind: document kind code
+  @date: date of publication
+  @date-produced: internal (used by data provider)
+  @family-id: DOCDB family identifer (use for grouping simple families)
+  @file-reference-id: internal (used by data provider)
+  @withdrawn: withdrawn status of document (yes is only value used)
+  @family-id: DOCDB-provided indicator of family relationship. Integer value
+              used to group members of a simple family
+-->
+<!ATTLIST patent-document
+  %dfltattrs;
+  ucid CDATA #REQUIRED
+  file CDATA #IMPLIED
+  lang CDATA #IMPLIED
+  country CDATA #REQUIRED
+  doc-number CDATA #REQUIRED
+  kind CDATA #IMPLIED
+  date CDATA #IMPLIED
+  date-produced CDATA #IMPLIED
+  file-reference-id CDATA #IMPLIED
+  withdrawn (yes|no) #IMPLIED
+  family-id CDATA #IMPLIED
+>
+
+<!--
+  Used in EP/WO data for search-report section. WO also uses
+  this element for references in the description and (amended) claims
+  section of the document.
+  @he: height
+  @wi: width
+  @type: image foramt
+  @alt: descriptive text
+  @pp: page range
+  @ppf: first page
+  @ppl: last page
+  @file: relative location of external file
+  @color: color or black and white page
+                NOTE: some US plant patents are color images
+  @orientation: layout of page
+-->
+<!ELEMENT doc-page EMPTY>
+<!ATTLIST doc-page
+  %dfltattrs;
+  he CDATA #REQUIRED
+  wi CDATA #REQUIRED
+  type (jpg|pdf|tif) #REQUIRED
+  alt CDATA #IMPLIED
+  pp CDATA #IMPLIED
+  ppf CDATA #IMPLIED
+  ppl CDATA #IMPLIED
+  file CDATA #REQUIRED
+  color (color|bw) #IMPLIED
+  orientation (portrait|landscape) 'portrait'
+>
+
+<!ELEMENT bibliographic-data (publication-reference,
+                              us-sir-flag?,
+                              application-reference?,
+                              priority-claims?,
+                              dates-of-public-availability?,
+                              rule-47-flag?,
+                              term-of-grant?,
+                              technical-data?,
+                              related-documents?,
+                              parties?,
+                              international-convention-data?,
+                              designated-states?,
+                              office-specific-data?) >
+
+<!ELEMENT office-specific-data (eptags|ustags)*>
+<!ELEMENT eptags        (ep-no-a-document-published?,
+                         ep-limitations?,
+                         ep-petition-reviews?)>
+<!ELEMENT ustags        EMPTY>
+
+<!ELEMENT ep-no-a-document-published   (#PCDATA)>
+
+<!--
+  @ucid: character identifier made up of country + document-number + kind,
+         e.g., US-5551212-A; EP-0700000-B1
+  @fvid: (internal) integer identifer used for QA/QC procedures
+-->
+<!ELEMENT publication-reference (document-id+)>
+<!ATTLIST publication-reference
+  %dfltattrs;
+  ucid CDATA #REQUIRED
+  fvid CDATA #REQUIRED
+>
+
+<!--
+  @appl-type: US application type. This is reserverd for US only
+              but other values may be used in the future.
+  @us-series-code: US-only
+  @us-art-unit: US-only
+  @is-representative: see DOCDB ST36
+-->
+<!ELEMENT application-reference (document-id+) >
+<!ATTLIST application-reference
+  %dfltattrs;
+  ucid CDATA #IMPLIED
+  appl-type CDATA #IMPLIED
+  us-series-code CDATA #IMPLIED
+  us-art-unit CDATA #IMPLIED
+  is-representative (YES|NO) "NO"
+>
+
+<!ELEMENT priority-claims (priority-claim+) >
+<!ATTLIST priority-claims
+  %dfltattrs;
+>
+
+<!ELEMENT priority-claim (document-id, office-of-filing?, (priority-doc-requested | priority-doc-attached)?) >
+<!ATTLIST priority-claim
+  %dfltattrs;
+  ucid CDATA #IMPLIED
+  kind (national|regional|international) #IMPLIED
+>
+<!ELEMENT priority-doc-attached EMPTY>
+<!ELEMENT priority-doc-requested EMPTY>
+
+
+<!ELEMENT rule-47-flag EMPTY >
+
+<!ELEMENT term-of-grant (text | disclaimer | length-of-grant | us-term-extension | lapse-of-patent)*>
+<!ATTLIST term-of-grant
+  %dfltattrs;
+>
+
+<!ELEMENT length-of-grant (#PCDATA) >
+<!ELEMENT us-term-extension (#PCDATA) >
+<!ELEMENT disclaimer (date) >
+<!ATTLIST disclaimer
+  text CDATA #FIXED "This patent is subject to a terminal disclaimer"
+>
+<!ELEMENT lapse-of-patent (document-id, text?) >
+<!ATTLIST lapse-of-patent
+  %dfltattrs;
+>
+
+
+
+
+<!--
+  With the exception of gazette-date, one of the following dates
+  will be identical to publication-reference/date.
+  Individual usage depends on publication-reference/kind
+  
+  US (1836-1999):
+      A, S, P
+      H, E, I    (granted-publication-date)
+      
+     (2000-Present):
+      B1, B2,
+      P2, P3
+      S1, E1
+      H1         (granted-publication-date)
+      
+      A1, P1     (application-publication)
+      A2         (republication-date)
+      A9         (corrected-publication-date)
+
+  EP
+      A1, A2     (application-publication-date)
+      A3         (search-report-publication-date)
+      A8         (amended-publication-date)
+      A9         (corrected-publication-date)
+      B1         (grant-publication-date)
+      B2         (republication-date)
+      B8         (amended-publication-date)
+      B9         (corrected-publication-date)
+  
+  WO
+      A1, A2     (application-publication-date)
+      A3         (search-report-publication-date)
+      A8         (amended-publication-date)
+      A9         (corrected-publication-date)
+-->
+<!ELEMENT dates-of-public-availability (gazette-date?,
+                                        application-publication-date?,
+                                        grant-publication-date?,
+                                        intention-to-grant-date?,
+                                        registered-date?,
+                                        republication-date?,
+                                        search-report-publication-date?,
+                                        search-report-dispatch-date?,
+                                        corrected-search-report-dispatch-date?,
+                                        coming-into-force-date?,
+                                        preceding-publication-date?,
+                                        amended-publication-date?,
+                                        corrected-publication-date?) >
+<!ATTLIST dates-of-public-availability
+  %dfltattrs;
+>
+<!ELEMENT gazette-date (date, bulletin-number?)>
+<!ELEMENT application-publication-date (date, bulletin-number?) >
+<!ELEMENT grant-publication-date (date, bulletin-number?) >
+<!ELEMENT intention-to-grant-date (date, bulletin-number?) >
+<!ELEMENT registered-date (date, bulletin-number?) >
+<!ELEMENT republication-date (date, bulletin-number?) >
+<!ELEMENT search-report-publication-date (date, bulletin-number?) >
+<!ELEMENT search-report-dispatch-date (date, bulletin-number?) >
+<!ELEMENT corrected-search-report-dispatch-date (date, bulletin-number?) >
+<!ELEMENT coming-into-force-date (date, bulletin-number?) >
+<!ELEMENT preceding-publication-date (date, bulletin-number?) >
+<!ELEMENT amended-publication-date (date, bulletin-number?) >
+<!ELEMENT corrected-publication-date (date, bulletin-number?) >
+
+
+<!ELEMENT technical-data ((classification-ipc | classification-locarno)*,
+                          classifications-ipcr?, classification-national?,
+                          classification-ecla*, f-term-info?,
+                          invention-title*,
+                          citations?,
+                          figures?, number-of-claims?, exemplary-claim?,
+                          field-of-search?)>
+<!ATTLIST technical-data
+  %dfltattrs;
+>
+
+
+<!ELEMENT classification-ipc (edition,
+                              main-classification,
+                              further-classification*,
+                              (additional-info | linked-indexing-code-group | unlinked-indexing-code)*,
+                              text?) >
+<!ATTLIST classification-ipc
+  %dfltattrs;
+>
+<!ELEMENT edition (#PCDATA)>
+<!ELEMENT main-classification (#PCDATA) >
+<!ATTLIST main-classification
+  %dfltattrs;
+  jp-facet CDATA #IMPLIED
+>
+<!ELEMENT further-classification (#PCDATA) >
+<!ATTLIST further-classification
+  %dfltattrs;
+  jp-facet CDATA #IMPLIED
+>
+<!ELEMENT additional-info (#PCDATA) >
+<!ATTLIST additional-info
+  %dfltattrs;
+>
+<!ELEMENT linked-indexing-code-group (#PCDATA) >
+<!ATTLIST linked-indexing-code-group
+  %dfltattrs;
+>
+<!ELEMENT unlinked-indexing-code (#PCDATA) >
+<!ATTLIST unlinked-indexing-code
+  %dfltattrs;
+>
+
+<!--For US design patents only. -->
+<!ELEMENT classification-locarno (edition?,
+                                  main-classification,
+                                  further-classification*,
+                                  text?)>
+
+
+<!ELEMENT classifications-ipcr (classification-ipcr+) >
+<!ELEMENT classifications-ipcr-original (classification-ipcr+) >
+<!--
+<!ATTLIST classifications-ipcr-original
+  as-of-date CDATA #REQUIRED
+>
+-->
+
+<!ELEMENT classifications-ipcr-current (classification-ipcr+) >
+
+<!ELEMENT classification-ipcr (#PCDATA) >
+<!ATTLIST classification-ipcr
+  %dfltattrs;
+  sequence CDATA #IMPLIED
+>
+
+<!--
+  This element will appear mainly in US data and DOCDB (US, GB and CA).
+  US data will make use of '(main|further)-classification' and
+  DOCDB will be limited to the 'text' child. Where DOCDB delivers
+  US classes (country=US) and there are classifications from USPTO,
+  USPTO classes will be preferred and delivered and DOCDB US classes
+  will be suppressed.
+-->
+<!ELEMENT classification-national (edition?, main-classification?, further-classification*,
+    (additional-info | linked-indexing-code-group | unlinked-indexing-code)*, text*)>
+<!ATTLIST classification-national
+  %dfltattrs;
+  country CDATA #REQUIRED
+>
+
+<!ELEMENT classification-national-original (classification-national+) >
+<!ELEMENT classification-national-current  (classification-national+) >
+
+
+<!ELEMENT classification-ecla (classification-symbol+)>
+<!ATTLIST classification-ecla
+  %dfltattrs;
+>
+
+<!ELEMENT classification-symbol (#PCDATA) >
+<!ATTLIST classification-symbol
+  %dfltattrs;
+  country CDATA #IMPLIED
+  scheme (EC|ICO|IDT|ECNO) #REQUIRED
+>
+
+<!ELEMENT f-term-info (f-terms+)>
+<!ELEMENT f-terms (theme-code, f-term+)>
+<!ELEMENT f-term (#PCDATA)>
+<!ATTLIST f-term
+  %dfltattrs;
+>
+<!ELEMENT theme-code (#PCDATA) >
+
+
+
+<!ELEMENT invention-title (#PCDATA) >
+<!ATTLIST invention-title
+  %dfltattrs;
+  lang CDATA #REQUIRED
+>
+
+<!--
+  Citations
+-->
+
+<!ELEMENT sources (source+) >
+<!ELEMENT source EMPTY >
+<!ATTLIST source
+  %dfltattrs;
+  name (APP|SEA|115|EXA|OPP|UNKNOWN) #REQUIRED
+  created-by-npl (Y|N) "N"
+  category CDATA #IMPLIED
+>
+
+<!ELEMENT citations (patent-citations?, non-patent-citations?) >
+<!ELEMENT patent-citations (patcit+) >
+<!ELEMENT patcit (text | (document-id, sources?, rel-passage*)) >
+<!ATTLIST patcit
+  %dfltattrs;
+  ucid CDATA #IMPLIED
+  num CDATA #IMPLIED
+  url CDATA #IMPLIED
+  dnum CDATA #IMPLIED
+  dnum-type CDATA #IMPLIED
+>
+
+<!ELEMENT non-patent-citations (nplcit+) >
+<!ELEMENT nplcit (#PCDATA | text | sources)* >
+<!ATTLIST nplcit 
+  %dfltattrs;
+  num CDATA #IMPLIED
+  url CDATA #IMPLIED
+  npl-type CDATA #IMPLIED
+>
+
+<!ELEMENT rel-passage (text | (passage, (category, rel-claims?)*)) >
+<!ELEMENT passage (#PCDATA) >
+<!ELEMENT category (#PCDATA) >
+<!ELEMENT rel-claims (#PCDATA) >
+
+<!-- information about drawings and figures -->
+<!ELEMENT figures (number-of-drawing-sheets?, number-of-figures?, figure-to-publish?)>
+<!ELEMENT number-of-drawing-sheets (#PCDATA)>
+<!ELEMENT number-of-figures (#PCDATA)>
+<!ELEMENT figure-to-publish (#PCDATA)>
+
+<!-- claims information -->
+<!ELEMENT number-of-claims (#PCDATA)>
+<!ELEMENT exemplary-claim (#PCDATA)>
+
+<!-- search classifications -->
+<!ELEMENT field-of-search (classification-national+) >
+<!ATTLIST field-of-search
+  %dfltattrs;
+>
+
+<!ELEMENT related-documents (relation+) >
+<!ATTLIST related-documents
+  %dfltattrs;
+>
+
+<!--
+  ST32 Equivalence:
+  addition                         => b610
+  division                         => b620
+  division-into                    => b620ep
+  continuation                     => b631
+  continuation-in-part             => b632
+  continuing-reissue               => b633
+  reissue                          => b640
+  us-divisional-reissue            => b641us
+  reexamination                    => b645
+  us-reexamination-reissue-merger  => b645us
+  substitution                     => b660
+  correction                       => b665
+  utility-model-basis              => b670
+  us-provisional-application       => b680
+  related-publication              => b690
+-->
+<!ELEMENT relation (document-id | (child-doc, parent-doc)) >
+<!ATTLIST relation
+  type (a-371-of-international | addition | division | division-into | continuation | continuation-in-part |
+        continuing-reissue | reissue | us-divisional-reissue | reexamination |
+        us-reexamination-reissue-merger | substitution | us-provisional-application |
+        utility-model-basis | correction | related-publication) #REQUIRED
+>
+
+<!ELEMENT parent-doc (document-id+, parent-grant-document?, parent-pct-document?) >
+<!ATTLIST parent-doc
+  ucid CDATA #REQUIRED
+  psta (granted|pending|abandoned|SIR|unknown) 'unknown'
+>
+<!ELEMENT parent-grant-document (document-id+) >
+<!ATTLIST parent-grant-doc
+  ucid CDATA #REQUIRED
+>
+<!ELEMENT parent-pct-document (document-id+) >
+<!ATTLIST parent-pct-doc
+  ucid CDATA #REQUIRED
+>
+<!ELEMENT child-doc (document-id+) >
+<!ATTLIST child-doc
+  ucid CDATA #REQUIRED
+>
+
+<!--
+  Attributes used to define data format of party
+-->
+<!ENTITY % fmtattrs "original|standard|epo|uspto|intermediate" >
+
+<!ELEMENT parties (applicants?, inventors?, assignees?, assignee-history?,
+                   correspondence-address?, agents?,
+                   examiners?) >
+                   
+<!ELEMENT applicants (applicant*) >
+<!ELEMENT applicant (addressbook) >
+<!ATTLIST applicant
+  %dfltattrs;
+  format (%fmtattrs;) 'original'
+  sequence CDATA #IMPLIED
+>
+<!ELEMENT inventors (inventor*) >
+<!ELEMENT inventor (addressbook) >
+<!ATTLIST inventor
+  %dfltattrs;
+  format (%fmtattrs;) 'original'
+  sequence CDATA #IMPLIED
+>
+
+<!ELEMENT assignees (assignee+) >
+
+<!--
+  @us-assignee-type: for assignee type, one of the following codes is used.
+    - 01 Unassigned
+    - 02 United States company or corporation
+    - 03 Foreign company or corporation
+    - 04 United States individual
+    - 05 Foreign individual
+    - 06 U.S. Federal government
+    - 07 Foreign government
+    - 08 U.S. county government
+    - 09 U.S. state government
+-->
+<!ELEMENT assignee (addressbook) >
+<!ATTLIST assignee
+  %dfltattrs;
+  format (%fmtattrs;) 'original'
+  us-assignee-type CDATA #IMPLIED
+  sequence CDATA #IMPLIED
+>
+
+<!ELEMENT assignors (assignor+) >
+<!ELEMENT assignor (addressbook) >
+<!ATTLIST assignor
+  %dfltattrs;
+  format (%fmtattrs;) 'original'
+  sequence CDATA #IMPLIED
+  execution-date CDATA #IMPLIED
+>
+
+<!ELEMENT assignee-history (reassignments) >
+
+<!ELEMENT reassignments (reassignment+) >
+<!ATTLIST reassignments
+  %dfltattrs;
+>
+
+<!--
+  Although reassignment information is available as a legal status
+  event from PRS (EPO) data, the timeliness and completeness is
+  very questionable.
+  
+  Each reassignment element corresponds to an entry in the reel/frame
+  delivery of the USPTO Daily Reassignment data feed.
+-->
+<!ELEMENT reassignment (assignees, assignors, correspondence-address?, conveyance?) >
+<!ATTLIST reassignment
+  %dfltattrs;
+  reel-frame CDATA #REQUIRED
+  recorded-date CDATA #REQUIRED
+>
+
+<!ELEMENT conveyance (#PCDATA) >
+
+
+<!ELEMENT agents (agent+) >
+<!ELEMENT agent (addressbook) >
+<!ATTLIST agent
+  %dfltattrs;
+  format (%fmtattrs;) 'original'
+  sequence CDATA #IMPLIED
+>
+
+<!ELEMENT correspondence-address (addressbook) >
+<!ATTLIST correspondence-address
+  %dfltattrs;
+  format (%fmtattrs;) 'original'
+  sequence CDATA #IMPLIED
+>
+
+<!ELEMENT examiners (examiner+) >
+<!ELEMENT examiner (addressbook) >
+<!ATTLIST examiner
+  %dfltattrs;
+  examiner-level (primary|assistant) #REQUIRED
+  format (%fmtattrs;) 'original'
+  sequence CDATA #IMPLIED
+>
+
+<!ENTITY % nam "((name |
+  (prefix? , (last-name | orgname) , first-name? , middle-name? , suffix? , iid? , role? ,
+  orgname? , department? , synonym*)) , registered-number?)" >
+<!ELEMENT name (#PCDATA) >
+<!ELEMENT prefix (#PCDATA) >
+<!ELEMENT last-name (#PCDATA) >
+<!ELEMENT orgname (#PCDATA) >
+<!ELEMENT first-name (#PCDATA) >
+<!ELEMENT middle-name (#PCDATA) >
+<!ELEMENT suffix (#PCDATA) >
+<!ELEMENT iid (#PCDATA) >
+<!ELEMENT role (#PCDATA) >
+<!ELEMENT department (#PCDATA) >
+<!ELEMENT synonym (#PCDATA) >
+<!ELEMENT registered-number (#PCDATA) >
+
+  
+<!ENTITY % adr "((address-1? , address-2? , address-3? , mailcode? , pobox? ,
+room? , address-floor? , building? , street? , city? , county? , state? ,
+postcode? , country?) | text)" >
+<!ELEMENT address-1 (#PCDATA) >
+<!ELEMENT address-2 (#PCDATA) >
+<!ELEMENT address-3 (#PCDATA) >
+<!ELEMENT mailcode (#PCDATA) >
+<!ELEMENT pobox (#PCDATA) >
+<!ELEMENT room (#PCDATA) >
+<!ELEMENT address-floor (#PCDATA) >
+<!ELEMENT building (#PCDATA) >
+<!ELEMENT street (#PCDATA) >
+<!ELEMENT city (#PCDATA) >
+<!ELEMENT county (#PCDATA) >
+<!ELEMENT state (#PCDATA) >
+<!ELEMENT postcode (#PCDATA) >
+<!-- country defined below -->
+<!-- text defined below -->
+
+<!ELEMENT address (%adr;) >
+<!ELEMENT addressbook ((%nam;, address? , phone* , fax* , email* , url* , ead* , dtext?) | text) >
+
+<!ELEMENT phone (#PCDATA) >
+<!ELEMENT fax (#PCDATA) >
+<!ELEMENT email (#PCDATA) >
+<!ELEMENT url (#PCDATA) >
+<!ELEMENT ead (#PCDATA) >
+<!-- dtext defined below -->
+<!-- text defined below -->
+
+<!ELEMENT international-convention-data ( (pct-or-regional-filing-data|pct-or-regional-publishing-data)*, designated-states? ) >
+
+<!ELEMENT pct-or-regional-filing-data (document-id+) >
+<!ATTLIST pct-or-regional-filing-data
+  %dfltattrs;
+  ucid CDATA #REQUIRED
+>
+<!ELEMENT pct-or-regional-publishing-data (document-id+) >
+<!ATTLIST pct-or-regional-publishing-data
+  %dfltattrs;
+  ucid CDATA #REQUIRED
+>
+
+
+<!ELEMENT designated-states ( (pct-designated-states|ep-contracting-states),
+                               ep-extended-states?) >
+<!ELEMENT pct-designated-states (country|regional)* >
+<!ELEMENT ep-contracting-states (country+) >
+<!ELEMENT ep-extended-states (ep-extended-state-data+) >
+<!ELEMENT ep-extended-state-data (country, date?, withdrawal-date?)>
+<!ELEMENT withdrawal-date (date) >
+
+<!--
+  DE T document additional info
+  Coming soon...
+ -->
+<!-- <!ELEMENT translation-data > -->
+
+
+<!ELEMENT document-id (country, doc-number?, kind?, date?, dtext?, lang?) >
+<!ATTLIST document-id
+  %dfltattrs;
+  format (original|standard|epo|uspto|mxw-std) 'original'
+  sequence CDATA #IMPLIED
+>
+
+<!ELEMENT regional (country+) >
+<!ATTLIST regional
+  region CDATA #REQUIRED
+>
+
+<!ELEMENT country (#PCDATA) >
+<!ATTLIST country
+  %dfltattrs;
+>
+<!ELEMENT region (#PCDATA) >
+<!ELEMENT doc-number (#PCDATA) >
+<!ELEMENT kind (#PCDATA) >
+<!ELEMENT date (#PCDATA) >
+<!ELEMENT bulletin-number (#PCDATA) >
+<!ELEMENT dtext (#PCDATA) >
+<!ELEMENT text (#PCDATA) >
+<!ELEMENT lang (#PCDATA) >
+<!ELEMENT office-of-filing ((region, country?) | country)>
+
+
+
+<!-- Country specific ... -->
+
+<!ELEMENT us-sir-flag EMPTY >
+
+
+<!-- Textual Markup -->
+<!ELEMENT abstract ( (abst-problem, abst-solution) | (heading|p|img|imgref)*) >
+<!ATTLIST abstract
+  %dfltattrs;
+  lang CDATA #REQUIRED
+  source CDATA #IMPLIED
+>
+<!ELEMENT abst-problem (p+) >
+<!ELEMENT abst-solution (p+) >
+
+<!--
+<!ELEMENT description (invention-title?,
+                       (technical-field | background-art |
+                        disclosure | description-of-drawings | best-mode |
+                        mode-for-invention | industrial-applicability |
+                        sequence-list-text | (heading|img|imgref|p)*)+)> -->
+                        <!-- sequence-list-text | (heading*, p+)+)+)> -->
+
+<!ELEMENT description (invention-title?,
+                       (technical-field | background-art |
+                        disclosure | description-of-drawings | best-mode |
+                        mode-for-invention | industrial-applicability |
+                        sequence-list-text |
+                          summary-of-invention | description-of-embodiments |
+                          reference-signs-list | reference-to-deposited-biological-material |
+                          citation-list | sequence-list-text |
+                       (heading|img|imgref|p)*)+)>
+<!ATTLIST description
+  %dfltattrs;
+  lang CDATA #REQUIRED
+>
+
+
+<!ELEMENT technical-field (heading*, p+)+ >
+<!ELEMENT background-art (heading*, p+)+ >
+
+<!ELEMENT disclosure ((tech-problem | tech-solution | advantageous-effects)* | (heading* , p+)+)>
+<!ELEMENT tech-problem (heading* , p+)+>
+<!ELEMENT tech-solution (heading* , p+)+>
+<!ELEMENT advantageous-effects (heading* , p+)+>
+
+<!ELEMENT description-of-drawings (heading*, p+)+ >
+<!ELEMENT best-mode (heading*, p+)+ >
+<!ELEMENT mode-for-invention (heading*, p+)+ >
+<!ATTLIST mode-for-invention
+  mode-num CDATA  #IMPLIED
+>
+<!ELEMENT industrial-applicability (heading*, p+)+ >
+<!ELEMENT sequence-list-text (heading*, p+)+ >
+
+<!-- BEGIN: new description sub-sections delivered by JPO
+  NOTE: this is a bonus for USA-Redbook as summary-of-invention
+        was disallowed until now -->
+<!ELEMENT summary-of-invention (tech-problem | tech-solution | advantageous-effects | (heading* , p*)+)+>
+<!ATTLIST summary-of-invention
+  %dfltattrs;
+>
+
+<!ELEMENT description-of-embodiments (embodiments-example | (heading* , p*)+)+>
+<!ATTLIST description-of-embodiments
+  %dfltattrs;
+>
+
+<!ELEMENT embodiments-example (p+)+>
+<!ATTLIST embodiments-example
+  %dfltattrs;
+  ex-num CDATA  #IMPLIED
+>
+
+<!ELEMENT reference-signs-list (p+)+>
+<!ATTLIST reference-signs-list
+  %dfltattrs;
+>
+
+<!ELEMENT reference-to-deposited-biological-material (p+)+>
+<!ATTLIST reference-to-deposited-biological-material
+  %dfltattrs;
+>
+
+<!ELEMENT citation-list (patent-literature | non-patent-literature | (heading* , p*)+)+>
+<!ATTLIST citation-list
+  %dfltattrs;
+>
+
+<!ELEMENT patent-literature (p+)+>
+<!ATTLIST patent-literature
+  %dfltattrs;
+>
+
+<!ELEMENT non-patent-literature (p+)+>
+<!ATTLIST non-patent-literature
+  %dfltattrs;
+>
+<!-- END: new description sub-sections delivered by JPO -->
+
+
+
+<!ELEMENT claims (claim-statement?, claim+) >
+<!ATTLIST claims
+  %dfltattrs;
+  lang CDATA #REQUIRED
+  claim-type CDATA #IMPLIED
+>
+
+<!ELEMENT claim-statement (%ptext;)*>
+
+<!ELEMENT claim (claim-text+) >
+<!ATTLIST claim
+  id ID #IMPLIED
+  num CDATA #IMPLIED
+  claim-type CDATA #IMPLIED
+>
+
+<!ELEMENT claim-text (%ptext; | %st32chem; | %st32math; | claim-text | claim-ref)* >
+
+<!ELEMENT claim-ref (#PCDATA|claim-text)* >
+<!ATTLIST claim-ref
+  idref IDREF #REQUIRED
+>
+
+<!ELEMENT amended-claims (heading?, claim+, amended-claims-statement*)+ >
+<!ATTLIST amended-claims
+  %dfltattrs;
+  lang CDATA #REQUIRED
+  country CDATA #IMPLIED
+  amended-claim-type CDATA #IMPLIED
+>
+
+<!ELEMENT amended-claims-statement  (claims-statement+) >
+
+<!ATTLIST amended-claims-statement
+  id ID #IMPLIED 
+  lang CDATA #IMPLIED 
+  status CDATA #IMPLIED  >
+
+<!ELEMENT claims-statement  (heading*, p+)+ >
+
+<!ELEMENT drawings (figure+) >
+<!ATTLIST drawings
+  %dfltattrs;
+  lang CDATA #IMPLIED
+>
+
+<!--
+  Search report data
+  @srep-office 'EP'
+  @date-produced: date finished by examiner
+  @srep-type: determines layout of search report
+      - epo-srep => normal layout
+      - ep-Rule45partial => pre-EPC 2000
+      - ep-Rule45declaration => layout for declaration, no citations
+      - isr International Search Report layout
+-->
+<!ELEMENT search-report-data (doc-page+) >
+<!ATTLIST search-report-data
+  %dfltattrs;
+  lang CDATA #IMPLIED
+  srep-office CDATA #IMPLIED
+  date-produced CDATA #IMPLIED
+  srep-type CDATA #IMPLIED
+>
+
+<!--
+Legal Status
+-->
+<!ELEMENT legal-status (legal-event+) >
+<!ATTLIST legal-status
+  %dfltattrs;
+>
+
+<!ELEMENT legal-event (dtext | legal-event-body)? >
+<!ATTLIST legal-event
+  %dfltattrs;
+  code CDATA #REQUIRED
+  country CDATA #REQUIRED
+  date CDATA #REQUIRED
+  impact CDATA #IMPLIED
+>
+
+<!ELEMENT legal-event-body (event-title?, event-attributes?)>
+<!ELEMENT event-title (#PCDATA)>
+<!ELEMENT event-attributes (event-attribute+)>
+<!ELEMENT event-attribute (event-attribute-label|event-attribute-value)*>
+<!ELEMENT event-attribute-label (#PCDATA)>
+<!ELEMENT event-attribute-value (#PCDATA)>
+
+<!--
+  Revision History
+-->
+<!ELEMENT revision-history (revision+) >
+<!ATTLIST revision-history
+  id CDATA #IMPLIED
+>
+<!ELEMENT revision (previous-value, current-value) >
+<!ATTLIST revision
+  %dfltattrs;
+>
+<!ELEMENT previous-value (#PCDATA) >
+<!ELEMENT current-value (#PCDATA) >
+
+<!ELEMENT copyright (#PCDATA) >
+
+<!--
+  Data issues: these are produced on-demand and
+  are currently not part of the standard XML data
+  generation
+-->
+<!ELEMENT data-issues (data-issue+) >
+<!ATTLIST data-issues
+  %dfltattrs;
+>
+<!ELEMENT data-issue (data-issue-level, data-issue-description)>
+<!ATTLIST data-issue
+  %dfltattrs;
+>
+<!ELEMENT data-issue-level (#PCDATA) >
+<!ELEMENT data-issue-description (#PCDATA) >
+
+
+
+<!-- Limitations and Petitions
+  See: http://www.epo.org/patents/law/legal-texts/html/epc/2000/e/contents.html
+-->
+<!ELEMENT ep-limitations (ep-limitation-procedure+)>
+<!ATTLIST ep-limitations
+  %dfltattrs;
+>
+
+<!ELEMENT ep-limitation-procedure (ep-limitation-filing, ep-limitation-rejection?, ep-limitation-allowed?, ep-limitation-decision?)>
+<!ATTLIST ep-limitation-procedure
+  %dfltattrs;
+  limitation-sequence CDATA #IMPLIED
+>
+
+<!ELEMENT ep-limitation-filing  (ep-limitation-date, ep-limitation-filing-kind,
+                                 ep-limitation-filing-decision, ep-limitation-payment-date)>
+<!ATTLIST ep-limitation-filing
+  %dfltattrs;
+>
+
+<!ELEMENT ep-limitation-date (date)>
+
+<!-- 01 = filed during oppoistion
+     02 = filed after opposition -->
+<!ELEMENT ep-limitation-filing-kind (#PCDATA)>
+
+<!-- 01 = admissible
+     02 = inadmissible
+     03 = deemed not filed
+     04  = deemed not filed, opposition pending
+     05 = withdrawn -->
+<!ELEMENT ep-limitation-filing-decision (#PCDATA)>
+<!ELEMENT ep-limitation-payment-date (date)>
+
+
+<!ELEMENT ep-limitation-rejection (ep-limitation-rejection-kind, ep-limitation-rejection-dispatch-date,
+                                   ep-limitation-rejection-legal-date, ep-limitation-rejection-bulletin-number)>
+<!ATTLIST ep-limitation-rejection
+  %dfltattrs;
+>
+
+<!-- 01 = substantive refusal
+     02 = inadmissible for formal reasons (R.94)
+     03 = no (late) reply to subset report
+     04 = RALL (request allowed) requirements not fulfilled -->
+<!ELEMENT ep-limitation-rejection-kind (#PCDATA)>
+<!ELEMENT ep-limitation-rejection-dispatch-date (date)>
+<!ELEMENT ep-limitation-rejection-legal-date (date)>
+<!ELEMENT ep-limitation-rejection-bulletin-number (bnum)>
+
+<!ELEMENT ep-limitation-allowed  (ep-limitation-allowed-dispatch-date,
+                                  ep-limitation-allowed-trans-date,
+                                  ep-limitation-allowed-payment-date)>
+<!ATTLIST limitation-allowed
+  %dfltattrs;
+>
+
+<!ELEMENT ep-limitation-allowed-dispatch-date (date)>
+<!ELEMENT ep-limitation-allowed-trans-date (date)>
+<!ELEMENT ep-limitation-allowed-payment-date (date)>
+
+<!ELEMENT ep-limitation-decision (kind, date, bnum)>
+<!ATTLIST ep-limitation-decision
+  %dfltattrs;
+  limitation-sequence CDATA #IMPLIED
+>
+
+<!-- ep-petition-reviews -->
+<!ELEMENT ep-petition-reviews (ep-petition-review+)>
+<!ATTLIST ep-petition-reviews
+  %dfltattrs;
+>
+<!ELEMENT ep-petition-review (ep-petition-review-appeal-number?,
+                              ep-petition-review-petitioner-code?,
+                              ep-petition-review-notice-date?,
+                              ep-petition-review-decision-date?,
+                              ep-petition-review-decision-kind?)>
+
+<!-- @review-number: Comprises a unique number for a given year. Eg R0001/08 -->
+<!ATTLIST ep-petition-review
+  %dfltattrs;
+  review-number CDATA #REQUIRED
+>
+
+<!ELEMENT ep-petition-review-appeal-number (#PCDATA)>
+<!ELEMENT ep-petition-review-petitioner-code (#PCDATA)>
+<!ELEMENT ep-petition-review-notice-date (date)>
+<!ELEMENT ep-petition-review-decision-date (date)>
+<!ELEMENT ep-petition-review-decision-kind (#PCDATA)>
+
+
+<!-- a bulletin number -->
+<!ELEMENT bnum (#PCDATA)>
+
+<!ELEMENT figure (img) >
+<!ATTLIST figure
+  id CDATA #IMPLIED
+  num CDATA #REQUIRED
+  figure-labels CDATA #IMPLIED
+>
+
+
+
+<!ELEMENT heading (%btext; | %st32math; | %st32chem;)* >
+<!ATTLIST heading
+  id CDATA #IMPLIED
+  num CDATA #IMPLIED
+>
+
+
+<!ELEMENT p (%ptext; | %st32chem; | %st32math;)* >
+<!ATTLIST p
+  id CDATA #IMPLIED
+  num CDATA #IMPLIED
+>
+
+<!-- img/imgref in these content models is required to satisfy
+     custom characters represented as images -->
+<!ELEMENT b         (#PCDATA |     i | u | o | sub | sup | smallcaps | img | imgref)* >
+<!ELEMENT i         (#PCDATA | b |     u | o | sub | sup | smallcaps | img | imgref)* >
+<!ELEMENT u         (#PCDATA | b | i |     o | sub | sup | smallcaps | img | imgref)* >
+<!ATTLIST u 
+  style (single|double|dash|dots) 'single'
+>
+<!ELEMENT o         (#PCDATA | b | i | u |     sub | sup | smallcaps | img | imgref)* >
+<!ATTLIST o
+  ostyle (single|double|dash|dots|leftarrow|rightarrow|leftrightarriw) 'single'
+>
+<!ELEMENT sub       (#PCDATA | b | i | u | o | sub | sup | smallcaps | sub2 | sup2 | img | imgref)* >
+<!ELEMENT sub2      (#PCDATA | b | i | u | o | sub | sup | smallcaps        | sup2 | img | imgref)* >
+<!ELEMENT sup       (#PCDATA | b | i | u | o | sub       | smallcaps | sub2 | sup2 | img | imgref)* >
+<!ELEMENT sup2      (#PCDATA | b | i | u | o | sub | sup | smallcaps | sub2        | img | imgref)* >
+<!ELEMENT smallcaps (#PCDATA | b | i | u | o | sub | sup             | sub2 | sup2 | img | imgref)* >
+
+<!ELEMENT br EMPTY >
+
+<!-- unformatted text (white space retained etc... ) -->
+<!ELEMENT pre (#PCDATA) >
+<!ATTLIST pre
+  xml:space (preserve|default) #IMPLIED
+  listing-type (tabular|equation|sequence|program-listing|other) #REQUIRED
+>
+
+
+<!-- Lists -->
+<!ELEMENT dl (dt, dd)+>
+<!ATTLIST dl
+  id CDATA #IMPLIED
+  tsize CDATA #IMPLIED
+  compact (compact) #IMPLIED
+>
+
+<!ELEMENT dt (%btext;)* >
+<!ATTLIST dt
+  id CDATA #IMPLIED
+>
+
+<!ELEMENT dd (%ptext; | %st32chem; | %st32math;)* >
+<!ATTLIST dd
+  id CDATA #IMPLIED
+>
+
+<!ELEMENT ul (li+) >
+<!ATTLIST ul
+  id CDATA #IMPLIED
+  list-style (bullet|dash|none) 'bullet'
+  compact (compact) #IMPLIED
+>
+<!ELEMENT sl (li+) >
+<!ATTLIST sl
+  id CDATA #IMPLIED
+  compact (compact) #IMPLIED
+>
+<!ELEMENT ol (li+) >
+<!ATTLIST ol
+  id CDATA #IMPLIED
+  ol-style CDATA #IMPLIED
+  compact (compact) #IMPLIED
+>
+
+<!ELEMENT li (%ptext; | %st32chem; | %st32math;)* >
+<!ATTLIST li
+  id CDATA #IMPLIED
+  num CDATA #IMPLIED
+>
+
+
+<!ELEMENT crossref (%btext;)* >
+<!ATTLIST crossref
+  idref CDATA #REQUIRED
+>
+
+<!ELEMENT figref (%btext;)* >
+<!ATTLIST figref 
+  idrefs CDATA #IMPLIED
+  num CDATA #IMPLIED
+>
+
+<!ELEMENT bio-deposit (#PCDATA) >
+<!ELEMENT img EMPTY >
+<!ATTLIST img
+  id CDATA #IMPLIED
+  file CDATA #REQUIRED
+  wi CDATA #REQUIRED
+  he CDATA #REQUIRED
+  img-content (abstract-drawing | ad |
+               chem             | cf |
+               clip             | ci |
+               program-listing  | cp |
+               dna              | dn |
+               drawing          | dr |
+               undefined             |
+               figure           | fg |
+               graph            | gr |
+               math             | mf |
+               page             | pa |
+               photograph       | ph |
+               search-report    | sr |
+               table            | tb |
+               character        | tx |
+               flowchart             |
+               undefined-char   | ff |
+               undefined-image  | ui
+             ) 'drawing'
+  img-format (jpg|tif|st33|st35) #REQUIRED
+  orientation (portrait|landscape|unknown) 'unknown'
+  inline (yes|no) 'no'
+  alt CDATA #IMPLIED
+  url CDATA #IMPLIED
+>
+<!ELEMENT imgref EMPTY>
+<!ATTLIST imgref 
+  idrefs CDATA #IMPLIED
+  num CDATA #IMPLIED
+>
+
+<!ELEMENT attachments (attachment+)>
+<!ATTLIST attachments
+  %dfltattrs;
+>
+
+<!ELEMENT attachment EMPTY>
+<!ATTLIST attachment
+  idref CDATA #IMPLIED
+  attachment-type (pdf|cdx|mol) #REQUIRED
+  file CDATA #REQUIRED
+>
+
+<!ELEMENT chemistry (img+, attachments?)>
+<!ATTLIST chemistry
+  id CDATA #IMPLIED
+  num CDATA #IMPLIED
+>
+
+<!ELEMENT maths (math | equation | img | attachments)* >
+<!ATTLIST maths
+  id CDATA #IMPLIED
+  num CDATA #IMPLIED
+>
+
+<!-- equation added to support US greenbook -->
+<!ELEMENT equation (#PCDATA)>
+
+<!ELEMENT tables (table | img)* >
+<!ATTLIST tables
+  id CDATA #IMPLIED
+  num CDATA #IMPLIED
+>
+
+<!ELEMENT table-external-doc (#PCDATA) >
+
