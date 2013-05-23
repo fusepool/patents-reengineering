@@ -26,6 +26,10 @@ public class ResourceURIResolver implements URIResolver {
 	@Override
 	public Source resolve(String href, String base)
 			throws TransformerException {
+
+		if(href==null||"".equals(href))
+			return null;
+		
 		StreamSource sSource = null ;
 		InputStream xslIs = this.getClass().getResourceAsStream("/xsl/"+href) ;
 		if(xslIs!=null) {

@@ -34,6 +34,8 @@ import com.hp.hpl.jena.rdf.model.Literal;
 import com.hp.hpl.jena.rdf.model.Model;
 import com.hp.hpl.jena.rdf.model.ModelFactory;
 
+import eu.fusepool.enhancer.marec.xslt.impl.XSLOLDTProcessor;
+
 
 
 /**
@@ -56,22 +58,23 @@ public class XSLTProcessorTest {
 									
 	
 
-	private XSLTProcessor processor ;
+	private PatentXMLProcessor processor ;
 	
 	
 	@Before
 	public void setup() {
-		processor = new XSLTProcessor() ;
+		processor = new XSLOLDTProcessor() ;
 	}
 	
 	/**
-	 * Test method for {@link eu.fusepool.enhancer.marec.xslt.XSLTProcessor#processPatentXML(java.io.InputStream)}.
+	 * Test method for {@link eu.fusepool.enhancer.marec.xslt.impl.XSLTProcessor#processPatentXML(java.io.InputStream)}.
 	 */
 	@Test
 	public void testProcessPatentXML01() {
 		//processor = new XSLTProcessor() ;
 		InputStream xslIs = this.getClass().getResourceAsStream("/test/data/EP-1000000-A1.xml") ;
 		try {
+			@SuppressWarnings("unused")
 			InputStream rdfIs = processor.processPatentXML(xslIs) ;
 		} catch (Exception e) {
 			e.printStackTrace();

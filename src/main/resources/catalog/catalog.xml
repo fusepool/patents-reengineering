@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" xml:base="../dtd/">
+  <public publicId="-//MXW//DTD patent-document XML//EN" uri="patent-document.dtd"/>
+</catalog>
