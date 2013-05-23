@@ -511,27 +511,18 @@ XXX: This removes the codes after + or : in ECLA. There might be a particular us
                 </xsl:otherwise>
             </xsl:choose>
 
-            <xsl:choose>
-                <xsl:when test="name">
-                    <foaf:name><xsl:value-of select="name"/></foaf:name>
-                    <rdfs:label><xsl:value-of select="name"/></rdfs:label>
-                </xsl:when>
-                <xsl:when test="prefix or last-name or orgname">
-                    <xsl:if test="prefix">
-                        <foaf:honorificPrefix><xsl:value-of select="prefix"/></foaf:honorificPrefix>
-                    </xsl:if>
-                    <xsl:if test="last-name">
-                        <foaf:lastName><xsl:value-of select="last-name"/></foaf:lastName>
-                        <rdfs:label><xsl:value-of select="name"/></rdfs:label>
-                    </xsl:if>
-                    <xsl:if test="orgname">
-                        <foaf:name><xsl:value-of select="orgname"/></foaf:name>
-                        <rdfs:label><xsl:value-of select="name"/></rdfs:label>
-                    </xsl:if>
-                </xsl:when>
-                <xsl:otherwise>
-                </xsl:otherwise>
-            </xsl:choose>
+            <xsl:if test="name or orgname">
+                <foaf:name><xsl:value-of select="name"/></foaf:name>
+                <rdfs:label><xsl:value-of select="name"/></rdfs:label>
+            </xsl:if>
+
+            <xsl:if test="prefix">
+                <foaf:honorificPrefix><xsl:value-of select="prefix"/></foaf:honorificPrefix>
+            </xsl:if>
+            <xsl:if test="last-name">
+                <foaf:lastName><xsl:value-of select="last-name"/></foaf:lastName>
+                <rdfs:label><xsl:value-of select="name"/></rdfs:label>
+            </xsl:if>
 
             <xsl:if test="first-name">
                 <foaf:firstName><xsl:value-of select="first-name"/></foaf:firstName>
@@ -550,11 +541,6 @@ XXX: This removes the codes after + or : in ECLA. There might be a particular us
 
             <xsl:if test="role">
                 <foaf:title><xsl:value-of select="role"/></foaf:title>
-            </xsl:if>
-
-            <xsl:if test="orgname">
-                <foaf:name><xsl:value-of select="orgname"/></foaf:name>
-                <rdfs:label><xsl:value-of select="name"/></rdfs:label>
             </xsl:if>
 
             <xsl:if test="department">
