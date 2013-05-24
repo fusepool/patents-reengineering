@@ -13,7 +13,7 @@ import javax.xml.transform.URIResolver;
 import javax.xml.transform.stream.StreamResult;
 import javax.xml.transform.stream.StreamSource;
 
-import eu.fusepool.enhancer.marec.xslt.PatentXMLProcessor;
+import eu.fusepool.enhancer.marec.xslt.XMLProcessor;
 import eu.fusepool.enhancer.marec.xslt.ResourceURIResolver;
 
 
@@ -21,7 +21,7 @@ import eu.fusepool.enhancer.marec.xslt.ResourceURIResolver;
  * @author giorgio
  * 
  */
-public class XSLOLDTProcessor implements PatentXMLProcessor {
+public class XSLOLDTProcessor implements XMLProcessor {
 	
 	private TransformerFactory tFactory ;
 	

@@ -7,6 +7,7 @@ import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
 
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.StringWriter;
@@ -23,7 +24,8 @@ import org.apache.stanbol.enhancer.servicesapi.ContentItemFactory;
 import org.apache.stanbol.enhancer.servicesapi.EngineException;
 import org.apache.stanbol.enhancer.servicesapi.EnhancementEngine;
 import org.apache.stanbol.enhancer.servicesapi.impl.StringSource;
-import org.junit.Before;
+import org.junit.AfterClass;
+import org.junit.BeforeClass;
 import org.junit.Test;
 
 import eu.fusepool.enhancer.marec.testutil.MockComponentContext;
@@ -36,8 +38,8 @@ import eu.fusepool.enhancer.marec.testutil.MockLogService;
 public class MarecLifterEnhancementEngineTest {
 
 	
-	MarecLifterEnhancementEngine engine ;
-	MockComponentContext ctx ;
+	static MarecLifterEnhancementEngine engine ;
+	static MockComponentContext ctx ;
 	
 	private static final ContentItemFactory ciFactory = InMemoryContentItemFactory.getInstance();
 	
@@ -46,11 +48,11 @@ public class MarecLifterEnhancementEngineTest {
 	/**
 	 * @throws java.lang.Exception
 	 */
-	@Before
-	public void setUp() throws Exception {
+	@BeforeClass
+	public static void setUp() throws Exception {
 		Dictionary<String, Object> properties = new Hashtable<String, Object>();
 		properties.put("CLEAN_ON_STARTUP", false) ;
-		properties.put(EnhancementEngine.PROPERTY_NAME, "marecEngine") ;
+		properties.put(EnhancementEngine.PROPERTY_NAME, "PatentEngine") ;
 		ctx = new MockComponentContext(properties) ;
 		
 		engine = new MarecLifterEnhancementEngine() ;
@@ -60,6 +62,15 @@ public class MarecLifterEnhancementEngineTest {
 		engine.activate(ctx) ;
 	}
 
+	
+	@AfterClass 
+	public static void clean() {
+		engine.deactivate(ctx) ;
+		File test_data_folder = new File(MockComponentContext.BUNDLE_TEST_DATA_FOLDER) ;
+		if(test_data_folder.exists() && test_data_folder.isDirectory())
+			test_data_folder.delete() ;
+	}
+	
 	@Test
 	public void testFile01() {
 		ContentItem ci01 = null ;
@@ -76,6 +87,7 @@ public class MarecLifterEnhancementEngineTest {
 		}	
 		
 		assertFalse("Metadata should not be empty ",ci01.getMetadata().isEmpty()) ;
+		//fail("Facciamo una prova...") ;
 	
 	}
 

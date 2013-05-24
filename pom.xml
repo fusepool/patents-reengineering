@@ -22,7 +22,7 @@
 	</parent>
 
 	<groupId>eu.fusepool</groupId>
-	<artifactId>marec_semlift</artifactId>
+	<artifactId>patent_semlift</artifactId>
 	<version>0.1.0</version>
 	<packaging>bundle</packaging>
 

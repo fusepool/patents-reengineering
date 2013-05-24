@@ -19,7 +19,7 @@ import javax.xml.transform.stream.StreamSource;
 import org.w3c.dom.Document;
 
 import eu.fusepool.enhancer.marec.xslt.DTDResolver;
-import eu.fusepool.enhancer.marec.xslt.PatentXMLProcessor;
+import eu.fusepool.enhancer.marec.xslt.XMLProcessor;
 import eu.fusepool.enhancer.marec.xslt.ResourceURIResolver;
 
 
@@ -27,7 +27,7 @@ import eu.fusepool.enhancer.marec.xslt.ResourceURIResolver;
  * @author giorgio
  * 
  */
-public class DOMXSLTProcessor implements PatentXMLProcessor {
+public class DOMXSLTProcessor implements XMLProcessor {
 	
 	private TransformerFactory tFactory ;
 	

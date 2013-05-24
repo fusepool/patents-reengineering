@@ -21,6 +21,7 @@ import java.io.InputStream;
 import java.util.Dictionary;
 import java.util.Hashtable;
 
+import org.apache.log4j.Logger;
 import org.osgi.framework.Bundle;
 import org.osgi.framework.BundleContext;
 import org.osgi.framework.BundleException;
@@ -38,6 +39,9 @@ public class MockComponentContext implements ComponentContext {
 
     protected final Dictionary<String, Object> properties;
 
+    
+    public static String BUNDLE_TEST_DATA_FOLDER = "bundle-testdata"+File.separator ;
+    
     public MockComponentContext() {
         properties = new Hashtable<String, Object>();
     }
@@ -54,7 +58,9 @@ public class MockComponentContext implements ComponentContext {
 
     public BundleContext getBundleContext() {
         return new BundleContext() {
-
+        	
+        	File bundleDataFolder ;
+        	
             @Override
             public boolean ungetService(ServiceReference reference) {
                 return false;
@@ -124,7 +130,17 @@ public class MockComponentContext implements ComponentContext {
 
             @Override
             public File getDataFile(String filename) {
-                return new File(System.getProperty("java.io.tmpdir"));
+            	final String bundleDataFolderName ="."+File.separator+BUNDLE_TEST_DATA_FOLDER ;
+            	
+            	if(bundleDataFolder==null) {
+            		bundleDataFolder = new File(bundleDataFolderName) ;
+            		if(!bundleDataFolder.exists()) {
+            			bundleDataFolder.mkdir() ;
+            			Logger.getLogger(this.getClass()).info("Creating tmp dat folder: "+bundleDataFolder.getPath()) ;
+            		}
+            	}
+            	
+            	return new File(bundleDataFolderName+filename);
             }
 
             @Override

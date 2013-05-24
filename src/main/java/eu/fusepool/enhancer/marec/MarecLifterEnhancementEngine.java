@@ -33,15 +33,15 @@ import org.osgi.service.component.ComponentContext;
 import org.osgi.service.log.LogService;
 
 import eu.fusepool.enhancer.marec.xslt.CatalogBuilder;
-import eu.fusepool.enhancer.marec.xslt.PatentXMLProcessor;
-import eu.fusepool.enhancer.marec.xslt.impl.XSLTProcessor;
+import eu.fusepool.enhancer.marec.xslt.XMLProcessor;
+import eu.fusepool.enhancer.marec.xslt.impl.PatentXSLTProcessor;
 
 
 
 @Component(immediate = true, metatype = true)
 @Service
 @Properties(value={
-		@Property(name=EnhancementEngine.PROPERTY_NAME, value="marecEngine"),
+		@Property(name=EnhancementEngine.PROPERTY_NAME, value=MarecLifterEnhancementEngine.DEFAULT_ENGINE_NAME),
 		@Property(name=Constants.SERVICE_RANKING,intValue=MarecLifterEnhancementEngine.DEFAULT_SERVICE_RANKING),
 		@Property(name="CLEAN_ON_STARTUP", boolValue=MarecLifterEnhancementEngine.DEF_CLEAN)
 })
@@ -49,7 +49,7 @@ public class MarecLifterEnhancementEngine
 extends AbstractEnhancementEngine<IOException,RuntimeException> 
 implements EnhancementEngine, ServiceProperties {
 
-	public static final String DEFAULT_ENGINE_NAME = "marecEngine";
+	public static final String DEFAULT_ENGINE_NAME = "PatentEngine";
 	/**
 	 * Default value for the {@link Constants#SERVICE_RANKING} used by this engine.
 	 * This is a negative value to allow easy replacement by this engine depending
@@ -176,11 +176,10 @@ implements EnhancementEngine, ServiceProperties {
 		// Load rdf graph 
 		MGraph rdfGraph = new IndexedMGraph();
 		
-		
 		try {
 	
 			ci.getLock().writeLock().lock();
-			PatentXMLProcessor processor = new XSLTProcessor() ;
+			XMLProcessor processor = new PatentXSLTProcessor() ;
 			InputStream rdfIs = null ;
 			try {
 				rdfIs = processor.processPatentXML(ci.getStream()) ;

@@ -24,7 +24,7 @@ import org.xml.sax.InputSource;
 
 import eu.fusepool.enhancer.marec.xslt.CatalogBuilder;
 import eu.fusepool.enhancer.marec.xslt.MarecXMLReader;
-import eu.fusepool.enhancer.marec.xslt.PatentXMLProcessor;
+import eu.fusepool.enhancer.marec.xslt.XMLProcessor;
 import eu.fusepool.enhancer.marec.xslt.ResourceURIResolver;
 
 
@@ -32,12 +32,12 @@ import eu.fusepool.enhancer.marec.xslt.ResourceURIResolver;
  * @author giorgio
  * 
  */
-public class XSLTProcessor implements PatentXMLProcessor {
+public class PatentXSLTProcessor implements XMLProcessor {
 	
 	private TransformerFactory tFactory ;
 	
 	
-	public XSLTProcessor() {
+	public PatentXSLTProcessor() {
 		
 		
 		if(tFactory==null) {

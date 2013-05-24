@@ -50,7 +50,12 @@ public class MarecXMLReader extends ResolvingXMLReader {
 	@Override
 	public InputSource resolveEntity(String publicId, String systemId) {
 		try {
-			return resolver.resolveEntity(publicId, systemId);
+			//System.out.println("<public publicId=\""+publicId+"\"" + " uri=\""+systemId+"\" />");
+			InputSource is = resolver.resolveEntity(publicId, systemId);
+			if(is==null) {
+				//System.out.println("############ NOT FOUND #########<public publicId=\""+publicId+"\"" + " uri=\""+systemId+"\" />");
+			}
+			return is ;
 		} catch (SAXException e) {
 			e.printStackTrace();
 			return null ;
