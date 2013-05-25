@@ -162,13 +162,13 @@ public class MarecLifterEnhancementEngineTest {
 						NonLiteral subject = ci.getMetadata().filter(null, RDF.type, FOAF.Person).next().getSubject();
 						Iterator<Triple> ireference = ci.getMetadata().filter(subject, Properties.ENHANCER_ENTITY_REFERENCE, null);
 						
-						while(ireference.hasNext()) {
-							Triple reference = ireference.next();
-							String subRef = reference.getSubject().toString();
-							String predRef = reference.getPredicate().toString();
-							String objRef = reference.getObject().toString();
-							System.out.println(subRef + " " + predRef + " " + objRef);
-						}
+//						while(ireference.hasNext()) {
+//							Triple reference = ireference.next();
+//							String subRef = reference.getSubject().toString();
+//							String predRef = reference.getPredicate().toString();
+//							String objRef = reference.getObject().toString();
+//							System.out.println(subRef + " " + predRef + " " + objRef);
+//						}
 					}
 				}
 				else {
