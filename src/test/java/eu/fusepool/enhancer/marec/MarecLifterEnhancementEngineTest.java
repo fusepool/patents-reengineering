@@ -78,7 +78,7 @@ public class MarecLifterEnhancementEngineTest {
 			test_data_folder.delete() ;
 	}
 	
-	/*
+	
 	@Test
 	public void testCanEnhance() {
 		ContentItem ci = null ;
@@ -97,7 +97,7 @@ public class MarecLifterEnhancementEngineTest {
 		}	
 				
 	}
-	*/
+	
 	
 	/*
 	 * Test if subjects of type person are found after the transformation

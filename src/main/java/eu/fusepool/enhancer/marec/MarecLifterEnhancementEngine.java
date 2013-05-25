@@ -193,6 +193,7 @@ implements EnhancementEngine, ServiceProperties {
 		UriRef contentItemId = ci.getUri();
 		logService.log(LogService.LOG_INFO, "UriRef: "+contentItemId.getUnicodeString()) ;		
 		
+		// change log 
 		try {
 	
 			ci.getLock().writeLock().lock();
