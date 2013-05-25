@@ -17,6 +17,7 @@ import java.util.Iterator;
 import java.util.Set;
 
 import org.apache.clerezza.rdf.core.MGraph;
+import org.apache.clerezza.rdf.core.NonLiteral;
 import org.apache.clerezza.rdf.core.Triple;
 import org.apache.clerezza.rdf.core.UriRef;
 import org.apache.clerezza.rdf.core.serializedform.Parser;
@@ -29,6 +30,8 @@ import org.apache.stanbol.enhancer.servicesapi.EnhancementEngine;
 import org.apache.stanbol.enhancer.servicesapi.impl.StringSource;
 import org.apache.stanbol.enhancer.servicesapi.rdf.NamespaceEnum;
 import org.apache.stanbol.enhancer.servicesapi.rdf.Properties;
+import org.apache.clerezza.rdf.ontologies.RDF;
+import org.apache.clerezza.rdf.ontologies.FOAF;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -47,9 +50,6 @@ public class MarecLifterEnhancementEngineTest {
 	static MockComponentContext ctx ;
 	
 	private static final ContentItemFactory ciFactory = InMemoryContentItemFactory.getInstance();
-	
-    public static final UriRef FOAF_PERSON = new UriRef(NamespaceEnum.foaf
-            + "person");
 
 	
 	/**
@@ -77,12 +77,38 @@ public class MarecLifterEnhancementEngineTest {
 		if(test_data_folder.exists() && test_data_folder.isDirectory())
 			test_data_folder.delete() ;
 	}
-
 	
+	/*
+	@Test
+	public void testCanEnhance() {
+		ContentItem ci = null ;
+		try {
+			
+			ci = createContentItemFromFile("EP-1000000-A1.xml");
+			
+			engine.canEnhance(ci);
+		} 
+		catch (IOException e) {
+			fail("No data. Exception  thrown: "+e.getMessage());
+		}
+		catch (EngineException e) {
+			
+			fail("Engine should not throw exception: "+e.getMessage());
+		}	
+				
+	}
+	*/
+	
+	/*
+	 * Test if subjects of type person are found after the transformation
+	 */
 	
 	@Test
-	public void testEntitties() {
+	public void testEntities() {
+		
 		ContentItem ci01 = null ;
+		int personsNumber = 0;
+		
 		try {
 			ci01 = createContentItemFromFile("EP-1000000-A1.xml");
 		} catch (IOException e) {
@@ -93,15 +119,79 @@ public class MarecLifterEnhancementEngineTest {
 		} catch (EngineException e) {
 			
 			fail("Engine should not throw exception: "+e.getMessage());
-		}	
-//		MGraph rdfGraph = ci01.getMetadata() ;
-//		
-//		Iterator<Triple> entities = rdfGraph.filter(null, Properties.RDF_TYPE, FOAF_PERSON) ;
-//		for (Triple triple : rdfGraph) {
-//			System.out.println(triple.toString());
-//		}
+		}
+		
+		MGraph rdfGraph = ci01.getMetadata() ;
+		
+		if (! rdfGraph.isEmpty()) {
+			System.out.println("Enhancement graph has data !");
+			
+			Iterator<Triple> ipersons = rdfGraph.filter(null, RDF.type, FOAF.Person) ;
+			
+			while (ipersons.hasNext()){
+				Triple triple = ipersons.next();
+				String subjectUri = triple.getSubject().toString();
+				System.out.println("Filtered subject of type foaf:Person = " + subjectUri);
+				personsNumber += 1;
+			}
+		}
+		else {
+			System.out.println("Enhancement graph empty !");
+		}
+		
+		assertTrue("Three subjects of type foaf:Person found in the document.", personsNumber == 3);
+		
 	}
 	
+	
+	/*
+	 * Test if annotations have been created for each entity.
+	 */
+	@Test
+	public void testEntityAnnotations() {
+		
+		try {
+			ContentItem ci = createContentItemFromFile("EP-1000000-A1.xml");
+			
+			engine.computeEnhancements(ci);
+			
+			if( ! ci.getMetadata().isEmpty()) {
+				Iterator<Triple> ipersons = ci.getMetadata().filter(null, RDF.type, FOAF.Person);
+				if(ipersons != null) {
+					while(ipersons.hasNext()) {
+						NonLiteral subject = ci.getMetadata().filter(null, RDF.type, FOAF.Person).next().getSubject();
+						Iterator<Triple> ireference = ci.getMetadata().filter(subject, Properties.ENHANCER_ENTITY_REFERENCE, null);
+						
+						while(ireference.hasNext()) {
+							Triple reference = ireference.next();
+							String subRef = reference.getSubject().toString();
+							String predRef = reference.getPredicate().toString();
+							String objRef = reference.getObject().toString();
+							System.out.println(subRef + " " + predRef + " " + objRef);
+						}
+					}
+				}
+				else {
+					System.out.println("No entities found!");
+				}
+			}
+			else {
+				System.out.println("No metadata !");
+			}
+			
+			
+		} 
+		catch (IOException e) {
+			fail("No data. Exception  thrown: " + e.getMessage());
+		}
+		catch (EngineException e) {
+			fail("Engine should not throw exception: " + e.getMessage());
+		}
+		
+		//assertTrue("All entities have been annotated", allEntitiesEnhanced);
+	}
+	
+	/*
 	@Test
 	public void testFile01() {
 		ContentItem ci01 = null ;
@@ -121,8 +211,9 @@ public class MarecLifterEnhancementEngineTest {
 		//fail("Facciamo una prova...") ;
 	
 	}
+	*/
 
-	
+	/*
 	@Test
 	public void testFile02() {
 		ContentItem ci02 = null ;
@@ -141,8 +232,9 @@ public class MarecLifterEnhancementEngineTest {
 		assertFalse("Metadata should not be empty ",ci02.getMetadata().isEmpty()) ;
 	
 	}
+	*/
 	
-	
+	/*
 	@Test
 	public void testFile03() {
 		ContentItem ci02 = null ;
@@ -161,7 +253,7 @@ public class MarecLifterEnhancementEngineTest {
 		//assertTrue(true) ;
 	
 	}
-	
+	*/
 	
 	private ContentItem createContentItemFromFile(String fileName) throws IOException {
 		InputStream in = this.getClass().getResourceAsStream("/test/data/"+fileName) ;
