@@ -1,29 +1,42 @@
 package eu.fusepool.enhancer.marec;
 
 
+import static org.apache.stanbol.enhancer.servicesapi.helper.EnhancementEngineHelper.randomUUID;
+
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.OutputStream;
 import java.util.Collections;
 import java.util.Dictionary;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
 
+import org.apache.clerezza.rdf.core.LiteralFactory;
 import org.apache.clerezza.rdf.core.MGraph;
+import org.apache.clerezza.rdf.core.Triple;
 import org.apache.clerezza.rdf.core.UriRef;
+import org.apache.clerezza.rdf.core.impl.TripleImpl;
 import org.apache.clerezza.rdf.core.serializedform.Parser;
 import org.apache.clerezza.rdf.core.serializedform.SupportedFormat;
+import org.apache.commons.io.IOUtils;
 import org.apache.felix.scr.annotations.Component;
 import org.apache.felix.scr.annotations.Properties;
 import org.apache.felix.scr.annotations.Property;
 import org.apache.felix.scr.annotations.Reference;
 import org.apache.felix.scr.annotations.Service;
 import org.apache.stanbol.commons.indexedgraph.IndexedMGraph;
+import org.apache.stanbol.enhancer.contentitem.inmemory.InMemoryContentItemFactory;
 import org.apache.stanbol.enhancer.servicesapi.ContentItem;
+import org.apache.stanbol.enhancer.servicesapi.ContentItemFactory;
+import org.apache.stanbol.enhancer.servicesapi.ContentSink;
 import org.apache.stanbol.enhancer.servicesapi.EngineException;
 import org.apache.stanbol.enhancer.servicesapi.EnhancementEngine;
 import org.apache.stanbol.enhancer.servicesapi.ServiceProperties;
+import org.apache.stanbol.enhancer.servicesapi.helper.EnhancementEngineHelper;
 import org.apache.stanbol.enhancer.servicesapi.impl.AbstractEnhancementEngine;
+import org.apache.stanbol.enhancer.servicesapi.rdf.NamespaceEnum;
 import org.apache.stanbol.entityhub.servicesapi.Entityhub;
 import org.osgi.framework.Constants;
 import org.osgi.framework.InvalidSyntaxException;
@@ -62,9 +75,16 @@ implements EnhancementEngine, ServiceProperties {
 	 */
 	public static final Integer defaultOrder = ORDERING_EXTRACTION_ENHANCEMENT;
 
+	
+	private static final ContentItemFactory ciFactory = InMemoryContentItemFactory.getInstance();
+	
 
 	//private static final Logger log = LoggerFactory.getLogger(MarecLifterEnhancementEngine.class);
 	private TCServiceLocator serviceLocator ;
+	
+	
+	
+	
 	
 	/*****
 	 * graph uri for the triplestore
@@ -94,6 +114,11 @@ implements EnhancementEngine, ServiceProperties {
 		supportedMediaTypes = Collections.unmodifiableSet(types);
 	}
 
+	
+	
+    public static final UriRef FOAF_PERSON = new UriRef(NamespaceEnum.foaf
+            + "person");
+	
 	protected ComponentContext componentContext ;
 
 	protected CatalogBuilder catalogBuilder ;
@@ -182,15 +207,53 @@ implements EnhancementEngine, ServiceProperties {
 			XMLProcessor processor = new PatentXSLTProcessor() ;
 			InputStream rdfIs = null ;
 			try {
+			
 				rdfIs = processor.processPatentXML(ci.getStream()) ;
 				parser.parse(rdfGraph, rdfIs, SupportedFormat.RDF_XML) ;
 				rdfIs.close() ;
+				
 			} catch (Exception e) {
 				logService.log(LogService.LOG_ERROR, "Wrong data format for the "+this.getName()+" enhancer", e) ;
 				return ;
 			}
 		
-		  
+			ci.getMetadata().addAll(rdfGraph) ;
+			
+			/// 
+			InputStream toCopy = ci.getStream() ;
+			UriRef blobUri = new UriRef("urn:PatentEngine:plain-text:"+randomUUID());
+			ContentSink plainTextSink = ciFactory.createContentSink("text/plain");
+			OutputStream os = plainTextSink.getOutputStream() ;
+			IOUtils.copy(toCopy, os) ;
+			IOUtils.closeQuietly(toCopy) ;
+			IOUtils.closeQuietly(os) ;
+			ci.addPart(blobUri, plainTextSink.getBlob());
+			
+			
+			UriRef enhancementUri = EnhancementEngineHelper.createEntityEnhancement(ci, this) ;
+			MGraph metadata = ci.getMetadata() ;
+			LiteralFactory lf = LiteralFactory.getInstance();
+            // add confidence information
+            metadata.add(new TripleImpl(enhancementUri,
+                    org.apache.stanbol.enhancer.servicesapi.rdf.Properties.ENHANCER_CONFIDENCE, lf
+                            .createTypedLiteral(Double.valueOf(1.0))));
+			
+//            rdfGraph.filter(null, predicate, object) ;
+            
+            
+            
+            
+            /*
+             * first attempt to filter the extracted Triple collection.....
+             */
+            int i = 0 ;
+            Iterator<Triple> entities = rdfGraph.filter(null, org.apache.stanbol.enhancer.servicesapi.rdf.Properties.RDF_TYPE, FOAF_PERSON) ;
+    		for (Triple triple : rdfGraph) {
+    			i++ ;
+    			System.out.println(triple.toString());
+    		}
+            System.out.println(i+ "triples out of "+rdfGraph.size());
+            
 		/*	
 		RdfValueFactory valueFactory = RdfValueFactory.getInstance();
 		Map<String,Representation> representations = new HashMap<String,Representation>();
@@ -221,7 +284,7 @@ implements EnhancementEngine, ServiceProperties {
 		*/
 
 		
-		ci.getMetadata().addAll(rdfGraph) ;
+		
 		
 			
 		} catch (Exception e) {
