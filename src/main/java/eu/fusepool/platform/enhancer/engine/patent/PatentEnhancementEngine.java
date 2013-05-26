@@ -162,7 +162,7 @@ implements EnhancementEngine, ServiceProperties {
 	}
 
 	/*
-	 * Check if content is present and mime type is correct.
+	 * Check if content is present and mime type is correct (application/xml).
 	 * 
 	 */
 	public int canEnhance(ContentItem ci) throws EngineException {
@@ -228,7 +228,7 @@ implements EnhancementEngine, ServiceProperties {
 	
 		
 		try {
-			ci.getLock().writeLock().lock();
+			
 			MGraph metadata = new IndexedMGraph();
 			rdfIs = processor.processPatentXML(ci.getStream()) ;
 			parser.parse(metadata, rdfIs, SupportedFormat.RDF_XML) ;
@@ -239,9 +239,7 @@ implements EnhancementEngine, ServiceProperties {
 			logService.log(LogService.LOG_ERROR, "Wrong data format for the " + this.getName() + " enhancer.", e) ;
 			return ;
 		}
-		finally {
-			ci.getLock().writeLock().unlock();
-		}
+		
 		
 	}
 	
@@ -249,7 +247,7 @@ implements EnhancementEngine, ServiceProperties {
 	 *  Add a part to the content item as a text/plain representation of the XML document
 	 */
 	private void addPartToContentItem(ContentItem ci) throws EngineException, IOException {
-		ci.getLock().writeLock().lock();
+		
 		InputStream toCopy = ci.getStream() ;
 		UriRef blobUri = new UriRef("urn:patent-engine:plain-text:" + randomUUID());
 		ContentSink plainTextSink = ciFactory.createContentSink("text/plain");
@@ -259,7 +257,6 @@ implements EnhancementEngine, ServiceProperties {
 		IOUtils.closeQuietly(os) ;
 		ci.addPart(blobUri, plainTextSink.getBlob());
 		
-		ci.getLock().writeLock().unlock();
 		
 	}
 	
@@ -268,7 +265,7 @@ implements EnhancementEngine, ServiceProperties {
 	 * to the content item metadata with properties to refer it to the entity and some more
 	 */
 	private void addEnhancements(ContentItem ci) {
-		ci.getLock().writeLock().lock();
+		
 		if (! ci.getMetadata().isEmpty()) {
 			
 			Iterator<Triple> ipersons = ci.getMetadata().filter(null, RDF.type, FOAF.Person) ;
@@ -285,7 +282,6 @@ implements EnhancementEngine, ServiceProperties {
 	        
 		}
 		
-		ci.getLock().writeLock().unlock();
 		
 	}
 	
