@@ -21,15 +21,11 @@
 		<relativePath>../stanbol/parent</relativePath>
 	</parent>
 
-	<groupId>eu.fusepool</groupId>
-	<artifactId>patent_semlift</artifactId>
+	<groupId>eu.fusepool.platform</groupId>
 	<version>0.1.0</version>
 	<packaging>bundle</packaging>
 
-	<name>Fusepool: Patent semantic lifter</name>
-	<description>
-    Fusepool: Patent semantic lifter
-  </description>
+	<name>Patent2RDF </name>
 
 	<developers>
 		<developer>
@@ -242,4 +238,6 @@
 			<url>https://repository.jboss.org/nexus/content/repositories/deprecated</url>
 		</repository>
 	</repositories>
+	<artifactId>eu.fusepool.platform.enhancement.engines.patent</artifactId>
+	<description>Transform XML patent document into RDF. The transformation is based on XSLT. The XML elements and attributes are mapped to terms from different ontologies.</description>
 </project>
