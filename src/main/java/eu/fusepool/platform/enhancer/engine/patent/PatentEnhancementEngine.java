@@ -25,6 +25,7 @@ import org.apache.clerezza.rdf.core.serializedform.Parser;
 import org.apache.clerezza.rdf.core.serializedform.SupportedFormat;
 import org.apache.clerezza.rdf.ontologies.RDF;
 import org.apache.clerezza.rdf.ontologies.FOAF;
+import org.apache.clerezza.rdf.ontologies.*;
 import org.apache.clerezza.rdf.utils.GraphNode;
 import org.apache.commons.io.IOUtils;
 import org.apache.felix.scr.annotations.Component;
@@ -195,51 +196,64 @@ implements EnhancementEngine, ServiceProperties {
 		
 		 
 		try {
-	
-			ci.getLock().writeLock().lock();
 			
-			// Transform the patent XML file into RDF
-			transformXML(ci);
+	
+			//ci.getLock().writeLock().lock();
 			
 			// Add a part to the content item as a text/plain representation of the XML document 
 			addPartToContentItem(ci);
+						
+			// Transform the patent XML file into RDF
+			MGraph mapping = transformXML(ci);
 			
-			// Add enhancements to the metadata
-			addEnhancements(ci);
+			// Create annotations to each entity extracted from the XML
+			MGraph annotations = addEnhancements(ci, mapping);
+			
+			// Add all the RDF triples to the content item metadata
+			ci.getMetadata().addAll(annotations);
+			ci.getMetadata().addAll(mapping);
 			
 			
 		} catch (Exception e) {
 			logService.log(LogService.LOG_ERROR, "", e) ;
 			
 		} 
+		/*
 		finally {
 			ci.getLock().writeLock().unlock();
 		}
+		*/
 		
 	}
 	
 	/*
 	 * Transform patent XML documents into RDF using an XSLT transformation and add the graph to the content item metadata.
 	 */
-	private void transformXML(ContentItem ci) throws EngineException {
+	private MGraph transformXML(ContentItem ci) throws EngineException {
+		
+		MGraph mapping = null;
 		
 		XMLProcessor processor = new PatentXSLTProcessor() ;
 		InputStream rdfIs = null ; 
 	
+		//System.out.println("Starting transformation from XML to RDF");
 		
 		try {
 			
-			MGraph metadata = new IndexedMGraph();
+			mapping = new IndexedMGraph();
 			rdfIs = processor.processPatentXML(ci.getStream()) ;
-			parser.parse(metadata, rdfIs, SupportedFormat.RDF_XML) ;
+			parser.parse(mapping, rdfIs, SupportedFormat.RDF_XML) ;
 			rdfIs.close() ;
-			ci.getMetadata().addAll(metadata) ;
+			//ci.getMetadata().addAll(metadata) ;
 			
 		} catch (Exception e) {
 			logService.log(LogService.LOG_ERROR, "Wrong data format for the " + this.getName() + " enhancer.", e) ;
-			return ;
+			
 		}
 		
+		//System.out.println("Finished transformation from XML to RDF");
+		
+		return mapping;
 		
 	}
 	
@@ -247,6 +261,8 @@ implements EnhancementEngine, ServiceProperties {
 	 *  Add a part to the content item as a text/plain representation of the XML document
 	 */
 	private void addPartToContentItem(ContentItem ci) throws EngineException, IOException {
+		
+		//System.out.println("Start adding plain text representation");
 		
 		InputStream toCopy = ci.getStream() ;
 		UriRef blobUri = new UriRef("urn:patent-engine:plain-text:" + randomUUID());
@@ -257,31 +273,48 @@ implements EnhancementEngine, ServiceProperties {
 		IOUtils.closeQuietly(os) ;
 		ci.addPart(blobUri, plainTextSink.getBlob());
 		
-		
+		//System.out.println("Finished adding plain text representation");
 	}
 	
 	/*
-	 * Create an enhancement for each entity found by the transformation of the XML document and add them 
-	 * to the content item metadata with properties to refer it to the entity and some more
+	 * Create an entity annotation for each entity found by the transformation of the XML document. 
+	 * Each annotation is referred to its entity.
 	 */
-	private void addEnhancements(ContentItem ci) {
+	private MGraph addEnhancements(ContentItem ci, MGraph mapping) {
 		
-		if (! ci.getMetadata().isEmpty()) {
+		MGraph annotations = new IndexedMGraph();
+		
+		//System.out.println("Start adding annotation");
+		
+		if (! mapping.isEmpty()) {
 			
-			Iterator<Triple> ipersons = ci.getMetadata().filter(null, RDF.type, FOAF.Person) ;
+			Iterator<Triple> ipersons = mapping.filter(null, RDF.type, FOAF.Person) ;
 			
 			while (ipersons.hasNext()) {
 				// create an entity annotation
 				UriRef entityAnnotation = EnhancementEngineHelper.createEntityEnhancement(ci, this) ;
+				
+				Triple person = ipersons.next();
+				NonLiteral subPerson = person.getSubject(); 
+				
 				// add a triple to link the enhancement to the entity
-				ci.getMetadata().add( new TripleImpl(entityAnnotation, org.apache.stanbol.enhancer.servicesapi.rdf.Properties.ENHANCER_ENTITY_REFERENCE, ipersons.next().getSubject() ));
+				Triple entityReference = new TripleImpl(entityAnnotation, OntologiesTerms.fiseEntityReference, subPerson);
+				annotations.add( entityReference);
+				//System.out.println("entity reference: " + entityReference.toString());
+				
 				// add a confidence value
-				ci.getMetadata().add( new TripleImpl(entityAnnotation, org.apache.stanbol.enhancer.servicesapi.rdf.Properties.ENHANCER_CONFIDENCE, new PlainLiteralImpl("1.0") ));
-			 
+				Triple confidence = new TripleImpl(entityAnnotation, OntologiesTerms.fiseConfidence, new PlainLiteralImpl("1.0"));
+				annotations.add(confidence);
+				//System.out.println("confidence: " + confidence.toString());
+				
 			}
 	        
+			
 		}
 		
+		//System.out.println("Finished adding annotation");
+		
+		return annotations;
 		
 	}
 	

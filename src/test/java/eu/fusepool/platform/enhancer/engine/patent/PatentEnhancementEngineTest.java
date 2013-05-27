@@ -28,13 +28,12 @@ import org.apache.stanbol.enhancer.servicesapi.ContentItemFactory;
 import org.apache.stanbol.enhancer.servicesapi.EngineException;
 import org.apache.stanbol.enhancer.servicesapi.EnhancementEngine;
 import org.apache.stanbol.enhancer.servicesapi.impl.StringSource;
-import org.apache.stanbol.enhancer.servicesapi.rdf.NamespaceEnum;
-import org.apache.stanbol.enhancer.servicesapi.rdf.Properties;
 import org.apache.clerezza.rdf.ontologies.RDF;
 import org.apache.clerezza.rdf.ontologies.FOAF;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
+import org.openjena.atlas.logging.Log;
 
 import eu.fusepool.platform.enhancer.engine.patent.PatentEnhancementEngine;
 import eu.fusepool.platform.enhancer.engine.patent.testutil.MockComponentContext;
@@ -50,8 +49,15 @@ public class PatentEnhancementEngineTest {
 	static PatentEnhancementEngine engine ;
 	static MockComponentContext ctx ;
 	
-	private static final ContentItemFactory ciFactory = InMemoryContentItemFactory.getInstance();
+	private static ContentItemFactory ciFactory = InMemoryContentItemFactory.getInstance();
 
+	private static ContentItem ci = null ;
+	
+	// The file used for these tests must not be changed. Results, such as number of entities and enhancements, depend on this file.
+	// If another file is used the following values must be updated accordingly
+	private static final String TEST_FILE = "EP-1000000-A1.xml";
+	private static final int PERSONS_NUMBER = 3; // number of entities of type foaf:Person extracted from the test file.
+	private static final int PERSONS_ENTITIES_REFERENCES = 3; // number of entity references (fise:entity-reference) created, must be equal to the number of person.
 	
 	/**
 	 * @throws java.lang.Exception
@@ -68,6 +74,10 @@ public class PatentEnhancementEngineTest {
 		engine.parser = Parser.getInstance() ;
 		Set<String> supportedFormats = engine.parser.getSupportedFormats() ;
 		engine.activate(ctx) ;
+		
+		// creates a content item from the document and compute the enhancements
+		createContentItemFromFile(TEST_FILE);
+		
 	}
 
 	
@@ -80,26 +90,6 @@ public class PatentEnhancementEngineTest {
 	}
 	
 	
-	@Test
-	public void testCanEnhance() {
-		ContentItem ci = null ;
-		try {
-			
-			ci = createContentItemFromFile("EP-1000000-A1.xml");
-			
-			engine.canEnhance(ci);
-		} 
-		catch (IOException e) {
-			fail("No data. Exception  thrown: "+e.getMessage());
-		}
-		catch (EngineException e) {
-			
-			fail("Engine should not throw exception: "+e.getMessage());
-		}	
-				
-	}
-	
-	
 	/*
 	 * Test if subjects of type person are found after the transformation and prints them
 	 */
@@ -107,163 +97,81 @@ public class PatentEnhancementEngineTest {
 	@Test
 	public void testEntities() {
 		
-		ContentItem ci01 = null ;
 		int personsNumber = 0;
 		
-		try {
-			ci01 = createContentItemFromFile("EP-1000000-A1.xml");
-		} catch (IOException e) {
-			fail("No data. Exception  thrown: "+e.getMessage());
-		}
-		try {
-			engine.computeEnhancements(ci01) ;
-		} catch (EngineException e) {
+		if (! ci.getMetadata().isEmpty()) {
 			
-			fail("Engine should not throw exception: "+e.getMessage());
-		}
-		
-		MGraph rdfGraph = ci01.getMetadata() ;
-		
-		if (! rdfGraph.isEmpty()) {
-			System.out.println("Enhancement graph has data !");
-			
-			Iterator<Triple> ipersons = rdfGraph.filter(null, RDF.type, FOAF.Person) ;
+			// Filter triples for persons
+			Iterator<Triple> ipersons = ci.getMetadata().filter(null, RDF.type, FOAF.Person) ;
 			
 			while (ipersons.hasNext()){
+				personsNumber += 1;
 				Triple triple = ipersons.next();
 				String subjectUri = triple.getSubject().toString();
 				System.out.println("Filtered subject of type foaf:Person = " + subjectUri);
-				personsNumber += 1;
+				
 			}
+			
+			
 		}
 		else {
 			System.out.println("Enhancement graph empty !");
 		}
 		
-		assertTrue("Three subjects of type foaf:Person found in the document.", personsNumber == 3);
+		assertTrue("Subjects of type foaf:Person found in the document " + personsNumber, personsNumber == PERSONS_NUMBER);
 		
 	}
 	
-	
 	/*
-	 * Test if annotations have been created for each entity.
+	 * Test if entity-reference annotations have been added for each entity of type person.
 	 */
+	
 	@Test
-	public void testEntityAnnotations() {
+	public void testAnnotations() {
 		
+		int personEntityReferences = 0;
+		
+		if (! ci.getMetadata().isEmpty()) {
+			
+			// Filter triples for entities annotations
+			Iterator<Triple> ireferences = ci.getMetadata().filter(null, OntologiesTerms.fiseEntityReference, null);
+			while (ireferences.hasNext()) {
+				personEntityReferences += 1;
+				Triple triple = ireferences.next();
+				String enhancement = triple.getSubject().toString();
+				String entity = triple.getObject().toString();
+				System.out.println("Filtered entity references: " + enhancement + " entity reference: " + entity);
+			}
+			
+		}
+		else {
+			System.out.println("Enhancement graph empty !");
+		}
+		
+		assertTrue("Subjects of type foaf:Person found in the document " + personEntityReferences, personEntityReferences == PERSONS_ENTITIES_REFERENCES);
+	
+	
+	}
+	
+		
+	private static void createContentItemFromFile(String fileName) {
+		
+		String filePath = "/test/data/" + fileName;
 		try {
-			ContentItem ci = createContentItemFromFile("EP-1000000-A1.xml");
-			
-			engine.computeEnhancements(ci);
-			
-			if( ! ci.getMetadata().isEmpty()) {
-				Iterator<Triple> ipersons = ci.getMetadata().filter(null, RDF.type, FOAF.Person);
-				if(ipersons != null) {
-					while(ipersons.hasNext()) {
-						NonLiteral subject = ci.getMetadata().filter(null, RDF.type, FOAF.Person).next().getSubject();
-						Iterator<Triple> ireference = ci.getMetadata().filter(subject, Properties.ENHANCER_ENTITY_REFERENCE, null);
-						
-//						while(ireference.hasNext()) {
-//							Triple reference = ireference.next();
-//							String subRef = reference.getSubject().toString();
-//							String predRef = reference.getPredicate().toString();
-//							String objRef = reference.getObject().toString();
-//							System.out.println(subRef + " " + predRef + " " + objRef);
-//						}
-					}
-				}
-				else {
-					System.out.println("No entities found!");
-				}
-			}
-			else {
-				System.out.println("No metadata !");
-			}
-			
-			
-		} 
+			InputStream in = PatentEnhancementEngineTest.class.getResourceAsStream(filePath) ;
+			StringWriter writer = new StringWriter();
+			IOUtils.copy(in, writer);
+			String theString = writer.toString();
+			//System.out.println(theString);
+			ci = ciFactory.createContentItem(new UriRef("urn:test:content-item:") + fileName, new StringSource(theString)) ;
+			engine.computeEnhancements(ci) ;
+		}
 		catch (IOException e) {
-			fail("No data. Exception  thrown: " + e.getMessage());
-		}
-		catch (EngineException e) {
-			fail("Engine should not throw exception: " + e.getMessage());
+			System.out.println("Error while creating content item from file " + filePath);
+		} catch (EngineException e) {
+			fail("Engine should not throw exception: "+e.getMessage());
 		}
 		
-		//assertTrue("All entities have been annotated", allEntitiesEnhanced);
-	}
-	
-	/*
-	@Test
-	public void testFile01() {
-		ContentItem ci01 = null ;
-		try {
-			ci01 = createContentItemFromFile("EP-1000000-A1.xml");
-		} catch (IOException e) {
-			fail("No data. Exception  thrown: "+e.getMessage());
-		}
-		try {
-			engine.computeEnhancements(ci01) ;
-		} catch (EngineException e) {
-			
-			fail("Engine should not throw exception: "+e.getMessage());
-		}	
-		
-		assertFalse("Metadata should not be empty ",ci01.getMetadata().isEmpty()) ;
-		//fail("Facciamo una prova...") ;
-	
-	}
-	*/
-
-	/*
-	@Test
-	public void testFile02() {
-		ContentItem ci02 = null ;
-		try {
-			ci02 = createContentItemFromFile("EP-1000000-B1.xml");
-		} catch (IOException e) {
-			fail("No data. Exception  thrown: "+e.getMessage());
-		}
-		try {
-			engine.computeEnhancements(ci02) ;
-		} catch (EngineException e) {
-			
-			fail("Engine should not throw exception: "+e.getMessage());
-		}	
-		
-		assertFalse("Metadata should not be empty ",ci02.getMetadata().isEmpty()) ;
-	
-	}
-	*/
-	
-	/*
-	@Test
-	public void testFile03() {
-		ContentItem ci02 = null ;
-		try {
-			ci02 = createContentItemFromFile("wrong-data.rdf");
-		} catch (IOException e) {
-			fail("No data. Exception  thrown: "+e.getMessage());
-		}
-		try {
-			engine.computeEnhancements(ci02) ;
-		} catch (EngineException e) {
-			
-			fail("Engine should not throw exception: "+e.getMessage());
-		}	
-		assertTrue("Metadata should be empty ",ci02.getMetadata().isEmpty()) ;
-		//assertTrue(true) ;
-	
-	}
-	*/
-	
-	private ContentItem createContentItemFromFile(String fileName) throws IOException {
-		InputStream in = this.getClass().getResourceAsStream("/test/data/"+fileName) ;
-		StringWriter writer = new StringWriter();
-		IOUtils.copy(in, writer);
-		String theString = writer.toString();
-		//System.out.println(theString);
-		ContentItem ci = ciFactory.createContentItem(new UriRef("urn:test:content-item:")+fileName, new StringSource(theString)) ;
-		return ci ;
 	}
 	
 }
