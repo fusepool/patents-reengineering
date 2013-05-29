@@ -706,7 +706,7 @@ Add members
 
         <xsl:for-each select="abstract">
             <rdf:Description rdf:about="{$patent}{$ucid}">
-                <dcterms:abstract rdf:parseType="Literal" xml:lang="{lower-case(@lang)}"><xsl:apply-templates select="*"/></dcterms:abstract>
+                <dcterms:abstract xml:lang="{lower-case(@lang)}"><xsl:apply-templates select="*"/></dcterms:abstract>
             </rdf:Description>
         </xsl:for-each>
     </xsl:template>
