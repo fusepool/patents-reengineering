@@ -21,15 +21,11 @@
 		<relativePath>../stanbol/parent</relativePath>
 	</parent>
 
-	<groupId>eu.fusepool</groupId>
-	<artifactId>marec_semlift</artifactId>
+	<groupId>eu.fusepool.platform</groupId>
 	<version>0.1.0</version>
 	<packaging>bundle</packaging>
 
-	<name>Fusepool: marec semantic lifter</name>
-	<description>
-    Fusepool: marec semantic lifter
-  </description>
+	<name>Fusepool Enhancement Engine Patents to RDF</name>
 
 	<developers>
 		<developer>
@@ -155,22 +151,6 @@
 			<artifactId>commons-lang3</artifactId>
 			<version>3.1</version>
 		</dependency>
-
-
-
-		<!-- Dependencies for testing -->
-		<dependency>
-			<groupId>org.apache.stanbol</groupId>
-			<artifactId>org.apache.stanbol.enhancer.core</artifactId>
-			<version>0.10.0-SNAPSHOT</version>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.stanbol</groupId>
-			<artifactId>org.apache.stanbol.enhancer.test</artifactId>
-			<version>0.10.0-SNAPSHOT</version>
-			<scope>test</scope>
-		</dependency>
 		<dependency>
 			<groupId>org.apache.stanbol</groupId>
 			<artifactId>org.apache.stanbol.enhancer.rdfentities</artifactId>
@@ -205,6 +185,21 @@
 			<artifactId>org.apache.stanbol.entityhub.model.clerezza</artifactId>
 			<version>0.11.0-SNAPSHOT</version>
 			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.stanbol</groupId>
+			<artifactId>org.apache.stanbol.enhancer.core</artifactId>
+			<version>0.10.0-SNAPSHOT</version>
+			<!-- <scope>test</scope> -->
+		</dependency>
+
+		<!-- Dependencies for testing -->
+
+		<dependency>
+			<groupId>org.apache.stanbol</groupId>
+			<artifactId>org.apache.stanbol.enhancer.test</artifactId>
+			<version>0.10.0-SNAPSHOT</version>
+			<scope>test</scope>
 		</dependency>
 		<dependency>
 			<groupId>junit</groupId>
@@ -243,4 +238,6 @@
 			<url>https://repository.jboss.org/nexus/content/repositories/deprecated</url>
 		</repository>
 	</repositories>
+	<artifactId>eu.fusepool.platform.enhancement.engines.patent</artifactId>
+	<description>Transform XML patent document into RDF. The transformation is based on XSLT. The XML elements and attributes are mapped to terms from different ontologies.</description>
 </project>
