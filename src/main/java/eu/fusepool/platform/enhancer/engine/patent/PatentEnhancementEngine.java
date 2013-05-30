@@ -234,17 +234,17 @@ implements EnhancementEngine, ServiceProperties {
 			//ci.getLock().writeLock().lock();
 			
 			// Transform the patent XML file into RDF
-			MGraph mapping = transformXML(ci);
+			MGraph xml2rdf = transformXML(ci);
 						
 			// Add a part to the content item as a text/plain representation of the XML document 
-			addPartToContentItem(ci, mapping);
+			addPartToContentItem(ci);
 			
-			// Create annotations to each entity extracted from the XML
-			MGraph annotations = addEnhancements(ci, mapping);
+			// Create enhancements to each entity extracted from the XML
+			MGraph enhancements = addEnhancements(ci, xml2rdf);
 			
 			// Add all the RDF triples to the content item metadata
-			ci.getMetadata().addAll(annotations);
-			ci.getMetadata().addAll(mapping);
+			ci.getMetadata().addAll(xml2rdf);
+			ci.getMetadata().addAll(enhancements);
 			
 			
 		} catch (Exception e) {
@@ -294,7 +294,7 @@ implements EnhancementEngine, ServiceProperties {
 	 *  Add a part to the content item as a text/plain representation of the XML document. This is the part of the content that will be indexed
 	 *  by the Enhanced Content Store (ECS). The part can contain the full document or just some relevant elements such as title and abstract.
 	 */
-	public void addPartToContentItem(ContentItem ci, MGraph mapping)  {
+	public void addPartToContentItem(ContentItem ci)  {
 		
 		//System.out.println("Start adding plain text representation");
 		
@@ -302,12 +302,9 @@ implements EnhancementEngine, ServiceProperties {
 		
 			InputStream toCopy = ci.getStream() ;
 			
-			UriRef partUri = new UriRef("urn:patent-engine:plain-text:" + randomUUID());
+			UriRef partUri = new UriRef("urn:fusepool-patent-engine:plain-text:" + randomUUID());
 			ContentSink plainTextSink = ciFactory.createContentSink("text/plain");
-			OutputStream os = plainTextSink.getOutputStream() ;
-			//IOUtils.copy(toCopy, os) ;
-			//IOUtils.closeQuietly(toCopy) ;
-			//IOUtils.closeQuietly(os) ;
+			
 			ci.addPart(partUri, plainTextSink.getBlob());
 		
 		}
