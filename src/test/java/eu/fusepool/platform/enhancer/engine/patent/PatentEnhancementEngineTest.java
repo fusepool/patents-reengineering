@@ -3,9 +3,7 @@
  */
 package eu.fusepool.platform.enhancer.engine.patent;
 
-import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
-import static org.junit.Assert.fail;
 
 import java.io.File;
 import java.io.IOException;
@@ -18,10 +16,12 @@ import java.util.Iterator;
 import java.util.Set;
 
 import org.apache.clerezza.rdf.core.MGraph;
-import org.apache.clerezza.rdf.core.NonLiteral;
 import org.apache.clerezza.rdf.core.Triple;
 import org.apache.clerezza.rdf.core.UriRef;
 import org.apache.clerezza.rdf.core.serializedform.Parser;
+import org.apache.clerezza.rdf.ontologies.DCTERMS;
+import org.apache.clerezza.rdf.ontologies.FOAF;
+import org.apache.clerezza.rdf.ontologies.RDF;
 import org.apache.commons.io.IOUtils;
 import org.apache.stanbol.enhancer.contentitem.inmemory.InMemoryContentItemFactory;
 import org.apache.stanbol.enhancer.servicesapi.Blob;
@@ -31,18 +31,14 @@ import org.apache.stanbol.enhancer.servicesapi.EngineException;
 import org.apache.stanbol.enhancer.servicesapi.EnhancementEngine;
 import org.apache.stanbol.enhancer.servicesapi.helper.ContentItemHelper;
 import org.apache.stanbol.enhancer.servicesapi.impl.StringSource;
-import org.apache.clerezza.rdf.ontologies.DCTERMS;
-import org.apache.clerezza.rdf.ontologies.RDF;
-import org.apache.clerezza.rdf.ontologies.FOAF;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import eu.fusepool.platform.enhancer.engine.patent.PatentEnhancementEngine;
 import eu.fusepool.platform.enhancer.engine.patent.testutil.MockComponentContext;
-import eu.fusepool.platform.enhancer.engine.patent.testutil.MockLogService;
+
 
 /**
  * @author giorgio
