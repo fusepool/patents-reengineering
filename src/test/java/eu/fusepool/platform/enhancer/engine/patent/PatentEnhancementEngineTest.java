@@ -11,6 +11,7 @@ import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.StringWriter;
+import java.util.Collections;
 import java.util.Dictionary;
 import java.util.Hashtable;
 import java.util.Iterator;
@@ -23,17 +24,21 @@ import org.apache.clerezza.rdf.core.UriRef;
 import org.apache.clerezza.rdf.core.serializedform.Parser;
 import org.apache.commons.io.IOUtils;
 import org.apache.stanbol.enhancer.contentitem.inmemory.InMemoryContentItemFactory;
+import org.apache.stanbol.enhancer.servicesapi.Blob;
 import org.apache.stanbol.enhancer.servicesapi.ContentItem;
 import org.apache.stanbol.enhancer.servicesapi.ContentItemFactory;
 import org.apache.stanbol.enhancer.servicesapi.EngineException;
 import org.apache.stanbol.enhancer.servicesapi.EnhancementEngine;
+import org.apache.stanbol.enhancer.servicesapi.helper.ContentItemHelper;
 import org.apache.stanbol.enhancer.servicesapi.impl.StringSource;
+import org.apache.clerezza.rdf.ontologies.DCTERMS;
 import org.apache.clerezza.rdf.ontologies.RDF;
 import org.apache.clerezza.rdf.ontologies.FOAF;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
-import org.openjena.atlas.logging.Log;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import eu.fusepool.platform.enhancer.engine.patent.PatentEnhancementEngine;
 import eu.fusepool.platform.enhancer.engine.patent.testutil.MockComponentContext;
@@ -41,6 +46,7 @@ import eu.fusepool.platform.enhancer.engine.patent.testutil.MockLogService;
 
 /**
  * @author giorgio
+ * @author Luigi Selmi
  *
  */
 public class PatentEnhancementEngineTest {
@@ -50,14 +56,18 @@ public class PatentEnhancementEngineTest {
 	static MockComponentContext ctx ;
 	
 	private static ContentItemFactory ciFactory = InMemoryContentItemFactory.getInstance();
+	
+	private static final Logger log = LoggerFactory.getLogger(PatentEnhancementEngineTest.class);
 
 	private static ContentItem ci = null ;
+	
 	
 	// The file used for these tests must not be changed. Results, such as number of entities and enhancements, depend on this file.
 	// If another file is used the following values must be updated accordingly
 	private static final String TEST_FILE = "EP-1000000-A1.xml";
-	private static final int PERSONS_NUMBER = 3; // number of entities of type foaf:Person extracted from the test file.
-	private static final int PERSONS_ENTITIES_REFERENCES = 3; // number of entity references (fise:entity-reference) created, must be equal to the number of person.
+	private final int PERSONS_NUMBER = 3; // number of entities of type foaf:Person extracted from the test file.
+	private final int ENTITIES_REFERENCED = 3; // number of entity references (fise:entity-reference) created.
+	private final String PATENT_TITLE_EN = "Apparatus for manufacturing green bricks for the brick manufacturing industry"; //Patent title in english
 	
 	/**
 	 * @throws java.lang.Exception
@@ -72,11 +82,13 @@ public class PatentEnhancementEngineTest {
 		engine = new PatentEnhancementEngine() ;
 		engine.logService = new MockLogService() ;
 		engine.parser = Parser.getInstance() ;
+		
 		Set<String> supportedFormats = engine.parser.getSupportedFormats() ;
 		engine.activate(ctx) ;
 		
 		// creates a content item from the document and compute the enhancements
 		createContentItemFromFile(TEST_FILE);
+		//engine.computeEnhancements(ci) ;
 		
 	}
 
@@ -95,14 +107,25 @@ public class PatentEnhancementEngineTest {
 	 */
 	
 	@Test
-	public void testEntities() {
+	public void testTransformXML() {
+		
+		MGraph graph = null;
+		
+		try {
+			
+			graph = engine.transformXML(ci);
+			
+		} catch (EngineException e) {
+			 
+			System.out.println("Error while transforming the XML file into RDF");
+		}
 		
 		int personsNumber = 0;
 		
-		if (! ci.getMetadata().isEmpty()) {
+		if (! graph.isEmpty()) {
 			
 			// Filter triples for persons
-			Iterator<Triple> ipersons = ci.getMetadata().filter(null, RDF.type, FOAF.Person) ;
+			Iterator<Triple> ipersons = graph.filter(null, RDF.type, FOAF.Person) ;
 			
 			while (ipersons.hasNext()){
 				personsNumber += 1;
@@ -122,21 +145,34 @@ public class PatentEnhancementEngineTest {
 		
 	}
 	
-	/*
-	 * Test if entity-reference annotations have been added for each entity of type person.
-	 */
 	
+	/*
+	 * Test if entity-reference annotations have been added for each entity found after the transformation of the input XML file into RDF.
+	 */
 	@Test
-	public void testAnnotations() {
+	public void testAddEnhancements() {
 		
-		int personEntityReferences = 0;
+		MGraph xml2rdf = null;
 		
-		if (! ci.getMetadata().isEmpty()) {
+		try {
+			
+			xml2rdf = engine.transformXML(ci);
+			
+		} catch (EngineException e) {
+			 
+			System.out.println("Error while transforming the XML file into RDF");
+		}
+		
+		MGraph graph = engine.addEnhancements(ci, xml2rdf);
+		
+		int entityReferences = 0;
+		
+		if (! graph.isEmpty()) {
 			
 			// Filter triples for entities annotations
-			Iterator<Triple> ireferences = ci.getMetadata().filter(null, OntologiesTerms.fiseEntityReference, null);
+			Iterator<Triple> ireferences = graph.filter(null, OntologiesTerms.fiseEntityReference, null);
 			while (ireferences.hasNext()) {
-				personEntityReferences += 1;
+				entityReferences += 1;
 				Triple triple = ireferences.next();
 				String enhancement = triple.getSubject().toString();
 				String entity = triple.getObject().toString();
@@ -148,9 +184,66 @@ public class PatentEnhancementEngineTest {
 			System.out.println("Enhancement graph empty !");
 		}
 		
-		assertTrue("Subjects of type foaf:Person found in the document " + personEntityReferences, personEntityReferences == PERSONS_ENTITIES_REFERENCES);
+		//assertTrue("Entities found in the document " + entityReferences, entityReferences == ENTITIES_REFERENCED);
 	
 	
+	}
+	
+	/*
+	 * Looks for the patent uri of the document. There can be other patent to which the document refers to that will not be used. The patent searched 
+	 * is the only one with a dcterms:title propery. This test check whether the english title is correct.
+	 */
+	@Test
+	public void testGetPatentUri() {
+		
+		MGraph xml2rdf = null;
+		
+		try {
+			
+			xml2rdf = engine.transformXML(ci);
+			
+		} catch (EngineException e) {
+			 
+			System.out.println("Error while transforming the XML file into RDF");
+		}
+		
+		UriRef patentUri = engine.getPatentUri( xml2rdf );
+		
+		System.out.println("Patent URI: " + patentUri);
+		
+		Iterator<Triple> ipatentWithTitle = xml2rdf.filter(patentUri, DCTERMS.title, null);
+		
+		boolean hasSameTitle = false;
+		while(ipatentWithTitle.hasNext()){
+			if( PATENT_TITLE_EN.equals(ipatentWithTitle.next().getObject().toString()) ) {
+				hasSameTitle = true;
+				System.out.println("The english title is right.");
+			}
+		}
+		
+		//assertTrue(hasSameTitle);
+	}
+	
+	/*
+	 * Test whether a plain text representation part of document has been added to the content item. This test just compare the size of the input document
+	 * with that of plain text part.  
+	 */
+	@Test
+	public void testAddPartToContentItem() {
+		
+		Blob textBlob = null;
+		
+		textBlob = ContentItemHelper.getBlob(ci, Collections.singleton("text/plain")).getValue();
+		
+		if(textBlob != null) {
+		
+			System.out.println("Plain text content length: " + textBlob.getContentLength() );
+		}
+		else {
+			System.out.println("No plain text part attached to the content item");
+		}
+		
+		
 	}
 	
 		
@@ -164,13 +257,11 @@ public class PatentEnhancementEngineTest {
 			String theString = writer.toString();
 			//System.out.println(theString);
 			ci = ciFactory.createContentItem(new UriRef("urn:test:content-item:") + fileName, new StringSource(theString)) ;
-			engine.computeEnhancements(ci) ;
+			
 		}
 		catch (IOException e) {
 			System.out.println("Error while creating content item from file " + filePath);
-		} catch (EngineException e) {
-			fail("Engine should not throw exception: "+e.getMessage());
-		}
+		} 
 		
 	}
 	
