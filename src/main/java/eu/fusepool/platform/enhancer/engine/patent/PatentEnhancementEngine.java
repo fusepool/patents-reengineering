@@ -8,23 +8,33 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.Collections;
 import java.util.Dictionary;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
 
+import javax.ws.rs.core.Response;
+import javax.ws.rs.core.Response.ResponseBuilder;
+import javax.ws.rs.core.Response.Status;
+
+import org.apache.clerezza.rdf.core.Literal;
 import org.apache.clerezza.rdf.core.LiteralFactory;
 import org.apache.clerezza.rdf.core.MGraph;
 import org.apache.clerezza.rdf.core.NonLiteral;
 import org.apache.clerezza.rdf.core.Triple;
 import org.apache.clerezza.rdf.core.TripleCollection;
 import org.apache.clerezza.rdf.core.UriRef;
+import org.apache.clerezza.rdf.core.Resource;
+import org.apache.clerezza.rdf.core.access.TcManager;
 import org.apache.clerezza.rdf.core.impl.PlainLiteralImpl;
+import org.apache.clerezza.rdf.core.impl.SimpleGraph;
 import org.apache.clerezza.rdf.core.impl.TripleImpl;
 import org.apache.clerezza.rdf.core.serializedform.Parser;
 import org.apache.clerezza.rdf.core.serializedform.SupportedFormat;
-import org.apache.clerezza.rdf.ontologies.RDF;
-import org.apache.clerezza.rdf.ontologies.FOAF;
+import org.apache.clerezza.rdf.core.sparql.QueryParser;
+import org.apache.clerezza.rdf.core.sparql.query.Query;
+import org.apache.clerezza.rdf.core.sparql.query.SelectQuery;
 import org.apache.clerezza.rdf.ontologies.*;
 import org.apache.clerezza.rdf.utils.GraphNode;
 import org.apache.commons.io.IOUtils;
@@ -43,6 +53,7 @@ import org.apache.stanbol.enhancer.servicesapi.EngineException;
 import org.apache.stanbol.enhancer.servicesapi.EnhancementEngine;
 import org.apache.stanbol.enhancer.servicesapi.InvalidContentException;
 import org.apache.stanbol.enhancer.servicesapi.ServiceProperties;
+import org.apache.stanbol.enhancer.servicesapi.helper.ContentItemHelper;
 import org.apache.stanbol.enhancer.servicesapi.helper.EnhancementEngineHelper;
 import org.apache.stanbol.enhancer.servicesapi.impl.AbstractEnhancementEngine;
 import org.apache.stanbol.enhancer.servicesapi.rdf.NamespaceEnum;
@@ -54,12 +65,21 @@ import org.osgi.framework.ServiceReference;
 import org.osgi.service.cm.ConfigurationException;
 import org.osgi.service.component.ComponentContext;
 import org.osgi.service.log.LogService;
+import org.apache.clerezza.rdf.core.sparql.ParseException;
+import org.apache.clerezza.rdf.core.sparql.ResultSet;
+import org.apache.clerezza.rdf.core.sparql.SolutionMapping;
+
 import org.wymiwyg.commons.mediatypes.MimeType;
 import eu.fusepool.platform.enhancer.engine.patent.xslt.CatalogBuilder;
 import eu.fusepool.platform.enhancer.engine.patent.xslt.XMLProcessor;
 import eu.fusepool.platform.enhancer.engine.patent.xslt.impl.PatentXSLTProcessor;
 
-
+/**
+ * Transform an XML patent document into RDF mapping elements and attributes to terms in ontologies.
+ * @author giorgio
+ * @author Luigi Selmi
+ *
+ */
 
 @Component(immediate = true, metatype = true)
 @Service
@@ -92,7 +112,13 @@ implements EnhancementEngine, ServiceProperties {
 	//private static final Logger log = LoggerFactory.getLogger(MarecLifterEnhancementEngine.class);
 	private TCServiceLocator serviceLocator ;
 	
-	private static final String MIME_TYPE_XML = "application/xml";
+	// MIME TYPE of the patent document
+	public static final String MIME_TYPE_XML = "application/xml";
+	
+	// Patent properties used as variables for query and its result
+	public static final String PATENT_URI = "patent";
+	public static final String PATENT_TITLE = "title";
+	public static final String PATENT_ABSTRACT = "abstract";
 	
 	
 	//@SuppressWarnings("unused")
@@ -131,6 +157,9 @@ implements EnhancementEngine, ServiceProperties {
 
 	@Reference
 	protected Parser parser ;
+	
+	@Reference
+    private TcManager tcManager;
 	
 
 	//@SuppressWarnings("unchecked")
@@ -174,9 +203,14 @@ implements EnhancementEngine, ServiceProperties {
                 return CANNOT_ENHANCE;
             }
             
+            // Currently 2013 May 27 the ECS accepts only text/plain as mime type so in order to test the engine within the default chain
+            // used by the ECS the following check is commented.
+            
             if (! ci.getMimeType().equals(this.MIME_TYPE_XML)) {
             	return CANNOT_ENHANCE;
             }
+            
+            
         } catch (IOException e) {
             logService.log(CANNOT_ENHANCE, "Failed to get the text for "
                     + "enhancement of content: " + ci.getUri() + " or wrong MIME TYPE (must be application/xml)");
@@ -196,15 +230,14 @@ implements EnhancementEngine, ServiceProperties {
 		
 		 
 		try {
-			
-	
+				
 			//ci.getLock().writeLock().lock();
 			
-			// Add a part to the content item as a text/plain representation of the XML document 
-			addPartToContentItem(ci);
-						
 			// Transform the patent XML file into RDF
 			MGraph mapping = transformXML(ci);
+						
+			// Add a part to the content item as a text/plain representation of the XML document 
+			addPartToContentItem(ci, mapping);
 			
 			// Create annotations to each entity extracted from the XML
 			MGraph annotations = addEnhancements(ci, mapping);
@@ -229,7 +262,7 @@ implements EnhancementEngine, ServiceProperties {
 	/*
 	 * Transform patent XML documents into RDF using an XSLT transformation and add the graph to the content item metadata.
 	 */
-	private MGraph transformXML(ContentItem ci) throws EngineException {
+	public MGraph transformXML(ContentItem ci) throws EngineException {
 		
 		MGraph mapping = null;
 		
@@ -244,7 +277,7 @@ implements EnhancementEngine, ServiceProperties {
 			rdfIs = processor.processPatentXML(ci.getStream()) ;
 			parser.parse(mapping, rdfIs, SupportedFormat.RDF_XML) ;
 			rdfIs.close() ;
-			//ci.getMetadata().addAll(metadata) ;
+			
 			
 		} catch (Exception e) {
 			logService.log(LogService.LOG_ERROR, "Wrong data format for the " + this.getName() + " enhancer.", e) ;
@@ -258,29 +291,40 @@ implements EnhancementEngine, ServiceProperties {
 	}
 	
 	/*
-	 *  Add a part to the content item as a text/plain representation of the XML document
+	 *  Add a part to the content item as a text/plain representation of the XML document. This is the part of the content that will be indexed
+	 *  by the Enhanced Content Store (ECS). The part can contain the full document or just some relevant elements such as title and abstract.
 	 */
-	private void addPartToContentItem(ContentItem ci) throws EngineException, IOException {
+	public void addPartToContentItem(ContentItem ci, MGraph mapping)  {
 		
 		//System.out.println("Start adding plain text representation");
 		
-		InputStream toCopy = ci.getStream() ;
-		UriRef blobUri = new UriRef("urn:patent-engine:plain-text:" + randomUUID());
-		ContentSink plainTextSink = ciFactory.createContentSink("text/plain");
-		OutputStream os = plainTextSink.getOutputStream() ;
-		IOUtils.copy(toCopy, os) ;
-		IOUtils.closeQuietly(toCopy) ;
-		IOUtils.closeQuietly(os) ;
-		ci.addPart(blobUri, plainTextSink.getBlob());
+		try {
+		
+			InputStream toCopy = ci.getStream() ;
+			
+			UriRef partUri = new UriRef("urn:patent-engine:plain-text:" + randomUUID());
+			ContentSink plainTextSink = ciFactory.createContentSink("text/plain");
+			OutputStream os = plainTextSink.getOutputStream() ;
+			//IOUtils.copy(toCopy, os) ;
+			//IOUtils.closeQuietly(toCopy) ;
+			//IOUtils.closeQuietly(os) ;
+			ci.addPart(partUri, plainTextSink.getBlob());
+		
+		}
+		catch (IOException e) {
+			e.printStackTrace();
+		}
+		
 		
 		//System.out.println("Finished adding plain text representation");
 	}
 	
 	/*
 	 * Create an entity annotation for each entity found by the transformation of the XML document. 
-	 * Each annotation is referred to its entity.
+	 * Each annotation is referred to its entity. The types of entities are
+	 * 
 	 */
-	private MGraph addEnhancements(ContentItem ci, MGraph mapping) {
+	public MGraph addEnhancements(ContentItem ci, MGraph mapping) {
 		
 		MGraph annotations = new IndexedMGraph();
 		
@@ -288,27 +332,21 @@ implements EnhancementEngine, ServiceProperties {
 		
 		if (! mapping.isEmpty()) {
 			
+			// Create an enhancement for each entity of type foaf:Person
 			Iterator<Triple> ipersons = mapping.filter(null, RDF.type, FOAF.Person) ;
+			createAnnotations(ci, annotations, ipersons);
 			
-			while (ipersons.hasNext()) {
-				// create an entity annotation
-				UriRef entityAnnotation = EnhancementEngineHelper.createEntityEnhancement(ci, this) ;
-				
-				Triple person = ipersons.next();
-				NonLiteral subPerson = person.getSubject(); 
-				
-				// add a triple to link the enhancement to the entity
-				Triple entityReference = new TripleImpl(entityAnnotation, OntologiesTerms.fiseEntityReference, subPerson);
-				annotations.add( entityReference);
-				//System.out.println("entity reference: " + entityReference.toString());
-				
-				// add a confidence value
-				Triple confidence = new TripleImpl(entityAnnotation, OntologiesTerms.fiseConfidence, new PlainLiteralImpl("1.0"));
-				annotations.add(confidence);
-				//System.out.println("confidence: " + confidence.toString());
-				
+			
+			// Create one enhancement for one entity of type pmo:PatentPublication that is directly related to the input XML patent document.	
+			UriRef patentUri = getPatentUri(mapping);
+			if( patentUri != null) {
+				UriRef patentEnhancement = EnhancementEngineHelper.createEntityEnhancement(ci, this) ;
+				// add a triple to link the enhancement to the entity			
+				annotations.add( new TripleImpl(patentEnhancement, OntologiesTerms.fiseEntityReference, patentUri) );
+				annotations.add( new TripleImpl(patentEnhancement, OntologiesTerms.fiseConfidence, patentUri) );
 			}
-	        
+			
+			
 			
 		}
 		
@@ -316,6 +354,57 @@ implements EnhancementEngine, ServiceProperties {
 		
 		return annotations;
 		
+	}
+	
+	/*
+	 * Creates enhancements from triples.
+	 */
+	private void createAnnotations(ContentItem ci, MGraph annotations, Iterator<Triple> itriple) {
+		
+		while (itriple.hasNext()) {
+			// create an entity annotation
+			UriRef enhancement = EnhancementEngineHelper.createEntityEnhancement(ci, this) ;
+			
+			Triple statement = itriple.next();
+			NonLiteral subject = statement.getSubject(); 
+			
+			// add a triple to link the enhancement to the entity
+			annotations.add( new TripleImpl(enhancement, OntologiesTerms.fiseEntityReference, subject) );
+			//System.out.println("entity reference: " + entityReference.toString());
+			
+			// add a confidence value
+			annotations.add( new TripleImpl(enhancement, OntologiesTerms.fiseConfidence, new PlainLiteralImpl("1.0")) );
+			//System.out.println("confidence: " + confidence.toString());
+			
+		}
+		
+	}
+	
+	/*
+	 * Retrieves the patent publication uri that refers to the original document. As this publication can refer to other publication the first one must be
+	 * selected using properties that are filled that are not for the mentioned patent as title and abstract. These properties can also be used for the plain text
+	 * representation of the document to be indexed instead of the full XML document. 
+	 */
+	public UriRef getPatentUri(MGraph mapping) {
+		
+		UriRef patentUri = null;
+		
+		Iterator<Triple> ipatents = mapping.filter(null, RDF.type, OntologiesTerms.pmoPatentPublication) ;
+		
+		while(ipatents.hasNext()) {
+			
+			UriRef patentUriTemp = (UriRef) ipatents.next().getSubject();
+			// Filter triple with a pmo:PatentPublication as subject and with dcterms:title property filled. There exist only one such triple in each 
+			// document.
+			Iterator<Triple> ipatentWithTitle = mapping.filter(patentUriTemp, DCTERMS.title, null);
+			while(ipatentWithTitle.hasNext()) {
+				patentUri = (UriRef) ipatentWithTitle.next().getSubject(); 
+			}
+			
+		}
+				
+		return patentUri;
+	
 	}
 	
 	
