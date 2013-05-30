@@ -10,7 +10,10 @@ public class OntologiesTerms {
 	
 	// FISE
 	final static String FISE_NS =  "http://fise.iks-project.eu/ontology/";
-	final static UriRef fiseEntityReference = new UriRef("http://fise.iks-project.eu/ontology/entity-reference");
-	final static UriRef fiseConfidence = new UriRef("http://fise.iks-project.eu/ontology/confidence");
+	final static UriRef fiseEntityReference = new UriRef(FISE_NS + "entity-reference");
+	final static UriRef fiseConfidence = new UriRef(FISE_NS + "confidence");
 
+	// Patent Metadata Ontology
+	final static String PMO_NS = "http://www.patexpert.org/ontologies/pmo.owl#";
+	final static UriRef pmoPatentPublication = new UriRef(PMO_NS + "PatentPublication");
 }
