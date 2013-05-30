@@ -126,12 +126,6 @@ implements EnhancementEngine, ServiceProperties {
 
 	protected CatalogBuilder catalogBuilder ;
 	
-	
-//	@Reference
-//	protected Entityhub entityHub ;
-//
-//	@Reference
-//	protected LogService logService ;
 
 	
 	final Logger logger = LoggerFactory.getLogger(this.getClass()) ;
