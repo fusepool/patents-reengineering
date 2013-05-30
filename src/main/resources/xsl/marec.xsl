@@ -267,7 +267,6 @@ XXX: Normally we don't really want to define other patents from here. In case th
                             or kind = 'B9'">
                     <rdf:type rdf:resource="{$pmo}GrantedPatent"/>
                 </xsl:if>
-<!-- TODO: US granted -->
             </xsl:if>
 
             <xsl:if test="country = 'US'">
@@ -489,7 +488,7 @@ XXX: This removes the codes after + or : in ECLA. There might be a particular us
             <xsl:choose>
                 <xsl:when test="$party-type = 'applicant'">
                     <rdf:type rdf:resource="{$sumo}CognitiveAgent"/>
-                    <rdf:type rdf:resource="{$foaf}Organization"/>
+                    <rdf:type rdf:resource="{$foaf}Agent"/>
                     <pmo:applicantOf rdf:resource="{$patent}{$ucid}"/>
                 </xsl:when>
                 <xsl:when test="$party-type = 'inventor'">
@@ -499,7 +498,7 @@ XXX: This removes the codes after + or : in ECLA. There might be a particular us
                 </xsl:when>
                 <xsl:when test="$party-type = 'assignee'">
                     <rdf:type rdf:resource="{$sumo}CognitiveAgent"/>
-                    <rdf:type rdf:resource="{$foaf}Organization"/>
+                    <rdf:type rdf:resource="{$foaf}Agent"/>
                     <pmo:assigneeOf rdf:resource="{$patent}{$ucid}"/>
                 </xsl:when>
                 <xsl:when test="$party-type = 'agent'">
@@ -516,22 +515,29 @@ XXX: This removes the codes after + or : in ECLA. There might be a particular us
                 <rdfs:label><xsl:value-of select="name"/></rdfs:label>
             </xsl:if>
 
-            <xsl:if test="prefix">
-                <foaf:honorificPrefix><xsl:value-of select="prefix"/></foaf:honorificPrefix>
-            </xsl:if>
             <xsl:if test="last-name">
-                <foaf:lastName><xsl:value-of select="last-name"/></foaf:lastName>
-                <rdfs:label><xsl:value-of select="name"/></rdfs:label>
+                <rdfs:label><xsl:value-of select="last-name"/></rdfs:label>
+                <xsl:choose>
+                    <xsl:when test="$party-type = 'inventor'">
+                        <foaf:lastName><xsl:value-of select="last-name"/></foaf:lastName>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <foaf:name><xsl:value-of select="last-name"/></foaf:name>
+                    </xsl:otherwise>
+                </xsl:choose>
             </xsl:if>
 
             <xsl:if test="first-name">
                 <foaf:firstName><xsl:value-of select="first-name"/></foaf:firstName>
-                <rdfs:label><xsl:value-of select="name"/></rdfs:label>
+                <rdfs:label><xsl:value-of select="first-name"/></rdfs:label>
             </xsl:if>
 
             <xsl:if test="middle-name">
             </xsl:if>
 
+            <xsl:if test="prefix">
+                <foaf:honorificPrefix><xsl:value-of select="prefix"/></foaf:honorificPrefix>
+            </xsl:if>
             <xsl:if test="suffix">
                 <foaf:honorificSuffix><xsl:value-of select="suffix"/></foaf:honorificSuffix>
             </xsl:if>
