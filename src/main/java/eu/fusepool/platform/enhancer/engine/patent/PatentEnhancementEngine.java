@@ -5,45 +5,30 @@ import static org.apache.stanbol.enhancer.servicesapi.helper.EnhancementEngineHe
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.OutputStream;
 import java.util.Collections;
 import java.util.Dictionary;
-import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
 
-import javax.ws.rs.core.Response;
-import javax.ws.rs.core.Response.ResponseBuilder;
-import javax.ws.rs.core.Response.Status;
-
-import org.apache.clerezza.rdf.core.Literal;
-import org.apache.clerezza.rdf.core.LiteralFactory;
 import org.apache.clerezza.rdf.core.MGraph;
 import org.apache.clerezza.rdf.core.NonLiteral;
 import org.apache.clerezza.rdf.core.Triple;
-import org.apache.clerezza.rdf.core.TripleCollection;
 import org.apache.clerezza.rdf.core.UriRef;
-import org.apache.clerezza.rdf.core.Resource;
 import org.apache.clerezza.rdf.core.access.TcManager;
 import org.apache.clerezza.rdf.core.impl.PlainLiteralImpl;
-import org.apache.clerezza.rdf.core.impl.SimpleGraph;
 import org.apache.clerezza.rdf.core.impl.TripleImpl;
 import org.apache.clerezza.rdf.core.serializedform.Parser;
 import org.apache.clerezza.rdf.core.serializedform.SupportedFormat;
-import org.apache.clerezza.rdf.core.sparql.QueryParser;
-import org.apache.clerezza.rdf.core.sparql.query.Query;
-import org.apache.clerezza.rdf.core.sparql.query.SelectQuery;
-import org.apache.clerezza.rdf.ontologies.*;
-import org.apache.clerezza.rdf.utils.GraphNode;
-import org.apache.commons.io.IOUtils;
+import org.apache.clerezza.rdf.ontologies.DCTERMS;
+import org.apache.clerezza.rdf.ontologies.FOAF;
+import org.apache.clerezza.rdf.ontologies.RDF;
 import org.apache.felix.scr.annotations.Component;
 import org.apache.felix.scr.annotations.Properties;
 import org.apache.felix.scr.annotations.Property;
 import org.apache.felix.scr.annotations.Reference;
 import org.apache.felix.scr.annotations.Service;
-import org.apache.stanbol.commons.indexedgraph.IndexedGraph;
 import org.apache.stanbol.commons.indexedgraph.IndexedMGraph;
 import org.apache.stanbol.enhancer.contentitem.inmemory.InMemoryContentItemFactory;
 import org.apache.stanbol.enhancer.servicesapi.ContentItem;
@@ -53,23 +38,16 @@ import org.apache.stanbol.enhancer.servicesapi.EngineException;
 import org.apache.stanbol.enhancer.servicesapi.EnhancementEngine;
 import org.apache.stanbol.enhancer.servicesapi.InvalidContentException;
 import org.apache.stanbol.enhancer.servicesapi.ServiceProperties;
-import org.apache.stanbol.enhancer.servicesapi.helper.ContentItemHelper;
 import org.apache.stanbol.enhancer.servicesapi.helper.EnhancementEngineHelper;
 import org.apache.stanbol.enhancer.servicesapi.impl.AbstractEnhancementEngine;
-import org.apache.stanbol.enhancer.servicesapi.rdf.NamespaceEnum;
-import org.apache.stanbol.enhancer.servicesapi.rdf.TechnicalClasses;
-import org.apache.stanbol.entityhub.servicesapi.Entityhub;
 import org.osgi.framework.Constants;
-import org.osgi.framework.InvalidSyntaxException;
 import org.osgi.framework.ServiceReference;
 import org.osgi.service.cm.ConfigurationException;
 import org.osgi.service.component.ComponentContext;
 import org.osgi.service.log.LogService;
-import org.apache.clerezza.rdf.core.sparql.ParseException;
-import org.apache.clerezza.rdf.core.sparql.ResultSet;
-import org.apache.clerezza.rdf.core.sparql.SolutionMapping;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-import org.wymiwyg.commons.mediatypes.MimeType;
 import eu.fusepool.platform.enhancer.engine.patent.xslt.CatalogBuilder;
 import eu.fusepool.platform.enhancer.engine.patent.xslt.XMLProcessor;
 import eu.fusepool.platform.enhancer.engine.patent.xslt.impl.PatentXSLTProcessor;
@@ -149,12 +127,15 @@ implements EnhancementEngine, ServiceProperties {
 	protected CatalogBuilder catalogBuilder ;
 	
 	
-	@Reference
-	protected Entityhub entityHub ;
+//	@Reference
+//	protected Entityhub entityHub ;
+//
+//	@Reference
+//	protected LogService logService ;
 
-	@Reference
-	protected LogService logService ;
-
+	
+	final Logger logger = LoggerFactory.getLogger(this.getClass()) ;
+	
 	@Reference
 	protected Parser parser ;
 	
@@ -177,13 +158,10 @@ implements EnhancementEngine, ServiceProperties {
 		try {
 			catalogBuilder.build() ;
 		} catch (Exception e1) {
-			// TODO Auto-generated catch block
-			logService.log(LogService.LOG_ERROR, "Error building dtd catalog", e1) ;
+			logger.error("Error building dtd catalog", e1) ;
 		}
 		
-		
-		logService.log(LogService.LOG_INFO, "PatentEngine being activated " + this.getClass().getName());
-
+		logger.info("PatentEngine being activated " + this.getClass().getName());
 	}
 
 	protected void deactivate(ComponentContext ce) {
@@ -212,7 +190,7 @@ implements EnhancementEngine, ServiceProperties {
             
             
         } catch (IOException e) {
-            logService.log(CANNOT_ENHANCE, "Failed to get the text for "
+        	logger.warn("Failed to get the text for "
                     + "enhancement of content: " + ci.getUri() + " or wrong MIME TYPE (must be application/xml)");
             throw new InvalidContentException(this, ci, e);
         }
@@ -226,7 +204,7 @@ implements EnhancementEngine, ServiceProperties {
 	@Override
 	public void computeEnhancements(ContentItem ci) throws EngineException {
 		UriRef contentItemId = ci.getUri();
-		logService.log(LogService.LOG_INFO, "UriRef: "+contentItemId.getUnicodeString()) ;		
+		logger.info("UriRef: "+contentItemId.getUnicodeString()) ;			
 		
 		 
 		try {
@@ -248,8 +226,7 @@ implements EnhancementEngine, ServiceProperties {
 			
 			
 		} catch (Exception e) {
-			logService.log(LogService.LOG_ERROR, "", e) ;
-			
+			logger.error( "", e) ;			
 		} 
 		/*
 		finally {
@@ -280,8 +257,7 @@ implements EnhancementEngine, ServiceProperties {
 			
 			
 		} catch (Exception e) {
-			logService.log(LogService.LOG_ERROR, "Wrong data format for the " + this.getName() + " enhancer.", e) ;
-			
+			logger.error("Wrong data format for the " + this.getName() + " enhancer.", e) ;
 		}
 		
 		//System.out.println("Finished transformation from XML to RDF");
@@ -309,7 +285,8 @@ implements EnhancementEngine, ServiceProperties {
 		
 		}
 		catch (IOException e) {
-			e.printStackTrace();
+			logger.error("Error adding text/plain part", e) ;
+			//e.printStackTrace();
 		}
 		
 		
@@ -415,13 +392,13 @@ implements EnhancementEngine, ServiceProperties {
 
 	//@Activate
 	public void registered(ServiceReference ref) {
-		logService.log(LogService.LOG_INFO, this.getClass().getName()
-									+" registered") ;
+		logger.info(this.getClass().getName()
+				+" registered") ;
 	}
 
 	//@Deactivate
 	public void unregistered(ServiceReference ref) {
-		logService.log(LogService.LOG_INFO, this.getClass().getName()+" unregistered") ;
+		logger.info( this.getClass().getName()+" unregistered") ;
 	}
 
 

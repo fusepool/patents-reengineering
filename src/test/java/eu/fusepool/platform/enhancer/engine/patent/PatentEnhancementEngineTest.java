@@ -80,7 +80,6 @@ public class PatentEnhancementEngineTest {
 		ctx = new MockComponentContext(properties) ;
 		
 		engine = new PatentEnhancementEngine() ;
-		engine.logService = new MockLogService() ;
 		engine.parser = Parser.getInstance() ;
 		
 		Set<String> supportedFormats = engine.parser.getSupportedFormats() ;
