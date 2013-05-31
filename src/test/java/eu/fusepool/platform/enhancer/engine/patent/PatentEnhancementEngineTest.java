@@ -41,7 +41,7 @@ import eu.fusepool.platform.enhancer.engine.patent.testutil.MockComponentContext
 
 
 /**
- * @author giorgio
+ * @author Giorgio Costa
  * @author Luigi Selmi
  *
  */
