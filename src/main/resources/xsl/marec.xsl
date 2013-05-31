@@ -510,9 +510,14 @@ XXX: This removes the codes after + or : in ECLA. There might be a particular us
                 </xsl:otherwise>
             </xsl:choose>
 
-            <xsl:if test="name or orgname">
+            <xsl:if test="name">
                 <foaf:name><xsl:value-of select="name"/></foaf:name>
                 <rdfs:label><xsl:value-of select="name"/></rdfs:label>
+            </xsl:if>
+
+            <xsl:if test="orgname">
+                <foaf:name><xsl:value-of select="orgname"/></foaf:name>
+                <rdfs:label><xsl:value-of select="orgname"/></rdfs:label>
             </xsl:if>
 
             <xsl:if test="last-name">
