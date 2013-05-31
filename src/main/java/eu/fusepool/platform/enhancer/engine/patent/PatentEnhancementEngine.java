@@ -53,7 +53,7 @@ import eu.fusepool.platform.enhancer.engine.patent.xslt.impl.PatentXSLTProcessor
 
 /**
  * Transform an XML patent document into RDF mapping elements and attributes to terms in ontologies.
- * @author giorgio
+ * @author Giorgio Costa
  * @author Luigi Selmi
  *
  */
@@ -91,11 +91,6 @@ implements EnhancementEngine, ServiceProperties {
 	
 	// MIME TYPE of the patent document
 	public static final String MIME_TYPE_XML = "application/xml";
-	
-	// Patent properties used as variables for query and its result
-	public static final String PATENT_URI = "patent";
-	public static final String PATENT_TITLE = "title";
-	public static final String PATENT_ABSTRACT = "abstract";
 	
 	
 	//@SuppressWarnings("unused")
@@ -174,9 +169,7 @@ implements EnhancementEngine, ServiceProperties {
                 return CANNOT_ENHANCE;
             }
             
-            // Currently 2013 May 27 the ECS accepts only text/plain as mime type so in order to test the engine within the default chain
-            // used by the ECS the following check is commented.
-            
+            // MIME Type of the input patent document must be application/xml
             if (! ci.getMimeType().equals(this.MIME_TYPE_XML)) {
             	return CANNOT_ENHANCE;
             }
