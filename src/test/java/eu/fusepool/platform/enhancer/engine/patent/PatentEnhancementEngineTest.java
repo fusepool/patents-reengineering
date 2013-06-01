@@ -30,7 +30,9 @@ import org.apache.stanbol.enhancer.servicesapi.ContentItemFactory;
 import org.apache.stanbol.enhancer.servicesapi.EngineException;
 import org.apache.stanbol.enhancer.servicesapi.EnhancementEngine;
 import org.apache.stanbol.enhancer.servicesapi.helper.ContentItemHelper;
+import org.apache.stanbol.enhancer.servicesapi.impl.ByteArraySource;
 import org.apache.stanbol.enhancer.servicesapi.impl.StringSource;
+import org.apache.stanbol.enhancer.servicesapi.rdf.TechnicalClasses;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -60,6 +62,7 @@ public class PatentEnhancementEngineTest {
 	
 	// The file used for these tests must not be changed. Results, such as number of entities and enhancements, depend on this file.
 	// If another file is used the following values must be updated accordingly
+	private static final String TEST_FOLDER = "/test/data/";
 	private static final String TEST_FILE = "EP-1000000-A1.xml";
 	private final int PERSONS_NUMBER = 3; // number of entities of type foaf:Person extracted from the test file.
 	private final int ENTITIES_REFERENCED = 3; // number of entity references (fise:entity-reference) created.
@@ -83,7 +86,7 @@ public class PatentEnhancementEngineTest {
 		
 		// creates a content item from the document and compute the enhancements
 		createContentItemFromFile(TEST_FILE);
-		//engine.computeEnhancements(ci) ;
+		
 		
 	}
 
@@ -165,7 +168,8 @@ public class PatentEnhancementEngineTest {
 		if (! graph.isEmpty()) {
 			
 			// Filter triples for entities annotations
-			Iterator<Triple> ireferences = graph.filter(null, OntologiesTerms.fiseEntityReference, null);
+			Iterator<Triple> ireferences = graph.filter(null, TechnicalClasses.ENHANCER_ENHANCEMENT
+					, null);
 			while (ireferences.hasNext()) {
 				entityReferences += 1;
 				Triple triple = ireferences.next();
@@ -220,23 +224,38 @@ public class PatentEnhancementEngineTest {
 	}
 	
 	/*
-	 * Test whether a plain text representation part of document has been added to the content item. This test just compare the size of the input document
-	 * with that of plain text part.  
+	 * Test whether a plain text representation part of document has been added to the content item. 
 	 */
 	@Test
 	public void testAddPartToContentItem() {
 		
-		Blob textBlob = null;
+		String plainTextPart = "";
 		
-		textBlob = ContentItemHelper.getBlob(ci, Collections.singleton("text/plain")).getValue();
+		engine.addPartToContentItem(ci);
 		
-		if(textBlob != null) {
+		// Reading part with index 1 of the content item that contain an object of type ContentSource
+		ByteArraySource source = ci.getPart(1, ByteArraySource.class);
 		
-			System.out.println("Plain text content length: " + textBlob.getContentLength() );
+		// Get the MIME TYPE of the part
+		String partMimeType = source.getMediaType();
+		
+		
+		try {
+			
+			plainTextPart = IOUtils.toString(source.getStream());
+			
+			//System.out.println(plainTextPart);
 		}
-		else {
-			System.out.println("No plain text part attached to the content item");
+		catch(IOException e) {
+			System.out.println("Error while reading plain text part");
 		}
+		
+		Iterator<Triple> iparts = ci.getMetadata().filter(ci.getUri(), DCTERMS.hasPart, null);
+		while(iparts.hasNext()) {
+			System.out.println("Content Item parts: " + iparts.next().getObject().toString());
+		}
+		
+		assertTrue("text/plain".equals(partMimeType));
 		
 		
 	}
@@ -244,14 +263,14 @@ public class PatentEnhancementEngineTest {
 		
 	private static void createContentItemFromFile(String fileName) {
 		
-		String filePath = "/test/data/" + fileName;
+		String filePath = TEST_FOLDER + fileName;
 		try {
 			InputStream in = PatentEnhancementEngineTest.class.getResourceAsStream(filePath) ;
 			StringWriter writer = new StringWriter();
 			IOUtils.copy(in, writer);
-			String theString = writer.toString();
+			String content = writer.toString();
 			//System.out.println(theString);
-			ci = ciFactory.createContentItem(new UriRef("urn:test:content-item:") + fileName, new StringSource(theString)) ;
+			ci = ciFactory.createContentItem(new UriRef("urn:test:content-item:") + fileName, new StringSource(content)) ;
 			
 		}
 		catch (IOException e) {
