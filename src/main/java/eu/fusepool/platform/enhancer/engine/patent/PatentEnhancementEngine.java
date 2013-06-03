@@ -44,6 +44,7 @@ import org.apache.stanbol.enhancer.servicesapi.helper.EnhancementEngineHelper;
 import org.apache.stanbol.enhancer.servicesapi.impl.AbstractEnhancementEngine;
 import org.apache.stanbol.enhancer.servicesapi.impl.ByteArraySource;
 import org.apache.stanbol.enhancer.servicesapi.rdf.TechnicalClasses;
+import org.openjena.atlas.logging.Log;
 import org.osgi.framework.Constants;
 import org.osgi.framework.ServiceReference;
 import org.osgi.service.cm.ConfigurationException;
@@ -200,9 +201,6 @@ implements EnhancementEngine, ServiceProperties {
 			
 			// Transform the patent XML file into RDF
 			MGraph xml2rdf = transformXML(ci);
-						
-			// Add a part to the content item as a text/plain representation of the XML document 
-			addPartToContentItem(ci);
 			
 			// Create enhancements to each entity extracted from the XML
 			MGraph enhancements = addEnhancements(ci, xml2rdf);
@@ -210,6 +208,9 @@ implements EnhancementEngine, ServiceProperties {
 			// Add all the RDF triples to the content item metadata
 			ci.getMetadata().addAll(xml2rdf);
 			ci.getMetadata().addAll(enhancements);
+			
+			// Add a part to the content item as a text/plain representation of the XML document for indexing
+			addPartToContentItem(ci);
 			
 			
 		} catch (Exception e) {
@@ -255,7 +256,8 @@ implements EnhancementEngine, ServiceProperties {
 	
 	/*
 	 *  Add a part to the content item as a text/plain representation of the XML document. This is the part of the content that will be indexed
-	 *  by the Enhanced Content Store (ECS). The part can contain the full document or just some relevant elements such as title and abstract.
+	 *  by the Enhanced Content Store (ECS). The part text is constructed from triples properties values so 
+	 *  this method must be called after the xml to rdf transformation.
 	 */
 	
 	public void addPartToContentItem(ContentItem ci) {
@@ -266,9 +268,14 @@ implements EnhancementEngine, ServiceProperties {
 			
 			UriRef partUri = new UriRef("urn:fusepool-patent-engine:part-01:" + randomUUID()); // part uri with index 1 (part with index 0 is reserved to the input data)
 			// Add the same content of the document as text/plain. This part can contain some
-			// text extracted from the full content for indexing as title and abstract 
-			byte [] content = IOUtils.toByteArray(ci.getBlob().getStream());
+			// text extracted from the full content for indexing as title and abstract
 			
+			// full document with xml tags
+			//byte [] content = IOUtils.toByteArray(ci.getBlob().getStream());
+			
+			// construct the text for the part from triples properties values
+			@SuppressWarnings("deprecation")
+			byte [] content = IOUtils.toByteArray(constructText(ci.getMetadata()));
 			// Add some content to the new part as plain text 
 			ContentSource source = new ByteArraySource(content, "text/plain");
 			ci.addPart(ci.getUri(), source);
@@ -305,13 +312,17 @@ implements EnhancementEngine, ServiceProperties {
 			Iterator<Triple> ipersons = mapping.filter(null, RDF.type, FOAF.Person) ;
 			createAnnotations(ci, enhancements, ipersons);
 			
+			// Create an enhancement for each entity of type foaf:Agent
+			Iterator<Triple> iagents = mapping.filter(null, RDF.type, FOAF.Agent) ;
+			createAnnotations(ci, enhancements, iagents);
+			
 			
 			// Create one enhancement for one entity of type pmo:PatentPublication that is directly related to the input XML patent document.	
 			UriRef patentUri = getPatentUri(mapping);
 			if( patentUri != null) {
 				UriRef patentEnhancement = EnhancementEngineHelper.createEntityEnhancement(ci, this) ;
 				// add a triple to link the enhancement to the entity			
-				enhancements.add( new TripleImpl(patentEnhancement, TechnicalClasses.ENHANCER_ENHANCEMENT, patentUri) );
+				enhancements.add( new TripleImpl(patentEnhancement, OntologiesTerms.fiseEntityReference, patentUri) );
 				// add the confidence level
 				enhancements.add( new TripleImpl(patentEnhancement, TechnicalClasses.FNHANCER_CONFIDENCE_LEVEL, new PlainLiteralImpl("1.0")) );
 			}
@@ -336,10 +347,10 @@ implements EnhancementEngine, ServiceProperties {
 			UriRef enhancement = EnhancementEngineHelper.createEntityEnhancement(ci, this) ;
 			
 			Triple statement = itriple.next();
-			NonLiteral subject = statement.getSubject(); 
+			NonLiteral entity = statement.getSubject(); 
 			
 			// add a triple to link the enhancement to the entity
-			annotations.add( new TripleImpl(enhancement, TechnicalClasses.ENHANCER_ENHANCEMENT, subject) );
+			annotations.add( new TripleImpl(enhancement, OntologiesTerms.fiseEntityReference, entity) );
 			//System.out.println("entity reference: " + entityReference.toString());
 			
 			// add a confidence value
@@ -375,6 +386,49 @@ implements EnhancementEngine, ServiceProperties {
 				
 		return patentUri;
 	
+	}
+	
+	/*
+	 * Creates a string filled with values from properties:
+	 * foaf:name of inventors and applicants
+	 * dcterms:title of the patent publication
+	 * dcterms:abstract of the patent publication
+	 * The text is used for indexing. The graph passed as argument must contain the RDF triples created after the transformation.
+	 * 
+	 */
+	public String constructText(MGraph graph) {
+		String text = "";
+		
+		UriRef patentUri = getPatentUri(graph);
+		
+		// Get the titles. There might be three titles for en, fr, de.
+		Iterator<Triple> ititles = graph.filter(patentUri, DCTERMS.title, null);
+		String title = "";
+		while(ititles.hasNext()) {
+			title = ititles.next().getObject().toString() + " ";
+			text += title;
+		}
+		
+		
+		// Get the abstracts. There might be three abstracts for en, fr, de.
+		Iterator<Triple> iabstracts = graph.filter(patentUri, DCTERMS.abstract_, null);
+		String abstract_ = " ";
+		while(iabstracts.hasNext()) {
+			title = iabstracts.next().getObject().toString() + " ";
+			text += abstract_;
+		}
+		
+		// Get all the foaf:name of entities of type foaf:Person.
+		Iterator<Triple> inames = graph.filter(null, FOAF.name, null);
+		String name = "";
+		while(inames.hasNext()) {
+			title = inames.next().getObject().toString() + " ";
+			text += name;
+		}
+		
+		logger.info("Text to be indexed" + text);
+		
+		return text;
 	}
 	
 	
