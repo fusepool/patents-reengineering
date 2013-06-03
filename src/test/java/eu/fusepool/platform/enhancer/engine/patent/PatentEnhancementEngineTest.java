@@ -167,9 +167,8 @@ public class PatentEnhancementEngineTest {
 		
 		if (! graph.isEmpty()) {
 			
-			// Filter triples for entities annotations
-			Iterator<Triple> ireferences = graph.filter(null, TechnicalClasses.ENHANCER_ENHANCEMENT
-					, null);
+			// Filter triples for entities referenced
+			Iterator<Triple> ireferences = graph.filter(null, OntologiesTerms.fiseEntityReference, null);
 			while (ireferences.hasNext()) {
 				entityReferences += 1;
 				Triple triple = ireferences.next();
@@ -257,6 +256,26 @@ public class PatentEnhancementEngineTest {
 		
 		assertTrue("text/plain".equals(partMimeType));
 		
+		
+	}
+	
+	@Test
+	public void testConstructText() {
+		
+		MGraph xml2rdf = null;
+		
+		try {
+			
+			xml2rdf = engine.transformXML(ci);
+			
+		} catch (EngineException e) {
+			 
+			System.out.println("Error while transforming the XML file into RDF");
+		}
+		
+		String text = engine.constructText(xml2rdf);
+		
+		System.out.println("TEXT FOR INDEXING: " + text);
 		
 	}
 	
