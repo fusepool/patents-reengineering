@@ -8,6 +8,10 @@ import org.apache.clerezza.rdf.core.UriRef;
  */
 public class OntologiesTerms {
 	
+	// FISE
+	final static String FISE_NS = "http://fise.iks-project.eu/ontology/";
+	final static UriRef fiseEntityReference = new UriRef(FISE_NS + "entity-reference");
+	
 	// Patent Metadata Ontology
 	final static String PMO_NS = "http://www.patexpert.org/ontologies/pmo.owl#";
 	final static UriRef pmoPatentPublication = new UriRef(PMO_NS + "PatentPublication");
