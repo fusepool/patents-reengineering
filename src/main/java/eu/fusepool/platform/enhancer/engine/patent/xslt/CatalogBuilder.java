@@ -117,11 +117,11 @@ public class CatalogBuilder {
 	}
 
 
-	private void makeBaseDirs(String base) {
-		File baseDir = bundleContext.getDataFile(base) ;
-		if(!baseDir.exists())
-			baseDir.mkdirs() ;
-	}
+//	private void makeBaseDirs(String base) {
+//		File baseDir = bundleContext.getDataFile(base) ;
+//		if(!baseDir.exists())
+//			baseDir.mkdirs() ;
+//	}
 
 	private void makeBaseDir(String base) {
 		File baseDir = bundleContext.getDataFile(base) ;

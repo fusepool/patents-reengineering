@@ -18,7 +18,6 @@ import javax.xml.transform.stream.StreamSource;
 
 import org.w3c.dom.Document;
 
-import eu.fusepool.platform.enhancer.engine.patent.xslt.DTDResolver;
 import eu.fusepool.platform.enhancer.engine.patent.xslt.ResourceURIResolver;
 import eu.fusepool.platform.enhancer.engine.patent.xslt.XMLProcessor;
 

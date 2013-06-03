@@ -16,7 +16,6 @@ import org.apache.clerezza.rdf.core.MGraph;
 import org.apache.clerezza.rdf.core.NonLiteral;
 import org.apache.clerezza.rdf.core.Triple;
 import org.apache.clerezza.rdf.core.UriRef;
-import org.apache.clerezza.rdf.core.access.TcManager;
 import org.apache.clerezza.rdf.core.impl.PlainLiteralImpl;
 import org.apache.clerezza.rdf.core.impl.TripleImpl;
 import org.apache.clerezza.rdf.core.serializedform.Parser;
@@ -31,10 +30,7 @@ import org.apache.felix.scr.annotations.Property;
 import org.apache.felix.scr.annotations.Reference;
 import org.apache.felix.scr.annotations.Service;
 import org.apache.stanbol.commons.indexedgraph.IndexedMGraph;
-import org.apache.stanbol.enhancer.contentitem.inmemory.InMemoryContentItemFactory;
 import org.apache.stanbol.enhancer.servicesapi.ContentItem;
-import org.apache.stanbol.enhancer.servicesapi.ContentItemFactory;
-import org.apache.stanbol.enhancer.servicesapi.ContentSink;
 import org.apache.stanbol.enhancer.servicesapi.ContentSource;
 import org.apache.stanbol.enhancer.servicesapi.EngineException;
 import org.apache.stanbol.enhancer.servicesapi.EnhancementEngine;
@@ -44,7 +40,6 @@ import org.apache.stanbol.enhancer.servicesapi.helper.EnhancementEngineHelper;
 import org.apache.stanbol.enhancer.servicesapi.impl.AbstractEnhancementEngine;
 import org.apache.stanbol.enhancer.servicesapi.impl.ByteArraySource;
 import org.apache.stanbol.enhancer.servicesapi.rdf.TechnicalClasses;
-import org.openjena.atlas.logging.Log;
 import org.osgi.framework.Constants;
 import org.osgi.framework.ServiceReference;
 import org.osgi.service.cm.ConfigurationException;
@@ -88,11 +83,6 @@ implements EnhancementEngine, ServiceProperties {
 	public static final Integer defaultOrder = ORDERING_EXTRACTION_ENHANCEMENT;
 
 	
-	private static final ContentItemFactory ciFactory = InMemoryContentItemFactory.getInstance();
-	
-
-	//private static final Logger log = LoggerFactory.getLogger(MarecLifterEnhancementEngine.class);
-	private TCServiceLocator serviceLocator ;
 	
 	// MIME TYPE of the patent document
 	private static final String MIME_TYPE_XML = "application/xml";
@@ -133,11 +123,12 @@ implements EnhancementEngine, ServiceProperties {
 	protected Parser parser ;
 	
 
-	//@SuppressWarnings("unchecked")
+
 	protected void activate(ComponentContext ce) throws IOException, ConfigurationException {
 		super.activate(ce);
 		this.componentContext = ce ;
 		
+		@SuppressWarnings("rawtypes")
 		Dictionary dict = ce.getProperties() ;
 		Object o = dict.get("CLEAN_ON_STARTUP") ;
 		if(o!=null)  {
@@ -172,7 +163,7 @@ implements EnhancementEngine, ServiceProperties {
             }
             
             // MIME Type of the input patent document must be application/xml
-            if (! ci.getMimeType().equals(this.MIME_TYPE_XML)) {
+            if (! ci.getMimeType().equals(MIME_TYPE_XML)) {
             	return CANNOT_ENHANCE;
             }
             
