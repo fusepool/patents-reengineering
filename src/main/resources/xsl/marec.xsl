@@ -575,7 +575,7 @@ XXX: This removes the codes after + or : in ECLA. There might be a particular us
     </xsl:template>
 
     <xsl:template match="phone">
-        <foaf:phone rdf:resource="tel:{normalize-space(phone)}"/>
+        <foaf:phone rdf:resource="tel:{replace(normalize-space(phone), ' ', '-')}"/>
     </xsl:template>
     <xsl:template match="fax">
         <schema:faxNumber><xsl:value-of select="fax"/></schema:faxNumber>
