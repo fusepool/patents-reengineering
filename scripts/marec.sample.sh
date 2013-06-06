@@ -2,7 +2,7 @@
 
 . ./patents.config.sh
 
-pathToCPCConcordances="/var/www/patents-reengineering/data/cpc-concordances/ECLAtoCPC.xml";
+JVM_ARGS="-Xmx4000M";
 
 #Data from #http://www.ifs.tuwien.ac.at/imp/marec.shtml
 
