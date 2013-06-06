@@ -11,7 +11,6 @@ import org.apache.xml.resolver.tools.ResolvingXMLReader;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 import org.xml.sax.SAXNotRecognizedException;
-import org.xml.sax.ext.EntityResolver2;
 
 /**
  * @author giorgio

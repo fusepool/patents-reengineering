@@ -7,8 +7,6 @@ import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.InputStream;
 
-import javax.xml.parsers.SAXParser;
-import javax.xml.parsers.SAXParserFactory;
 import javax.xml.transform.Transformer;
 import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.URIResolver;
@@ -16,13 +14,9 @@ import javax.xml.transform.sax.SAXSource;
 import javax.xml.transform.stream.StreamResult;
 import javax.xml.transform.stream.StreamSource;
 
-import net.sf.saxon.Controller;
-
-import org.apache.xerces.util.XMLCatalogResolver;
 import org.apache.xml.resolver.tools.ResolvingXMLFilter;
 import org.xml.sax.InputSource;
 
-import eu.fusepool.platform.enhancer.engine.patent.xslt.CatalogBuilder;
 import eu.fusepool.platform.enhancer.engine.patent.xslt.MarecXMLReader;
 import eu.fusepool.platform.enhancer.engine.patent.xslt.ResourceURIResolver;
 import eu.fusepool.platform.enhancer.engine.patent.xslt.XMLProcessor;

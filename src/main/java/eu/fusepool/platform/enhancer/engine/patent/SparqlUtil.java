@@ -11,7 +11,6 @@ import org.apache.clerezza.rdf.core.sparql.QueryParser;
 import org.apache.clerezza.rdf.core.sparql.ResultSet;
 import org.apache.clerezza.rdf.core.sparql.SolutionMapping;
 import org.apache.clerezza.rdf.core.sparql.query.SelectQuery;
-import org.apache.clerezza.rdf.jena.sparql.JenaSparqlEngine;
 
 /*
  * Provides SPARQL queries to be used by other classes.
@@ -29,6 +28,7 @@ public class SparqlUtil {
 	 * selected using properties that are filled that are not for the mentioned patent as title and abstract. These properties can also be used for the plain text
 	 * representation of the document to be indexed instead of the full XML document. 
 	 */
+	@SuppressWarnings("rawtypes")
 	public Map getPatentData(MGraph mapping, TcManager tcManager) {
 		
 		Map<String, Resource> patentData = new HashMap<String, Resource>();
