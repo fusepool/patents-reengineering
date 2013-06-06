@@ -25,15 +25,15 @@
     <xsl:variable name="lang" select="'en'"/>
     <xsl:variable name="uriThingSeparator" select="'/'"/>
 
-    <xsl:variable name="provenance" select="concat($baseURI, 'provenance', $uriThingSeparator)"/>
+    <xsl:variable name="provenance" select="concat($baseURI, 'prov', $uriThingSeparator)"/>
     <xsl:variable name="concept" select="concat($baseURI, 'concept', $uriThingSeparator)"/>
     <xsl:variable name="code" select="concat($baseURI, 'code/')"/>
     <xsl:variable name="class" select="concat($baseURI, 'class', $uriThingSeparator)"/>
     <xsl:variable name="property" select="concat($baseURI, 'property', $uriThingSeparator)"/>
     <xsl:variable name="dataset" select="concat($baseURI, 'dataset/')"/>
-    <xsl:variable name="patent" select="concat($baseURI, 'patent/')"/>
-    <xsl:variable name="patentFamily" select="concat($baseURI, 'family', $uriThingSeparator)"/>
-    <xsl:variable name="party" select="concat($baseURI, 'party', $uriThingSeparator)"/>
+    <xsl:variable name="doc" select="concat($baseURI, 'doc/')"/>
+    <xsl:variable name="patent" select="concat($doc, 'patent/')"/>
+    <xsl:variable name="patentFamily" select="concat($doc, 'family', $uriThingSeparator)"/>
     <xsl:variable name="entityID" select="concat($baseURI, 'id', $uriThingSeparator)"/>
     <xsl:variable name="provDocument" select="document($pathToProvDocument)/rdf:RDF"/>
 <!-- CONFIG END -->
