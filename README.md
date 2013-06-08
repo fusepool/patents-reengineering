@@ -1,5 +1,7 @@
 #PATENTS RE-ENGINEERING
 
+RDF-izer (Extractor) for patent XML documents.
+
 ##Stanbol Enhancement Engine
 
 The outcome of this project is an OSGi bundle (enhancement engine) for Apache Stanbol that takes a patent document XML file as input and gives RDF triples as output.
