@@ -161,20 +161,27 @@ public class PatentEnhancementEngineTest {
 			System.out.println("Error while transforming the XML file into RDF");
 		}
 		
-		MGraph graph = engine.addEnhancements(ci, xml2rdf);
+		MGraph enhancementGraph = engine.addEnhancements(ci, xml2rdf);
 		
 		int entityReferences = 0;
 		
-		if (! graph.isEmpty()) {
+		if (! enhancementGraph.isEmpty()) {
 			
 			// Filter triples for entities referenced
-			Iterator<Triple> ireferences = graph.filter(null, OntologiesTerms.fiseEntityReference, null);
+			Iterator<Triple> ireferences = enhancementGraph.filter(null, OntologiesTerms.fiseEntityReference, null);
 			while (ireferences.hasNext()) {
 				entityReferences += 1;
+				//<enhancement> <fise:entity-reference> <entity>
 				Triple triple = ireferences.next();
-				String enhancement = triple.getSubject().toString();
-				String entity = triple.getObject().toString();
-				System.out.println("Filtered entity references: " + enhancement + " entity reference: " + entity);
+				UriRef enhancement = (UriRef) triple.getSubject();
+				UriRef entity = (UriRef) triple.getObject();
+				// entity type
+				Iterator<Triple> itypes = xml2rdf.filter(entity, RDF.type, null);
+				String type = "";
+				while(itypes.hasNext()) {
+					type = itypes.next().getObject().toString();
+				}
+				System.out.println("Filtered entity references: " + enhancement + " entity reference: " + entity + ", type: " + type);
 			}
 			
 		}

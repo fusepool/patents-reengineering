@@ -291,25 +291,25 @@ implements EnhancementEngine, ServiceProperties {
 	 * pmo:PatentPublication, schema:PostalAddress
 	 * 
 	 */
-	public MGraph addEnhancements(ContentItem ci, MGraph mapping) {
+	public MGraph addEnhancements(ContentItem ci, MGraph xml2rdf) {
 		
 		MGraph enhancements = new IndexedMGraph();
 		
 		//System.out.println("Start adding annotation");
 		
-		if (! mapping.isEmpty()) {
+		if (! xml2rdf.isEmpty()) {
 			
 			// Create an enhancement for each entity of type foaf:Person
-			Iterator<Triple> ipersons = mapping.filter(null, RDF.type, FOAF.Person) ;
+			Iterator<Triple> ipersons = xml2rdf.filter(null, RDF.type, FOAF.Person) ;
 			createAnnotations(ci, enhancements, ipersons);
 			
 			// Create an enhancement for each entity of type foaf:Agent
-			Iterator<Triple> iagents = mapping.filter(null, RDF.type, FOAF.Agent) ;
+			Iterator<Triple> iagents = xml2rdf.filter(null, RDF.type, FOAF.Agent) ;
 			createAnnotations(ci, enhancements, iagents);
 			
 			
 			// Create one enhancement for one entity of type pmo:PatentPublication that is directly related to the input XML patent document.	
-			UriRef patentUri = getPatentUri(mapping);
+			UriRef patentUri = getPatentUri(xml2rdf);
 			if( patentUri != null) {
 				UriRef patentEnhancement = EnhancementEngineHelper.createEntityEnhancement(ci, this) ;
 				// add a triple to link the enhancement to the entity			
@@ -357,18 +357,18 @@ implements EnhancementEngine, ServiceProperties {
 	 * selected using properties that are filled that are not for the mentioned patent as title and abstract. These properties can also be used for the plain text
 	 * representation of the document to be indexed instead of the full XML document. 
 	 */
-	public UriRef getPatentUri(MGraph mapping) {
+	public UriRef getPatentUri(MGraph xml2rdf) {
 		
 		UriRef patentUri = null;
 		
-		Iterator<Triple> ipatents = mapping.filter(null, RDF.type, OntologiesTerms.pmoPatentPublication) ;
+		Iterator<Triple> ipatents = xml2rdf.filter(null, RDF.type, OntologiesTerms.pmoPatentPublication) ;
 		
 		while(ipatents.hasNext()) {
 			
 			UriRef patentUriTemp = (UriRef) ipatents.next().getSubject();
 			// Filter triple with a pmo:PatentPublication as subject and with dcterms:title property filled. There exist only one such triple in each 
 			// document.
-			Iterator<Triple> ipatentWithTitle = mapping.filter(patentUriTemp, DCTERMS.title, null);
+			Iterator<Triple> ipatentWithTitle = xml2rdf.filter(patentUriTemp, DCTERMS.title, null);
 			while(ipatentWithTitle.hasNext()) {
 				patentUri = (UriRef) ipatentWithTitle.next().getSubject(); 
 			}
@@ -397,7 +397,7 @@ implements EnhancementEngine, ServiceProperties {
 		String title = "";
 		while(ititles.hasNext()) {
 			title = ititles.next().getObject().toString() + " ";
-			text += title;
+			text += unquote( title );
 		}
 		
 		
@@ -406,20 +406,37 @@ implements EnhancementEngine, ServiceProperties {
 		String abstract_ = " ";
 		while(iabstracts.hasNext()) {
 			title = iabstracts.next().getObject().toString() + " ";
-			text += abstract_;
+			text += unquote( abstract_ );
 		}
 		
 		// Get all the foaf:name of entities of type foaf:Person.
 		Iterator<Triple> inames = graph.filter(null, FOAF.name, null);
 		String name = "";
 		while(inames.hasNext()) {
-			title = inames.next().getObject().toString() + " ";
-			text += name;
+			name = inames.next().getObject().toString() + " ";
+			text += unquote( name );
 		}
 		
 		logger.info("Text to be indexed" + text);
 		
 		return text;
+	}
+	
+	/*
+	 * Removes quotations from properties values
+	 * 
+	 */
+	public String unquote(String string) {
+		String result = "";
+		
+		if(string.length() > 3) {
+		
+			//result = string.substring(1, string.length() - 1);
+			result = string.replace('"', ' ');
+		
+		}
+		
+		return result;
 	}
 	
 	

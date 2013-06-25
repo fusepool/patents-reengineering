@@ -66,8 +66,6 @@ TODO: ignore DTD check. saxonb-xslt breaks if offline
             <rdf:Description rdf:about="{$patentURI}">
                 <rdf:type rdf:resource="{$pmo}PatentPublication"/>
 
-<!--                <xsl:call-template name="generalParameterEntities"/>-->
-
                 <xsl:call-template name="family-id">
                     <xsl:with-param name="ucid" select="$ucid" tunnel="yes"/>
                 </xsl:call-template>
@@ -232,8 +230,6 @@ XXX: Normally we don't really want to define other patents from here. In case th
 
 <!--                    <dcterms:isPartOf rdf:resource="{$patent}{$ucid}/{$referenceType}"/>-->
 
-<!--            <xsl:call-template name="generalParameterEntities"/>-->
-
             <xsl:apply-templates select="@format"/>
 
             <xsl:if test="country">
@@ -358,8 +354,6 @@ XXX: This removes the codes after + or : in ECLA. There might be a particular us
     XXX: Maybe switch to a code list
     -->
                         <rdf:Description rdf:about="{$conceptURI}">
-    <!--                        <xsl:call-template name="generalParameterEntities"/>-->
-
     <!--                        <rdf:type rdf:resource="{$pmo}PatentClassificationCategory"/>-->
     <!--                        <rdf:type rdf:resource="{$pmo}IPCCategory"/>-->
                             <rdf:type rdf:resource="{$skos}Concept"/>
@@ -575,7 +569,7 @@ XXX: This removes the codes after + or : in ECLA. There might be a particular us
     </xsl:template>
 
     <xsl:template match="phone">
-        <foaf:phone rdf:resource="tel:{normalize-space(phone)}"/>
+        <foaf:phone rdf:resource="tel:{replace(normalize-space(phone), ' ', '-')}"/>
     </xsl:template>
     <xsl:template match="fax">
         <schema:faxNumber><xsl:value-of select="fax"/></schema:faxNumber>
@@ -635,18 +629,18 @@ XXX: This removes the codes after + or : in ECLA. There might be a particular us
 
 
     <xsl:template name="generalParameterEntities">
-        <xsl:apply-templates select="@id"/>
+        <xsl:apply-templates select="@ucid"/>
 
 <!--        <xsl:apply-templates selet="@mxw-id"/>-->
 
-        <xsl:apply-templates select="@status"/>
+<!--        <xsl:apply-templates select="@status"/>-->
 
 <!--        <xsl:apply-templates selet="@load-source"/>-->
 
 <!--        <xsl:apply-templates selet="@ref-ucid"/>-->
     </xsl:template>
 
-    <xsl:template match="@id">
+    <xsl:template match="@id | @ucid">
         <dcterms:identifier><xsl:value-of select="."/></dcterms:identifier>
     </xsl:template>
 
