@@ -73,6 +73,8 @@
         <rdf:Description rdf:about="{$conceptURI}">
             <skos:notation><xsl:value-of select="$conceptID"/></skos:notation>
 
+            <dcterms:isFormatOf rdf:resource="{http://worldwide.espacenet.com/classification#!/CPC=}{$conceptID}"/>
+
             <xsl:choose>
                 <xsl:when test="$level &lt; 7">
                     <rdf:type rdf:resource="{$skos}Collection"/>
