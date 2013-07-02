@@ -54,7 +54,7 @@
     <xsl:variable name="sumo" select="'http://www.owl-ontologies.com/sumo.owl#'"/>
     <xsl:variable name="pmo" select="'http://www.patexpert.org/ontologies/pmo.owl#'"/>
 
-    <!--Adapted from https://github.com/csarven/sdmx-to-qb/blob/master/scripts/common.xsl -->
+    <!--Adapted from https://github.com/csarven/linked-sdmx/blob/master/scripts/common.xsl -->
     <xsl:template name="langTextNode">
         <xsl:if test="@xml:lang">
             <xsl:copy-of select="@*[name() = 'xml:lang']"/>
@@ -82,7 +82,7 @@
     </xsl:function>
 
 
-    <!--Copied from https://github.com/csarven/sdmx-to-qb/blob/master/scripts/common.xsl -->
+    <!--Copied from https://github.com/csarven/linked-sdmx/blob/master/scripts/common.xsl -->
     <xsl:template name="rdfDatatypeXSD">
         <xsl:param name="type"/>
 
@@ -90,7 +90,7 @@
     </xsl:template>
 
 
-    <!--Copied from https://github.com/csarven/sdmx-to-qb/blob/master/scripts/common.xsl -->
+    <!--Copied from https://github.com/csarven/linked-sdmx/blob/master/scripts/common.xsl -->
     <xsl:template name="provActivity">
         <xsl:param name="provUsedA"/>
         <xsl:param name="provUsedB"/>
@@ -122,7 +122,7 @@
         </rdf:Description>
     </xsl:template>
 
-    <!--Copied from https://github.com/csarven/sdmx-to-qb/blob/master/scripts/common.xsl -->
+    <!--Copied from https://github.com/csarven/linked-sdmx/blob/master/scripts/common.xsl -->
     <xsl:function name="fn:now">
         <xsl:value-of select="format-dateTime(current-dateTime(), '[Y0001]-[M01]-[D01]T[H01]:[m01]:[s01]Z')"/>
     </xsl:function>
