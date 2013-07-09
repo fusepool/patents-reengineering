@@ -59,9 +59,9 @@
     <xsl:template match="classification-item">
         <xsl:variable name="level" select="number(normalize-space(@level))"/>
         <xsl:variable name="levelPath">
-            <xsl:if test="$level &lt; 7">
+<!--            <xsl:if test="$level &lt; 7">-->
                 <xsl:value-of select="concat($level, '/')"/>
-            </xsl:if>
+<!--            </xsl:if>-->
         </xsl:variable>
         <xsl:variable name="conceptID" select="normalize-space(classification-symbol)"/>
         <xsl:variable name="conceptURI" select="concat($concept, 'cpc/', $levelPath, $conceptID)"/>

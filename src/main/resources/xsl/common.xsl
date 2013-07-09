@@ -13,8 +13,9 @@
     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
     xmlns:prov="http://www.w3.org/ns/prov#"
     xmlns:fn="http://270a.info/xpath-function/"
+    xmlns:uuid="java:java.util.UUID"
 
-    exclude-result-prefixes="xsl fn"
+    exclude-result-prefixes="xsl fn uuid"
     >
 
     <xsl:output encoding="utf-8" indent="yes" method="xml" omit-xml-declaration="no"/>
@@ -25,6 +26,7 @@
     <xsl:variable name="lang" select="'en'"/>
     <xsl:variable name="uriThingSeparator" select="'/'"/>
 
+    <xsl:variable name="license" select="'http://creativecommons.org/publicdomain/zero/1.0/'"/>
     <xsl:variable name="provenance" select="concat($baseURI, 'prov', $uriThingSeparator)"/>
     <xsl:variable name="concept" select="concat($baseURI, 'concept', $uriThingSeparator)"/>
     <xsl:variable name="code" select="concat($baseURI, 'code/')"/>
@@ -97,11 +99,13 @@
         <xsl:param name="provGenerated"/>
 
         <xsl:variable name="now" select="format-dateTime(current-dateTime(), '[Y0001]-[M01]-[D01]T[H01]:[m01]:[s01]Z')"/>
-        <xsl:variable name="provActivity" select="concat($provenance, 'activity', $uriThingSeparator, replace($now, '\D', ''))"/>
+<!--replace($now, '\D', '')-->
+        <xsl:variable name="provActivity" select="concat($provenance, 'activity', $uriThingSeparator, uuid:randomUUID())"/>
 
         <rdf:Description rdf:about="{$provActivity}">
             <rdf:type rdf:resource="{$prov}Activity"/>
-<!--dcterms:title-->
+            <rdfs:label xml:lang="en"><xsl:value-of select="concat('Transformed ', $entityID, ' data')"/></rdfs:label>
+
             <xsl:variable name="informedBy" select="$provDocument/rdf:Description[prov:generated/@rdf:resource = $provUsedA]/@rdf:about"/>
             <xsl:if test="$informedBy">
                 <prov:wasInformedBy rdf:resource="{$informedBy}"/>
@@ -111,12 +115,25 @@
             <prov:used rdf:resource="{$provUsedA}"/>
             <xsl:if test="$provUsedB">
                 <prov:used rdf:resource="{$provUsedB}"/>
+                <xsl:variable name="informedBy" select="$provDocument/rdf:Description[prov:generated/rdf:resource = $provUsedB]/@rdf:about"/>
+
+                <xsl:if test="$informedBy">
+                    <prov:wasInformedBy rdf:resource="{$informedBy}"/>
+                </xsl:if>
             </xsl:if>
             <prov:used rdf:resource="{$xslDocument}"/>
             <prov:generated>
                 <rdf:Description rdf:about="{$provGenerated}">
+                    <rdf:type rdf:resource="{$prov}Entity"/>
+                    <prov:wasAttributedTo rdf:resource="{$creator}"/>
+                    <prov:generatedAtTime rdf:datatype="{$xsd}dateTime"><xsl:value-of select="$now"/></prov:generatedAtTime>
                     <prov:wasDerivedFrom rdf:resource="{$provUsedA}"/>
                     <prov:wasGeneratedBy rdf:resource="{$provActivity}"/>
+                    <xsl:if test="$license">
+                        <dcterms:license rdf:resource="{$license}"/>
+                    </xsl:if>
+                    <dcterms:issued rdf:datatype="{$xsd}dateTime"><xsl:value-of select="$now"/></dcterms:issued>
+                    <dcterms:creator rdf:resource="{$creator}"/>
                 </rdf:Description>
             </prov:generated>
         </rdf:Description>

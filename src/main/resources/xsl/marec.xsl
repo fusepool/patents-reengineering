@@ -83,9 +83,9 @@ TODO: ignore DTD check. saxonb-xslt breaks if offline
 <!--                <xsl:with-param name="ucid" select="$ucid" tunnel="yes"/>-->
 <!--            </xsl:call-template>-->
 
-<!--            <xsl:call-template name="claims">-->
-<!--                <xsl:with-param name="ucid" select="$ucid" tunnel="yes"/>-->
-<!--            </xsl:call-template>-->
+            <xsl:call-template name="claims">
+                <xsl:with-param name="ucid" select="$ucid" tunnel="yes"/>
+            </xsl:call-template>
 <!--            <xsl:apply-templates select="drawings"/>-->
             <xsl:call-template name="copyright">
                 <xsl:with-param name="ucid" select="$ucid" tunnel="yes"/>
@@ -230,7 +230,7 @@ XXX: Normally we don't really want to define other patents from here. In case th
 
 <!--                    <dcterms:isPartOf rdf:resource="{$patent}{$ucid}/{$referenceType}"/>-->
 
-            <xsl:apply-templates select="@format"/>
+<!--            <xsl:apply-templates select="@format"/>-->
 
             <xsl:if test="country">
                 <pmo:countryOfFiling><xsl:value-of select="country"/></pmo:countryOfFiling>
@@ -342,9 +342,9 @@ XXX: This removes the codes after + or : in ECLA. There might be a particular us
                     <xsl:variable name="id" select="CPC"/>
                     <xsl:variable name="level" select="number(normalize-space(level))"/>
                     <xsl:variable name="levelPath">
-                        <xsl:if test="$level &lt; 7">
+<!--                        <xsl:if test="$level &lt; 7">-->
                             <xsl:value-of select="concat($level, '/')"/>
-                        </xsl:if>
+<!--                        </xsl:if>-->
                     </xsl:variable>
 
                     <xsl:variable name="conceptURI" select="concat($concept, 'cpc/', $levelPath, $id)"/>
@@ -665,13 +665,7 @@ Add members
     </xsl:template>
 
 
-<!--    <xsl:template match="*">-->
-<!--        <xsl:element name="{local-name()}">-->
-<!--            <xsl:copy-of select="@*"/>-->
-<!--            <xsl:apply-templates select="node() | @*"/>-->
-<!--            <xsl:copy-of select="."/>-->
-<!--        </xsl:element>-->
-<!--    </xsl:template>-->
+
 
     <xsl:template name="description">
         <xsl:param name="ucid" tunnel="yes"/>
@@ -716,28 +710,59 @@ Add members
         </xsl:for-each>
     </xsl:template>
 
+<!--    <xsl:template match="@*|node()">-->
+<!--        <xsl:element name="{local-name()}">-->
+<!--            <xsl:copy-of select="@*"/>-->
+<!--            <xsl:apply-templates select="node() | @*"/>-->
+<!--            <xsl:copy-of select="."/>-->
+<!--        </xsl:element>-->
+
+<!--        <xsl:copy-of select="@*|node()"/>-->
+<!--    </xsl:template>-->
+<!-- identity -->
+    <xsl:template match="*">
+        <xsl:copy>
+            <xsl:copy-of select="@*"/>
+            <xsl:apply-templates/>
+        </xsl:copy>
+    </xsl:template>
+
+    <xsl:template match="claim-text">
+        <div><xsl:apply-templates/></div>
+    </xsl:template>
+    <xsl:template match="sl">
+        <ul><xsl:apply-templates/></ul>
+    </xsl:template>
 
     <xsl:template name="claims">
         <xsl:param name="ucid" tunnel="yes"/>
 
         <xsl:for-each select="claims">
-            <xsl:variable name="lang" select="@lang"/>
+            <xsl:variable name="lang" select="lower-case(@lang)"/>
+
             <xsl:for-each select="claim">
                 <rdf:Description rdf:about="{$patent}{$ucid}">
-                    <property:hasClaim>
+                    <property:claim>
                         <rdf:Description rdf:about="{$patent}{$ucid}/claim/{@num}">
                             <rdf:type rdf:resource="{$pso}Claim"/>
                             <rdf:type rdf:resource="{$skos}Concept"/>
-                            <skos:prefLabel xml:lang="{lower-case($lang)}"><xsl:value-of select="concat('Claim ', @num)"/></skos:prefLabel>
+                            <skos:prefLabel xml:lang="en"><xsl:value-of select="concat('Claim ', @num)"/></skos:prefLabel>
 
                             <skos:notation><xsl:value-of select="@num"/></skos:notation>
-                            <skos:definition xml:lang="{lower-case($lang)}" rdf:parseType="Literal">
-                                <xsl:for-each select="claim-text">
-                                    <xsl:apply-templates select="*"/>
-                                </xsl:for-each>
+                            <skos:definition rdf:parseType="Literal">
+<!--                                <xsl:for-each select="claim-text">-->
+                                    <div xmlns="http://www.w3.org/1999/xhtml" xml="http://www.w3.org/XML/1998/namespace">
+                                        <xsl:if test="$lang != ''">
+                                            <xsl:attribute name="xml:lang">
+                                                <xsl:value-of select="$lang"/>
+                                            </xsl:attribute>
+                                        </xsl:if>
+                                        <xsl:apply-templates select="*"/>
+                                    </div>
+<!--                                </xsl:for-each>-->
                             </skos:definition>
                         </rdf:Description>
-                    </property:hasClaim>
+                    </property:claim>
                 </rdf:Description>
             </xsl:for-each>
         </xsl:for-each>
