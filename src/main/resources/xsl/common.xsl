@@ -97,6 +97,7 @@
         <xsl:param name="provUsedA"/>
         <xsl:param name="provUsedB"/>
         <xsl:param name="provGenerated"/>
+        <xsl:param name="id"/>
 
         <xsl:variable name="now" select="format-dateTime(current-dateTime(), '[Y0001]-[M01]-[D01]T[H01]:[m01]:[s01]Z')"/>
 <!--replace($now, '\D', '')-->
@@ -104,7 +105,7 @@
 
         <rdf:Description rdf:about="{$provActivity}">
             <rdf:type rdf:resource="{$prov}Activity"/>
-            <rdfs:label xml:lang="en"><xsl:value-of select="concat('Transformed ', $entityID, ' data')"/></rdfs:label>
+            <rdfs:label xml:lang="en"><xsl:value-of select="concat('Transformed ', $id, ' data')"/></rdfs:label>
 
             <xsl:variable name="informedBy" select="$provDocument/rdf:Description[prov:generated/@rdf:resource = $provUsedA]/@rdf:about"/>
             <xsl:if test="$informedBy">

@@ -61,6 +61,7 @@ TODO: ignore DTD check. saxonb-xslt breaks if offline
             <xsl:call-template name="provActivity">
                 <xsl:with-param name="provUsedA" select="resolve-uri(tokenize(document-uri(/), '/')[last()], $xmlDocumentBaseURI)"/>
                 <xsl:with-param name="provGenerated" select="$patentURI"/>
+                <xsl:with-param name="id" select="$ucid"/>
             </xsl:call-template>
 
             <rdf:Description rdf:about="{$patentURI}">
@@ -79,9 +80,9 @@ TODO: ignore DTD check. saxonb-xslt breaks if offline
                 <xsl:with-param name="ucid" select="$ucid" tunnel="yes"/>
             </xsl:call-template>
 
-<!--            <xsl:call-template name="description">-->
-<!--                <xsl:with-param name="ucid" select="$ucid" tunnel="yes"/>-->
-<!--            </xsl:call-template>-->
+            <xsl:call-template name="description">
+                <xsl:with-param name="ucid" select="$ucid" tunnel="yes"/>
+            </xsl:call-template>
 
             <xsl:call-template name="claims">
                 <xsl:with-param name="ucid" select="$ucid" tunnel="yes"/>
@@ -672,29 +673,31 @@ Add members
 
         <xsl:for-each select="description">
             <rdf:Description rdf:about="{$patent}{$ucid}">
-                <xsl:variable name="lang" select="@lang"/>
-                <skos:definition>
-                    <xsl:copy-of select="*" copy-namespaces="yes"/>
-                </skos:definition>
+                <xsl:variable name="lang" select="lower-case(@lang)"/>
 
-                <pso:hasDescriptionSection>
-                    <rdf:Description rdf:about="{$patent}{$ucid}/description">
-                        <rdf:type rdf:resource="{$pso}Description"/>
+                <dcterms:description rdf:parseType="Literal">
+                    <div xmlns="http://www.w3.org/1999/xhtml" xml:lang="{$lang}">
+                               <xsl:apply-templates/>
+                    </div>
+                </dcterms:description>
+<!--                <pso:hasDescriptionSection>-->
+<!--                    <rdf:Description rdf:about="{$patent}{$ucid}/description">-->
+<!--                        <rdf:type rdf:resource="{$pso}Description"/>-->
 
-                        <xsl:for-each select="p">
-                            <dcterms:hasPart>
-                                <rdf:Description rdf:about="{$patent}{$ucid}/description{$uriThingSeparator}{@num}">
-                                    <dcterms:isPartOf rdf:resource="{$patent}{$ucid}/description"/>
-                                    <rdfs:label xml:lang="en"><xsl:value-of select="concat('Paragraph ', @num)"/></rdfs:label>
-                                    <dcterms:identifier><xsl:value-of select="@num"/></dcterms:identifier>
-                                    <dcterms:description rdf:parseType="Literal" xml:lang="{lower-case($lang)}">
-                                        <xsl:apply-templates select="*"/>
-                                    </dcterms:description>
-                                </rdf:Description>
-                            </dcterms:hasPart>
-                        </xsl:for-each>
-                    </rdf:Description>
-                </pso:hasDescriptionSection>
+<!--                        <xsl:for-each select="p">-->
+<!--                            <dcterms:hasPart>-->
+<!--                                <rdf:Description rdf:about="{$patent}{$ucid}/description{$uriThingSeparator}{@num}">-->
+<!--                                    <dcterms:isPartOf rdf:resource="{$patent}{$ucid}/description"/>-->
+<!--                                    <rdfs:label xml:lang="en"><xsl:value-of select="concat('Paragraph ', @num)"/></rdfs:label>-->
+<!--                                    <dcterms:identifier><xsl:value-of select="@num"/></dcterms:identifier>-->
+<!--                                    <dcterms:description rdf:parseType="Literal">-->
+
+<!--                                    </dcterms:description>-->
+<!--                                </rdf:Description>-->
+<!--                            </dcterms:hasPart>-->
+<!--                        </xsl:for-each>-->
+<!--                    </rdf:Description>-->
+<!--                </pso:hasDescriptionSection>-->
             </rdf:Description>
         </xsl:for-each>
     </xsl:template>
@@ -705,33 +708,30 @@ Add members
 
         <xsl:for-each select="abstract">
             <rdf:Description rdf:about="{$patent}{$ucid}">
-                <dcterms:abstract xml:lang="{lower-case(@lang)}"><xsl:apply-templates select="*"/></dcterms:abstract>
+                <dcterms:abstract rdf:parseType="Literal">
+<!--                    <div>-->
+                    <div xmlns="http://www.w3.org/1999/xhtml" xml:lang="{$lang}">
+                               <xsl:apply-templates/>
+                    </div>
+                </dcterms:abstract>
             </rdf:Description>
         </xsl:for-each>
     </xsl:template>
 
-<!--    <xsl:template match="@*|node()">-->
-<!--        <xsl:element name="{local-name()}">-->
-<!--            <xsl:copy-of select="@*"/>-->
-<!--            <xsl:apply-templates select="node() | @*"/>-->
-<!--            <xsl:copy-of select="."/>-->
-<!--        </xsl:element>-->
 
-<!--        <xsl:copy-of select="@*|node()"/>-->
-<!--    </xsl:template>-->
-<!-- identity -->
     <xsl:template match="*">
-        <xsl:copy>
+        <xsl:element name="{local-name()}" namespace="http://www.w3.org/1999/xhtml">
             <xsl:copy-of select="@*"/>
             <xsl:apply-templates/>
-        </xsl:copy>
+        </xsl:element>
     </xsl:template>
 
+
     <xsl:template match="claim-text">
-        <div><xsl:apply-templates/></div>
+        <div xmlns="http://www.w3.org/1999/xhtml"><xsl:apply-templates/></div>
     </xsl:template>
     <xsl:template match="sl">
-        <ul><xsl:apply-templates/></ul>
+        <ul xmlns="http://www.w3.org/1999/xhtml"><xsl:apply-templates/></ul>
     </xsl:template>
 
     <xsl:template name="claims">
@@ -751,13 +751,9 @@ Add members
                             <skos:notation><xsl:value-of select="@num"/></skos:notation>
                             <skos:definition rdf:parseType="Literal">
 <!--                                <xsl:for-each select="claim-text">-->
-                                    <div xmlns="http://www.w3.org/1999/xhtml" xml="http://www.w3.org/XML/1998/namespace">
-                                        <xsl:if test="$lang != ''">
-                                            <xsl:attribute name="xml:lang">
-                                                <xsl:value-of select="$lang"/>
-                                            </xsl:attribute>
-                                        </xsl:if>
-                                        <xsl:apply-templates select="*"/>
+<!--                                    <div>-->
+                                    <div xmlns="http://www.w3.org/1999/xhtml" xml:lang="{$lang}">
+                                       <xsl:apply-templates/>
                                     </div>
 <!--                                </xsl:for-each>-->
                             </skos:definition>
