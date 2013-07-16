@@ -20,7 +20,7 @@
     xmlns:pulo="http://www.patexpert.org/ontologies/pulo.owl#"
     xmlns:sumo="http://www.owl-ontologies.com/sumo.owl#"
     xmlns:pmo="http://www.patexpert.org/ontologies/pmo.owl#"
-    xmlns:property="http://fusepool.info/property/"
+    xmlns:fp="http://fusepool.info/vocab#"
     xmlns:schema="http://schema.org/"
     xmlns:uuid="java:java.util.UUID"
 
@@ -137,16 +137,16 @@ TODO: ignore DTD check. saxonb-xslt breaks if offline
                         <xsl:call-template name="generalParameterEntities"/>
 
                         <xsl:if test="@appl-type">
-                            <property:appl-type><xsl:value-of select="@appl-type"/></property:appl-type>
+                            <fp:applType><xsl:value-of select="@appl-type"/></fp:applType>
                         </xsl:if>
                         <xsl:if test="@us-series-code">
-                            <property:us-series-code><xsl:value-of select="@us-series-code"/></property:us-series-code>
+                            <fp:usSeriesCode><xsl:value-of select="@us-series-code"/></fp:usSeriesCode>
                         </xsl:if>
                         <xsl:if test="@us-art-unit">
-                            <property:us-art-unit><xsl:value-of select="@us-art-unit"/></property:us-art-unit>
+                            <fp:usArtUnit><xsl:value-of select="@us-art-unit"/></fp:usArtUnit>
                         </xsl:if>
                         <xsl:if test="@is-representative">
-                            <property:is-representative><xsl:value-of select="@is-representative"/></property:is-representative>
+                            <fp:isRepresentative><xsl:value-of select="@is-representative"/></fp:isRepresentative>
                         </xsl:if>
 
                         <xsl:call-template name="document-id">
@@ -177,7 +177,7 @@ XXX: Skips priority-claims without @ucid
 -->
         <xsl:for-each select="priority-claims/priority-claim[@ucid]">
             <rdf:Description rdf:about="{$patent}{$ucid}">
-                <property:priority-claim>
+                <fp:priorityClaim>
                     <rdf:Description rdf:about="{$patent}{@ucid}">
 <!--
 XXX: Normally we don't really want to define other patents from here. In case this patent is not declared anywhere else, there is at least this type.
@@ -189,7 +189,7 @@ XXX: Normally we don't really want to define other patents from here. In case th
                         </xsl:call-template>
 
                     </rdf:Description>
-                </property:priority-claim>
+                </fp:priorityClaim>
             </rdf:Description>
         </xsl:for-each>
     </xsl:template>
@@ -235,7 +235,7 @@ XXX: Normally we don't really want to define other patents from here. In case th
 
             <xsl:if test="country">
                 <pmo:countryOfFiling><xsl:value-of select="country"/></pmo:countryOfFiling>
-                <property:filing-office rdf:resource="{$code}filing-office{$uriThingSeparator}{country}"/>
+                <fp:filingOffice rdf:resource="{$code}filing-office{$uriThingSeparator}{country}"/>
             </xsl:if>
 
             <xsl:if test="doc-number">
@@ -455,7 +455,7 @@ XXX: This removes the codes after + or : in ECLA. There might be a particular us
                     <xsl:value-of select="concat('pmo:', $party-type)"/>
                 </xsl:when>
                 <xsl:when test="local-name() = 'agent'">
-                    <xsl:value-of select="'property:agent'"/>
+                    <xsl:value-of select="'fp:agent'"/>
                 </xsl:when>
                 <xsl:otherwise>
                 </xsl:otherwise>
@@ -499,7 +499,7 @@ XXX: This removes the codes after + or : in ECLA. There might be a particular us
                 <xsl:when test="$party-type = 'agent'">
                     <rdf:type rdf:resource="{$sumo}Agent"/>
                     <rdf:type rdf:resource="{$foaf}Agent"/>
-                    <property:agentOf rdf:resource="{$patent}{$ucid}"/>
+                    <fp:agentOf rdf:resource="{$patent}{$ucid}"/>
                 </xsl:when>
                 <xsl:otherwise>
                 </xsl:otherwise>
@@ -556,7 +556,7 @@ XXX: This removes the codes after + or : in ECLA. There might be a particular us
             </xsl:if>
 
             <xsl:if test="registered-number">
-                <property:registered-number><xsl:value-of select="registered-number"/></property:registered-number>
+                <fp:registeredNumber><xsl:value-of select="registered-number"/></fp:registeredNumber>
             </xsl:if>
 
             <xsl:apply-templates select="address"/>
@@ -582,7 +582,7 @@ XXX: This removes the codes after + or : in ECLA. There might be a particular us
         <foaf:page rdf:resource="{normalize-space(url)}"/>
     </xsl:template>
     <xsl:template match="ead">
-        <property:ead><xsl:value-of select="ead"/></property:ead>
+        <fp:ead><xsl:value-of select="ead"/></fp:ead>
     </xsl:template>
 
     <xsl:template match="address">
@@ -646,7 +646,7 @@ XXX: This removes the codes after + or : in ECLA. There might be a particular us
     </xsl:template>
 
     <xsl:template match="@status">
-        <property:status><xsl:value-of select="."/></property:status>
+        <fp:status><xsl:value-of select="."/></fp:status>
     </xsl:template>
 
     <xsl:template name="family-id">
@@ -677,27 +677,9 @@ Add members
 
                 <dcterms:description rdf:parseType="Literal">
                     <div xmlns="http://www.w3.org/1999/xhtml" xml:lang="{$lang}">
-                               <xsl:apply-templates/>
+                       <xsl:apply-templates/>
                     </div>
                 </dcterms:description>
-<!--                <pso:hasDescriptionSection>-->
-<!--                    <rdf:Description rdf:about="{$patent}{$ucid}/description">-->
-<!--                        <rdf:type rdf:resource="{$pso}Description"/>-->
-
-<!--                        <xsl:for-each select="p">-->
-<!--                            <dcterms:hasPart>-->
-<!--                                <rdf:Description rdf:about="{$patent}{$ucid}/description{$uriThingSeparator}{@num}">-->
-<!--                                    <dcterms:isPartOf rdf:resource="{$patent}{$ucid}/description"/>-->
-<!--                                    <rdfs:label xml:lang="en"><xsl:value-of select="concat('Paragraph ', @num)"/></rdfs:label>-->
-<!--                                    <dcterms:identifier><xsl:value-of select="@num"/></dcterms:identifier>-->
-<!--                                    <dcterms:description rdf:parseType="Literal">-->
-
-<!--                                    </dcterms:description>-->
-<!--                                </rdf:Description>-->
-<!--                            </dcterms:hasPart>-->
-<!--                        </xsl:for-each>-->
-<!--                    </rdf:Description>-->
-<!--                </pso:hasDescriptionSection>-->
             </rdf:Description>
         </xsl:for-each>
     </xsl:template>
@@ -709,9 +691,8 @@ Add members
         <xsl:for-each select="abstract">
             <rdf:Description rdf:about="{$patent}{$ucid}">
                 <dcterms:abstract rdf:parseType="Literal">
-<!--                    <div>-->
                     <div xmlns="http://www.w3.org/1999/xhtml" xml:lang="{$lang}">
-                               <xsl:apply-templates/>
+                       <xsl:apply-templates/>
                     </div>
                 </dcterms:abstract>
             </rdf:Description>
@@ -742,7 +723,7 @@ Add members
 
             <xsl:for-each select="claim">
                 <rdf:Description rdf:about="{$patent}{$ucid}">
-                    <property:claim>
+                    <fp:claim>
                         <rdf:Description rdf:about="{$patent}{$ucid}/claim/{@num}">
                             <rdf:type rdf:resource="{$pso}Claim"/>
                             <rdf:type rdf:resource="{$skos}Concept"/>
@@ -750,15 +731,12 @@ Add members
 
                             <skos:notation><xsl:value-of select="@num"/></skos:notation>
                             <skos:definition rdf:parseType="Literal">
-<!--                                <xsl:for-each select="claim-text">-->
-<!--                                    <div>-->
-                                    <div xmlns="http://www.w3.org/1999/xhtml" xml:lang="{$lang}">
-                                       <xsl:apply-templates/>
-                                    </div>
-<!--                                </xsl:for-each>-->
+                                <div xmlns="http://www.w3.org/1999/xhtml" xml:lang="{$lang}">
+                                   <xsl:apply-templates/>
+                                </div>
                             </skos:definition>
                         </rdf:Description>
-                    </property:claim>
+                    </fp:claim>
                 </rdf:Description>
             </xsl:for-each>
         </xsl:for-each>

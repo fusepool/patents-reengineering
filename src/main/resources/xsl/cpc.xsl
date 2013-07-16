@@ -20,7 +20,7 @@
     xmlns:pulo="http://www.patexpert.org/ontologies/pulo.owl#"
     xmlns:sumo="http://www.owl-ontologies.com/sumo.owl#"
     xmlns:pmo="http://www.patexpert.org/ontologies/pmo.owl#"
-    xmlns:property="http://fusepool.info/property/"
+    xmlns:fp="http://fusepool.info/vocab#"
     xmlns:schema="http://schema.org/"
 
     exclude-result-prefixes="xsl fn"
