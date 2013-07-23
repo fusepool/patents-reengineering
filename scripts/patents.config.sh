@@ -9,7 +9,7 @@ eclascheme="/data/ecla/";
 pathToCPCConcordances="../data/cpc-concordances/ECLAtoCPC.xml";
 xslCPC="/home/fusepool/patents-reengineering/src/main/resources/xsl/cpc.xsl";
 tdbAssembler="/usr/lib/fuseki/tdb.fusepool.ttl";
-JVM_ARGS="-Xmx32000M";
+JVM_ARGS="-Xmx16000M";
 db="/data/tdb/fusepool/";
 javatdbloader="java $JVM_ARGS tdb.tdbloader --desc=$tdbAssembler";
 
