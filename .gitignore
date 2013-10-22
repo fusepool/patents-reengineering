@@ -1,0 +1,11 @@
+# This file contains the list of files and folder that don't have to be shown by github 
+
+# ignore the target folder build by maven from the source code to create an OSGi bundle
+target/
+
+# ignore the following hidden files and folders
+.classpath
+.project
+.settings/
+
+
