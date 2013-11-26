@@ -29,10 +29,6 @@
 
 <!--    xpath-default-namespace=""-->
 
-<!--
-TODO: ignore DTD check. saxonb-xslt breaks if offline
--->
-
     <xsl:import href="common.xsl"/>
 
     <xsl:output encoding="utf-8" indent="yes" method="xml" omit-xml-declaration="no"/>
