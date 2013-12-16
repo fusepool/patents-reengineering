@@ -12,7 +12,7 @@
 	</parent>
 
 	<groupId>eu.fusepool</groupId>
-	<version>0.1.0</version>
+	<version>1.0-SNAPSHOT</version>
         <artifactId>marec_rdfizer</artifactId>
         <description>
             Transform XML patent document into RDF. The transformation is based on XSLT. The XML elements and attributes are mapped to terms
