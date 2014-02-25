@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Collections;
 import java.util.Dictionary;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Map;
@@ -28,6 +29,8 @@ import org.apache.felix.scr.annotations.Component;
 import org.apache.felix.scr.annotations.Properties;
 import org.apache.felix.scr.annotations.Property;
 import org.apache.felix.scr.annotations.Reference;
+import org.apache.felix.scr.annotations.ReferenceCardinality;
+import org.apache.felix.scr.annotations.ReferencePolicy;
 import org.apache.felix.scr.annotations.Service;
 import org.apache.stanbol.commons.indexedgraph.IndexedMGraph;
 import org.apache.stanbol.enhancer.servicesapi.ContentItem;
@@ -47,9 +50,8 @@ import org.osgi.service.component.ComponentContext;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import eu.fusepool.platform.enhancer.engine.patent.xslt.CatalogBuilder;
-import eu.fusepool.platform.enhancer.engine.patent.xslt.XMLProcessor;
-import eu.fusepool.platform.enhancer.engine.patent.xslt.impl.PatentXSLTProcessor;
+import eu.fusepool.datalifecycle.Rdfizer;
+
 
 /**
  * Transform an XML patent document into RDF mapping elements and attributes to terms in ontologies.
@@ -81,12 +83,9 @@ implements EnhancementEngine, ServiceProperties {
 	 * {@link ServiceProperties#ORDERING_EXTRACTION_ENHANCEMENT}
 	 */
 	public static final Integer defaultOrder = ORDERING_EXTRACTION_ENHANCEMENT;
-
-	
 	
 	// MIME TYPE of the patent document
 	private static final String MIME_TYPE_XML = "application/xml";
-	
 	
 	//@SuppressWarnings("unused")
 	public static final boolean DEF_CLEAN = false ;
@@ -112,43 +111,59 @@ implements EnhancementEngine, ServiceProperties {
 	}
 	
 	protected ComponentContext componentContext ;
-
-	protected CatalogBuilder catalogBuilder ;
-	
-
 	
 	final Logger logger = LoggerFactory.getLogger(this.getClass()) ;
 	
 	@Reference
 	protected Parser parser ;
 	
-
+	// Binding to patent rdfizer
+    @Reference(cardinality=ReferenceCardinality.OPTIONAL_MULTIPLE,
+            policy = ReferencePolicy.DYNAMIC,
+            referenceInterface=eu.fusepool.datalifecycle.Rdfizer.class)
+    private Rdfizer patentRdfizer;
+    
+    // this might be set in the OSGi config panel
+    public static final String RDFIZER_NAME = "patent";
 
 	protected void activate(ComponentContext ce) throws IOException, ConfigurationException {
 		super.activate(ce);
 		this.componentContext = ce ;
 		
-		@SuppressWarnings("rawtypes")
-		Dictionary dict = ce.getProperties() ;
-		Object o = dict.get("CLEAN_ON_STARTUP") ;
-		if(o!=null)  {
-			CLEAN_ON_STARTUP = (Boolean) o ;
-		}
-		
-		catalogBuilder = new CatalogBuilder(ce.getBundleContext()) ;
-		try {
-			catalogBuilder.build() ;
-		} catch (Exception e1) {
-			logger.error("Error building dtd catalog", e1) ;
-		}
-		
-		logger.info("PatentEngine being activated " + this.getClass().getName());
+		logger.info("PatentEngine is being activated.");
 	}
 
 	protected void deactivate(ComponentContext ce) {
 		super.deactivate(ce);
-		catalogBuilder.cleanupFiles() ;
+		logger.info("PatentEngine is being deactivated.");
 	}
+	
+	/**
+     * Bind patent rdfizer
+     */
+    protected void bindPatentRdfizer(Rdfizer rdfizer) {
+        
+        if( RDFIZER_NAME.equals( rdfizer.getName() ) ) {
+            this.patentRdfizer = rdfizer;
+            logger.info("Rdfizer " + rdfizer.getName() + " bound");
+            
+        }
+        
+    }
+    
+    /**
+     * Bind patent rdfizer
+     */
+    protected void unbindPatentRdfizer(Rdfizer rdfizer) {
+        
+        if( RDFIZER_NAME.equals( rdfizer.getName() ) ) {
+            this.patentRdfizer = null;
+            logger.info("Rdfizer " + rdfizer.getName() + " bound");
+            
+        }
+        
+    }
+	
 
 	/*
 	 * Check if content is present and mime type is correct (application/xml).
@@ -182,66 +197,35 @@ implements EnhancementEngine, ServiceProperties {
 
 	@Override
 	public void computeEnhancements(ContentItem ci) throws EngineException {
-		UriRef contentItemId = ci.getUri();
-		logger.info("UriRef: "+contentItemId.getUnicodeString()) ;			
 		
-		 
-		try {
-				
-			//ci.getLock().writeLock().lock();
+	    UriRef contentItemId = ci.getUri();			
 			
-			// Transform the patent XML file into RDF
-			MGraph xml2rdf = transformXML(ci);
-			
-			// Create enhancements to each entity extracted from the XML
-			MGraph enhancements = addEnhancements(ci, xml2rdf);
-			
-			// Add all the RDF triples to the content item metadata
-			ci.getMetadata().addAll(xml2rdf);
-			ci.getMetadata().addAll(enhancements);
-			
-			// Add a part to the content item as a text/plain representation of the XML document for indexing
-			addPartToContentItem(ci);
-			
-			
-		} catch (Exception e) {
-			logger.error( "", e) ;			
-		} 
-		/*
-		finally {
-			ci.getLock().writeLock().unlock();
-		}
-		*/
+		// Transform the patent XML file into RDF
+		MGraph xml2rdf = transformXML(ci);
+		
+		// Create enhancements to each entity extracted from the XML
+		MGraph enhancements = addEnhancements(ci, xml2rdf);
+		
+		// Add all the RDF triples to the content item metadata
+		ci.getMetadata().addAll(xml2rdf);
+		ci.getMetadata().addAll(enhancements);
+		
+		// Add a part to the content item as a text/plain representation of the XML document for indexing
+		addPartToContentItem(ci);
 		
 	}
 	
-	/*
-	 * Transform patent XML documents into RDF using an XSLT transformation and add the graph to the content item metadata.
+	/**
+	 * Transform patent XML documents into RDF using an XSLT transformation and 
+	 * add the graph to the content item metadata.
 	 */
 	public MGraph transformXML(ContentItem ci) throws EngineException {
 		
-		MGraph xml2rdf = null;
+	    logger.debug("Starting transformation from XML to RDF");
+	    
+		MGraph documentGraph = patentRdfizer.transform(ci.getStream());
 		
-		XMLProcessor processor = new PatentXSLTProcessor() ;
-		InputStream rdfIs = null ; 
-	
-		logger.debug("Starting transformation from XML to RDF");
-		
-		try {
-			
-			xml2rdf = new IndexedMGraph();
-			rdfIs = processor.processPatentXML(ci.getStream()) ;
-			parser.parse(xml2rdf, rdfIs, SupportedFormat.RDF_XML) ;
-			rdfIs.close() ;
-			
-			
-		} catch (Exception e) {
-			logger.error("Wrong data format for the " + this.getName() + " enhancer.", e) ;
-		}
-		
-		logger.debug("Finished transformation from XML to RDF");
-		
-		return xml2rdf;
+		return documentGraph;
 		
 	}
 	
@@ -295,8 +279,6 @@ implements EnhancementEngine, ServiceProperties {
 		
 		MGraph enhancements = new IndexedMGraph();
 		
-		//System.out.println("Start adding annotation");
-		
 		if (! xml2rdf.isEmpty()) {
 			
 			// Create an enhancement for each entity of type foaf:Person
@@ -322,7 +304,6 @@ implements EnhancementEngine, ServiceProperties {
 			
 		}
 		
-		//System.out.println("Finished adding annotation");
 		
 		return enhancements;
 		
@@ -416,8 +397,6 @@ implements EnhancementEngine, ServiceProperties {
 			name = inames.next().getObject().toString() + " ";
 			text += unquote( name );
 		}
-		
-		logger.info("Text to be indexed" + text);
 		
 		return text;
 	}
