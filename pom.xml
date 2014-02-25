@@ -200,7 +200,7 @@
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-simple</artifactId>
-                        <version>1.6.1</version>
+            <version>1.6.1</version>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
@@ -208,6 +208,13 @@
 			<artifactId>org.apache.stanbol.entityhub.yard.clerezza</artifactId>
 			<version>1.0.0-SNAPSHOT</version>
 		</dependency>
+		
+		<dependency>
+            <groupId>eu.fusepool</groupId>
+            <artifactId>datalifecycle</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        
 	</dependencies>
 	
 	<repositories>
