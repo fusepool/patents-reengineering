@@ -154,7 +154,7 @@ implements EnhancementEngine, ServiceProperties {
     /**
      * Bind patent rdfizer
      */
-    protected void unbindPatentRdfizer(Rdfizer rdfizer) {
+    protected void unbindRdfizer(Rdfizer rdfizer) {
         
         if( RDFIZER_NAME.equals( rdfizer.getName() ) ) {
             this.rdfizer = null;
