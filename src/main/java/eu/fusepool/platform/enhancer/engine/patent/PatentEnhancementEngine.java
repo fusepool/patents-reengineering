@@ -121,7 +121,7 @@ implements EnhancementEngine, ServiceProperties {
     @Reference(cardinality=ReferenceCardinality.OPTIONAL_MULTIPLE,
             policy = ReferencePolicy.DYNAMIC,
             referenceInterface=eu.fusepool.datalifecycle.Rdfizer.class)
-    private Rdfizer patentRdfizer;
+    private Rdfizer rdfizer;
     
     // this might be set in the OSGi config panel
     public static final String RDFIZER_NAME = "patent";
@@ -141,10 +141,10 @@ implements EnhancementEngine, ServiceProperties {
 	/**
      * Bind patent rdfizer
      */
-    protected void bindPatentRdfizer(Rdfizer rdfizer) {
+    protected void bindRdfizer(Rdfizer rdfizer) {
         
         if( RDFIZER_NAME.equals( rdfizer.getName() ) ) {
-            this.patentRdfizer = rdfizer;
+            this.rdfizer = rdfizer;
             logger.info("Rdfizer " + rdfizer.getName() + " bound");
             
         }
@@ -157,8 +157,8 @@ implements EnhancementEngine, ServiceProperties {
     protected void unbindPatentRdfizer(Rdfizer rdfizer) {
         
         if( RDFIZER_NAME.equals( rdfizer.getName() ) ) {
-            this.patentRdfizer = null;
-            logger.info("Rdfizer " + rdfizer.getName() + " bound");
+            this.rdfizer = null;
+            logger.info("Rdfizer " + rdfizer.getName() + " unbound");
             
         }
         
@@ -223,7 +223,7 @@ implements EnhancementEngine, ServiceProperties {
 		
 	    logger.debug("Starting transformation from XML to RDF");
 	    
-		MGraph documentGraph = patentRdfizer.transform(ci.getStream());
+		MGraph documentGraph = rdfizer.transform(ci.getStream());
 		
 		return documentGraph;
 		
