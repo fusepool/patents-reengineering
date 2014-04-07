@@ -11,13 +11,11 @@
 		<relativePath>../parent</relativePath>
 	</parent>
 
-	<groupId>eu.fusepool</groupId>
 	<version>1.0-SNAPSHOT</version>
-        <artifactId>marec_rdfizer</artifactId>
-        <description>
-            Transform XML patent document into RDF. The transformation is based on XSLT. The XML elements and attributes are mapped to terms
-            from different ontologies.
-        </description>
+    <artifactId>marec_rdfizer</artifactId>
+    <description>
+      Transform XML patent document into RDF. The transformation is based on XSLT. The XML elements and attributes are mapped to terms from different ontologies.
+    </description>
 	<name>Fusepool Enhancement Engine Patents to RDF</name>
        	<packaging>bundle</packaging>
 
@@ -38,6 +36,7 @@
 				<extensions>true</extensions>
 				<configuration>
 					<instructions>
+					    <Bundle-Category>Stanbol Enahncement Engine </Bundle-Category>
 						<Embed-Dependency>xercesImpl;saxon;xml-resolver;commons-lang3;scope=compile</Embed-Dependency>
 						<Embed-Transitive>true</Embed-Transitive>
 						<Data-Files>data,data/catalog,dtd</Data-Files>
