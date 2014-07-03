@@ -218,7 +218,7 @@
 		
 		<dependency>
             <groupId>eu.fusepool</groupId>
-            <artifactId>datalifecycle</artifactId>
+            <artifactId>dlc-api</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
         
